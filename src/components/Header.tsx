@@ -1,13 +1,31 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState({
+    code: 'en',
+    label: 'English',
+    flag: '🇬🇧'
+  });
+
+  const languages = [
+    { code: 'en', label: 'English', flag: '🇬🇧' },
+    { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
+    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: 'zh', label: '中文', flag: '🇨🇳' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -114,6 +132,31 @@ const Header = () => {
           <div className="hidden lg:flex absolute right-0 flex-col items-end gap-3">
             {/* Botones ARRIBA */}
             <div className="flex items-center gap-4">
+              {/* Language Switcher */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className={`flex items-center gap-2 px-4 py-2 border-2 ${colors.border} rounded-sm bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all`}
+                  >
+                    <Globe className="h-4 w-4" />
+                    <span className="text-sm font-medium">{selectedLanguage.flag}</span>
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  {languages.map((lang) => (
+                    <DropdownMenuItem
+                      key={lang.code}
+                      onClick={() => setSelectedLanguage(lang)}
+                      className="cursor-pointer"
+                    >
+                      <span className="mr-2">{lang.flag}</span>
+                      <span>{lang.label}</span>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
               <Button 
                 variant="outline" 
                 size="lg"
@@ -134,11 +177,35 @@ const Header = () => {
               </button>
             </div>
             {/* Línea ABAJO - MUY LARGA */}
-            <div className={`w-[180px] xl:w-[280px] h-[1px] ${colors.line} transition-colors duration-300`} />
+            <div className={`w-[220px] xl:w-[320px] h-[1px] ${colors.line} transition-colors duration-300`} />
           </div>
 
-          {/* Mobile: Book Now + Hamburger */}
+          {/* Mobile: Language + Book Now + Hamburger */}
           <div className="lg:hidden absolute right-0 flex items-center gap-3">
+            {/* Language Switcher Mobile */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`flex items-center gap-1 px-3 py-2 border-2 ${colors.border} rounded-sm bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all`}
+                >
+                  <Globe className="h-4 w-4" />
+                  <span className="text-sm">{selectedLanguage.flag}</span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang.code}
+                    onClick={() => setSelectedLanguage(lang)}
+                    className="cursor-pointer"
+                  >
+                    <span className="mr-2">{lang.flag}</span>
+                    <span>{lang.label}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button 
               variant="outline" 
               size="lg"
