@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
+import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,14 +18,16 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-serif font-bold text-foreground">
-              Dr. Karaaltın
-            </span>
+          <NavLink to="/" className="flex items-center">
+            <img 
+              src={logoWhite} 
+              alt="Dr. Karaaltın Logo" 
+              className="h-12 w-auto"
+            />
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -33,8 +36,8 @@ const Header = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
-                activeClassName="text-foreground font-semibold"
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+                activeClassName="text-white font-semibold"
               >
                 {item.name}
               </NavLink>
@@ -43,14 +46,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex">
-            <Button variant="default" size="lg" asChild>
+            <Button variant="default" size="lg" className="bg-gold hover:bg-gold-dark text-white" asChild>
               <NavLink to="/contact">Book Consultation</NavLink>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,21 +67,21 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 border-t border-white/20 bg-black/90 backdrop-blur-md">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className="text-base font-medium text-foreground/70 hover:text-foreground transition-colors px-4 py-2"
-                  activeClassName="text-foreground font-semibold"
+                  className="text-base font-medium text-white/80 hover:text-white transition-colors px-4 py-2"
+                  activeClassName="text-white font-semibold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </NavLink>
               ))}
               <div className="px-4 pt-2">
-                <Button variant="default" size="lg" className="w-full" asChild>
+                <Button variant="default" size="lg" className="w-full bg-gold hover:bg-gold-dark text-white" asChild>
                   <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
                     Book Consultation
                   </NavLink>
