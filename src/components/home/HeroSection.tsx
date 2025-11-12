@@ -5,32 +5,26 @@ import heroImage from "@/assets/hero-bg.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image/Video with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        {/* TODO: Replace with video element when video is ready */}
-        {/* <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-          <source src="/path-to-video.mp4" type="video/mp4" />
-        </video> */}
-        <img
-          src={heroImage}
-          alt="Premium plastic surgery excellence"
-          className="w-full h-full object-cover"
-        />
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto space-y-6 fade-in-up">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white leading-tight drop-shadow-lg">
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-32 md:pt-40">
+        <div className="max-w-4xl mx-auto space-y-8 fade-in-up">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif font-bold text-white leading-tight drop-shadow-lg">
             World-Class Plastic Surgery in Istanbul, Led by Innovation
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-md">
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
             Over 30 years of experience, breakthrough surgical techniques, and
             personalized care from Professor Dr. Karaaltın – trusted by patients
             worldwide.
           </p>
-          <div className="pt-8">
+          <div className="pt-12">
             <Button
               size="lg"
               className="text-lg px-8 py-6 bg-gold hover:bg-gold-dark text-white transition-colors shadow-lg"

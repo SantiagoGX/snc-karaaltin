@@ -46,7 +46,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex">
-            <Button variant="default" size="lg" className="bg-gold hover:bg-gold-dark text-white" asChild>
+            <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black transition-all" asChild>
               <NavLink to="/contact">Book Consultation</NavLink>
             </Button>
           </div>
@@ -81,7 +81,7 @@ const Header = () => {
                 </NavLink>
               ))}
               <div className="px-4 pt-2">
-                <Button variant="default" size="lg" className="w-full bg-gold hover:bg-gold-dark text-white" asChild>
+                <Button variant="outline" size="lg" className="w-full border-2 border-white text-white hover:bg-white hover:text-black" asChild>
                   <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
                     Book Consultation
                   </NavLink>
