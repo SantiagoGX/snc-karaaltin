@@ -1,8 +1,6 @@
 import heroImage from "@/assets/hero-bg.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover">
@@ -17,9 +15,7 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-light text-white leading-[1.1] drop-shadow-lg tracking-wide">
             World-Class Plastic Surgery in Istanbul, Led by Innovation
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-xl drop-shadow-md leading-relaxed font-sans font-light">
-            Over 30 years of experience in world-class plastic surgery.
-          </p>
+          
         </div>
       </div>
 
@@ -29,8 +25,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-white/50 rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
