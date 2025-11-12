@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8 pt-24 md:pt-32">
         <div className="max-w-lg space-y-6 fade-in-up">
-          <h1 className="text-5xl md:text-6xl xl:text-8xl font-serif font-light text-white leading-[1.1] drop-shadow-lg tracking-wide my-0 px-0 mx-0 lg:text-7xl text-left">
+          <h1 className="text-5xl md:text-6xl xl:text-8xl font-serif font-light text-white leading-[1.1] drop-shadow-lg tracking-wide my-0 px-0 mx-0 text-left lg:text-6xl">
             <span className="font-semibold">World-Class</span> Plastic Surgery in Istanbul, <span className="font-semibold">Led by Innovation</span>
           </h1>
           
