@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Facebook, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,29 @@ import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Colores dinámicos
+  const colors = {
+    bg: isScrolled ? 'bg-white shadow-md' : 'bg-transparent',
+    text: isScrolled ? 'text-gray-900' : 'text-white',
+    textMuted: isScrolled ? 'text-gray-600' : 'text-white/70',
+    textHover: isScrolled ? 'hover:text-black' : 'hover:text-white',
+    border: isScrolled ? 'border-gray-900' : 'border-white',
+    line: isScrolled ? 'bg-gray-300' : 'bg-white/30',
+    btnBg: isScrolled ? 'hover:bg-gray-900' : 'hover:bg-white',
+    btnText: isScrolled ? 'hover:text-white' : 'hover:text-black',
+    iconBg: isScrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10',
+  };
 
   const navItems = [
     { name: "About", path: "/about" },
@@ -17,91 +40,97 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${colors.bg}`}>
       <nav className="container mx-auto px-4 lg:px-8">
-        <div className="relative flex items-center justify-center h-20">
-          {/* Left: Social Icons on Decorative Line */}
-          <div className="hidden lg:flex absolute left-0 items-center gap-6">
+        <div className="relative flex items-center justify-center h-24 lg:h-28">
+          {/* Left: Social Icons ABOVE Decorative Line */}
+          <div className="hidden lg:flex absolute left-0 flex-col items-start gap-3">
+            {/* Iconos ARRIBA */}
             <div className="flex items-center gap-4">
               <a 
                 href="https://twitter.com/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5" fill="currentColor" strokeWidth={0} />
               </a>
               <a 
                 href="https://instagram.com/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5" fill="currentColor" strokeWidth={0} />
               </a>
               <a 
                 href="https://facebook.com/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5" fill="currentColor" strokeWidth={0} />
               </a>
               <a 
                 href="https://linkedin.com/company/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" fill="currentColor" strokeWidth={0} />
               </a>
               <a 
                 href="https://youtube.com/@drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
                 aria-label="YouTube"
               >
-                <Youtube className="w-5 h-5" />
+                <Youtube className="w-5 h-5" fill="currentColor" strokeWidth={0} />
               </a>
             </div>
-            <div className="w-16 xl:w-32 h-[1px] bg-white/30" />
+            {/* Línea ABAJO - MUY LARGA */}
+            <div className={`w-[280px] xl:w-[380px] h-[1px] ${colors.line} transition-colors duration-300`} />
           </div>
 
           {/* Center: Logo */}
           <NavLink to="/" className="flex items-center">
-          <img 
-            src={logoWhite} 
-            alt="Dr. Karaaltın Logo" 
-            className="h-14 lg:h-16 w-auto"
-          />
+            <img 
+              src={logoWhite} 
+              alt="Dr. Karaaltın Logo" 
+              className={`h-14 lg:h-16 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0' : ''}`}
+            />
           </NavLink>
 
-          {/* Right: Decorative Line + Book Now Button + Hamburger */}
-          <div className="hidden lg:flex absolute right-0 items-center gap-6">
-            <div className="w-16 xl:w-32 h-[1px] bg-white/30" />
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all px-6"
-              asChild
-            >
-              <NavLink to="/contact">
-                BOOK NOW
-              </NavLink>
-            </Button>
-            
-            <button
-              className="p-2 text-white hover:text-white/80 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              <Menu className="h-6 w-6" />
-            </button>
+          {/* Right: Buttons ABOVE Decorative Line */}
+          <div className="hidden lg:flex absolute right-0 flex-col items-end gap-3">
+            {/* Botones ARRIBA */}
+            <div className="flex items-center gap-4">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className={`border-2 ${colors.border} bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all px-6`}
+                asChild
+              >
+                <NavLink to="/contact">
+                  BOOK NOW
+                </NavLink>
+              </Button>
+              
+              <button
+                className={`p-2 ${colors.text} transition-colors`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            </div>
+            {/* Línea ABAJO - MUY LARGA */}
+            <div className={`w-[180px] xl:w-[280px] h-[1px] ${colors.line} transition-colors duration-300`} />
           </div>
 
           {/* Mobile: Book Now + Hamburger */}
@@ -109,7 +138,7 @@ const Header = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="hidden md:inline-flex border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all px-6"
+              className={`hidden md:inline-flex border-2 ${colors.border} bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all px-6`}
               asChild
             >
               <NavLink to="/contact">
@@ -118,7 +147,7 @@ const Header = () => {
             </Button>
             
             <button
-              className="p-2 text-white hover:text-white/80 transition-colors"
+              className={`p-2 ${colors.text} transition-colors`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >

@@ -12,15 +12,13 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-32 md:pt-40">
-        <div className="max-w-4xl mx-auto space-y-8 fade-in-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight drop-shadow-lg">
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 pt-32 md:pt-40">
+        <div className="max-w-2xl space-y-6 fade-in-up">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-light text-white leading-[1.1] drop-shadow-lg tracking-wide">
             World-Class Plastic Surgery in Istanbul, Led by Innovation
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
-            Over 30 years of experience, breakthrough surgical techniques, and
-            personalized care from Professor Dr. Karaaltın – trusted by patients
-            worldwide.
+          <p className="text-lg md:text-xl text-white/90 max-w-xl drop-shadow-md leading-relaxed font-sans font-light">
+            Over 30 years of experience in world-class plastic surgery.
           </p>
         </div>
       </div>
