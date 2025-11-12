@@ -16,7 +16,7 @@ const AboutDoctorSection = () => {
           </div>
 
           {/* Right: Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col justify-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
                 Welcome to Dr. Karaaltın's Clinic
