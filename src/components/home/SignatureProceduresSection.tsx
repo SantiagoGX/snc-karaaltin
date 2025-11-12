@@ -69,6 +69,22 @@ const SignatureProceduresSection = () => {
         </div>
 
         <div className="relative">
+          {/* Navigation Arrows - Positioned at edges */}
+          <button
+            onClick={scrollPrev}
+            className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
+            aria-label="Previous procedure"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={scrollNext}
+            className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
+            aria-label="Next procedure"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
           <Carousel 
             setApi={setApi}
             opts={{
@@ -80,9 +96,9 @@ const SignatureProceduresSection = () => {
             <CarouselContent>
               {procedures.map((procedure) => (
                 <CarouselItem key={procedure.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-                    {/* Left: Content (inverted layout) */}
-                    <div className="space-y-4 lg:space-y-6 lg:order-1 flex flex-col justify-center pl-4 lg:pl-8 xl:pl-12 pr-4 lg:pr-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[600px] lg:min-h-[700px] xl:min-h-[750px]">
+                    {/* Left: Content */}
+                    <div className="space-y-4 lg:space-y-6 lg:order-1 flex flex-col justify-center pl-6 lg:pl-12 xl:pl-16 pr-6 lg:pr-10 py-12 lg:py-0">
                       <h3 className="text-2xl lg:text-3xl xl:text-4xl font-serif tracking-wide">
                         <span className="font-light">{procedure.titleNormal} </span>
                         <span className="font-semibold">{procedure.titleBold}</span>
@@ -95,18 +111,31 @@ const SignatureProceduresSection = () => {
                           Learn More
                         </button>
                         <button className="px-5 py-2.5 bg-gray-900 text-white text-xs uppercase tracking-wider hover:bg-gray-800 transition-all flex items-center gap-2">
-                          View Procedure
-                          <ChevronRight className="w-3.5 h-3.5" />
+                          Book Now
                         </button>
+                      </div>
+                      
+                      {/* Indicators below text */}
+                      <div className="flex gap-2 mt-8">
+                        {procedures.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => api?.scrollTo(index)}
+                            className={`h-2 rounded-full transition-all ${
+                              index === current ? "w-8 bg-gray-900" : "w-2 bg-gray-300"
+                            }`}
+                            aria-label={`Go to procedure ${index + 1}`}
+                          />
+                        ))}
                       </div>
                     </div>
 
-                    {/* Right: Image */}
-                    <div className="relative lg:order-2 h-[500px] lg:h-[600px] xl:h-[650px]">
+                    {/* Right: Image - Full height */}
+                    <div className="relative lg:order-2 h-[400px] lg:h-auto">
                       <img 
                         src={procedure.image} 
                         alt={`${procedure.titleNormal} ${procedure.titleBold}`}
-                        className="w-full h-full object-cover rounded-none shadow-2xl"
+                        className="w-full h-full object-cover"
                         loading="lazy"
                       />
                     </div>
@@ -115,38 +144,6 @@ const SignatureProceduresSection = () => {
               ))}
             </CarouselContent>
           </Carousel>
-
-          {/* Desktop Navigation Arrows */}
-          <div className="hidden lg:flex justify-center gap-4 mt-8 lg:mt-10">
-            <button
-              onClick={scrollPrev}
-              className="w-12 h-12 rounded-full border-2 border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all"
-              aria-label="Previous procedure"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={scrollNext}
-              className="w-12 h-12 rounded-full border-2 border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all"
-              aria-label="Next procedure"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Indicators */}
-          <div className="flex justify-center gap-2 mt-6">
-            {procedures.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === current ? "w-8 bg-gray-900" : "w-2 bg-gray-300"
-                }`}
-                aria-label={`Go to procedure ${index + 1}`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
