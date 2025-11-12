@@ -6,11 +6,11 @@ const AboutDoctorSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Image */}
-          <div className="relative">
+          <div className="relative min-h-[500px] lg:min-h-[600px]">
             <img 
               src={doctorImage} 
               alt="Dr. Mehmet Veli Karaaltın - Renowned Plastic Surgeon" 
-              className="w-full h-auto rounded-lg shadow-2xl"
+              className="w-full h-full object-cover rounded-lg shadow-xl"
               loading="lazy"
             />
           </div>

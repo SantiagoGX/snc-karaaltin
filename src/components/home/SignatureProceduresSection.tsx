@@ -56,7 +56,7 @@ const SignatureProceduresSection = () => {
   const scrollNext = () => api?.scrollNext();
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section className="py-24 lg:py-36 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
@@ -79,23 +79,23 @@ const SignatureProceduresSection = () => {
             <CarouselContent>
               {procedures.map((procedure) => (
                 <CarouselItem key={procedure.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
                     {/* Left: Content (inverted layout) */}
-                    <div className="space-y-6 lg:order-1">
-                      <h3 className="text-3xl lg:text-4xl font-serif font-light tracking-wide">
+                    <div className="space-y-8 lg:order-1 flex flex-col justify-center px-4 lg:px-0">
+                      <h3 className="text-2xl lg:text-3xl xl:text-4xl font-serif font-light tracking-wide">
                         {procedure.title}
                       </h3>
-                      <p className="text-lg text-gray-700 leading-relaxed">
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
                         {procedure.description}
                       </p>
                     </div>
 
                     {/* Right: Image */}
-                    <div className="relative lg:order-2">
+                    <div className="relative lg:order-2 min-h-[400px] lg:min-h-[500px]">
                       <img 
                         src={procedure.image} 
                         alt={procedure.title}
-                        className="w-full h-auto rounded-lg shadow-2xl"
+                        className="w-full h-full object-cover rounded-lg shadow-xl"
                         loading="lazy"
                       />
                     </div>
@@ -106,7 +106,7 @@ const SignatureProceduresSection = () => {
           </Carousel>
 
           {/* Desktop Navigation Arrows */}
-          <div className="hidden lg:flex justify-center gap-4 mt-12">
+          <div className="hidden lg:flex justify-center gap-4 mt-16">
             <button
               onClick={scrollPrev}
               className="w-12 h-12 rounded-full border-2 border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all"
