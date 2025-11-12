@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { NavLink } from "@/components/NavLink";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -24,15 +22,6 @@ const HeroSection = () => {
             personalized care from Professor Dr. Karaaltın – trusted by patients
             worldwide.
           </p>
-          <div className="pt-12">
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 bg-gold hover:bg-gold-dark text-white transition-colors shadow-lg"
-              asChild
-            >
-              <NavLink to="/contact">Book Your Consultation</NavLink>
-            </Button>
-          </div>
         </div>
       </div>
 
