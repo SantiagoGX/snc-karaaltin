@@ -16,7 +16,7 @@ const certificates = [
 
 const CertificatesSection = () => {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="pt-6 lg:pt-8 pb-12 lg:pb-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Title */}
         <div className="text-center mb-12">
