@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Facebook, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
 import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
@@ -28,6 +29,9 @@ const Header = () => {
     btnBg: isScrolled ? 'hover:bg-gray-900' : 'hover:bg-white',
     btnText: isScrolled ? 'hover:text-white' : 'hover:text-black',
     iconBg: isScrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10',
+    iconColor: isScrolled ? '#000000' : '#FFFFFF',
+    headerHeight: isScrolled ? 'h-20 lg:h-24' : 'h-28 lg:h-32',
+    logoSize: isScrolled ? 'h-12 lg:h-14' : 'h-20 lg:h-24',
   };
 
   const navItems = [
@@ -42,7 +46,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${colors.bg}`}>
       <nav className="container mx-auto px-4 lg:px-8">
-        <div className="relative flex items-center justify-center h-24 lg:h-28">
+        <div className={`relative flex items-center justify-center transition-all duration-300 ${colors.headerHeight}`}>
           {/* Left: Social Icons ABOVE Decorative Line */}
           <div className="hidden lg:flex absolute left-0 flex-col items-start gap-3">
             {/* Iconos ARRIBA */}
@@ -51,46 +55,46 @@ const Header = () => {
                 href="https://twitter.com/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+                <FaXTwitter style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
                 href="https://instagram.com/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+                <FaInstagram style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
                 href="https://facebook.com/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+                <FaFacebookF style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
                 href="https://linkedin.com/company/drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+                <FaLinkedinIn style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
                 href="https://youtube.com/@drkaraaltinclinic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.textMuted} ${colors.iconBg}`}
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
                 aria-label="YouTube"
               >
-                <Youtube className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+                <FaYoutube style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
             </div>
             {/* Línea ABAJO - MUY LARGA */}
@@ -102,7 +106,7 @@ const Header = () => {
             <img 
               src={logoWhite} 
               alt="Dr. Karaaltın Logo" 
-              className={`h-14 lg:h-16 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0' : ''}`}
+              className={`w-auto transition-all duration-500 ease-in-out ${colors.logoSize} ${isScrolled ? 'brightness-0' : ''}`}
             />
           </NavLink>
 
