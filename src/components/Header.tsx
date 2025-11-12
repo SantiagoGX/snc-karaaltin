@@ -74,11 +74,11 @@ const Header = () => {
 
           {/* Center: Logo */}
           <NavLink to="/" className="flex items-center">
-            <img 
-              src={logoWhite} 
-              alt="Dr. Karaaltın Logo" 
-              className="h-10 lg:h-12 w-auto"
-            />
+          <img 
+            src={logoWhite} 
+            alt="Dr. Karaaltın Logo" 
+            className="h-14 lg:h-16 w-auto"
+          />
           </NavLink>
 
           {/* Right: Decorative Line + Book Now Button + Hamburger */}
