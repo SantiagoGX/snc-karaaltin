@@ -1,13 +1,20 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [language, setLanguage] = useState('EN');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +48,13 @@ const Header = () => {
     { name: "Patient Resources", path: "/patient-journey" },
     { name: "Contact", path: "/contact" },
     { name: "Want to learn surgery?", path: "/learn-surgery" },
+  ];
+
+  const languages = [
+    { code: 'EN', name: 'English' },
+    { code: 'TR', name: 'Türkçe' },
+    { code: 'ES', name: 'Español' },
+    { code: 'ZH', name: '中文' },
   ];
 
   return (
@@ -114,6 +128,29 @@ const Header = () => {
           <div className="hidden lg:flex absolute right-0 flex-col items-end gap-3">
             {/* Botones ARRIBA */}
             <div className="flex items-center gap-4">
+              {/* Language Selector */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className={`flex items-center gap-2 border-2 ${colors.border} bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all px-4 h-11 rounded-md font-medium text-sm`}
+                  >
+                    <Globe className="h-4 w-4" />
+                    {language}
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-white border-2 border-gray-200">
+                  {languages.map((lang) => (
+                    <DropdownMenuItem
+                      key={lang.code}
+                      onClick={() => setLanguage(lang.code)}
+                      className="cursor-pointer hover:bg-gray-100"
+                    >
+                      {lang.code} - {lang.name}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
               <Button 
                 variant="outline" 
                 size="lg"
@@ -139,6 +176,29 @@ const Header = () => {
 
           {/* Mobile: Book Now + Hamburger */}
           <div className="lg:hidden absolute right-0 flex items-center gap-3">
+            {/* Language Selector Mobile */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`flex items-center gap-1 border-2 ${colors.border} bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all px-3 h-11 rounded-md font-medium text-sm`}
+                >
+                  <Globe className="h-4 w-4" />
+                  {language}
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-white border-2 border-gray-200">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang.code}
+                    onClick={() => setLanguage(lang.code)}
+                    className="cursor-pointer hover:bg-gray-100"
+                  >
+                    {lang.code} - {lang.name}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button 
               variant="outline" 
               size="lg"
