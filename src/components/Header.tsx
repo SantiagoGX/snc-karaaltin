@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Facebook, Instagram, Youtube, Music, ArrowRight } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
 import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
@@ -19,71 +19,101 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <nav className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20 gap-4">
-          {/* Left: Social Icons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a 
-              href="https://facebook.com/drkaraaltinclinic" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a 
-              href="https://instagram.com/drkaraaltinclinic" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a 
-              href="https://youtube.com/@drkaraaltinclinic" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-5 h-5" />
-            </a>
-            <a 
-              href="https://tiktok.com/@drkaraaltinclinic" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors"
-              aria-label="TikTok"
-            >
-              <Music className="w-5 h-5" />
-            </a>
+        <div className="relative flex items-center justify-center h-20">
+          {/* Left: Social Icons on Decorative Line */}
+          <div className="hidden lg:flex absolute left-0 items-center gap-6">
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://twitter.com/drkaraaltinclinic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://instagram.com/drkaraaltinclinic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://facebook.com/drkaraaltinclinic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://linkedin.com/company/drkaraaltinclinic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://youtube.com/@drkaraaltinclinic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+            </div>
+            <div className="w-16 xl:w-32 h-[1px] bg-white/30" />
           </div>
 
-          {/* Center: Logo with Decorative Lines */}
-          <div className="flex items-center justify-center gap-4 lg:gap-6">
-            <div className="hidden lg:block w-16 xl:w-32 h-[1px] bg-white/30" />
-            <NavLink to="/" className="flex items-center">
-              <img 
-                src={logoWhite} 
-                alt="Dr. Karaaltın Logo" 
-                className="h-10 lg:h-12 w-auto"
-              />
-            </NavLink>
-            <div className="hidden lg:block w-16 xl:w-32 h-[1px] bg-white/30" />
-          </div>
+          {/* Center: Logo */}
+          <NavLink to="/" className="flex items-center">
+            <img 
+              src={logoWhite} 
+              alt="Dr. Karaaltın Logo" 
+              className="h-10 lg:h-12 w-auto"
+            />
+          </NavLink>
 
-          {/* Right: Book Now Button + Hamburger */}
-          <div className="flex items-center justify-end gap-3">
+          {/* Right: Decorative Line + Book Now Button + Hamburger */}
+          <div className="hidden lg:flex absolute right-0 items-center gap-6">
+            <div className="w-16 xl:w-32 h-[1px] bg-white/30" />
             <Button 
               variant="outline" 
               size="lg"
-              className="hidden md:inline-flex border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all gap-2 px-6"
+              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all px-6"
               asChild
             >
               <NavLink to="/contact">
                 BOOK NOW
-                <ArrowRight className="w-4 h-4" />
+              </NavLink>
+            </Button>
+            
+            <button
+              className="p-2 text-white hover:text-white/80 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Mobile: Book Now + Hamburger */}
+          <div className="lg:hidden absolute right-0 flex items-center gap-3">
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="hidden md:inline-flex border-2 border-white bg-transparent text-white hover:bg-white hover:text-black transition-all px-6"
+              asChild
+            >
+              <NavLink to="/contact">
+                BOOK NOW
               </NavLink>
             </Button>
             
@@ -140,12 +170,11 @@ const Header = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="w-full border-2 border-black bg-transparent text-black hover:bg-black hover:text-white transition-all gap-2"
+              className="w-full border-2 border-black bg-transparent text-black hover:bg-black hover:text-white transition-all"
               asChild
             >
               <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
                 BOOK NOW
-                <ArrowRight className="w-4 h-4" />
               </NavLink>
             </Button>
           </div>
