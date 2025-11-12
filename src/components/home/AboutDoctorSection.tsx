@@ -2,9 +2,9 @@ import doctorImage from "@/assets/dr-karaaltin-portrait.jpg";
 
 const AboutDoctorSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-12 lg:py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Image */}
           <div className="relative min-h-[500px] lg:min-h-[600px]">
             <img 
@@ -16,7 +16,7 @@ const AboutDoctorSection = () => {
           </div>
 
           {/* Right: Content */}
-          <div className="space-y-6 flex flex-col justify-center">
+          <div className="space-y-6">
             <div>
               <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
                 Welcome to Dr. Karaaltın's Clinic
