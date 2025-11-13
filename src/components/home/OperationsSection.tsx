@@ -134,8 +134,8 @@ const OperationsSection = () => {
           </div>
 
           {/* Galería Derecha - Efecto de Carrusel Estático */}
-          <div className="relative w-full md:w-[65%] lg:w-[62%] h-[320px] md:h-[400px] lg:h-[450px] overflow-hidden">
-            <div className="relative w-full h-full flex items-center justify-center">
+          <div className="relative w-full md:w-[65%] lg:w-[62%] h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+            <div className="relative w-full h-full flex items-start justify-center pt-0">
               {operationsData.map((category, index) => {
                 const isActive = activeCategory === category.id;
                 const isPrev = activeCategory === category.id + 1;
@@ -153,13 +153,13 @@ const OperationsSection = () => {
                   scaleClass = "scale-100";
                   zIndexClass = "z-20";
                 } else if (isPrev) {
-                  positionClass = "-translate-x-[70%]";
-                  opacityClass = "opacity-30";
+                  positionClass = "-translate-x-[50%]";
+                  opacityClass = "opacity-50";
                   scaleClass = "scale-95";
                   zIndexClass = "z-10";
                 } else if (isNext) {
-                  positionClass = "translate-x-[70%]";
-                  opacityClass = "opacity-30";
+                  positionClass = "translate-x-[50%]";
+                  opacityClass = "opacity-50";
                   scaleClass = "scale-95";
                   zIndexClass = "z-10";
                 }
@@ -171,7 +171,7 @@ const OperationsSection = () => {
                   >
                     {/* Contenedor de Imagen con Aspect Ratio */}
                     <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="relative w-[85%] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
+                      <div className="relative w-[95%] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
                         {/* Imagen de Fondo */}
                         <img
                           src={category.image}
