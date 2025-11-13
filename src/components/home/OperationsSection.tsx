@@ -77,28 +77,28 @@ const OperationsSection = () => {
   };
 
   return (
-    <section className="pt-8 lg:pt-10 pb-8 lg:pb-10 bg-white">
+    <section className="pt-6 lg:pt-8 pb-6 lg:pb-8 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título Principal */}
-        <div className="text-left mb-6 lg:mb-10 fade-in">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide text-gray-900 uppercase">
+        <div className="text-left mb-4 lg:mb-6 fade-in">
+          <h2 className="text-lg md:text-xl lg:text-2xl font-light tracking-wide text-gray-900 uppercase">
             Operations & Signature Techniques
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-6 lg:gap-8">
           {/* Lista Izquierda - Categorías */}
-          <div className="space-y-4 fade-in-up">
+          <div className="space-y-3 fade-in-up">
             {operationsData.map((category) => (
-              <div key={category.id} className="border-b border-gray-200 pb-4">
+              <div key={category.id} className="border-b border-gray-200 pb-2.5">
                 {/* Categoría Principal */}
                 <button
                   onClick={() => toggleCategory(category.id)}
                   className="w-full text-left group"
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-1.5">
                     <h3
-                      className={`text-base lg:text-lg font-light tracking-wide uppercase transition-colors ${
+                      className={`text-sm lg:text-base font-light tracking-wide uppercase transition-colors ${
                         activeCategory === category.id
                           ? "text-gray-900"
                           : "text-gray-600 hover:text-gray-900"
@@ -112,20 +112,20 @@ const OperationsSection = () => {
                 {/* Subcategorías (Procedimientos) - Expandibles */}
                 {expandedCategory === category.id &&
                   category.procedures.length > 0 && (
-                    <div className="mt-2 ml-3 space-y-1.5 animate-fade-in">
+                    <div className="mt-1.5 ml-2 space-y-1 animate-fade-in">
                       {category.procedures.map((proc, idx) => (
                         <div
                           key={idx}
-                          className="text-xs lg:text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer uppercase tracking-wide font-light"
+                          className="text-[11px] lg:text-xs text-gray-600 hover:text-gray-900 transition-colors cursor-pointer uppercase tracking-wide font-light"
                         >
                           {proc}
                         </div>
                       ))}
                       
                       {/* Botón VIEW ALL - Solo visible cuando expandido */}
-                      <button className="flex items-center gap-2 text-xs lg:text-sm uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors mt-4 pt-2 group">
+                      <button className="flex items-center gap-2 text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors mt-3 pt-1.5 group">
                         VIEW ALL
-                        <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                        <ExternalLink className="w-2.5 h-2.5 transition-transform group-hover:translate-x-1" />
                       </button>
                     </div>
                   )}
@@ -134,7 +134,7 @@ const OperationsSection = () => {
           </div>
 
           {/* Imagen Derecha - Con Título Superpuesto */}
-          <div className="relative h-[350px] lg:h-[450px] overflow-hidden rounded-lg shadow-2xl">
+          <div className="relative h-[300px] lg:h-[380px] overflow-hidden rounded-lg shadow-2xl">
             {operationsData.map((category) => (
               <div
                 key={category.id}
@@ -155,9 +155,9 @@ const OperationsSection = () => {
                 <div className="absolute inset-0 bg-black/20" />
 
                 {/* Título Superpuesto con Degradado */}
-                <div className="absolute inset-0 flex items-center justify-center p-8">
+                <div className="absolute inset-0 flex items-center justify-center p-6">
                   <h3
-                    className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-wide text-center leading-tight"
+                    className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-wide text-center leading-tight"
                     style={{
                       background:
                         "linear-gradient(135deg, #8B1538 0%, #C44B4F 50%, #E6955A 100%)",

@@ -96,27 +96,27 @@ const SignatureProceduresSection = () => {
             <CarouselContent>
               {procedures.map((procedure) => (
                 <CarouselItem key={procedure.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[390px] lg:min-h-[450px] xl:min-h-[490px] fade-in-up">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[300px] lg:min-h-[360px] xl:min-h-[400px] fade-in-up">
                     {/* Left: Content */}
-                    <div className="space-y-4 lg:space-y-6 lg:order-1 flex flex-col justify-center pl-6 lg:pl-12 xl:pl-16 pr-6 lg:pr-10 py-12 lg:py-0">
-                      <h3 className="text-2xl lg:text-3xl xl:text-4xl font-serif tracking-wide">
+                    <div className="space-y-3 lg:space-y-4 lg:order-1 flex flex-col justify-center pl-6 lg:pl-10 xl:pl-12 pr-6 lg:pr-8 py-10 lg:py-0">
+                      <h3 className="text-xl lg:text-2xl xl:text-3xl font-serif tracking-wide">
                         <span className="font-light">{procedure.titleNormal} </span>
                         <span className="font-semibold">{procedure.titleBold}</span>
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                      <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
                         {procedure.description}
                       </p>
-                      <div className="flex gap-3 mt-6">
-                        <button className="px-5 py-2.5 border border-gray-900 text-gray-900 text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-all">
+                      <div className="flex gap-2 mt-4">
+                        <button className="px-4 py-2 border border-gray-900 text-gray-900 text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-all">
                           Learn More
                         </button>
-                        <button className="px-5 py-2.5 bg-gray-900 text-white text-xs uppercase tracking-wider hover:bg-gray-800 transition-all flex items-center gap-2">
+                        <button className="px-4 py-2 bg-gray-900 text-white text-xs uppercase tracking-wider hover:bg-gray-800 transition-all flex items-center gap-2">
                           Book Now
                         </button>
                       </div>
                       
                       {/* Indicators below text */}
-                      <div className="flex gap-2 mt-8">
+                      <div className="flex gap-2 mt-6">
                         {procedures.map((_, index) => (
                           <button
                             key={index}
@@ -131,7 +131,7 @@ const SignatureProceduresSection = () => {
                     </div>
 
                     {/* Right: Image - Full height */}
-                    <div className="relative lg:order-2 h-[300px] lg:h-auto">
+                    <div className="relative lg:order-2 h-[250px] lg:h-auto">
                       <img 
                         src={procedure.image} 
                         alt={`${procedure.titleNormal} ${procedure.titleBold}`}
