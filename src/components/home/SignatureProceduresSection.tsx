@@ -60,7 +60,7 @@ const SignatureProceduresSection = () => {
   const scrollNext = () => api?.scrollNext();
 
   return (
-    <section className="pt-8 lg:pt-12 pb-6 lg:pb-8 bg-gray-50">
+    <section className="pt-6 lg:pt-8 pb-4 lg:pb-6 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-left mb-6 lg:mb-8 fade-in">
           <p className="text-xs uppercase tracking-[0.3em] text-gray-400 font-light">
@@ -96,7 +96,7 @@ const SignatureProceduresSection = () => {
             <CarouselContent>
               {procedures.map((procedure) => (
                 <CarouselItem key={procedure.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] fade-in-up">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[400px] lg:min-h-[450px] xl:min-h-[500px] fade-in-up">
                     {/* Left: Content */}
                     <div className="space-y-4 lg:space-y-6 lg:order-1 flex flex-col justify-center pl-6 lg:pl-12 xl:pl-16 pr-6 lg:pr-10 py-12 lg:py-0">
                       <h3 className="text-2xl lg:text-3xl xl:text-4xl font-serif tracking-wide">
@@ -131,7 +131,7 @@ const SignatureProceduresSection = () => {
                     </div>
 
                     {/* Right: Image - Full height */}
-                    <div className="relative lg:order-2 h-[400px] lg:h-auto">
+                    <div className="relative lg:order-2 h-[300px] lg:h-auto">
                       <img 
                         src={procedure.image} 
                         alt={`${procedure.titleNormal} ${procedure.titleBold}`}

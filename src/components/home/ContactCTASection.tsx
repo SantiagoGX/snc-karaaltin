@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const ContactCTASection = () => {
   return (
-    <section className="bg-[#9DA29D] py-16 lg:py-24 px-8 lg:px-16">
+    <section className="bg-[#9DA29D] py-12 lg:py-16 px-8 lg:px-16">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Video Columna Izquierda */}
           <div className="flex justify-center lg:justify-start fade-in">
-            <div className="w-full max-w-[400px] aspect-[9/16] max-h-[600px] overflow-hidden rounded-lg shadow-2xl">
+            <div className="w-full max-w-[350px] aspect-[9/16] max-h-[450px] overflow-hidden rounded-lg shadow-2xl">
               <video
                 autoPlay
                 loop

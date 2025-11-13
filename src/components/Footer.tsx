@@ -7,7 +7,7 @@ import healthTurkiyeLogo from "@/assets/health-turkiye-logo.jpg";
 const Footer = () => {
   return (
     <footer className="bg-[#F6F4EF]">
-      <div className="container mx-auto px-8 lg:px-16 py-16">
+      <div className="container mx-auto px-8 lg:px-16 py-12">
         {/* Logo Header */}
         <div className="flex justify-center mb-8 fade-in">
           <img
@@ -227,7 +227,7 @@ const Footer = () => {
           <img
             src={healthTurkiyeLogo}
             alt="Health Türkiye"
-            className="max-w-[120px] h-auto"
+            className="max-w-[120px] h-auto mix-blend-multiply"
           />
         </div>
 
