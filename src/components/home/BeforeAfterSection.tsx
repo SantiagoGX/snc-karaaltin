@@ -1,4 +1,5 @@
 import beforeAfterImg from "@/assets/before-after-bg.jpg";
+import { Link } from "react-router-dom";
 
 const BeforeAfterSection = () => {
   return (
@@ -14,11 +15,11 @@ const BeforeAfterSection = () => {
       <div className="absolute inset-0 bg-black/10" />
       
       {/* Botón VIEW - Top Left */}
-      <button className="absolute top-8 left-8 lg:top-12 lg:left-12 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 shadow-lg flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:bg-white hover:shadow-2xl cursor-pointer group z-20">
+      <Link to="/gallery" className="absolute top-8 left-8 lg:top-12 lg:left-12 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 shadow-lg flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110 hover:bg-white hover:shadow-2xl cursor-pointer group z-20">
         <span className="text-xs md:text-sm lg:text-base uppercase tracking-widest font-light text-gray-800 group-hover:text-gray-900">
           VIEW
         </span>
-      </button>
+      </Link>
       
       {/* Texto Central "BEFORE & AFTERS" */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
