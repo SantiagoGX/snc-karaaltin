@@ -62,7 +62,7 @@ const SignatureProceduresSection = () => {
   return (
     <section className="pt-8 lg:pt-12 pb-6 lg:pb-8 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-left mb-6 lg:mb-8 fade-in">
+        <div className="text-left mb-6 lg:mb-8 float-in">
           <p className="text-xs uppercase tracking-[0.3em] text-gray-400 font-light">
             Signature Procedures
           </p>
@@ -96,9 +96,9 @@ const SignatureProceduresSection = () => {
             <CarouselContent>
               {procedures.map((procedure) => (
                 <CarouselItem key={procedure.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[300px] lg:min-h-[360px] xl:min-h-[400px] fade-in-up">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[300px] lg:min-h-[360px] xl:min-h-[400px]">
                     {/* Left: Content */}
-                    <div className="space-y-3 lg:space-y-4 lg:order-1 flex flex-col justify-center pl-6 lg:pl-10 xl:pl-12 pr-6 lg:pr-8 py-10 lg:py-0">
+                    <div className="space-y-3 lg:space-y-4 lg:order-1 flex flex-col justify-center pl-6 lg:pl-10 xl:pl-12 pr-6 lg:pr-8 py-10 lg:py-0 slide-in-left">
                       <h3 className="text-xl lg:text-2xl xl:text-3xl font-serif tracking-wide">
                         <span className="font-light">{procedure.titleNormal} </span>
                         <span className="font-semibold">{procedure.titleBold}</span>
@@ -131,7 +131,7 @@ const SignatureProceduresSection = () => {
                     </div>
 
                     {/* Right: Image - Full height */}
-                    <div className="relative lg:order-2 h-[250px] lg:h-auto">
+                    <div className="relative lg:order-2 h-[250px] lg:h-auto slide-in-right">
                       <img 
                         src={procedure.image} 
                         alt={`${procedure.titleNormal} ${procedure.titleBold}`}

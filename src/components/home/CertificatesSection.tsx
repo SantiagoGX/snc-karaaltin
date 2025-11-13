@@ -30,7 +30,7 @@ const CertificatesSection = () => {
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className="w-full h-24 flex items-center justify-center group fade-in"
+              className="w-full h-24 flex items-center justify-center group scale-up-luxury hover-glow"
               style={{ animationDelay: `${(cert.id - 1) * 0.1}s` }}
             >
               <img

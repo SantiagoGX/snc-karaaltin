@@ -118,4 +118,151 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+
+  /* ===== LUXURY ANIMATIONS ===== */
+
+  /* Slide In from Left (elegante) */
+  .slide-in-left {
+    animation: slideInLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Slide In from Right (elegante) */
+  .slide-in-right {
+    animation: slideInRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Scale Up (con bounce sutil) */
+  .scale-up-luxury {
+    animation: scaleUpLuxury 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  @keyframes scaleUpLuxury {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Blur to Focus (efecto premium) */
+  .blur-to-focus {
+    animation: blurToFocus 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes blurToFocus {
+    from {
+      opacity: 0;
+      filter: blur(10px);
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+  }
+
+  /* Elegant Float In */
+  .float-in {
+    animation: floatIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Reveal from Center */
+  .reveal-center {
+    animation: revealCenter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes revealCenter {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+      clip-path: circle(0% at 50% 50%);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      clip-path: circle(100% at 50% 50%);
+    }
+  }
+
+  /* ===== HOVER EFFECTS LUXURY ===== */
+
+  .hover-lift {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .hover-glow {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 8px 30px rgba(197, 159, 106, 0.4);
+    transform: scale(1.02);
+  }
+
+  .hover-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hover-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-shine:hover::before {
+    left: 100%;
+  }
 }

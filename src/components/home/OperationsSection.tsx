@@ -81,9 +81,9 @@ const OperationsSection = () => {
       <div className="container mx-auto px-3 md:px-4 lg:px-6">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 items-center justify-center">
           {/* Lista Izquierda - Categorías */}
-          <div className="w-full md:w-[35%] lg:w-[38%] space-y-3 fade-in-up flex-shrink-0">
-            {operationsData.map((category) => (
-              <div key={category.id} className="border-b border-gray-200 pb-2.5">
+          <div className="w-full md:w-[35%] lg:w-[38%] space-y-3 float-in flex-shrink-0">
+            {operationsData.map((category, index) => (
+              <div key={category.id} className="border-b border-gray-200 pb-2.5 hover-lift" style={{ animationDelay: `${index * 0.1}s` }}>
                 {/* Categoría Principal */}
                 <button
                   onClick={() => toggleCategory(category.id)}
