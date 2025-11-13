@@ -9,6 +9,7 @@ import FacilitiesSection from "@/components/home/FacilitiesSection";
 import OperationsSection from "@/components/home/OperationsSection";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import GoogleReviewsSection from "@/components/home/GoogleReviewsSection";
+import ContactCTASection from "@/components/home/ContactCTASection";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <OperationsSection />
         <BeforeAfterSection />
         <GoogleReviewsSection />
+        <ContactCTASection />
       </main>
       <Footer />
     </div>
