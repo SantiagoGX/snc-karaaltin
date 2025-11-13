@@ -19,7 +19,7 @@ const CertificatesSection = () => {
     <section className="pt-6 lg:pt-8 pb-12 lg:pb-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Title */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 fade-in">
           <p className="text-xs uppercase tracking-widest text-gray-400 font-light">
             REWARDS CERTIFICATES MEMBERSHIPS
           </p>
@@ -30,7 +30,8 @@ const CertificatesSection = () => {
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className="w-full h-24 flex items-center justify-center group"
+              className="w-full h-24 flex items-center justify-center group fade-in"
+              style={{ animationDelay: `${(cert.id - 1) * 0.1}s` }}
             >
               <img
                 src={cert.image}

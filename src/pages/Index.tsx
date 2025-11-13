@@ -6,8 +6,7 @@ import SignatureProceduresSection from "@/components/home/SignatureProceduresSec
 import CertificatesSection from "@/components/home/CertificatesSection";
 import DifferentiatorsSection from "@/components/home/DifferentiatorsSection";
 import FacilitiesSection from "@/components/home/FacilitiesSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import CTABanner from "@/components/home/CTABanner";
+import OperationsSection from "@/components/home/OperationsSection";
 
 const Index = () => {
   return (
@@ -20,8 +19,7 @@ const Index = () => {
         <CertificatesSection />
         <DifferentiatorsSection />
         <FacilitiesSection />
-        <TestimonialsSection />
-        <CTABanner />
+        <OperationsSection />
       </main>
       <Footer />
     </div>
