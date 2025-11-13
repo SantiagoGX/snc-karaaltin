@@ -77,18 +77,18 @@ const OperationsSection = () => {
   };
 
   return (
-    <section className="pt-12 lg:pt-16 pb-12 lg:pb-16 bg-white">
+    <section className="pt-8 lg:pt-10 pb-8 lg:pb-10 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título Principal */}
-        <div className="text-left mb-10 lg:mb-16 fade-in">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-gray-900 uppercase">
+        <div className="text-left mb-6 lg:mb-10 fade-in">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide text-gray-900 uppercase">
             Operations & Signature Techniques
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12">
           {/* Lista Izquierda - Categorías */}
-          <div className="space-y-6 fade-in-up">
+          <div className="space-y-4 fade-in-up">
             {operationsData.map((category) => (
               <div key={category.id} className="border-b border-gray-200 pb-4">
                 {/* Categoría Principal */}
@@ -98,7 +98,7 @@ const OperationsSection = () => {
                 >
                   <div className="flex items-center justify-between mb-2">
                     <h3
-                      className={`text-lg lg:text-xl font-light tracking-wide uppercase transition-colors ${
+                      className={`text-base lg:text-lg font-light tracking-wide uppercase transition-colors ${
                         activeCategory === category.id
                           ? "text-gray-900"
                           : "text-gray-600 hover:text-gray-900"
@@ -112,11 +112,11 @@ const OperationsSection = () => {
                 {/* Subcategorías (Procedimientos) - Expandibles */}
                 {expandedCategory === category.id &&
                   category.procedures.length > 0 && (
-                    <div className="mt-3 ml-4 space-y-2 animate-fade-in">
+                    <div className="mt-2 ml-3 space-y-1.5 animate-fade-in">
                       {category.procedures.map((proc, idx) => (
                         <div
                           key={idx}
-                          className="text-sm lg:text-base text-gray-600 hover:text-gray-900 transition-colors cursor-pointer uppercase tracking-wide font-light"
+                          className="text-xs lg:text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer uppercase tracking-wide font-light"
                         >
                           {proc}
                         </div>
@@ -134,7 +134,7 @@ const OperationsSection = () => {
           </div>
 
           {/* Imagen Derecha - Con Título Superpuesto */}
-          <div className="relative h-[500px] lg:h-[700px] overflow-hidden rounded-lg shadow-2xl">
+          <div className="relative h-[350px] lg:h-[450px] overflow-hidden rounded-lg shadow-2xl">
             {operationsData.map((category) => (
               <div
                 key={category.id}
