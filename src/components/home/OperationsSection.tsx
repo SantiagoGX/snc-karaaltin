@@ -77,18 +77,18 @@ const OperationsSection = () => {
   };
 
   return (
-    <section className="pt-6 lg:pt-8 pb-6 lg:pb-8 bg-white">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="pt-4 lg:pt-6 pb-4 lg:pb-6 bg-white">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* Título Principal */}
-        <div className="text-left mb-4 lg:mb-6 fade-in">
+        <div className="text-left mb-3 lg:mb-4 fade-in">
           <h2 className="text-lg md:text-xl lg:text-2xl font-light tracking-wide text-gray-900 uppercase">
             Operations & Signature Techniques
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-6 lg:gap-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8">
           {/* Lista Izquierda - Categorías */}
-          <div className="space-y-3 fade-in-up">
+          <div className="w-full md:w-[35%] lg:w-[38%] space-y-3 fade-in-up flex-shrink-0">
             {operationsData.map((category) => (
               <div key={category.id} className="border-b border-gray-200 pb-2.5">
                 {/* Categoría Principal */}
@@ -133,44 +133,78 @@ const OperationsSection = () => {
             ))}
           </div>
 
-          {/* Imagen Derecha - Con Título Superpuesto */}
-          <div className="relative h-[300px] lg:h-[380px] overflow-hidden rounded-lg shadow-2xl">
-            {operationsData.map((category) => (
-              <div
-                key={category.id}
-                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  activeCategory === category.id
-                    ? "opacity-100 z-20 scale-100"
-                    : "opacity-0 z-10 scale-95"
-                }`}
-              >
-                {/* Imagen de Fondo */}
-                <img
-                  src={category.image}
-                  alt={category.category}
-                  className="w-full h-full object-cover"
-                />
-
-                {/* Overlay oscuro sutil */}
-                <div className="absolute inset-0 bg-black/20" />
-
-                {/* Título Superpuesto con Degradado */}
-                <div className="absolute inset-0 flex items-center justify-center p-6">
-                  <h3
-                    className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-wide text-center leading-tight"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #8B1538 0%, #C44B4F 50%, #E6955A 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
+          {/* Galería Derecha - Efecto de Carrusel Estático */}
+          <div className="relative w-full md:w-[65%] lg:w-[62%] h-[320px] md:h-[400px] lg:h-[450px] overflow-hidden">
+            <div className="relative w-full h-full flex items-center justify-center">
+              {operationsData.map((category, index) => {
+                const isActive = activeCategory === category.id;
+                const isPrev = activeCategory === category.id + 1;
+                const isNext = activeCategory === category.id - 1;
+                
+                // Calcular posición
+                let positionClass = "translate-x-0";
+                let opacityClass = "opacity-0";
+                let scaleClass = "scale-90";
+                let zIndexClass = "z-0";
+                
+                if (isActive) {
+                  positionClass = "translate-x-0";
+                  opacityClass = "opacity-100";
+                  scaleClass = "scale-100";
+                  zIndexClass = "z-20";
+                } else if (isPrev) {
+                  positionClass = "-translate-x-[70%]";
+                  opacityClass = "opacity-30";
+                  scaleClass = "scale-95";
+                  zIndexClass = "z-10";
+                } else if (isNext) {
+                  positionClass = "translate-x-[70%]";
+                  opacityClass = "opacity-30";
+                  scaleClass = "scale-95";
+                  zIndexClass = "z-10";
+                }
+                
+                return (
+                  <div
+                    key={category.id}
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${positionClass} ${opacityClass} ${scaleClass} ${zIndexClass}`}
                   >
-                    {category.category}
-                  </h3>
-                </div>
-              </div>
-            ))}
+                    {/* Contenedor de Imagen con Aspect Ratio */}
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <div className="relative w-[85%] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
+                        {/* Imagen de Fondo */}
+                        <img
+                          src={category.image}
+                          alt={category.category}
+                          className="w-full h-full object-cover"
+                        />
+
+                        {/* Overlay oscuro sutil */}
+                        <div className="absolute inset-0 bg-black/20" />
+
+                        {/* Título Superpuesto con Degradado - Solo en imagen activa */}
+                        {isActive && (
+                          <div className="absolute inset-0 flex items-center justify-center p-6">
+                            <h3
+                              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold uppercase tracking-wide text-center leading-tight"
+                              style={{
+                                background:
+                                  "linear-gradient(135deg, #8B1538 0%, #C44B4F 50%, #E6955A 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                backgroundClip: "text",
+                              }}
+                            >
+                              {category.category}
+                            </h3>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
