@@ -7,6 +7,7 @@ import CertificatesSection from "@/components/home/CertificatesSection";
 import DifferentiatorsSection from "@/components/home/DifferentiatorsSection";
 import FacilitiesSection from "@/components/home/FacilitiesSection";
 import OperationsSection from "@/components/home/OperationsSection";
+import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <DifferentiatorsSection />
         <FacilitiesSection />
         <OperationsSection />
+        <BeforeAfterSection />
       </main>
       <Footer />
     </div>
