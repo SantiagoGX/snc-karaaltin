@@ -83,7 +83,7 @@ const OperationsSection = () => {
           {/* Lista Izquierda - Categorías */}
           <div className="w-full md:w-[35%] lg:w-[38%] space-y-3 float-in flex-shrink-0">
             {operationsData.map((category, index) => (
-              <div key={category.id} className="border-b border-gray-200 pb-2.5 hover-lift" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={category.id} className="border-b border-gray-200 pb-2.5" style={{ animationDelay: `${index * 0.1}s` }}>
                 {/* Categoría Principal */}
                 <button
                   onClick={() => toggleCategory(category.id)}
