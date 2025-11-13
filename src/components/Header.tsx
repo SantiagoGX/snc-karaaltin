@@ -48,8 +48,8 @@ const Header = () => {
     btnText: isScrolled ? 'hover:text-white' : 'hover:text-black',
     iconBg: isScrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10',
     iconColor: isScrolled ? '#000000' : '#FFFFFF',
-    headerHeight: isScrolled ? 'h-20 lg:h-24' : 'h-28 lg:h-32',
-    logoSize: isScrolled ? 'h-12 lg:h-14' : 'h-20 lg:h-24',
+    headerHeight: isScrolled ? 'h-16 lg:h-18' : 'h-20 lg:h-24',
+    logoSize: isScrolled ? 'h-10 lg:h-12' : 'h-16 lg:h-18',
   };
 
   const navItems = [
