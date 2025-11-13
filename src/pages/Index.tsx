@@ -8,6 +8,7 @@ import DifferentiatorsSection from "@/components/home/DifferentiatorsSection";
 import FacilitiesSection from "@/components/home/FacilitiesSection";
 import OperationsSection from "@/components/home/OperationsSection";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
+import GoogleReviewsSection from "@/components/home/GoogleReviewsSection";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <FacilitiesSection />
         <OperationsSection />
         <BeforeAfterSection />
+        <GoogleReviewsSection />
       </main>
       <Footer />
     </div>
