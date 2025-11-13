@@ -1,91 +1,241 @@
-import { Instagram, Youtube, Linkedin, Mail, Phone } from "lucide-react";
+import { ChevronRight, Send } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FaInstagram, FaXTwitter, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
+import healthTurkiyeLogo from "@/assets/health-turkiye-logo.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary border-t border-border">
-      <div className="container mx-auto px-4 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* About */}
-          <div>
-            <h3 className="text-xl font-serif font-bold mb-4">
-              Prof. Dr. Mehmet Veli Karaaltın
+    <footer className="bg-[#F6F4EF]">
+      <div className="container mx-auto px-8 lg:px-16 py-16">
+        {/* Logo Header */}
+        <div className="flex justify-center mb-8 fade-in">
+          <img
+            src={drKaraaltinLogo}
+            alt="Dr. Karaaltın Logo"
+            className="h-16 lg:h-20 brightness-0"
+          />
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-300 mt-8 mb-12"></div>
+
+        {/* Main Grid - 5 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+          {/* Column 1: PROCEDURES */}
+          <div className="fade-in">
+            <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
+              Procedures
             </h3>
-            <p className="text-sm text-muted-foreground">
-              World-renowned plastic surgeon with over 30 years of experience in
-              aesthetic and reconstructive surgery.
-            </p>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Face
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Body
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Breast
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Nose
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  The Future of Face
+                </a>
+              </li>
+            </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-serif font-semibold mb-4">Contact</h3>
-            <div className="space-y-2">
-              <a
-                href="tel:+90XXXXXXXXXX"
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+          {/* Column 2: GENERAL */}
+          <div className="fade-in" style={{ animationDelay: "0.1s" }}>
+            <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
+              General
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/learn-surgery" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Want to learn surgery?
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: SIGNATURE TECHNIQUES */}
+          <div className="fade-in" style={{ animationDelay: "0.2s" }}>
+            <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
+              Signature Techniques
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Deep Plane Face Lift
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Ultrasonic Rhinoplasty
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Scarless Lifting
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Endoscopic Body Contouring
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: LOCATION */}
+          <div className="fade-in" style={{ animationDelay: "0.3s" }}>
+            <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
+              Location
+            </h3>
+            <address className="not-italic text-sm text-gray-600 leading-relaxed mb-4">
+              Vişnezade, Balıklı Apt, Bayıldım Cd.
+              <br />
+              No:14/16 Kat: 1 Apartment:3
+              <br />
+              34353 Beşiktaş / Istanbul
+            </address>
+            <a
+              href="tel:+902123254242"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors block mb-4"
+            >
+              +90 212 325 42 42
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 text-xs text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide"
+            >
+              Get Directions
+              <ChevronRight className="w-3 h-3" />
+            </a>
+          </div>
+
+          {/* Column 5: SUBSCRIBE */}
+          <div className="fade-in" style={{ animationDelay: "0.4s" }}>
+            <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
+              Subscribe
+            </h3>
+            
+            {/* Email Input */}
+            <div className="flex gap-2 mb-6">
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="flex-1 border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-gray-900 transition-colors"
+              />
+              <button
+                className="bg-gray-900 text-white p-2 hover:bg-gray-800 transition-colors"
+                aria-label="Subscribe"
               >
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+90 XXX XXX XX XX</span>
-              </a>
-              <a
-                href="mailto:info@drkaraaltin.com"
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                <span>info@drkaraaltin.com</span>
-              </a>
+                <Send className="w-4 h-4" />
+              </button>
             </div>
-          </div>
 
-          {/* Social Media */}
-          <div>
-            <h3 className="text-lg font-serif font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            {/* Book Now Button */}
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs uppercase tracking-widest font-light rounded w-full justify-center hover:opacity-80 transition-all duration-300 mb-6"
+            >
+              Book Now
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+
+            {/* Social Media Icons */}
+            <div className="flex gap-4 text-xl">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/dr.karaaltinclinic/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-background hover:bg-gold transition-colors"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <FaInstagram />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://x.com/drkaraaltin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-background hover:bg-gold transition-colors"
-                aria-label="YouTube"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="X (Twitter)"
               >
-                <Youtube className="h-5 w-5" />
+                <FaXTwitter />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.facebook.com/drkaraaltin/?locale=tr_TR"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-background hover:bg-gold transition-colors"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/dr-karaaltin-clinic/?originalSubdomain=tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://www.youtube.com/@drkaraaltin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 transition-colors"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>
-            © {new Date().getFullYear()} Prof. Dr. Mehmet Veli Karaaltın. All
-            rights reserved.
+        {/* Health Türkiye Logo */}
+        <div className="flex justify-center pt-8 pb-8 fade-in">
+          <img
+            src={healthTurkiyeLogo}
+            alt="Health Türkiye"
+            className="max-w-[120px] h-auto"
+          />
+        </div>
+
+        {/* Bottom Bar - Copyright */}
+        <div className="border-t border-gray-300 pt-8 text-center">
+          <p className="text-sm text-gray-600">
+            © {new Date().getFullYear()} Prof. Dr. Mehmet Veli Karaaltın. All rights reserved.
           </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-foreground transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>
