@@ -6,7 +6,7 @@ const AboutDoctorSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Image */}
-          <div className="relative fade-in">
+          <div className="relative slide-in-left">
             <img 
               src={doctorImage} 
               alt="Dr. Mehmet Veli Karaaltín - Renowned Plastic Surgeon" 
@@ -16,7 +16,7 @@ const AboutDoctorSection = () => {
           </div>
 
           {/* Right: Content */}
-          <div className="space-y-4 fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="space-y-4 slide-in-right" style={{ animationDelay: "0.2s" }}>
             <div>
               <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
                 Welcome to Dr. Karaaltın's Clinic

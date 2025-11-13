@@ -22,7 +22,7 @@ const FacilitiesSection = () => {
     <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título centrado con puntos estilizados */}
-        <div className="text-center mb-10 lg:mb-12 fade-in">
+        <div className="text-center mb-10 lg:mb-12 float-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-[0.3em] flex items-center justify-center gap-4">
             <span>QUALITY</span>
             <span className="text-gold">•</span>
@@ -37,10 +37,10 @@ const FacilitiesSection = () => {
           {facilities.map((facility, index) => (
             <div
               key={index}
-              className="relative overflow-hidden group cursor-pointer fade-in"
+              className="relative overflow-hidden group cursor-pointer blur-to-focus hover-lift"
               style={{ 
                 aspectRatio: "1/1",
-                animationDelay: `${index * 0.15}s`
+                animationDelay: `${index * 0.2}s`
               }}
             >
               <img

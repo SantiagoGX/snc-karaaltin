@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
   return (
     <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-secondary">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16 fade-in">
+        <div className="text-center mb-16 float-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4">
             Patient Testimonials
           </h2>
@@ -39,8 +39,8 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="bg-background border-border fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-background border-border scale-up-luxury hover-lift"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <CardContent className="p-6">
                 <div className="flex mb-4">

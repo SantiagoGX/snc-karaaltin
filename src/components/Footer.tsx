@@ -2,14 +2,14 @@ import { ChevronRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaXTwitter, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-import healthTurkiyeLogo from "@/assets/health-turkiye-logo.jpg";
+import healthTurkiyeLogo from "@/assets/health-turkiye-logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-[#F6F4EF]">
       <div className="container mx-auto px-8 lg:px-16 py-16">
         {/* Logo Header */}
-        <div className="flex justify-center mb-8 fade-in">
+        <div className="flex justify-center mb-8 scale-up-luxury">
           <img
             src={drKaraaltinLogo}
             alt="Dr. Karaaltın Logo"
@@ -23,7 +23,7 @@ const Footer = () => {
         {/* Main Grid - 5 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
           {/* Column 1: PROCEDURES */}
-          <div className="fade-in">
+          <div className="float-in" style={{ animationDelay: "0s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
               Procedures
             </h3>
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2: GENERAL */}
-          <div className="fade-in" style={{ animationDelay: "0.1s" }}>
+          <div className="float-in" style={{ animationDelay: "0.1s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
               General
             </h3>
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
 
           {/* Column 3: SIGNATURE TECHNIQUES */}
-          <div className="fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="float-in" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
               Signature Techniques
             </h3>
@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
 
           {/* Column 4: LOCATION */}
-          <div className="fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="float-in" style={{ animationDelay: "0.3s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
               Location
             </h3>
@@ -142,7 +142,7 @@ const Footer = () => {
           </div>
 
           {/* Column 5: SUBSCRIBE */}
-          <div className="fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="float-in" style={{ animationDelay: "0.4s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
               Subscribe
             </h3>
@@ -223,11 +223,11 @@ const Footer = () => {
         </div>
 
         {/* Health Türkiye Logo */}
-        <div className="flex justify-center pt-8 pb-8 fade-in">
+        <div className="flex justify-center pt-8 pb-8 scale-up-luxury" style={{ animationDelay: "0.6s" }}>
           <img
             src={healthTurkiyeLogo}
             alt="Health Türkiye"
-            className="max-w-[120px] h-auto mix-blend-multiply"
+            className="max-w-[180px] h-auto"
           />
         </div>
 

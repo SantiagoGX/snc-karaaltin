@@ -23,7 +23,7 @@ const ContactCTASection = () => {
           </div>
 
           {/* Contenido CTA Columna Derecha */}
-          <div className="text-white space-y-6 fade-in-up">
+          <div className="text-white space-y-6 reveal-center">
             <h2 className="text-4xl lg:text-5xl font-light tracking-wide uppercase font-serif">
               Get Started
             </h2>
