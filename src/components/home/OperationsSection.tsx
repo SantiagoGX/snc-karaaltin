@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ExternalLink } from "lucide-react";
 import bodyImg from "@/assets/procedures/body-procedure.jpg";
 import breastImg from "@/assets/procedures/breast-procedure.jpg";
 import noseImg from "@/assets/procedures/nose-procedure.jpg";
@@ -66,81 +67,111 @@ const operationsData = [
   }
 ];
 
-interface CategoryCardProps {
-  category: {
-    id: number;
-    category: string;
-    procedures: string[];
-    image: string;
-  };
-}
-
-const CategoryCard = ({ category }: CategoryCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div 
-      className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Imagen de fondo */}
-      <div className="relative aspect-[3/4] overflow-hidden">
-        <img
-          src={category.image}
-          alt={category.category}
-          className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-        />
-        
-        {/* Overlay gradient */}
-        <div className={`absolute inset-0 transition-all duration-500 ${
-          isHovered 
-            ? 'bg-gradient-to-t from-black/70 via-black/30 to-transparent'
-            : 'bg-gradient-to-t from-black/85 via-black/50 to-black/20'
-        }`} />
-        
-        {/* Título con degradado */}
-        <div className="absolute bottom-0 left-0 right-0 p-6">
-          <h3 
-            className="text-2xl lg:text-3xl font-bold uppercase tracking-wide text-center leading-tight"
-            style={{
-              background: 'linear-gradient(135deg, #8B1538 0%, #C44B4F 50%, #E6955A 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}
-          >
-            {category.category}
-          </h3>
-          
-          {/* Contador de procedimientos */}
-          {category.procedures.length > 0 && (
-            <p className="text-white/80 text-sm text-center mt-2 uppercase tracking-wide font-light">
-              {category.procedures.length} {category.procedures.length === 1 ? 'Procedure' : 'Procedures'}
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const OperationsSection = () => {
+  const [activeCategory, setActiveCategory] = useState(1);
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+
+  const toggleCategory = (id: number) => {
+    setActiveCategory(id);
+    setExpandedCategory(expandedCategory === id ? null : id);
+  };
+
   return (
     <section className="pt-8 lg:pt-10 pb-8 lg:pb-10 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título Principal */}
-        <div className="text-center mb-8 lg:mb-12 fade-in">
+        <div className="text-left mb-6 lg:mb-10 fade-in">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide text-gray-900 uppercase">
             Operations & Signature Techniques
           </h2>
         </div>
 
-        {/* Grid de Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 fade-in-up">
-          {operationsData.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12">
+          {/* Lista Izquierda - Categorías */}
+          <div className="space-y-4 fade-in-up">
+            {operationsData.map((category) => (
+              <div key={category.id} className="border-b border-gray-200 pb-4">
+                {/* Categoría Principal */}
+                <button
+                  onClick={() => toggleCategory(category.id)}
+                  className="w-full text-left group"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <h3
+                      className={`text-base lg:text-lg font-light tracking-wide uppercase transition-colors ${
+                        activeCategory === category.id
+                          ? "text-gray-900"
+                          : "text-gray-600 hover:text-gray-900"
+                      }`}
+                    >
+                      {category.category}
+                    </h3>
+                  </div>
+                </button>
+
+                {/* Subcategorías (Procedimientos) - Expandibles */}
+                {expandedCategory === category.id &&
+                  category.procedures.length > 0 && (
+                    <div className="mt-2 ml-3 space-y-1.5 animate-fade-in">
+                      {category.procedures.map((proc, idx) => (
+                        <div
+                          key={idx}
+                          className="text-xs lg:text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer uppercase tracking-wide font-light"
+                        >
+                          {proc}
+                        </div>
+                      ))}
+                      
+                      {/* Botón VIEW ALL - Solo visible cuando expandido */}
+                      <button className="flex items-center gap-2 text-xs lg:text-sm uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors mt-4 pt-2 group">
+                        VIEW ALL
+                        <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                      </button>
+                    </div>
+                  )}
+              </div>
+            ))}
+          </div>
+
+          {/* Imagen Derecha - Con Título Superpuesto */}
+          <div className="relative h-[350px] lg:h-[450px] overflow-hidden rounded-lg shadow-2xl">
+            {operationsData.map((category) => (
+              <div
+                key={category.id}
+                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                  activeCategory === category.id
+                    ? "opacity-100 z-20 scale-100"
+                    : "opacity-0 z-10 scale-95"
+                }`}
+              >
+                {/* Imagen de Fondo */}
+                <img
+                  src={category.image}
+                  alt={category.category}
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Overlay oscuro sutil */}
+                <div className="absolute inset-0 bg-black/20" />
+
+                {/* Título Superpuesto con Degradado */}
+                <div className="absolute inset-0 flex items-center justify-center p-8">
+                  <h3
+                    className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-wide text-center leading-tight"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #8B1538 0%, #C44B4F 50%, #E6955A 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    {category.category}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
