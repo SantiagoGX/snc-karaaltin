@@ -2,7 +2,7 @@ import doctorImage from "@/assets/dr-karaaltin-portrait.jpg";
 
 const AboutDoctorSection = () => {
   return (
-    <section className="pt-12 lg:pt-20 pb-6 lg:pb-10 bg-white">
+    <section className="pt-8 lg:pt-12 pb-6 lg:pb-8 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Image */}

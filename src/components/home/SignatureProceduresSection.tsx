@@ -68,18 +68,18 @@ const SignatureProceduresSection = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative px-16 lg:px-20">
           {/* Navigation Arrows - Positioned at edges */}
           <button
             onClick={scrollPrev}
-            className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
             aria-label="Previous procedure"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={scrollNext}
-            className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
             aria-label="Next procedure"
           >
             <ChevronRight className="w-6 h-6" />
