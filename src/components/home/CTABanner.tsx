@@ -3,7 +3,7 @@ import { NavLink } from "@/components/NavLink";
 
 const CTABanner = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-primary to-gold">
+    <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-gradient-to-r from-primary to-gold">
       <div className="container mx-auto px-4 lg:px-8 text-center">
         <div className="max-w-3xl mx-auto space-y-6 fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">

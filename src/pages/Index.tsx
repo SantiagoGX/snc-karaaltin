@@ -5,6 +5,7 @@ import AboutDoctorSection from "@/components/home/AboutDoctorSection";
 import SignatureProceduresSection from "@/components/home/SignatureProceduresSection";
 import CertificatesSection from "@/components/home/CertificatesSection";
 import DifferentiatorsSection from "@/components/home/DifferentiatorsSection";
+import FacilitiesSection from "@/components/home/FacilitiesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CTABanner from "@/components/home/CTABanner";
 
@@ -18,6 +19,7 @@ const Index = () => {
         <SignatureProceduresSection />
         <CertificatesSection />
         <DifferentiatorsSection />
+        <FacilitiesSection />
         <TestimonialsSection />
         <CTABanner />
       </main>
