@@ -1,6 +1,6 @@
 import hospitalRoomImg from "@/assets/facilities/hospital-room.jpg";
 import hotelRoomImg from "@/assets/facilities/hotel-room.jpg";
-import doctorPortraitImg from "@/assets/dr-karaaltin-portrait.jpg";
+import doctorPortraitImg from "@/assets/facilities/dr-karaaltin-new-portrait.jpg";
 
 const facilities = [
   {
@@ -32,8 +32,8 @@ const FacilitiesSection = () => {
           </h2>
         </div>
 
-        {/* Grid de 3 imágenes - más cercano a cuadrado */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+        {/* Grid de 3 imágenes - centro más grande */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] gap-4 lg:gap-6">
           {facilities.map((facility, index) => (
             <div
               key={index}
