@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
+
+const GOOGLE_REVIEW_LINK = "https://www.google.com/maps/place/Prof.+Dr.+Mehmet+Veli+Karaalt%C4%B1n/@41.0428434,28.9958192,17z/data=!3m1!5s0x14cab77457fae66d:0xee229326ea907d8a!4m8!3m7!1s0x14cab77457f0a8bf:0xd6fc147c7b127a05!8m2!3d41.0428434!4d28.9958192!9m1!1b1!16s%2Fg%2F11c4b4bcdt?entry=ttu&g_ep=EgoyMDI1MTExMC4wIKXMDSoASAFQAw%3D%3D";
 
 const reviews = [
   {
@@ -150,6 +152,19 @@ const GoogleReviewsSection = () => {
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
+
+          {/* Botón CTA para dejar reseña */}
+          <div className="flex justify-center mt-8 lg:mt-10">
+            <a
+              href={GOOGLE_REVIEW_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white text-xs uppercase tracking-widest font-light rounded-md hover:bg-gray-800 transition-all duration-300 group"
+            >
+              Leave a Google Review
+              <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -159,23 +174,25 @@ const GoogleReviewsSection = () => {
 // Componente ReviewCard
 const ReviewCard = ({ review }: { review: typeof reviews[0] }) => {
   return (
-    <div className="bg-gray-50 p-8 lg:p-10 rounded-lg fade-in">
+    <div className="p-8 lg:p-10 fade-in">
       {/* Estrellas */}
       <div className="flex gap-1 mb-4">
         {[...Array(review.stars)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+          <Star key={i} className="w-5 h-5 fill-gray-900 text-gray-900" />
         ))}
       </div>
       
       {/* Texto de la reseña */}
-      <p className="text-gray-700 text-sm lg:text-base leading-relaxed mb-6 min-h-[200px]">
+      <p className="text-gray-700 text-sm lg:text-base leading-relaxed mb-4 min-h-[200px]">
         "{review.text}"
       </p>
       
-      {/* Nombre del paciente */}
-      <p className="font-semibold text-gray-900 text-lg">
-        {review.name}
-      </p>
+      {/* Línea divisora + Nombre del paciente */}
+      <div className="border-t border-gray-300 pt-4">
+        <p className="font-semibold text-gray-900 text-lg">
+          {review.name}
+        </p>
+      </div>
     </div>
   );
 };
