@@ -32,7 +32,7 @@ const DifferentiatorsSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-8 lg:mb-10 fade-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-wide">
-            What Makes Us Different
+            Why Choose Dr. Karaaltın?
           </h2>
         </div>
 
