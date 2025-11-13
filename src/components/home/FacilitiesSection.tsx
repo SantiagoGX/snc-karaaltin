@@ -22,7 +22,7 @@ const FacilitiesSection = () => {
     <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título centrado con puntos estilizados */}
-        <div className="text-center mb-10 lg:mb-12">
+        <div className="text-center mb-10 lg:mb-12 fade-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-[0.3em] flex items-center justify-center gap-4">
             <span>QUALITY</span>
             <span className="text-gold">•</span>
@@ -33,12 +33,15 @@ const FacilitiesSection = () => {
         </div>
 
         {/* Grid de 3 imágenes - centro más grande */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] gap-4 lg:gap-6 items-center">
           {facilities.map((facility, index) => (
             <div
               key={index}
-              className="relative overflow-hidden group cursor-pointer"
-              style={{ aspectRatio: "1/1" }}
+              className="relative overflow-hidden group cursor-pointer fade-in"
+              style={{ 
+                aspectRatio: "1/1",
+                animationDelay: `${index * 0.15}s`
+              }}
             >
               <img
                 src={facility.image}
