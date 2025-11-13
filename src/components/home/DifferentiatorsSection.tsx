@@ -28,7 +28,7 @@ const differentiators = [
 
 const DifferentiatorsSection = () => {
   return (
-    <section className="pt-6 lg:pt-8 pb-6 lg:pb-8 bg-white">
+    <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-8 lg:mb-10 fade-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-wide">
@@ -40,7 +40,7 @@ const DifferentiatorsSection = () => {
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className="relative h-[300px] lg:h-[350px] overflow-hidden group cursor-pointer fade-in"
+              className="relative h-[400px] lg:h-[450px] overflow-hidden group cursor-pointer fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Imagen de fondo */}

@@ -4,7 +4,7 @@ const AboutDoctorSection = () => {
   return (
     <section className="pt-8 lg:pt-12 pb-6 lg:pb-8 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Image */}
           <div className="relative fade-in">
             <img 

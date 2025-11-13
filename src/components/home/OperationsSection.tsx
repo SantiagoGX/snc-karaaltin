@@ -77,10 +77,10 @@ const OperationsSection = () => {
   };
 
   return (
-    <section className="pt-8 lg:pt-10 pb-8 lg:pb-10 bg-white">
+    <section className="pt-12 lg:pt-16 pb-12 lg:pb-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título Principal */}
-        <div className="text-left mb-6 lg:mb-10 fade-in">
+        <div className="text-left mb-10 lg:mb-16 fade-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wide text-gray-900 uppercase">
             Operations & Signature Techniques
           </h2>

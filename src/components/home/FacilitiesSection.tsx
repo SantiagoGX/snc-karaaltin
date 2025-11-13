@@ -19,10 +19,10 @@ const facilities = [
 
 const FacilitiesSection = () => {
   return (
-    <section className="pt-6 lg:pt-8 pb-6 lg:pb-8 bg-white">
+    <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título centrado con puntos estilizados */}
-        <div className="text-center mb-6 lg:mb-8 fade-in">
+        <div className="text-center mb-10 lg:mb-12 fade-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-[0.3em] flex items-center justify-center gap-4">
             <span>QUALITY</span>
             <span className="text-gold">•</span>
