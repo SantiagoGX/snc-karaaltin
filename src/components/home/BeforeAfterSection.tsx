@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 const BeforeAfterSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -17,14 +18,21 @@ const BeforeAfterSection = () => {
       }
     };
 
+    const handleMouseEnter = () => setIsHovering(true);
+    const handleMouseLeave = () => setIsHovering(false);
+
     const section = sectionRef.current;
     if (section) {
       section.addEventListener('mousemove', handleMouseMove);
+      section.addEventListener('mouseenter', handleMouseEnter);
+      section.addEventListener('mouseleave', handleMouseLeave);
     }
 
     return () => {
       if (section) {
         section.removeEventListener('mousemove', handleMouseMove);
+        section.removeEventListener('mouseenter', handleMouseEnter);
+        section.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
   }, []);
@@ -45,19 +53,21 @@ const BeforeAfterSection = () => {
       <div className="absolute inset-0 bg-black/10" />
       
       {/* Cursor personalizado VIEW que sigue el mouse */}
-      <Link 
-        to="/gallery" 
-        className="fixed w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 shadow-lg flex items-center justify-center transition-all duration-150 ease-out hover:scale-110 hover:bg-white hover:shadow-2xl pointer-events-auto group z-50"
-        style={{
-          left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`,
-          transform: 'translate(-50%, -50%)'
-        }}
-      >
-        <span className="text-xs md:text-sm lg:text-base uppercase tracking-widest font-light text-gray-800 group-hover:text-gray-900">
-          VIEW
-        </span>
-      </Link>
+      {isHovering && (
+        <Link 
+          to="/gallery" 
+          className="absolute w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 shadow-lg flex items-center justify-center transition-all duration-150 ease-out hover:scale-110 hover:bg-white hover:shadow-2xl pointer-events-auto group z-50"
+          style={{
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`,
+            transform: 'translate(-50%, -50%)'
+          }}
+        >
+          <span className="text-xs md:text-sm lg:text-base uppercase tracking-widest font-light text-gray-800 group-hover:text-gray-900">
+            VIEW
+          </span>
+        </Link>
+      )}
       
       {/* Texto Central "BEFORE & AFTERS" */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">

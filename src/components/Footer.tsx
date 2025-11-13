@@ -227,7 +227,7 @@ const Footer = () => {
           <img
             src={healthTurkiyeLogo}
             alt="Health Türkiye"
-            className="max-w-[120px] h-auto"
+            className="max-w-[120px] h-auto mix-blend-multiply"
           />
         </div>
 
