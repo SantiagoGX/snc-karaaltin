@@ -95,22 +95,22 @@ const TimelineSection = () => {
               key={event.id}
               onClick={() => setActiveEvent(event.id)}
               variant={activeEvent === event.id ? "default" : "outline"}
-              className={`w-full justify-start text-left transition-all duration-300 h-auto py-4 px-6 ${
+              className={`w-full justify-start text-left transition-all duration-300 h-auto py-4 px-4 ${
                 activeEvent === event.id 
                   ? "bg-gradient-to-r from-primary to-gold text-white shadow-lg scale-105" 
                   : "hover:bg-gray-100 hover:scale-102"
               }`}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="flex items-start gap-3 w-full">
+              <div className="flex items-start gap-3 w-full min-h-[60px]">
                 <Calendar className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <div className="flex-1">
-                  <div className={`text-sm font-semibold mb-1 ${
+                <div className="flex-1 min-w-0">
+                  <div className={`text-sm font-semibold mb-1.5 ${
                     activeEvent === event.id ? "text-white" : "text-gold"
                   }`}>
                     {event.date}
                   </div>
-                  <div className={`text-xs line-clamp-2 ${
+                  <div className={`text-xs leading-tight ${
                     activeEvent === event.id ? "text-white/90" : "text-gray-600"
                   }`}>
                     {event.title}
