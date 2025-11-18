@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import doctorPortrait from "@/assets/dr-karaaltin-portrait.jpg";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import TimelineSection from "@/components/about/TimelineSection";
 
 const About = () => {
   return (
@@ -176,128 +177,8 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Timeline Section */}
-              <div className="float-in" style={{ animationDelay: "0.5s" }}>
-                <h2 className="text-4xl md:text-5xl font-serif font-light text-gray-900 mb-4">
-                  Timeline of Landmark Achievements
-                </h2>
-                <p className="text-lg text-gray-600 italic mb-12">
-                  A curated journey of surgical innovation and global recognition by Professor Dr. Karaaltin
-                </p>
-
-                <div className="space-y-12">
-                  {/* February 2012 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">February 2012</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      World's Third Full Face Transplant & First Quadruple Limb Transplant
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      As a core surgical team member at Hacettepe University, Ankara, Dr. Karaaltin participated in two historic procedures:
-                    </p>
-                    <ul className="space-y-2 pl-6 text-gray-700 mb-4">
-                      <li className="list-disc">The <strong>world's third full face transplantation</strong></li>
-                      <li className="list-disc">The <strong>first-ever quadruple limb transplant</strong></li>
-                    </ul>
-                    <p className="text-sm text-gray-600 italic">
-                      Mr. Gul, the recipient of the world's third full face transplant, visiting Dr. Karaaltin three years post-surgery to express his gratitude.
-                    </p>
-                  </div>
-
-                  {/* March 2014 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">March 2014</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      Innovation in Facial Paralysis Surgery
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      Dr. Karaaltin pioneered and popularized the <strong>Free Extensor Digitorum Brevis and Extensor Hallucis Brevis Muscle Functional Transfer</strong> technique, offering a dynamic, natural solution for smile restoration in facial paralysis patients.
-                    </p>
-                    <p className="text-sm text-gray-600 italic">
-                      "A demonstrative clip showing the versatility of Dr. Karaaltin's dynamic muscle transfer technique."
-                    </p>
-                  </div>
-
-                  {/* April 2015 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">April 2015</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      Life-Saving Treatment of "The Miracle Man" Adem Kılıç
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      Dr. Karaaltin led the complex reconstructive efforts that saved the life of a man with over <strong>75% total body surface area burn injuries</strong>, widely regarded as a near-impossible case in modern medicine.
-                    </p>
-                    <p className="text-sm text-gray-600 italic">
-                      Mr. Adem Kılıç, known as "The Miracle Man," visiting Dr. K after three years from the tragic accident that nearly took his life.
-                    </p>
-                  </div>
-
-                  {/* June 2017 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">June 2017</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      Awarded Best Scientific Paper in Plastic Surgery
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      Dr. Karaaltin's original contribution to reconstructive surgery received the <strong>Best Scientific Paper of the Month</strong> distinction in an internationally recognized plastic surgery journal.
-                    </p>
-                    <p className="text-sm text-gray-600 italic">
-                      Official letter announcing the award sent to Dr. Karaaltin's team for their groundbreaking research.
-                    </p>
-                  </div>
-
-                  {/* September 2017 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">September 2017</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      Multi-Level Free Vascularized Lymph Node Transfer Popularized
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      In a remarkable pediatric case, Dr. Karaaltin introduced and performed <strong>bilateral six-level vascularized lymph node transfer</strong> for lymphedema in a 14-year-old Romanian patient, setting a precedent in the field.
-                    </p>
-                    <p className="text-sm text-gray-600 italic">
-                      A screenshot from Turkish national media coverage showcasing the young Romanian patient during recovery.
-                    </p>
-                  </div>
-
-                  {/* June 2022 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">June 2022</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      World Record: Fastest-Ever Separation of Conjoined Twins Using 3D Technology
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      A world record was set as Professor Dr. Karaaltin and his surgical team successfully separated <strong>craniopagus conjoined twins</strong> from Algeria (Chefa & Safa) in under <strong>9 hours</strong> using advanced <strong>3D surgical planning</strong>.
-                    </p>
-                    <p className="text-sm text-gray-600 italic">
-                      Dr. Karaaltin visiting the Algerian twins, Chefa & Safa, after their groundbreaking separation surgery.
-                    </p>
-                  </div>
-
-                  {/* May 2023 */}
-                  <div className="border-l-4 border-gold pl-8">
-                    <p className="text-gold font-semibold mb-2">May 2023</p>
-                    <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                      The First Kaplan Prize – Pioneering Lymphedema Surgery
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      Dr. Karaaltin is honored with the <strong>First Kaplan Prize</strong> for his groundbreaking work in <strong>multi-level lymph node transfer</strong>, solidifying his global leadership in lymphedema surgery.
-                    </p>
-                    <p className="text-sm text-gray-600 italic">
-                      "A visionary approach awarded with the highest distinction in the field."
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-12 p-8 bg-gray-50 rounded-lg">
-                  <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-4">
-                    Legacy of Excellence
-                  </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    This timeline reflects just a fragment of Professor Dr. Karaaltin's lifelong dedication to pioneering surgical breakthroughs, patient-centered care, and academic leadership across reconstructive and aesthetic surgery.
-                  </p>
-                </div>
-              </div>
+              {/* Timeline Section - Interactive */}
+              <TimelineSection />
 
               {/* Meet Our Team */}
               <div className="float-in" style={{ animationDelay: "0.6s" }}>
