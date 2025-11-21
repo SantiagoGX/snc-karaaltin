@@ -34,8 +34,8 @@ const About = () => {
             {/* Right Column - Image with Shape */}
             <div className="relative flex justify-center items-center lg:justify-end">
               {/* Background Shape */}
-              <div className="absolute w-[280px] h-[350px] lg:w-[350px] lg:h-[450px] rounded-lg opacity-20" style={{
-              backgroundColor: '#D4AF37',
+              <div className="absolute w-[280px] h-[350px] lg:w-[350px] lg:h-[450px] rounded-lg opacity-30" style={{
+              backgroundColor: '#0a1929',
               transform: 'rotate(-5deg)'
             }}></div>
               
@@ -245,26 +245,35 @@ const About = () => {
             Meet Our Team
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift">
-              <Users className="w-10 h-10 mx-auto mb-3 text-gold" />
+            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift group">
+              <div className="w-16 h-16 mx-auto mb-4 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl transform group-hover:scale-110 transition-transform duration-300"></div>
+                <Users className="w-10 h-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#1e3a5f]" strokeWidth={1.5} />
+              </div>
               <h3 className="text-lg font-semibold mb-2 text-gray-900">Patient Representatives</h3>
               <p className="text-sm text-gray-600">
                 Our multilingual team guides you through every step of your journey.
               </p>
             </div>
-            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift" style={{
+            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift group" style={{
             animationDelay: '0.1s'
           }}>
-              <Heart className="w-10 h-10 mx-auto mb-3 text-gold" />
+              <div className="w-16 h-16 mx-auto mb-4 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-rose-100 to-rose-50 rounded-2xl transform group-hover:scale-110 transition-transform duration-300"></div>
+                <Heart className="w-10 h-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-rose-600" strokeWidth={1.5} />
+              </div>
               <h3 className="text-lg font-semibold mb-2 text-gray-900">Dedicated Nurses</h3>
               <p className="text-sm text-gray-600">
                 Experienced surgical nurses provide compassionate care throughout your recovery.
               </p>
             </div>
-            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift" style={{
+            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift group" style={{
             animationDelay: '0.2s'
           }}>
-              <Award className="w-10 h-10 mx-auto mb-3 text-gold" />
+              <div className="w-16 h-16 mx-auto mb-4 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl transform group-hover:scale-110 transition-transform duration-300"></div>
+                <Award className="w-10 h-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-amber-600" strokeWidth={1.5} />
+              </div>
               <h3 className="text-lg font-semibold mb-2 text-gray-900">Medical Coordinators</h3>
               <p className="text-sm text-gray-600">
                 Expert coordinators handle all logistics, from travel to accommodation.
@@ -288,7 +297,7 @@ const About = () => {
             Schedule a consultation with Professor Dr. Karaaltin to discuss your goals and learn how we can help you achieve them.
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-[#1e3a5f] uppercase tracking-widest text-xs">
+            <Button size="lg" variant="outline" className="text-[#1e3a5f] bg-white border-white hover:bg-[#1e3a5f] hover:text-white uppercase tracking-widest text-xs">
               Book Consultation
             </Button>
           </Link>
