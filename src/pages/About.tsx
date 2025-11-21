@@ -27,9 +27,7 @@ const About = () => {
                 Globally Renowned Plastic & Reconstructive Surgeon
               </p>
               <Link to="/contact">
-                <Button variant="outline" className="mt-4 text-white border-white hover:bg-white hover:text-[#1e3a5f] uppercase tracking-widest text-xs">
-                  Schedule Consultation
-                </Button>
+                
               </Link>
             </div>
 
