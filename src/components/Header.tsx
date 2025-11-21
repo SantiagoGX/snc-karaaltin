@@ -257,7 +257,7 @@ const Header = () => {
             <NavLink
               key={item.path}
               to={item.path}
-              className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors"
+              className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase"
               activeClassName="font-medium text-black"
               onClick={() => setIsMenuOpen(false)}
             >
