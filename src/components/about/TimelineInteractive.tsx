@@ -124,7 +124,7 @@ export const TimelineInteractive = () => {
                       </div>
                     </button> : milestone.images ? <div className="grid grid-cols-2 gap-4">
                       {milestone.images.map((img, idx) => <img key={idx} src={img} alt={`${milestone.title} - ${idx + 1}`} className="w-full h-auto rounded-lg shadow-lg object-contain" />)}
-                    </div> : <img src={milestone.image} alt={milestone.title} className="w-full max-h-[400px] rounded-lg shadow-lg object-contain" />}
+                    </div> : <img src={milestone.image} alt={milestone.title} className="" />}
                 </div>
 
                     {/* Text Column */}
