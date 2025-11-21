@@ -129,7 +129,7 @@ const About = () => {
                   A pioneer in stem cell-based wound healing, burn management, and breast reconstruction. He serves on the <strong>Advisory Board of the Global Stem Cell Group</strong> (since 2018).
                 </p>
               </div>
-              <img src="/doctor-surgery-closeup.jpeg" alt="Dr. Karaaltin performing surgery" className="w-full max-w-sm rounded-lg shadow-md mt-6" />
+              <img alt="Dr. Karaaltin performing surgery" className="w-full max-w-sm rounded-lg shadow-md mt-6" src="/lovable-uploads/ef13efac-ce1f-4f94-a1d9-14c0121c0c43.png" />
             </div>
           </div>
 
