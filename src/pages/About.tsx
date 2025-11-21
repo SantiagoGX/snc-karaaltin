@@ -228,7 +228,6 @@ const About = () => {
                 <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <p className="text-base text-gray-700">CAPLAN First Prize, European Society of Lymphology (2023)</p>
               </div>
-              <img src="/doctor-patient.png" alt="Dr. Karaaltin with patient" className="w-full max-w-sm rounded-lg shadow-md mt-6" />
             </div>
           </div>
 
