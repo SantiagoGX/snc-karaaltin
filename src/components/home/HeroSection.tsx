@@ -3,8 +3,8 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-          <source src="/hero-video.mp4" type="video/mp4" />
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover" key="hero-video-2025">
+          <source src="/hero-video.mp4?v=2" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
       </div>
