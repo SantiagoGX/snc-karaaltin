@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+import { X, Play } from "lucide-react";
 interface TimelineMilestone {
   id: number;
   date: string;
@@ -118,7 +118,9 @@ export const TimelineInteractive = () => {
                   {milestone.videoId ? <button onClick={() => openVideo(milestone.videoId!)} className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                       <img src={`https://img.youtube.com/vi/${milestone.videoId}/maxresdefault.jpg`} alt={milestone.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                        
+                        <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                          <Play className="w-10 h-10 text-[#1e3a5f] fill-[#1e3a5f] ml-1" />
+                        </div>
                       </div>
                     </button> : milestone.images ? <div className="grid grid-cols-2 gap-4">
                       {milestone.images.map((img, idx) => <img key={idx} src={img} alt={`${milestone.title} - ${idx + 1}`} className="w-full h-auto rounded-lg shadow-lg object-contain" />)}
