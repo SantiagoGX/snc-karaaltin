@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 
@@ -67,11 +67,31 @@ const milestones: TimelineMilestone[] = [
 export const TimelineInteractive = () => {
   const [videoOpen, setVideoOpen] = useState(false);
   const [currentVideoId, setCurrentVideoId] = useState<string>("");
+  const [lineHeight, setLineHeight] = useState(0);
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   const openVideo = (videoId: string) => {
     setCurrentVideoId(videoId);
     setVideoOpen(true);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+      
+      const timelineTop = timelineRef.current.offsetTop;
+      const timelineHeight = timelineRef.current.offsetHeight;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      
+      const progress = Math.min(Math.max((scrollPosition - timelineTop) / timelineHeight, 0), 1);
+      setLineHeight(progress * 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial calculation
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section className="py-16 lg:py-20 px-8 lg:px-16 bg-white">
@@ -81,19 +101,50 @@ export const TimelineInteractive = () => {
           Timeline of Landmark Achievements
         </h2>
 
-        {/* Milestones */}
-        <div className="space-y-20 lg:space-y-24">
-          {milestones.map((milestone, index) => {
-            const isEven = index % 2 === 0;
+        {/* Timeline Container with Center Line */}
+        <div className="relative" ref={timelineRef}>
+          {/* Vertical Center Line - Background (gray) */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2 hidden lg:block"></div>
+          
+          {/* Vertical Center Line - Animated (blue gradient) */}
+          <div 
+            className="absolute left-1/2 top-0 w-0.5 -translate-x-1/2 hidden lg:block transition-all duration-300 ease-out"
+            style={{ 
+              height: `${lineHeight}%`,
+              background: 'linear-gradient(180deg, #1e3a5f 0%, #4a6fa5 100%)',
+              boxShadow: '0 0 10px rgba(30, 58, 95, 0.5)'
+            }}
+          ></div>
+
+          {/* Milestones */}
+          <div className="space-y-20 lg:space-y-24">
+            {milestones.map((milestone, index) => {
+              const isEven = index % 2 === 0;
             
-            return (
-              <div
-                key={milestone.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center fade-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Image/Video Column */}
-                <div className={`${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+              return (
+                <div
+                  key={milestone.id}
+                  className="relative"
+                >
+                  {/* Center Node (only visible on desktop) */}
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center z-10">
+                    <div 
+                      className="w-6 h-6 rounded-full border-4 border-white shadow-lg animate-pulse"
+                      style={{ 
+                        backgroundColor: '#1e3a5f',
+                        boxShadow: '0 0 0 4px rgba(30, 58, 95, 0.2), 0 0 20px rgba(30, 58, 95, 0.4)'
+                      }}
+                    ></div>
+                  </div>
+
+                  <div
+                    className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center fade-in ${
+                      isEven ? 'slide-in-left' : 'slide-in-right'
+                    }`}
+                    style={{ animationDelay: `${index * 0.15}s` }}
+                  >
+                    {/* Image/Video Column */}
+                    <div className={`${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   {milestone.videoId ? (
                     <button
                       onClick={() => openVideo(milestone.videoId!)}
@@ -130,35 +181,40 @@ export const TimelineInteractive = () => {
                   )}
                 </div>
 
-                {/* Text Column */}
-                <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                  {/* Date Badge */}
-                  <div 
-                    className="inline-block px-4 py-2 rounded-md mb-4 text-xs uppercase tracking-widest font-light text-white"
-                    style={{ backgroundColor: '#1e3a5f' }}
-                  >
-                    {milestone.date}
+                    {/* Text Column */}
+                    <div className={`${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                      {/* Date Badge with improved contrast */}
+                      <div 
+                        className="inline-block px-5 py-2.5 rounded-lg mb-4 text-xs uppercase tracking-widest font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                        style={{ 
+                          background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
+                          color: '#ffffff'
+                        }}
+                      >
+                        {milestone.date}
+                      </div>
+
+                      {/* Title */}
+                      <h3 
+                        className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide"
+                        style={{ 
+                          fontFamily: 'Cormorant Garamond, serif',
+                          color: '#1e3a5f'
+                        }}
+                      >
+                        {milestone.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                        {milestone.description}
+                      </p>
+                    </div>
                   </div>
-
-                  {/* Title */}
-                  <h3 
-                    className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide"
-                    style={{ 
-                      fontFamily: 'Cormorant Garamond, serif',
-                      color: '#1e3a5f'
-                    }}
-                  >
-                    {milestone.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
-                    {milestone.description}
-                  </p>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         {/* Legacy Section */}
