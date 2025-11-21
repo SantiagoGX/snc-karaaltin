@@ -118,9 +118,7 @@ export const TimelineInteractive = () => {
                   {milestone.videoId ? <button onClick={() => openVideo(milestone.videoId!)} className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                       <img src={`https://img.youtube.com/vi/${milestone.videoId}/maxresdefault.jpg`} alt={milestone.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                        <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-[#1e3a5f] border-b-8 border-b-transparent ml-1"></div>
-                        </div>
+                        
                       </div>
                     </button> : milestone.images ? <div className="grid grid-cols-2 gap-4">
                       {milestone.images.map((img, idx) => <img key={idx} src={img} alt={`${milestone.title} - ${idx + 1}`} className="w-full h-auto rounded-lg shadow-lg object-contain" />)}
