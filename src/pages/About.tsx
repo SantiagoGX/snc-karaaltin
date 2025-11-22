@@ -236,7 +236,7 @@ const About = () => {
       <TimelineInteractive />
 
       {/* Meet Our Team Section */}
-      <section className="py-16 lg:py-20 px-8 lg:px-16 bg-white">
+      <section className="py-16 lg:py-20 px-8 lg:px-16 bg-white pb-0">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-light text-center mb-12 tracking-wide" style={{
           fontFamily: 'Cormorant Garamond, serif',
@@ -244,18 +244,18 @@ const About = () => {
         }}>
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
             {/* Doctor Image - Left */}
             <div className="relative">
               <img 
                 src="/doctor-team-portrait.png" 
                 alt="Dr. Karaaltin" 
-                className="w-full h-auto object-cover rounded-lg shadow-lg"
+                className="w-4/5 h-auto object-cover"
               />
             </div>
 
             {/* Content - Right */}
-            <div className="space-y-8">
+            <div className="space-y-8 pb-16 lg:pb-20">
               <div className="flex items-start gap-6 fade-in-up">
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
                   boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
@@ -263,7 +263,7 @@ const About = () => {
                   <Users className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">👥 Patient Representatives</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Patient Representatives</h3>
                   <p className="text-base text-gray-600 leading-relaxed">
                     Our multilingual team guides you through every step of your journey.
                   </p>
@@ -277,7 +277,7 @@ const About = () => {
                   <Heart className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">💙 Dedicated Nurses</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Dedicated Nurses</h3>
                   <p className="text-base text-gray-600 leading-relaxed">
                     Experienced surgical nurses provide compassionate care throughout your recovery.
                   </p>
@@ -291,7 +291,7 @@ const About = () => {
                   <Award className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">⭐ Medical Coordinators</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Medical Coordinators</h3>
                   <p className="text-base text-gray-600 leading-relaxed">
                     Expert coordinators handle all logistics, from travel to accommodation.
                   </p>
