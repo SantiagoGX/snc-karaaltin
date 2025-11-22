@@ -247,19 +247,15 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end pb-0">
             {/* Doctor Image - Left */}
             <div className="relative pb-0 mb-0">
-              <img 
-                src="/doctor-team-portrait.png" 
-                alt="Dr. Karaaltin" 
-                className="w-4/5 h-auto object-cover block"
-              />
+              <img alt="Dr. Karaaltin" className="w-4/5 h-auto object-cover block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
             </div>
 
             {/* Content - Right */}
             <div className="space-y-8 pb-16 lg:pb-20">
               <div className="flex items-start gap-6 fade-in-up">
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
-                  boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
-                }}>
+                boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
+              }}>
                   <Users className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
                 <div>
@@ -270,10 +266,12 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-6 fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <div className="flex items-start gap-6 fade-in-up" style={{
+              animationDelay: '0.1s'
+            }}>
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
-                  boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
-                }}>
+                boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
+              }}>
                   <Heart className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
                 <div>
@@ -284,10 +282,12 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-6 fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="flex items-start gap-6 fade-in-up" style={{
+              animationDelay: '0.2s'
+            }}>
                 <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
-                  boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
-                }}>
+                boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
+              }}>
                   <Award className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>
                 <div>
