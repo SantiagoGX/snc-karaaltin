@@ -236,48 +236,67 @@ const About = () => {
       <TimelineInteractive />
 
       {/* Meet Our Team Section */}
-      <section className="py-12 px-8 lg:px-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-light text-center mb-10 tracking-wide" style={{
+      <section className="py-16 lg:py-20 px-8 lg:px-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-light text-center mb-12 tracking-wide" style={{
           fontFamily: 'Cormorant Garamond, serif',
           color: '#1e3a5f'
         }}>
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift group">
-              <div className="w-16 h-16 mx-auto mb-4 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl transform group-hover:scale-110 transition-transform duration-300"></div>
-                <Users className="w-10 h-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#1e3a5f]" strokeWidth={1.5} />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Patient Representatives</h3>
-              <p className="text-sm text-gray-600">
-                Our multilingual team guides you through every step of your journey.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Doctor Image - Left */}
+            <div className="relative">
+              <img 
+                src="/doctor-team-portrait.png" 
+                alt="Dr. Karaaltin" 
+                className="w-full h-auto object-cover rounded-lg shadow-lg"
+              />
             </div>
-            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift group" style={{
-            animationDelay: '0.1s'
-          }}>
-              <div className="w-16 h-16 mx-auto mb-4 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-rose-100 to-rose-50 rounded-2xl transform group-hover:scale-110 transition-transform duration-300"></div>
-                <Heart className="w-10 h-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-rose-600" strokeWidth={1.5} />
+
+            {/* Content - Right */}
+            <div className="space-y-8">
+              <div className="flex items-start gap-6 fade-in-up">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
+                  boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
+                }}>
+                  <Users className="w-8 h-8 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">👥 Patient Representatives</h3>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    Our multilingual team guides you through every step of your journey.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Dedicated Nurses</h3>
-              <p className="text-sm text-gray-600">
-                Experienced surgical nurses provide compassionate care throughout your recovery.
-              </p>
-            </div>
-            <div className="bg-white p-5 rounded-lg shadow-md text-center hover-lift group" style={{
-            animationDelay: '0.2s'
-          }}>
-              <div className="w-16 h-16 mx-auto mb-4 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl transform group-hover:scale-110 transition-transform duration-300"></div>
-                <Award className="w-10 h-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-amber-600" strokeWidth={1.5} />
+
+              <div className="flex items-start gap-6 fade-in-up" style={{ animationDelay: '0.1s' }}>
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
+                  boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
+                }}>
+                  <Heart className="w-8 h-8 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">💙 Dedicated Nurses</h3>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    Experienced surgical nurses provide compassionate care throughout your recovery.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">Medical Coordinators</h3>
-              <p className="text-sm text-gray-600">
-                Expert coordinators handle all logistics, from travel to accommodation.
-              </p>
+
+              <div className="flex items-start gap-6 fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
+                  boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
+                }}>
+                  <Award className="w-8 h-8 text-white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">⭐ Medical Coordinators</h3>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    Expert coordinators handle all logistics, from travel to accommodation.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
