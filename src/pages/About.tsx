@@ -236,21 +236,21 @@ const About = () => {
       <TimelineInteractive />
 
       {/* Meet Our Team Section */}
-      <section className="py-16 lg:py-20 px-8 lg:px-16 bg-white pb-0">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-16 lg:pt-20 px-8 lg:px-16 bg-white pb-0">
+        <div className="max-w-7xl mx-auto pb-0">
           <h2 className="text-3xl lg:text-4xl font-light text-center mb-12 tracking-wide" style={{
           fontFamily: 'Cormorant Garamond, serif',
           color: '#1e3a5f'
         }}>
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end pb-0">
             {/* Doctor Image - Left */}
-            <div className="relative">
+            <div className="relative pb-0 mb-0">
               <img 
                 src="/doctor-team-portrait.png" 
                 alt="Dr. Karaaltin" 
-                className="w-4/5 h-auto object-cover"
+                className="w-4/5 h-auto object-cover block"
               />
             </div>
 
