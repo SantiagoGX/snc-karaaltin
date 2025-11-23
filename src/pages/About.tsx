@@ -43,7 +43,7 @@ const About = () => {
                 style={{
                   backgroundColor: "#0d1f3a",
                   height: "calc(100% - 95px)",
-                  maxHeight: "410px",
+                  maxHeight: "435px",
                 }}
               ></div>
 
