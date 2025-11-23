@@ -35,13 +35,15 @@ const About = () => {
             {/* Right Column - Image with Shape */}
             <div className="relative flex justify-center items-center lg:justify-end">
               {/* Background Shape - Solid, Centered */}
-              <div className="absolute w-[280px] h-[350px] lg:w-[350px] lg:h-[450px] rounded-lg" style={{
+              <div className="absolute w-[280px] h-[250px] lg:w-[350px] lg:h-[300px] rounded-lg" style={{
               backgroundColor: '#0d1f3a'
             }}></div>
               
               {/* Doctor Image */}
-              <img src="/doctor-main.png" alt="Professor Doctor Karaaltin" className="relative z-10 w-[300px] h-auto lg:w-[380px] max-h-[500px] object-contain drop-shadow-2xl float-in" style={{
-              animationDelay: '0.2s'
+              <img src="/doctor-main.png" alt="Professor Doctor Karaaltin" className="relative z-10 w-[300px] h-auto lg:w-[380px] max-h-[500px] object-contain drop-shadow-2xl float-in block" style={{
+              animationDelay: '0.2s',
+              display: 'block',
+              marginBottom: '-2px'
             }} />
             </div>
           </div>
