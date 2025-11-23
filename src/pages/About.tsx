@@ -65,10 +65,10 @@ const About = () => {
 
       {/* Biography Section - Hakimi Style Grid Layout */}
       <section className="py-16 lg:py-20 px-8 lg:px-16 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12">
-            {/* Left Column - Sticky Titles */}
-            <div className="hidden lg:block lg:sticky lg:top-32 lg:self-start space-y-8">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* A Global Journey */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up">
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
                 className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
@@ -78,8 +78,40 @@ const About = () => {
               >
                 Global Journey
               </h2>
+            </div>
+            <div className="space-y-4">
+              <p className="text-base text-gray-700 leading-relaxed">
+                Born in 1972 in <strong>Kirkuk, Iraq</strong>, Professor Dr. Karaaltin is a proud Turkish descendant. At
+                just six months old, his family moved to the <strong>United States of America</strong>, where he spent
+                his formative years completing his early education across <strong>West Lafayette, Indiana</strong>, and{" "}
+                <strong>Orange County, Los Angeles</strong> (1976–1988).
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed">
+                In 1990, Dr. Karaaltin returned to Turkey to pursue his medical education. He graduated from{" "}
+                <strong>Istanbul University, Cerrahpaşa Medical Faculty (English Program)</strong>, one of the most
+                prestigious institutions in the country. Ranking <strong>12th out of 25,000</strong> in the National
+                Medical Specialization Exam, he went on to complete a six-year residency in{" "}
+                <strong>Plastic, Reconstructive & Aesthetic Surgery at Hacettepe University</strong>, Ankara—earning the{" "}
+                <strong>Turkish Board Certification</strong> in this field.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed">
+                In 2012, his excellence was recognized internationally when he became a{" "}
+                <strong>Fellow of the European Board of Plastic Reconstructive & Aesthetic Surgery (EBOPRAS)</strong>,
+                achieving full European accreditation.
+              </p>
+            </div>
+          </div>
+
+          {/* Educator & Leader */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up"
+            style={{
+              animationDelay: "0.1s",
+            }}
+          >
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500 opacity-40"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -87,8 +119,31 @@ const About = () => {
               >
                 Educator & Leader
               </h2>
+            </div>
+            <div className="space-y-4">
+              <p className="text-base text-gray-700 leading-relaxed">
+                As a faculty member at <strong>Bezmialem and Acıbadem Universities</strong>, Dr. Karaaltin has taught
+                hundreds of medical students and mentored numerous plastic surgeons who have gone on to become leaders
+                in their field. His passion for education is matched only by his dedication to innovation.
+              </p>
+              <img
+                alt="Dr. Karaaltin speaking at international conference"
+                src="/lovable-uploads/53f0c56b-6d93-40c2-ab6d-6c6fb9d21272.jpg"
+                className="w-full max-w-md rounded-lg shadow-md mt-6 object-fill"
+              />
+            </div>
+          </div>
+
+          {/* Innovations */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up"
+            style={{
+              animationDelay: "0.2s",
+            }}
+          >
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500 opacity-40"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -96,8 +151,49 @@ const About = () => {
               >
                 Innovations
               </h2>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rhinoplasty</h3>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Co-editor and chapter contributor to{" "}
+                  <em>Advanced Aesthetic Rhinoplasty: Art, Science & New Techniques</em>, he also introduced the{" "}
+                  <strong>SMART Template</strong> for superior dorsum contouring, first unveiled in 2020 at the{" "}
+                  <strong>European Society of Rhinoplasty</strong> in Bergamo, Italy.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Facial Rejuvenation</h3>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  Developer of the <strong>Four-Corner Concept</strong>, which integrates cellular therapy into facial
+                  anti-aging.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Regenerative Medicine</h3>
+                <p className="text-base text-gray-700 leading-relaxed">
+                  A pioneer in stem cell-based wound healing, burn management, and breast reconstruction. He serves on
+                  the <strong>Advisory Board of the Global Stem Cell Group</strong> (since 2018).
+                </p>
+              </div>
+              <img
+                alt="Dr. Karaaltin performing surgery"
+                className="w-full max-w-sm rounded-lg shadow-md mt-6"
+                src="/lovable-uploads/8e8ea3c9-3698-4132-993e-2151810b1680.png"
+              />
+            </div>
+          </div>
+
+          {/* Global Recognition */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up"
+            style={{
+              animationDelay: "0.3s",
+            }}
+          >
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500 opacity-40"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -105,8 +201,43 @@ const About = () => {
               >
                 Global Recognition
               </h2>
+            </div>
+            <div className="space-y-4">
+              <p className="text-base text-gray-700 leading-relaxed">
+                Dr. Karaaltin is a proud member of{" "}
+                <strong>ISAPS (International Society of Aesthetic Plastic Surgeons)</strong> and a champion of ISAPS's{" "}
+                <strong>Diamond Concept</strong>, which places patient safety at the forefront of aesthetic practice
+                worldwide.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed">
+                He has performed groundbreaking surgeries including <strong>World's Third Full Face Transplant</strong>,{" "}
+                <strong>First Quadruple Limb Transplant</strong>, and <strong>World-Record Twin Separation</strong>: Led
+                a 9-hour surgical separation of <strong>Thoraco-Omphalopagus conjoined twins</strong> using
+                state-of-the-art 3D modeling and regenerative techniques.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed">
+                His expertise in <strong>microvascular free flap surgery</strong>, <strong>nerve transfers</strong>, and{" "}
+                <strong>facial reanimation</strong> is world-renowned. He also authored definitive chapters on facial
+                paralysis treatment in leading textbooks and continues to be a keynote speaker at global conferences.
+              </p>
+              <img
+                src="/doctor-surgery-team.jpeg"
+                alt="Dr. Karaaltin with surgical team"
+                className="w-full rounded-lg shadow-md mt-6"
+              />
+            </div>
+          </div>
+
+          {/* Lymphatic Surgery */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up"
+            style={{
+              animationDelay: "0.4s",
+            }}
+          >
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500 opacity-40"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -114,8 +245,27 @@ const About = () => {
               >
                 Pushing Boundaries
               </h2>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900">Lymphatic Surgery</h3>
+              <p className="text-base text-gray-700 leading-relaxed">
+                A current focus of Dr. Karaaltin's research and surgical work is on{" "}
+                <strong>multi-level vascularized lymph node transfer</strong>, offering hope and advanced solutions for
+                patients suffering from <strong>lymphatic obstruction</strong> and <strong>lymphedema</strong>.
+              </p>
+            </div>
+          </div>
+
+          {/* Advanced Safe BBL */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up"
+            style={{
+              animationDelay: "0.5s",
+            }}
+          >
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500 opacity-40"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -123,8 +273,27 @@ const About = () => {
               >
                 Advocate of Safety
               </h2>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900">Advanced Safe BBL</h3>
+              <p className="text-base text-gray-700 leading-relaxed">
+                Known for his dedication to patient safety, Dr. Karaaltin has established strict surgical protocols for
+                high-demand procedures such as <strong>Brazilian Butt Lift (BBL)</strong>, coining the term{" "}
+                <strong>Advanced Safe BBL</strong> to ensure optimal aesthetic results while minimizing risk.
+              </p>
+            </div>
+          </div>
+
+          {/* Awards */}
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up"
+            style={{
+              animationDelay: "0.6s",
+            }}
+          >
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500 opacity-40"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -133,255 +302,28 @@ const About = () => {
                 Awards
               </h2>
             </div>
-
-            {/* Right Column - Scrolling Content */}
-            <div className="space-y-16">
-              {/* A Global Journey */}
-              <div className="fade-in-up">
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Global Journey
-                </h2>
-                <div className="space-y-4">
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Born in 1972 in <strong>Kirkuk, Iraq</strong>, Professor Dr. Karaaltin is a proud Turkish descendant. At
-                    just six months old, his family moved to the <strong>United States of America</strong>, where he spent
-                    his formative years completing his early education across <strong>West Lafayette, Indiana</strong>, and{" "}
-                    <strong>Orange County, Los Angeles</strong> (1976–1988).
-                  </p>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    In 1990, Dr. Karaaltin returned to Turkey to pursue his medical education. He graduated from{" "}
-                    <strong>Istanbul University, Cerrahpaşa Medical Faculty (English Program)</strong>, one of the most
-                    prestigious institutions in the country. Ranking <strong>12th out of 25,000</strong> in the National
-                    Medical Specialization Exam, he went on to complete a six-year residency in{" "}
-                    <strong>Plastic, Reconstructive & Aesthetic Surgery at Hacettepe University</strong>, Ankara—earning the{" "}
-                    <strong>Turkish Board Certification</strong> in this field.
-                  </p>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    In 2012, his excellence was recognized internationally when he became a{" "}
-                    <strong>Fellow of the European Board of Plastic Reconstructive & Aesthetic Surgery (EBOPRAS)</strong>,
-                    achieving full European accreditation.
-                  </p>
-                </div>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-700">
+                  Best Experimental Paper (2017) – <em>Plastic & Reconstructive Surgery Journal</em>
+                </p>
               </div>
-
-              {/* Educator & Leader */}
-              <div
-                className="fade-in-up"
-                style={{
-                  animationDelay: "0.1s",
-                }}
-              >
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Educator & Leader
-                </h2>
-                <div className="space-y-4">
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    As a faculty member at <strong>Bezmialem and Acıbadem Universities</strong>, Dr. Karaaltin has taught
-                    hundreds of medical students and mentored numerous plastic surgeons who have gone on to become leaders
-                    in their field. His passion for education is matched only by his dedication to innovation.
-                  </p>
-                  <img
-                    alt="Dr. Karaaltin speaking at international conference"
-                    src="/lovable-uploads/53f0c56b-6d93-40c2-ab6d-6c6fb9d21272.jpg"
-                    className="w-full max-w-md rounded-lg shadow-md mt-6 object-fill"
-                  />
-                </div>
+              <div className="flex items-start gap-3">
+                <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-700">
+                  Contributor to the UK Best-Seller Book on Modern Facial Rejuvenation Techniques
+                </p>
               </div>
-
-              {/* Innovations */}
-              <div
-                className="fade-in-up"
-                style={{
-                  animationDelay: "0.2s",
-                }}
-              >
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Innovations
-                </h2>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Rhinoplasty</h3>
-                    <p className="text-base text-gray-700 leading-relaxed">
-                      Co-editor and chapter contributor to{" "}
-                      <em>Advanced Aesthetic Rhinoplasty: Art, Science & New Techniques</em>, he also introduced the{" "}
-                      <strong>SMART Template</strong> for superior dorsum contouring, first unveiled in 2020 at the{" "}
-                      <strong>European Society of Rhinoplasty</strong> in Bergamo, Italy.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Facial Rejuvenation</h3>
-                    <p className="text-base text-gray-700 leading-relaxed">
-                      Developer of the <strong>Four-Corner Concept</strong>, which integrates cellular therapy into facial
-                      anti-aging.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Regenerative Medicine</h3>
-                    <p className="text-base text-gray-700 leading-relaxed">
-                      A pioneer in stem cell-based wound healing, burn management, and breast reconstruction. He serves on
-                      the <strong>Advisory Board of the Global Stem Cell Group</strong> (since 2018).
-                    </p>
-                  </div>
-                  <img
-                    alt="Dr. Karaaltin performing surgery"
-                    className="w-full max-w-sm rounded-lg shadow-md mt-6"
-                    src="/lovable-uploads/8e8ea3c9-3698-4132-993e-2151810b1680.png"
-                  />
-                </div>
+              <div className="flex items-start gap-3">
+                <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-700">
+                  Invited keynote speaker at leading international microsurgery and regenerative medicine symposia
+                </p>
               </div>
-
-              {/* Global Recognition */}
-              <div
-                className="fade-in-up"
-                style={{
-                  animationDelay: "0.3s",
-                }}
-              >
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Global Recognition
-                </h2>
-                <div className="space-y-4">
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Dr. Karaaltin is a proud member of{" "}
-                    <strong>ISAPS (International Society of Aesthetic Plastic Surgeons)</strong> and a champion of ISAPS's{" "}
-                    <strong>Diamond Concept</strong>, which places patient safety at the forefront of aesthetic practice
-                    worldwide.
-                  </p>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    He has performed groundbreaking surgeries including <strong>World's Third Full Face Transplant</strong>,{" "}
-                    <strong>First Quadruple Limb Transplant</strong>, and <strong>World-Record Twin Separation</strong>: Led
-                    a 9-hour surgical separation of <strong>Thoraco-Omphalopagus conjoined twins</strong> using
-                    state-of-the-art 3D modeling and regenerative techniques.
-                  </p>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    His expertise in <strong>microvascular free flap surgery</strong>, <strong>nerve transfers</strong>, and{" "}
-                    <strong>facial reanimation</strong> is world-renowned. He also authored definitive chapters on facial
-                    paralysis treatment in leading textbooks and continues to be a keynote speaker at global conferences.
-                  </p>
-                  <img
-                    src="/doctor-surgery-team.jpeg"
-                    alt="Dr. Karaaltin with surgical team"
-                    className="w-full rounded-lg shadow-md mt-6"
-                  />
-                </div>
-              </div>
-
-              {/* Lymphatic Surgery */}
-              <div
-                className="fade-in-up"
-                style={{
-                  animationDelay: "0.4s",
-                }}
-              >
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Pushing Boundaries
-                </h2>
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-900">Lymphatic Surgery</h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    A current focus of Dr. Karaaltin's research and surgical work is on{" "}
-                    <strong>multi-level vascularized lymph node transfer</strong>, offering hope and advanced solutions for
-                    patients suffering from <strong>lymphatic obstruction</strong> and <strong>lymphedema</strong>.
-                  </p>
-                </div>
-              </div>
-
-              {/* Advanced Safe BBL */}
-              <div
-                className="fade-in-up"
-                style={{
-                  animationDelay: "0.5s",
-                }}
-              >
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Advocate of Safety
-                </h2>
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-900">Advanced Safe BBL</h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Known for his dedication to patient safety, Dr. Karaaltin has established strict surgical protocols for
-                    high-demand procedures such as <strong>Brazilian Butt Lift (BBL)</strong>, coining the term{" "}
-                    <strong>Advanced Safe BBL</strong> to ensure optimal aesthetic results while minimizing risk.
-                  </p>
-                </div>
-              </div>
-
-              {/* Awards */}
-              <div
-                className="fade-in-up"
-                style={{
-                  animationDelay: "0.6s",
-                }}
-              >
-                <h2
-                  className="lg:hidden text-2xl font-light tracking-wide mb-6"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    color: "#1e3a5f",
-                  }}
-                >
-                  Awards
-                </h2>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                    <p className="text-base text-gray-700">
-                      Best Experimental Paper (2017) – <em>Plastic & Reconstructive Surgery Journal</em>
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                    <p className="text-base text-gray-700">
-                      Contributor to the UK Best-Seller Book on Modern Facial Rejuvenation Techniques
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                    <p className="text-base text-gray-700">
-                      Invited keynote speaker at leading international microsurgery and regenerative medicine symposia
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                    <p className="text-base text-gray-700">CAPLAN First Prize, European Society of Lymphology (2023)</p>
-                  </div>
-                </div>
+              <div className="flex items-start gap-3">
+                <Award className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                <p className="text-base text-gray-700">CAPLAN First Prize, European Society of Lymphology (2023)</p>
               </div>
             </div>
           </div>
