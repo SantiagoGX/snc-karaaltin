@@ -9,7 +9,7 @@ const About = () => {
       <Header />
       
       {/* Hero Section - Hakimi Style */}
-      <section className="relative min-h-[70vh] flex items-center pt-20" style={{
+      <section className="relative min-h-[70vh] flex items-center pt-20 overflow-hidden" style={{
       backgroundColor: '#1e3a5f'
     }}>
         <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
