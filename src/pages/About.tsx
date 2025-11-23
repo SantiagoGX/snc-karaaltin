@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { TimelineInteractive } from "@/components/about/TimelineInteractive";
 import { Link } from "react-router-dom";
@@ -238,15 +239,15 @@ const About = () => {
       {/* Meet Our Team Section */}
       <section className="pt-8 lg:pt-12 px-8 lg:px-16 bg-white pb-0">
         <div className="max-w-7xl mx-auto pb-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch pb-0">
             {/* Doctor Image - Left */}
-            <div className="relative pb-0 mb-0">
-              <img alt="Dr. Karaaltin" className="w-1/2 h-auto object-cover block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
+            <div className="relative pb-0 mb-0 flex items-end">
+              <img alt="Dr. Karaaltin" className="w-1/2 h-full object-cover object-top block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
             </div>
 
             {/* Content - Right */}
-            <div className="space-y-6 pb-8 lg:pb-12">
-              <h2 className="text-2xl lg:text-3xl font-light mb-8 tracking-wide" style={{
+            <div className="space-y-6 pb-8 lg:pb-12 flex flex-col">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-8 tracking-wide" style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 color: '#1e3a5f'
               }}>
@@ -323,6 +324,8 @@ const About = () => {
           </Link>
         </div>
       </section>
+
+      <Footer />
     </div>;
 };
 export default About;
