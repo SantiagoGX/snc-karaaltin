@@ -33,10 +33,12 @@ const About = () => {
             </div>
 
             {/* Right Column - Image with Shape */}
-            <div className="relative flex justify-center items-center lg:justify-end">
-              {/* Background Shape - Solid, Centered */}
-              <div className="absolute w-[280px] h-[250px] lg:w-[350px] lg:h-[300px] rounded-lg" style={{
-              backgroundColor: '#0d1f3a'
+            <div className="relative flex justify-center items-end lg:justify-end">
+              {/* Background Shape - Solid, extends to bottom */}
+              <div className="absolute w-[280px] lg:w-[350px] rounded-lg bottom-0" style={{
+              backgroundColor: '#0d1f3a',
+              height: 'calc(100% - 100px)',
+              maxHeight: '400px'
             }}></div>
               
               {/* Doctor Image */}
