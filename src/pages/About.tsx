@@ -68,9 +68,9 @@ const About = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           {/* A Global Journey */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 fade-in-up">
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -109,9 +109,9 @@ const About = () => {
               animationDelay: "0.1s",
             }}
           >
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -141,9 +141,9 @@ const About = () => {
               animationDelay: "0.2s",
             }}
           >
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -191,9 +191,9 @@ const About = () => {
               animationDelay: "0.3s",
             }}
           >
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -235,9 +235,9 @@ const About = () => {
               animationDelay: "0.4s",
             }}
           >
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -263,9 +263,9 @@ const About = () => {
               animationDelay: "0.5s",
             }}
           >
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
@@ -291,9 +291,9 @@ const About = () => {
               animationDelay: "0.6s",
             }}
           >
-            <div>
+            <div className="lg:sticky lg:top-32 lg:self-start">
               <h2
-                className="text-2xl lg:text-3xl font-light tracking-wide sticky top-24"
+                className="text-2xl lg:text-3xl font-light tracking-wide transition-opacity duration-500"
                 style={{
                   fontFamily: "Cormorant Garamond, serif",
                   color: "#1e3a5f",
