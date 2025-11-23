@@ -239,10 +239,10 @@ const About = () => {
       {/* Meet Our Team Section */}
       <section className="pt-8 lg:pt-12 px-8 lg:px-16 bg-white pb-0">
         <div className="max-w-7xl mx-auto pb-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-stretch pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-3 items-stretch pb-0">
             {/* Doctor Image - Left */}
             <div className="relative pb-0 mb-0 flex items-end">
-              <img alt="Dr. Karaaltin" className="w-1/2 h-full object-cover object-top block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
+              <img alt="Dr. Karaaltin" className="w-3/5 h-full object-contain object-bottom block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
             </div>
 
             {/* Content - Right */}
