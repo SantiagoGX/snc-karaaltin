@@ -236,31 +236,32 @@ const About = () => {
       <TimelineInteractive />
 
       {/* Meet Our Team Section */}
-      <section className="pt-16 lg:pt-20 px-8 lg:px-16 bg-white pb-0">
+      <section className="pt-8 lg:pt-12 px-8 lg:px-16 bg-white pb-0">
         <div className="max-w-7xl mx-auto pb-0">
-          <h2 className="text-3xl lg:text-4xl font-light text-center mb-12 tracking-wide" style={{
-          fontFamily: 'Cormorant Garamond, serif',
-          color: '#1e3a5f'
-        }}>
-            Meet Our Team
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end pb-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end pb-0">
             {/* Doctor Image - Left */}
             <div className="relative pb-0 mb-0">
-              <img alt="Dr. Karaaltin" className="w-4/5 h-auto object-cover block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
+              <img alt="Dr. Karaaltin" className="w-1/2 h-auto object-cover block" src="/lovable-uploads/cebf52b8-039c-4864-9a30-7c1ada4fefcc.png" />
             </div>
 
             {/* Content - Right */}
-            <div className="space-y-8 pb-16 lg:pb-20">
+            <div className="space-y-6 pb-8 lg:pb-12">
+              <h2 className="text-2xl lg:text-3xl font-light mb-8 tracking-wide" style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                color: '#1e3a5f'
+              }}>
+                Meet Our Team
+              </h2>
+
               <div className="flex items-start gap-6 fade-in-up">
-                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
                 boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
               }}>
-                  <Users className="w-8 h-8 text-white" strokeWidth={2} />
+                  <Users className="w-7 h-7 text-white" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Patient Representatives</h3>
-                  <p className="text-base text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-900">Patient Representatives</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     Our multilingual team guides you through every step of your journey.
                   </p>
                 </div>
@@ -269,14 +270,14 @@ const About = () => {
               <div className="flex items-start gap-6 fade-in-up" style={{
               animationDelay: '0.1s'
             }}>
-                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
                 boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
               }}>
-                  <Heart className="w-8 h-8 text-white" strokeWidth={2} />
+                  <Heart className="w-7 h-7 text-white" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Dedicated Nurses</h3>
-                  <p className="text-base text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-900">Dedicated Nurses</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     Experienced surgical nurses provide compassionate care throughout your recovery.
                   </p>
                 </div>
@@ -285,14 +286,14 @@ const About = () => {
               <div className="flex items-start gap-6 fade-in-up" style={{
               animationDelay: '0.2s'
             }}>
-                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300" style={{
                 boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)'
               }}>
-                  <Award className="w-8 h-8 text-white" strokeWidth={2} />
+                  <Award className="w-7 h-7 text-white" strokeWidth={2} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Medical Coordinators</h3>
-                  <p className="text-base text-gray-600 leading-relaxed">
+                  <h3 className="text-2xl font-semibold mb-2 text-gray-900">Medical Coordinators</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     Expert coordinators handle all logistics, from travel to accommodation.
                   </p>
                 </div>
