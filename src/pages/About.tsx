@@ -42,8 +42,8 @@ const About = () => {
                 className="absolute w-[280px] lg:w-[350px] rounded-lg bottom-0"
                 style={{
                   backgroundColor: "#0d1f3a",
-                  height: "calc(100% - 95px)",
-                  maxHeight: "435px",
+                  height: "calc(100% - 80px)",
+                  maxHeight: "450px",
                 }}
               ></div>
 
