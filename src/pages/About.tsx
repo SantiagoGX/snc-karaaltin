@@ -34,10 +34,9 @@ const About = () => {
 
             {/* Right Column - Image with Shape */}
             <div className="relative flex justify-center items-center lg:justify-end">
-              {/* Background Shape - Solid */}
+              {/* Background Shape - Solid, Centered */}
               <div className="absolute w-[280px] h-[350px] lg:w-[350px] lg:h-[450px] rounded-lg" style={{
-              backgroundColor: '#0d1f3a',
-              transform: 'rotate(-5deg)'
+              backgroundColor: '#0d1f3a'
             }}></div>
               
               {/* Doctor Image */}
