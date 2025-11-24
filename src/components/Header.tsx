@@ -13,6 +13,7 @@ import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: 'en',
@@ -54,11 +55,17 @@ const Header = () => {
 
   const navItems = [
     { name: "About", path: "/about" },
-    { name: "Procedures", path: "/procedures" },
+    { name: "Procedures", path: "/procedures", hasSubmenu: true },
     { name: "Before & Afters", path: "/gallery" },
-    { name: "Patient Resources", path: "/patient-journey" },
     { name: "Contact", path: "/contact" },
     { name: "Want to learn surgery?", path: "/learn-surgery" },
+  ];
+
+  const procedureCategories = [
+    { name: "FACE", path: "/procedures/face" },
+    { name: "BODY", path: "/procedures/body" },
+    { name: "BREAST", path: "/procedures/breast" },
+    { name: "NOSE", path: "/procedures/nose" },
   ];
 
   return (
@@ -252,17 +259,27 @@ const Header = () => {
         </button>
 
         {/* Menu Items */}
-        <nav className="flex flex-col items-end gap-6 p-8 sm:p-12 mt-16">
+        <nav className="flex flex-col items-start gap-6 p-8 sm:p-12 mt-16">
           {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase"
-              activeClassName="font-medium text-black"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </NavLink>
+            item.hasSubmenu ? (
+              <button
+                key={item.path}
+                onClick={() => setIsProceduresSubmenuOpen(true)}
+                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase text-left"
+              >
+                {item.name}
+              </button>
+            ) : (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase"
+                activeClassName="font-medium text-black"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </NavLink>
+            )
           ))}
           
           {/* Mobile Book Button in Menu */}
@@ -278,6 +295,44 @@ const Header = () => {
               </NavLink>
             </Button>
           </div>
+        </nav>
+      </div>
+
+      {/* Procedures Submenu Panel */}
+      <div className={`
+        fixed top-0 right-0 h-full w-full sm:w-96 bg-white/95 backdrop-blur-lg 
+        transform transition-all duration-300 z-[60]
+        ${isProceduresSubmenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+      `}>
+        {/* Back Button */}
+        <button 
+          onClick={() => setIsProceduresSubmenuOpen(false)}
+          className="absolute top-6 right-6 text-gray-800 hover:text-black transition-colors flex items-center gap-2 text-sm uppercase tracking-wider"
+          aria-label="Back to main menu"
+        >
+          <span>BACK</span>
+          <span>→</span>
+        </button>
+
+        {/* Submenu Items */}
+        <nav className="flex flex-col items-start gap-8 p-8 sm:p-12 mt-16">
+          <h3 className="text-sm uppercase tracking-widest text-gray-500 font-light mb-2">
+            Procedures
+          </h3>
+          {procedureCategories.map((category) => (
+            <NavLink
+              key={category.path}
+              to={category.path}
+              className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black transition-colors uppercase"
+              activeClassName="font-medium text-black"
+              onClick={() => {
+                setIsProceduresSubmenuOpen(false);
+                setIsMenuOpen(false);
+              }}
+            >
+              {category.name}
+            </NavLink>
+          ))}
         </nav>
       </div>
     </header>
