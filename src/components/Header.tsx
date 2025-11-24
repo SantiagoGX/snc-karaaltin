@@ -14,6 +14,7 @@ import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: 'en',
@@ -62,11 +63,75 @@ const Header = () => {
   ];
 
   const procedureCategories = [
-    { name: "FACE", path: "/procedures/face" },
-    { name: "BODY", path: "/procedures/body" },
-    { name: "BREAST", path: "/procedures/breast" },
-    { name: "NOSE", path: "/procedures/nose" },
+    { name: "FACE", id: "face" },
+    { name: "BODY", id: "body" },
+    { name: "BREAST", id: "breast" },
+    { name: "NOSE", id: "nose" },
   ];
+
+  const proceduresByCategory = {
+    face: {
+      withoutPage: [
+        "Mini Facelift",
+        "Purse-String Vertical Facelift",
+        "Subperiosteal Deep Plane / Composite Midface Lift",
+        "MACS Lift",
+        "EndoChor™-Assisted Mid-Face Lift",
+        "High SMAS / Extended High SMAS Lift",
+        "All-In-One Facial Rejuvenation",
+        "Ponytail Lift",
+        "Endoscopic Forehead & Brow Lift",
+        "Blepharoplasty (Upper & Lower)",
+        "Facial Implants",
+        "Genioplasty",
+        "Orthognathic Surgery",
+      ],
+      withPage: [
+        { name: "The K Face Lift (Signature)", path: "/procedures/k-face-lift" },
+        { name: "EndoChor® Face Lift (Signature)", path: "/procedures/endochor-face-lift" },
+        { name: "K Endoscopic Deep Plane Face Lift (Signature)", path: "/procedures/k-endoscopic-deep-plane" },
+      ]
+    },
+    body: {
+      withoutPage: [
+        "Body Lifting (Upper & Lower)",
+        "360° Liposculpture",
+        "Arm & Thigh Contouring",
+        "Brazilian Butt Lift (BBL)",
+        "Fat Transfer & Volume Enhancement",
+      ],
+      withPage: [
+        { name: "Tummitok (Tummy Tuck)", path: "/procedures/tummitok" },
+        { name: "Advanced Safe BBL™ (Signature)", path: "/procedures/advanced-safe-bbl" },
+        { name: "Macro/Micro Fat Cell Enriched Grafting (Signature)", path: "/procedures/fat-cell-grafting" },
+        { name: "Rib Cage Molding with Piezo Technology (Signature)", path: "/procedures/rib-cage-molding" },
+      ]
+    },
+    breast: {
+      withoutPage: [],
+      withPage: [
+        { name: "Breast Augmentation with Fat Grafting", path: "/procedures/breast-augmentation-fat" },
+        { name: "Breast Augmentation with Implant", path: "/procedures/breast-augmentation-implant" },
+        { name: "Breast Reduction", path: "/procedures/breast-reduction" },
+        { name: "Breast Uplift (Mastopexy)", path: "/procedures/breast-uplift" },
+        { name: "Gynecomastia", path: "/procedures/gynecomastia" },
+        { name: "Hybrid Augmentation (Implant + Fat)", path: "/procedures/hybrid-augmentation" },
+        { name: "Implant Removal", path: "/procedures/implant-removal" },
+        { name: "Inverted Nipple Correction", path: "/procedures/inverted-nipple" },
+        { name: "Nipple & Areola Reduction", path: "/procedures/nipple-areola-reduction" },
+        { name: "K-Glide™ Breast Augmentation (Signature)", path: "/procedures/k-glide" },
+        { name: "Twirl Internal Bra Technique™ (Signature)", path: "/procedures/twirl-internal-bra" },
+        { name: "Smart BRA / Bloocell Scaffold (Signature)", path: "/procedures/smart-bra" },
+      ]
+    },
+    nose: {
+      withoutPage: [],
+      withPage: [
+        { name: "Rhinoplasty", path: "/procedures/rhinoplasty" },
+        { name: "Smart Template Rhinoplasty (Signature)", path: "/procedures/smart-template-rhinoplasty" },
+      ]
+    }
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${colors.bg}`}>
@@ -298,11 +363,11 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Procedures Submenu Panel */}
+      {/* Procedures Submenu Panel - First Level (Categories) */}
       <div className={`
         fixed top-0 right-0 h-full w-full sm:w-96 bg-white/95 backdrop-blur-lg 
         transform transition-all duration-300 z-[60]
-        ${isProceduresSubmenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+        ${isProceduresSubmenuOpen && !selectedCategory ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
       `}>
         {/* Back Button */}
         <button 
@@ -314,26 +379,75 @@ const Header = () => {
           <span>→</span>
         </button>
 
-        {/* Submenu Items */}
+        {/* Category Items */}
         <nav className="flex flex-col items-start gap-8 p-8 sm:p-12 mt-16">
           <h3 className="text-sm uppercase tracking-widest text-gray-500 font-light mb-2">
             Procedures
           </h3>
           {procedureCategories.map((category) => (
-            <NavLink
-              key={category.path}
-              to={category.path}
-              className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black transition-colors uppercase"
-              activeClassName="font-medium text-black"
-              onClick={() => {
-                setIsProceduresSubmenuOpen(false);
-                setIsMenuOpen(false);
-              }}
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black transition-colors uppercase text-left"
             >
               {category.name}
-            </NavLink>
+            </button>
           ))}
         </nav>
+      </div>
+
+      {/* Procedures Mega Menu - Second Level (Procedure Lists) */}
+      <div className={`
+        fixed top-0 right-0 h-full w-full bg-white/95 backdrop-blur-lg 
+        transform transition-all duration-300 z-[70] overflow-y-auto
+        ${selectedCategory ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+      `}>
+        {/* Back Button */}
+        <button 
+          onClick={() => setSelectedCategory(null)}
+          className="absolute top-6 right-6 text-gray-800 hover:text-black transition-colors flex items-center gap-2 text-sm uppercase tracking-wider"
+          aria-label="Back to categories"
+        >
+          <span>BACK</span>
+          <span>→</span>
+        </button>
+
+        {/* Procedure Lists */}
+        <div className="p-8 sm:p-12 mt-16">
+          {selectedCategory && (
+            <div className="space-y-8">
+              <h3 className="text-xs uppercase tracking-widest text-gray-500 font-light mb-6">
+                {procedureCategories.find(cat => cat.id === selectedCategory)?.name}
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6">
+                {/* Procedures without pages */}
+                {proceduresByCategory[selectedCategory as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
+                  <div key={procedure} className="text-sm text-gray-700 hover:text-black transition-colors">
+                    {procedure}
+                  </div>
+                ))}
+                
+                {/* Procedures with pages */}
+                {proceduresByCategory[selectedCategory as keyof typeof proceduresByCategory].withPage.map((procedure) => (
+                  <NavLink
+                    key={procedure.path}
+                    to={procedure.path}
+                    className="text-sm text-gray-700 hover:text-black transition-colors flex items-center gap-2 group"
+                    onClick={() => {
+                      setSelectedCategory(null);
+                      setIsProceduresSubmenuOpen(false);
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    <span>{procedure.name}</span>
+                    <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
