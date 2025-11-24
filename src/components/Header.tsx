@@ -392,14 +392,7 @@ const Header = () => {
                 </h4>
                 
                 <div className="space-y-3">
-                  {/* Procedures without pages */}
-                  {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
-                    <div key={procedure} className="text-sm text-gray-600">
-                      {procedure}
-                    </div>
-                  ))}
-                  
-                  {/* Procedures with pages */}
+                  {/* Procedures with pages - shown first */}
                   {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withPage.map((procedure) => (
                     <NavLink
                       key={procedure.path}
@@ -413,6 +406,13 @@ const Header = () => {
                       <span className="font-semibold">{procedure.name}</span>
                       <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                     </NavLink>
+                  ))}
+                  
+                  {/* Procedures without pages - shown after */}
+                  {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
+                    <div key={procedure} className="text-sm text-gray-600">
+                      {procedure}
+                    </div>
                   ))}
                 </div>
               </div>
