@@ -410,8 +410,8 @@ const Header = () => {
                         setIsMenuOpen(false);
                       }}
                     >
-                      <span>{procedure.name}</span>
-                      <span className="text-xs">→</span>
+                      <span className="font-semibold">{procedure.name}</span>
+                      <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                     </NavLink>
                   ))}
                 </div>
