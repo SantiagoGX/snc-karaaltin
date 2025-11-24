@@ -14,7 +14,6 @@ import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: 'en',
@@ -59,7 +58,7 @@ const Header = () => {
     { name: "Procedures", path: "/procedures", hasSubmenu: true },
     { name: "Before & Afters", path: "/gallery" },
     { name: "Contact", path: "/contact" },
-    { name: "Want to learn surgery?", path: "/learn-surgery" },
+    { name: "Want to Learn Surgery?", path: "/learn-surgery" },
   ];
 
   const procedureCategories = [
@@ -363,11 +362,11 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Procedures Submenu Panel - First Level (Categories) */}
+      {/* Procedures Mega Menu - Full View */}
       <div className={`
-        fixed top-0 right-0 h-full w-full sm:w-96 bg-white/95 backdrop-blur-lg 
-        transform transition-all duration-300 z-[60]
-        ${isProceduresSubmenuOpen && !selectedCategory ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+        fixed top-0 right-0 h-full w-full bg-white/95 backdrop-blur-lg 
+        transform transition-all duration-300 z-[60] overflow-y-auto
+        ${isProceduresSubmenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
       `}>
         {/* Back Button */}
         <button 
@@ -379,74 +378,46 @@ const Header = () => {
           <span>→</span>
         </button>
 
-        {/* Category Items */}
-        <nav className="flex flex-col items-start gap-8 p-8 sm:p-12 mt-16">
-          <h3 className="text-sm uppercase tracking-widest text-gray-500 font-light mb-2">
-            Procedures
-          </h3>
-          {procedureCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black transition-colors uppercase text-left"
-            >
-              {category.name}
-            </button>
-          ))}
-        </nav>
-      </div>
-
-      {/* Procedures Mega Menu - Second Level (Procedure Lists) */}
-      <div className={`
-        fixed top-0 right-0 h-full w-full bg-white/95 backdrop-blur-lg 
-        transform transition-all duration-300 z-[70] overflow-y-auto
-        ${selectedCategory ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
-      `}>
-        {/* Back Button */}
-        <button 
-          onClick={() => setSelectedCategory(null)}
-          className="absolute top-6 right-6 text-gray-800 hover:text-black transition-colors flex items-center gap-2 text-sm uppercase tracking-wider"
-          aria-label="Back to categories"
-        >
-          <span>BACK</span>
-          <span>→</span>
-        </button>
-
-        {/* Procedure Lists */}
+        {/* Mega Menu Content */}
         <div className="p-8 sm:p-12 mt-16">
-          {selectedCategory && (
-            <div className="space-y-8">
-              <h3 className="text-xs uppercase tracking-widest text-gray-500 font-light mb-6">
-                {procedureCategories.find(cat => cat.id === selectedCategory)?.name}
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6">
-                {/* Procedures without pages */}
-                {proceduresByCategory[selectedCategory as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
-                  <div key={procedure} className="text-sm text-gray-700 hover:text-black transition-colors">
-                    {procedure}
-                  </div>
-                ))}
+          <h3 className="text-xs uppercase tracking-widest text-gray-500 font-light mb-8">
+            All Procedures
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-12">
+            {procedureCategories.map((category) => (
+              <div key={category.id} className="space-y-4">
+                <h4 className="text-lg font-semibold uppercase tracking-wide text-gray-900 mb-4">
+                  {category.name}
+                </h4>
                 
-                {/* Procedures with pages */}
-                {proceduresByCategory[selectedCategory as keyof typeof proceduresByCategory].withPage.map((procedure) => (
-                  <NavLink
-                    key={procedure.path}
-                    to={procedure.path}
-                    className="text-sm text-gray-700 hover:text-black transition-colors flex items-center gap-2 group"
-                    onClick={() => {
-                      setSelectedCategory(null);
-                      setIsProceduresSubmenuOpen(false);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <span>{procedure.name}</span>
-                    <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                  </NavLink>
-                ))}
+                <div className="space-y-3">
+                  {/* Procedures without pages */}
+                  {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
+                    <div key={procedure} className="text-sm text-gray-600">
+                      {procedure}
+                    </div>
+                  ))}
+                  
+                  {/* Procedures with pages */}
+                  {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withPage.map((procedure) => (
+                    <NavLink
+                      key={procedure.path}
+                      to={procedure.path}
+                      className="text-sm text-gray-700 hover:text-black transition-colors flex items-center gap-2 group"
+                      onClick={() => {
+                        setIsProceduresSubmenuOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      <span>{procedure.name}</span>
+                      <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                    </NavLink>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            ))}
+          </div>
         </div>
       </div>
     </header>
