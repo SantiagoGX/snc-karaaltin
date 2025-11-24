@@ -387,9 +387,17 @@ const Header = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-12">
             {procedureCategories.map((category) => (
               <div key={category.id} className="space-y-4">
-                <h4 className="text-lg font-semibold uppercase tracking-wide text-gray-900 mb-4">
-                  {category.name}
-                </h4>
+                <NavLink
+                  to={`/procedures/${category.id}`}
+                  className="text-lg uppercase tracking-wide text-gray-900 mb-4 flex items-center gap-2 group hover:text-black transition-colors"
+                  onClick={() => {
+                    setIsProceduresSubmenuOpen(false);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <h4 className="font-semibold">{category.name}</h4>
+                  <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </NavLink>
                 
                 <div className="space-y-3">
                   {/* Procedures with pages - shown first */}
