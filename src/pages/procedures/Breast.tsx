@@ -30,34 +30,91 @@ const Breast = () => {
     }
   }, [emblaApi]);
 
-  const proceduresWithPages = [
+  const allProcedures = [
     { 
-      id: "twirl-internal-bra", 
-      name: "The Twirl Internal Bra", 
+      id: "breast-augmentation-fat-grafting", 
+      name: "Breast Augmentation with Fat Grafting", 
       subtitle: "Signature Technique",
-      description: "Revolutionary internal support system for long-lasting lift and natural shape."
+      description: "Natural enhancement using your own fat for soft, lasting volume without implants.",
+      hasPage: false
+    },
+    { 
+      id: "breast-augmentation-implant", 
+      name: "Breast Augmentation with Implant", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "breast-reduction", 
+      name: "Breast Reduction", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "breast-uplift", 
+      name: "Breast Uplift (Mastopexy)", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "gynecomastia", 
+      name: "Gynecomastia", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "hybrid-augmentation", 
+      name: "Hybrid Augmentation (Implant + Fat)", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "implant-removal", 
+      name: "Implant Removal", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "inverted-nipple-correction", 
+      name: "Inverted Nipple Correction", 
+      subtitle: "",
+      description: "",
+      hasPage: false
+    },
+    { 
+      id: "nipple-areola-reduction", 
+      name: "Nipple & Areola Reduction", 
+      subtitle: "",
+      description: "",
+      hasPage: false
     },
     { 
       id: "k-glide-breast-augmentation", 
-      name: "K-Glide™ Rapid Breast Augmentation", 
+      name: "K-Glide™ Breast Augmentation", 
       subtitle: "Signature Technique",
-      description: "Minimally invasive technique for precise placement and faster recovery."
+      description: "Rapid, minimally invasive technique for precise implant placement with faster recovery.",
+      hasPage: false
     },
-  ];
-
-  const proceduresWithoutPages = [
-    "Breast Augmentation",
-    "Breast Lift (Mastopexy)",
-    "Breast Reduction",
-    "Breast Reconstruction",
-    "Breast Revision Surgery",
-    "Gynecomastia Surgery",
-    "Breast Implant Removal",
-  ];
-
-  const allProcedures = [
-    ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
-    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '', description: '' }))
+    { 
+      id: "twirl-internal-bra", 
+      name: "Twirl Internal Bra Technique™", 
+      subtitle: "Signature Technique",
+      description: "Revolutionary internal support system for long-lasting lift and natural shape.",
+      hasPage: false
+    },
+    { 
+      id: "smart-bra-bloocell", 
+      name: "Smart BRA / Bloocell Scaffold", 
+      subtitle: "Signature Technique",
+      description: "Advanced biologic scaffold technology for enhanced support and natural contouring.",
+      hasPage: false
+    },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -86,36 +143,36 @@ const Breast = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="/placeholder.svg"
-            alt="Breast procedures hero"
+            alt="Breast aesthetic procedures hero"
             className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]"
           />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4 fade-in-up">
-          <h1 className="font-serif font-light text-6xl md:text-7xl lg:text-8xl tracking-wider mb-4">
-            BREAST
+        <div className="relative z-10 text-center text-white px-4 fade-in-up max-w-5xl mx-auto">
+          <h1 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6 uppercase">
+            BREAST AESTHETIC & RECONTOURING PROCEDURES
           </h1>
-          <p className="text-lg md:text-xl tracking-wide font-light">
-            Breast Enhancement & Reconstruction Procedures
+          <p className="text-lg md:text-xl tracking-wide font-light max-w-3xl mx-auto">
+            Refined enhancement, structural harmony, and natural results through advanced surgical precision.
           </p>
         </div>
       </section>
 
-      {/* All Breast Procedures Section */}
+      {/* All Breast Procedures Section - Premium Carousel */}
       <section className="bg-gray-100 py-16 md:py-24 px-4 lg:px-8">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="font-serif font-light text-4xl md:text-5xl lg:text-6xl tracking-wider mb-12 text-center fade-in">
+          <h2 className="font-serif font-light text-4xl md:text-5xl lg:text-6xl tracking-wider mb-12 text-center fade-in uppercase">
             ALL BREAST PROCEDURES
           </h2>
           
           {/* Carousel Container */}
-          <div className="relative">
+          <div className="relative px-16 lg:px-20">
             {/* Navigation Arrows - Desktop Only */}
             <button
               onClick={scrollPrev}
-              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-14 h-14 items-center justify-center rounded-full bg-white border-2 border-gray-900 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
+              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
               aria-label="Previous procedures"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -123,7 +180,7 @@ const Breast = () => {
             
             <button
               onClick={scrollNext}
-              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-14 h-14 items-center justify-center rounded-full bg-white border-2 border-gray-900 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
+              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
               aria-label="Next procedures"
             >
               <ChevronRight className="w-6 h-6" />
@@ -143,7 +200,7 @@ const Breast = () => {
                       />
                       
                       {/* Gradient Overlay - Darkens on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent"></div>
                       
                       {/* Signature Badge - Top Left with Glassmorphism */}
                       {procedure.subtitle && (
@@ -189,7 +246,7 @@ const Breast = () => {
                     </Link>
                   ) : (
                     <div
-                      key={procedure.name}
+                      key={procedure.id}
                       className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]"
                     >
                       {CardContent}
@@ -218,118 +275,62 @@ const Breast = () => {
         </div>
       </section>
 
-      {/* Educational Section - Understanding the Philosophy */}
+      {/* Educational Section - The Philosophy of Breast Aesthetics */}
       <section className="py-16 md:py-24 px-4 lg:px-8 bg-white">
         <div className="container mx-auto max-w-5xl">
           <div className="fade-in-up">
             <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-8">
-              Understanding the Philosophy
+              The Philosophy of Breast Aesthetics
             </h2>
             <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
               <p>
-                Breast surgery at Dr. Karaaltın's practice focuses on creating natural, proportionate results 
-                that enhance your confidence and quality of life. Each procedure is tailored to your unique 
-                anatomy, goals, and lifestyle.
+                Your chest is a defining part of body harmony. At My Medi Expert, Professor Dr. Karaaltin approaches breast aesthetics with a balance of artistry, anatomical precision, and advanced surgical technique.
               </p>
               <p>
-                Our approach combines advanced surgical techniques with meticulous attention to detail, ensuring 
-                results that look beautiful and feel natural.
+                Whether seeking enhancement, lift, reduction, or reconstruction, each treatment plan is tailored to your proportions, goals, and long-term well-being.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Educational Section - Breast Anatomy */}
+      {/* Educational Section - Understanding Breast Anatomy & Aging */}
       <section className="py-16 md:py-24 px-4 lg:px-8 bg-gray-50">
         <div className="container mx-auto max-w-5xl">
           <div className="fade-in-up">
             <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-12">
-              Breast Anatomy
+              Understanding Breast Anatomy & Aging
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Breast Tissue</h3>
+                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Skin & Soft Tissue</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Glandular tissue, fat, and connective tissue create breast volume and shape. Understanding 
-                    composition guides surgical planning for optimal results.
+                    Changes in elasticity, firmness, and projection over time.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Skin Envelope</h3>
+                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Fat Volume</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Skin quality and elasticity determine the breast's ability to adapt to volume changes 
-                    and maintain shape over time.
+                    Redistribution or loss that alters shape and fullness.
                   </p>
                 </div>
               </div>
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Support Structures</h3>
+                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Glandular Tissue</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Cooper's ligaments and chest wall muscles provide natural support. Surgical techniques 
-                    work with these structures for lasting results.
+                    Drooping, asymmetry, or density changes.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Proportions</h3>
+                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Chest Wall & Structure</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Natural breast proportions consider chest width, breast base, and body frame to achieve 
-                    harmonious, balanced results.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Educational Section - How Breasts Change */}
-      <section className="py-16 md:py-24 px-4 lg:px-8 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <div className="fade-in-up">
-            <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-12">
-              How Breasts Change
-            </h2>
-            
-            <div className="space-y-12">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 items-start">
-                <h3 className="font-serif font-semibold text-2xl text-[#0d1f3a] lg:sticky lg:top-24">
-                  Pregnancy & Nursing
-                </h3>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p>
-                    Pregnancy and breastfeeding cause significant volume fluctuations, stretching skin and ligaments. 
-                    This often leads to deflation, sagging, and changes in breast shape and position.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 items-start">
-                <h3 className="font-serif font-semibold text-2xl text-[#0d1f3a] lg:sticky lg:top-24">
-                  Aging & Gravity
-                </h3>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p>
-                    Natural aging reduces skin elasticity and tissue density. Gravity's constant pull contributes 
-                    to gradual descent of breast tissue and loss of upper pole fullness.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 items-start">
-                <h3 className="font-serif font-semibold text-2xl text-[#0d1f3a] lg:sticky lg:top-24">
-                  Weight Changes
-                </h3>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
-                  <p>
-                    Weight fluctuation affects breast volume and shape, sometimes leaving excess skin or 
-                    asymmetry. Surgical intervention can restore proportion and contour.
+                    Variations in ribcage and posture influence final results.
                   </p>
                 </div>
               </div>
@@ -339,33 +340,217 @@ const Breast = () => {
       </section>
 
       {/* Educational Section - Customized Treatment Planning */}
+      <section className="py-16 md:py-24 px-4 lg:px-8 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="fade-in-up">
+            <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-8">
+              Customized Treatment Planning
+            </h2>
+            <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+              <p>
+                Planning is based on anatomy, footprint, projection goals, implant selection vs. fat grafting, symmetry, and lifestyle. Dr. Karaaltin uses precise measurements and 3D evaluation to recommend safe, natural outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Breast Procedure Overview - Split Layout Sections */}
       <section className="py-16 md:py-24 px-4 lg:px-8 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
-            <div>
-              <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-8">
-                Customized Treatment Planning
-              </h2>
-              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+          <h2 className="font-serif font-light text-4xl md:text-5xl lg:text-6xl tracking-wider mb-16 text-center fade-in uppercase">
+            Breast Procedure Overview
+          </h2>
+
+          {/* 1. Breast Augmentation with Fat Grafting */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+            <div className="order-2 lg:order-1">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Breast Augmentation with Fat Grafting
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
                 <p>
-                  Every patient receives a comprehensive breast analysis considering tissue quality, skin 
-                  elasticity, chest anatomy, and aesthetic goals. Dr. Karaaltın selects techniques that 
-                  achieve your desired outcome while maintaining natural appearance.
+                  Natural enhancement using your own fat harvested from donor areas. Results in soft, natural-looking volume without implants.
                 </p>
                 <p>
-                  Treatment may involve single procedures or combination approaches for comprehensive 
-                  transformation tailored to your unique needs.
+                  Ideal for patients seeking modest enhancement with the added benefit of body contouring through liposuction.
                 </p>
               </div>
             </div>
-            
-            {/* Image - Editable */}
+            <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Breast augmentation with fat grafting"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 2. Breast Augmentation with Implant */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
               <img
                 src="/placeholder.svg"
-                alt="Customized treatment planning"
+                alt="Breast augmentation with implant"
                 className="w-full h-full object-cover"
               />
+            </div>
+            <div>
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Breast Augmentation with Implant
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Silicone or saline implants placed to enhance volume, projection, and shape. Customized to your anatomy and aesthetic goals.
+                </p>
+                <p>
+                  Multiple placement options (subglandular, submuscular, dual-plane) and incision approaches available.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Breast Reduction */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+            <div className="order-2 lg:order-1">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Breast Reduction
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Removes excess tissue, fat, and skin to create proportionate, comfortable breasts. Alleviates physical discomfort and improves quality of life.
+                </p>
+                <p>
+                  Advanced techniques minimize scarring while achieving natural, lifted contours.
+                </p>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Breast reduction"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 4. Breast Lift (Mastopexy) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+            <div className="aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Breast lift mastopexy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Breast Lift (Mastopexy)
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Elevates and reshapes sagging breasts by removing excess skin and tightening surrounding tissue. Restores youthful contour and position.
+                </p>
+                <p>
+                  Can be combined with augmentation for enhanced volume and lift in one procedure.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 5. Gynecomastia */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+            <div className="order-2 lg:order-1">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Gynecomastia
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Corrects enlarged male breast tissue through liposuction, tissue excision, or combination techniques. Creates masculine, sculpted chest contours.
+                </p>
+                <p>
+                  Minimal scarring with natural-looking results that restore confidence.
+                </p>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Gynecomastia surgery"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 6. Hybrid Augmentation */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+            <div className="aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Hybrid augmentation"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Hybrid Augmentation (Implant + Fat)
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Combines implant placement with strategic fat grafting for enhanced naturalness, improved contour transitions, and optimized coverage.
+                </p>
+                <p>
+                  Delivers the volume benefits of implants with the soft, natural feel of fat transfer.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 7. Implant Removal or Replacement */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
+            <div className="order-2 lg:order-1">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Implant Removal or Replacement
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Safe removal or exchange of existing implants. Can include capsulectomy, tissue repair, and optional replacement with new implants or fat grafting.
+                </p>
+                <p>
+                  Restores natural appearance or achieves revised aesthetic goals with modern techniques.
+                </p>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Implant removal"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 8. Nipple & Areola Refinement */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
+            <div className="aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Nipple and areola refinement"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
+                Nipple & Areola Refinement
+              </h3>
+              <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Corrects inverted nipples, reduces oversized areolas, or adjusts asymmetry. Performed as standalone procedures or combined with other breast surgeries.
+                </p>
+                <p>
+                  Minimal scarring with natural, proportionate results that enhance overall breast aesthetics.
+                </p>
+              </div>
             </div>
           </div>
         </div>
