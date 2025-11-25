@@ -387,6 +387,229 @@ const Face = () => {
         </div>
       </section>
 
+      {/* The Future of Face Section */}
+      <section className="py-16 md:py-24 px-4 lg:px-8 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          {/* Introduction - What is Endochor */}
+          <div className="max-w-4xl mx-auto text-center mb-20 fade-in-up">
+            <h2 className="font-serif font-light text-4xl md:text-5xl lg:text-6xl tracking-wide mb-8 text-[#0d1f3a]">
+              THE FUTURE OF FACE
+            </h2>
+            <div className="space-y-6">
+              <h3 className="font-serif font-semibold text-2xl md:text-3xl text-[#0d1f3a]">
+                What is Endochor?
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                Endochor is a groundbreaking line of biodegradable, 3D-engineered implants uniquely designed 
+                for dynamic facial rejuvenation. Contributed by Professor Dr. Karaaltin, Endochor implants 
+                integrate seamlessly with soft tissue planes and serve as intelligent scaffolds, enhancing 
+                long-term surgical outcomes while respecting facial anatomy.
+              </p>
+            </div>
+          </div>
+
+          {/* F.A.C.E. Philosophy - 4 Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-24 fade-in">
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 mx-auto bg-[#0d1f3a]/10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-serif font-bold text-[#0d1f3a]">F</span>
+              </div>
+              <h4 className="font-serif font-semibold text-xl text-[#0d1f3a]">Fascial Anchoring</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Strategic fixation points that respect anatomical planes for lasting results
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 mx-auto bg-[#0d1f3a]/10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-serif font-bold text-[#0d1f3a]">A</span>
+              </div>
+              <h4 className="font-serif font-semibold text-xl text-[#0d1f3a]">Anatomical Harmony</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Preserving natural facial dynamics and expressions through intelligent design
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 mx-auto bg-[#0d1f3a]/10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-serif font-bold text-[#0d1f3a]">C</span>
+              </div>
+              <h4 className="font-serif font-semibold text-xl text-[#0d1f3a]">Contoured Lifting</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Multi-vector elevation addressing all dimensions of facial aging
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="w-16 h-16 mx-auto bg-[#0d1f3a]/10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl font-serif font-bold text-[#0d1f3a]">E</span>
+              </div>
+              <h4 className="font-serif font-semibold text-xl text-[#0d1f3a]">Engineered Support</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Biodegradable scaffolds that integrate with tissue for enhanced longevity
+              </p>
+            </div>
+          </div>
+
+          {/* Technical Subsections - Split Layouts */}
+          
+          {/* 1. Transblepharoplasty Brow Lift */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 fade-in-up">
+            <div className="space-y-6">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide text-[#0d1f3a]">
+                Transblepharoplasty Brow Lift with Endochor
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-lg italic">
+                A minimally invasive innovation for upper facial rejuvenation.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                With a single upper eyelid incision, Dr. K's transblepharoplasty approach allows:
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Upper blepharoplasty and brow elevation in one session</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Use of a small Endochor anchor implant to elevate and stabilize the lateral brow</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Entirely performed under local anesthesia, with rapid recovery and no visible scars</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Enhanced longevity and symmetry due to the implant's engineered retention zones</span>
+                </li>
+              </ul>
+            </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Transblepharoplasty Brow Lift with Endochor"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 2. Endoscopic Forehead & Brow Lift */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 fade-in-up">
+            <div className="aspect-[4/3] overflow-hidden rounded-sm lg:order-1">
+              <img
+                src="/placeholder.svg"
+                alt="Endoscopic Forehead & Brow Lift using Endochor"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="space-y-6 lg:order-2">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide text-[#0d1f3a]">
+                Endoscopic Forehead & Brow Lift using Endochor
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                For patients desiring a more global upper facial lift:
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Scarless approach via small incisions in the hair-bearing scalp</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Lifting and repositioning of frontalis, brow complex, and temporal structures</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Strategic anchoring of tissues to Endochor implants fixed at stable periosteal points</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Reduces recurrence of brow ptosis and improves longevity</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 3. Double-Double Implant Technique */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24 fade-in-up">
+            <div className="space-y-6">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide text-[#0d1f3a]">
+                The Double-Double Implant Technique — By Dr. K
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Professor Karaaltin's signature innovation uses dual Endochor implants per side to:
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Elevate lateral brow + temporal region simultaneously</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Achieve a monobloc lifting effect without visible incisions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Support both vertical and posterior vectors of tissue repositioning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Maximize lift while minimizing nerve risk and tissue trauma</span>
+                </li>
+              </ul>
+            </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-sm">
+              <img
+                src="/placeholder.svg"
+                alt="The Double-Double Implant Technique by Dr. K"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 4. Ribbon Implant */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
+            <div className="aspect-[4/3] overflow-hidden rounded-sm lg:order-1">
+              <img
+                src="/placeholder.svg"
+                alt="Ribbon Implant: For Neck Lift & SEAS Lift Support"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="space-y-6 lg:order-2">
+              <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide text-[#0d1f3a]">
+                Ribbon Implant: For Neck Lift & SEAS Lift Support
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                The Endochor Ribbon Implant serves as a versatile reinforcement matrix for:
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Submental neck lifts</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Acting as a suspension hammock for the platysma and neck muscles</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Reinforcement of SEAS Lift in facelift procedures</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Anchoring deep layers to fixed fascial points</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-[#0d1f3a] font-bold">•</span>
+                  <span>Enhancing vertical lift outcomes</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Before & After Section */}
       <BeforeAfterSection />
 
