@@ -1,9 +1,26 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
 
 const Face = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    align: "start",
+    loop: false,
+    skipSnaps: false,
+    dragFree: false,
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   const proceduresWithPages = [
     { id: "k-face-lift", name: "The K Face Lift", subtitle: "Signature Technique" },
     { id: "endochor-face-lift", name: "EndoChor® Face Lift", subtitle: "Signature Technique" },
@@ -24,6 +41,11 @@ const Face = () => {
     "Facial Implants",
     "Genioplasty",
     "Orthognathic Surgery",
+  ];
+
+  const allProcedures = [
+    ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
+    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '' }))
   ];
 
   return (
@@ -60,70 +82,95 @@ const Face = () => {
             ALL FACE PROCEDURES
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-            {/* Procedures WITH internal pages */}
-            {proceduresWithPages.map((procedure, index) => (
-              <Link
-                key={procedure.id}
-                to={`/procedures/face/${procedure.id}`}
-                className="group fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="bg-white overflow-hidden transition-all duration-300 hover:shadow-xl">
-                  {/* Image - Editable */}
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <img
-                      src="/placeholder.svg"
-                      alt={procedure.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-6">
-                    {procedure.subtitle && (
-                      <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">
-                        {procedure.subtitle}
-                      </p>
-                    )}
-                    <h3 className="font-serif font-semibold text-xl mb-3 group-hover:text-[#0d1f3a] transition-colors">
-                      {procedure.name}
-                    </h3>
-                    <div className="flex items-center text-sm uppercase tracking-wide text-[#0d1f3a] font-light">
-                      View Procedure
-                      <ChevronRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
+          {/* Carousel Container */}
+          <div className="relative">
+            {/* Navigation Arrows - Desktop Only */}
+            <button
+              onClick={scrollPrev}
+              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 w-12 h-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+              aria-label="Previous procedures"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-900" />
+            </button>
             
-            {/* Procedures WITHOUT internal pages */}
-            {proceduresWithoutPages.map((procedure, index) => (
-              <div
-                key={procedure}
-                className="fade-in"
-                style={{ animationDelay: `${(proceduresWithPages.length + index) * 0.1}s` }}
-              >
-                <div className="bg-white overflow-hidden transition-all duration-300 hover:shadow-lg">
-                  {/* Image - Editable */}
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <img
-                      src="/placeholder.svg"
-                      alt={procedure}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
+            <button
+              onClick={scrollNext}
+              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 w-12 h-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+              aria-label="Next procedures"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-900" />
+            </button>
+
+            {/* Embla Carousel */}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex gap-6 lg:gap-8">
+                {allProcedures.map((procedure, index) => {
+                  const isWithPage = procedure.hasPage;
                   
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="font-serif font-semibold text-xl">
-                      {procedure}
-                    </h3>
-                  </div>
-                </div>
+                  return isWithPage ? (
+                    <Link
+                      key={procedure.id}
+                      to={`/procedures/face/${procedure.id}`}
+                      className="group flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%] fade-in"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                    >
+                      <div className="bg-white overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+                        {/* Image - Fixed Height */}
+                        <div className="h-[400px] overflow-hidden">
+                          <img
+                            src="/placeholder.svg"
+                            alt={procedure.name}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                        
+                        {/* Content - Fixed Height */}
+                        <div className="p-6 flex-1 flex flex-col justify-between min-h-[160px]">
+                          <div>
+                            {procedure.subtitle && (
+                              <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">
+                                {procedure.subtitle}
+                              </p>
+                            )}
+                            <h3 className="font-serif font-semibold text-xl mb-3 group-hover:text-[#0d1f3a] transition-colors">
+                              {procedure.name}
+                            </h3>
+                          </div>
+                          <div className="flex items-center text-sm uppercase tracking-wide text-[#0d1f3a] font-light">
+                            View Procedure
+                            <ChevronRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div
+                      key={procedure.name}
+                      className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%] fade-in"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                    >
+                      <div className="bg-white overflow-hidden transition-all duration-300 hover:shadow-lg h-full flex flex-col">
+                        {/* Image - Fixed Height */}
+                        <div className="h-[400px] overflow-hidden">
+                          <img
+                            src="/placeholder.svg"
+                            alt={procedure.name}
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        </div>
+                        
+                        {/* Content - Fixed Height */}
+                        <div className="p-6 flex-1 flex items-center min-h-[160px]">
+                          <h3 className="font-serif font-semibold text-xl">
+                            {procedure.name}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
