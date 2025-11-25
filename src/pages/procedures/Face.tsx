@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BeforeAfterSection from "@/components/home/BeforeAfterSection";
+import ContactCTASection from "@/components/home/ContactCTASection";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
@@ -386,66 +388,10 @@ const Face = () => {
       </section>
 
       {/* Before & After Section */}
-      <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-        {/* Background Image - Editable */}
-        <img
-          src="/placeholder.svg"
-          alt="Before and After results"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/20"></div>
-        
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-[0.2em] text-white text-center px-4 text-shadow-lg">
-            BEFORE<br />& AFTERS
-          </h2>
-        </div>
-      </section>
+      <BeforeAfterSection />
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4 lg:px-8 bg-[#E8E6E1]">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="fade-in-up">
-              <h2 className="font-serif font-light text-4xl md:text-5xl lg:text-6xl tracking-wide mb-8">
-                GET STARTED
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Ready to take the next step with Dr. Karaaltın and book your consultation? 
-                Get started by calling the office at{" "}
-                <a href="tel:+902123254242" className="font-semibold hover:text-[#0d1f3a] transition-colors">
-                  +90 212 325 42 42
-                </a>{" "}
-                or completing our online contact form to schedule your appointment.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-[#0d1f3a] text-white px-8 py-4 text-sm uppercase tracking-widest font-light hover:bg-[#1a2f4a] transition-all duration-300"
-              >
-                BOOK NOW
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-            
-            <div className="flex flex-col items-center gap-8 fade-in" style={{ animationDelay: "0.2s" }}>
-              {/* Logo - Editable */}
-              <img
-                src="/placeholder.svg"
-                alt="Dr. Karaaltın Logo"
-                className="max-w-[200px] w-full"
-              />
-              {/* Image - Editable */}
-              <div className="w-full max-w-md aspect-square overflow-hidden">
-                <img
-                  src="/placeholder.svg"
-                  alt="Get started"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactCTASection />
 
       <Footer />
     </div>
