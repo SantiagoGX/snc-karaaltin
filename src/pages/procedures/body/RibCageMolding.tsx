@@ -53,8 +53,11 @@ const RibCageMolding = () => {
       {/* 2. INTRO / SEO BLOCK */}
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in">
-            Rib Cage Molding with Piezo Technology is an advanced technique created by Prof. Dr. Karaaltin that redefines waist contouring without resorting to traditional rib resection. Through 0.5 cm microincisions and piezoelectric remodeling of the floating ribs, the procedure allows visible reduction of thoracic width with safety, elegance, and minimal recovery. This innovation combines controlled vibration technology, anatomical approach, and functional preservation to achieve a slimmer silhouette without compromising bone structure.
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
+            Rib Cage Molding with Piezo Technology is an advanced technique created by Prof. Dr. Karaaltin that redefines waist contouring without resorting to traditional rib resection. Through 0.5 cm microincisions and piezoelectric remodeling of the floating ribs, the procedure allows visible reduction of thoracic width with safety, elegance, and minimal recovery.
+          </p>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            This innovation combines controlled vibration technology, anatomical approach, and functional preservation to achieve a slimmer silhouette without compromising bone structure.
           </p>
         </div>
       </section>
