@@ -35,31 +35,29 @@ const Breast = () => {
       id: "twirl-internal-bra", 
       name: "The Twirl Internal Bra", 
       subtitle: "Signature Technique",
-      description: "Revolutionary internal support system for long-lasting lift and natural shape.",
-      image: "/procedures/breast/twirl-internal-bra.jpg"
+      description: "Revolutionary internal support system for long-lasting lift and natural shape."
     },
     { 
       id: "k-glide-breast-augmentation", 
       name: "K-Glide™ Rapid Breast Augmentation", 
       subtitle: "Signature Technique",
-      description: "Minimally invasive technique for precise placement and faster recovery.",
-      image: "/procedures/breast/k-glide-augmentation.jpg"
+      description: "Minimally invasive technique for precise placement and faster recovery."
     },
   ];
 
   const proceduresWithoutPages = [
-    { name: "Breast Augmentation", image: "/procedures/breast/breast-augmentation.jpg" },
-    { name: "Breast Lift (Mastopexy)", image: "/procedures/breast/breast-lift.jpg" },
-    { name: "Breast Reduction", image: "/procedures/breast/breast-lift.jpg" },
-    { name: "Breast Reconstruction", image: "/procedures/breast/breast-augmentation.jpg" },
-    { name: "Breast Revision Surgery", image: "/procedures/breast/breast-augmentation.jpg" },
-    { name: "Gynecomastia Surgery", image: "/procedures/breast/breast-augmentation.jpg" },
-    { name: "Breast Implant Removal", image: "/procedures/breast/breast-lift.jpg" },
+    "Breast Augmentation",
+    "Breast Lift (Mastopexy)",
+    "Breast Reduction",
+    "Breast Reconstruction",
+    "Breast Revision Surgery",
+    "Gynecomastia Surgery",
+    "Breast Implant Removal",
   ];
 
   const allProcedures = [
     ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
-    ...proceduresWithoutPages.map(proc => ({ id: '', name: proc.name, hasPage: false, subtitle: '', description: '', image: proc.image }))
+    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '', description: '' }))
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -87,7 +85,7 @@ const Breast = () => {
         {/* Background Image - Editable */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/procedures/breast/hero-breast.jpg"
+            src="/placeholder.svg"
             alt="Breast procedures hero"
             className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]"
           />
@@ -139,7 +137,7 @@ const Breast = () => {
                     <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
                       {/* Background Image */}
                       <img
-                        src={procedure.image || "/placeholder.svg"}
+                        src="/placeholder.svg"
                         alt={procedure.name}
                         className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105"
                       />
