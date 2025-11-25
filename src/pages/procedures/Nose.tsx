@@ -35,23 +35,24 @@ const Nose = () => {
       id: "smart-template-rhinoplasty", 
       name: "Smart Template Rhinoplasty", 
       subtitle: "Signature Technique",
-      description: "Precision-guided approach for consistent, natural results using personalized surgical templates."
+      description: "Precision-guided approach for consistent, natural results using personalized surgical templates.",
+      image: "/procedures/nose/smart-template-rhinoplasty.jpg"
     },
   ];
 
   const proceduresWithoutPages = [
-    "Primary Rhinoplasty",
-    "Revision Rhinoplasty",
-    "Ethnic Rhinoplasty",
-    "Septoplasty",
-    "Turbinate Reduction",
-    "Functional Rhinoplasty",
-    "Non-Surgical Rhinoplasty",
+    { name: "Primary Rhinoplasty", image: "/procedures/nose/primary-rhinoplasty.jpg" },
+    { name: "Revision Rhinoplasty", image: "/procedures/nose/primary-rhinoplasty.jpg" },
+    { name: "Ethnic Rhinoplasty", image: "/procedures/nose/primary-rhinoplasty.jpg" },
+    { name: "Septoplasty", image: "/procedures/nose/primary-rhinoplasty.jpg" },
+    { name: "Turbinate Reduction", image: "/procedures/nose/primary-rhinoplasty.jpg" },
+    { name: "Functional Rhinoplasty", image: "/procedures/nose/primary-rhinoplasty.jpg" },
+    { name: "Non-Surgical Rhinoplasty", image: "/procedures/nose/smart-template-rhinoplasty.jpg" },
   ];
 
   const allProcedures = [
     ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
-    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '', description: '' }))
+    ...proceduresWithoutPages.map(proc => ({ id: '', name: proc.name, hasPage: false, subtitle: '', description: '', image: proc.image }))
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -79,7 +80,7 @@ const Nose = () => {
         {/* Background Image - Editable */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder.svg"
+            src="/procedures/nose/hero-nose.jpg"
             alt="Nose procedures hero"
             className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]"
           />
@@ -131,7 +132,7 @@ const Nose = () => {
                     <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
                       {/* Background Image */}
                       <img
-                        src="/placeholder.svg"
+                        src={procedure.image || "/placeholder.svg"}
                         alt={procedure.name}
                         className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105"
                       />
