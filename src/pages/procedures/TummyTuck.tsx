@@ -63,11 +63,11 @@ const TummyTuck = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="section-spacing bg-gray-50">
+      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-8 animate-fade-in">
+            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
               <div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
                   Tummy Tuck
@@ -84,7 +84,7 @@ const TummyTuck = () => {
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
-            <div ref={cardsRef} className="space-y-8">
+            <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div
                 className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
                   activeCard === 0 ? 'shadow-lg border-gray-300' : ''
