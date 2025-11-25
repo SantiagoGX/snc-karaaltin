@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
+import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 
 const TummyTuck = () => {
   const [activeCard, setActiveCard] = useState(0);
@@ -76,7 +77,7 @@ const TummyTuck = () => {
                 </p>
               </div>
               <img
-                src="/placeholder.svg"
+                src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
                 className="w-48 h-auto opacity-80 brightness-0"
               />
