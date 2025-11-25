@@ -40,30 +40,40 @@ const BeforeAfterSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden cursor-none"
+      className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden md:cursor-none"
     >
       {/* Imagen de Fondo */}
       <img
         src={beforeAfterImg}
-        alt="Before and After Results - Dr. Karaaltın Plastic Surgery"
+        alt="Before and After Results - Dr. Karaaltín Plastic Surgery"
         className="absolute inset-0 w-full h-full object-cover scale-up-luxury"
       />
       
       {/* Overlay sutil para mejorar contraste */}
       <div className="absolute inset-0 bg-black/10" />
       
-      {/* Cursor personalizado VIEW que sigue el mouse */}
+      {/* Mobile Button - Fixed Bottom Right */}
+      <Link 
+        to="/gallery"
+        className="md:hidden absolute bottom-6 right-6 px-6 py-3 rounded-full bg-white/90 backdrop-blur-md border border-gray-200/50 shadow-lg flex items-center justify-center hover:bg-white hover:shadow-xl transition-all duration-300 z-50"
+      >
+        <span className="text-xs uppercase tracking-widest font-light text-gray-800">
+          VIEW
+        </span>
+      </Link>
+      
+      {/* Desktop Cursor - Follows Mouse */}
       {isHovering && (
         <Link 
           to="/gallery" 
-          className="absolute w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 shadow-lg flex items-center justify-center transition-all duration-150 ease-out hover:scale-110 hover:bg-white hover:shadow-2xl pointer-events-auto group z-50"
+          className="hidden md:flex absolute w-32 h-32 lg:w-36 lg:h-36 rounded-full bg-white/90 backdrop-blur-sm border-2 border-gray-200/50 shadow-lg items-center justify-center transition-all duration-150 ease-out hover:scale-110 hover:bg-white hover:shadow-2xl pointer-events-auto group z-50"
           style={{
             left: `${mousePosition.x}px`,
             top: `${mousePosition.y}px`,
             transform: 'translate(-50%, -50%)'
           }}
         >
-          <span className="text-xs md:text-sm lg:text-base uppercase tracking-widest font-light text-gray-800 group-hover:text-gray-900">
+          <span className="text-sm lg:text-base uppercase tracking-widest font-light text-gray-800 group-hover:text-gray-900">
             VIEW
           </span>
         </Link>
