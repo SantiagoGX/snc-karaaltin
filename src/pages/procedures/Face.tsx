@@ -142,38 +142,41 @@ const Face = () => {
                       <img
                         src="/placeholder.svg"
                         alt={procedure.name}
-                        className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-110"
+                        className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105"
                       />
                       
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                      {/* Gradient Overlay - Darkens on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
                       
-                      {/* Text Content - Default State */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:opacity-0">
-                        {procedure.subtitle && (
-                          <p className="text-xs uppercase tracking-widest mb-2 opacity-90">
+                      {/* Signature Badge - Top Right */}
+                      {procedure.subtitle && (
+                        <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-sm">
+                          <p className="text-[10px] uppercase tracking-widest text-white font-light">
                             {procedure.subtitle}
                           </p>
-                        )}
-                        <h3 className="font-serif font-semibold text-2xl">
-                          {procedure.name}
-                        </h3>
+                        </div>
+                      )}
+                      
+                      {/* Text Content - Default State */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                        <div className="min-h-[80px] flex items-end">
+                          <h3 className="font-serif font-semibold text-2xl leading-tight">
+                            {procedure.name}
+                          </h3>
+                        </div>
                       </div>
 
                       {/* Description - Hover State */}
                       {procedure.description && (
-                        <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end">
-                          {procedure.subtitle && (
-                            <p className="text-xs uppercase tracking-widest mb-2 opacity-90">
-                              {procedure.subtitle}
+                        <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
+                          <div className="min-h-[80px] flex flex-col justify-end">
+                            <h3 className="font-serif font-semibold text-2xl mb-4 leading-tight">
+                              {procedure.name}
+                            </h3>
+                            <p className="text-sm leading-relaxed">
+                              {procedure.description}
                             </p>
-                          )}
-                          <h3 className="font-serif font-semibold text-2xl mb-3">
-                            {procedure.name}
-                          </h3>
-                          <p className="text-sm leading-relaxed opacity-90">
-                            {procedure.description}
-                          </p>
+                          </div>
                         </div>
                       )}
                     </div>
