@@ -78,11 +78,14 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: clip;
+    max-width: 100vw;
   }
   
   html {
-    @apply overflow-x-hidden;
+    overflow-x: clip;
+    max-width: 100vw;
   }
 
   h1, h2, h3, h4, h5, h6 {
