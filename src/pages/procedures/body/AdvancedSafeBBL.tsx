@@ -190,20 +190,6 @@ const AdvancedSafeBBL = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img
-                src="/placeholder.svg"
-                alt="Advanced Safe BBL With Dr. Karaaltin"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Advanced Safe BBL™ With Dr. Karaaltin
-              </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                El Advanced Safe BBL™ no es solo un procedimiento estético: es un sistema quirúrgico basado en ciencia, anatomía avanzada y tecnología de monitoreo continuo. Diseñado por el Prof. Dr. Karaaltin —un pionero en cirugía reconstructiva y microquirúrgica— este método redefine el estándar moderno del aumento glúteo seguro, logrando curvas suaves, proporciones naturales y resultados que respetan la integridad vascular.
-              </p>
-              
               {/* YouTube Video Integration */}
               <div className="aspect-video w-full rounded-lg overflow-hidden shadow-lg">
                 <iframe
@@ -217,6 +203,14 @@ const AdvancedSafeBBL = () => {
                   className="w-full h-full"
                 ></iframe>
               </div>
+            </div>
+            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
+                Advanced Safe BBL™ With Dr. Karaaltin
+              </h2>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                El Advanced Safe BBL™ no es solo un procedimiento estético: es un sistema quirúrgico basado en ciencia, anatomía avanzada y tecnología de monitoreo continuo. Diseñado por el Prof. Dr. Karaaltin —un pionero en cirugía reconstructiva y microquirúrgica— este método redefine el estándar moderno del aumento glúteo seguro, logrando curvas suaves, proporciones naturales y resultados que respetan la integridad vascular.
+              </p>
 
               <Link
                 to="/contact"
