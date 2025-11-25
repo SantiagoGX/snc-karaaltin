@@ -100,7 +100,7 @@ const Header = () => {
         "Fat Transfer & Volume Enhancement",
       ],
       withPage: [
-        { name: "Tummy Tuck", path: "/procedures/tummitok" },
+        { name: "Tummy Tuck", path: "/procedures/body/tummy-tuck" },
         { name: "Advanced Safe BBL™ (Signature)", path: "/procedures/advanced-safe-bbl" },
         { name: "Macro/Micro Fat Cell Enriched Grafting (Signature)", path: "/procedures/fat-cell-grafting" },
         { name: "Rib Cage Molding with Piezo Technology (Signature)", path: "/procedures/rib-cage-molding" },
