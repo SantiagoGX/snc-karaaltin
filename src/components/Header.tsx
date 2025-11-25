@@ -101,7 +101,7 @@ const Header = () => {
       ],
       withPage: [
         { name: "Tummy Tuck", path: "/procedures/body/tummy-tuck" },
-        { name: "Advanced Safe BBL™ (Signature)", path: "/procedures/advanced-safe-bbl" },
+        { name: "Advanced Safe BBL™ (Signature)", path: "/procedures/body/advanced-safe-bbl" },
         { name: "Macro/Micro Fat Cell Enriched Grafting (Signature)", path: "/procedures/fat-cell-grafting" },
         { name: "Rib Cage Molding with Piezo Technology (Signature)", path: "/procedures/rib-cage-molding" },
       ]
