@@ -35,41 +35,44 @@ const Face = () => {
       id: "k-face-lift", 
       name: "The K Face Lift", 
       subtitle: "Signature Technique",
-      description: "Dynamic multi-vector facelift for long-lasting, natural rejuvenation."
+      description: "Dynamic multi-vector facelift for long-lasting, natural rejuvenation.",
+      image: "/procedures/face/k-face-lift.jpg"
     },
     { 
       id: "k-endoscopic-face-lift", 
       name: "Dr. K's Endoscopic Face Lift", 
       subtitle: "Signature Technique",
-      description: "Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions."
+      description: "Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions.",
+      image: "/procedures/face/endoscopic-face-lift.jpg"
     },
     { 
       id: "endochor-face-lift", 
       name: "EndoChor® Face Lift", 
       subtitle: "Signature Technique",
-      description: "Minimally invasive lift supported by biodegradable implants for natural, durable elevation."
+      description: "Minimally invasive lift supported by biodegradable implants for natural, durable elevation.",
+      image: "/procedures/face/endochor-face-lift.jpg"
     },
   ];
 
   const proceduresWithoutPages = [
-    "Mini Facelift",
-    "Purse-String Vertical Facelift",
-    "Subperiosteal Deep Plane / Composite Midface Lift",
-    "MACS Lift",
-    "EndoChor™-Assisted Mid-Face Lift",
-    "High SMAS / Extended High SMAS Lift",
-    "All-In-One Facial Rejuvenation",
-    "Ponytail Lift",
-    "Endoscopic Forehead & Brow Lift",
-    "Blepharoplasty (Upper & Lower)",
-    "Facial Implants",
-    "Genioplasty",
-    "Orthognathic Surgery",
+    { name: "Mini Facelift", image: "/procedures/face/mini-facelift.jpg" },
+    { name: "Purse-String Vertical Facelift", image: "/procedures/face/mini-facelift.jpg" },
+    { name: "Subperiosteal Deep Plane / Composite Midface Lift", image: "/procedures/face/endochor-face-lift.jpg" },
+    { name: "MACS Lift", image: "/procedures/face/mini-facelift.jpg" },
+    { name: "EndoChor™-Assisted Mid-Face Lift", image: "/procedures/face/endochor-face-lift.jpg" },
+    { name: "High SMAS / Extended High SMAS Lift", image: "/procedures/face/k-face-lift.jpg" },
+    { name: "All-In-One Facial Rejuvenation", image: "/procedures/face/k-face-lift.jpg" },
+    { name: "Ponytail Lift", image: "/procedures/face/mini-facelift.jpg" },
+    { name: "Endoscopic Forehead & Brow Lift", image: "/procedures/face/brow-lift.jpg" },
+    { name: "Blepharoplasty (Upper & Lower)", image: "/procedures/face/blepharoplasty.jpg" },
+    { name: "Facial Implants", image: "/procedures/face/k-face-lift.jpg" },
+    { name: "Genioplasty", image: "/procedures/face/mini-facelift.jpg" },
+    { name: "Orthognathic Surgery", image: "/procedures/face/mini-facelift.jpg" },
   ];
 
   const allProcedures = [
     ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
-    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '', description: '' }))
+    ...proceduresWithoutPages.map(proc => ({ id: '', name: proc.name, hasPage: false, subtitle: '', description: '', image: proc.image }))
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -97,7 +100,7 @@ const Face = () => {
         {/* Background Image - Editable */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder.svg"
+            src="/procedures/face/hero-face.jpg"
             alt="Face procedures hero"
             className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]"
           />
@@ -149,7 +152,7 @@ const Face = () => {
                     <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
                       {/* Background Image */}
                       <img
-                        src="/placeholder.svg"
+                        src={procedure.image || "/placeholder.svg"}
                         alt={procedure.name}
                         className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105"
                       />

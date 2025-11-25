@@ -35,24 +35,25 @@ const Body = () => {
       id: "advanced-safe-bbl", 
       name: "Advanced Safe BBL", 
       subtitle: "Signature Technique",
-      description: "Revolutionary fat transfer technique prioritizing safety and natural, lasting results."
+      description: "Revolutionary fat transfer technique prioritizing safety and natural, lasting results.",
+      image: "/procedures/body/advanced-safe-bbl.jpg"
     },
   ];
 
   const proceduresWithoutPages = [
-    "Tummy Tuck (Abdominoplasty)",
-    "Liposuction",
-    "Body Lift",
-    "Arm Lift (Brachioplasty)",
-    "Thigh Lift",
-    "Mommy Makeover",
-    "Post-Weight Loss Body Contouring",
-    "Fat Transfer",
+    { name: "Tummy Tuck (Abdominoplasty)", image: "/procedures/body/tummy-tuck.jpg" },
+    { name: "Liposuction", image: "/procedures/body/liposuction.jpg" },
+    { name: "Body Lift", image: "/procedures/body/liposuction.jpg" },
+    { name: "Arm Lift (Brachioplasty)", image: "/procedures/body/arm-lift.jpg" },
+    { name: "Thigh Lift", image: "/procedures/body/liposuction.jpg" },
+    { name: "Mommy Makeover", image: "/procedures/body/tummy-tuck.jpg" },
+    { name: "Post-Weight Loss Body Contouring", image: "/procedures/body/liposuction.jpg" },
+    { name: "Fat Transfer", image: "/procedures/body/advanced-safe-bbl.jpg" },
   ];
 
   const allProcedures = [
     ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
-    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '', description: '' }))
+    ...proceduresWithoutPages.map(proc => ({ id: '', name: proc.name, hasPage: false, subtitle: '', description: '', image: proc.image }))
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -80,7 +81,7 @@ const Body = () => {
         {/* Background Image - Editable */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/placeholder.svg"
+            src="/procedures/body/hero-body.jpg"
             alt="Body procedures hero"
             className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]"
           />
@@ -132,7 +133,7 @@ const Body = () => {
                     <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
                       {/* Background Image */}
                       <img
-                        src="/placeholder.svg"
+                        src={procedure.image || "/placeholder.svg"}
                         alt={procedure.name}
                         className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105"
                       />
