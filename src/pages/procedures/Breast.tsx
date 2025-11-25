@@ -6,22 +6,19 @@ import ContactCTASection from "@/components/home/ContactCTASection";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
-
 const Breast = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: false,
     skipSnaps: false,
-    dragFree: false,
+    dragFree: false
   });
-
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
       const currentIndex = emblaApi.selectedScrollSnap();
       emblaApi.scrollTo(Math.max(0, currentIndex - 3));
     }
   }, [emblaApi]);
-
   const scrollNext = useCallback(() => {
     if (emblaApi) {
       const currentIndex = emblaApi.selectedScrollSnap();
@@ -29,101 +26,84 @@ const Breast = () => {
       emblaApi.scrollTo(Math.min(slideCount - 1, currentIndex + 3));
     }
   }, [emblaApi]);
-
-  const allProcedures = [
-    { 
-      id: "breast-augmentation-fat-grafting", 
-      name: "Breast Augmentation with Fat Grafting", 
-      subtitle: "Signature Technique",
-      description: "Natural enhancement using your own fat for soft, lasting volume without implants.",
-      hasPage: false
-    },
-    { 
-      id: "breast-augmentation-implant", 
-      name: "Breast Augmentation with Implant", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "breast-reduction", 
-      name: "Breast Reduction", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "breast-uplift", 
-      name: "Breast Uplift (Mastopexy)", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "gynecomastia", 
-      name: "Gynecomastia", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "hybrid-augmentation", 
-      name: "Hybrid Augmentation (Implant + Fat)", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "implant-removal", 
-      name: "Implant Removal", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "inverted-nipple-correction", 
-      name: "Inverted Nipple Correction", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "nipple-areola-reduction", 
-      name: "Nipple & Areola Reduction", 
-      subtitle: "",
-      description: "",
-      hasPage: false
-    },
-    { 
-      id: "k-glide-breast-augmentation", 
-      name: "K-Glide™ Breast Augmentation", 
-      subtitle: "Signature Technique",
-      description: "Rapid, minimally invasive technique for precise implant placement with faster recovery.",
-      hasPage: false
-    },
-    { 
-      id: "twirl-internal-bra", 
-      name: "Twirl Internal Bra Technique™", 
-      subtitle: "Signature Technique",
-      description: "Revolutionary internal support system for long-lasting lift and natural shape.",
-      hasPage: false
-    },
-    { 
-      id: "smart-bra-bloocell", 
-      name: "Smart BRA / Bloocell Scaffold", 
-      subtitle: "Signature Technique",
-      description: "Advanced biologic scaffold technology for enhanced support and natural contouring.",
-      hasPage: false
-    },
-  ];
-
+  const allProcedures = [{
+    id: "breast-augmentation-fat-grafting",
+    name: "Breast Augmentation with Fat Grafting",
+    subtitle: "Signature Technique",
+    description: "Natural enhancement using your own fat for soft, lasting volume without implants.",
+    hasPage: false
+  }, {
+    id: "breast-augmentation-implant",
+    name: "Breast Augmentation with Implant",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "breast-reduction",
+    name: "Breast Reduction",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "breast-uplift",
+    name: "Breast Uplift (Mastopexy)",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "gynecomastia",
+    name: "Gynecomastia",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "hybrid-augmentation",
+    name: "Hybrid Augmentation (Implant + Fat)",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "implant-removal",
+    name: "Implant Removal",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "inverted-nipple-correction",
+    name: "Inverted Nipple Correction",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "nipple-areola-reduction",
+    name: "Nipple & Areola Reduction",
+    subtitle: "",
+    description: "",
+    hasPage: false
+  }, {
+    id: "k-glide-breast-augmentation",
+    name: "K-Glide™ Breast Augmentation",
+    subtitle: "Signature Technique",
+    description: "Rapid, minimally invasive technique for precise implant placement with faster recovery.",
+    hasPage: false
+  }, {
+    id: "twirl-internal-bra",
+    name: "Twirl Internal Bra Technique™",
+    subtitle: "Signature Technique",
+    description: "Revolutionary internal support system for long-lasting lift and natural shape.",
+    hasPage: false
+  }, {
+    id: "smart-bra-bloocell",
+    name: "Smart BRA / Bloocell Scaffold",
+    subtitle: "Signature Technique",
+    description: "Advanced biologic scaffold technology for enhanced support and natural contouring.",
+    hasPage: false
+  }];
   const [selectedIndex, setSelectedIndex] = useState(0);
-
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
-
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
@@ -132,28 +112,20 @@ const Breast = () => {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onSelect]);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden fade-in">
         {/* Background Image - Editable */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="/placeholder.svg"
-            alt="Breast aesthetic procedures hero"
-            className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]"
-          />
+          <img src="/placeholder.svg" alt="Breast aesthetic procedures hero" className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]" />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4 fade-in-up max-w-5xl mx-auto">
-          <h1 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6 uppercase">
-            BREAST AESTHETIC & RECONTOURING PROCEDURES
-          </h1>
+          <h1 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6 uppercase">BREAST</h1>
           <p className="text-lg md:text-xl tracking-wide font-light max-w-3xl mx-auto">
             Refined enhancement, structural harmony, and natural results through advanced surgical precision.
           </p>
@@ -170,19 +142,11 @@ const Breast = () => {
           {/* Carousel Container */}
           <div className="relative px-16 lg:px-20">
             {/* Navigation Arrows - Desktop Only */}
-            <button
-              onClick={scrollPrev}
-              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
-              aria-label="Previous procedures"
-            >
+            <button onClick={scrollPrev} className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300" aria-label="Previous procedures">
               <ChevronLeft className="w-6 h-6" />
             </button>
             
-            <button
-              onClick={scrollNext}
-              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
-              aria-label="Next procedures"
-            >
+            <button onClick={scrollNext} className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300" aria-label="Next procedures">
               <ChevronRight className="w-6 h-6" />
             </button>
 
@@ -190,26 +154,21 @@ const Breast = () => {
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6 lg:gap-8">
                 {allProcedures.map((procedure, index) => {
-                  const CardContent = (
-                    <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
+                const CardContent = <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: `${index * 0.05}s`
+                }}>
                       {/* Background Image */}
-                      <img
-                        src="/placeholder.svg"
-                        alt={procedure.name}
-                        className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105"
-                      />
+                      <img src="/placeholder.svg" alt={procedure.name} className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                       
                       {/* Gradient Overlay - Darkens on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent"></div>
                       
                       {/* Signature Badge - Top Left with Glassmorphism */}
-                      {procedure.subtitle && (
-                        <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg">
+                      {procedure.subtitle && <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg">
                           <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">
                             {procedure.subtitle}
                           </p>
-                        </div>
-                      )}
+                        </div>}
                       
                       {/* Text Content - Default State */}
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
@@ -221,8 +180,7 @@ const Breast = () => {
                       </div>
 
                       {/* Description - Hover State */}
-                      {procedure.description && (
-                        <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
+                      {procedure.description && <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
                           <div className="min-h-[80px] flex flex-col justify-end">
                             <h3 className="font-serif font-semibold text-2xl mb-4 leading-tight">
                               {procedure.name}
@@ -231,45 +189,22 @@ const Breast = () => {
                               {procedure.description}
                             </p>
                           </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-
-                  return procedure.hasPage ? (
-                    <Link
-                      key={procedure.id}
-                      to={`/procedures/breast/${procedure.id}`}
-                      className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]"
-                    >
+                        </div>}
+                    </div>;
+                return procedure.hasPage ? <Link key={procedure.id} to={`/procedures/breast/${procedure.id}`} className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                       {CardContent}
-                    </Link>
-                  ) : (
-                    <div
-                      key={procedure.id}
-                      className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]"
-                    >
+                    </Link> : <div key={procedure.id} className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                       {CardContent}
-                    </div>
-                  );
-                })}
+                    </div>;
+              })}
               </div>
             </div>
 
             {/* Progress Indicators */}
             <div className="flex justify-center gap-2 mt-8">
-              {Array.from({ length: Math.ceil(allProcedures.length / 4) }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => emblaApi?.scrollTo(index * 4)}
-                  className={`h-1 rounded-full transition-all duration-300 ${
-                    Math.floor(selectedIndex / 4) === index
-                      ? "w-12 bg-gray-900"
-                      : "w-8 bg-gray-300 hover:bg-gray-400"
-                  }`}
-                  aria-label={`Go to slide group ${index + 1}`}
-                />
-              ))}
+              {Array.from({
+              length: Math.ceil(allProcedures.length / 4)
+            }).map((_, index) => <button key={index} onClick={() => emblaApi?.scrollTo(index * 4)} className={`h-1 rounded-full transition-all duration-300 ${Math.floor(selectedIndex / 4) === index ? "w-12 bg-gray-900" : "w-8 bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to slide group ${index + 1}`} />)}
             </div>
           </div>
         </div>
@@ -378,22 +313,14 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Breast augmentation with fat grafting"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Breast augmentation with fat grafting" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* 2. Breast Augmentation with Implant */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Breast augmentation with implant"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Breast augmentation with implant" className="w-full h-full object-cover" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
@@ -426,22 +353,14 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Breast reduction"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Breast reduction" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* 4. Breast Lift (Mastopexy) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Breast lift mastopexy"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Breast lift mastopexy" className="w-full h-full object-cover" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
@@ -474,22 +393,14 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Gynecomastia surgery"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Gynecomastia surgery" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* 6. Hybrid Augmentation */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Hybrid augmentation"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Hybrid augmentation" className="w-full h-full object-cover" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
@@ -522,22 +433,14 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Implant removal"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Implant removal" className="w-full h-full object-cover" />
             </div>
           </div>
 
           {/* 8. Nipple & Areola Refinement */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img
-                src="/placeholder.svg"
-                alt="Nipple and areola refinement"
-                className="w-full h-full object-cover"
-              />
+              <img src="/placeholder.svg" alt="Nipple and areola refinement" className="w-full h-full object-cover" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
@@ -563,8 +466,6 @@ const Breast = () => {
       <ContactCTASection />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Breast;
