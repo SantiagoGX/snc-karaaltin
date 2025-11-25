@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const Face = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -22,9 +22,24 @@ const Face = () => {
   }, [emblaApi]);
 
   const proceduresWithPages = [
-    { id: "k-face-lift", name: "The K Face Lift", subtitle: "Signature Technique" },
-    { id: "endochor-face-lift", name: "EndoChor® Face Lift", subtitle: "Signature Technique" },
-    { id: "k-endoscopic-deep-plane", name: "K Endoscopic Deep Plane Face Lift", subtitle: "Signature Technique" },
+    { 
+      id: "k-face-lift", 
+      name: "The K Face Lift", 
+      subtitle: "Signature Technique",
+      description: "Dynamic multi-vector facelift for long-lasting, natural rejuvenation."
+    },
+    { 
+      id: "k-endoscopic-face-lift", 
+      name: "Dr. K's Endoscopic Face Lift", 
+      subtitle: "Signature Technique",
+      description: "Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions."
+    },
+    { 
+      id: "endochor-face-lift", 
+      name: "EndoChor® Face Lift", 
+      subtitle: "Signature Technique",
+      description: "Minimally invasive lift supported by biodegradable implants for natural, durable elevation."
+    },
   ];
 
   const proceduresWithoutPages = [
@@ -45,8 +60,24 @@ const Face = () => {
 
   const allProcedures = [
     ...proceduresWithPages.map(p => ({ ...p, hasPage: true })),
-    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '' }))
+    ...proceduresWithoutPages.map(name => ({ id: '', name, hasPage: false, subtitle: '', description: '' }))
   ];
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -87,89 +118,101 @@ const Face = () => {
             {/* Navigation Arrows - Desktop Only */}
             <button
               onClick={scrollPrev}
-              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 w-12 h-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 w-14 h-14 items-center justify-center rounded-full bg-white border-2 border-gray-900 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
               aria-label="Previous procedures"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-900" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
             
             <button
               onClick={scrollNext}
-              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 w-12 h-12 items-center justify-center rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 w-14 h-14 items-center justify-center rounded-full bg-white border-2 border-gray-900 shadow-lg hover:bg-gray-900 hover:text-white transition-all duration-300"
               aria-label="Next procedures"
             >
-              <ChevronRight className="w-6 h-6 text-gray-900" />
+              <ChevronRight className="w-6 h-6" />
             </button>
 
             {/* Embla Carousel */}
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6 lg:gap-8">
                 {allProcedures.map((procedure, index) => {
-                  const isWithPage = procedure.hasPage;
-                  
-                  return isWithPage ? (
+                  const CardContent = (
+                    <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: `${index * 0.05}s` }}>
+                      {/* Background Image */}
+                      <img
+                        src="/placeholder.svg"
+                        alt={procedure.name}
+                        className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-110"
+                      />
+                      
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                      
+                      {/* Text Content - Default State */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-300 group-hover:opacity-0">
+                        {procedure.subtitle && (
+                          <p className="text-xs uppercase tracking-widest mb-2 opacity-90">
+                            {procedure.subtitle}
+                          </p>
+                        )}
+                        <h3 className="font-serif font-semibold text-2xl">
+                          {procedure.name}
+                        </h3>
+                      </div>
+
+                      {/* Description - Hover State */}
+                      {procedure.description && (
+                        <div className="absolute inset-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end">
+                          {procedure.subtitle && (
+                            <p className="text-xs uppercase tracking-widest mb-2 opacity-90">
+                              {procedure.subtitle}
+                            </p>
+                          )}
+                          <h3 className="font-serif font-semibold text-2xl mb-3">
+                            {procedure.name}
+                          </h3>
+                          <p className="text-sm leading-relaxed opacity-90">
+                            {procedure.description}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  );
+
+                  return procedure.hasPage ? (
                     <Link
                       key={procedure.id}
                       to={`/procedures/face/${procedure.id}`}
-                      className="group flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%] fade-in"
-                      style={{ animationDelay: `${index * 0.05}s` }}
+                      className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]"
                     >
-                      <div className="bg-white overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
-                        {/* Image - Fixed Height */}
-                        <div className="h-[400px] overflow-hidden">
-                          <img
-                            src="/placeholder.svg"
-                            alt={procedure.name}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
-                        
-                        {/* Content - Fixed Height */}
-                        <div className="p-6 flex-1 flex flex-col justify-between min-h-[160px]">
-                          <div>
-                            {procedure.subtitle && (
-                              <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">
-                                {procedure.subtitle}
-                              </p>
-                            )}
-                            <h3 className="font-serif font-semibold text-xl mb-3 group-hover:text-[#0d1f3a] transition-colors">
-                              {procedure.name}
-                            </h3>
-                          </div>
-                          <div className="flex items-center text-sm uppercase tracking-wide text-[#0d1f3a] font-light">
-                            View Procedure
-                            <ChevronRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                          </div>
-                        </div>
-                      </div>
+                      {CardContent}
                     </Link>
                   ) : (
                     <div
                       key={procedure.name}
-                      className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%] fade-in"
-                      style={{ animationDelay: `${index * 0.05}s` }}
+                      className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]"
                     >
-                      <div className="bg-white overflow-hidden transition-all duration-300 hover:shadow-lg h-full flex flex-col">
-                        {/* Image - Fixed Height */}
-                        <div className="h-[400px] overflow-hidden">
-                          <img
-                            src="/placeholder.svg"
-                            alt={procedure.name}
-                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                        </div>
-                        
-                        {/* Content - Fixed Height */}
-                        <div className="p-6 flex-1 flex items-center min-h-[160px]">
-                          <h3 className="font-serif font-semibold text-xl">
-                            {procedure.name}
-                          </h3>
-                        </div>
-                      </div>
+                      {CardContent}
                     </div>
                   );
                 })}
               </div>
+            </div>
+
+            {/* Progress Indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: Math.ceil(allProcedures.length / 4) }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => emblaApi?.scrollTo(index * 4)}
+                  className={`h-1 rounded-full transition-all duration-300 ${
+                    Math.floor(selectedIndex / 4) === index
+                      ? "w-12 bg-gray-900"
+                      : "w-8 bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to slide group ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
