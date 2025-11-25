@@ -10,6 +10,7 @@ import Face from "./pages/procedures/Face";
 import Body from "./pages/procedures/Body";
 import Breast from "./pages/procedures/Breast";
 import Nose from "./pages/procedures/Nose";
+import TummyTuck from "./pages/procedures/TummyTuck";
 import Gallery from "./pages/Gallery";
 import PatientJourney from "./pages/PatientJourney";
 import LearnSurgery from "./pages/LearnSurgery";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/procedures/body" element={<Body />} />
           <Route path="/procedures/breast" element={<Breast />} />
           <Route path="/procedures/nose" element={<Nose />} />
+          <Route path="/procedures/body/tummy-tuck" element={<TummyTuck />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/learn-surgery" element={<LearnSurgery />} />
