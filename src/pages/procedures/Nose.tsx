@@ -4,56 +4,42 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
-
 const Nose = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const procedures = [
-    {
-      id: 1,
-      title: "Rhinoplasty",
-      description: "Refines nasal shape, improves balance, and enhances airway function with natural, long-lasting results.",
-      image: "/placeholder.svg",
-      isSignature: false,
-      hasPage: true,
-      link: "/procedures/nose/rhinoplasty",
-    },
-    {
-      id: 2,
-      title: "Smart Template Rhinoplasty",
-      description: "Signature method designed by Dr. Karaaltin using advanced anatomical templates to optimize projection, symmetry, and long-term nasal support.",
-      image: "/placeholder.svg",
-      isSignature: true,
-      hasPage: true,
-      link: "/procedures/nose/smart-template-rhinoplasty",
-    },
-  ];
-
+  const procedures = [{
+    id: 1,
+    title: "Rhinoplasty",
+    description: "Refines nasal shape, improves balance, and enhances airway function with natural, long-lasting results.",
+    image: "/placeholder.svg",
+    isSignature: false,
+    hasPage: true,
+    link: "/procedures/nose/rhinoplasty"
+  }, {
+    id: 2,
+    title: "Smart Template Rhinoplasty",
+    description: "Signature method designed by Dr. Karaaltin using advanced anatomical templates to optimize projection, symmetry, and long-term nasal support.",
+    image: "/placeholder.svg",
+    isSignature: true,
+    hasPage: true,
+    link: "/procedures/nose/smart-template-rhinoplasty"
+  }];
   const totalSlides = Math.ceil(procedures.length / 3);
-
   const handlePrev = () => {
-    setCurrentSlide((prev) => (prev > 0 ? prev - 1 : prev));
+    setCurrentSlide(prev => prev > 0 ? prev - 1 : prev);
   };
-
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev < totalSlides - 1 ? prev + 1 : prev));
+    setCurrentSlide(prev => prev < totalSlides - 1 ? prev + 1 : prev);
   };
-
-  return (
-    <>
+  return <>
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
         <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center bg-gray-900">
           <div className="absolute inset-0 bg-black/50 z-10" />
-          <img
-            src="/placeholder.svg"
-            alt="Nose procedures hero"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          <img src="/placeholder.svg" alt="Nose procedures hero" className="absolute inset-0 w-full h-full object-cover" />
           <div className="relative z-20 container mx-auto px-8 lg:px-16 text-center text-white space-y-4 fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-wide uppercase">
-              ADVANCED NASAL AESTHETICS & RHINOPLASTY
+              NOSE
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl font-light max-w-3xl mx-auto">
               Precision-driven nasal surgery combining structure, function, and refined aesthetics.
@@ -71,39 +57,23 @@ const Nose = () => {
             <div className="relative">
               {/* Carousel Container */}
               <div className="overflow-hidden">
-                <div
-                  className="flex transition-transform duration-500 ease-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                >
-                  {procedures.map((procedure) => (
-                    <div
-                      key={procedure.id}
-                      className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group"
-                    >
-                      <a
-                        href={procedure.hasPage ? procedure.link : undefined}
-                        className={`block relative h-[500px] rounded-lg overflow-hidden ${
-                          !procedure.hasPage ? "cursor-default" : ""
-                        }`}
-                      >
+                <div className="flex transition-transform duration-500 ease-out" style={{
+                transform: `translateX(-${currentSlide * 100}%)`
+              }}>
+                  {procedures.map(procedure => <div key={procedure.id} className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group">
+                      <a href={procedure.hasPage ? procedure.link : undefined} className={`block relative h-[500px] rounded-lg overflow-hidden ${!procedure.hasPage ? "cursor-default" : ""}`}>
                         {/* Background Image */}
-                        <img
-                          src={procedure.image}
-                          alt={procedure.title}
-                          className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                        />
+                        <img src={procedure.image} alt={procedure.title} className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
 
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent" />
 
                         {/* Signature Badge */}
-                        {procedure.isSignature && (
-                          <div className="absolute top-4 left-4 z-10">
+                        {procedure.isSignature && <div className="absolute top-4 left-4 z-10">
                             <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest font-light bg-white/90 backdrop-blur-md text-gray-900 border border-white/20 rounded">
                               Signature Technique
                             </span>
-                          </div>
-                        )}
+                          </div>}
 
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
@@ -117,52 +87,30 @@ const Nose = () => {
                               {procedure.description}
                             </p>
 
-                            {procedure.hasPage && (
-                              <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                            {procedure.hasPage && <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
                                 View Procedure
                                 <span className="text-lg">→</span>
-                              </div>
-                            )}
+                              </div>}
                           </div>
                         </div>
                       </a>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
 
               {/* Navigation Arrows */}
-              <button
-                onClick={handlePrev}
-                disabled={currentSlide === 0}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-gray-900 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 shadow-lg z-10"
-                aria-label="Previous procedures"
-              >
+              <button onClick={handlePrev} disabled={currentSlide === 0} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-gray-900 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 shadow-lg z-10" aria-label="Previous procedures">
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              <button
-                onClick={handleNext}
-                disabled={currentSlide === totalSlides - 1}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-gray-900 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 shadow-lg z-10"
-                aria-label="Next procedures"
-              >
+              <button onClick={handleNext} disabled={currentSlide === totalSlides - 1} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 flex items-center justify-center hover:bg-gray-900 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 shadow-lg z-10" aria-label="Next procedures">
                 <ChevronRight className="w-6 h-6" />
               </button>
 
               {/* Progress Indicators */}
               <div className="flex justify-center gap-2 mt-8">
-                {Array.from({ length: totalSlides }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide
-                        ? "w-8 bg-gray-900"
-                        : "w-2 bg-gray-300 hover:bg-gray-400"
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
+                {Array.from({
+                length: totalSlides
+              }).map((_, index) => <button key={index} onClick={() => setCurrentSlide(index)} className={`h-2 rounded-full transition-all duration-300 ${index === currentSlide ? "w-8 bg-gray-900" : "w-2 bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to slide ${index + 1}`} />)}
               </div>
             </div>
           </div>
@@ -252,22 +200,14 @@ const Nose = () => {
                 </p>
               </div>
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                  src="/placeholder.svg"
-                  alt="Rhinoplasty procedure"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Rhinoplasty procedure" className="w-full h-full object-cover" />
               </div>
             </div>
 
             {/* Smart Template Rhinoplasty */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
               <div className="aspect-[4/3] rounded-lg overflow-hidden order-2 lg:order-1">
-                <img
-                  src="/placeholder.svg"
-                  alt="Smart Template Rhinoplasty"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/placeholder.svg" alt="Smart Template Rhinoplasty" className="w-full h-full object-cover" />
               </div>
               <div className="space-y-6 order-1 lg:order-2">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase">
@@ -288,8 +228,6 @@ const Nose = () => {
         <ContactCTASection />
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Nose;
