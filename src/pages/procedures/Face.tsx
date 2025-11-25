@@ -253,50 +253,59 @@ const Face = () => {
         </div>
       </section>
 
-      {/* Educational Section - Facial Anatomy */}
-      <section className="py-16 md:py-24 px-4 lg:px-8 bg-gray-50">
-        <div className="container mx-auto max-w-5xl">
-          <div className="fade-in-up">
-            <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-12">
-              Facial Anatomy
-            </h2>
+      {/* Educational Section - Facial Anatomy - Redesigned */}
+      <section className="py-20 md:py-32 px-6 md:px-8 lg:px-16 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-20 text-center fade-in-up">
+            Facial Anatomy
+          </h2>
+          
+          {/* Premium Layout: Central Image with Corner Items */}
+          <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
+            {/* Central Anatomical Image - Editable */}
+            <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <img
+                src="/placeholder.svg"
+                alt="Facial anatomy illustration"
+                className="w-full h-full object-cover rounded-sm shadow-lg"
+              />
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Bone Structure</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    The foundation of facial architecture. Understanding bone resorption patterns is crucial 
-                    for comprehensive rejuvenation planning.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Fat Compartments</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Facial fat exists in distinct compartments that change volume and position with age, 
-                    affecting contours and fullness.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Ligaments & SMAS</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    The superficial musculoaponeurotic system and retaining ligaments provide structural 
-                    support that weakens over time.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="font-serif font-semibold text-2xl mb-3 text-[#0d1f3a]">Skin & Dermis</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    The visible layer that reflects underlying structural changes and environmental effects 
-                    accumulated over years.
-                  </p>
-                </div>
-              </div>
+            {/* 4 Corner Items */}
+            {/* Top Left - Bone Structure */}
+            <div className="absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Bone Structure</h3>
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                The foundation of facial architecture. Understanding bone resorption patterns is crucial 
+                for comprehensive rejuvenation planning.
+              </p>
+            </div>
+            
+            {/* Top Right - Fat Compartments */}
+            <div className="absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Fat Compartments</h3>
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                Facial fat exists in distinct compartments that change volume and position with age, 
+                affecting contours and fullness.
+              </p>
+            </div>
+            
+            {/* Bottom Left - Ligaments & SMAS */}
+            <div className="absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.5s' }}>
+              <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Ligaments & SMAS</h3>
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                The superficial musculoaponeurotic system and retaining ligaments provide structural 
+                support that weakens over time.
+              </p>
+            </div>
+            
+            {/* Bottom Right - Skin & Dermis */}
+            <div className="absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Skin & Dermis</h3>
+              <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                The visible layer that reflects underlying structural changes and environmental effects 
+                accumulated over years.
+              </p>
             </div>
           </div>
         </div>
