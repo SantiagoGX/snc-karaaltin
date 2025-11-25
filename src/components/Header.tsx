@@ -102,8 +102,7 @@ const Header = () => {
       withPage: [
         { name: "Tummy Tuck", path: "/procedures/body/tummy-tuck" },
         { name: "Advanced Safe BBL™ (Signature)", path: "/procedures/body/advanced-safe-bbl" },
-        { name: "Macro/Micro Fat Cell Enriched Grafting (Signature)", path: "/procedures/fat-cell-grafting" },
-        { name: "Rib Cage Molding with Piezo Technology (Signature)", path: "/procedures/rib-cage-molding" },
+        { name: "Rib Cage Molding with Piezo Technology (Signature)", path: "/procedures/body/rib-cage-molding" },
       ]
     },
     breast: {
@@ -121,6 +120,7 @@ const Header = () => {
         { name: "K-Glide™ Breast Augmentation (Signature)", path: "/procedures/k-glide" },
         { name: "Twirl Internal Bra Technique™ (Signature)", path: "/procedures/twirl-internal-bra" },
         { name: "Smart BRA / Bloocell Scaffold (Signature)", path: "/procedures/smart-bra" },
+        { name: "Vibrasat Pro Technology (Signature)", path: "/procedures/vibrasat-pro" },
       ]
     },
     nose: {
