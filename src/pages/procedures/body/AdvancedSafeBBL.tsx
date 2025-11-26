@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, Users, Shield, Activity, Target } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
@@ -428,48 +428,54 @@ const AdvancedSafeBBL = () => {
             Ideal Candidates
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Sufficient Fat Reserves",
-                description: "Individuals with adequate fat for transfer"
-              },
-              {
-                icon: Target,
-                title: "Natural Results",
-                description: "Seeking harmonious, safe, and natural outcomes"
-              },
-              {
-                icon: Shield,
-                title: "Non-Smokers",
-                description: "Non-smokers or willing to pause the habit"
-              },
-              {
-                icon: Activity,
-                title: "Evidence-Based Priority",
-                description: "Prioritize advanced monitoring and proven techniques"
-              }
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="group bg-gray-50 p-8 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="w-14 h-14 bg-gray-900 text-white rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-light tracking-wide uppercase text-gray-900 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                🧍
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Sufficient Fat Reserves
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Individuals with adequate fat for transfer
+              </p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                🎯
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Natural Results
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Seeking harmonious, safe, and natural outcomes
+              </p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                🚭
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Non-Smokers
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Non-smokers or willing to pause the habit
+              </p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                📊
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Evidence-Based Priority
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Prioritize advanced monitoring and proven techniques
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -483,8 +489,7 @@ const AdvancedSafeBBL = () => {
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-10 lg:p-12 rounded-lg shadow-md border border-gray-200 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-2 rounded-full text-sm uppercase tracking-widest font-light mb-6">
-                <Shield className="w-4 h-4" />
+              <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
                 Minimal Scarring
               </div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
