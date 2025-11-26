@@ -94,12 +94,24 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+  /* ===== UNIFIED PROCEDURE PAGE SPACING ===== */
+  .section-spacing {
+    @apply py-16 md:py-20 lg:py-24;
   }
 
-  .fade-in-up {
+  .content-spacing {
+    @apply px-6 md:px-8 lg:px-12;
+  }
+
+  /* ===== UNIFIED ANIMATIONS ===== */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
   }
 
   @keyframes fadeIn {
@@ -120,6 +132,145 @@ All colors MUST be HSL.
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Hero Image Scale Animation */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 1.5s ease-out forwards;
+  }
+
+  /* ===== UNIFIED PROCEDURE PAGE COMPONENTS ===== */
+  
+  /* Hero Section */
+  .procedure-hero {
+    @apply relative h-[70vh] min-h-[500px] overflow-hidden;
+  }
+
+  .procedure-hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60;
+  }
+
+  .procedure-hero-content {
+    @apply relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center;
+  }
+
+  .procedure-hero-title {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6;
+  }
+
+  .procedure-hero-subtitle {
+    @apply text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light;
+  }
+
+  /* Signature Technique Badge */
+  .signature-badge {
+    @apply inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1 rounded-full text-xs uppercase tracking-widest text-white mb-6;
+  }
+
+  /* Overview Cards */
+  .overview-card {
+    @apply bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500;
+  }
+
+  .overview-card:hover {
+    @apply shadow-lg border-gray-300;
+  }
+
+  .overview-card-title {
+    @apply text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4;
+  }
+
+  .overview-card-content {
+    @apply text-base md:text-lg text-gray-700 leading-relaxed;
+  }
+
+  /* Section Titles */
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 lg:mb-16;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest;
+  }
+
+  /* Procedure Detail Cards */
+  .detail-card {
+    @apply bg-white p-6 lg:p-8 rounded-lg border border-gray-200 transition-all duration-300;
+  }
+
+  .detail-card:hover {
+    @apply shadow-lg;
+  }
+
+  .detail-card-title {
+    @apply text-lg md:text-xl font-semibold text-gray-900 uppercase tracking-wide mb-3;
+  }
+
+  .detail-card-content {
+    @apply text-sm md:text-base text-gray-600 leading-relaxed;
+  }
+
+  /* Ideal Candidate Cards */
+  .candidate-card {
+    @apply text-center space-y-4 p-8 rounded-lg bg-gray-50 transition-all duration-300;
+  }
+
+  .candidate-card:hover {
+    @apply shadow-lg;
+  }
+
+  .candidate-card-emoji {
+    @apply text-5xl mb-4;
+  }
+
+  .candidate-card-title {
+    @apply text-lg md:text-xl font-light tracking-wide uppercase;
+  }
+
+  .candidate-card-description {
+    @apply text-sm md:text-base text-gray-700 leading-relaxed;
+  }
+
+  /* Surgical Journey Steps */
+  .journey-step {
+    @apply flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200;
+  }
+
+  .journey-step-number {
+    @apply flex-shrink-0 w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-light;
+  }
+
+  .journey-step-title {
+    @apply text-xl md:text-2xl font-light tracking-wide uppercase text-gray-900 mb-2;
+  }
+
+  .journey-step-description {
+    @apply text-base text-gray-700 leading-relaxed;
+  }
+
+  /* Unified Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300;
+  }
+
+  /* Unified Image Container */
+  .procedure-image {
+    @apply w-full aspect-[4/3] object-cover rounded-lg shadow-lg;
+  }
+
+  .procedure-image-tall {
+    @apply w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg;
   }
 
   /* ===== LUXURY ANIMATIONS ===== */
