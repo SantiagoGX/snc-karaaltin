@@ -24,16 +24,16 @@ const Contact = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-[#5a5653] pt-20 pb-16 lg:pb-20">
+        <section className="bg-[#5a5653] pt-20 pb-32 lg:pb-40">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 items-center max-w-7xl mx-auto pt-16 lg:pt-24">
               {/* Left: Image */}
               <div className="fade-in">
-                <div className="aspect-[4/3] bg-gray-200 rounded-none overflow-hidden">
+                <div className="w-full h-auto">
                   <img
                     src={contactHeroImage}
                     alt="Dr. Karaaltın Surgery Team"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </div>
