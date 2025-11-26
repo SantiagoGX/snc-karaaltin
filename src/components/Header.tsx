@@ -126,8 +126,8 @@ const Header = () => {
     nose: {
       withoutPage: [],
       withPage: [
-        { name: "Rhinoplasty", path: "/procedures/rhinoplasty" },
-        { name: "Smart Template Rhinoplasty (Signature)", path: "/procedures/smart-template-rhinoplasty" },
+        { name: "Rhinoplasty", path: "/procedures/nose/rhinoplasty" },
+        { name: "Smart Template Rhinoplasty (Signature)", path: "/procedures/nose/smart-template-rhinoplasty" },
       ]
     }
   };
