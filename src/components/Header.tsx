@@ -117,10 +117,10 @@ const Header = () => {
         { name: "Implant Removal", path: "/procedures/implant-removal" },
         { name: "Inverted Nipple Correction", path: "/procedures/inverted-nipple" },
         { name: "Nipple & Areola Reduction", path: "/procedures/nipple-areola-reduction" },
-        { name: "K-Glide™ Breast Augmentation (Signature)", path: "/procedures/k-glide" },
-        { name: "Twirl Internal Bra Technique™ (Signature)", path: "/procedures/twirl-internal-bra" },
-        { name: "Smart BRA / Bloocell Scaffold (Signature)", path: "/procedures/smart-bra" },
-        { name: "Vibrasat Pro Technology (Signature)", path: "/procedures/vibrasat-pro" },
+        { name: "K-Glide™ Breast Augmentation (Signature)", path: "/procedures/breast/k-glide" },
+        { name: "Twirl Internal Bra Technique™ (Signature)", path: "/procedures/breast/twirl-internal-bra" },
+        { name: "Smart BRA / Bloocell Scaffold (Signature)", path: "/procedures/breast/smart-bra" },
+        { name: "Vibrasat Pro Technology (Signature)", path: "/procedures/breast/vibrasat-pro" },
       ]
     },
     nose: {

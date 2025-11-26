@@ -18,6 +18,10 @@ import Rhinoplasty from "./pages/procedures/nose/Rhinoplasty";
 import SmartTemplateRhinoplasty from "./pages/procedures/nose/SmartTemplateRhinoplasty";
 import EndoChorFaceLift from "./pages/procedures/face/EndoChorFaceLift";
 import KEndoscopicDeepPlane from "./pages/procedures/face/KEndoscopicDeepPlane";
+import KGlide from "./pages/procedures/breast/KGlide";
+import TwirlInternalBra from "./pages/procedures/breast/TwirlInternalBra";
+import SmartBRA from "./pages/procedures/breast/SmartBRA";
+import VibrasatPro from "./pages/procedures/breast/VibrasatPro";
 import Gallery from "./pages/Gallery";
 import PatientJourney from "./pages/PatientJourney";
 import LearnSurgery from "./pages/LearnSurgery";
@@ -46,9 +50,13 @@ const App = () => (
           <Route path="/procedures/face/k-face-lift" element={<KFaceLift />} />
           <Route path="/procedures/face/endochor-face-lift" element={<EndoChorFaceLift />} />
           <Route path="/procedures/face/k-endoscopic-deep-plane" element={<KEndoscopicDeepPlane />} />
-          <Route path="/procedures/nose/rhinoplasty" element={<Rhinoplasty />} />
-          <Route path="/procedures/nose/smart-template-rhinoplasty" element={<SmartTemplateRhinoplasty />} />
-          <Route path="/gallery" element={<Gallery />} />
+            <Route path="/procedures/nose/rhinoplasty" element={<Rhinoplasty />} />
+            <Route path="/procedures/nose/smart-template-rhinoplasty" element={<SmartTemplateRhinoplasty />} />
+            <Route path="/procedures/breast/k-glide" element={<KGlide />} />
+            <Route path="/procedures/breast/twirl-internal-bra" element={<TwirlInternalBra />} />
+            <Route path="/procedures/breast/smart-bra" element={<SmartBRA />} />
+            <Route path="/procedures/breast/vibrasat-pro" element={<VibrasatPro />} />
+            <Route path="/gallery" element={<Gallery />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/learn-surgery" element={<LearnSurgery />} />
           <Route path="/contact" element={<Contact />} />
