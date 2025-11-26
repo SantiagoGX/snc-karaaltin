@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Users, Shield, Activity, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
@@ -54,7 +54,7 @@ const AdvancedSafeBBL = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in">
-            El Advanced Safe BBL™ desarrollado por el Profesor Dr. Mehmet Veli Karaaltin representa la versión más segura, científicamente validada y tecnológicamente avanzada del Brazilian Butt Lift moderno. Basado en más de 543 pacientes auditados, 20 disecciones cadavéricas y sistemas de monitoreo en tiempo real, este protocolo reduce drásticamente los riesgos de embolia grasa y complicaciones serias, mientras logra una proyección natural, resultados estables y una recuperación más controlada.
+            The Advanced Safe BBL™ developed by Professor Dr. Mehmet Veli Karaaltin represents the safest, most scientifically validated, and technologically advanced version of the modern Brazilian Butt Lift. Based on more than 543 audited patients, 20 cadaveric dissections, and real-time monitoring systems, this protocol drastically reduces the risks of fat embolism and serious complications while achieving natural projection, stable results, and controlled recovery.
           </p>
         </div>
       </section>
@@ -91,7 +91,7 @@ const AdvancedSafeBBL = () => {
                   01 // What Is the Advanced Safe BBL™
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  El Advanced Safe BBL™ es un sistema integral de gluteoplastia grasa diseñado para maximizar seguridad y precisión. Utiliza monitorización por ultrasonido en tiempo real, Doppler vascular, inyección controlada de grasa y tecnología stem-cell–enriched para resultados consistentes y duraderos.
+                  The Advanced Safe BBL™ is a comprehensive fat gluteoplasty system designed to maximize safety and precision. It uses real-time ultrasound monitoring, vascular Doppler, controlled fat injection, and stem-cell-enriched technology for consistent and long-lasting results.
                 </p>
               </div>
 
@@ -105,7 +105,7 @@ const AdvancedSafeBBL = () => {
                   02 // Real-Time Ultrasound Safety Monitoring
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  La inyección se realiza exclusivamente por encima del músculo, verificada en tiempo real mediante tecnología inalámbrica Clarius AI™. Esto elimina el riesgo de inyecciones profundas cercanas a vasos glúteos mayores y evita completamente la técnica "a ciegas".
+                  Injection is performed exclusively above the muscle, verified in real-time using wireless Clarius AI™ technology. This eliminates the risk of deep injections near major gluteal vessels and completely avoids "blind" technique.
                 </p>
               </div>
 
@@ -119,7 +119,7 @@ const AdvancedSafeBBL = () => {
                   03 // Vascular Doppler Mapping
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  Antes y durante la cirugía, se mapean todos los perforantes vasculares relevantes para evitar vasos críticos. Esto guía trayectorias seguras para la grasa, reduciendo riesgo de trauma y mejorando la supervivencia del injerto.
+                  Before and during surgery, all relevant vascular perforators are mapped to avoid critical vessels. This guides safe trajectories for fat, reducing trauma risk and improving graft survival.
                 </p>
               </div>
 
@@ -133,16 +133,16 @@ const AdvancedSafeBBL = () => {
                   04 // Controlled Fat Injection (Liposat™ + Vibrosat Pro™)
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                  El sistema dual Vibrosat Pro™ + Liposat Pump™ permite una expansión mecánica uniforme del tejido y una inyección controlada en ml/min.
+                  The dual Vibrosat Pro™ + Liposat Pump™ system allows uniform mechanical tissue expansion and controlled injection in ml/min.
                 </p>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed font-semibold">
-                  Beneficios:
+                  Benefits:
                 </p>
                 <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2 mt-2">
-                  <li>• Distribución homogénea</li>
-                  <li>• Menor presión</li>
-                  <li>• Menor trauma tisular</li>
-                  <li>• Mejor integración del injerto</li>
+                  <li>• Homogeneous distribution</li>
+                  <li>• Lower pressure</li>
+                  <li>• Less tissue trauma</li>
+                  <li>• Better graft integration</li>
                 </ul>
               </div>
 
@@ -156,7 +156,7 @@ const AdvancedSafeBBL = () => {
                   05 // Stem-Cell Enriched Fat Grafting
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  Usando tecnología Stempia™, el injerto combina macro y micro fat con células madre derivadas de grasa, incrementando vascularidad, mejorando supervivencia del injerto y generando un resultado más suave, natural y estable.
+                  Using Stempia™ technology, the graft combines macro and micro fat with fat-derived stem cells, increasing vascularity, improving graft survival, and generating a smoother, more natural and stable result.
                 </p>
               </div>
 
@@ -170,14 +170,14 @@ const AdvancedSafeBBL = () => {
                   06 // Audit-Proven Safety
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                  En 543 pacientes, el uso del protocolo completo redujo complicaciones mayores en más del 90%:
+                  In 543 patients, the use of the complete protocol reduced major complications by more than 90%:
                 </p>
                 <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                  <li>• 0 casos de embolia grasa</li>
-                  <li>• 0 neumonía lipoidea</li>
-                  <li>• Seromas reducidos drásticamente</li>
-                  <li>• Menor dolor postoperatorio</li>
-                  <li>• Menor incidencia de necrosis grasa</li>
+                  <li>• 0 cases of fat embolism</li>
+                  <li>• 0 lipoid pneumonia</li>
+                  <li>• Seromas drastically reduced</li>
+                  <li>• Less postoperative pain</li>
+                  <li>• Lower incidence of fat necrosis</li>
                 </ul>
               </div>
             </div>
@@ -209,7 +209,7 @@ const AdvancedSafeBBL = () => {
                 Advanced Safe BBL™ With Dr. Karaaltin
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                El Advanced Safe BBL™ no es solo un procedimiento estético: es un sistema quirúrgico basado en ciencia, anatomía avanzada y tecnología de monitoreo continuo. Diseñado por el Prof. Dr. Karaaltin —un pionero en cirugía reconstructiva y microquirúrgica— este método redefine el estándar moderno del aumento glúteo seguro, logrando curvas suaves, proporciones naturales y resultados que respetan la integridad vascular.
+                The Advanced Safe BBL™ is not just an aesthetic procedure: it is a surgical system based on science, advanced anatomy, and continuous monitoring technology. Designed by Prof. Dr. Karaaltin—a pioneer in reconstructive and microsurgical surgery—this method redefines the modern standard of safe gluteal augmentation, achieving smooth curves, natural proportions, and results that respect vascular integrity.
               </p>
 
               <Link
@@ -226,43 +226,103 @@ const AdvancedSafeBBL = () => {
 
       {/* 5. PROCEDURE DETAILS */}
       <section className="section-spacing bg-gray-50">
-        <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
             Procedure Details
           </h2>
           
-          <div className="space-y-12">
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                Cómo Funciona el Protocolo
-              </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                El protocolo combina cuatro pilares:
-              </p>
-              <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• <span className="font-semibold">Ultrasonido en tiempo real:</span> garantiza plano seguro.</li>
-                <li>• <span className="font-semibold">Inyección controlada:</span> flujo preciso, sin picos de presión.</li>
-                <li>• <span className="font-semibold">Mapeo Doppler:</span> evita vasos críticos.</li>
-                <li>• <span className="font-semibold">Grasa enriquecida con células madre:</span> mejor integración y proyección.</li>
-              </ul>
+          <div className="space-y-16">
+            {/* How the Protocol Works */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="order-2 lg:order-1">
+                <img
+                  src="/placeholder.svg"
+                  alt="Protocol Components"
+                  className="w-full h-[350px] object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="order-1 lg:order-2 space-y-4">
+                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                  How the Protocol Works
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                  The protocol combines four pillars:
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-light mt-1">
+                      1
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Real-time ultrasound:</span> ensures safe plane.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-light mt-1">
+                      2
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Controlled injection:</span> precise flow, no pressure spikes.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-light mt-1">
+                      3
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Doppler mapping:</span> avoids critical vessels.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-light mt-1">
+                      4
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Stem cell-enriched fat:</span> better integration and projection.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                The Karaaltin Sponge Experiment™
-              </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                En un estudio comparativo con cinco tecnologías líderes, Vibrosat Pro™ + Liposat Pump™ produjo la dispersión más uniforme, sin zonas muertas ni daño tisular. Esta evidencia respalda la superioridad biomecánica del sistema.
-              </p>
+            {/* The Karaaltin Sponge Experiment */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
+                  The Karaaltin Sponge Experiment™
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  In a comparative study with five leading technologies, Vibrosat Pro™ + Liposat Pump™ produced the most uniform dispersion, without dead zones or tissue damage. This evidence supports the biomechanical superiority of the system.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="/placeholder.svg"
+                  alt="Sponge Experiment Results"
+                  className="w-full h-[350px] object-cover rounded-lg shadow-lg"
+                />
+              </div>
             </div>
 
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                Revisiones Complejas — Macro/Micro Fat Grafting
-              </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Para casos de fibrosis o fallas previas de BBL, la técnica de macro/micro fat cells inventada por el Dr. Karaaltin permite corregir deformidades de contorno en una o dos sesiones, utilizando capas precisas de injerto enriquecido.
-              </p>
+            {/* Complex Revisions */}
+            <div className="bg-white p-8 lg:p-10 rounded-lg shadow-md border border-gray-200 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 items-center">
+                <div>
+                  <img
+                    src="/placeholder.svg"
+                    alt="Complex Revisions"
+                    className="w-full h-[300px] object-cover rounded-lg"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
+                    Complex Revisions — Macro/Micro Fat Grafting
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                    For cases of fibrosis or previous BBL failures, the macro/micro fat cell technique invented by Dr. Karaaltin allows correction of contour deformities in one or two sessions, using precise layers of enriched grafting.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -280,27 +340,27 @@ const AdvancedSafeBBL = () => {
               {
                 step: "01",
                 title: "Consultation",
-                description: "Análisis 3D, evaluación anatómica y definición de proporciones."
+                description: "3D analysis, anatomical evaluation, and proportion definition."
               },
               {
                 step: "02",
                 title: "Preoperative Mapping",
-                description: "Doppler + planificación del vector de proyección."
+                description: "Doppler + projection vector planning."
               },
               {
                 step: "03",
                 title: "Surgery Day",
-                description: "Extracción, purificación, enriquecimiento y reinyección guiada por ultrasonido."
+                description: "Extraction, purification, enrichment, and ultrasound-guided reinjection."
               },
               {
                 step: "04",
                 title: "Immediate Post-Op",
-                description: "Compresión especializada y monitoreo temprano."
+                description: "Specialized compression and early monitoring."
               },
               {
                 step: "05",
                 title: "Follow-Up",
-                description: "Revisiones críticas durante los primeros 10 días para máxima seguridad."
+                description: "Critical reviews during the first 10 days for maximum safety."
               }
             ].map((item, index) => (
               <div
@@ -341,13 +401,13 @@ const AdvancedSafeBBL = () => {
                 Recovery & Healing
               </h2>
               <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• Compresión especializada diseñada por el Dr. Karaaltin para reducir seroma.</li>
-                <li>• MLD desde el día 3 postoperatorio para controlar inflamación.</li>
-                <li>• Retorno progresivo a la actividad según respuesta del injerto.</li>
-                <li>• Evitar presión directa sobre la zona tratada durante las primeras semanas.</li>
+                <li>• Specialized compression designed by Dr. Karaaltin to reduce seroma.</li>
+                <li>• MLD from postoperative day 3 to control inflammation.</li>
+                <li>• Progressive return to activity according to graft response.</li>
+                <li>• Avoid direct pressure on the treated area during the first weeks.</li>
               </ul>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed font-semibold">
-                Resultado esperado: proyección natural, suavidad uniforme y curvas proporcionales al marco óseo.
+                Expected result: natural projection, uniform smoothness, and curves proportional to bone structure.
               </p>
               <Link
                 to="/contact"
@@ -363,18 +423,53 @@ const AdvancedSafeBBL = () => {
 
       {/* 8. IDEAL CANDIDATES */}
       <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
             Ideal Candidates
           </h2>
           
-          <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <ul className="space-y-3">
-              <li>• Personas con grasa suficiente para transferencia.</li>
-              <li>• Pacientes buscando un resultado natural, armónico y seguro.</li>
-              <li>• No fumadores o dispuestos a pausar el hábito.</li>
-              <li>• Pacientes que priorizan técnicas basadas en evidencia y monitoreo avanzado.</li>
-            </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Users,
+                title: "Sufficient Fat Reserves",
+                description: "Individuals with adequate fat for transfer"
+              },
+              {
+                icon: Target,
+                title: "Natural Results",
+                description: "Seeking harmonious, safe, and natural outcomes"
+              },
+              {
+                icon: Shield,
+                title: "Non-Smokers",
+                description: "Non-smokers or willing to pause the habit"
+              },
+              {
+                icon: Activity,
+                title: "Evidence-Based Priority",
+                description: "Prioritize advanced monitoring and proven techniques"
+              }
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={index}
+                  className="group bg-gray-50 p-8 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="w-14 h-14 bg-gray-900 text-white rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-7 h-7" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-light tracking-wide uppercase text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-base text-gray-700 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -382,14 +477,35 @@ const AdvancedSafeBBL = () => {
       {/* 9. SCAR EXPECTATIONS */}
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
             Scar Expectations
           </h2>
           
-          <div className="max-w-3xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <p>
-              El Advanced Safe BBL™ utiliza microincisiones de 2–3 mm, estratégicamente ubicadas para quedar prácticamente invisibles al sanar. No existe cicatriz glútea visible, ya que el injerto se realiza a través de estos accesos mínimos.
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-md border border-gray-200 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-2 rounded-full text-sm uppercase tracking-widest font-light mb-6">
+                <Shield className="w-4 h-4" />
+                Minimal Scarring
+              </div>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
+                The Advanced Safe BBL™ uses 2–3 mm microincisions, strategically placed to remain virtually invisible when healed. There is no visible gluteal scar, as the graft is performed through these minimal access points.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="p-6 bg-gray-50 rounded-lg">
+                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">Size</h4>
+                  <p className="text-base text-gray-700">2–3 mm microincisions</p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-lg">
+                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">Location</h4>
+                  <p className="text-base text-gray-700">Hidden in natural creases</p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-lg">
+                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">Visibility</h4>
+                  <p className="text-base text-gray-700">Virtually invisible when healed</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -401,7 +517,7 @@ const AdvancedSafeBBL = () => {
             Before & After
           </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Descubre resultados reales logrados con técnicas seguras y científicas.
+            Discover real results achieved with safe and scientific techniques.
           </p>
           <Link
             to="/gallery"
