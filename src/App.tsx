@@ -22,6 +22,13 @@ import KGlide from "./pages/procedures/breast/KGlide";
 import TwirlInternalBra from "./pages/procedures/breast/TwirlInternalBra";
 import SmartBRA from "./pages/procedures/breast/SmartBRA";
 import VibrasatPro from "./pages/procedures/breast/VibrasatPro";
+import BreastAugmentationFatGrafting from "./pages/procedures/breast/BreastAugmentationFatGrafting";
+import BreastAugmentationImplants from "./pages/procedures/breast/BreastAugmentationImplants";
+import BreastReduction from "./pages/procedures/breast/BreastReduction";
+import BreastLift from "./pages/procedures/breast/BreastLift";
+import Gynecomastia from "./pages/procedures/breast/Gynecomastia";
+import HybridAugmentation from "./pages/procedures/breast/HybridAugmentation";
+import ImplantRemoval from "./pages/procedures/breast/ImplantRemoval";
 import Gallery from "./pages/Gallery";
 import PatientJourney from "./pages/PatientJourney";
 import LearnSurgery from "./pages/LearnSurgery";
@@ -56,6 +63,13 @@ const App = () => (
             <Route path="/procedures/breast/twirl-internal-bra" element={<TwirlInternalBra />} />
             <Route path="/procedures/breast/smart-bra" element={<SmartBRA />} />
             <Route path="/procedures/breast/vibrasat-pro" element={<VibrasatPro />} />
+            <Route path="/procedures/breast/augmentation-fat-grafting" element={<BreastAugmentationFatGrafting />} />
+            <Route path="/procedures/breast/augmentation-implants" element={<BreastAugmentationImplants />} />
+            <Route path="/procedures/breast/reduction" element={<BreastReduction />} />
+            <Route path="/procedures/breast/lift" element={<BreastLift />} />
+            <Route path="/procedures/breast/gynecomastia" element={<Gynecomastia />} />
+            <Route path="/procedures/breast/hybrid-augmentation" element={<HybridAugmentation />} />
+            <Route path="/procedures/breast/implant-removal" element={<ImplantRemoval />} />
             <Route path="/gallery" element={<Gallery />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/learn-surgery" element={<LearnSurgery />} />
