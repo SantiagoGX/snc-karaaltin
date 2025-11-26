@@ -29,6 +29,8 @@ import BreastLift from "./pages/procedures/breast/BreastLift";
 import Gynecomastia from "./pages/procedures/breast/Gynecomastia";
 import HybridAugmentation from "./pages/procedures/breast/HybridAugmentation";
 import ImplantRemoval from "./pages/procedures/breast/ImplantRemoval";
+import InvertedNippleRepair from "./pages/procedures/breast/InvertedNippleRepair";
+import NippleAreolaReduction from "./pages/procedures/breast/NippleAreolaReduction";
 import Gallery from "./pages/Gallery";
 import PatientJourney from "./pages/PatientJourney";
 import LearnSurgery from "./pages/LearnSurgery";
@@ -70,6 +72,8 @@ const App = () => (
             <Route path="/procedures/breast/gynecomastia" element={<Gynecomastia />} />
             <Route path="/procedures/breast/hybrid-augmentation" element={<HybridAugmentation />} />
             <Route path="/procedures/breast/implant-removal" element={<ImplantRemoval />} />
+            <Route path="/procedures/breast/inverted-nipple-repair" element={<InvertedNippleRepair />} />
+            <Route path="/procedures/breast/nipple-areola-reduction" element={<NippleAreolaReduction />} />
             <Route path="/gallery" element={<Gallery />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/learn-surgery" element={<LearnSurgery />} />
