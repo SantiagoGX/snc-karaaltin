@@ -23,12 +23,12 @@ const Contact = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-[#0d1f3a] pt-20 pb-32 lg:pb-40">
+        <section className="bg-[#5a5653] pt-20 pb-32 lg:pb-40">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto pt-16 lg:pt-24">
-              {/* Left: Placeholder Image - Vertical Rectangle */}
+            <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 items-center max-w-7xl mx-auto pt-16 lg:pt-24">
+              {/* Left: Placeholder Image */}
               <div className="fade-in">
-                <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
+                <div className="aspect-[4/3] bg-gray-200 rounded-none overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80"
                     alt="Contact Hero"
@@ -38,11 +38,11 @@ const Contact = () => {
               </div>
 
               {/* Right: Title & Subtitle */}
-              <div className="fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="fade-in flex flex-col items-start lg:items-end text-left lg:text-right" style={{ animationDelay: "0.2s" }}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
                   CONTACT
                 </h1>
-                <p className="text-lg text-white/80 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed max-w-xl">
                   We're here to help. Reach out to our clinic for consultations, questions, or appointment requests.
                 </p>
               </div>
