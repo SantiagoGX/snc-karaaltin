@@ -199,36 +199,102 @@ const RibCageMolding = () => {
 
       {/* 5. PROCEDURE DETAILS */}
       <section className="section-spacing bg-gray-50">
-        <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
             Procedure Details
           </h2>
           
-          <div className="space-y-12">
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                How It Works
-              </h3>
-              <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• 0.5 cm microincision</li>
-                <li>• Safe subperiosteal access</li>
-                <li>• Precise piezoelectric remodeling</li>
-                <li>• Symmetry verification</li>
-                <li>• Virtually invisible closure</li>
-              </ul>
+          <div className="space-y-16">
+            {/* How It Works - Image Left, Text Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <img
+                  src="/placeholder.svg"
+                  alt="How It Works"
+                  className="w-full h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
+                  How It Works
+                </h3>
+                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-900 font-semibold mt-1">01</span>
+                    <span>0.5 cm microincision</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-900 font-semibold mt-1">02</span>
+                    <span>Safe subperiosteal access</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-900 font-semibold mt-1">03</span>
+                    <span>Precise piezoelectric remodeling</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-900 font-semibold mt-1">04</span>
+                    <span>Symmetry verification</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gray-900 font-semibold mt-1">05</span>
+                    <span>Virtually invisible closure</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                Clinical Advantages
-              </h3>
-              <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• No rib extraction</li>
-                <li>• No visible scars</li>
-                <li>• No functional alteration</li>
-                <li>• Natural and progressive results</li>
-                <li>• Safety based on micrometric vibrational control</li>
-              </ul>
+            {/* Clinical Advantages - Text Left, Image Right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
+                  Clinical Advantages
+                </h3>
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">No rib extraction</p>
+                      <p className="text-sm text-gray-600">Complete structural preservation</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">No visible scars</p>
+                      <p className="text-sm text-gray-600">Virtually invisible 0.5 cm incision</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">Natural results</p>
+                      <p className="text-sm text-gray-600">Progressive and harmonious outcomes</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                      ✓
+                    </div>
+                    <div>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">Micrometric control</p>
+                      <p className="text-sm text-gray-600">Safety through vibrational precision</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 animate-fade-in">
+                <img
+                  src="/placeholder.svg"
+                  alt="Clinical Advantages"
+                  className="w-full h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -327,18 +393,59 @@ const RibCageMolding = () => {
 
       {/* 8. IDEAL CANDIDATES */}
       <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
             Ideal Candidates
           </h2>
           
-          <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <ul className="space-y-3">
-              <li>• Patients with a wide rib cage</li>
-              <li>• Individuals seeking a more stylized waist</li>
-              <li>• Patients who prefer techniques without bone resection</li>
-              <li>• Ideal for those desiring harmony between thorax, waist, and hips</li>
-            </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                ⚕
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Wide Rib Cage
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Patients with a wide rib cage seeking refined proportions
+              </p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                ✨
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Stylized Waist
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Individuals seeking a more defined and elegant waistline
+              </p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                🔬
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Minimal Approach
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Patients preferring techniques without bone resection
+              </p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
+              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                ⚖
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+                Body Harmony
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Ideal for harmony between thorax, waist, and hips
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -346,14 +453,43 @@ const RibCageMolding = () => {
       {/* 9. SCAR EXPECTATIONS */}
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
             Scar Expectations
           </h2>
           
-          <div className="max-w-3xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <p>
-              A 0.5 cm microincision strategically placed in the natural lateral fold of the torso. When healed, it becomes virtually invisible.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+            <div className="animate-fade-in">
+              <img
+                src="/placeholder.svg"
+                alt="Microincision Scar"
+                className="w-full h-[300px] object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="inline-block px-4 py-2 bg-white rounded-full border-2 border-gray-900 text-sm font-semibold uppercase tracking-wide">
+                Virtually Invisible
+              </div>
+              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
+                Single Microincision
+              </h3>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                A 0.5 cm microincision strategically placed in the natural lateral fold of the torso. When healed, it becomes virtually invisible.
+              </p>
+              <div className="pt-4 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <p className="text-sm text-gray-600">Size: 0.5 cm</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <p className="text-sm text-gray-600">Location: Natural lateral torso fold</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
+                  <p className="text-sm text-gray-600">Visibility: Virtually invisible after healing</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
