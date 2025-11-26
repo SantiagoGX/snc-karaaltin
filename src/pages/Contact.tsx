@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Clock, ChevronRight, Camera } from "lucide-react";
 import { useState } from "react";
+import contactHeroImage from "@/assets/contact-hero.png";
 
 const Contact = () => {
   const [files, setFiles] = useState<{
@@ -23,15 +24,15 @@ const Contact = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-[#5a5653] pt-20 pb-32 lg:pb-40">
+        <section className="bg-[#5a5653] pt-20 pb-16 lg:pb-20">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 items-center max-w-7xl mx-auto pt-16 lg:pt-24">
-              {/* Left: Placeholder Image */}
+              {/* Left: Image */}
               <div className="fade-in">
                 <div className="aspect-[4/3] bg-gray-200 rounded-none overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80"
-                    alt="Contact Hero"
+                    src={contactHeroImage}
+                    alt="Dr. Karaaltın Surgery Team"
                     className="w-full h-full object-cover"
                   />
                 </div>
