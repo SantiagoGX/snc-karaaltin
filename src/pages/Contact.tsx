@@ -21,14 +21,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-20">
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-[#F6F4EF] py-16 lg:py-24">
+        <section className="bg-[#0d1f3a] pt-20 pb-32 lg:pb-40">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-              {/* Left: Placeholder Image */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto pt-16 lg:pt-24">
+              {/* Left: Placeholder Image - Vertical Rectangle */}
               <div className="fade-in">
-                <div className="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden">
+                <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80"
                     alt="Contact Hero"
@@ -39,10 +39,10 @@ const Contact = () => {
 
               {/* Right: Title & Subtitle */}
               <div className="fade-in" style={{ animationDelay: "0.2s" }}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
                   CONTACT
                 </h1>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-white/80 leading-relaxed">
                   We're here to help. Reach out to our clinic for consultations, questions, or appointment requests.
                 </p>
               </div>
@@ -51,7 +51,7 @@ const Contact = () => {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="py-0 -mt-16 relative z-10">
+        <section className="py-0 -mt-24 lg:-mt-32 relative z-10">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8 lg:p-12 fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -363,12 +363,15 @@ const Contact = () => {
                   </form>
                 </div>
 
-                {/* Right Side Image */}
+                {/* Right Side Video */}
                 <div className="hidden lg:block fade-in sticky top-24" style={{ animationDelay: "0.2s" }}>
-                  <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
-                    <img
-                      src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80"
-                      alt="Consultation"
+                  <div className="aspect-[9/16] bg-gray-200 rounded-lg overflow-hidden max-h-[600px]">
+                    <video
+                      src="/cta-video.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="w-full h-full object-cover"
                     />
                   </div>
