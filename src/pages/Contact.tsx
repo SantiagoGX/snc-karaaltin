@@ -52,7 +52,7 @@ const Contact = () => {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="py-0 -mt-24 lg:-mt-32 relative z-10">
+        <section className="py-0 -mt-32 lg:-mt-40 relative z-10">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8 lg:p-12 fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
