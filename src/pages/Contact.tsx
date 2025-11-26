@@ -26,20 +26,18 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="bg-[#5a5653] pt-20 pb-32 lg:pb-40">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 items-center max-w-7xl mx-auto pt-16 lg:pt-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto pt-16 lg:pt-24">
               {/* Left: Image */}
               <div className="fade-in">
-                <div className="w-full h-auto">
-              <img
-                src={contactHeroImage}
-                alt="Dr. Karaaltın Surgery Team"
-                className="w-full h-auto object-contain rounded-xl"
-              />
-                </div>
+                <img
+                  src={contactHeroImage}
+                  alt="Dr. Karaaltın Surgery Team"
+                  className="w-full h-auto object-contain rounded-xl"
+                />
               </div>
 
               {/* Right: Title & Subtitle */}
-              <div className="fade-in flex flex-col items-start lg:items-end text-left lg:text-right" style={{ animationDelay: "0.2s" }}>
+              <div className="fade-in flex flex-col items-start text-left lg:pl-8" style={{ animationDelay: "0.2s" }}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
                   CONTACT
                 </h1>
