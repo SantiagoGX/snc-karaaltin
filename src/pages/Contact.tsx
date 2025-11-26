@@ -23,25 +23,25 @@ const Contact = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-[#5a5653] pt-20 pb-32 lg:pb-40">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto pt-16 lg:pt-24">
-              {/* Left: Image */}
-              <div className="fade-in">
+        {/* Hero Section - Hakimi Style with Diagonal Overlap */}
+        <section className="bg-[#5a5653] pt-20 pb-24 lg:pb-32 relative">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center pt-16 lg:pt-20 min-h-[500px] lg:min-h-[600px]">
+              {/* Left: Smaller Hero Image */}
+              <div className="fade-in flex justify-start">
                 <img
                   src={contactHeroImage}
-                  alt="Dr. Karaaltın Surgery Team"
-                  className="w-full h-auto object-contain rounded-xl"
+                  alt="Dr. Karaaltın Clinic"
+                  className="w-full max-w-[500px] aspect-[4/3] object-cover rounded-xl mb-[-80px] lg:mb-[-100px]"
                 />
               </div>
 
-              {/* Right: Title & Subtitle */}
-              <div className="fade-in flex flex-col items-start text-left lg:pl-8" style={{ animationDelay: "0.2s" }}>
+              {/* Right: Title & Subtitle - Centered Vertically */}
+              <div className="fade-in flex flex-col justify-center" style={{ animationDelay: "0.2s" }}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
                   CONTACT
                 </h1>
-                <p className="text-lg text-white/90 leading-relaxed max-w-xl">
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
                   We're here to help. Reach out to our clinic for consultations, questions, or appointment requests.
                 </p>
               </div>
@@ -49,331 +49,335 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Info Cards */}
-        <section className="py-0 -mt-32 lg:-mt-40 relative z-10">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8 lg:p-12 fade-in" style={{ animationDelay: "0.3s" }}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-                {/* Address */}
-                <div className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <MapPin className="h-8 w-8 text-[#0d1f3a]" />
-                  </div>
-                  <h3 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-900">
-                    ADDRESS
+        {/* Contact Info Banner - Overlapping Hero with Shadow */}
+        <section className="relative z-10 -mt-16 lg:-mt-20">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="bg-white rounded-lg shadow-lg p-8 lg:p-10 grid grid-cols-1 md:grid-cols-3 gap-8 fade-in" style={{ animationDelay: "0.4s" }}>
+              {/* Address */}
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <MapPin className="w-6 h-6 text-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    Address
                   </h3>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    Vişnezade, Balıklı Apt, Bayıldım Cd.<br />
-                    No:14/16, Floor 1, Apartment 3<br />
-                    34353 Beşiktaş / Istanbul, Türkiye
-                  </p>
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-widest text-[#0d1f3a] hover:opacity-70 transition-opacity inline-flex items-center gap-1"
-                  >
-                    GET DIRECTIONS <ChevronRight className="h-3 w-3" />
-                  </a>
                 </div>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Teşvikiye, Sakayık Sk. No:47,<br />
+                  34365 Şişli/İstanbul, Turkey
+                </p>
+                <a
+                  href="https://www.google.com/maps/place/Prof.+Dr.+Mehmet+Veli+Karaalt%C4%B1n/@41.0428434,28.9958192,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-xs font-semibold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-colors duration-300"
+                >
+                  Get Directions →
+                </a>
+              </div>
 
-                {/* Phone */}
-                <div className="text-center border-l border-r border-gray-200">
-                  <div className="flex justify-center mb-4">
-                    <Phone className="h-8 w-8 text-[#0d1f3a]" />
-                  </div>
-                  <h3 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-900">
-                    PHONE
+              {/* Phone */}
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <Phone className="w-6 h-6 text-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    Phone
                   </h3>
-                  <div className="text-sm text-gray-600 mb-4 space-y-1">
-                    <a href="tel:+902123254242" className="block hover:text-[#0d1f3a] transition-colors">
-                      +90 212 325 42 42
-                    </a>
-                    <a href="tel:+905465533285" className="block hover:text-[#0d1f3a] transition-colors">
-                      +90 546 553 3285
-                    </a>
-                  </div>
-                  <a
-                    href="https://wa.me/905465533285"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-widest text-[#0d1f3a] hover:opacity-70 transition-opacity inline-flex items-center gap-1"
-                  >
-                    TEXT OUR OFFICE <ChevronRight className="h-3 w-3" />
-                  </a>
                 </div>
+                <a
+                  href="tel:+902123254242"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-300 text-sm font-medium"
+                >
+                  +90 212 325 42 42
+                </a>
+                <a
+                  href="sms:+902123254242"
+                  className="inline-block mt-3 text-xs font-semibold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-colors duration-300"
+                >
+                  Text Our Office →
+                </a>
+              </div>
 
-                {/* Hours */}
-                <div className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <Clock className="h-8 w-8 text-[#0d1f3a]" />
-                  </div>
-                  <h3 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-900">
-                    HOURS
+              {/* Hours */}
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <Clock className="w-6 h-6 text-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    Hours
                   </h3>
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <p>
-                      <span className="font-medium">MON–FRI:</span> 09:00–18:00
-                    </p>
-                    <p>
-                      <span className="font-medium">SAT–SUN:</span> 11:00–16:00
-                    </p>
-                  </div>
                 </div>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Monday - Friday: 9:00 AM - 6:00 PM<br />
+                  Saturday: 10:00 AM - 4:00 PM<br />
+                  Sunday: Closed
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Form */}
-        <section className="py-20 lg:py-32">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-                {/* Form */}
-                <div className="fade-in">
-                  <h2 className="text-4xl md:text-5xl font-serif font-light tracking-wide mb-12">
-                    GET STARTED
-                  </h2>
+        {/* Contact Form & Images Section - Hakimi Layout */}
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16">
+              {/* Left: Contact Form */}
+              <div className="fade-in-up">
+                <h2 className="text-3xl lg:text-4xl font-serif font-light tracking-wide mb-2 text-gray-900">
+                  Book Your Consultation
+                </h2>
+                <p className="text-sm text-gray-600 mb-8">
+                  All fields marked with <span className="text-red-500">*</span> are required
+                </p>
 
-                  <form className="space-y-6">
-                    {/* Name Fields */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          First Name <span className="text-red-500">*</span>
-                        </label>
-                        <Input
-                          placeholder="John"
-                          required
-                          className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Last Name <span className="text-red-500">*</span>
-                        </label>
-                        <Input
-                          placeholder="Doe"
-                          required
-                          className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Email */}
+                <form className="space-y-8">
+                  {/* Name Fields */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-700">
-                        Email Address <span className="text-red-500">*</span>
+                      <label className="block text-sm text-gray-700 mb-2">
+                        First Name <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        placeholder="John"
+                        required
+                        className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-700 mb-2">
+                        Last Name <span className="text-red-500">*</span>
+                      </label>
+                      <Input
+                        placeholder="Doe"
+                        required
+                        className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email & Phone */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <label className="block text-sm text-gray-700 mb-2">
+                        Email <span className="text-red-500">*</span>
                       </label>
                       <Input
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="john.doe@example.com"
                         required
-                        className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
+                        className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
-
-                    {/* Phone */}
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-700">
-                        Phone Number <span className="text-red-500">*</span>
+                      <label className="block text-sm text-gray-700 mb-2">
+                        Phone <span className="text-red-500">*</span>
                       </label>
                       <Input
                         type="tel"
                         placeholder="+1 (555) 000-0000"
                         required
-                        className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
+                        className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
+                  </div>
 
-                    {/* Height & Weight */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Height
-                        </label>
-                        <Input
-                          placeholder="5'8&quot;"
-                          className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Weight
-                        </label>
-                        <Input
-                          placeholder="150 lbs"
-                          className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Procedure Interest */}
+                  {/* Height & Weight (Optional) */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-700">
-                        Area / Procedure of Interest
+                      <label className="block text-sm text-gray-700 mb-2">
+                        Height <span className="text-gray-400 text-xs">(Optional)</span>
                       </label>
                       <Input
-                        placeholder="e.g., Rhinoplasty, Breast Augmentation, BBL"
-                        className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a]"
+                        placeholder="5'8&quot;"
+                        className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
-
-                    {/* Concerns Textarea */}
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-gray-700">
-                        Describe your concerns or what you would like to improve:
+                      <label className="block text-sm text-gray-700 mb-2">
+                        Weight <span className="text-gray-400 text-xs">(Optional)</span>
                       </label>
-                      <Textarea
-                        placeholder="Please share any details about your goals, concerns, or questions..."
-                        rows={6}
-                        className="border-gray-300 focus:border-[#0d1f3a] focus:ring-[#0d1f3a] resize-none"
+                      <Input
+                        placeholder="150 lbs"
+                        className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
+                  </div>
 
-                    {/* Image Uploads */}
-                    <div className="space-y-4 pt-4">
-                      <h3 className="text-lg font-medium text-gray-900">Image Uploads (Maximum 4 Images)</h3>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {/* Front View */}
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-gray-700">
-                            Image Upload — Front View
+                  {/* Area/Procedure of Interest */}
+                  <div>
+                    <label className="block text-sm text-gray-700 mb-2">
+                      Area/Procedure of Interest <span className="text-red-500">*</span>
+                    </label>
+                    <Input
+                      placeholder="e.g., Rhinoplasty, Breast Augmentation"
+                      required
+                      className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
+                    />
+                  </div>
+
+                  {/* Concerns */}
+                  <div>
+                    <label className="block text-sm text-gray-700 mb-2">
+                      Your Concerns or Questions <span className="text-red-500">*</span>
+                    </label>
+                    <Textarea
+                      placeholder="Tell us about your goals and any questions you may have..."
+                      rows={5}
+                      required
+                      className="w-full min-h-[120px] resize-none border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
+                    />
+                  </div>
+
+                  {/* Image Uploads */}
+                  <div className="space-y-4 pt-4">
+                    <h3 className="text-lg font-medium text-gray-900">Image Uploads (Maximum 4 Images)</h3>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Front View */}
+                      <div>
+                        <label className="block text-sm font-medium mb-2 text-gray-700">
+                          Image Upload — Front View
+                        </label>
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                          <input
+                            type="file"
+                            accept=".jpg,.jpeg,.png,.pdf,.heif"
+                            onChange={(e) => handleFileChange('front', e.target.files?.[0])}
+                            className="hidden"
+                            id="front-view"
+                          />
+                          <label htmlFor="front-view" className="cursor-pointer">
+                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                            <p className="text-sm text-gray-600 mb-1">
+                              {files.front ? files.front.name : 'Choose file'}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              Accepted: jpg, png, pdf, jpeg, heif
+                            </p>
+                            <p className="text-xs text-gray-500">Max: 20MB</p>
                           </label>
-                          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#0d1f3a] transition-colors cursor-pointer">
-                            <input
-                              type="file"
-                              accept=".jpg,.jpeg,.png,.pdf,.heif"
-                              onChange={(e) => handleFileChange('front', e.target.files?.[0])}
-                              className="hidden"
-                              id="front-view"
-                            />
-                            <label htmlFor="front-view" className="cursor-pointer">
-                              <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                              <p className="text-sm text-gray-600 mb-1">
-                                {files.front ? files.front.name : 'Choose file'}
-                              </p>
-                              <p className="text-xs text-gray-500">
-                                Accepted: jpg, png, pdf, jpeg, heif
-                              </p>
-                              <p className="text-xs text-gray-500">Max: 20MB</p>
-                            </label>
-                          </div>
                         </div>
+                      </div>
 
-                        {/* Side View */}
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-gray-700">
-                            Image Upload — Side View
+                      {/* Side View */}
+                      <div>
+                        <label className="block text-sm font-medium mb-2 text-gray-700">
+                          Image Upload — Side View
+                        </label>
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                          <input
+                            type="file"
+                            accept=".jpg,.jpeg,.png,.pdf,.heif"
+                            onChange={(e) => handleFileChange('side', e.target.files?.[0])}
+                            className="hidden"
+                            id="side-view"
+                          />
+                          <label htmlFor="side-view" className="cursor-pointer">
+                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                            <p className="text-sm text-gray-600 mb-1">
+                              {files.side ? files.side.name : 'Choose file'}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              Accepted: jpg, png, pdf, jpeg, heif
+                            </p>
+                            <p className="text-xs text-gray-500">Max: 20MB</p>
                           </label>
-                          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#0d1f3a] transition-colors cursor-pointer">
-                            <input
-                              type="file"
-                              accept=".jpg,.jpeg,.png,.pdf,.heif"
-                              onChange={(e) => handleFileChange('side', e.target.files?.[0])}
-                              className="hidden"
-                              id="side-view"
-                            />
-                            <label htmlFor="side-view" className="cursor-pointer">
-                              <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                              <p className="text-sm text-gray-600 mb-1">
-                                {files.side ? files.side.name : 'Choose file'}
-                              </p>
-                              <p className="text-xs text-gray-500">
-                                Accepted: jpg, png, pdf, jpeg, heif
-                              </p>
-                              <p className="text-xs text-gray-500">Max: 20MB</p>
-                            </label>
-                          </div>
                         </div>
+                      </div>
 
-                        {/* Other Side View */}
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-gray-700">
-                            Image Upload — Other Side View
+                      {/* Other Side View */}
+                      <div>
+                        <label className="block text-sm font-medium mb-2 text-gray-700">
+                          Image Upload — Other Side View
+                        </label>
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                          <input
+                            type="file"
+                            accept=".jpg,.jpeg,.png,.pdf,.heif"
+                            onChange={(e) => handleFileChange('otherSide', e.target.files?.[0])}
+                            className="hidden"
+                            id="other-side-view"
+                          />
+                          <label htmlFor="other-side-view" className="cursor-pointer">
+                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                            <p className="text-sm text-gray-600 mb-1">
+                              {files.otherSide ? files.otherSide.name : 'Choose file'}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              Accepted: jpg, png, pdf, jpeg, heif
+                            </p>
+                            <p className="text-xs text-gray-500">Max: 20MB</p>
                           </label>
-                          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#0d1f3a] transition-colors cursor-pointer">
-                            <input
-                              type="file"
-                              accept=".jpg,.jpeg,.png,.pdf,.heif"
-                              onChange={(e) => handleFileChange('otherSide', e.target.files?.[0])}
-                              className="hidden"
-                              id="other-side-view"
-                            />
-                            <label htmlFor="other-side-view" className="cursor-pointer">
-                              <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                              <p className="text-sm text-gray-600 mb-1">
-                                {files.otherSide ? files.otherSide.name : 'Choose file'}
-                              </p>
-                              <p className="text-xs text-gray-500">
-                                Accepted: jpg, png, pdf, jpeg, heif
-                              </p>
-                              <p className="text-xs text-gray-500">Max: 20MB</p>
-                            </label>
-                          </div>
                         </div>
+                      </div>
 
-                        {/* Additional Photo */}
-                        <div>
-                          <label className="block text-sm font-medium mb-2 text-gray-700">
-                            Image Upload — Additional Photo (optional)
+                      {/* Additional Photo */}
+                      <div>
+                        <label className="block text-sm font-medium mb-2 text-gray-700">
+                          Image Upload — Additional Photo (optional)
+                        </label>
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                          <input
+                            type="file"
+                            accept=".jpg,.jpeg,.png,.pdf,.heif"
+                            onChange={(e) => handleFileChange('additional', e.target.files?.[0])}
+                            className="hidden"
+                            id="additional-photo"
+                          />
+                          <label htmlFor="additional-photo" className="cursor-pointer">
+                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                            <p className="text-sm text-gray-600 mb-1">
+                              {files.additional ? files.additional.name : 'Choose file'}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              Accepted: jpg, png, pdf, jpeg, heif
+                            </p>
+                            <p className="text-xs text-gray-500">Max: 20MB</p>
                           </label>
-                          <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#0d1f3a] transition-colors cursor-pointer">
-                            <input
-                              type="file"
-                              accept=".jpg,.jpeg,.png,.pdf,.heif"
-                              onChange={(e) => handleFileChange('additional', e.target.files?.[0])}
-                              className="hidden"
-                              id="additional-photo"
-                            />
-                            <label htmlFor="additional-photo" className="cursor-pointer">
-                              <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                              <p className="text-sm text-gray-600 mb-1">
-                                {files.additional ? files.additional.name : 'Choose file'}
-                              </p>
-                              <p className="text-xs text-gray-500">
-                                Accepted: jpg, png, pdf, jpeg, heif
-                              </p>
-                              <p className="text-xs text-gray-500">Max: 20MB</p>
-                            </label>
-                          </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Privacy Notice */}
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="text-xs text-gray-600 leading-relaxed">
-                        Your information and uploaded images are kept confidential and used solely for medical assessment and appointment coordination. We do not share your data with third parties.
-                      </p>
-                    </div>
+                  {/* Privacy Notice */}
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      Your information and uploaded images are kept confidential and used solely for medical assessment and appointment coordination. We do not share your data with third parties.
+                    </p>
+                  </div>
 
-                    {/* Submit Button */}
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-[#0d1f3a] hover:bg-[#0d1f3a]/90 text-white uppercase tracking-widest text-sm py-6 group"
-                    >
-                      START YOUR JOURNEY
-                      <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </form>
+                  {/* Submit Button */}
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-gray-900 hover:bg-gray-800 text-white uppercase tracking-widest text-sm py-6 group"
+                  >
+                    START YOUR JOURNEY
+                    <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </form>
+              </div>
+
+              {/* Right: Two Stacked Images - Sticky */}
+              <div className="fade-in-up lg:sticky lg:top-24 lg:self-start space-y-6" style={{ animationDelay: "0.2s" }}>
+                {/* Image 1: Video */}
+                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md aspect-[4/3] relative">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/cta-video.mp4" type="video/mp4" />
+                  </video>
                 </div>
 
-                {/* Right Side Video */}
-                <div className="hidden lg:block fade-in sticky top-24" style={{ animationDelay: "0.2s" }}>
-                  <div className="aspect-[9/16] bg-gray-200 rounded-lg overflow-hidden max-h-[600px]">
-                    <video
-                      src="/cta-video.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Image 2: Clinic Image */}
+                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md aspect-[4/3] relative">
+                  <img
+                    src={contactHeroImage}
+                    alt="Dr. Karaaltın Clinic Interior"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
