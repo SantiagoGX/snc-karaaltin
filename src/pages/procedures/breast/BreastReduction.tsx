@@ -39,65 +39,65 @@ const BreastReduction = () => {
       </section>
 
       {/* Sticky Overview Section */}
-      <section className="section-spacing bg-gray-50">
-        <div className="content-spacing">
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16">
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-6">
+      <section className="overview-section-dark">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
+            <div className="overview-sticky-left">
               <div>
-                <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-foreground mb-2">
+                <h2 className="overview-title-dark">
                   BREAST REDUCTION SURGERY
                 </h2>
-                <p className="text-sm uppercase tracking-widest text-foreground/60">Overview</p>
+                <p className="overview-subtitle-dark">Overview</p>
               </div>
               <img 
                 src={drKaraaltinLogo} 
-                alt="Dr. Karaaltin Signature" 
-                className="w-48 brightness-0 opacity-60"
+                alt="Dr. Karaaltin Logo" 
+                className="w-48 h-auto opacity-80 invert"
               />
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="space-y-8 min-h-screen">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   01 // WHY REDUCTION HELPS
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Relieves back, neck, and shoulder pain; improves posture; eliminates bra-strap grooves.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.1s' }}>
+                <h3 className="overview-card-title-dark">
                   02 // FUNCTIONAL + AESTHETIC BENEFITS
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Reduces volume, reshapes the breast, and lifts the nipple-areolar complex.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.2s' }}>
+                <h3 className="overview-card-title-dark">
                   03 // CUSTOMIZED INCISION PATTERNS
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Anchor, vertical, or peri-areolar—selected based on degree of ptosis.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.3s' }}>
+                <h3 className="overview-card-title-dark">
                   04 // YOUTHFUL, BALANCED CONTOUR
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Breast mound is reshaped for optimal symmetry and proportions.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.4s' }}>
+                <h3 className="overview-card-title-dark">
                   05 // FAST, COMFORTABLE RECOVERY
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Multimodal pain control minimizes narcotic use.
                 </p>
               </div>
@@ -221,45 +221,53 @@ const BreastReduction = () => {
       </section>
 
       {/* Ideal Candidates */}
-      <section className="section-spacing">
-        <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+      <section className="candidates-section-dark">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="candidates-title-dark">
             Ideal Candidates
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">💪</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+          <div className="candidates-grid">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">
+                💪
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Physical Discomfort
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Physical discomfort from large breasts
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🩹</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="candidate-icon-dark">
+                🩹
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Chronic Pain
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Chronic pain or skin irritation
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🏃</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="candidate-icon-dark">
+                🏃
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Activity Limitation
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Difficulty exercising or dressing
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">⚖️</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="candidate-icon-dark">
+                ⚖️
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Proportion
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Desire for proportionate contour
               </p>
             </div>

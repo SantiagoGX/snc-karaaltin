@@ -39,65 +39,65 @@ const BreastLift = () => {
       </section>
 
       {/* Sticky Overview Section */}
-      <section className="section-spacing bg-gray-50">
-        <div className="content-spacing">
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16">
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-6">
+      <section className="overview-section-dark">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
+            <div className="overview-sticky-left">
               <div>
-                <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-foreground mb-2">
+                <h2 className="overview-title-dark">
                   BREAST LIFT (MASTOPEXY)
                 </h2>
-                <p className="text-sm uppercase tracking-widest text-foreground/60">Overview</p>
+                <p className="overview-subtitle-dark">Overview</p>
               </div>
               <img 
                 src={drKaraaltinLogo} 
-                alt="Dr. Karaaltin Signature" 
-                className="w-48 brightness-0 opacity-60"
+                alt="Dr. Karaaltin Logo" 
+                className="w-48 h-auto opacity-80 invert"
               />
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="space-y-8 min-h-screen">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   01 // WHY BREASTS SAG
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Aging, pregnancy, breastfeeding, and weight changes affect shape and support.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.1s' }}>
+                <h3 className="overview-card-title-dark">
                   02 // CUSTOM LIFT TECHNIQUES
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Benelli, Vertical, or Wise Pattern depending on severity of ptosis.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.2s' }}>
+                <h3 className="overview-card-title-dark">
                   03 // RESTORES NIPPLE POSITION
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Repositions and reshapes the areola as needed.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.3s' }}>
+                <h3 className="overview-card-title-dark">
                   04 // OPTIONAL VOLUME ENHANCEMENT
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Can combine with implants or fat grafting.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark" style={{ animationDelay: '0.4s' }}>
+                <h3 className="overview-card-title-dark">
                   05 // NATURAL, LONG-LASTING LIFT
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Improves contour without altering overall breast size (unless combined).
                 </p>
               </div>
@@ -215,37 +215,54 @@ const BreastLift = () => {
       </section>
 
       {/* Ideal Candidates */}
-      <section className="section-spacing">
-        <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+      <section className="candidates-section-dark">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="candidates-title-dark">
             Ideal Candidates
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">📉</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+          <div className="candidates-grid">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">
+                📉
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Sagging Breasts
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Sagging or deflated breasts
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">✨</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="candidate-icon-dark">
+                ✨
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Lost Volume
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Lost upper-pole volume
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="candidate-icon-dark">
+                🎯
+              </div>
+              <h3 className="candidate-card-title-dark">
                 Nipple Position
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Disproportionate nipple position
+              </p>
+            </div>
+            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="candidate-icon-dark">
+                💫
+              </div>
+              <h3 className="candidate-card-title-dark">
+                Youthful Contour
+              </h3>
+              <p className="candidate-card-text-dark">
+                Desire for restored breast shape
               </p>
             </div>
           </div>
