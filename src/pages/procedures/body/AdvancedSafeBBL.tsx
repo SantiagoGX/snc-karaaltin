@@ -60,85 +60,77 @@ const AdvancedSafeBBL = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
+            <div className="overview-sticky-left">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   Advanced Safe BBL™
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80 invert"
               />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 0 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   01 // What Is the Advanced Safe BBL™
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   The Advanced Safe BBL™ is a comprehensive fat gluteoplasty system designed to maximize safety and precision. It uses real-time ultrasound monitoring, vascular Doppler, controlled fat injection, and stem-cell-enriched technology for consistent and long-lasting results.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 1 ? 'active' : ''}`}
                 style={{ animationDelay: '0.1s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Real-Time Ultrasound Safety Monitoring
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Injection is performed exclusively above the muscle, verified in real-time using wireless Clarius AI™ technology. This eliminates the risk of deep injections near major gluteal vessels and completely avoids "blind" technique.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 2 ? 'active' : ''}`}
                 style={{ animationDelay: '0.2s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Vascular Doppler Mapping
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Before and during surgery, all relevant vascular perforators are mapped to avoid critical vessels. This guides safe trajectories for fat, reducing trauma risk and improving graft survival.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 3 ? 'active' : ''}`}
                 style={{ animationDelay: '0.3s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // Controlled Fat Injection (Liposat™ + Vibrosat Pro™)
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   The dual Vibrosat Pro™ + Liposat Pump™ system allows uniform mechanical tissue expansion and controlled injection in ml/min.
                 </p>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed font-semibold">
+                <p className="overview-card-text-dark font-semibold">
                   Benefits:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2 mt-2">
+                <ul className="overview-card-text-dark space-y-2 mt-2">
                   <li>• Homogeneous distribution</li>
                   <li>• Lower pressure</li>
                   <li>• Less tissue trauma</li>
@@ -147,32 +139,28 @@ const AdvancedSafeBBL = () => {
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 4 ? 'active' : ''}`}
                 style={{ animationDelay: '0.4s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Stem-Cell Enriched Fat Grafting
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Using Stempia™ technology, the graft combines macro and micro fat with fat-derived stem cells, increasing vascularity, improving graft survival, and generating a smoother, more natural and stable result.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 5 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 5 ? 'active' : ''}`}
                 style={{ animationDelay: '0.5s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   06 // Audit-Proven Safety
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   In 543 patients, the use of the complete protocol reduced major complications by more than 90%:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• 0 cases of fat embolism</li>
                   <li>• 0 lipoid pneumonia</li>
                   <li>• Seromas drastically reduced</li>
@@ -422,57 +410,57 @@ const AdvancedSafeBBL = () => {
       </section>
 
       {/* 8. IDEAL CANDIDATES */}
-      <section className="section-spacing bg-white">
+      <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+          <h2 className="candidates-title-dark">
             Ideal Candidates
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+          <div className="candidates-grid">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">
                 🧍
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Sufficient Fat Reserves
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Individuals with adequate fat for transfer
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="candidate-icon-dark">
                 🎯
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Natural Results
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Seeking harmonious, safe, and natural outcomes
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="candidate-icon-dark">
                 🚭
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Non-Smokers
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Non-smokers or willing to pause the habit
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="candidate-icon-dark">
                 📊
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Evidence-Based Priority
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Prioritize advanced monitoring and proven techniques
               </p>
             </div>
@@ -481,15 +469,15 @@ const AdvancedSafeBBL = () => {
       </section>
 
       {/* 9. SCAR EXPECTATIONS */}
-      <section className="section-spacing bg-gray-50">
+      <section className="scar-section">
         <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+          <h2 className="scar-title">
             Scar Expectations
           </h2>
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-10 lg:p-12 rounded-lg shadow-md border border-gray-200 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
+              <div className="scar-badge">
                 Minimal Scarring
               </div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">

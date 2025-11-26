@@ -63,51 +63,47 @@ const TummyTuck = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
+            <div className="overview-sticky-left">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   Tummy Tuck
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80 invert"
               />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 0 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   01 // What Is a Tummy Tuck
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A tummy tuck removes excess abdominal skin and fat while tightening separated or weakened muscles. Unlike liposuction alone, it corrects both skin laxity and muscle diastasis (rectus separation), restoring a firm, youthful abdominal contour.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 1 ? 'active' : ''}`}
                 style={{ animationDelay: '0.1s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Anatomy Behind the Procedure
                 </h3>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• Subcutaneous "pinchable" fat is removed or reshaped.</li>
                   <li>• Visceral fat cannot be surgically removed and may influence candidacy.</li>
                   <li>• The linea alba, often stretched after pregnancy or weight gain, is repaired to correct abdominal wall separation.</li>
@@ -115,18 +111,16 @@ const TummyTuck = () => {
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 2 ? 'active' : ''}`}
                 style={{ animationDelay: '0.2s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Treatment Options
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   Each abdominoplasty is tailored to patient anatomy and goals, with options such as:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• Full Abdominoplasty</li>
                   <li>• Mini Abdominoplasty</li>
                   <li>• Skin-Only Abdominoplasty</li>
@@ -135,21 +129,19 @@ const TummyTuck = () => {
                   <li>• Apronectomy</li>
                   <li>• Lipoabdominoplasty</li>
                 </ul>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
+                <p className="overview-card-text-dark mt-4">
                   These variations allow the surgeon to refine both function and aesthetics while minimizing trauma and maximizing results.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 3 ? 'active' : ''}`}
                 style={{ animationDelay: '0.3s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // Why Patients Choose It
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   This procedure restores core stability, reduces skin laxity, improves silhouette definition, and enhances confidence. For many individuals, it is the most effective solution when exercise and diet cannot address structural abdominal changes.
                 </p>
               </div>
@@ -327,20 +319,60 @@ const TummyTuck = () => {
       </section>
 
       {/* 8. IDEAL CANDIDATES */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-5xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
+      <section className="candidates-section-dark">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="candidates-title-dark">
             Ideal Candidates
           </h2>
           
-          <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <ul className="space-y-3">
-              <li>• BMI preferably below 30 or stable weight</li>
-              <li>• Skin laxity or muscle separation unresponsive to exercise</li>
-              <li>• No significant visceral fat burden</li>
-              <li>• Non-smoker or committed to pausing smoking pre- and post-op</li>
-              <li>• Realistic expectations regarding scars and recovery</li>
-            </ul>
+          <div className="candidates-grid">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">
+                ⚖️
+              </div>
+              <h3 className="candidate-card-title-dark">
+                Stable Weight
+              </h3>
+              <p className="candidate-card-text-dark">
+                BMI preferably below 30 or stable weight
+              </p>
+            </div>
+
+            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="candidate-icon-dark">
+                🎯
+              </div>
+              <h3 className="candidate-card-title-dark">
+                Skin Laxity
+              </h3>
+              <p className="candidate-card-text-dark">
+                Skin laxity or muscle separation unresponsive to exercise
+              </p>
+            </div>
+
+            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="candidate-icon-dark">
+                🚭
+              </div>
+              <h3 className="candidate-card-title-dark">
+                Non-Smoker
+              </h3>
+              <p className="candidate-card-text-dark">
+                Non-smoker or committed to pausing smoking pre- and post-op
+              </p>
+            </div>
+
+            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="candidate-icon-dark">
+                💭
+              </div>
+              <h3 className="candidate-card-title-dark">
+                Realistic Expectations
+              </h3>
+              <p className="candidate-card-text-dark">
+                Realistic expectations regarding scars and recovery
+              </p>
+            </div>
           </div>
         </div>
       </section>

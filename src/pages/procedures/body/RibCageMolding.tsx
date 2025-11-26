@@ -63,57 +63,53 @@ const RibCageMolding = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
+            <div className="overview-sticky-left">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   Rib Cage Molding
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80 invert"
               />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 0 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   01 // What Is Rib Cage Molding
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A minimally invasive procedure that gently reshapes the floating ribs using piezoelectric technology. It does not involve rib extraction, does not alter deep anatomy, and maintains complete structural safety.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 1 ? 'active' : ''}`}
                 style={{ animationDelay: '0.1s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Why Piezo Technology
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   Piezoelectric energy allows sculpting the costal edge with precision micro-movements, avoiding heat, trauma, or aggressive vibrations.
                 </p>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed font-semibold mb-2">
+                <p className="overview-card-text-dark font-semibold mb-2">
                   Benefits:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• Millimetric control</li>
                   <li>• Zero damage to soft tissues</li>
                   <li>• Smooth and natural results</li>
@@ -122,43 +118,37 @@ const RibCageMolding = () => {
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 2 ? 'active' : ''}`}
                 style={{ animationDelay: '0.2s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Micro-Incision Approach
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   The technique uses a single 0.5 cm microincision — virtually invisible once healed. Through this minimal window, the piezoelectric instrument is introduced to reshape the ribs with maximum precision and minimal aggression.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 3 ? 'active' : ''}`}
                 style={{ animationDelay: '0.3s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // Ideal Candidates
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Patients who desire a narrower waist without major surgery, individuals with a wide rib cage that affects proportions, and patients seeking natural results without visible scars or extensive recovery time.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
-                }`}
+                className={`overview-card-dark ${activeCard === 4 ? 'active' : ''}`}
                 style={{ animationDelay: '0.4s' }}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Why Dr. Karaaltin
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Recognized for his mastery of advanced anatomical techniques and minimally invasive procedures, Dr. Karaaltin combines scientific innovation, surgical safety, and premium aesthetics. His approach is backed by research, advanced experimentation, and consistent results.
                 </p>
               </div>
@@ -392,57 +382,57 @@ const RibCageMolding = () => {
       </section>
 
       {/* 8. IDEAL CANDIDATES */}
-      <section className="section-spacing bg-white">
+      <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+          <h2 className="candidates-title-dark">
             Ideal Candidates
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+          <div className="candidates-grid">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">
                 ⚕
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Wide Rib Cage
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Patients with a wide rib cage seeking refined proportions
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="candidate-icon-dark">
                 ✨
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Stylized Waist
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Individuals seeking a more defined and elegant waistline
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="candidate-icon-dark">
                 🔬
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Minimal Approach
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Patients preferring techniques without bone resection
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="candidate-icon-dark">
                 ⚖
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Body Harmony
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Ideal for harmony between thorax, waist, and hips
               </p>
             </div>
