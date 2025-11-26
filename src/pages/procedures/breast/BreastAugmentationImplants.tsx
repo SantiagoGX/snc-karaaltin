@@ -1,29 +1,50 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 
 const BreastAugmentationImplants = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
+  const [activeCard, setActiveCard] = useState(0);
+  const overviewRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!cardsRef.current) return;
       
+      const cards = cardsRef.current.querySelectorAll('.overview-card');
+      cards.forEach((card, index) => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+          setActiveCard(index);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gray-200">
-          <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-gray-500">
-            Hero Image Placeholder
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-[0.2em]">
-            BREAST AUGMENTATION WITH IMPLANTS
+      <section className="procedure-hero">
+        <img
+          src="/placeholder.svg"
+          alt="Breast Augmentation With Implants Hero"
+          className="absolute inset-0 w-full h-full object-cover animate-scale-in"
+        />
+        <div className="procedure-hero-overlay" />
+        <div className="procedure-hero-content">
+          <h1 className="procedure-hero-title animate-fade-in">
+            Breast Augmentation With Implants
           </h1>
-          <p className="text-lg md:text-xl text-white/90 font-light tracking-wide">
+          <p className="procedure-hero-subtitle animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Sculpted Volume. Precision Planning. Long-Lasting Results.
           </p>
         </div>
@@ -39,65 +60,67 @@ const BreastAugmentationImplants = () => {
       </section>
 
       {/* Sticky Overview Section */}
-      <section className="section-spacing bg-gray-50">
-        <div className="content-spacing">
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16">
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-6">
+      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
+            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
               <div>
-                <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-foreground mb-2">
-                  BREAST AUGMENTATION WITH IMPLANTS
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                  Breast Augmentation
                 </h2>
-                <p className="text-sm uppercase tracking-widest text-foreground/60">Overview</p>
+                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                  Overview
+                </p>
               </div>
-              <img 
-                src={drKaraaltinLogo} 
-                alt="Dr. Karaaltin Signature" 
-                className="w-48 brightness-0 opacity-60"
+              <img
+                src={drKaraaltinLogo}
+                alt="Dr. Karaaltin Logo"
+                className="w-48 h-auto opacity-80 brightness-0"
               />
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
-                  01 // IMPLANT OPTIONS
+            <div ref={cardsRef} className="space-y-8 min-h-screen">
+              <div className={`overview-card ${activeCard === 0 ? 'shadow-lg border-gray-300' : ''}`}>
+                <h3 className="overview-card-title">
+                  01 // Implant Options
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-content">
                   Silicone or saline; round or anatomical; smooth or textured; selected for your anatomy and goals.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
-                  02 // PLACEMENT TECHNIQUES
+              <div className={`overview-card ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`}>
+                <h3 className="overview-card-title">
+                  02 // Placement Techniques
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-content">
                   Submuscular, subfascial, subglandular, or dual-plane based on soft-tissue support and desired contour.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
-                  03 // INCISION SITES
+              <div className={`overview-card ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`}>
+                <h3 className="overview-card-title">
+                  03 // Incision Sites
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-content">
                   IMF, periareolar, or transaxillary—chosen for concealment and safety.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
-                  04 // ADDRESSES VOLUME LOSS
+              <div className={`overview-card ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`}>
+                <h3 className="overview-card-title">
+                  04 // Addresses Volume Loss
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-content">
                   Ideal after pregnancy, weight loss, or congenital asymmetry.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
-                  05 // CUSTOMIZABLE PROJECTION
+              <div className={`overview-card ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`}>
+                <h3 className="overview-card-title">
+                  05 // Customizable Projection
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-content">
                   Implant sizes measured in cc for precise volumetric control.
                 </p>
               </div>
@@ -202,11 +225,12 @@ const BreastAugmentationImplants = () => {
                 <p className="text-foreground/80 leading-relaxed mb-6">
                   10–14 days to return to work; 6–8 weeks activity restrictions; scar care begins at 2–3 weeks.
                 </p>
-                <Link to="/contact">
-                  <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-                    Book a Consultation
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                <Link 
+                  to="/contact"
+                  className="btn-primary"
+                >
+                  Book a Consultation
+                  <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -264,16 +288,18 @@ const BreastAugmentationImplants = () => {
       {/* Before & After CTA */}
       <section className="section-spacing bg-gray-50">
         <div className="content-spacing text-center">
-          <Link to="/gallery">
-            <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-              View Before & After Gallery
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+          <Link 
+            to="/gallery"
+            className="btn-primary"
+          >
+            View Before & After Gallery
+            <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
 
       <ContactCTASection />
+      </main>
       <Footer />
     </div>
   );
