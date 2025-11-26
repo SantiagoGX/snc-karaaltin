@@ -86,9 +86,9 @@ const Header = () => {
         "Orthognathic Surgery",
       ],
       withPage: [
-        { name: "The K Face Lift (Signature)", path: "/procedures/k-face-lift" },
-        { name: "EndoChor® Face Lift (Signature)", path: "/procedures/endochor-face-lift" },
-        { name: "K Endoscopic Deep Plane Face Lift (Signature)", path: "/procedures/k-endoscopic-deep-plane" },
+        { name: "The K Face Lift (Signature)", path: "/procedures/face/k-face-lift" },
+        { name: "EndoChor® Face Lift (Signature)", path: "/procedures/face/endochor-face-lift" },
+        { name: "K Endoscopic Deep Plane Face Lift (Signature)", path: "/procedures/face/k-endoscopic-deep-plane" },
       ]
     },
     body: {

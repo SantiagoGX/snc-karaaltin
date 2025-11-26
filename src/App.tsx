@@ -13,6 +13,9 @@ import Nose from "./pages/procedures/Nose";
 import TummyTuck from "./pages/procedures/TummyTuck";
 import AdvancedSafeBBL from "./pages/procedures/body/AdvancedSafeBBL";
 import RibCageMolding from "./pages/procedures/body/RibCageMolding";
+import KFaceLift from "./pages/procedures/face/KFaceLift";
+import EndoChorFaceLift from "./pages/procedures/face/EndoChorFaceLift";
+import KEndoscopicDeepPlane from "./pages/procedures/face/KEndoscopicDeepPlane";
 import Gallery from "./pages/Gallery";
 import PatientJourney from "./pages/PatientJourney";
 import LearnSurgery from "./pages/LearnSurgery";
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/procedures/body/tummy-tuck" element={<TummyTuck />} />
           <Route path="/procedures/body/advanced-safe-bbl" element={<AdvancedSafeBBL />} />
           <Route path="/procedures/body/rib-cage-molding" element={<RibCageMolding />} />
+          <Route path="/procedures/face/k-face-lift" element={<KFaceLift />} />
+          <Route path="/procedures/face/endochor-face-lift" element={<EndoChorFaceLift />} />
+          <Route path="/procedures/face/k-endoscopic-deep-plane" element={<KEndoscopicDeepPlane />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/learn-surgery" element={<LearnSurgery />} />
