@@ -30,11 +30,11 @@ const Contact = () => {
               {/* Left: Image */}
               <div className="fade-in">
                 <div className="w-full h-auto">
-                  <img
-                    src={contactHeroImage}
-                    alt="Dr. Karaaltın Surgery Team"
-                    className="w-full h-auto object-contain"
-                  />
+              <img
+                src={contactHeroImage}
+                alt="Dr. Karaaltın Surgery Team"
+                className="w-full h-auto object-contain rounded-xl"
+              />
                 </div>
               </div>
 
@@ -130,8 +130,8 @@ const Contact = () => {
         {/* Contact Form */}
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 {/* Form */}
                 <div className="fade-in">
                   <h2 className="text-4xl md:text-5xl font-serif font-light tracking-wide mb-12">
