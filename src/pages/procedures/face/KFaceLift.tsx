@@ -288,7 +288,7 @@ const KFaceLift = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img src="/placeholder.svg" alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
+              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6266c644-2b49-4436-8831-7406022fd2a2.jpg" />
             </div>
             <div className="space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
