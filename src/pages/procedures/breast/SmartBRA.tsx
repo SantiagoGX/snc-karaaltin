@@ -63,37 +63,37 @@ const SmartBRA = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
+            <div className="overview-sticky-left animate-fade-in">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   Smart BRA
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 0 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 0 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   01 // What the Bioscaffold Does
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Reinforces lower pole support, stabilizes implants, and maintains upper pole fullness.
                 </p>
               </div>
@@ -288,9 +288,9 @@ const SmartBRA = () => {
       </section>
 
       {/* 8. IDEAL CANDIDATES */}
-      <section className="section-spacing bg-white">
+      <section className="candidates-section-dark">
         <div className="container mx-auto px-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-12 lg:mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-12 lg:mb-16 animate-fade-in text-white">
             Ideal Candidates
           </h2>
           
@@ -303,7 +303,7 @@ const SmartBRA = () => {
             ].map((candidate, index) => (
               <div 
                 key={index} 
-                className="text-center space-y-4 p-8 rounded-lg bg-gray-50 hover:shadow-lg transition-shadow duration-300 animate-fade-in"
+                className="candidate-card-dark text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-5xl mb-4">{candidate.emoji}</div>

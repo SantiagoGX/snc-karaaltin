@@ -63,37 +63,37 @@ const KFaceLift = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
+            <div className="overview-sticky-left animate-fade-in">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   The K Face Lift
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 0 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 0 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   01 // What Makes the K Face Lift Revolutionary
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A dynamic lift designed to preserve facial expression while delivering powerful rejuvenation. Combines High SMAS and Deep Plane concepts for enhanced lifting, optimized safety, and minimal scarring.
                 </p>
               </div>
@@ -348,21 +348,21 @@ const KFaceLift = () => {
       </section>
 
       {/* 8. IDEAL CANDIDATES */}
-      <section className="section-spacing bg-white">
+      <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-16 animate-fade-in text-white">
             Ideal Candidates
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <div className="candidate-card-dark text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">
                 ⏳
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Facial Aging
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Moderate to advanced facial aging concerns
               </p>
             </div>

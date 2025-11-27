@@ -94,21 +94,21 @@ const InvertedNippleRepair = () => {
       </section>
 
       {/* Overview Section - Sticky Left, Scrolling Right */}
-      <section className="section-spacing bg-gray-50">
+      <section className="overview-section-dark">
         <div className="content-spacing">
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
             {/* Left Column - Sticky */}
-            <div className="lg:sticky lg:top-32 lg:self-start space-y-6 animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-light uppercase tracking-wide text-foreground">
+            <div className="overview-sticky-left animate-fade-in">
+              <h2 className="overview-title-dark">
                 Inverted Nipple Repair
               </h2>
-              <p className="text-lg text-foreground/60 uppercase tracking-widest font-light">
+              <p className="overview-subtitle-dark">
                 Overview
               </p>
               <img
                 src="/lovable-uploads/ef13efac-ce1f-4f94-a1d9-14c0121c0c43.png"
                 alt="Dr. Karaaltin Signature"
-                className="w-48 brightness-0"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
@@ -117,12 +117,12 @@ const InvertedNippleRepair = () => {
               {overviewCards.map((card) => (
                 <div
                   key={card.id}
-                  className="bg-white p-8 lg:p-10 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+                  className="overview-card-dark"
                 >
-                  <h3 className="text-sm font-light uppercase tracking-widest text-foreground/60 mb-3">
+                  <h3 className="overview-card-title-dark">
                     {card.id} // {card.title}
                   </h3>
-                  <p className="text-lg text-foreground/80 leading-relaxed">
+                  <p className="overview-card-text-dark">
                     {card.description}
                   </p>
                 </div>

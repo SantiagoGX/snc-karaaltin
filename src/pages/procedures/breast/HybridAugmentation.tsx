@@ -39,35 +39,35 @@ const HybridAugmentation = () => {
       </section>
 
       {/* Sticky Overview Section */}
-      <section className="section-spacing bg-gray-50">
+      <section className="overview-section-dark">
         <div className="content-spacing">
           <div className="grid lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16">
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-6">
+            <div className="overview-sticky-left">
               <div>
-                <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-foreground mb-2">
+                <h2 className="overview-title-dark">
                   HYBRID BREAST AUGMENTATION
                 </h2>
-                <p className="text-sm uppercase tracking-widest text-foreground/60">Overview</p>
+                <p className="overview-subtitle-dark">Overview</p>
               </div>
               <img 
                 src={drKaraaltinLogo} 
                 alt="Dr. Karaaltin Signature" 
-                className="w-48 brightness-0 opacity-60"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   01 // DUAL-LAYER ENHANCEMENT
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Implant provides structure; fat provides softness and contour refinement.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   02 // IDEAL FOR THIN PATIENTS
                 </h3>
                 <p className="text-foreground/80 leading-relaxed">
@@ -214,13 +214,13 @@ const HybridAugmentation = () => {
       </section>
 
       {/* Ideal Candidates */}
-      <section className="section-spacing">
+      <section className="candidates-section-dark">
         <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12 text-white">
             Ideal Candidates
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">🧵</div>
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
                 Thin Coverage

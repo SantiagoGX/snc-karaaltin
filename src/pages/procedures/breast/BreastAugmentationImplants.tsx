@@ -60,31 +60,31 @@ const BreastAugmentationImplants = () => {
       </section>
 
       {/* Sticky Overview Section */}
-      <section ref={overviewRef} className="py-16 lg:py-24 bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
-            <div className="lg:sticky lg:top-32 lg:h-fit space-y-8 animate-fade-in">
+            <div className="overview-sticky-left animate-fade-in">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   Breast Augmentation
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
             <div ref={cardsRef} className="space-y-8 min-h-screen">
-              <div className={`overview-card ${activeCard === 0 ? 'shadow-lg border-gray-300' : ''}`}>
-                <h3 className="overview-card-title">
+              <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
+                <h3 className="overview-card-title-dark">
                   01 // Implant Options
                 </h3>
-                <p className="overview-card-content">
+                <p className="overview-card-text-dark">
                   Silicone or saline; round or anatomical; smooth or textured; selected for your anatomy and goals.
                 </p>
               </div>
@@ -239,13 +239,13 @@ const BreastAugmentationImplants = () => {
       </section>
 
       {/* Ideal Candidates */}
-      <section className="section-spacing">
+      <section className="candidates-section-dark">
         <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12 text-white">
             Ideal Candidates
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
                 Volume Enhancement
