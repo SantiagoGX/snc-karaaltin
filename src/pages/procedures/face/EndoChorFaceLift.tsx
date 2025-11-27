@@ -5,16 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const EndoChorFaceLift = () => {
   const [activeCard, setActiveCard] = useState(0);
   const overviewRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!cardsRef.current) return;
-      
       const cards = cardsRef.current.querySelectorAll('.overview-card');
       cards.forEach((card, index) => {
         const rect = card.getBoundingClientRect();
@@ -23,28 +20,23 @@ const EndoChorFaceLift = () => {
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
       {/* 1. HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img
-          src="/placeholder.svg"
-          alt="Endochor Face Lift Hero"
-          className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]"
-        />
+        <img src="/placeholder.svg" alt="Endochor Face Lift Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
             The Endochor® Face Lift
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             Minimally Invasive. Maximally Effective.
           </p>
         </div>
@@ -56,7 +48,9 @@ const EndoChorFaceLift = () => {
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
             The Endochor® Face Lift is a cutting-edge endoscopic lifting system designed by Professor Dr. Karaaltin. It blends minimally invasive access with custom-engineered biodegradable implants that reposition deep facial structures without visible scars.
           </p>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
             Ideal for rejuvenating the brow, midface, and neck, this system reduces downtime while delivering stable, natural-looking elevation.
           </p>
         </div>
@@ -76,20 +70,12 @@ const EndoChorFaceLift = () => {
                   Overview
                 </p>
               </div>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 0 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   01 // What Makes Endochor® Unique
                 </h3>
@@ -98,12 +84,9 @@ const EndoChorFaceLift = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.1s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.1s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   02 // Endochor® Forehead Lift
                 </h3>
@@ -112,12 +95,9 @@ const EndoChorFaceLift = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.2s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.2s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   03 // Endochor® Mid-Face Lift
                 </h3>
@@ -126,12 +106,9 @@ const EndoChorFaceLift = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.3s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.3s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   04 // Endochor® Ribbon
                 </h3>
@@ -148,12 +125,9 @@ const EndoChorFaceLift = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.4s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.4s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   05 // Reduced Operative Time
                 </h3>
@@ -171,23 +145,18 @@ const EndoChorFaceLift = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img
-                src="/placeholder.svg"
-                alt="Endochor Face Lift With Dr. Karaaltin"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-              />
+              <img alt="Endochor Face Lift With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/a5bd4849-ba9a-4a1d-ad98-029a6037e00d.jpg" />
             </div>
-            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
                 Endochor® With Dr. Karaaltin
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 The Endochor® system is backed by decades of anatomical research and bioengineering excellence. Each implant is CE-certified and clinically validated, making this one of the safest and most advanced scarless lifting solutions available.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
                 Book Now
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -212,7 +181,9 @@ const EndoChorFaceLift = () => {
                 Through hidden scalp incisions
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.1s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 No Skin Tension
               </h3>
@@ -220,7 +191,9 @@ const EndoChorFaceLift = () => {
                 Or distortion of facial features
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.2s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 Internal Lifting
               </h3>
@@ -228,7 +201,9 @@ const EndoChorFaceLift = () => {
                 With biodegradable implants
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.3s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 Multi-Zone Elevation
               </h3>
@@ -236,7 +211,9 @@ const EndoChorFaceLift = () => {
                 Comprehensive brow, midface & neck
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.4s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 Controlled Vectors
               </h3>
@@ -256,38 +233,29 @@ const EndoChorFaceLift = () => {
           </h2>
           
           <div className="space-y-8">
-            {[
-              {
-                step: "01",
-                title: "Consultation",
-                description: "Comprehensive assessment of facial anatomy and rejuvenation goals"
-              },
-              {
-                step: "02",
-                title: "Endoscopic Mapping",
-                description: "Precise identification of lift vectors and implant placement"
-              },
-              {
-                step: "03",
-                title: "Implant Selection",
-                description: "Custom Endochor® implant configuration for optimal results"
-              },
-              {
-                step: "04",
-                title: "Multi-Zone Lift",
-                description: "Endoscopic elevation of brow, midface, and/or neck"
-              },
-              {
-                step: "05",
-                title: "Postoperative Care",
-                description: "Minimal downtime protocol with structured follow-ups"
-              }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {[{
+              step: "01",
+              title: "Consultation",
+              description: "Comprehensive assessment of facial anatomy and rejuvenation goals"
+            }, {
+              step: "02",
+              title: "Endoscopic Mapping",
+              description: "Precise identification of lift vectors and implant placement"
+            }, {
+              step: "03",
+              title: "Implant Selection",
+              description: "Custom Endochor® implant configuration for optimal results"
+            }, {
+              step: "04",
+              title: "Multi-Zone Lift",
+              description: "Endoscopic elevation of brow, midface, and/or neck"
+            }, {
+              step: "05",
+              title: "Postoperative Care",
+              description: "Minimal downtime protocol with structured follow-ups"
+            }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                 <div className="flex-shrink-0 w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-light">
                   {item.step}
                 </div>
@@ -299,8 +267,7 @@ const EndoChorFaceLift = () => {
                     {item.description}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -310,23 +277,18 @@ const EndoChorFaceLift = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img
-                src="/placeholder.svg"
-                alt="Recovery & Healing"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-              />
+              <img src="/placeholder.svg" alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
             </div>
-            <div className="space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 content-spacing animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
                 Recovery & Healing
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Minimal swelling, rapid return to daily activity, and no visible facial scars. Implant integration enhances long-term support.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
                 Book a Consultation
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -343,7 +305,9 @@ const EndoChorFaceLift = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="candidate-card-dark text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="candidate-card-dark text-center animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="candidate-icon-dark">
                 👁️
               </div>
@@ -355,7 +319,9 @@ const EndoChorFaceLift = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.2s'
+            }}>
               <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 😌
               </div>
@@ -367,7 +333,9 @@ const EndoChorFaceLift = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.3s'
+            }}>
               <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 🦢
               </div>
@@ -379,7 +347,9 @@ const EndoChorFaceLift = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.4s'
+            }}>
               <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 ✨
               </div>
@@ -402,7 +372,9 @@ const EndoChorFaceLift = () => {
           </h2>
           
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-lg border-2 border-gray-900 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-lg border-2 border-gray-900 text-center animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
                 Completely Scarless
               </div>
@@ -425,14 +397,14 @@ const EndoChorFaceLift = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
             Before & After
           </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
             Explore natural scarless lifting transformations.
           </p>
-          <Link
-            to="/gallery"
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in"
-            style={{ animationDelay: '0.2s' }}
-          >
+          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             View Before & After Gallery
             <ChevronRight className="w-4 h-4" />
           </Link>
@@ -443,8 +415,6 @@ const EndoChorFaceLift = () => {
       <ContactCTASection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default EndoChorFaceLift;
