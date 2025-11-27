@@ -79,7 +79,7 @@ const RibCageMolding = () => {
               <img
                 src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 invert"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
