@@ -283,7 +283,7 @@ const KEndoscopicDeepPlane = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/f6b9ccf7-1126-48dc-b397-97b5615e611f.jpg" />
+              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/dd2d3fd4-2b35-45bd-b159-7939c687b7c4.jpg" />
             </div>
             <div className="space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
