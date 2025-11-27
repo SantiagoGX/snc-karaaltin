@@ -124,7 +124,7 @@ const Breast = () => {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4 fade-in-up max-w-5xl mx-auto">
+        <div className="relative z-10 text-center text-white px-4 fade-in-up max-w-5xl mx-auto pointer-events-none">
           <h1 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6 uppercase">BREAST</h1>
           <p className="text-lg md:text-xl tracking-wide font-light max-w-3xl mx-auto">
             Refined enhancement, structural harmony, and natural results through advanced surgical precision.

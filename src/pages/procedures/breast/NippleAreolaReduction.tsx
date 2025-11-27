@@ -66,7 +66,7 @@ const NippleAreolaReduction = () => {
           className="absolute inset-0 w-full h-full object-cover animate-fade-in"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-        <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-start">
+        <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-start pointer-events-none">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 uppercase tracking-wide animate-fade-in">
             Nipple & Areola Reduction
           </h1>

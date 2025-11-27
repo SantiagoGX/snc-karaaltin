@@ -37,7 +37,7 @@ const Nose = () => {
         <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center bg-gray-900">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <img src="/placeholder.svg" alt="Nose procedures hero" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="relative z-20 container mx-auto px-8 lg:px-16 text-center text-white space-y-4 fade-in">
+          <div className="relative z-20 container mx-auto px-8 lg:px-16 text-center text-white space-y-4 fade-in pointer-events-none">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-wide uppercase">
               NOSE
             </h1>
