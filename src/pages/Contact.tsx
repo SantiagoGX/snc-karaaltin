@@ -27,12 +27,12 @@ const Contact = () => {
         <section className="bg-[#5a5653] pt-20 pb-24 lg:pb-32 relative">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center pt-16 lg:pt-20 min-h-[500px] lg:min-h-[600px]">
-              {/* Left: Smaller Hero Image */}
+              {/* Left: Hero Image - Vertical Format */}
               <div className="fade-in flex justify-start">
                 <img
                   src={contactHeroImage}
-                  alt="Dr. Karaaltın Clinic"
-                  className="w-full max-w-[500px] aspect-[4/3] object-cover rounded-xl mb-[-80px] lg:mb-[-100px]"
+                  alt="Dr. Karaaltín Clinic"
+                  className="w-full max-w-[400px] h-auto object-contain rounded-xl mb-[-80px] lg:mb-[-100px]"
                 />
               </div>
 
@@ -115,10 +115,10 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Form & Images Section - Hakimi Layout */}
+        {/* Contact Form & Video Section - Centered Layout */}
         <section className="py-16 lg:py-24 bg-white">
-          <div className="max-w-6xl mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start justify-center">
               {/* Left: Contact Form */}
               <div className="fade-in-up">
                 <h2 className="text-3xl lg:text-4xl font-serif font-light tracking-wide mb-2 text-gray-900">
@@ -356,28 +356,18 @@ const Contact = () => {
                 </form>
               </div>
 
-              {/* Right: Two Stacked Images - Sticky */}
-              <div className="fade-in-up lg:sticky lg:top-24 lg:self-start space-y-6" style={{ animationDelay: "0.2s" }}>
-                {/* Image 1: Video */}
-                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md aspect-[4/3] relative">
+              {/* Right: Video - Vertical Format */}
+              <div className="fade-in-up flex justify-center lg:justify-start" style={{ animationDelay: "0.2s" }}>
+                <div className="w-full max-w-[400px] rounded-lg overflow-hidden shadow-lg">
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto"
                   >
                     <source src="/cta-video.mp4" type="video/mp4" />
                   </video>
-                </div>
-
-                {/* Image 2: Clinic Image */}
-                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md aspect-[4/3] relative">
-                  <img
-                    src={contactHeroImage}
-                    alt="Dr. Karaaltın Clinic Interior"
-                    className="w-full h-full object-cover"
-                  />
                 </div>
               </div>
             </div>
