@@ -19,7 +19,7 @@ const Gynecomastia = () => {
           </div>
         </div>
         <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in">
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-[0.2em]">
             GYNECOMASTIA SURGERY
           </h1>

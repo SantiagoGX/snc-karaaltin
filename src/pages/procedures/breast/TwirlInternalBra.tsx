@@ -40,7 +40,7 @@ const TwirlInternalBra = () => {
           className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-        <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center">
+        <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1 rounded-full text-xs uppercase tracking-widest text-white mb-6 animate-fade-in">
             Signature Technique
           </div>
