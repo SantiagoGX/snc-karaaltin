@@ -147,7 +147,7 @@ const KEndoscopicDeepPlane = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img alt="K Endoscopic Deep Plane With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/329f9c51-f628-49f7-8c79-8d7cf775f6e2.jpg" />
+              <img alt="K Endoscopic Deep Plane With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6cb6cca6-e706-4e22-844a-003574f139e2.jpg" />
             </div>
             <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
