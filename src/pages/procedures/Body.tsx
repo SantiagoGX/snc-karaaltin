@@ -87,8 +87,8 @@ const Body = () => {
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4 fade-in-up">
+        {/* Hero Content - pointer-events-none to allow image selection */}
+        <div className="relative z-10 text-center text-white px-4 fade-in-up pointer-events-none">
           <h1 className="font-serif font-light text-6xl md:text-7xl lg:text-8xl tracking-wider mb-4">
             BODY
           </h1>
