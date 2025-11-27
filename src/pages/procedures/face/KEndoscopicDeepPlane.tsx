@@ -5,16 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const KEndoscopicDeepPlane = () => {
   const [activeCard, setActiveCard] = useState(0);
   const overviewRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!cardsRef.current) return;
-      
       const cards = cardsRef.current.querySelectorAll('.overview-card');
       cards.forEach((card, index) => {
         const rect = card.getBoundingClientRect();
@@ -23,28 +20,23 @@ const KEndoscopicDeepPlane = () => {
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
       {/* 1. HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img
-          src="/placeholder.svg"
-          alt="K Endoscopic Deep Plane Hero"
-          className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]"
-        />
+        <img src="/placeholder.svg" alt="K Endoscopic Deep Plane Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
             K Endoscopic Deep Plane Face Lift
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             Lifted. Natural. Scarless.
           </p>
         </div>
@@ -56,7 +48,9 @@ const KEndoscopicDeepPlane = () => {
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
             The K Endoscopic Deep Plane Face Lift is an advanced minimally invasive lifting technique designed by Dr. Karaaltin to reposition deep facial structures with absolute precision—through tiny scalp-hidden incisions and without external scars.
           </p>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
             This approach elevates the brows, midface, jowls, and neck as a unified anatomical block, creating natural, long-lasting rejuvenation without skin tension or distortion.
           </p>
         </div>
@@ -76,20 +70,12 @@ const KEndoscopicDeepPlane = () => {
                   Overview
                 </p>
               </div>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 0 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   01 // What Makes It Different
                 </h3>
@@ -98,12 +84,9 @@ const KEndoscopicDeepPlane = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.1s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.1s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   02 // The "Crane Arm" Fascial Flap
                 </h3>
@@ -112,12 +95,9 @@ const KEndoscopicDeepPlane = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.2s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.2s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   03 // Precision Endoscopic Control
                 </h3>
@@ -132,12 +112,9 @@ const KEndoscopicDeepPlane = () => {
                 </ul>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.3s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.3s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   04 // EndoChor® Bio-Lifting System
                 </h3>
@@ -146,12 +123,9 @@ const KEndoscopicDeepPlane = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
-                }`}
-                style={{ animationDelay: '0.4s' }}
-              >
+              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`} style={{
+                animationDelay: '0.4s'
+              }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
                   05 // Key Advantages
                 </h3>
@@ -173,23 +147,18 @@ const KEndoscopicDeepPlane = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img
-                src="/placeholder.svg"
-                alt="K Endoscopic Deep Plane With Dr. Karaaltin"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-              />
+              <img alt="K Endoscopic Deep Plane With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/329f9c51-f628-49f7-8c79-8d7cf775f6e2.jpg" />
             </div>
-            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
                 K Endoscopic Deep Plane With Dr. Karaaltin
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Designed for patients seeking powerful yet scarless rejuvenation, the K Endoscopic Deep Plane Face Lift blends deep-layer elevation with minimally invasive access. It is ideal for individuals wanting natural refinement without compromising nerve safety or facial harmony.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
                 Book Now
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -214,7 +183,9 @@ const KEndoscopicDeepPlane = () => {
                 Minimally invasive access through scalp
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.1s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 Multidirectional Vectors
               </h3>
@@ -222,7 +193,9 @@ const KEndoscopicDeepPlane = () => {
                 Customized lifting in multiple directions
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.2s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 Simultaneous Elevation
               </h3>
@@ -230,7 +203,9 @@ const KEndoscopicDeepPlane = () => {
                 Brow, midface & neck in one procedure
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.3s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 Bio-Lifting Support
               </h3>
@@ -238,7 +213,9 @@ const KEndoscopicDeepPlane = () => {
                 Implant-based structural reinforcement
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.4s'
+            }}>
               <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
                 No External Sutures
               </h3>
@@ -258,43 +235,33 @@ const KEndoscopicDeepPlane = () => {
           </h2>
           
           <div className="space-y-8">
-            {[
-              {
-                step: "01",
-                title: "Consultation",
-                description: "Comprehensive facial assessment and surgical planning"
-              },
-              {
-                step: "02",
-                title: "Endoscopic Planning",
-                description: "Mapping of lift vectors and access points"
-              },
-              {
-                step: "03",
-                title: "Deep Plane Elevation",
-                description: "Endoscopic release and repositioning of deep structures"
-              },
-              {
-                step: "04",
-                title: "Crane-Arm Lift",
-                description: "Fascial flap elevation for multi-zone rejuvenation"
-              },
-              {
-                step: "05",
-                title: "Bio-Lifting Fixation",
-                description: "EndoChor® implant placement for long-term support"
-              },
-              {
-                step: "06",
-                title: "Postoperative Care",
-                description: "Minimal downtime recovery protocol"
-              }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {[{
+              step: "01",
+              title: "Consultation",
+              description: "Comprehensive facial assessment and surgical planning"
+            }, {
+              step: "02",
+              title: "Endoscopic Planning",
+              description: "Mapping of lift vectors and access points"
+            }, {
+              step: "03",
+              title: "Deep Plane Elevation",
+              description: "Endoscopic release and repositioning of deep structures"
+            }, {
+              step: "04",
+              title: "Crane-Arm Lift",
+              description: "Fascial flap elevation for multi-zone rejuvenation"
+            }, {
+              step: "05",
+              title: "Bio-Lifting Fixation",
+              description: "EndoChor® implant placement for long-term support"
+            }, {
+              step: "06",
+              title: "Postoperative Care",
+              description: "Minimal downtime recovery protocol"
+            }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                 <div className="flex-shrink-0 w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-light">
                   {item.step}
                 </div>
@@ -306,8 +273,7 @@ const KEndoscopicDeepPlane = () => {
                     {item.description}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -317,23 +283,18 @@ const KEndoscopicDeepPlane = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img
-                src="/placeholder.svg"
-                alt="Recovery & Healing"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-              />
+              <img src="/placeholder.svg" alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
             </div>
-            <div className="space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 content-spacing animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
                 Recovery & Healing
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Quick recovery, reduced swelling, and zero visible scarring. Results refine as implants integrate and collagen support develops.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
                 Book a Consultation
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -350,7 +311,9 @@ const KEndoscopicDeepPlane = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="candidate-card-dark text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="candidate-card-dark text-center animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="candidate-icon-dark">
                 ✨
               </div>
@@ -362,7 +325,9 @@ const KEndoscopicDeepPlane = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.2s'
+            }}>
               <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 😊
               </div>
@@ -374,7 +339,9 @@ const KEndoscopicDeepPlane = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.3s'
+            }}>
               <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 📐
               </div>
@@ -386,7 +353,9 @@ const KEndoscopicDeepPlane = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+              animationDelay: '0.4s'
+            }}>
               <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
                 🔬
               </div>
@@ -409,7 +378,9 @@ const KEndoscopicDeepPlane = () => {
           </h2>
           
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-lg border-2 border-gray-900 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-lg border-2 border-gray-900 text-center animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
                 Zero Visible Scars
               </div>
@@ -432,14 +403,14 @@ const KEndoscopicDeepPlane = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
             Before & After
           </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
             See scarless deep-plane rejuvenation.
           </p>
-          <Link
-            to="/gallery"
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in"
-            style={{ animationDelay: '0.2s' }}
-          >
+          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             View Before & After Gallery
             <ChevronRight className="w-4 h-4" />
           </Link>
@@ -450,8 +421,6 @@ const KEndoscopicDeepPlane = () => {
       <ContactCTASection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default KEndoscopicDeepPlane;
