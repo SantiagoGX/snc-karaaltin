@@ -140,7 +140,7 @@ const TummyTuck = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img src="/placeholder.svg" alt="Tummy Tuck With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
+              <img alt="Tummy Tuck With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/f10624e8-341d-4c86-978a-ec79f7132c8d.jpg" />
             </div>
             <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
@@ -259,7 +259,7 @@ const TummyTuck = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img src="/placeholder.svg" alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
+              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/3ea4db42-7b16-4f50-ad14-23ab3a17f9a3.jpg" />
             </div>
             <div className="space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
