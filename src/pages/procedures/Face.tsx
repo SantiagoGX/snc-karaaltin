@@ -505,7 +505,7 @@ const Face = () => {
           {/* 4. Ribbon Implant */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
             <div className="aspect-[4/3] overflow-hidden rounded-sm lg:order-1">
-              <img src="/placeholder.svg" alt="Ribbon Implant: For Neck Lift & SEAS Lift Support" className="w-full h-full object-cover" />
+              <img alt="Ribbon Implant: For Neck Lift & SEAS Lift Support" className="w-full h-full object-cover" src="/lovable-uploads/72f60eea-7064-495f-9a80-eb102e356b30.jpg" />
             </div>
             <div className="space-y-6 lg:order-2">
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide text-[#0d1f3a]">
