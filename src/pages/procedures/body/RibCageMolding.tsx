@@ -177,7 +177,7 @@ const RibCageMolding = () => {
             {/* How It Works - Image Left, Text Right */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
-                <img src="/placeholder.svg" alt="How It Works" className="w-full h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg" />
+                <img alt="How It Works" className="w-full h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/1f446cc4-d72c-4fdc-8d14-96a133e6e7b7.png" />
               </div>
               <div className="space-y-6 animate-fade-in" style={{
                 animationDelay: '0.2s'
