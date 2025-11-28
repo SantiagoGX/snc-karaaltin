@@ -255,7 +255,7 @@ const AdvancedSafeBBL = () => {
                 </p>
               </div>
               <div>
-                <img src="/placeholder.svg" alt="Sponge Experiment Results" className="w-full h-[350px] object-cover rounded-lg shadow-lg" />
+                <img alt="Sponge Experiment Results" className="w-full h-[350px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/4678f6e3-fac3-449e-b300-451ab5ec9859.png" />
               </div>
             </div>
 
