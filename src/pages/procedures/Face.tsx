@@ -328,7 +328,7 @@ const Face = () => {
             
             {/* Image - Editable */}
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Customized treatment planning" className="w-full h-full object-cover" />
+              <img alt="Customized treatment planning" className="w-full h-full object-cover" src="/lovable-uploads/ad27a243-e29e-4ad9-bffd-66ac4291acbc.jpg" />
             </div>
           </div>
         </div>
