@@ -36,7 +36,7 @@ const Nose = () => {
         {/* Hero Section */}
         <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center bg-gray-900">
           <div className="absolute inset-0 bg-black/50 z-10" />
-          <img src="/placeholder.svg" alt="Nose procedures hero" className="absolute inset-0 w-full h-full object-cover" />
+          <img alt="Nose procedures hero" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/35d4aaa7-1484-44e9-9a3e-9af86438f74c.jpg" />
           <div className="relative z-20 container mx-auto px-8 lg:px-16 text-center text-white space-y-4 fade-in pointer-events-none">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-wide uppercase">
               NOSE
@@ -138,17 +138,17 @@ const Nose = () => {
               {/* Premium Layout: Central Image with Corner Items */}
               <div className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center">
                 {/* Central Anatomical Image - Editable */}
-                <div className="w-full max-w-sm md:max-w-md aspect-[3/4] fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  <img
-                    src="/placeholder.svg"
-                    alt="Nasal anatomy illustration"
-                    className="w-full h-full object-cover rounded-sm shadow-lg"
-                  />
+                <div className="w-full max-w-sm md:max-w-md aspect-[3/4] fade-in-up" style={{
+                animationDelay: '0.2s'
+              }}>
+                  <img src="/placeholder.svg" alt="Nasal anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" />
                 </div>
                 
                 {/* 4 Corner Items */}
                 {/* Top Left - Bone & Cartilage Framework */}
-                <div className="absolute top-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <div className="absolute top-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{
+                animationDelay: '0.3s'
+              }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
                     Bone & Cartilage Framework
                   </h3>
@@ -158,7 +158,9 @@ const Nose = () => {
                 </div>
                 
                 {/* Top Right - Soft Tissue Envelope */}
-                <div className="absolute top-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{ animationDelay: '0.4s' }}>
+                <div className="absolute top-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{
+                animationDelay: '0.4s'
+              }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
                     Soft Tissue Envelope
                   </h3>
@@ -168,7 +170,9 @@ const Nose = () => {
                 </div>
                 
                 {/* Bottom Left - Airway Support */}
-                <div className="absolute bottom-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{ animationDelay: '0.5s' }}>
+                <div className="absolute bottom-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{
+                animationDelay: '0.5s'
+              }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
                     Airway Support
                   </h3>
@@ -178,7 +182,9 @@ const Nose = () => {
                 </div>
                 
                 {/* Bottom Right - Ethnic & Structural Variations */}
-                <div className="absolute bottom-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{ animationDelay: '0.6s' }}>
+                <div className="absolute bottom-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{
+                animationDelay: '0.6s'
+              }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
                     Ethnic & Structural Variations
                   </h3>
