@@ -232,7 +232,7 @@ const Nose = () => {
             {/* Smart Template Rhinoplasty */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
               <div className="aspect-[4/3] rounded-lg overflow-hidden order-2 lg:order-1">
-                <img src="/placeholder.svg" alt="Smart Template Rhinoplasty" className="w-full h-full object-cover" />
+                <img alt="Smart Template Rhinoplasty" className="w-full h-full object-cover" src="/lovable-uploads/bdaeeec3-a2ea-4cb8-ad87-f0a85802d860.jpg" />
               </div>
               <div className="space-y-6 order-1 lg:order-2">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase">
