@@ -225,7 +225,7 @@ const Nose = () => {
                 </p>
               </div>
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src="/placeholder.svg" alt="Rhinoplasty procedure" className="w-full h-full object-cover" />
+                <img alt="Rhinoplasty procedure" className="w-full h-full object-cover" src="/lovable-uploads/da0373cc-18cb-46ea-9d74-adf2a5b820ff.jpg" />
               </div>
             </div>
 
