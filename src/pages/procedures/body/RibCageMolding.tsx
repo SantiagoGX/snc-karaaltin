@@ -258,7 +258,7 @@ const RibCageMolding = () => {
                 </div>
               </div>
               <div className="order-1 lg:order-2 animate-fade-in">
-                <img src="/placeholder.svg" alt="Clinical Advantages" className="w-full h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg" />
+                <img alt="Clinical Advantages" className="w-full h-[350px] lg:h-[400px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/4581678e-ceff-4325-8c2c-7e09c384c794.jpg" />
               </div>
             </div>
           </div>
@@ -317,7 +317,7 @@ const RibCageMolding = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img src="/placeholder.svg" alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
+              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/1d9be05e-1cf2-4969-8c3f-6506c4f227ad.jpg" />
             </div>
             <div className="space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
