@@ -146,7 +146,7 @@ const RibCageMolding = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img src="/placeholder.svg" alt="Rib Cage Molding With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
+              <img alt="Rib Cage Molding With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/aa13781c-05ca-4153-b989-6346a1ce45a2.jpg" />
             </div>
             <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
