@@ -241,7 +241,7 @@ const Rhinoplasty = () => {
         <div className="container mx-auto px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <img src="/placeholder.svg" alt="Recovery Process" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" />
+              <img alt="Recovery Process" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/8ad954f8-be5e-419a-93f9-f093ab93b0e8.jpg" />
             </div>
             <div className="content-spacing animate-fade-in">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase mb-6">
