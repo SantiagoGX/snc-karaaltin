@@ -498,7 +498,7 @@ const Face = () => {
               </ul>
             </div>
             <div className="aspect-[4/3] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="The Double-Double Implant Technique by Dr. K" className="w-full h-full object-cover" />
+              <img alt="The Double-Double Implant Technique by Dr. K" className="w-full h-full object-cover" src="/lovable-uploads/727caa4c-42f5-4e3a-8408-633cfaa9b482.jpg" />
             </div>
           </div>
 
