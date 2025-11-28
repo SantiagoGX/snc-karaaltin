@@ -5,16 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const AdvancedSafeBBL = () => {
   const [activeCard, setActiveCard] = useState(0);
   const overviewRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!cardsRef.current) return;
-      
       const cards = cardsRef.current.querySelectorAll('.overview-card');
       cards.forEach((card, index) => {
         const rect = card.getBoundingClientRect();
@@ -23,28 +20,23 @@ const AdvancedSafeBBL = () => {
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
       {/* 1. HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img
-          src="/placeholder.svg"
-          alt="Advanced Safe BBL Hero"
-          className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]"
-        />
+        <img alt="Advanced Safe BBL Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/81d5d4d7-076e-4080-860c-7901001c8d2f.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
             Advanced Safe BBL™
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             A New Era of Safe, Scientific Gluteal Augmentation
           </p>
         </div>
@@ -73,18 +65,12 @@ const AdvancedSafeBBL = () => {
                   Overview
                 </p>
               </div>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
-              <div
-                className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}
-              >
+              <div className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   01 // What Is the Advanced Safe BBL™
                 </h3>
@@ -93,10 +79,9 @@ const AdvancedSafeBBL = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${activeCard === 1 ? 'active' : ''}`}
-                style={{ animationDelay: '0.1s' }}
-              >
+              <div className={`overview-card-dark ${activeCard === 1 ? 'active' : ''}`} style={{
+                animationDelay: '0.1s'
+              }}>
                 <h3 className="overview-card-title-dark">
                   02 // Real-Time Ultrasound Safety Monitoring
                 </h3>
@@ -105,10 +90,9 @@ const AdvancedSafeBBL = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${activeCard === 2 ? 'active' : ''}`}
-                style={{ animationDelay: '0.2s' }}
-              >
+              <div className={`overview-card-dark ${activeCard === 2 ? 'active' : ''}`} style={{
+                animationDelay: '0.2s'
+              }}>
                 <h3 className="overview-card-title-dark">
                   03 // Vascular Doppler Mapping
                 </h3>
@@ -117,10 +101,9 @@ const AdvancedSafeBBL = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${activeCard === 3 ? 'active' : ''}`}
-                style={{ animationDelay: '0.3s' }}
-              >
+              <div className={`overview-card-dark ${activeCard === 3 ? 'active' : ''}`} style={{
+                animationDelay: '0.3s'
+              }}>
                 <h3 className="overview-card-title-dark">
                   04 // Controlled Fat Injection (Liposat™ + Vibrosat Pro™)
                 </h3>
@@ -138,10 +121,9 @@ const AdvancedSafeBBL = () => {
                 </ul>
               </div>
 
-              <div
-                className={`overview-card-dark ${activeCard === 4 ? 'active' : ''}`}
-                style={{ animationDelay: '0.4s' }}
-              >
+              <div className={`overview-card-dark ${activeCard === 4 ? 'active' : ''}`} style={{
+                animationDelay: '0.4s'
+              }}>
                 <h3 className="overview-card-title-dark">
                   05 // Stem-Cell Enriched Fat Grafting
                 </h3>
@@ -150,10 +132,9 @@ const AdvancedSafeBBL = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${activeCard === 5 ? 'active' : ''}`}
-                style={{ animationDelay: '0.5s' }}
-              >
+              <div className={`overview-card-dark ${activeCard === 5 ? 'active' : ''}`} style={{
+                animationDelay: '0.5s'
+              }}>
                 <h3 className="overview-card-title-dark">
                   06 // Audit-Proven Safety
                 </h3>
@@ -180,19 +161,12 @@ const AdvancedSafeBBL = () => {
             <div className="order-2 lg:order-1 animate-fade-in">
               {/* YouTube Video Integration */}
               <div className="aspect-video w-full rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/eSdiWtaQ9yk"
-                  title="Advanced Safe BBL Explanation"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eSdiWtaQ9yk" title="Advanced Safe BBL Explanation" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full"></iframe>
               </div>
             </div>
-            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
                 Advanced Safe BBL™ With Dr. Karaaltin
               </h2>
@@ -200,10 +174,7 @@ const AdvancedSafeBBL = () => {
                 The Advanced Safe BBL™ is not just an aesthetic procedure: it is a surgical system based on science, advanced anatomy, and continuous monitoring technology. Designed by Prof. Dr. Karaaltin—a pioneer in reconstructive and microsurgical surgery—this method redefines the modern standard of safe gluteal augmentation, achieving smooth curves, natural proportions, and results that respect vascular integrity.
               </p>
 
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
                 Book Now
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -221,13 +192,11 @@ const AdvancedSafeBBL = () => {
           
           <div className="space-y-16">
             {/* How the Protocol Works */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="order-2 lg:order-1">
-                <img
-                  src="/placeholder.svg"
-                  alt="Protocol Components"
-                  className="w-full h-[350px] object-cover rounded-lg shadow-lg"
-                />
+                <img src="/placeholder.svg" alt="Protocol Components" className="w-full h-[350px] object-cover rounded-lg shadow-lg" />
               </div>
               <div className="order-1 lg:order-2 space-y-4">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
@@ -274,7 +243,9 @@ const AdvancedSafeBBL = () => {
             </div>
 
             {/* The Karaaltin Sponge Experiment */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
                   The Karaaltin Sponge Experiment™
@@ -284,23 +255,17 @@ const AdvancedSafeBBL = () => {
                 </p>
               </div>
               <div>
-                <img
-                  src="/placeholder.svg"
-                  alt="Sponge Experiment Results"
-                  className="w-full h-[350px] object-cover rounded-lg shadow-lg"
-                />
+                <img src="/placeholder.svg" alt="Sponge Experiment Results" className="w-full h-[350px] object-cover rounded-lg shadow-lg" />
               </div>
             </div>
 
             {/* Complex Revisions */}
-            <div className="bg-white p-8 lg:p-10 rounded-lg shadow-md border border-gray-200 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-white p-8 lg:p-10 rounded-lg shadow-md border border-gray-200 animate-fade-in" style={{
+              animationDelay: '0.3s'
+            }}>
               <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 items-center">
                 <div>
-                  <img
-                    src="/placeholder.svg"
-                    alt="Complex Revisions"
-                    className="w-full h-[300px] object-cover rounded-lg"
-                  />
+                  <img src="/placeholder.svg" alt="Complex Revisions" className="w-full h-[300px] object-cover rounded-lg" />
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
@@ -324,38 +289,29 @@ const AdvancedSafeBBL = () => {
           </h2>
           
           <div className="space-y-8">
-            {[
-              {
-                step: "01",
-                title: "Consultation",
-                description: "3D analysis, anatomical evaluation, and proportion definition."
-              },
-              {
-                step: "02",
-                title: "Preoperative Mapping",
-                description: "Doppler + projection vector planning."
-              },
-              {
-                step: "03",
-                title: "Surgery Day",
-                description: "Extraction, purification, enrichment, and ultrasound-guided reinjection."
-              },
-              {
-                step: "04",
-                title: "Immediate Post-Op",
-                description: "Specialized compression and early monitoring."
-              },
-              {
-                step: "05",
-                title: "Follow-Up",
-                description: "Critical reviews during the first 10 days for maximum safety."
-              }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {[{
+              step: "01",
+              title: "Consultation",
+              description: "3D analysis, anatomical evaluation, and proportion definition."
+            }, {
+              step: "02",
+              title: "Preoperative Mapping",
+              description: "Doppler + projection vector planning."
+            }, {
+              step: "03",
+              title: "Surgery Day",
+              description: "Extraction, purification, enrichment, and ultrasound-guided reinjection."
+            }, {
+              step: "04",
+              title: "Immediate Post-Op",
+              description: "Specialized compression and early monitoring."
+            }, {
+              step: "05",
+              title: "Follow-Up",
+              description: "Critical reviews during the first 10 days for maximum safety."
+            }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                 <div className="flex-shrink-0 w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-light">
                   {item.step}
                 </div>
@@ -367,8 +323,7 @@ const AdvancedSafeBBL = () => {
                     {item.description}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -378,13 +333,11 @@ const AdvancedSafeBBL = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img
-                src="/placeholder.svg"
-                alt="Recovery & Healing"
-                className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-              />
+              <img src="/placeholder.svg" alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" />
             </div>
-            <div className="space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 content-spacing animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
                 Recovery & Healing
               </h2>
@@ -397,10 +350,7 @@ const AdvancedSafeBBL = () => {
               <p className="text-base md:text-lg text-gray-700 leading-relaxed font-semibold">
                 Expected result: natural projection, uniform smoothness, and curves proportional to bone structure.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
                 Book a Consultation
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -417,7 +367,9 @@ const AdvancedSafeBBL = () => {
           </h2>
           
           <div className="candidates-grid">
-            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+            <div className="candidate-card-dark" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="candidate-icon-dark">
                 🧍
               </div>
@@ -429,7 +381,9 @@ const AdvancedSafeBBL = () => {
               </p>
             </div>
 
-            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+            <div className="candidate-card-dark" style={{
+              animationDelay: '0.2s'
+            }}>
               <div className="candidate-icon-dark">
                 🎯
               </div>
@@ -441,7 +395,9 @@ const AdvancedSafeBBL = () => {
               </p>
             </div>
 
-            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+            <div className="candidate-card-dark" style={{
+              animationDelay: '0.3s'
+            }}>
               <div className="candidate-icon-dark">
                 🚭
               </div>
@@ -453,7 +409,9 @@ const AdvancedSafeBBL = () => {
               </p>
             </div>
 
-            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+            <div className="candidate-card-dark" style={{
+              animationDelay: '0.4s'
+            }}>
               <div className="candidate-icon-dark">
                 📊
               </div>
@@ -476,7 +434,9 @@ const AdvancedSafeBBL = () => {
           </h2>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-md border border-gray-200 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-md border border-gray-200 text-center animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="scar-badge">
                 Minimal Scarring
               </div>
@@ -509,14 +469,14 @@ const AdvancedSafeBBL = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
             Before & After
           </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
             Discover real results achieved with safe and scientific techniques.
           </p>
-          <Link
-            to="/gallery"
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in"
-            style={{ animationDelay: '0.2s' }}
-          >
+          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             View Before & After Gallery
             <ChevronRight className="w-4 h-4" />
           </Link>
@@ -527,8 +487,6 @@ const AdvancedSafeBBL = () => {
       <ContactCTASection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AdvancedSafeBBL;
