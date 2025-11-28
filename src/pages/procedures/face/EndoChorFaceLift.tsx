@@ -28,7 +28,7 @@ const EndoChorFaceLift = () => {
       <main className="flex-1">
       {/* 1. HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img src="/placeholder.svg" alt="Endochor Face Lift Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" />
+        <img alt="Endochor Face Lift Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/dd3e3b28-77fe-4a02-91a1-da2ad732087b.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
