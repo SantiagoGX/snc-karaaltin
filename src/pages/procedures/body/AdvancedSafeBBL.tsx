@@ -196,7 +196,7 @@ const AdvancedSafeBBL = () => {
               animationDelay: '0.1s'
             }}>
               <div className="order-2 lg:order-1">
-                <img src="/placeholder.svg" alt="Protocol Components" className="w-full h-[350px] object-cover rounded-lg shadow-lg" />
+                <img alt="Protocol Components" className="w-full h-[350px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/a3e4adab-a99c-4616-b289-fc1ab1c65b63.jpg" />
               </div>
               <div className="order-1 lg:order-2 space-y-4">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
