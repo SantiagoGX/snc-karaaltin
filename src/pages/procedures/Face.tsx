@@ -432,7 +432,7 @@ const Face = () => {
               </ul>
             </div>
             <div className="aspect-[4/3] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Transblepharoplasty Brow Lift with Endochor" className="w-full h-full object-cover" />
+              <img alt="Transblepharoplasty Brow Lift with Endochor" className="w-full h-full object-cover" src="/lovable-uploads/98d24c4d-6260-4f38-a014-93f51678aca3.jpg" />
             </div>
           </div>
 
