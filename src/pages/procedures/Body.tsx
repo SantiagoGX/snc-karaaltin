@@ -314,7 +314,7 @@ const Body = () => {
             
             {/* Image - Editable */}
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Customized treatment planning" className="w-full h-full object-cover" />
+              <img alt="Customized treatment planning" className="w-full h-full object-cover" src="/lovable-uploads/5d483c38-1a6e-41ad-af88-1d33fb311138.jpg" />
             </div>
           </div>
         </div>
