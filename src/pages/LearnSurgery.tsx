@@ -127,19 +127,10 @@ const LearnSurgery = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-20">
-        {/* 1. HERO SECTION - HORIZONTAL BANNER */}
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-          {/* Background Image - Editable */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src="/placeholder.svg"
-              alt="Endochor Academy Background"
-              className="w-full h-full object-cover"
-            />
-            {/* Gradient Overlay using site blue */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f3a]/95 via-[#0d1f3a]/80 to-[#0d1f3a]/70" />
-          </div>
+      <main className="flex-1">
+        {/* 1. HERO SECTION - HORIZONTAL BANNER WITH PURE BLUE BACKGROUND */}
+        <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0d1f3a] pt-28 lg:pt-32">
+          {/* Pure blue background - no image placeholder */}
 
           {/* Content */}
           <div className="relative z-10 container mx-auto px-8 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-12 items-center">
@@ -151,13 +142,13 @@ const LearnSurgery = () => {
               <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl">
                 Hands-on training, QL Doctor mentorship, and advanced Endochor® implant education.
               </p>
-              <a
-                href="#application"
+              <button
+                onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
                 className="inline-flex items-center gap-2 bg-white text-[#0d1f3a] px-8 py-3 text-xs uppercase tracking-widest font-semibold rounded hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 Apply for Training
                 <ChevronRight className="w-4 h-4" />
-              </a>
+              </button>
             </div>
 
             {/* Right: Vertical Media Placeholder - Editable */}
