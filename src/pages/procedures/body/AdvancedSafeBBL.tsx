@@ -265,7 +265,7 @@ const AdvancedSafeBBL = () => {
             }}>
               <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 items-center">
                 <div>
-                  <img src="/placeholder.svg" alt="Complex Revisions" className="w-full h-[300px] object-cover rounded-lg" />
+                  <img alt="Complex Revisions" className="w-full h-[300px] object-cover rounded-lg" src="/lovable-uploads/88525988-b116-461b-b29a-2477f1b6d622.jpg" />
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
