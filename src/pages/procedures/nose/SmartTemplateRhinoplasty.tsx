@@ -151,14 +151,14 @@ const SmartTemplateRhinoplasty = () => {
                 </ul>
               </div>
               <div className="order-1 lg:order-2 animate-fade-in">
-                <img src="/placeholder.svg" alt="Smart Template Technology" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" />
+                <img alt="Smart Template Technology" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/441cd584-7749-4ec3-a4b8-027298e8c86a.jpg" />
               </div>
             </div>
 
             {/* Detail 2 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="animate-fade-in">
-                <img src="/placeholder.svg" alt="Regenerative Healing" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" />
+                <img alt="Regenerative Healing" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6a6e10ca-fcd1-4747-98b0-c905333be0ce.jpg" />
               </div>
               <div className="content-spacing animate-fade-in">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase mb-6">
