@@ -328,7 +328,7 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img alt="Breast augmentation with fat grafting" className="w-full h-full object-cover" src="/lovable-uploads/50ebdaf0-8297-4c38-9040-0b8a69be7f80.png" />
+              <img alt="Breast augmentation with fat grafting" className="w-full h-full object-cover" src="/lovable-uploads/0d169825-885a-4a94-be48-de8a06bcfdf5.jpg" />
             </div>
           </div>
 
