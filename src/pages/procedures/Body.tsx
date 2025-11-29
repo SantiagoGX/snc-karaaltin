@@ -191,7 +191,7 @@ const Body = () => {
             <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{
             animationDelay: '0.2s'
           }}>
-              <img src="/placeholder.svg" alt="Body anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" />
+              <img alt="Body anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/af203118-5e11-448c-935e-52b1f419c7cf.png" />
             </div>
             
             {/* 4 Corner Items */}
