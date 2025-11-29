@@ -141,7 +141,7 @@ const Nose = () => {
                 <div className="w-full max-w-sm md:max-w-md aspect-[3/4] fade-in-up" style={{
                 animationDelay: '0.2s'
               }}>
-                  <img src="/placeholder.svg" alt="Nasal anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" />
+                  <img alt="Nasal anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/034a16f7-1476-4c51-b251-3c60f0b90aa1.png" />
                 </div>
                 
                 {/* 4 Corner Items */}
