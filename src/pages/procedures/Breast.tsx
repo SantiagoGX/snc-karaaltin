@@ -335,7 +335,7 @@ const Breast = () => {
           {/* 2. Breast Augmentation with Implant */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Breast augmentation with implant" className="w-full h-full object-cover" />
+              <img alt="Breast augmentation with implant" className="w-full h-full object-cover" src="/lovable-uploads/be9a5459-9e89-4a57-918f-b2f6a923275c.png" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
@@ -368,7 +368,7 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Breast reduction" className="w-full h-full object-cover" />
+              <img alt="Breast reduction" className="w-full h-full object-cover" src="/lovable-uploads/a787b0fe-d985-4978-883a-ffe8ddab1014.jpg" />
             </div>
           </div>
 
