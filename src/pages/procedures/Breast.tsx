@@ -408,7 +408,7 @@ const Breast = () => {
               </div>
             </div>
             <div className="order-1 lg:order-2 aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Gynecomastia surgery" className="w-full h-full object-cover" />
+              <img alt="Gynecomastia surgery" className="w-full h-full object-cover" src="/lovable-uploads/2f24b8ca-65ed-4d5d-a499-8b01a656a64f.jpg" />
             </div>
           </div>
 
