@@ -119,7 +119,7 @@ const Breast = () => {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden fade-in">
         {/* Background Image - Editable */}
         <div className="absolute inset-0 z-0">
-          <img src="/placeholder.svg" alt="Breast aesthetic procedures hero" className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]" />
+          <img alt="Breast aesthetic procedures hero" className="w-full h-full object-cover animate-[scale-in_1.2s_ease-out]" src="/lovable-uploads/388e884e-b3f1-4960-8dc4-ad1174e71eeb.jpg" />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         
@@ -239,17 +239,17 @@ const Breast = () => {
           {/* Premium Layout: Central Image with Corner Items */}
           <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
             {/* Central Anatomical Image - Editable */}
-            <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <img
-                src="/placeholder.svg"
-                alt="Breast anatomy illustration"
-                className="w-full h-full object-cover rounded-sm shadow-lg"
-              />
+            <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{
+            animationDelay: '0.2s'
+          }}>
+              <img src="/placeholder.svg" alt="Breast anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" />
             </div>
             
             {/* 4 Corner Items */}
             {/* Top Left - Skin & Soft Tissue */}
-            <div className="absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
+            animationDelay: '0.3s'
+          }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Skin & Soft Tissue</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                 Changes in elasticity, firmness, and projection over time.
@@ -257,7 +257,9 @@ const Breast = () => {
             </div>
             
             {/* Top Right - Fat Volume */}
-            <div className="absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
+            animationDelay: '0.4s'
+          }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Fat Volume</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                 Redistribution or loss that alters shape and fullness.
@@ -265,7 +267,9 @@ const Breast = () => {
             </div>
             
             {/* Bottom Left - Glandular Tissue */}
-            <div className="absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
+            animationDelay: '0.5s'
+          }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Glandular Tissue</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                 Drooping, asymmetry, or density changes.
@@ -273,7 +277,9 @@ const Breast = () => {
             </div>
             
             {/* Bottom Right - Chest Wall & Structure */}
-            <div className="absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <div className="absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
+            animationDelay: '0.6s'
+          }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Chest Wall & Structure</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                 Variations in ribcage and posture influence final results.
