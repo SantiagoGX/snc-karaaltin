@@ -49,7 +49,7 @@ const SmartTemplateRhinoplasty = () => {
       <main className="flex-1">
       {/* 1. HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img alt="Smart Template Rhinoplasty Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/0b311c13-60b7-4410-a883-07a56cabc664.jpg" />
+        <img alt="Smart Template Rhinoplasty Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/d9defe1f-d38c-4c71-b04c-567655f5e954.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1 rounded-full text-xs uppercase tracking-widest text-white mb-6 animate-fade-in">
