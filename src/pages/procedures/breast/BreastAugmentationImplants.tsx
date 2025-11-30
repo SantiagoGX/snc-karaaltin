@@ -5,16 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const BreastAugmentationImplants = () => {
   const [activeCard, setActiveCard] = useState(0);
   const overviewRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!cardsRef.current) return;
-      
       const cards = cardsRef.current.querySelectorAll('.overview-card');
       cards.forEach((card, index) => {
         const rect = card.getBoundingClientRect();
@@ -23,28 +20,23 @@ const BreastAugmentationImplants = () => {
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
       {/* Hero Section */}
       <section className="procedure-hero">
-        <img
-          src="/placeholder.svg"
-          alt="Breast Augmentation With Implants Hero"
-          className="absolute inset-0 w-full h-full object-cover animate-scale-in"
-        />
+        <img alt="Breast Augmentation With Implants Hero" className="absolute inset-0 w-full h-full object-cover animate-scale-in" src="/lovable-uploads/7706e823-b551-4658-ad62-b282b7435811.png" />
         <div className="procedure-hero-overlay" />
         <div className="procedure-hero-content">
           <h1 className="procedure-hero-title animate-fade-in">
             Breast Augmentation With Implants
           </h1>
-          <p className="procedure-hero-subtitle animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="procedure-hero-subtitle animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             Sculpted Volume. Precision Planning. Long-Lasting Results.
           </p>
         </div>
@@ -72,11 +64,7 @@ const BreastAugmentationImplants = () => {
                   Overview
                 </p>
               </div>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>
 
             <div ref={cardsRef} className="space-y-8 min-h-screen">
@@ -185,14 +173,22 @@ const BreastAugmentationImplants = () => {
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
-                {[
-                  { title: "Consultation", desc: "Comprehensive assessment and goal setting" },
-                  { title: "3D Analysis", desc: "Digital planning and visualization" },
-                  { title: "Implant Selection", desc: "Custom sizing and type selection" },
-                  { title: "Surgery", desc: "Precise implant placement" },
-                  { title: "Aftercare", desc: "Recovery monitoring and support" }
-                ].map((step, index) => (
-                  <div key={index} className="relative pl-12">
+                {[{
+                  title: "Consultation",
+                  desc: "Comprehensive assessment and goal setting"
+                }, {
+                  title: "3D Analysis",
+                  desc: "Digital planning and visualization"
+                }, {
+                  title: "Implant Selection",
+                  desc: "Custom sizing and type selection"
+                }, {
+                  title: "Surgery",
+                  desc: "Precise implant placement"
+                }, {
+                  title: "Aftercare",
+                  desc: "Recovery monitoring and support"
+                }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
                     </div>
@@ -202,8 +198,7 @@ const BreastAugmentationImplants = () => {
                       </h3>
                       <p className="text-foreground/80">{step.desc}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -225,10 +220,7 @@ const BreastAugmentationImplants = () => {
                 <p className="text-foreground/80 leading-relaxed mb-6">
                   10–14 days to return to work; 6–8 weeks activity restrictions; scar care begins at 2–3 weeks.
                 </p>
-                <Link 
-                  to="/contact"
-                  className="btn-primary"
-                >
+                <Link to="/contact" className="btn-primary">
                   Book a Consultation
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -288,10 +280,7 @@ const BreastAugmentationImplants = () => {
       {/* Before & After CTA */}
       <section className="section-spacing bg-gray-50">
         <div className="content-spacing text-center">
-          <Link 
-            to="/gallery"
-            className="btn-primary"
-          >
+          <Link to="/gallery" className="btn-primary">
             View Before & After Gallery
             <ChevronRight className="w-4 h-4" />
           </Link>
@@ -301,8 +290,6 @@ const BreastAugmentationImplants = () => {
       <ContactCTASection />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BreastAugmentationImplants;
