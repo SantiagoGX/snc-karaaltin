@@ -455,7 +455,7 @@ const Breast = () => {
           {/* 8. Nipple & Areola Refinement */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Nipple and areola refinement" className="w-full h-full object-cover" />
+              <img alt="Nipple and areola refinement" className="w-full h-full object-cover" src="/lovable-uploads/9dec19c0-a1bd-4599-9ad6-1f5833dd3672.png" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
