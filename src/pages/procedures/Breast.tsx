@@ -415,7 +415,7 @@ const Breast = () => {
           {/* 6. Hybrid Augmentation */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Hybrid augmentation" className="w-full h-full object-cover" />
+              <img alt="Hybrid augmentation" className="w-full h-full object-cover" src="/lovable-uploads/5b7d328a-6747-4cd6-a3e0-573c26c54ca5.jpg" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
