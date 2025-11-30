@@ -202,7 +202,7 @@ const Face = () => {
             <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{
             animationDelay: '0.2s'
           }}>
-              <img src="/placeholder.svg" alt="Facial anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" />
+              <img alt="Facial anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/8d30f07b-c239-4e9f-94cc-02b52e8dd0b0.png" />
             </div>
             
             {/* 4 Corner Items */}
