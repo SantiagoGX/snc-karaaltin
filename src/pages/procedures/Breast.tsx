@@ -375,7 +375,7 @@ const Breast = () => {
           {/* 4. Breast Lift (Mastopexy) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 fade-in-up">
             <div className="aspect-[4/5] overflow-hidden rounded-sm">
-              <img src="/placeholder.svg" alt="Breast lift mastopexy" className="w-full h-full object-cover" />
+              <img alt="Breast lift mastopexy" className="w-full h-full object-cover" src="/lovable-uploads/e6bdb2c3-9d88-4d85-bdd7-8e341ae794b6.png" />
             </div>
             <div>
               <h3 className="font-serif font-light text-3xl md:text-4xl tracking-wide mb-6">
