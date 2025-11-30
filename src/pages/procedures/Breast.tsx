@@ -242,7 +242,7 @@ const Breast = () => {
             <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{
             animationDelay: '0.2s'
           }}>
-              <img src="/placeholder.svg" alt="Breast anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" />
+              <img alt="Breast anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/6f798aee-3b2a-42e6-b2c6-05fbfb0547df.png" />
             </div>
             
             {/* 4 Corner Items */}
