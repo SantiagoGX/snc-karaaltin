@@ -240,38 +240,38 @@ const BreastAugmentationImplants = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">📊</div>
+              <h3 className="candidate-card-title-dark">
                 Volume Enhancement
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Desire moderate to significant enhancement
               </p>
             </div>
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">🎯</div>
+              <h3 className="candidate-card-title-dark">
                 Predictable Results
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Want predictable volume and shape
               </p>
             </div>
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">⚖️</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">⚖️</div>
+              <h3 className="candidate-card-title-dark">
                 Asymmetry Correction
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Correcting asymmetry or congenital issues
               </p>
             </div>
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">👶</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">👶</div>
+              <h3 className="candidate-card-title-dark">
                 Post-Pregnancy
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Restoring post-pregnancy fullness
               </p>
             </div>

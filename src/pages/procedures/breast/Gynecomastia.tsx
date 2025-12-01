@@ -235,29 +235,29 @@ const Gynecomastia = () => {
               </p>
             </div>
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">👁️</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">👁️</div>
+              <h3 className="candidate-card-title-dark">
                 Visible Tissue
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Visible breast tissue
               </p>
             </div>
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">⚖️</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">⚖️</div>
+              <h3 className="candidate-card-title-dark">
                 Asymmetry
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Asymmetry or fullness
               </p>
             </div>
             <div className="candidate-card-dark text-center">
-              <div className="text-4xl mb-4">💪</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
+              <div className="candidate-icon-dark">💪</div>
+              <h3 className="candidate-card-title-dark">
                 Masculine Contour
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="candidate-card-text-dark">
                 Desire for defined, masculine contour
               </p>
             </div>
