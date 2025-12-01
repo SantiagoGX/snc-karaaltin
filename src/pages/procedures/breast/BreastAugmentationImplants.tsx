@@ -77,38 +77,38 @@ const BreastAugmentationImplants = () => {
                 </p>
               </div>
 
-              <div className={`overview-card ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`}>
-                <h3 className="overview-card-title">
+              <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`}>
+                <h3 className="overview-card-title-dark">
                   02 // Placement Techniques
                 </h3>
-                <p className="overview-card-content">
+                <p className="overview-card-text-dark">
                   Submuscular, subfascial, subglandular, or dual-plane based on soft-tissue support and desired contour.
                 </p>
               </div>
 
-              <div className={`overview-card ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`}>
-                <h3 className="overview-card-title">
+              <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`}>
+                <h3 className="overview-card-title-dark">
                   03 // Incision Sites
                 </h3>
-                <p className="overview-card-content">
+                <p className="overview-card-text-dark">
                   IMF, periareolar, or transaxillary—chosen for concealment and safety.
                 </p>
               </div>
 
-              <div className={`overview-card ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`}>
-                <h3 className="overview-card-title">
+              <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`}>
+                <h3 className="overview-card-title-dark">
                   04 // Addresses Volume Loss
                 </h3>
-                <p className="overview-card-content">
+                <p className="overview-card-text-dark">
                   Ideal after pregnancy, weight loss, or congenital asymmetry.
                 </p>
               </div>
 
-              <div className={`overview-card ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`}>
-                <h3 className="overview-card-title">
+              <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`}>
+                <h3 className="overview-card-title-dark">
                   05 // Customizable Projection
                 </h3>
-                <p className="overview-card-content">
+                <p className="overview-card-text-dark">
                   Implant sizes measured in cc for precise volumetric control.
                 </p>
               </div>
