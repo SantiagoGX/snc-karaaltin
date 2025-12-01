@@ -122,59 +122,78 @@ const BreastAugmentationFatGrafting = () => {
       </section>
 
       {/* Procedure Details */}
-      <section className="section-spacing bg-gradient-to-br from-[#0d1f3a] via-[#1a2f4a] to-[#0d1f3a]">
+      <section className="section-spacing bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
         <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4 text-white animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4 text-gray-900 animate-fade-in">
             Procedure Details
           </h2>
-          <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Advanced fat grafting technology for natural, lasting breast enhancement
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                ⏱️
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="group relative bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 p-8 rounded-2xl shadow-md hover:shadow-2xl hover:border-blue-300/50 hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden" style={{ animationDelay: "0.2s" }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-3xl mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  ⏱️
+                </div>
+                <h3 className="text-xl font-semibold uppercase tracking-wide mb-3 text-gray-900">
+                  Duration
+                </h3>
+                <p className="text-gray-700 text-lg font-light">3–5 hours</p>
               </div>
-              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
-                Duration
-              </h3>
-              <p className="text-white/80 text-lg">3–5 hours</p>
             </div>
-            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                🎯
+
+            <div className="group relative bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 p-8 rounded-2xl shadow-md hover:shadow-2xl hover:border-purple-300/50 hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden" style={{ animationDelay: "0.3s" }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-3xl mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  🎯
+                </div>
+                <h3 className="text-xl font-semibold uppercase tracking-wide mb-3 text-gray-900">
+                  Donor Zones
+                </h3>
+                <p className="text-gray-700 text-lg font-light">Abdomen, flanks, thighs, knees, arms</p>
               </div>
-              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
-                Donor Zones
-              </h3>
-              <p className="text-white/80 text-lg">Abdomen, flanks, thighs, knees, arms</p>
             </div>
-            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                💉
+
+            <div className="group relative bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 p-8 rounded-2xl shadow-md hover:shadow-2xl hover:border-pink-300/50 hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden" style={{ animationDelay: "0.4s" }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-3xl mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  💉
+                </div>
+                <h3 className="text-xl font-semibold uppercase tracking-wide mb-3 text-gray-900">
+                  Injection Technique
+                </h3>
+                <p className="text-gray-700 text-lg font-light">Micro-droplet fat injection</p>
               </div>
-              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
-                Injection Technique
-              </h3>
-              <p className="text-white/80 text-lg">Micro-droplet fat injection</p>
             </div>
-            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                📈
+
+            <div className="group relative bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 p-8 rounded-2xl shadow-md hover:shadow-2xl hover:border-emerald-300/50 hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden" style={{ animationDelay: "0.5s" }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-3xl mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  📈
+                </div>
+                <h3 className="text-xl font-semibold uppercase tracking-wide mb-3 text-gray-900">
+                  Volume Increase
+                </h3>
+                <p className="text-gray-700 text-lg font-light">Typically +1 cup size per session</p>
               </div>
-              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
-                Volume Increase
-              </h3>
-              <p className="text-white/80 text-lg">Typically +1 cup size per session</p>
             </div>
-            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in md:col-span-2 lg:col-span-1" style={{ animationDelay: "0.6s" }}>
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                ✨
+
+            <div className="group relative bg-white/80 backdrop-blur-sm border-2 border-gray-200/50 p-8 rounded-2xl shadow-md hover:shadow-2xl hover:border-amber-300/50 hover:-translate-y-2 transition-all duration-500 animate-fade-in overflow-hidden md:col-span-2 lg:col-span-1" style={{ animationDelay: "0.6s" }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-100/40 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-3xl mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  ✨
+                </div>
+                <h3 className="text-xl font-semibold uppercase tracking-wide mb-3 text-gray-900">
+                  Enhancement Option
+                </h3>
+                <p className="text-gray-700 text-lg font-light">Optional SVF (stem cell–enriched grafting) for enhanced fat survival</p>
               </div>
-              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
-                Enhancement Option
-              </h3>
-              <p className="text-white/80 text-lg">Optional SVF (stem cell–enriched grafting) for enhanced fat survival</p>
             </div>
           </div>
         </div>
