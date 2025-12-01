@@ -5,20 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const Gynecomastia = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/placeholder.svg" 
-            alt="Gynecomastia" 
-            className="w-full h-full object-cover"
-          />
+          <img alt="Gynecomastia" className="w-full h-full object-cover" src="/lovable-uploads/5d290cd2-0835-47b5-9caf-52fd1f8432c3.jpg" />
         </div>
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
@@ -51,11 +45,7 @@ const Gynecomastia = () => {
                 </h2>
                 <p className="overview-subtitle-dark">Overview</p>
               </div>
-              <img 
-                src={drKaraaltinLogo} 
-                alt="Dr. Karaaltin Signature" 
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>
 
             <div className="space-y-6">
@@ -140,7 +130,9 @@ const Gynecomastia = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Fat removal with Vibrosat Pro</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Scissors className="w-6 h-6 text-white" />
               </div>
@@ -151,7 +143,9 @@ const Gynecomastia = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Periareolar gland excision</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <ArrowUpCircle className="w-6 h-6 text-white" />
               </div>
@@ -162,7 +156,9 @@ const Gynecomastia = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Lift if needed</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{ animationDelay: '0.3s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
@@ -186,14 +182,22 @@ const Gynecomastia = () => {
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
-                {[
-                  { title: "Consultation", desc: "Comprehensive assessment and goal setting" },
-                  { title: "Chest Zone Analysis", desc: "Anatomical mapping and planning" },
-                  { title: "Procedure Selection", desc: "Custom technique selection" },
-                  { title: "Surgery", desc: "Tissue removal and contouring" },
-                  { title: "Support Garment", desc: "Compression garment placement" }
-                ].map((step, index) => (
-                  <div key={index} className="relative pl-12">
+                {[{
+                title: "Consultation",
+                desc: "Comprehensive assessment and goal setting"
+              }, {
+                title: "Chest Zone Analysis",
+                desc: "Anatomical mapping and planning"
+              }, {
+                title: "Procedure Selection",
+                desc: "Custom technique selection"
+              }, {
+                title: "Surgery",
+                desc: "Tissue removal and contouring"
+              }, {
+                title: "Support Garment",
+                desc: "Compression garment placement"
+              }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
                     </div>
@@ -203,8 +207,7 @@ const Gynecomastia = () => {
                       </h3>
                       <p className="text-foreground/80">{step.desc}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -216,11 +219,7 @@ const Gynecomastia = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img 
-                src="/placeholder.svg" 
-                alt="Recovery" 
-                className="w-full aspect-[4/3] rounded-lg object-cover"
-              />
+              <img alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/3940edc3-0fef-4cb0-bfa8-e81d6031944b.jpg" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
                   Recovery
@@ -301,8 +300,6 @@ const Gynecomastia = () => {
 
       <ContactCTASection />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Gynecomastia;
