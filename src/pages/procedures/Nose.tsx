@@ -6,24 +6,7 @@ import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
 const Nose = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const procedures = [{
-    id: 1,
-    title: "Rhinoplasty",
-    description: "Refines nasal shape, improves balance, and enhances airway function with natural, long-lasting results.",
-    image: "/placeholder.svg",
-    isSignature: false,
-    hasPage: true,
-    link: "/procedures/nose/rhinoplasty"
-  }, {
-    id: 2,
-    title: "Smart Template Rhinoplasty",
-    description: "Signature method designed by Dr. Karaaltin using advanced anatomical templates to optimize projection, symmetry, and long-term nasal support.",
-    image: "/placeholder.svg",
-    isSignature: true,
-    hasPage: true,
-    link: "/procedures/nose/smart-template-rhinoplasty"
-  }];
-  const totalSlides = Math.ceil(procedures.length / 3);
+  const totalSlides = Math.ceil(2 / 3);
   const handlePrev = () => {
     setCurrentSlide(prev => prev > 0 ? prev - 1 : prev);
   };
@@ -60,41 +43,74 @@ const Nose = () => {
                 <div className="flex transition-transform duration-500 ease-out" style={{
                 transform: `translateX(-${currentSlide * 100}%)`
               }}>
-                  {procedures.map(procedure => <div key={procedure.id} className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group">
-                      <a href={procedure.hasPage ? procedure.link : undefined} className={`block relative h-[500px] rounded-lg overflow-hidden ${!procedure.hasPage ? "cursor-default" : ""}`}>
-                        {/* Background Image */}
-                        <img src={procedure.image} alt={procedure.title} className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
+                  
+                  {/* Card 1 - Rhinoplasty */}
+                  <div className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group">
+                    <a href="/procedures/nose/rhinoplasty" className="block relative h-[500px] rounded-lg overflow-hidden">
+                      {/* Background Image */}
+                      <img src="/placeholder.svg" alt="Rhinoplasty" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
 
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent" />
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent" />
 
-                        {/* Signature Badge */}
-                        {procedure.isSignature && <div className="absolute top-4 left-4 z-10">
-                            <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest font-light bg-white/90 backdrop-blur-md text-gray-900 border border-white/20 rounded">
-                              Signature Technique
-                            </span>
-                          </div>}
+                      {/* Content */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                        <div className="space-y-3">
+                          <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-white">
+                            Rhinoplasty
+                          </h3>
 
-                        {/* Content */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                          <div className="space-y-3">
-                            <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-white">
-                              {procedure.title}
-                            </h3>
+                          {/* Description - shows on hover */}
+                          <p className="text-white/90 text-sm leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-500 group-hover:max-h-32 group-hover:opacity-100">
+                            Refines nasal shape, improves balance, and enhances airway function with natural, long-lasting results.
+                          </p>
 
-                            {/* Description - shows on hover */}
-                            <p className="text-white/90 text-sm leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-500 group-hover:max-h-32 group-hover:opacity-100">
-                              {procedure.description}
-                            </p>
-
-                            {procedure.hasPage && <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                                View Procedure
-                                <span className="text-lg">→</span>
-                              </div>}
+                          <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                            View Procedure
+                            <span className="text-lg">→</span>
                           </div>
                         </div>
-                      </a>
-                    </div>)}
+                      </div>
+                    </a>
+                  </div>
+
+                  {/* Card 2 - Smart Template Rhinoplasty */}
+                  <div className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group">
+                    <a href="/procedures/nose/smart-template-rhinoplasty" className="block relative h-[500px] rounded-lg overflow-hidden">
+                      {/* Background Image */}
+                      <img src="/placeholder.svg" alt="Smart Template Rhinoplasty" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
+
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent" />
+
+                      {/* Signature Badge */}
+                      <div className="absolute top-4 left-4 z-10">
+                        <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest font-light bg-white/90 backdrop-blur-md text-gray-900 border border-white/20 rounded">
+                          Signature Technique
+                        </span>
+                      </div>
+
+                      {/* Content */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                        <div className="space-y-3">
+                          <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-white">
+                            Smart Template Rhinoplasty
+                          </h3>
+
+                          {/* Description - shows on hover */}
+                          <p className="text-white/90 text-sm leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-500 group-hover:max-h-32 group-hover:opacity-100">
+                            Signature method designed by Dr. Karaaltin using advanced anatomical templates to optimize projection, symmetry, and long-term nasal support.
+                          </p>
+
+                          <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                            View Procedure
+                            <span className="text-lg">→</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
                 </div>
               </div>
 
