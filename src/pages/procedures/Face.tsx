@@ -26,51 +26,6 @@ const Face = () => {
       emblaApi.scrollTo(Math.min(slideCount - 1, currentIndex + 3));
     }
   }, [emblaApi]);
-  const proceduresWithPages = [{
-    id: "k-face-lift",
-    name: "The K Face Lift",
-    subtitle: "Signature Technique",
-    description: "Dynamic multi-vector facelift for long-lasting, natural rejuvenation.",
-    image: "/placeholder.svg"
-  }, {
-    id: "k-endoscopic-face-lift",
-    name: "Dr. K's Endoscopic Face Lift",
-    subtitle: "Signature Technique",
-    description: "Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions.",
-    image: "/placeholder.svg"
-  }, {
-    id: "endochor-face-lift",
-    name: "EndoChor® Face Lift",
-    subtitle: "Signature Technique",
-    description: "Minimally invasive lift supported by biodegradable implants for natural, durable elevation.",
-    image: "/placeholder.svg"
-  }];
-  const proceduresWithoutPages = [
-    { name: "Mini Facelift", image: "/placeholder.svg" },
-    { name: "Purse-String Vertical Facelift", image: "/placeholder.svg" },
-    { name: "Subperiosteal Deep Plane / Composite Midface Lift", image: "/placeholder.svg" },
-    { name: "MACS Lift", image: "/placeholder.svg" },
-    { name: "EndoChor™-Assisted Mid-Face Lift", image: "/placeholder.svg" },
-    { name: "High SMAS / Extended High SMAS Lift", image: "/placeholder.svg" },
-    { name: "All-In-One Facial Rejuvenation", image: "/placeholder.svg" },
-    { name: "Ponytail Lift", image: "/placeholder.svg" },
-    { name: "Endoscopic Forehead & Brow Lift", image: "/placeholder.svg" },
-    { name: "Blepharoplasty (Upper & Lower)", image: "/placeholder.svg" },
-    { name: "Facial Implants", image: "/placeholder.svg" },
-    { name: "Genioplasty", image: "/placeholder.svg" },
-    { name: "Orthognathic Surgery", image: "/placeholder.svg" }
-  ];
-  const allProcedures = [...proceduresWithPages.map(p => ({
-    ...p,
-    hasPage: true
-  })), ...proceduresWithoutPages.map(p => ({
-    id: '',
-    name: p.name,
-    hasPage: false,
-    subtitle: '',
-    description: '',
-    image: p.image
-  }))];
   const [selectedIndex, setSelectedIndex] = useState(0);
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -127,57 +82,249 @@ const Face = () => {
             {/* Embla Carousel */}
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-6 lg:gap-8">
-                {allProcedures.map((procedure, index) => {
-                const CardContent = <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: `${index * 0.05}s`
-                }}>
-                      {/* Background Image */}
-                      <img src={procedure.image} alt={procedure.name} className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
-                      
-                      {/* Gradient Overlay - Darkens on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
-                      
-                      {/* Signature Badge - Top Left with Glassmorphism */}
-                      {procedure.subtitle && <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg">
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">
-                            {procedure.subtitle}
-                          </p>
-                        </div>}
-                      
-                      {/* Text Content - Default State */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
-                        <div className="min-h-[80px] flex items-end">
-                          <h3 className="font-serif font-semibold text-2xl leading-tight">
-                            {procedure.name}
-                          </h3>
-                        </div>
+                
+                {/* Card 1 - The K Face Lift */}
+                <Link to="/procedures/face/k-face-lift" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in">
+                    <img src="/placeholder.svg" alt="The K Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">The K Face Lift</h3>
                       </div>
+                    </div>
+                    <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
+                      <div className="min-h-[80px] flex flex-col justify-end">
+                        <h3 className="font-serif font-semibold text-2xl mb-4 leading-tight">The K Face Lift</h3>
+                        <p className="text-sm leading-relaxed">Dynamic multi-vector facelift for long-lasting, natural rejuvenation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
 
-                      {/* Description - Hover State */}
-                      {procedure.description && <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
-                          <div className="min-h-[80px] flex flex-col justify-end">
-                            <h3 className="font-serif font-semibold text-2xl mb-4 leading-tight">
-                              {procedure.name}
-                            </h3>
-                            <p className="text-sm leading-relaxed">
-                              {procedure.description}
-                            </p>
-                          </div>
-                        </div>}
-                    </div>;
-                return procedure.hasPage ? <Link key={procedure.id} to={`/procedures/face/${procedure.id}`} className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                      {CardContent}
-                    </Link> : <div key={procedure.name} className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                      {CardContent}
-                    </div>;
-              })}
+                {/* Card 2 - Dr. K's Endoscopic Face Lift */}
+                <Link to="/procedures/face/k-endoscopic-face-lift" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.05s' }}>
+                    <img src="/placeholder.svg" alt="Dr. K's Endoscopic Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Dr. K's Endoscopic Face Lift</h3>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
+                      <div className="min-h-[80px] flex flex-col justify-end">
+                        <h3 className="font-serif font-semibold text-2xl mb-4 leading-tight">Dr. K's Endoscopic Face Lift</h3>
+                        <p className="text-sm leading-relaxed">Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions.</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Card 3 - EndoChor® Face Lift */}
+                <Link to="/procedures/face/endochor-face-lift" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.1s' }}>
+                    <img src="/placeholder.svg" alt="EndoChor® Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">EndoChor® Face Lift</h3>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 p-6 text-white opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 flex flex-col justify-end">
+                      <div className="min-h-[80px] flex flex-col justify-end">
+                        <h3 className="font-serif font-semibold text-2xl mb-4 leading-tight">EndoChor® Face Lift</h3>
+                        <p className="text-sm leading-relaxed">Minimally invasive lift supported by biodegradable implants for natural, durable elevation.</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Card 4 - Mini Facelift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.15s' }}>
+                    <img src="/placeholder.svg" alt="Mini Facelift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Mini Facelift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 5 - Purse-String Vertical Facelift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.2s' }}>
+                    <img src="/placeholder.svg" alt="Purse-String Vertical Facelift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Purse-String Vertical Facelift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 6 - Subperiosteal Deep Plane / Composite Midface Lift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.25s' }}>
+                    <img src="/placeholder.svg" alt="Subperiosteal Deep Plane / Composite Midface Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Subperiosteal Deep Plane / Composite Midface Lift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 7 - MACS Lift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.3s' }}>
+                    <img src="/placeholder.svg" alt="MACS Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">MACS Lift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 8 - EndoChor™-Assisted Mid-Face Lift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.35s' }}>
+                    <img src="/placeholder.svg" alt="EndoChor™-Assisted Mid-Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">EndoChor™-Assisted Mid-Face Lift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 9 - High SMAS / Extended High SMAS Lift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.4s' }}>
+                    <img src="/placeholder.svg" alt="High SMAS / Extended High SMAS Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">High SMAS / Extended High SMAS Lift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 10 - All-In-One Facial Rejuvenation */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.45s' }}>
+                    <img src="/placeholder.svg" alt="All-In-One Facial Rejuvenation" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">All-In-One Facial Rejuvenation</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 11 - Ponytail Lift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.5s' }}>
+                    <img src="/placeholder.svg" alt="Ponytail Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Ponytail Lift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 12 - Endoscopic Forehead & Brow Lift */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.55s' }}>
+                    <img src="/placeholder.svg" alt="Endoscopic Forehead & Brow Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Endoscopic Forehead & Brow Lift</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 13 - Blepharoplasty (Upper & Lower) */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.6s' }}>
+                    <img src="/placeholder.svg" alt="Blepharoplasty (Upper & Lower)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Blepharoplasty (Upper & Lower)</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 14 - Facial Implants */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.65s' }}>
+                    <img src="/placeholder.svg" alt="Facial Implants" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Facial Implants</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 15 - Genioplasty */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.7s' }}>
+                    <img src="/placeholder.svg" alt="Genioplasty" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Genioplasty</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 16 - Orthognathic Surgery */}
+                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.75s' }}>
+                    <img src="/placeholder.svg" alt="Orthognathic Surgery" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                      <div className="min-h-[80px] flex items-end">
+                        <h3 className="font-serif font-semibold text-2xl leading-tight">Orthognathic Surgery</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
             {/* Progress Indicators */}
             <div className="flex justify-center gap-2 mt-8">
               {Array.from({
-              length: Math.ceil(allProcedures.length / 4)
+              length: Math.ceil(16 / 4)
             }).map((_, index) => <button key={index} onClick={() => emblaApi?.scrollTo(index * 4)} className={`h-1 rounded-full transition-all duration-300 ${Math.floor(selectedIndex / 4) === index ? "w-12 bg-gray-900" : "w-8 bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to slide group ${index + 1}`} />)}
             </div>
           </div>
