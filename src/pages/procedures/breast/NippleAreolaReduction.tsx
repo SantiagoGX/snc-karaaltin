@@ -127,7 +127,7 @@ const NippleAreolaReduction = () => {
         }}>
             <div className="relative aspect-square md:aspect-video">
               {/* Center Image */}
-              <img src="/placeholder.svg" alt="Nipple & Areola Anatomy" className="w-full h-full object-cover rounded-lg" />
+              <img alt="Nipple & Areola Anatomy" className="w-full h-full object-cover rounded-lg" src="/lovable-uploads/7bbe7b52-c088-4b83-b09b-cab8a0377521.jpg" />
 
               {/* Top Left Callout */}
               <div className="pointer-events-none absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
@@ -209,7 +209,7 @@ const NippleAreolaReduction = () => {
             <div className="animate-fade-in" style={{
             animationDelay: "0.2s"
           }}>
-              <img src="/placeholder.svg" alt="Recovery Results" className="w-full h-[400px] object-cover rounded-lg shadow-lg" />
+              <img alt="Recovery Results" className="w-full h-[400px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/5e0f196a-c1e8-413e-b4d6-497c440bddae.jpg" />
             </div>
           </div>
         </div>
