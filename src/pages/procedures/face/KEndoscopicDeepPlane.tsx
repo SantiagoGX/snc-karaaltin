@@ -84,27 +84,27 @@ const KEndoscopicDeepPlane = () => {
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.1s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // The "Crane Arm" Fascial Flap
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A specially prepared temporal fascial flap lifts multiple facial zones simultaneously—brow, midface, jowls, and neck—for cohesive 3D rejuvenation.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.2s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Precision Endoscopic Control
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   Tiny access points + endoscopic camera allow:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• Ligament release</li>
                   <li>• Nerve-safe dissection</li>
                   <li>• Customized lift direction</li>
@@ -112,24 +112,24 @@ const KEndoscopicDeepPlane = () => {
                 </ul>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.3s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // EndoChor® Bio-Lifting System
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Biodegradable barbed mesh ribbons secure the lifted tissues to stable bone points. They dissolve gradually as your own collagen forms new support.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.4s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Key Advantages
                 </h3>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>✔ No visible scars</li>
                   <li>✔ Natural, unpulled results</li>
                   <li>✔ Faster recovery</li>

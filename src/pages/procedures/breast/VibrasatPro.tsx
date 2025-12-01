@@ -99,66 +99,66 @@ const VibrasatPro = () => {
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 1 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Smoother Skin Retraction
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Vibration stimulates collagen, resulting in tighter, smoother contours during healing.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 2 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Liposat Pro Plus Peristaltic Pump
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Provides controlled, low-pressure, cell-preserving fat delivery (50–1,000 ml/min).
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 3 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // High-Fidelity Fat Survival
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Up to 92–96% viable fat retention due to gentle infusion and minimized shear forces.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 4 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Dr. Karaaltin's Sponge Experiment™
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Lab studies show Vibrasat Pro produces uniform, trauma-free fat distribution superior to VASER, lipomatic, and laser-based systems.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 5 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 5 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   06 // Clinically Proven Patient Benefits
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Less pain, faster recovery, low bruising, and highly predictable aesthetic results.
                 </p>
               </div>

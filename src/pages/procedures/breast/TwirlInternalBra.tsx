@@ -99,53 +99,53 @@ const TwirlInternalBra = () => {
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 1 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Upper Pole Fullness Without Implants
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Strategic tissue rotation rejuvenates the upper breast—restoring youthful contour and roundness naturally.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 2 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // The Twirl Maneuver
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A signature rotation-tightening technique that enhances projection, mimicking the effect of augmentation using the patient's own tissue.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 3 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // Internal Fibrosis Support Belt
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A 270° internal dissection creates a natural, collagen-rich "internal bra" that prevents bottoming out over time.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 4 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Safe Pedicle Design
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A lateral pedicle with central extension preserves vascularity and protects nipple sensation.
                 </p>
               </div>

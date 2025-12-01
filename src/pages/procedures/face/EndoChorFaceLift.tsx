@@ -84,54 +84,54 @@ const EndoChorFaceLift = () => {
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.1s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Endochor® Forehead Lift
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Enhances brow, temporal, and upper-face zones using discreet scalp incisions and vertical/oblique lift vectors—completely scarless.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.2s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Endochor® Mid-Face Lift
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Elevates malar and nasolabial structures, restoring contour and midface volume without the need for fillers or extensive dissection.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.3s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // Endochor® Ribbon
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   A versatile bioanchor supporting:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• Neck rejuvenation</li>
                   <li>• Lower face lift</li>
                   <li>• Temporal & midface anchoring</li>
                 </ul>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
+                <p className="overview-card-text-dark mt-4">
                   Offers secure, customizable lifting planes.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.4s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Reduced Operative Time
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Endoscopic access + pre-shaped implants shorten operative duration, minimize trauma, and accelerate recovery.
                 </p>
               </div>

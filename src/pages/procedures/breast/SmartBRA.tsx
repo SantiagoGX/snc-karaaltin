@@ -99,53 +99,53 @@ const SmartBRA = () => {
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 1 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 1 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Biocompatible & Bioresorbable
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Integrates into tissue, stimulates angiogenesis, and dissolves safely over time.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 2 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 2 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Prevents Bottoming Out
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Maintains structural lift and reduces long-term complications in augmentation and revision surgery.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 3 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 3 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // 3D Tension-Mapped Architecture
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Designed with Smart Template™ technology to match natural tension lines.
                 </p>
               </div>
 
               <div
-                className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                  activeCard === 4 ? 'shadow-lg border-gray-300' : ''
+                className={`overview-card-dark ${
+                  activeCard === 4 ? 'shadow-lg border-white/20' : ''
                 }`}
               >
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // High-Precision Engineering
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Promotes cellular ingrowth and soft-tissue harmony for natural results.
                 </p>
               </div>
