@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Clock, Droplet, Layers, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
@@ -129,35 +129,57 @@ const BreastAugmentationImplants = () => {
       </section>
 
       {/* Procedure Details */}
-      <section className="section-spacing bg-gray-50">
+      <section className="section-spacing bg-[#F5F1E8]">
         <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4">
             Procedure Details
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Essential aspects of breast augmentation with implants
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Duration
               </h3>
-              <p className="text-foreground/80">1.5–2 hours under general anesthesia</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">1.5–2 hours under general anesthesia</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Droplet className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Selection
               </h3>
-              <p className="text-foreground/80">Implant type + size selected individually</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Implant type + size selected individually</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Layers className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Pocket Creation
               </h3>
-              <p className="text-foreground/80">Dual-plane, subfascial, or hybrid</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Dual-plane, subfascial, or hybrid</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm col-span-full">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{ animationDelay: '0.3s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <AlertCircle className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-green-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Corrections
               </h3>
-              <p className="text-foreground/80">Can correct asymmetry, tuberous breast, or post-cancer reconstruction</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Can correct asymmetry, tuberous breast, or post-cancer reconstruction</p>
             </div>
           </div>
         </div>

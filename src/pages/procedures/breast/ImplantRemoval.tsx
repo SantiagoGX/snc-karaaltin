@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, XCircle, Shield, ArrowUpCircle, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -120,35 +120,57 @@ const ImplantRemoval = () => {
       </section>
 
       {/* Procedure Details */}
-      <section className="section-spacing bg-gray-50">
+      <section className="section-spacing bg-[#F5F1E8]">
         <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4">
             Procedure Details
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Safe and personalized implant removal process
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <XCircle className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Removal
               </h3>
-              <p className="text-foreground/80">Removal through original incision</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Removal through original incision</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Capsule
               </h3>
-              <p className="text-foreground/80">Capsule assessment and removal</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Capsule assessment and removal</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <ArrowUpCircle className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Lift Option
               </h3>
-              <p className="text-foreground/80">Optional mastopexy</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Optional mastopexy</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm col-span-full">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{ animationDelay: '0.3s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Sparkles className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-amber-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
                 Enhancement Options
               </h3>
-              <p className="text-foreground/80">Optional implant exchange or fat grafting</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">Optional implant exchange or fat grafting</p>
             </div>
           </div>
         </div>

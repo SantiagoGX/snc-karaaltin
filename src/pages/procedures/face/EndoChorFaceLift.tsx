@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Eye, Shield, Layers, Target, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
@@ -166,55 +166,70 @@ const EndoChorFaceLift = () => {
       </section>
 
       {/* 5. PROCEDURE DETAILS */}
-      <section className="section-spacing bg-gray-50">
+      <section className="section-spacing bg-[#F5F1E8]">
         <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-4 animate-fade-in">
             Procedure Details
           </h2>
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            Advanced endoscopic lifting with biodegradable support
+          </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300">
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Eye className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
                 Endoscopic Access
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Through hidden scalp incisions
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
-              animationDelay: '0.1s'
-            }}>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
                 No Skin Tension
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Or distortion of facial features
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
-              animationDelay: '0.2s'
-            }}>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Layers className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
                 Internal Lifting
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 With biodegradable implants
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
-              animationDelay: '0.3s'
-            }}>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Target className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-green-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
                 Multi-Zone Elevation
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Comprehensive brow, midface & neck
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg border border-gray-200 animate-fade-in hover:shadow-lg transition-all duration-300" style={{
-              animationDelay: '0.4s'
-            }}>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-20 h-20 bg-amber-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
+              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
                 Controlled Vectors
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
