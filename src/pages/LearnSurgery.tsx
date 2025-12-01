@@ -154,7 +154,7 @@ const LearnSurgery = () => {
             {/* Right: Vertical Media Placeholder - Editable */}
             <div className="relative w-full max-w-[350px] mx-auto lg:mx-0 aspect-[9/16] overflow-hidden rounded-lg shadow-2xl scale-up-luxury">
               <img
-                src="/placeholder.svg"
+                src="/endochor-academy-hero.png"
                 alt="Endochor Academy Training"
                 className="w-full h-full object-cover"
               />
