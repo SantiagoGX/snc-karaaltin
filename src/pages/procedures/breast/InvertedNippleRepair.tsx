@@ -209,7 +209,7 @@ const InvertedNippleRepair = () => {
             <div className="animate-fade-in" style={{
             animationDelay: "0.2s"
           }}>
-              <img alt="Recovery Results" className="w-full h-[400px] rounded-lg shadow-lg object-contain" src="/lovable-uploads/47ad5d43-cd7b-40e4-a7c3-398d8cc8802b.jpg" />
+              <img alt="Recovery Results" src="/lovable-uploads/47ad5d43-cd7b-40e4-a7c3-398d8cc8802b.jpg" className="w-full h-[400px] rounded-lg shadow-lg object-cover" />
             </div>
           </div>
         </div>
