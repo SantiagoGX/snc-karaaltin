@@ -5,20 +5,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const BreastReduction = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/placeholder.svg" 
-            alt="Breast Reduction" 
-            className="w-full h-full object-cover"
-          />
+          <img src="/placeholder.svg" alt="Breast Reduction" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
@@ -51,11 +45,7 @@ const BreastReduction = () => {
                 </h2>
                 <p className="overview-subtitle-dark">Overview</p>
               </div>
-              <img 
-                src={drKaraaltinLogo} 
-                alt="Dr. Karaaltin Logo" 
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>
 
             <div className="space-y-8 min-h-screen">
@@ -68,7 +58,9 @@ const BreastReduction = () => {
                 </p>
               </div>
 
-              <div className="overview-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="overview-card-dark" style={{
+              animationDelay: '0.1s'
+            }}>
                 <h3 className="overview-card-title-dark">
                   02 // FUNCTIONAL + AESTHETIC BENEFITS
                 </h3>
@@ -77,7 +69,9 @@ const BreastReduction = () => {
                 </p>
               </div>
 
-              <div className="overview-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="overview-card-dark" style={{
+              animationDelay: '0.2s'
+            }}>
                 <h3 className="overview-card-title-dark">
                   03 // CUSTOMIZED INCISION PATTERNS
                 </h3>
@@ -86,7 +80,9 @@ const BreastReduction = () => {
                 </p>
               </div>
 
-              <div className="overview-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="overview-card-dark" style={{
+              animationDelay: '0.3s'
+            }}>
                 <h3 className="overview-card-title-dark">
                   04 // YOUTHFUL, BALANCED CONTOUR
                 </h3>
@@ -95,7 +91,9 @@ const BreastReduction = () => {
                 </p>
               </div>
 
-              <div className="overview-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="overview-card-dark" style={{
+              animationDelay: '0.4s'
+            }}>
                 <h3 className="overview-card-title-dark">
                   05 // FAST, COMFORTABLE RECOVERY
                 </h3>
@@ -140,7 +138,9 @@ const BreastReduction = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">2–5 hours under general anesthesia</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Scissors className="w-6 h-6 text-white" />
               </div>
@@ -151,7 +151,9 @@ const BreastReduction = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Tissue, fat, and skin removal</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Target className="w-6 h-6 text-white" />
               </div>
@@ -162,7 +164,9 @@ const BreastReduction = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Nipple repositioning</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Ruler className="w-6 h-6 text-white" />
               </div>
@@ -173,7 +177,9 @@ const BreastReduction = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Comprehensive lift and contouring</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full lg:col-span-2" style={{ animationDelay: '0.4s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full lg:col-span-2" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Bandage className="w-6 h-6 text-white" />
               </div>
@@ -197,14 +203,22 @@ const BreastReduction = () => {
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
-                {[
-                  { title: "Consultation", desc: "Comprehensive assessment and goal setting" },
-                  { title: "Markings", desc: "Preoperative planning and marking" },
-                  { title: "Surgery", desc: "Tissue removal and reshaping" },
-                  { title: "Dressing + Support Bra", desc: "Immediate postoperative care" },
-                  { title: "Recovery", desc: "Monitoring and follow-up" }
-                ].map((step, index) => (
-                  <div key={index} className="relative pl-12">
+                {[{
+                title: "Consultation",
+                desc: "Comprehensive assessment and goal setting"
+              }, {
+                title: "Markings",
+                desc: "Preoperative planning and marking"
+              }, {
+                title: "Surgery",
+                desc: "Tissue removal and reshaping"
+              }, {
+                title: "Dressing + Support Bra",
+                desc: "Immediate postoperative care"
+              }, {
+                title: "Recovery",
+                desc: "Monitoring and follow-up"
+              }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
                     </div>
@@ -214,8 +228,7 @@ const BreastReduction = () => {
                       </h3>
                       <p className="text-foreground/80">{step.desc}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -227,11 +240,7 @@ const BreastReduction = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img 
-                src="/placeholder.svg" 
-                alt="Recovery" 
-                className="w-full aspect-[4/3] rounded-lg object-cover"
-              />
+              <img alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/98e674d8-2377-4a1b-85f9-ee47835b1610.jpg" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
                   Recovery
@@ -258,7 +267,9 @@ const BreastReduction = () => {
             Ideal Candidates
           </h2>
           <div className="candidates-grid">
-            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+            <div className="candidate-card-dark" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="candidate-icon-dark">
                 💪
               </div>
@@ -269,7 +280,9 @@ const BreastReduction = () => {
                 Physical discomfort from large breasts
               </p>
             </div>
-            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+            <div className="candidate-card-dark" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="candidate-icon-dark">
                 🩹
               </div>
@@ -280,7 +293,9 @@ const BreastReduction = () => {
                 Chronic pain or skin irritation
               </p>
             </div>
-            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+            <div className="candidate-card-dark" style={{
+            animationDelay: '0.3s'
+          }}>
               <div className="candidate-icon-dark">
                 🏃
               </div>
@@ -291,7 +306,9 @@ const BreastReduction = () => {
                 Difficulty exercising or dressing
               </p>
             </div>
-            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+            <div className="candidate-card-dark" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="candidate-icon-dark">
                 ⚖️
               </div>
@@ -320,8 +337,6 @@ const BreastReduction = () => {
 
       <ContactCTASection />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BreastReduction;
