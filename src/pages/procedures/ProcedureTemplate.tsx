@@ -60,23 +60,23 @@ const ProcedureTemplate = () => {
       </section>
 
       {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
-      <section ref={overviewRef} className="section-spacing bg-gray-50">
+      <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
             {/* LEFT: STICKY */}
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-8 animate-fade-in">
+            <div className="overview-sticky-left animate-fade-in">
               <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                <h2 className="overview-title-dark">
                   PROCEDURE NAME
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-gray-600 uppercase tracking-widest">
+                <p className="overview-subtitle-dark">
                   Overview
                 </p>
               </div>
               <img
                 src="/placeholder.svg"
                 alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80 brightness-0"
+                className="w-48 h-auto opacity-80"
               />
             </div>
 
@@ -106,15 +106,15 @@ const ProcedureTemplate = () => {
               ].map((card, index) => (
                 <div
                   key={index}
-                  className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${
-                    activeCard === index ? 'shadow-lg border-gray-300' : ''
+                  className={`overview-card-dark ${
+                    activeCard === index ? 'shadow-lg border-white/20' : ''
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                  <h3 className="overview-card-title-dark">
                     {card.title}
                   </h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  <p className="overview-card-text-dark">
                     {card.content}
                   </p>
                 </div>
