@@ -13,10 +13,12 @@ const HybridAugmentation = () => {
       
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gray-200">
-          <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center text-gray-500">
-            Hero Image Placeholder
-          </div>
+        <div className="absolute inset-0">
+          <img 
+            src="/placeholder.svg" 
+            alt="Hybrid Augmentation" 
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
@@ -191,9 +193,11 @@ const HybridAugmentation = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="bg-gray-200 aspect-[4/3] rounded-lg flex items-center justify-center text-gray-500">
-                Recovery Image Placeholder
-              </div>
+              <img 
+                src="/placeholder.svg" 
+                alt="Recovery" 
+                className="w-full aspect-[4/3] rounded-lg object-cover"
+              />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
                   Recovery
