@@ -227,37 +227,37 @@ const Gynecomastia = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
                 Puffy Nipples
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="text-white/80 text-sm">
                 Puffy nipples
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">👁️</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
                 Visible Tissue
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="text-white/80 text-sm">
                 Visible breast tissue
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">⚖️</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
                 Asymmetry
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="text-white/80 text-sm">
                 Asymmetry or fullness
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg text-center">
+            <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">💪</div>
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
                 Masculine Contour
               </h3>
-              <p className="text-foreground/80 text-sm">
+              <p className="text-white/80 text-sm">
                 Desire for defined, masculine contour
               </p>
             </div>
