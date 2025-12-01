@@ -12,7 +12,7 @@ const BreastLift = () => {
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/placeholder.svg" alt="Breast Lift" className="w-full h-full object-cover" />
+          <img alt="Breast Lift" className="w-full h-full object-cover" src="/lovable-uploads/02a70191-beb8-4a72-873e-3bacc482c1f6.jpg" />
         </div>
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
