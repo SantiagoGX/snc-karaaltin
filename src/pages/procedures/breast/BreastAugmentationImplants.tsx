@@ -210,9 +210,11 @@ const BreastAugmentationImplants = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="bg-gray-200 aspect-[4/3] rounded-lg flex items-center justify-center text-gray-500">
-                Recovery Image Placeholder
-              </div>
+              <img 
+                src="/placeholder.svg" 
+                alt="Recovery" 
+                className="w-full aspect-[4/3] rounded-lg object-cover"
+              />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
                   Recovery
