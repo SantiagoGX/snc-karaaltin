@@ -177,6 +177,15 @@ const LearnSurgery = () => {
           </div>
         </section>
 
+        {/* BANNER SECTION - SURGICAL FACELIFT */}
+        <section className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden fade-in">
+          <img
+            src="/endochor-academy-banner.png"
+            alt="Learn Surgical Facelift - Endochor Academy"
+            className="w-full h-full object-cover"
+          />
+        </section>
+
         {/* 3. ABOUT PROF. DR. K AS QL DOCTOR - LIGHT GREY */}
         <section className="py-16 md:py-24 px-8 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
