@@ -321,8 +321,8 @@ const KGlide = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-5xl mb-4">{candidate.emoji}</div>
-                <h3 className="text-lg md:text-xl font-light tracking-wide uppercase">{candidate.title}</h3>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">{candidate.description}</p>
+                  <h3 className="text-lg md:text-xl font-light tracking-wide uppercase text-white">{candidate.title}</h3>
+                  <p className="text-sm md:text-base text-white/80 leading-relaxed">{candidate.description}</p>
               </div>
             ))}
           </div>
