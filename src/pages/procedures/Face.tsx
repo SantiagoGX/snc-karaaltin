@@ -30,28 +30,46 @@ const Face = () => {
     id: "k-face-lift",
     name: "The K Face Lift",
     subtitle: "Signature Technique",
-    description: "Dynamic multi-vector facelift for long-lasting, natural rejuvenation."
+    description: "Dynamic multi-vector facelift for long-lasting, natural rejuvenation.",
+    image: "/placeholder.svg"
   }, {
     id: "k-endoscopic-face-lift",
     name: "Dr. K's Endoscopic Face Lift",
     subtitle: "Signature Technique",
-    description: "Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions."
+    description: "Scarless endoscopic lift that elevates brow, midface, jowls, and neck through hidden incisions.",
+    image: "/placeholder.svg"
   }, {
     id: "endochor-face-lift",
     name: "EndoChor® Face Lift",
     subtitle: "Signature Technique",
-    description: "Minimally invasive lift supported by biodegradable implants for natural, durable elevation."
+    description: "Minimally invasive lift supported by biodegradable implants for natural, durable elevation.",
+    image: "/placeholder.svg"
   }];
-  const proceduresWithoutPages = ["Mini Facelift", "Purse-String Vertical Facelift", "Subperiosteal Deep Plane / Composite Midface Lift", "MACS Lift", "EndoChor™-Assisted Mid-Face Lift", "High SMAS / Extended High SMAS Lift", "All-In-One Facial Rejuvenation", "Ponytail Lift", "Endoscopic Forehead & Brow Lift", "Blepharoplasty (Upper & Lower)", "Facial Implants", "Genioplasty", "Orthognathic Surgery"];
+  const proceduresWithoutPages = [
+    { name: "Mini Facelift", image: "/placeholder.svg" },
+    { name: "Purse-String Vertical Facelift", image: "/placeholder.svg" },
+    { name: "Subperiosteal Deep Plane / Composite Midface Lift", image: "/placeholder.svg" },
+    { name: "MACS Lift", image: "/placeholder.svg" },
+    { name: "EndoChor™-Assisted Mid-Face Lift", image: "/placeholder.svg" },
+    { name: "High SMAS / Extended High SMAS Lift", image: "/placeholder.svg" },
+    { name: "All-In-One Facial Rejuvenation", image: "/placeholder.svg" },
+    { name: "Ponytail Lift", image: "/placeholder.svg" },
+    { name: "Endoscopic Forehead & Brow Lift", image: "/placeholder.svg" },
+    { name: "Blepharoplasty (Upper & Lower)", image: "/placeholder.svg" },
+    { name: "Facial Implants", image: "/placeholder.svg" },
+    { name: "Genioplasty", image: "/placeholder.svg" },
+    { name: "Orthognathic Surgery", image: "/placeholder.svg" }
+  ];
   const allProcedures = [...proceduresWithPages.map(p => ({
     ...p,
     hasPage: true
-  })), ...proceduresWithoutPages.map(name => ({
+  })), ...proceduresWithoutPages.map(p => ({
     id: '',
-    name,
+    name: p.name,
     hasPage: false,
     subtitle: '',
-    description: ''
+    description: '',
+    image: p.image
   }))];
   const [selectedIndex, setSelectedIndex] = useState(0);
   const onSelect = useCallback(() => {
@@ -114,7 +132,7 @@ const Face = () => {
                   animationDelay: `${index * 0.05}s`
                 }}>
                       {/* Background Image */}
-                      <img src="/placeholder.svg" alt={procedure.name} className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                      <img src={procedure.image} alt={procedure.name} className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                       
                       {/* Gradient Overlay - Darkens on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60"></div>
