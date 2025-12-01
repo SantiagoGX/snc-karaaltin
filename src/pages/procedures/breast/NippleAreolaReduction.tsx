@@ -5,73 +5,60 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const NippleAreolaReduction = () => {
-  const overviewCards = [
-    {
-      id: "01",
-      title: "What It Corrects",
-      description: "Elongated nipples, wide areolas, projection concerns, and asymmetry."
-    },
-    {
-      id: "02",
-      title: "Why Patients Choose It",
-      description: "Improves proportion, symmetry, and comfort in clothing."
-    },
-    {
-      id: "03",
-      title: "Surgical Precision",
-      description: "Fine incisions placed strategically for minimal visibility and predictable contouring."
-    },
-    {
-      id: "04",
-      title: "Combination Options",
-      description: "Integrates seamlessly with lifts, reductions, augmentations, or chest contouring."
-    },
-    {
-      id: "05",
-      title: "Recovery",
-      description: "30–60 minutes; minimal downtime; return to normal activities in 2–3 days."
-    },
-    {
-      id: "06",
-      title: "Long-Term Benefits",
-      description: "Stable diameters, balanced aesthetics, and natural results."
-    }
-  ];
-
-  const anatomyCallouts = [
-    { position: "top-left", text: "Nipple projection anatomy" },
-    { position: "top-right", text: "Areola diameter metrics" },
-    { position: "bottom-left", text: "Incision placement zones" },
-    { position: "bottom-right", text: "Scar-minimizing closure lines" }
-  ];
-
-  const procedureSteps = [
-    "Local or light general anesthesia.",
-    "Precise reduction of nipple height, width, or projection.",
-    "Circular areola reduction with hidden incisions.",
-    "Micro-suturing for minimal scarring and structural support.",
-    "Return home same day with light dressing."
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const overviewCards = [{
+    id: "01",
+    title: "What It Corrects",
+    description: "Elongated nipples, wide areolas, projection concerns, and asymmetry."
+  }, {
+    id: "02",
+    title: "Why Patients Choose It",
+    description: "Improves proportion, symmetry, and comfort in clothing."
+  }, {
+    id: "03",
+    title: "Surgical Precision",
+    description: "Fine incisions placed strategically for minimal visibility and predictable contouring."
+  }, {
+    id: "04",
+    title: "Combination Options",
+    description: "Integrates seamlessly with lifts, reductions, augmentations, or chest contouring."
+  }, {
+    id: "05",
+    title: "Recovery",
+    description: "30–60 minutes; minimal downtime; return to normal activities in 2–3 days."
+  }, {
+    id: "06",
+    title: "Long-Term Benefits",
+    description: "Stable diameters, balanced aesthetics, and natural results."
+  }];
+  const anatomyCallouts = [{
+    position: "top-left",
+    text: "Nipple projection anatomy"
+  }, {
+    position: "top-right",
+    text: "Areola diameter metrics"
+  }, {
+    position: "bottom-left",
+    text: "Incision placement zones"
+  }, {
+    position: "bottom-right",
+    text: "Scar-minimizing closure lines"
+  }];
+  const procedureSteps = ["Local or light general anesthesia.", "Precise reduction of nipple height, width, or projection.", "Circular areola reduction with hidden incisions.", "Micro-suturing for minimal scarring and structural support.", "Return home same day with light dressing."];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <img
-          src="/placeholder.svg"
-          alt="Nipple & Areola Reduction"
-          className="absolute inset-0 w-full h-full object-cover animate-fade-in"
-        />
+        <img alt="Nipple & Areola Reduction" className="absolute inset-0 w-full h-full object-cover animate-fade-in" src="/lovable-uploads/cc8566ab-4fe7-483d-a164-6c35c09344a6.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-start pointer-events-none">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 uppercase tracking-wide animate-fade-in">
             Nipple & Areola Reduction
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style={{
+          animationDelay: "0.1s"
+        }}>
             Refined Proportion. Natural Symmetry. Elegant Balance.
           </p>
         </div>
@@ -106,28 +93,21 @@ const NippleAreolaReduction = () => {
               <p className="overview-subtitle-dark">
                 Overview
               </p>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Signature"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>
 
             {/* Right Column - Scrolling Cards */}
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              {overviewCards.map((card) => (
-                <div
-                  key={card.id}
-                  className="overview-card-dark"
-                >
+            <div className="space-y-6 animate-fade-in" style={{
+            animationDelay: "0.2s"
+          }}>
+              {overviewCards.map(card => <div key={card.id} className="overview-card-dark">
                   <h3 className="overview-card-title-dark">
                     {card.id} // {card.title}
                   </h3>
                   <p className="overview-card-text-dark">
                     {card.description}
                   </p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -142,14 +122,12 @@ const NippleAreolaReduction = () => {
             </h2>
           </div>
 
-          <div className="relative max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="relative max-w-5xl mx-auto animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="relative aspect-square md:aspect-video">
               {/* Center Image */}
-              <img
-                src="/placeholder.svg"
-                alt="Nipple & Areola Anatomy"
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <img src="/placeholder.svg" alt="Nipple & Areola Anatomy" className="w-full h-full object-cover rounded-lg" />
 
               {/* Top Left Callout */}
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
@@ -192,20 +170,17 @@ const NippleAreolaReduction = () => {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto grid gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {procedureSteps.map((step, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex gap-6"
-              >
+          <div className="max-w-4xl mx-auto grid gap-6 animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
+            {procedureSteps.map((step, index) => <div key={index} className="bg-white p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex gap-6">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center text-xl font-light">
                   {index + 1}
                 </div>
                 <p className="text-lg text-foreground/80 leading-relaxed flex items-center">
                   {step}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -231,12 +206,10 @@ const NippleAreolaReduction = () => {
                 </Button>
               </Link>
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <img
-                src="/placeholder.svg"
-                alt="Recovery Results"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
-              />
+            <div className="animate-fade-in" style={{
+            animationDelay: "0.2s"
+          }}>
+              <img src="/placeholder.svg" alt="Recovery Results" className="w-full h-[400px] object-cover rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -266,8 +239,6 @@ const NippleAreolaReduction = () => {
       <ContactCTASection />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default NippleAreolaReduction;
