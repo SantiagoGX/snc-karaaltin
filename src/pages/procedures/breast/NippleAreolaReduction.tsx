@@ -130,28 +130,28 @@ const NippleAreolaReduction = () => {
               <img src="/placeholder.svg" alt="Nipple & Areola Anatomy" className="w-full h-full object-cover rounded-lg" />
 
               {/* Top Left Callout */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="pointer-events-none absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[0].text}
                 </p>
               </div>
 
               {/* Top Right Callout */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="pointer-events-none absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[1].text}
                 </p>
               </div>
 
               {/* Bottom Left Callout */}
-              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="pointer-events-none absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[2].text}
                 </p>
               </div>
 
               {/* Bottom Right Callout */}
-              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="pointer-events-none absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[3].text}
                 </p>
