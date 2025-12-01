@@ -72,34 +72,34 @@ const ImplantRemoval = () => {
                 <h3 className="overview-card-title-dark">
                   02 // CAPSULECTOMY OPTIONS
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Partial or total depending on capsule condition.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   03 // POST-REMOVAL SHAPING
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Can include lift, fat grafting, or smaller implant.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   04 // NATURAL REBALANCING
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Restores shape after implant-induced stretching.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   05 // SAFE, PERSONALIZED PLANNING
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Procedure tailored to anatomy and long-term goals.
                 </p>
               </div>

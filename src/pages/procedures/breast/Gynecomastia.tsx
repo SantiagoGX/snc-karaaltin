@@ -72,34 +72,34 @@ const Gynecomastia = () => {
                 <h3 className="overview-card-title-dark">
                   02 // TECHNIQUE MATCHING
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Liposuction for fatty tissue; gland excision for dense tissue; lifts for severe cases.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   03 // ZONE-BASED CHEST MAPPING
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Zones 0–4 guide precise reduction for a natural, masculine contour.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   04 // VIBROSAT PRO ADVANTAGE
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   High-definition liposuction for safe, smooth fat removal and pectoral definition.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   05 // FAST, PREDICTABLE RECOVERY
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Compression + early mobility with minimal pain.
                 </p>
               </div>

@@ -72,34 +72,34 @@ const HybridAugmentation = () => {
                 <h3 className="overview-card-title-dark">
                   02 // IDEAL FOR THIN PATIENTS
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Masks edges, reduces rippling, and improves palpability.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   03 // PRECISION FAT GRAFTING
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Micro-droplet technique improves survival and symmetry.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   04 // UPPER POLE ENHANCEMENT
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Achieves natural, full upper-pole contour.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   05 // REVISION-FRIENDLY
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Ideal for replacing old implants or correcting irregularities.
                 </p>
               </div>
