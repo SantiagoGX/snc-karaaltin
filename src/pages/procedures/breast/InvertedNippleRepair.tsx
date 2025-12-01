@@ -5,73 +5,60 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const InvertedNippleRepair = () => {
-  const overviewCards = [
-    {
-      id: "01",
-      title: "Condition Overview",
-      description: "Inversion occurs when tethered ducts or structural constraints prevent normal outward projection."
-    },
-    {
-      id: "02",
-      title: "Ideal Candidates",
-      description: "For patients seeking natural projection, symmetry improvement, and confidence restoration."
-    },
-    {
-      id: "03",
-      title: "Consultation",
-      description: "Includes anatomical photography, assessment, technique selection, and risk-benefit review."
-    },
-    {
-      id: "04",
-      title: "Surgical Approach",
-      description: "Micro-incision release, internal support sutures, and scar-minimizing closure."
-    },
-    {
-      id: "05",
-      title: "Sensation & Safety",
-      description: "Technique aims to preserve nerve pathways and, when feasible, breastfeeding potential."
-    },
-    {
-      id: "06",
-      title: "Recovery",
-      description: "30–60 minutes; supportive dressing for 5–7 days; return to daily routine quickly."
-    }
-  ];
-
-  const anatomyCallouts = [
-    { position: "top-left", text: "Nipple inversion classification" },
-    { position: "top-right", text: "Duct preservation strategy" },
-    { position: "bottom-left", text: "Supportive micro-suture design" },
-    { position: "bottom-right", text: "Projection stability over time" }
-  ];
-
-  const procedureSteps = [
-    "Apply topical anesthetic + gentle local anesthesia.",
-    "Create micro-incision and release tethering structures.",
-    "Place internal support sutures for projection stability.",
-    "Apply a protective dressing for 5–7 days.",
-    "Schedule follow-up to evaluate symmetry and healing."
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const overviewCards = [{
+    id: "01",
+    title: "Condition Overview",
+    description: "Inversion occurs when tethered ducts or structural constraints prevent normal outward projection."
+  }, {
+    id: "02",
+    title: "Ideal Candidates",
+    description: "For patients seeking natural projection, symmetry improvement, and confidence restoration."
+  }, {
+    id: "03",
+    title: "Consultation",
+    description: "Includes anatomical photography, assessment, technique selection, and risk-benefit review."
+  }, {
+    id: "04",
+    title: "Surgical Approach",
+    description: "Micro-incision release, internal support sutures, and scar-minimizing closure."
+  }, {
+    id: "05",
+    title: "Sensation & Safety",
+    description: "Technique aims to preserve nerve pathways and, when feasible, breastfeeding potential."
+  }, {
+    id: "06",
+    title: "Recovery",
+    description: "30–60 minutes; supportive dressing for 5–7 days; return to daily routine quickly."
+  }];
+  const anatomyCallouts = [{
+    position: "top-left",
+    text: "Nipple inversion classification"
+  }, {
+    position: "top-right",
+    text: "Duct preservation strategy"
+  }, {
+    position: "bottom-left",
+    text: "Supportive micro-suture design"
+  }, {
+    position: "bottom-right",
+    text: "Projection stability over time"
+  }];
+  const procedureSteps = ["Apply topical anesthetic + gentle local anesthesia.", "Create micro-incision and release tethering structures.", "Place internal support sutures for projection stability.", "Apply a protective dressing for 5–7 days.", "Schedule follow-up to evaluate symmetry and healing."];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
-        <img
-          src="/placeholder.svg"
-          alt="Inverted Nipple Repair"
-          className="absolute inset-0 w-full h-full object-cover animate-fade-in"
-        />
+        <img alt="Inverted Nipple Repair" className="absolute inset-0 w-full h-full object-cover animate-fade-in" src="/lovable-uploads/4dc7e20f-ed3a-43fb-b416-e9011ce2dfa0.jpg" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-start pointer-events-none">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 uppercase tracking-wide animate-fade-in">
             Inverted Nipple Repair
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style={{
+          animationDelay: "0.1s"
+        }}>
             Natural Projection. Restored Confidence. Anatomical Precision.
           </p>
         </div>
@@ -106,28 +93,21 @@ const InvertedNippleRepair = () => {
               <p className="overview-subtitle-dark">
                 Overview
               </p>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Signature"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>
 
             {/* Right Column - Scrolling Cards */}
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              {overviewCards.map((card) => (
-                <div
-                  key={card.id}
-                  className="overview-card-dark"
-                >
+            <div className="space-y-6 animate-fade-in" style={{
+            animationDelay: "0.2s"
+          }}>
+              {overviewCards.map(card => <div key={card.id} className="overview-card-dark">
                   <h3 className="overview-card-title-dark">
                     {card.id} // {card.title}
                   </h3>
                   <p className="overview-card-text-dark">
                     {card.description}
                   </p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -142,14 +122,12 @@ const InvertedNippleRepair = () => {
             </h2>
           </div>
 
-          <div className="relative max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="relative max-w-5xl mx-auto animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="relative aspect-square md:aspect-video">
               {/* Center Image */}
-              <img
-                src="/placeholder.svg"
-                alt="Nipple Anatomy"
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <img alt="Nipple Anatomy" className="w-full h-full object-cover rounded-lg" src="/lovable-uploads/04fa44d1-1355-49df-82a3-730e067b1b2c.png" />
 
               {/* Top Left Callout */}
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
@@ -192,20 +170,17 @@ const InvertedNippleRepair = () => {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto grid gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            {procedureSteps.map((step, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex gap-6"
-              >
+          <div className="max-w-4xl mx-auto grid gap-6 animate-fade-in" style={{
+          animationDelay: "0.2s"
+        }}>
+            {procedureSteps.map((step, index) => <div key={index} className="bg-white p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex gap-6">
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center text-xl font-light">
                   {index + 1}
                 </div>
                 <p className="text-lg text-foreground/80 leading-relaxed flex items-center">
                   {step}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -231,12 +206,10 @@ const InvertedNippleRepair = () => {
                 </Button>
               </Link>
             </div>
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <img
-                src="/placeholder.svg"
-                alt="Recovery Results"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg"
-              />
+            <div className="animate-fade-in" style={{
+            animationDelay: "0.2s"
+          }}>
+              <img alt="Recovery Results" src="/lovable-uploads/de39bcac-60ea-46cc-954d-3d6e8bb3762a.jpg" className="w-full h-[400px] rounded-lg shadow-lg object-contain" />
             </div>
           </div>
         </div>
@@ -266,8 +239,6 @@ const InvertedNippleRepair = () => {
       <ContactCTASection />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default InvertedNippleRepair;
