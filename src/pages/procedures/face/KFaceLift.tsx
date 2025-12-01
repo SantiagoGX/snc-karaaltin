@@ -330,44 +330,44 @@ const KFaceLift = () => {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+            <div className="candidate-card-dark text-center animate-fade-in" style={{
               animationDelay: '0.2s'
             }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+              <div className="candidate-icon-dark">
                 😊
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Natural Expression
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Desire for natural expression + long-term lift
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+            <div className="candidate-card-dark text-center animate-fade-in" style={{
               animationDelay: '0.3s'
             }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+              <div className="candidate-icon-dark">
                 📐
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Neck & Jawline
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Neck laxity or jawline blunting
               </p>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 text-center animate-fade-in hover:shadow-lg transition-all duration-300" style={{
+            <div className="candidate-card-dark text-center animate-fade-in" style={{
               animationDelay: '0.4s'
             }}>
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+              <div className="candidate-icon-dark">
                 🔬
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3">
+              <h3 className="candidate-card-title-dark">
                 Anatomical Approach
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="candidate-card-text-dark">
                 Seeking comprehensive, anatomically-driven technique
               </p>
             </div>

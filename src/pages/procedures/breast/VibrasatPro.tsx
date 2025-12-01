@@ -319,9 +319,9 @@ const VibrasatPro = () => {
                 className="candidate-card-dark text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-5xl mb-4">{candidate.emoji}</div>
-                <h3 className="text-lg md:text-xl font-light tracking-wide uppercase text-white">{candidate.title}</h3>
-                <p className="text-sm md:text-base text-white/80 leading-relaxed">{candidate.description}</p>
+                <div className="candidate-icon-dark">{candidate.emoji}</div>
+                <h3 className="candidate-card-title-dark">{candidate.title}</h3>
+                <p className="candidate-card-text-dark">{candidate.description}</p>
               </div>
             ))}
           </div>
