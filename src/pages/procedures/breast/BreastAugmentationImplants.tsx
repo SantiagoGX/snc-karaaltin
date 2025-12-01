@@ -149,7 +149,9 @@ const BreastAugmentationImplants = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">1.5–2 hours under general anesthesia</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+              animationDelay: '0.1s'
+            }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Droplet className="w-6 h-6 text-white" />
               </div>
@@ -160,7 +162,9 @@ const BreastAugmentationImplants = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Implant type + size selected individually</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <Layers className="w-6 h-6 text-white" />
               </div>
@@ -171,7 +175,9 @@ const BreastAugmentationImplants = () => {
               <p className="text-foreground/80 text-sm leading-relaxed">Dual-plane, subfascial, or hybrid</p>
             </div>
             
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{ animationDelay: '0.3s' }}>
+            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{
+              animationDelay: '0.3s'
+            }}>
               <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
                 <AlertCircle className="w-6 h-6 text-white" />
               </div>
@@ -232,11 +238,7 @@ const BreastAugmentationImplants = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img 
-                src="/placeholder.svg" 
-                alt="Recovery" 
-                className="w-full aspect-[4/3] rounded-lg object-cover"
-              />
+              <img alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/b70a5dbb-f8eb-4b15-925b-c3ce70d737b4.jpg" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
                   Recovery
