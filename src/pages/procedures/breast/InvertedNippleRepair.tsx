@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
+import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 
 const InvertedNippleRepair = () => {
   const overviewCards = [
@@ -106,7 +107,7 @@ const InvertedNippleRepair = () => {
                 Overview
               </p>
               <img
-                src="/lovable-uploads/ef13efac-ce1f-4f94-a1d9-14c0121c0c43.png"
+                src={drKaraaltinLogo}
                 alt="Dr. Karaaltin Signature"
                 className="w-48 h-auto opacity-80"
               />
