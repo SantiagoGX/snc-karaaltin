@@ -84,61 +84,61 @@ const KFaceLift = () => {
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 1 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.1s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   02 // Anatomical Landmark Mapping
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   A proprietary system of surgical zones defining:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• Frontal nerve protection pathways</li>
                   <li>• Modiolus vascular arcade preservation</li>
                   <li>• Deep plane & SMAS elevation vectors</li>
                 </ul>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
+                <p className="overview-card-text-dark mt-4">
                   These mappings reduce downtime, improve safety, and maximize aesthetic outcome.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 2 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.2s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   03 // Dual-Vector Rotation–Advancement System
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                <p className="overview-card-text-dark mb-4">
                   Two independent SMAS flaps deliver true 3D rejuvenation:
                 </p>
-                <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <ul className="overview-card-text-dark space-y-2">
                   <li>• <span className="font-semibold">Superior vector:</span> rotates and elevates midface, malar region & brow</li>
                   <li>• <span className="font-semibold">Inferior vector:</span> advances toward the mastoid to sharpen jawline & neck</li>
                 </ul>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
+                <p className="overview-card-text-dark mt-4">
                   Supported by biodegradable PCL mesh to maintain results for months while stimulating collagen.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 3 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.3s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   04 // Integrated Neck Rejuvenation
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Performed simultaneously, addressing platysma bands, digastric muscle issues, submandibular gland prominence, and cervico-mental angle definition.
                 </p>
               </div>
 
-              <div className={`overview-card bg-white p-8 lg:p-10 rounded-lg shadow-sm border border-gray-200 transition-all duration-500 ${activeCard === 4 ? 'shadow-lg border-gray-300' : ''}`} style={{
+              <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`} style={{
                 animationDelay: '0.4s'
               }}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
+                <h3 className="overview-card-title-dark">
                   05 // Advanced Mesh Fixation
                 </h3>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                <p className="overview-card-text-dark">
                   A CE-certified PCL mesh implant reinforces structural support, integrates naturally over 9–12 months, and dissolves without residue. Manufactured by Bloocell, founded by Dr. Karaaltin.
                 </p>
               </div>
