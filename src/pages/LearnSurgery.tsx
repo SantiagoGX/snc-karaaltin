@@ -152,11 +152,11 @@ const LearnSurgery = () => {
             </div>
 
             {/* Right: Vertical Media Placeholder - Editable */}
-            <div className="relative w-full max-w-[350px] mx-auto lg:mx-0 aspect-[9/16] overflow-hidden rounded-lg shadow-2xl scale-up-luxury">
+            <div className="relative w-full max-w-[450px] mx-auto lg:mx-0 rounded-lg shadow-2xl scale-up-luxury">
               <img
                 src="/endochor-academy-hero.png"
                 alt="Endochor Academy Training"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain rounded-lg"
               />
             </div>
           </div>
