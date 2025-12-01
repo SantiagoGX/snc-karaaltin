@@ -74,34 +74,34 @@ const BreastAugmentationFatGrafting = () => {
                 <h3 className="overview-card-title-dark">
                   02 // NATURAL VOLUME, NO IMPLANTS
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Ideal for patients seeking subtle to moderate enhancement (≈1 cup size per session).
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   03 // DUAL BENEFIT: AUGMENT + CONTOUR
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Donor sites such as abdomen, thighs, flanks, or arms are sculpted during fat harvest.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   04 // SOFT, NATURAL LOOK & FEEL
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Fat integrates with breast tissue, creating completely natural texture.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+              <div className="overview-card-dark">
+                <h3 className="overview-card-title-dark">
                   05 // PRECISION INJECTION TECHNIQUE
                 </h3>
-                <p className="text-foreground/80 leading-relaxed">
+                <p className="overview-card-text-dark">
                   Multi-layered micro-droplet placement maximizes survival and symmetry.
                 </p>
               </div>
