@@ -122,41 +122,59 @@ const BreastAugmentationFatGrafting = () => {
       </section>
 
       {/* Procedure Details */}
-      <section className="section-spacing bg-gray-50">
+      <section className="section-spacing bg-gradient-to-br from-[#0d1f3a] via-[#1a2f4a] to-[#0d1f3a]">
         <div className="content-spacing">
-          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4 text-white animate-fade-in">
             Procedure Details
           </h2>
+          <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            Advanced fat grafting technology for natural, lasting breast enhancement
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                ⏱️
+              </div>
+              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
                 Duration
               </h3>
-              <p className="text-foreground/80">3–5 hours</p>
+              <p className="text-white/80 text-lg">3–5 hours</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                🎯
+              </div>
+              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
                 Donor Zones
               </h3>
-              <p className="text-foreground/80">Abdomen, flanks, thighs, knees, arms</p>
+              <p className="text-white/80 text-lg">Abdomen, flanks, thighs, knees, arms</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                💉
+              </div>
+              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
                 Injection Technique
               </h3>
-              <p className="text-foreground/80">Micro-droplet fat injection</p>
+              <p className="text-white/80 text-lg">Micro-droplet fat injection</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                📈
+              </div>
+              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
                 Volume Increase
               </h3>
-              <p className="text-foreground/80">Typically +1 cup size per session</p>
+              <p className="text-white/80 text-lg">Typically +1 cup size per session</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground">
+            <div className="group bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-lg hover:bg-white/15 hover:border-white/30 hover:scale-105 transition-all duration-300 animate-fade-in md:col-span-2 lg:col-span-1" style={{ animationDelay: "0.6s" }}>
+              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                ✨
+              </div>
+              <h3 className="text-xl font-light uppercase tracking-wide mb-3 text-white">
                 Enhancement Option
               </h3>
-              <p className="text-foreground/80">Optional SVF (stem cell–enriched grafting) for enhanced fat survival</p>
+              <p className="text-white/80 text-lg">Optional SVF (stem cell–enriched grafting) for enhanced fat survival</p>
             </div>
           </div>
         </div>
