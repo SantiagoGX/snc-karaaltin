@@ -58,6 +58,7 @@ const Header = () => {
     { name: "Procedures", path: "/procedures", hasSubmenu: true },
     { name: "Before & Afters", path: "/gallery" },
     { name: "Contact", path: "/contact" },
+    { name: "Patient Journey", path: "/patient-journey" },
     { name: "Want to Learn Surgery?", path: "/learn-surgery" },
   ];
 
