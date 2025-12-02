@@ -180,7 +180,7 @@ const Header = () => {
                 <FaYoutube style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://wa.me/905465533285" 
+                href="https://api.whatsapp.com/send/?phone=905465533285&text&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
@@ -387,7 +387,7 @@ const Header = () => {
                 <FaYoutube className="w-5 h-5" />
               </a>
               <a 
-                href="https://wa.me/905465533285" 
+                href="https://api.whatsapp.com/send/?phone=905465533285&text&type=phone_number&app_absent=0" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-green-500 text-green-600 hover:bg-green-500 hover:text-white transition-all"

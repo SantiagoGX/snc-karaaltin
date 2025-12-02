@@ -201,7 +201,7 @@ const Footer = () => {
                 <FaYoutube />
               </a>
               <a
-                href="https://wa.me/905465533285"
+                href="https://api.whatsapp.com/send/?phone=905465533285&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-600 hover:text-green-700 transition-colors"
