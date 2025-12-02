@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
+import NoPageProcedureCard from "@/components/procedures/NoPageProcedureCard";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
@@ -121,109 +122,60 @@ const Body = () => {
                 </Link>
 
                 {/* Card 3 - Liposuction */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.1s'
-                }}>
-                    <img alt="Liposuction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/bead625b-8dee-4594-8835-2569162e64d7.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Liposuction</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Liposuction"
+                  imageSrc="/lovable-uploads/bead625b-8dee-4594-8835-2569162e64d7.png"
+                  imageAlt="Liposuction"
+                  animationDelay="0.1s"
+                />
 
                 {/* Card 4 - Body Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.15s'
-                }}>
-                    <img alt="Body Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/12b1466c-d1e4-48c0-9c44-6f9fcc554b07.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Body Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Body Lift"
+                  imageSrc="/lovable-uploads/12b1466c-d1e4-48c0-9c44-6f9fcc554b07.png"
+                  imageAlt="Body Lift"
+                  animationDelay="0.15s"
+                />
 
                 {/* Card 5 - Arm Lift (Brachioplasty) */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.2s'
-                }}>
-                    <img alt="Arm Lift (Brachioplasty)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/e47fca61-5295-4ce6-9a24-ef6f6f79fac4.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Arm Lift (Brachioplasty)</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Arm Lift (Brachioplasty)"
+                  imageSrc="/lovable-uploads/e47fca61-5295-4ce6-9a24-ef6f6f79fac4.jpg"
+                  imageAlt="Arm Lift (Brachioplasty)"
+                  animationDelay="0.2s"
+                />
 
                 {/* Card 6 - Thigh Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.25s'
-                }}>
-                    <img alt="Thigh Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/c225235b-9c98-4a89-bde3-cdc5569ed22c.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Thigh Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Thigh Lift"
+                  imageSrc="/lovable-uploads/c225235b-9c98-4a89-bde3-cdc5569ed22c.jpg"
+                  imageAlt="Thigh Lift"
+                  animationDelay="0.25s"
+                />
 
                 {/* Card 7 - Mommy Makeover */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.3s'
-                }}>
-                    <img alt="Mommy Makeover" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/9b7e428d-8d83-4560-a39f-63888324c0cf.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Mommy Makeover</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Mommy Makeover"
+                  imageSrc="/lovable-uploads/9b7e428d-8d83-4560-a39f-63888324c0cf.jpg"
+                  imageAlt="Mommy Makeover"
+                  animationDelay="0.3s"
+                />
 
                 {/* Card 8 - Post-Weight Loss Body Contouring */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.35s'
-                }}>
-                    <img alt="Post-Weight Loss Body Contouring" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/4b0b7287-871f-4326-9d52-6f15a2528db0.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Post-Weight Loss Body Contouring</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Post-Weight Loss Body Contouring"
+                  imageSrc="/lovable-uploads/4b0b7287-871f-4326-9d52-6f15a2528db0.jpg"
+                  imageAlt="Post-Weight Loss Body Contouring"
+                  animationDelay="0.35s"
+                />
 
                 {/* Card 9 - Fat Transfer */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.4s'
-                }}>
-                    <img alt="Fat Transfer" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/d2a87aed-20bd-4cab-92ce-af11359876d5.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Fat Transfer</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Fat Transfer"
+                  imageSrc="/lovable-uploads/d2a87aed-20bd-4cab-92ce-af11359876d5.jpg"
+                  imageAlt="Fat Transfer"
+                  animationDelay="0.4s"
+                />
 
               </div>
             </div>
