@@ -85,27 +85,61 @@ const PatientJourney = () => {
   return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        {/* SECTION 1 — HERO BANNER */}
-        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-start overflow-hidden">
-          {/* Background Image - Editable */}
-          <img src="/placeholder.svg" alt="Istanbul Journey Banner" className="absolute inset-0 w-full h-full object-cover" />
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
-          
-          {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 lg:px-8 pt-24 md:pt-32">
-            <div className="max-w-2xl space-y-6 float-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight tracking-wide" style={{
-              fontFamily: 'Cormorant Garamond, serif'
-            }}>
-                Your Journey in Istanbul
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed">
-                A seamless 7-day experience designed for comfort, safety, and world-class care.
-              </p>
-              <Button onClick={scrollToGetStarted} className="mt-6 px-8 py-3 bg-white text-[#0d1f3a] hover:bg-white/90 uppercase tracking-widest text-sm font-medium transition-all duration-300">
-                Start Your Journey
-              </Button>
+        {/* SECTION 1 — HERO (Hakimi Style like About page) */}
+        <section
+          className="relative min-h-[70vh] flex items-center pt-20 overflow-hidden"
+          style={{
+            backgroundColor: "#1e3a5f",
+          }}
+        >
+          <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center">
+              {/* Left Column - Text */}
+              <div className="text-white space-y-6 blur-to-focus">
+                <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">YOUR MEDICAL JOURNEY • ISTANBUL</p>
+                <h1
+                  className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide"
+                  style={{
+                    fontFamily: "Cormorant Garamond, serif",
+                  }}
+                >
+                  Your Journey in Istanbul
+                </h1>
+                <p className="text-lg lg:text-xl font-light leading-relaxed opacity-90">
+                  A seamless 7-day experience designed for comfort, safety, and world-class care.
+                </p>
+                <Button 
+                  onClick={scrollToGetStarted} 
+                  className="mt-6 px-8 py-3 bg-white text-[#0d1f3a] hover:bg-white/90 uppercase tracking-widest text-sm font-medium transition-all duration-300"
+                >
+                  Start Your Journey
+                </Button>
+              </div>
+
+              {/* Right Column - Image with Shape */}
+              <div className="relative flex justify-center items-end lg:justify-end">
+                {/* Background Shape - Solid, extends to bottom */}
+                <div
+                  className="absolute w-[280px] lg:w-[350px] rounded-lg bottom-0"
+                  style={{
+                    backgroundColor: "#0d1f3a",
+                    height: "calc(100% - 80px)",
+                    maxHeight: "450px",
+                  }}
+                ></div>
+
+                {/* Doctor Image */}
+                <img
+                  src="/doctor-main.png"
+                  alt="Professor Doctor Karaaltin"
+                  className="relative z-10 w-[300px] h-auto lg:w-[380px] max-h-[500px] object-contain drop-shadow-2xl float-in block"
+                  style={{
+                    animationDelay: "0.2s",
+                    display: "block",
+                    marginBottom: "-2px",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>
