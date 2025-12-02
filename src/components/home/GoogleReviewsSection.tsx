@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight, Star, ExternalLink } from "lucide-react";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 
@@ -56,6 +57,7 @@ const reviews = [
 ];
 
 const GoogleReviewsSection = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const reviewsPerPageDesktop = 3;
   const reviewsPerPageMobile = 1;
@@ -97,7 +99,7 @@ const GoogleReviewsSection = () => {
             />
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-[0.2em] uppercase text-gray-900">
-            REAL PATIENT EXPERIENCES
+            {t('reviews.title')}
           </h2>
         </div>
 
@@ -161,7 +163,7 @@ const GoogleReviewsSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white text-xs uppercase tracking-widest font-light rounded-md hover:bg-gray-800 transition-all duration-300 group"
             >
-              Leave a Google Review
+              {t('reviews.leaveReview')}
               <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
             </a>
           </div>

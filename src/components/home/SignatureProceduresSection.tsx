@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Carousel,
@@ -11,40 +12,41 @@ import twirlBraImg from "@/assets/procedures/twirl-bra.png";
 import vibrasatProImg from "@/assets/procedures/vibrasat-pro.png";
 import kGlideImg from "@/assets/procedures/k-glide.png";
 
-const procedures = [
-  {
-    id: 1,
-    titleNormal: "The Smart",
-    titleBold: "Template Rhinoplasty",
-    description: "Smart templates in rhinoplasty are revolutionising the way surgeons approach this delicate procedure. Focusing on durability, predictability and reliability in late results, these templates play an important role in guiding the post-operative healing process. During the rhinoplasty procedure, these templates help cartilage, bone and soft tissue to heal in the correct direction and manner predefined by the surgeon. This ensures that the desired result is achieved and maintained over time.",
-    image: rhinoplastyImg,
-  },
-  {
-    id: 2,
-    titleNormal: "The Twirl",
-    titleBold: "Internal Bra Technique",
-    description: "Breast reduction and lift surgeries are widely in demand to improve breast aesthetics, comfort and self-confidence. However, these procedures often come with challenges such as underbearing, loss of upper pole fullness, and impaired blood flow to the nipple area. This is where the Twirl Internal Bra Technique comes in; a breakthrough surgical procedure designed to directly address these issues.",
-    image: twirlBraImg,
-  },
-  {
-    id: 3,
-    titleNormal: "The",
-    titleBold: "Vibrasat Pro Technology",
-    description: "Vibrasat Pro™ and Liposat Pro Plus represent a new era in body contouring, combining advanced vibration-expansion technology with a specialized peristaltic pump for safer, more precise fat removal and grafting. Backed by Dr. Karaaltin's clinical expertise and proven through his \"Sponge Experiment™,\" this system minimizes tissue trauma, reduces pain, and enhances recovery while preserving up to 92% of viable fat cells. Compared to traditional methods like VASER, it offers smoother skin retraction, more predictable results, and higher fat retention—making it the preferred choice for high-definition liposuction and procedures like BBL or breast augmentation.",
-    image: vibrasatProImg,
-  },
-  {
-    id: 4,
-    titleNormal: "K-Glide™",
-    titleBold: "Rapid Breast Augmentation",
-    description: "Discover the K-Glide™ Rapid Breast Augmentation—a groundbreaking 30-minute procedure developed by renowned plastic surgeon Professor Dr. Karaaltin. Using specially designed, soft-edged instruments and a motor-assisted gliding technique, K-Glide™ preserves nerves and blood vessels, eliminates the need for drains, and ensures minimal pain with fast recovery. This advanced method delivers natural-looking, long-lasting results with unmatched safety, comfort, and precision—redefining breast augmentation for the modern patient.",
-    image: kGlideImg,
-  },
-];
-
 const SignatureProceduresSection = () => {
+  const { t } = useTranslation();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+
+  const procedures = [
+    {
+      id: 1,
+      titleNormalKey: "signatureProcedures.procedures.rhinoplasty.titleNormal",
+      titleBoldKey: "signatureProcedures.procedures.rhinoplasty.titleBold",
+      descriptionKey: "signatureProcedures.procedures.rhinoplasty.description",
+      image: rhinoplastyImg,
+    },
+    {
+      id: 2,
+      titleNormalKey: "signatureProcedures.procedures.twirlBra.titleNormal",
+      titleBoldKey: "signatureProcedures.procedures.twirlBra.titleBold",
+      descriptionKey: "signatureProcedures.procedures.twirlBra.description",
+      image: twirlBraImg,
+    },
+    {
+      id: 3,
+      titleNormalKey: "signatureProcedures.procedures.vibrasatPro.titleNormal",
+      titleBoldKey: "signatureProcedures.procedures.vibrasatPro.titleBold",
+      descriptionKey: "signatureProcedures.procedures.vibrasatPro.description",
+      image: vibrasatProImg,
+    },
+    {
+      id: 4,
+      titleNormalKey: "signatureProcedures.procedures.kGlide.titleNormal",
+      titleBoldKey: "signatureProcedures.procedures.kGlide.titleBold",
+      descriptionKey: "signatureProcedures.procedures.kGlide.description",
+      image: kGlideImg,
+    },
+  ];
 
   useEffect(() => {
     if (!api) return;
@@ -64,7 +66,7 @@ const SignatureProceduresSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-left mb-6 lg:mb-8 float-in">
           <p className="text-xs uppercase tracking-[0.3em] text-gray-400 font-light">
-            Signature Procedures
+            {t('signatureProcedures.title')}
           </p>
         </div>
 
@@ -100,18 +102,18 @@ const SignatureProceduresSection = () => {
                     {/* Left: Content */}
                     <div className="space-y-3 lg:space-y-4 lg:order-1 flex flex-col justify-center pl-6 lg:pl-10 xl:pl-12 pr-6 lg:pr-8 py-10 lg:py-0 slide-in-left">
                       <h3 className="text-xl lg:text-2xl xl:text-3xl font-serif tracking-wide">
-                        <span className="font-light">{procedure.titleNormal} </span>
-                        <span className="font-semibold">{procedure.titleBold}</span>
+                        <span className="font-light">{t(procedure.titleNormalKey)} </span>
+                        <span className="font-semibold">{t(procedure.titleBoldKey)}</span>
                       </h3>
                       <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
-                        {procedure.description}
+                        {t(procedure.descriptionKey)}
                       </p>
                       <div className="flex gap-2 mt-4">
                         <button className="px-4 py-2 border border-gray-900 text-gray-900 text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-all">
-                          Learn More
+                          {t('signatureProcedures.learnMore')}
                         </button>
                         <button className="px-4 py-2 bg-gray-900 text-white text-xs uppercase tracking-wider hover:bg-gray-800 transition-all flex items-center gap-2">
-                          Book Now
+                          {t('signatureProcedures.bookNow')}
                         </button>
                       </div>
                       
@@ -134,7 +136,7 @@ const SignatureProceduresSection = () => {
                     <div className="relative lg:order-2 h-[250px] lg:h-auto slide-in-right">
                       <img 
                         src={procedure.image} 
-                        alt={`${procedure.titleNormal} ${procedure.titleBold}`}
+                        alt={`${t(procedure.titleNormalKey)} ${t(procedure.titleBoldKey)}`}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
