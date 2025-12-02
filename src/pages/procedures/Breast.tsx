@@ -276,7 +276,7 @@ const Breast = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.55s'
                 }}>
-                    <img src="/placeholder.svg" alt="Smart BRA / Bloocell Scaffold" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="Smart BRA / Bloocell Scaffold" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/a905f802-c73d-411c-bc3f-6e685c568acb.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
