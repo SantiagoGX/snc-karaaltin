@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import bodyImg from "@/assets/procedures/body-procedure.jpg";
 import breastImg from "@/assets/procedures/breast-procedure.jpg";
 import noseImg from "@/assets/procedures/nose-procedure.jpg";
 import faceImg from "@/assets/procedures/face-procedure.jpg";
-import futureFaceImg from "@/assets/procedures/future-face.jpg";
 import signatureTechImg from "@/assets/procedures/signature-techniques.jpg";
 
 const OperationsSection = () => {
@@ -18,7 +18,8 @@ const OperationsSection = () => {
       id: 1,
       categoryKey: "operations.theBody",
       procedures: ["Tummy Tuck"],
-      image: bodyImg
+      image: bodyImg,
+      link: "/procedures/body"
     },
     {
       id: 2,
@@ -34,28 +35,25 @@ const OperationsSection = () => {
         "Inverted Nipple",
         "Nipple and Areola Reduction"
       ],
-      image: breastImg
+      image: breastImg,
+      link: "/procedures/breast"
     },
     {
       id: 3,
       categoryKey: "operations.theNose",
       procedures: ["Rhinoplasty"],
-      image: noseImg
+      image: noseImg,
+      link: "/procedures/nose"
     },
     {
       id: 4,
       categoryKey: "operations.theFace",
       procedures: ["Face"],
-      image: faceImg
+      image: faceImg,
+      link: "/procedures/face"
     },
     {
       id: 5,
-      categoryKey: "operations.futureOfFace",
-      procedures: [],
-      image: futureFaceImg
-    },
-    {
-      id: 6,
       categoryKey: "operations.signatureTechniques",
       procedures: [
         "K-Glide™ Rapid Breast Augmentation",
@@ -69,7 +67,8 @@ const OperationsSection = () => {
         "The Twirl Internal Bra Technique for Breast Surgery",
         "The Vibrasat Pro Technology"
       ],
-      image: signatureTechImg
+      image: signatureTechImg,
+      link: "/procedures/face"
     }
   ];
 
@@ -118,10 +117,13 @@ const OperationsSection = () => {
                       ))}
                       
                       {/* Botón VIEW ALL - Solo visible cuando expandido */}
-                      <button className="flex items-center gap-2 text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors mt-3 pt-1.5 group">
+                      <Link 
+                        to={category.link} 
+                        className="flex items-center gap-2 text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors mt-3 pt-1.5 group"
+                      >
                         {t('operations.viewAll')}
                         <ExternalLink className="w-2.5 h-2.5 transition-transform group-hover:translate-x-1" />
-                      </button>
+                      </Link>
                     </div>
                   )}
               </div>
