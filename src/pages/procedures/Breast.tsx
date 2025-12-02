@@ -228,7 +228,7 @@ const Breast = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.45s'
                 }}>
-                    <img src="/placeholder.svg" alt="K-Glide™ Breast Augmentation" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="K-Glide™ Breast Augmentation" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/9485ec6b-07fb-485d-b862-4904a7c6e2a7.jpg" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
