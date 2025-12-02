@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
+import NoPageProcedureCard from "@/components/procedures/NoPageProcedureCard";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
@@ -154,199 +155,108 @@ const Face = () => {
                 </Link>
 
                 {/* Card 4 - Mini Facelift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.15s'
-                }}>
-                    <img alt="Mini Facelift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/09a13097-7fa6-46aa-81cc-f0175ed1291e.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Mini Facelift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Mini Facelift"
+                  imageSrc="/lovable-uploads/09a13097-7fa6-46aa-81cc-f0175ed1291e.png"
+                  imageAlt="Mini Facelift"
+                  animationDelay="0.15s"
+                />
 
                 {/* Card 5 - Purse-String Vertical Facelift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.2s'
-                }}>
-                    <img alt="Purse-String Vertical Facelift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/22978ced-2ab2-4798-afee-89d17e5238c7.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Purse-String Vertical Facelift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Purse-String Vertical Facelift"
+                  imageSrc="/lovable-uploads/22978ced-2ab2-4798-afee-89d17e5238c7.png"
+                  imageAlt="Purse-String Vertical Facelift"
+                  animationDelay="0.2s"
+                />
 
                 {/* Card 6 - Subperiosteal Deep Plane / Composite Midface Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.25s'
-                }}>
-                    <img alt="Subperiosteal Deep Plane / Composite Midface Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/dd5e69f4-9805-4832-bb5e-4e0e1558c4d6.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Subperiosteal Deep Plane / Composite Midface Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Subperiosteal Deep Plane / Composite Midface Lift"
+                  imageSrc="/lovable-uploads/dd5e69f4-9805-4832-bb5e-4e0e1558c4d6.png"
+                  imageAlt="Subperiosteal Deep Plane / Composite Midface Lift"
+                  animationDelay="0.25s"
+                />
 
                 {/* Card 7 - MACS Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.3s'
-                }}>
-                    <img alt="MACS Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/973c5b76-0f30-47ab-b221-24bbfd601c62.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">MACS Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="MACS Lift"
+                  imageSrc="/lovable-uploads/973c5b76-0f30-47ab-b221-24bbfd601c62.png"
+                  imageAlt="MACS Lift"
+                  animationDelay="0.3s"
+                />
 
                 {/* Card 8 - EndoChor™-Assisted Mid-Face Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.35s'
-                }}>
-                    <img alt="EndoChor™-Assisted Mid-Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/0a10f2b7-ea9f-453b-827e-fb8658416133.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">EndoChor™-Assisted Mid-Face Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="EndoChor™-Assisted Mid-Face Lift"
+                  imageSrc="/lovable-uploads/0a10f2b7-ea9f-453b-827e-fb8658416133.png"
+                  imageAlt="EndoChor™-Assisted Mid-Face Lift"
+                  animationDelay="0.35s"
+                />
 
                 {/* Card 9 - High SMAS / Extended High SMAS Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.4s'
-                }}>
-                    <img alt="High SMAS / Extended High SMAS Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/1ce92bc6-aebd-4997-b127-edb4463c814a.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">High SMAS / Extended High SMAS Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="High SMAS / Extended High SMAS Lift"
+                  imageSrc="/lovable-uploads/1ce92bc6-aebd-4997-b127-edb4463c814a.png"
+                  imageAlt="High SMAS / Extended High SMAS Lift"
+                  animationDelay="0.4s"
+                />
 
                 {/* Card 10 - All-In-One Facial Rejuvenation */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.45s'
-                }}>
-                    <img alt="All-In-One Facial Rejuvenation" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/4a1944f2-4749-4029-b5d2-2c5ba2a0b97c.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">All-In-One Facial Rejuvenation</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="All-In-One Facial Rejuvenation"
+                  imageSrc="/lovable-uploads/4a1944f2-4749-4029-b5d2-2c5ba2a0b97c.png"
+                  imageAlt="All-In-One Facial Rejuvenation"
+                  animationDelay="0.45s"
+                />
 
                 {/* Card 11 - Ponytail Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.5s'
-                }}>
-                    <img alt="Ponytail Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/392cf1bd-03e7-455d-9dfa-affbfc24989d.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Ponytail Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Ponytail Lift"
+                  imageSrc="/lovable-uploads/392cf1bd-03e7-455d-9dfa-affbfc24989d.jpg"
+                  imageAlt="Ponytail Lift"
+                  animationDelay="0.5s"
+                />
 
                 {/* Card 12 - Endoscopic Forehead & Brow Lift */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.55s'
-                }}>
-                    <img alt="Endoscopic Forehead & Brow Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/f93b6d00-b802-48ff-92b2-7b2e0cfb9e42.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Endoscopic Forehead & Brow Lift</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Endoscopic Forehead & Brow Lift"
+                  imageSrc="/lovable-uploads/f93b6d00-b802-48ff-92b2-7b2e0cfb9e42.png"
+                  imageAlt="Endoscopic Forehead & Brow Lift"
+                  animationDelay="0.55s"
+                />
 
                 {/* Card 13 - Blepharoplasty (Upper & Lower) */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.6s'
-                }}>
-                    <img alt="Blepharoplasty (Upper & Lower)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/0cafffa9-0009-427f-8107-836de19f190e.png" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Blepharoplasty (Upper & Lower)</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Blepharoplasty (Upper & Lower)"
+                  imageSrc="/lovable-uploads/0cafffa9-0009-427f-8107-836de19f190e.png"
+                  imageAlt="Blepharoplasty (Upper & Lower)"
+                  animationDelay="0.6s"
+                />
 
                 {/* Card 14 - Facial Implants */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.65s'
-                }}>
-                    <img alt="Facial Implants" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/c0d465a6-42a6-43be-8d52-3e0d2a443948.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Facial Implants</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Facial Implants"
+                  imageSrc="/lovable-uploads/c0d465a6-42a6-43be-8d52-3e0d2a443948.jpg"
+                  imageAlt="Facial Implants"
+                  animationDelay="0.65s"
+                />
 
                 {/* Card 15 - Genioplasty */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.7s'
-                }}>
-                    <img alt="Genioplasty" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/efa2102f-ceee-461d-b8d6-42cba1415eed.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Genioplasty</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Genioplasty"
+                  imageSrc="/lovable-uploads/efa2102f-ceee-461d-b8d6-42cba1415eed.jpg"
+                  imageAlt="Genioplasty"
+                  animationDelay="0.7s"
+                />
 
                 {/* Card 16 - Orthognathic Surgery */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
-                  animationDelay: '0.75s'
-                }}>
-                    <img alt="Orthognathic Surgery" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/e318f9d9-ab13-4c64-af11-09d4304ee563.jpg" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                      <div className="min-h-[80px] flex items-end">
-                        <h3 className="font-serif font-semibold text-2xl leading-tight">Orthognathic Surgery</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <NoPageProcedureCard
+                  title="Orthognathic Surgery"
+                  imageSrc="/lovable-uploads/e318f9d9-ab13-4c64-af11-09d4304ee563.jpg"
+                  imageAlt="Orthognathic Surgery"
+                  animationDelay="0.75s"
+                />
 
               </div>
             </div>
