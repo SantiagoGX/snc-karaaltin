@@ -86,7 +86,7 @@ const Body = () => {
                 {/* Card 1 - Advanced Safe BBL */}
                 <Link to="/procedures/body/advanced-safe-bbl" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in">
-                    <img src="/placeholder.svg" alt="Advanced Safe BBL" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="Advanced Safe BBL" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/459ee6c0-8aa5-4d41-891b-9c08a5df6a6c.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
@@ -107,8 +107,10 @@ const Body = () => {
 
                 {/* Card 2 - Tummy Tuck (Abdominoplasty) */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.05s' }}>
-                    <img src="/placeholder.svg" alt="Tummy Tuck (Abdominoplasty)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.05s'
+                }}>
+                    <img alt="Tummy Tuck (Abdominoplasty)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/aef95e97-4b6c-444e-a6f4-a180992d7466.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
@@ -120,7 +122,9 @@ const Body = () => {
 
                 {/* Card 3 - Liposuction */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.1s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.1s'
+                }}>
                     <img src="/placeholder.svg" alt="Liposuction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -133,7 +137,9 @@ const Body = () => {
 
                 {/* Card 4 - Body Lift */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.15s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.15s'
+                }}>
                     <img src="/placeholder.svg" alt="Body Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -146,7 +152,9 @@ const Body = () => {
 
                 {/* Card 5 - Arm Lift (Brachioplasty) */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.2s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.2s'
+                }}>
                     <img src="/placeholder.svg" alt="Arm Lift (Brachioplasty)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -159,7 +167,9 @@ const Body = () => {
 
                 {/* Card 6 - Thigh Lift */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.25s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.25s'
+                }}>
                     <img src="/placeholder.svg" alt="Thigh Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -172,7 +182,9 @@ const Body = () => {
 
                 {/* Card 7 - Mommy Makeover */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.3s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.3s'
+                }}>
                     <img src="/placeholder.svg" alt="Mommy Makeover" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -185,7 +197,9 @@ const Body = () => {
 
                 {/* Card 8 - Post-Weight Loss Body Contouring */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.35s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.35s'
+                }}>
                     <img src="/placeholder.svg" alt="Post-Weight Loss Body Contouring" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -198,7 +212,9 @@ const Body = () => {
 
                 {/* Card 9 - Fat Transfer */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.4s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.4s'
+                }}>
                     <img src="/placeholder.svg" alt="Fat Transfer" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
