@@ -86,7 +86,7 @@ const Body = () => {
                 {/* Card 1 - Advanced Safe BBL */}
                 <Link to="/procedures/body/advanced-safe-bbl" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in">
-                    <img alt="Advanced Safe BBL" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/459ee6c0-8aa5-4d41-891b-9c08a5df6a6c.png" />
+                    <img alt="Advanced Safe BBL" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/6d9530e0-d7f5-4902-bd3a-bc7c9eb9fdf6.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
