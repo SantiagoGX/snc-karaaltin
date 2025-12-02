@@ -82,7 +82,7 @@ const Breast = () => {
               <div className="flex gap-6 lg:gap-8">
                 
                 {/* Card 1 - Breast Augmentation with Fat Grafting */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/augmentation-fat-grafting" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in">
                     <img alt="Breast Augmentation with Fat Grafting" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/1fde5cba-4ea6-4847-938b-8f4660be6f83.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
@@ -101,10 +101,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 2 - Breast Augmentation with Implant */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/augmentation-implants" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.05s'
                 }}>
@@ -116,10 +116,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 3 - Breast Reduction */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/reduction" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.1s'
                 }}>
@@ -131,10 +131,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 4 - Breast Uplift (Mastopexy) */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/lift" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.15s'
                 }}>
@@ -146,10 +146,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 5 - Gynecomastia */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/gynecomastia" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.2s'
                 }}>
@@ -161,10 +161,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 6 - Hybrid Augmentation (Implant + Fat) */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/hybrid-augmentation" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.25s'
                 }}>
@@ -176,10 +176,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 7 - Implant Removal */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/implant-removal" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.3s'
                 }}>
@@ -191,10 +191,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 8 - Inverted Nipple Correction */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/inverted-nipple-repair" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.35s'
                 }}>
@@ -206,10 +206,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 9 - Nipple & Areola Reduction */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/nipple-areola-reduction" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.4s'
                 }}>
@@ -221,10 +221,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 10 - K-Glide™ Breast Augmentation */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/k-glide" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.45s'
                 }}>
@@ -245,10 +245,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 11 - Twirl Internal Bra Technique™ */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/twirl-internal-bra" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.5s'
                 }}>
@@ -269,10 +269,10 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 12 - Smart BRA / Bloocell Scaffold */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/breast/smart-bra" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.55s'
                 }}>
@@ -293,7 +293,7 @@ const Breast = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
               </div>
             </div>

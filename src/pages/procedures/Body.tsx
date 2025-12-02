@@ -106,7 +106,7 @@ const Body = () => {
                 </Link>
 
                 {/* Card 2 - Tummy Tuck (Abdominoplasty) */}
-                <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
+                <Link to="/procedures/body/tummy-tuck" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.05s'
                 }}>
@@ -118,7 +118,7 @@ const Body = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Card 3 - Liposuction */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
