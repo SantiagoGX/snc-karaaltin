@@ -336,24 +336,30 @@ const Header = () => {
 
         {/* Menu Items */}
         <nav className="flex flex-col items-start gap-6 p-8 sm:p-12 mt-16">
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             item.hasSubmenu ? (
               <button
                 key={item.path}
                 onClick={() => setIsProceduresSubmenuOpen(true)}
-                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase text-left"
+                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black hover:translate-x-2 transition-all duration-300 uppercase text-left"
+                style={{ animationDelay: `${index * 80}ms` }}
               >
-                {item.name}
+                <span className="inline-block animate-fade-in-left" style={{ animationDelay: `${index * 80}ms` }}>
+                  {item.name}
+                </span>
               </button>
             ) : (
               <NavLink
                 key={item.path}
                 to={item.path}
-                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase"
+                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black hover:translate-x-2 transition-all duration-300 uppercase"
                 activeClassName="font-medium text-black"
                 onClick={() => setIsMenuOpen(false)}
+                style={{ animationDelay: `${index * 80}ms` }}
               >
-                {item.name}
+                <span className="inline-block animate-fade-in-left" style={{ animationDelay: `${index * 80}ms` }}>
+                  {item.name}
+                </span>
               </NavLink>
             )
           ))}
@@ -367,9 +373,18 @@ const Header = () => {
               asChild
             >
               <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
-                BOOK NOW
+                TALK TO SURGEON DIRECTLY
               </NavLink>
             </Button>
+          </div>
+          
+          {/* Doctor Logo at bottom */}
+          <div className="mt-8">
+            <img 
+              src={logoWhite} 
+              alt="Dr. Karaaltın" 
+              className="h-8 w-auto brightness-0 opacity-40"
+            />
           </div>
         </nav>
       </div>

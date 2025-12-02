@@ -134,6 +134,22 @@ All colors MUST be HSL.
     }
   }
 
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
   /* Hero Image Scale Animation */
   @keyframes scaleIn {
     from {
