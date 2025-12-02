@@ -10,8 +10,93 @@
     "talkToSurgeon": "TALK TO SURGEON DIRECTLY"
   },
   "hero": {
-    "title": "World-Class Plastic Surgery in Istanbul, Led by Innovation",
-    "subtitle": "Over 30 years of experience in world-class plastic surgery."
+    "titlePart1": "World-Class",
+    "titleMiddle": "Plastic Surgery in Istanbul,",
+    "titlePart2": "Led by Innovation"
+  },
+  "aboutDoctor": {
+    "welcome": "Welcome to Dr. Karaaltın's Clinic",
+    "title": "Get to Know Us",
+    "description": "Dr. KARAALTIN, the father of twin children and husband of a successful wife (Vice Dean of Cerrapasa University Faculty of Medicine), was born in 1972 in Kirkuk, Iraq as a Turkish descendant. His family moved to the United States of America when he was only six months old. Between 1976 and 1988, Dr. Karaaltin completed her primary and secondary education in both West Lafayette, Indiana and Orange County, Los Angeles."
+  },
+  "signatureProcedures": {
+    "title": "Signature Procedures",
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "procedures": {
+      "rhinoplasty": {
+        "titleNormal": "The Smart",
+        "titleBold": "Template Rhinoplasty",
+        "description": "Smart templates in rhinoplasty are revolutionising the way surgeons approach this delicate procedure. Focusing on durability, predictability and reliability in late results, these templates play an important role in guiding the post-operative healing process."
+      },
+      "twirlBra": {
+        "titleNormal": "The Twirl",
+        "titleBold": "Internal Bra Technique",
+        "description": "Breast reduction and lift surgeries are widely in demand to improve breast aesthetics, comfort and self-confidence. This is where the Twirl Internal Bra Technique comes in; a breakthrough surgical procedure designed to directly address these issues."
+      },
+      "vibrasatPro": {
+        "titleNormal": "The",
+        "titleBold": "Vibrasat Pro Technology",
+        "description": "Vibrasat Pro™ and Liposat Pro Plus represent a new era in body contouring, combining advanced vibration-expansion technology with a specialized peristaltic pump for safer, more precise fat removal and grafting."
+      },
+      "kGlide": {
+        "titleNormal": "K-Glide™",
+        "titleBold": "Rapid Breast Augmentation",
+        "description": "Discover the K-Glide™ Rapid Breast Augmentation—a groundbreaking 30-minute procedure developed by renowned plastic surgeon Professor Dr. Karaaltin."
+      }
+    }
+  },
+  "certificates": {
+    "title": "REWARDS CERTIFICATES MEMBERSHIPS"
+  },
+  "differentiators": {
+    "title": "Why Choose Dr. Karaaltın?",
+    "qualifiedDoctors": {
+      "title": "Qualified Doctors",
+      "description": "Our team consists of the best medical professionals representing almost every medical specialty to provide you and your family with the highest level of care."
+    },
+    "modernEquipment": {
+      "title": "Modern Equipment",
+      "description": "We use the latest equipment and technology to raise the level of our medical solutions and guarantee our customers the best experience."
+    },
+    "individualApproach": {
+      "title": "Individual Approach",
+      "description": "Thanks to the individual approach we apply at the Dr. Karaaltın Clinic, our patients receive a better medical service designed to suit their personal health needs and budget."
+    },
+    "patientCare": {
+      "title": "Patient-Centered Care",
+      "description": "Our medical staff is always on hand to provide you with personalized medical advice designed to suit your individual health needs."
+    }
+  },
+  "facilities": {
+    "quality": "QUALITY",
+    "experience": "EXPERIENCE",
+    "care": "CARE"
+  },
+  "operations": {
+    "theBody": "The Body",
+    "theBreast": "The Breast",
+    "theNose": "The Nose",
+    "theFace": "The Face",
+    "futureOfFace": "The Future of Face",
+    "signatureTechniques": "Signature Techniques",
+    "viewAll": "VIEW ALL"
+  },
+  "beforeAfter": {
+    "title1": "BEFORE &",
+    "title2": "AFTERS",
+    "view": "VIEW"
+  },
+  "reviews": {
+    "title": "REAL PATIENT EXPERIENCES",
+    "leaveReview": "Leave a Google Review"
+  },
+  "contactCta": {
+    "title": "Get Started",
+    "description": "Ready to take the next step with Dr. Karaaltın and book your consultation?",
+    "callText": "Get started by calling the office at",
+    "orText": "or completing our online contact form to schedule your appointment.",
+    "bookNow": "Book Now"
   },
   "footer": {
     "procedures": "Procedures",
@@ -21,7 +106,134 @@
     "subscribe": "Subscribe",
     "getDirections": "Get Directions",
     "bookNow": "Book Now",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "face": "Face",
+    "body": "Body",
+    "breast": "Breast",
+    "nose": "Nose",
+    "futureOfFace": "The Future of Face",
+    "about": "About",
+    "contact": "Contact",
+    "learnSurgery": "Want to learn surgery?",
+    "beforeAfters": "Before & Afters"
+  },
+  "about": {
+    "heroSubtitle": "PROFESSOR • SURGEON • INNOVATOR",
+    "heroTitle": "Professor Doctor Karaaltin",
+    "heroDescription": "Globally Renowned Plastic & Reconstructive Surgeon",
+    "globalJourney": "Global Journey",
+    "educatorLeader": "Educator & Leader",
+    "innovations": "Innovations",
+    "globalRecognition": "Global Recognition",
+    "pushingBoundaries": "Pushing Boundaries",
+    "advocateOfSafety": "Advocate of Safety",
+    "awards": "Awards",
+    "meetOurTeam": "Meet Our Team",
+    "patientRepresentatives": "Patient Representatives",
+    "patientRepresentativesDesc": "Our multilingual team guides you through every step of your journey.",
+    "dedicatedNurses": "Dedicated Nurses",
+    "dedicatedNursesDesc": "Experienced surgical nurses provide compassionate care throughout your recovery.",
+    "medicalCoordinators": "Medical Coordinators",
+    "medicalCoordinatorsDesc": "Expert coordinators handle all logistics, from travel to accommodation.",
+    "ctaTitle": "Ready to Begin Your Journey?",
+    "ctaDescription": "Schedule a consultation with Professor Dr. Karaaltin to discuss your goals and learn how we can help you achieve them.",
+    "bookConsultation": "Book Consultation"
+  },
+  "patientJourney": {
+    "heroSubtitle": "YOUR MEDICAL JOURNEY • ISTANBUL",
+    "heroTitle": "Your Journey in Istanbul",
+    "heroDescription": "A seamless 7-day experience designed for comfort, safety, and world-class care.",
+    "startYourJourney": "Start Your Journey",
+    "introTitle": "A Structured, Safe, and Luxurious Patient Experience",
+    "introDescription": "Your journey has been designed to provide full medical support, comfort, and peace of mind from the moment you land in Istanbul until the moment you return home.",
+    "timelineTitle": "Your 7-Day Experience",
+    "whyChooseTitle": "Why Patients Choose Us",
+    "days": {
+      "day1": {
+        "day": "Day 1",
+        "title": "Arrival & Consultation",
+        "description": "You arrive in Istanbul, receive VIP transportation to the clinic for your initial medical consultation and pre-operative tests, then settle comfortably into your 5-star partner hotel."
+      },
+      "day2": {
+        "day": "Day 2",
+        "title": "Surgery Day",
+        "description": "Final consultation, preparation, and your surgical procedure. After surgery, you return to your hotel to rest under medical supervision."
+      },
+      "day3": {
+        "day": "Day 3",
+        "title": "Early Recovery & Nurse Visits",
+        "description": "You rest at your hotel while nurses perform early post-operative checks, provide medication guidance, and support your recovery."
+      },
+      "day4": {
+        "day": "Day 4",
+        "title": "Rest & Gentle Activity",
+        "description": "A restorative day for light movement, hydration, and calm recovery. Optional short walks or quiet time at the hotel."
+      },
+      "day5": {
+        "day": "Day 5",
+        "title": "Post-Op Evaluation",
+        "description": "A full post-operative check with the medical team: wound assessment, progress review, and personalized recovery instructions."
+      },
+      "day6": {
+        "day": "Day 6",
+        "title": "Discover Istanbul (Lightly)",
+        "description": "If cleared by the team, you may enjoy short, gentle outings to experience the beauty of Istanbul while continuing your recovery."
+      },
+      "day7": {
+        "day": "Day 7",
+        "title": "Final Checkup & Departure",
+        "description": "Your final medical evaluation takes place before departure. Afterwards, you are escorted to the airport with lifelong aftercare support."
+      }
+    },
+    "whyChoose": {
+      "excellence": {
+        "title": "Medical Excellence",
+        "subtitle": "World-class surgical expertise with proven results and international accreditation."
+      },
+      "luxury": {
+        "title": "Luxury Experience",
+        "subtitle": "5-star accommodations, VIP transfers, and personalized concierge services throughout your stay."
+      },
+      "support": {
+        "title": "Dedicated International Support",
+        "subtitle": "Multilingual coordinators available 24/7 to assist you before, during, and after your procedure."
+      }
+    }
+  },
+  "learnSurgery": {
+    "heroTitle": "Endochor Academy — Learn Advanced Facial Surgery with Prof. Dr. Karaaltin",
+    "heroDescription": "Hands-on training, QL Doctor mentorship, and advanced Endochor® implant education.",
+    "applyForTraining": "Apply for Training",
+    "whatIsTitle": "What Is the Endochor Academy?",
+    "whatIsDescription": "The Endochor Academy is an advanced surgical education platform led by Prof. Dr. Mehmet Veli Karaaltin, the official QL Doctor for Endochor® Implants. Surgeons from around the world learn high-precision anatomical techniques, implant-based lifting systems, and minimally invasive facial rejuvenation through structured lectures, cadaver labs, and optional hands-on operating room proctorship.",
+    "qlDoctorTitle": "The Role of a QL Doctor"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "We're here to help. Reach out to our clinic for consultations, questions, or appointment requests.",
+    "address": "Address",
+    "phone": "Phone",
+    "hours": "Hours",
+    "getDirections": "GET DIRECTIONS",
+    "textOurOffice": "TEXT OUR OFFICE",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phoneNumber": "Phone",
+    "height": "Height (optional)",
+    "weight": "Weight (optional)",
+    "areaOfInterest": "Area/Procedure of Interest",
+    "selectProcedure": "Select a procedure...",
+    "concerns": "Concerns",
+    "concernsPlaceholder": "Please describe your concerns or questions...",
+    "imageUploads": "Image Uploads",
+    "frontView": "Front View",
+    "sideView": "Side View",
+    "otherSideView": "Other Side View",
+    "additionalPhoto": "Additional Photo (Optional)",
+    "privacyNotice": "Your information is confidential and will only be used to assist with your consultation.",
+    "submitButton": "START YOUR JOURNEY",
+    "acceptedFormats": "Accepted formats: jpg, png, pdf, jpeg, heif. Max 20MB."
   },
   "common": {
     "viewProcedure": "View Procedure",

@@ -10,8 +10,93 @@
     "talkToSurgeon": "CERRAHLA DOĞRUDAN KONUŞUN"
   },
   "hero": {
-    "title": "İstanbul'da Dünya Standartlarında Plastik Cerrahi, Yenilikçilikle",
-    "subtitle": "30 yılı aşkın dünya standartlarında plastik cerrahi deneyimi."
+    "titlePart1": "Dünya Standartlarında",
+    "titleMiddle": "İstanbul'da Plastik Cerrahi,",
+    "titlePart2": "Yenilikçilikle Lider"
+  },
+  "aboutDoctor": {
+    "welcome": "Dr. Karaaltın Kliniğine Hoş Geldiniz",
+    "title": "Bizi Tanıyın",
+    "description": "İkiz çocuk babası ve başarılı bir eşin (Cerrahpaşa Üniversitesi Tıp Fakültesi Dekan Yardımcısı) kocası olan Dr. KARAALTIN, 1972 yılında Irak'ın Kerkük şehrinde Türk kökenli olarak dünyaya geldi. Ailesi, henüz altı aylıkken Amerika Birleşik Devletleri'ne taşındı. 1976-1988 yılları arasında Dr. Karaaltin, hem West Lafayette, Indiana hem de Orange County, Los Angeles'ta ilk ve orta öğrenimini tamamladı."
+  },
+  "signatureProcedures": {
+    "title": "İmza Prosedürleri",
+    "learnMore": "Daha Fazla Bilgi",
+    "bookNow": "Randevu Al",
+    "procedures": {
+      "rhinoplasty": {
+        "titleNormal": "Akıllı",
+        "titleBold": "Şablon Rinoplasti",
+        "description": "Rinoplastide akıllı şablonlar, cerrahların bu hassas prosedüre yaklaşım biçimini devrimleştiriyor. Dayanıklılık, öngörülebilirlik ve geç sonuçlarda güvenilirliğe odaklanarak, bu şablonlar ameliyat sonrası iyileşme sürecini yönlendirmede önemli bir rol oynuyor."
+      },
+      "twirlBra": {
+        "titleNormal": "Twirl",
+        "titleBold": "İç Sütyen Tekniği",
+        "description": "Meme küçültme ve kaldırma ameliyatları, meme estetiğini, konforu ve özgüveni artırmak için yaygın olarak talep görmektedir. Twirl İç Sütyen Tekniği, bu sorunları doğrudan ele almak için tasarlanmış çığır açan bir cerrahi prosedürdür."
+      },
+      "vibrasatPro": {
+        "titleNormal": "",
+        "titleBold": "Vibrasat Pro Teknolojisi",
+        "description": "Vibrasat Pro™ ve Liposat Pro Plus, gelişmiş titreşim-genişleme teknolojisini, daha güvenli ve daha hassas yağ alımı ve grefti için özel bir peristaltik pompa ile birleştirerek vücut şekillendirmede yeni bir dönem temsil ediyor."
+      },
+      "kGlide": {
+        "titleNormal": "K-Glide™",
+        "titleBold": "Hızlı Meme Büyütme",
+        "description": "K-Glide™ Hızlı Meme Büyütmeyi keşfedin—ünlü plastik cerrah Profesör Dr. Karaaltin tarafından geliştirilen çığır açan 30 dakikalık bir prosedür."
+      }
+    }
+  },
+  "certificates": {
+    "title": "ÖDÜLLER SERTİFİKALAR ÜYELİKLER"
+  },
+  "differentiators": {
+    "title": "Neden Dr. Karaaltın?",
+    "qualifiedDoctors": {
+      "title": "Nitelikli Doktorlar",
+      "description": "Ekibimiz, size ve ailenize en yüksek düzeyde bakım sağlamak için neredeyse her tıbbi uzmanlığı temsil eden en iyi tıp uzmanlarından oluşmaktadır."
+    },
+    "modernEquipment": {
+      "title": "Modern Ekipman",
+      "description": "Tıbbi çözümlerimizin seviyesini yükseltmek ve müşterilerimize en iyi deneyimi garanti etmek için en son ekipman ve teknolojiyi kullanıyoruz."
+    },
+    "individualApproach": {
+      "title": "Bireysel Yaklaşım",
+      "description": "Dr. Karaaltın Kliniğinde uyguladığımız bireysel yaklaşım sayesinde hastalarımız, kişisel sağlık ihtiyaçlarına ve bütçelerine uygun daha iyi bir tıbbi hizmet alıyor."
+    },
+    "patientCare": {
+      "title": "Hasta Odaklı Bakım",
+      "description": "Tıbbi personelimiz, bireysel sağlık ihtiyaçlarınıza uygun kişiselleştirilmiş tıbbi tavsiye sağlamak için her zaman hazırdır."
+    }
+  },
+  "facilities": {
+    "quality": "KALİTE",
+    "experience": "DENEYİM",
+    "care": "BAKIM"
+  },
+  "operations": {
+    "theBody": "Vücut",
+    "theBreast": "Meme",
+    "theNose": "Burun",
+    "theFace": "Yüz",
+    "futureOfFace": "Yüzün Geleceği",
+    "signatureTechniques": "İmza Teknikleri",
+    "viewAll": "TÜMÜNÜ GÖR"
+  },
+  "beforeAfter": {
+    "title1": "ÖNCE &",
+    "title2": "SONRA",
+    "view": "GÖRÜNTÜLE"
+  },
+  "reviews": {
+    "title": "GERÇEK HASTA DENEYİMLERİ",
+    "leaveReview": "Google Yorumu Bırakın"
+  },
+  "contactCta": {
+    "title": "Başlayın",
+    "description": "Dr. Karaaltın ile bir sonraki adımı atmaya ve randevunuzu almaya hazır mısınız?",
+    "callText": "Ofisi arayarak başlayın:",
+    "orText": "veya randevunuzu planlamak için çevrimiçi iletişim formumuzu doldurun.",
+    "bookNow": "Randevu Al"
   },
   "footer": {
     "procedures": "İşlemler",
@@ -21,7 +106,134 @@
     "subscribe": "Abone Ol",
     "getDirections": "Yol Tarifi Al",
     "bookNow": "Randevu Al",
-    "copyright": "Tüm hakları saklıdır."
+    "copyright": "Tüm hakları saklıdır.",
+    "face": "Yüz",
+    "body": "Vücut",
+    "breast": "Meme",
+    "nose": "Burun",
+    "futureOfFace": "Yüzün Geleceği",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "learnSurgery": "Cerrahi öğrenmek ister misiniz?",
+    "beforeAfters": "Önce & Sonra"
+  },
+  "about": {
+    "heroSubtitle": "PROFESÖR • CERRAH • YENİLİKÇİ",
+    "heroTitle": "Profesör Doktor Karaaltin",
+    "heroDescription": "Dünyaca Ünlü Plastik ve Rekonstrüktif Cerrah",
+    "globalJourney": "Küresel Yolculuk",
+    "educatorLeader": "Eğitimci & Lider",
+    "innovations": "Yenilikler",
+    "globalRecognition": "Küresel Tanınırlık",
+    "pushingBoundaries": "Sınırları Zorlamak",
+    "advocateOfSafety": "Güvenlik Savunucusu",
+    "awards": "Ödüller",
+    "meetOurTeam": "Ekibimizle Tanışın",
+    "patientRepresentatives": "Hasta Temsilcileri",
+    "patientRepresentativesDesc": "Çok dilli ekibimiz yolculuğunuzun her adımında size rehberlik eder.",
+    "dedicatedNurses": "Özveri̇li̇ Hemşi̇reler",
+    "dedicatedNursesDesc": "Deneyimli cerrahi hemşireler iyileşme süreciniz boyunca şefkatli bakım sağlar.",
+    "medicalCoordinators": "Tıbbi Koordinatörler",
+    "medicalCoordinatorsDesc": "Uzman koordinatörler seyahatten konaklamaya kadar tüm lojistiği yönetir.",
+    "ctaTitle": "Yolculuğunuza Başlamaya Hazır mısınız?",
+    "ctaDescription": "Hedeflerinizi tartışmak ve size nasıl yardımcı olabileceğimizi öğrenmek için Profesör Dr. Karaaltin ile bir konsültasyon planlayın.",
+    "bookConsultation": "Konsültasyon Randevusu Al"
+  },
+  "patientJourney": {
+    "heroSubtitle": "TIBBİ YOLCULUĞUNUZ • İSTANBUL",
+    "heroTitle": "İstanbul'daki Yolculuğunuz",
+    "heroDescription": "Konfor, güvenlik ve dünya standartlarında bakım için tasarlanmış sorunsuz 7 günlük bir deneyim.",
+    "startYourJourney": "Yolculuğunuza Başlayın",
+    "introTitle": "Yapılandırılmış, Güvenli ve Lüks Bir Hasta Deneyimi",
+    "introDescription": "Yolculuğunuz, İstanbul'a indiğiniz andan eve döndüğünüz ana kadar tam tıbbi destek, konfor ve gönül rahatlığı sağlamak için tasarlanmıştır.",
+    "timelineTitle": "7 Günlük Deneyiminiz",
+    "whyChooseTitle": "Hastalar Neden Bizi Seçiyor",
+    "days": {
+      "day1": {
+        "day": "1. Gün",
+        "title": "Varış & Konsültasyon",
+        "description": "İstanbul'a varıyorsunuz, ilk tıbbi konsültasyonunuz ve ameliyat öncesi testleriniz için kliniğe VIP ulaşım alıyorsunuz, ardından 5 yıldızlı partner otelimize rahatça yerleşiyorsunuz."
+      },
+      "day2": {
+        "day": "2. Gün",
+        "title": "Ameliyat Günü",
+        "description": "Son konsültasyon, hazırlık ve cerrahi işleminiz. Ameliyattan sonra tıbbi gözetim altında dinlenmek için otelinize dönüyorsunuz."
+      },
+      "day3": {
+        "day": "3. Gün",
+        "title": "Erken İyileşme & Hemşire Ziyaretleri",
+        "description": "Hemşireler erken ameliyat sonrası kontrolleri yaparken, ilaç rehberliği sağlarken ve iyileşmenizi desteklerken otelinizde dinleniyorsunuz."
+      },
+      "day4": {
+        "day": "4. Gün",
+        "title": "Dinlenme & Hafif Aktivite",
+        "description": "Hafif hareket, hidrasyon ve sakin iyileşme için restoratif bir gün. Otelde kısa yürüyüşler veya sessiz zaman opsiyonel."
+      },
+      "day5": {
+        "day": "5. Gün",
+        "title": "Ameliyat Sonrası Değerlendirme",
+        "description": "Tıbbi ekiple tam bir ameliyat sonrası kontrol: yara değerlendirmesi, ilerleme incelemesi ve kişiselleştirilmiş iyileşme talimatları."
+      },
+      "day6": {
+        "day": "6. Gün",
+        "title": "İstanbul'u Keşfedin (Hafifçe)",
+        "description": "Ekip tarafından onay alırsanız, iyileşmenize devam ederken İstanbul'un güzelliğini deneyimlemek için kısa, nazik gezintilerin tadını çıkarabilirsiniz."
+      },
+      "day7": {
+        "day": "7. Gün",
+        "title": "Son Kontrol & Ayrılış",
+        "description": "Ayrılmadan önce son tıbbi değerlendirmeniz yapılır. Ardından ömür boyu bakım desteği ile havalimanına uğurlanırsınız."
+      }
+    },
+    "whyChoose": {
+      "excellence": {
+        "title": "Tıbbi Mükemmellik",
+        "subtitle": "Kanıtlanmış sonuçlar ve uluslararası akreditasyonla dünya standartlarında cerrahi uzmanlık."
+      },
+      "luxury": {
+        "title": "Lüks Deneyim",
+        "subtitle": "Konaklamanız boyunca 5 yıldızlı konaklama, VIP transferler ve kişiselleştirilmiş concierge hizmetleri."
+      },
+      "support": {
+        "title": "Özel Uluslararası Destek",
+        "subtitle": "İşleminiz öncesinde, sırasında ve sonrasında size yardımcı olmak için 7/24 ulaşılabilir çok dilli koordinatörler."
+      }
+    }
+  },
+  "learnSurgery": {
+    "heroTitle": "Endochor Akademisi — Prof. Dr. Karaaltin ile İleri Düzey Yüz Cerrahisi Öğrenin",
+    "heroDescription": "Uygulamalı eğitim, QL Doktor mentorluğu ve ileri düzey Endochor® implant eğitimi.",
+    "applyForTraining": "Eğitime Başvurun",
+    "whatIsTitle": "Endochor Akademisi Nedir?",
+    "whatIsDescription": "Endochor Akademisi, Endochor® İmplantları için resmi QL Doktor olan Prof. Dr. Mehmet Veli Karaaltin tarafından yönetilen ileri düzey bir cerrahi eğitim platformudur. Dünyanın dört bir yanından cerrahlar, yapılandırılmış dersler, kadavra laboratuvarları ve isteğe bağlı uygulamalı ameliyathane mentorluğu aracılığıyla yüksek hassasiyetli anatomik teknikler, implant tabanlı kaldırma sistemleri ve minimal invaziv yüz gençleştirme öğrenir.",
+    "qlDoctorTitle": "QL Doktorun Rolü"
+  },
+  "contact": {
+    "title": "İLETİŞİM",
+    "subtitle": "Size yardımcı olmak için buradayız. Konsültasyonlar, sorular veya randevu talepleri için kliniğimize ulaşın.",
+    "address": "Adres",
+    "phone": "Telefon",
+    "hours": "Çalışma Saatleri",
+    "getDirections": "YOL TARİFİ AL",
+    "textOurOffice": "OFİSİMİZE MESAJ ATIN",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "email": "E-posta",
+    "phoneNumber": "Telefon",
+    "height": "Boy (isteğe bağlı)",
+    "weight": "Kilo (isteğe bağlı)",
+    "areaOfInterest": "İlgi Alanı/İşlem",
+    "selectProcedure": "Bir işlem seçin...",
+    "concerns": "Endişeler",
+    "concernsPlaceholder": "Lütfen endişelerinizi veya sorularınızı açıklayın...",
+    "imageUploads": "Görsel Yüklemeleri",
+    "frontView": "Ön Görünüm",
+    "sideView": "Yan Görünüm",
+    "otherSideView": "Diğer Yan Görünüm",
+    "additionalPhoto": "Ek Fotoğraf (İsteğe Bağlı)",
+    "privacyNotice": "Bilgileriniz gizlidir ve yalnızca konsültasyonunuza yardımcı olmak için kullanılacaktır.",
+    "submitButton": "YOLCULUĞUNUZA BAŞLAYIN",
+    "acceptedFormats": "Kabul edilen formatlar: jpg, png, pdf, jpeg, heif. Maksimum 20MB."
   },
   "common": {
     "viewProcedure": "İşlemi Görüntüle",

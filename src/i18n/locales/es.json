@@ -10,8 +10,93 @@
     "talkToSurgeon": "HABLA DIRECTAMENTE CON EL CIRUJANO"
   },
   "hero": {
-    "title": "Cirugía Plástica de Clase Mundial en Estambul, Liderada por la Innovación",
-    "subtitle": "Más de 30 años de experiencia en cirugía plástica de clase mundial."
+    "titlePart1": "Cirugía Plástica",
+    "titleMiddle": "de Clase Mundial en Estambul,",
+    "titlePart2": "Liderada por la Innovación"
+  },
+  "aboutDoctor": {
+    "welcome": "Bienvenido a la Clínica del Dr. Karaaltın",
+    "title": "Conócenos",
+    "description": "El Dr. KARAALTIN, padre de gemelos y esposo de una exitosa esposa (Vicedecana de la Facultad de Medicina de la Universidad Cerrapasa), nació en 1972 en Kirkuk, Irak, de ascendencia turca. Su familia se mudó a los Estados Unidos de América cuando tenía solo seis meses de edad. Entre 1976 y 1988, el Dr. Karaaltin completó su educación primaria y secundaria tanto en West Lafayette, Indiana como en Orange County, Los Ángeles."
+  },
+  "signatureProcedures": {
+    "title": "Procedimientos Exclusivos",
+    "learnMore": "Más Información",
+    "bookNow": "Reservar",
+    "procedures": {
+      "rhinoplasty": {
+        "titleNormal": "La Rinoplastia con",
+        "titleBold": "Plantilla Inteligente",
+        "description": "Las plantillas inteligentes en rinoplastia están revolucionando la forma en que los cirujanos abordan este delicado procedimiento. Centrándose en la durabilidad, la previsibilidad y la fiabilidad en los resultados tardíos."
+      },
+      "twirlBra": {
+        "titleNormal": "La Técnica",
+        "titleBold": "Twirl Internal Bra",
+        "description": "Las cirugías de reducción y levantamiento de senos tienen una amplia demanda para mejorar la estética, la comodidad y la autoconfianza. La Técnica Twirl Internal Bra aborda directamente estos problemas."
+      },
+      "vibrasatPro": {
+        "titleNormal": "Tecnología",
+        "titleBold": "Vibrasat Pro",
+        "description": "Vibrasat Pro™ y Liposat Pro Plus representan una nueva era en el contorno corporal, combinando tecnología avanzada de vibración-expansión con una bomba peristáltica especializada."
+      },
+      "kGlide": {
+        "titleNormal": "K-Glide™",
+        "titleBold": "Aumento Mamario Rápido",
+        "description": "Descubra el Aumento Mamario Rápido K-Glide™, un procedimiento revolucionario de 30 minutos desarrollado por el reconocido cirujano plástico Profesor Dr. Karaaltin."
+      }
+    }
+  },
+  "certificates": {
+    "title": "PREMIOS CERTIFICADOS MEMBRESÍAS"
+  },
+  "differentiators": {
+    "title": "¿Por qué elegir al Dr. Karaaltın?",
+    "qualifiedDoctors": {
+      "title": "Médicos Calificados",
+      "description": "Nuestro equipo está formado por los mejores profesionales médicos que representan casi todas las especialidades médicas para brindarle a usted y su familia el más alto nivel de atención."
+    },
+    "modernEquipment": {
+      "title": "Equipos Modernos",
+      "description": "Utilizamos los últimos equipos y tecnología para elevar el nivel de nuestras soluciones médicas y garantizar a nuestros clientes la mejor experiencia."
+    },
+    "individualApproach": {
+      "title": "Enfoque Individual",
+      "description": "Gracias al enfoque individual que aplicamos en la Clínica Dr. Karaaltın, nuestros pacientes reciben un mejor servicio médico diseñado para adaptarse a sus necesidades de salud personales y presupuesto."
+    },
+    "patientCare": {
+      "title": "Atención Centrada en el Paciente",
+      "description": "Nuestro personal médico está siempre disponible para brindarle asesoramiento médico personalizado diseñado para adaptarse a sus necesidades de salud individuales."
+    }
+  },
+  "facilities": {
+    "quality": "CALIDAD",
+    "experience": "EXPERIENCIA",
+    "care": "CUIDADO"
+  },
+  "operations": {
+    "theBody": "El Cuerpo",
+    "theBreast": "El Pecho",
+    "theNose": "La Nariz",
+    "theFace": "El Rostro",
+    "futureOfFace": "El Futuro del Rostro",
+    "signatureTechniques": "Técnicas Exclusivas",
+    "viewAll": "VER TODO"
+  },
+  "beforeAfter": {
+    "title1": "ANTES Y",
+    "title2": "DESPUÉS",
+    "view": "VER"
+  },
+  "reviews": {
+    "title": "EXPERIENCIAS REALES DE PACIENTES",
+    "leaveReview": "Dejar una Reseña en Google"
+  },
+  "contactCta": {
+    "title": "Comienza",
+    "description": "¿Listo para dar el siguiente paso con el Dr. Karaaltın y reservar tu consulta?",
+    "callText": "Comienza llamando a la oficina al",
+    "orText": "o completando nuestro formulario de contacto en línea para programar tu cita.",
+    "bookNow": "Reservar"
   },
   "footer": {
     "procedures": "Procedimientos",
@@ -21,7 +106,134 @@
     "subscribe": "Suscribirse",
     "getDirections": "Cómo Llegar",
     "bookNow": "Reservar",
-    "copyright": "Todos los derechos reservados."
+    "copyright": "Todos los derechos reservados.",
+    "face": "Rostro",
+    "body": "Cuerpo",
+    "breast": "Pecho",
+    "nose": "Nariz",
+    "futureOfFace": "El Futuro del Rostro",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "learnSurgery": "¿Quieres aprender cirugía?",
+    "beforeAfters": "Antes y Después"
+  },
+  "about": {
+    "heroSubtitle": "PROFESOR • CIRUJANO • INNOVADOR",
+    "heroTitle": "Profesor Doctor Karaaltin",
+    "heroDescription": "Cirujano Plástico y Reconstructivo de Renombre Mundial",
+    "globalJourney": "Trayectoria Global",
+    "educatorLeader": "Educador y Líder",
+    "innovations": "Innovaciones",
+    "globalRecognition": "Reconocimiento Global",
+    "pushingBoundaries": "Superando Límites",
+    "advocateOfSafety": "Defensor de la Seguridad",
+    "awards": "Premios",
+    "meetOurTeam": "Conoce a Nuestro Equipo",
+    "patientRepresentatives": "Representantes de Pacientes",
+    "patientRepresentativesDesc": "Nuestro equipo multilingüe te guía en cada paso de tu viaje.",
+    "dedicatedNurses": "Enfermeras Dedicadas",
+    "dedicatedNursesDesc": "Enfermeras quirúrgicas experimentadas brindan atención compasiva durante toda tu recuperación.",
+    "medicalCoordinators": "Coordinadores Médicos",
+    "medicalCoordinatorsDesc": "Coordinadores expertos manejan toda la logística, desde viajes hasta alojamiento.",
+    "ctaTitle": "¿Listo para Comenzar tu Viaje?",
+    "ctaDescription": "Programa una consulta con el Profesor Dr. Karaaltin para discutir tus objetivos y aprender cómo podemos ayudarte a alcanzarlos.",
+    "bookConsultation": "Reservar Consulta"
+  },
+  "patientJourney": {
+    "heroSubtitle": "TU VIAJE MÉDICO • ESTAMBUL",
+    "heroTitle": "Tu Viaje en Estambul",
+    "heroDescription": "Una experiencia perfecta de 7 días diseñada para comodidad, seguridad y atención de clase mundial.",
+    "startYourJourney": "Comienza tu Viaje",
+    "introTitle": "Una Experiencia de Paciente Estructurada, Segura y Lujosa",
+    "introDescription": "Tu viaje ha sido diseñado para proporcionar soporte médico completo, comodidad y tranquilidad desde el momento en que aterrizas en Estambul hasta el momento en que regresas a casa.",
+    "timelineTitle": "Tu Experiencia de 7 Días",
+    "whyChooseTitle": "Por Qué los Pacientes Nos Eligen",
+    "days": {
+      "day1": {
+        "day": "Día 1",
+        "title": "Llegada y Consulta",
+        "description": "Llegas a Estambul, recibes transporte VIP a la clínica para tu consulta médica inicial y pruebas preoperatorias, luego te instalas cómodamente en nuestro hotel asociado de 5 estrellas."
+      },
+      "day2": {
+        "day": "Día 2",
+        "title": "Día de Cirugía",
+        "description": "Consulta final, preparación y tu procedimiento quirúrgico. Después de la cirugía, regresas a tu hotel para descansar bajo supervisión médica."
+      },
+      "day3": {
+        "day": "Día 3",
+        "title": "Recuperación Temprana y Visitas de Enfermería",
+        "description": "Descansas en tu hotel mientras las enfermeras realizan controles postoperatorios tempranos, proporcionan orientación sobre medicamentos y apoyan tu recuperación."
+      },
+      "day4": {
+        "day": "Día 4",
+        "title": "Descanso y Actividad Suave",
+        "description": "Un día restaurador para movimiento ligero, hidratación y recuperación tranquila. Caminatas cortas opcionales o tiempo tranquilo en el hotel."
+      },
+      "day5": {
+        "day": "Día 5",
+        "title": "Evaluación Postoperatoria",
+        "description": "Un control postoperatorio completo con el equipo médico: evaluación de heridas, revisión del progreso e instrucciones de recuperación personalizadas."
+      },
+      "day6": {
+        "day": "Día 6",
+        "title": "Descubre Estambul (Suavemente)",
+        "description": "Si el equipo lo aprueba, puedes disfrutar de salidas cortas y suaves para experimentar la belleza de Estambul mientras continúas tu recuperación."
+      },
+      "day7": {
+        "day": "Día 7",
+        "title": "Chequeo Final y Partida",
+        "description": "Tu evaluación médica final se realiza antes de la partida. Después, te escoltan al aeropuerto con apoyo de cuidado de por vida."
+      }
+    },
+    "whyChoose": {
+      "excellence": {
+        "title": "Excelencia Médica",
+        "subtitle": "Experiencia quirúrgica de clase mundial con resultados probados y acreditación internacional."
+      },
+      "luxury": {
+        "title": "Experiencia de Lujo",
+        "subtitle": "Alojamiento de 5 estrellas, traslados VIP y servicios de conserjería personalizados durante toda tu estadía."
+      },
+      "support": {
+        "title": "Soporte Internacional Dedicado",
+        "subtitle": "Coordinadores multilingües disponibles 24/7 para asistirte antes, durante y después de tu procedimiento."
+      }
+    }
+  },
+  "learnSurgery": {
+    "heroTitle": "Academia Endochor — Aprende Cirugía Facial Avanzada con el Prof. Dr. Karaaltin",
+    "heroDescription": "Entrenamiento práctico, mentoría de QL Doctor y educación avanzada en implantes Endochor®.",
+    "applyForTraining": "Solicitar Entrenamiento",
+    "whatIsTitle": "¿Qué es la Academia Endochor?",
+    "whatIsDescription": "La Academia Endochor es una plataforma de educación quirúrgica avanzada dirigida por el Prof. Dr. Mehmet Veli Karaaltin, el QL Doctor oficial para Implantes Endochor®. Cirujanos de todo el mundo aprenden técnicas anatómicas de alta precisión, sistemas de levantamiento basados en implantes y rejuvenecimiento facial mínimamente invasivo.",
+    "qlDoctorTitle": "El Rol de un QL Doctor"
+  },
+  "contact": {
+    "title": "CONTACTO",
+    "subtitle": "Estamos aquí para ayudar. Comunícate con nuestra clínica para consultas, preguntas o solicitudes de citas.",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "hours": "Horarios",
+    "getDirections": "CÓMO LLEGAR",
+    "textOurOffice": "ENVIAR MENSAJE A NUESTRA OFICINA",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "phoneNumber": "Teléfono",
+    "height": "Altura (opcional)",
+    "weight": "Peso (opcional)",
+    "areaOfInterest": "Área/Procedimiento de Interés",
+    "selectProcedure": "Selecciona un procedimiento...",
+    "concerns": "Inquietudes",
+    "concernsPlaceholder": "Por favor describe tus inquietudes o preguntas...",
+    "imageUploads": "Carga de Imágenes",
+    "frontView": "Vista Frontal",
+    "sideView": "Vista Lateral",
+    "otherSideView": "Otra Vista Lateral",
+    "additionalPhoto": "Foto Adicional (Opcional)",
+    "privacyNotice": "Tu información es confidencial y solo se utilizará para asistir con tu consulta.",
+    "submitButton": "COMIENZA TU VIAJE",
+    "acceptedFormats": "Formatos aceptados: jpg, png, pdf, jpeg, heif. Máximo 20MB."
   },
   "common": {
     "viewProcedure": "Ver Procedimiento",
