@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
@@ -12,9 +13,9 @@ import {
 import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
-  const [keepProceduresOpen, setKeepProceduresOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: 'en',
@@ -245,7 +246,7 @@ const Header = () => {
                 className={`p-2 ${colors.text} transition-colors`}
                 onClick={() => {
                   setIsMenuOpen(true);
-                  if (keepProceduresOpen) {
+                  if (location.pathname.startsWith('/procedures/')) {
                     setIsProceduresSubmenuOpen(true);
                   }
                 }}
@@ -299,7 +300,7 @@ const Header = () => {
               className={`p-2 ${colors.text} transition-colors`}
               onClick={() => {
                 setIsMenuOpen(true);
-                if (keepProceduresOpen) {
+                if (location.pathname.startsWith('/procedures/')) {
                   setIsProceduresSubmenuOpen(true);
                 }
               }}
@@ -418,7 +419,6 @@ const Header = () => {
                   to={`/procedures/${category.id}`}
                   className="text-lg uppercase tracking-wide text-gray-900 mb-4 flex items-center gap-2 group hover:text-black transition-colors"
                   onClick={() => {
-                    setKeepProceduresOpen(true);
                     setIsProceduresSubmenuOpen(false);
                     setIsMenuOpen(false);
                   }}
@@ -435,7 +435,6 @@ const Header = () => {
                       to={procedure.path}
                       className="text-sm text-gray-700 hover:text-black transition-colors flex items-center gap-2 group"
                       onClick={() => {
-                        setKeepProceduresOpen(true);
                         setIsProceduresSubmenuOpen(false);
                         setIsMenuOpen(false);
                       }}
