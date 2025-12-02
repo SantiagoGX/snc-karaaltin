@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "About",
+    "procedures": "Procedures",
+    "beforeAfters": "Before & Afters",
+    "contact": "Contact",
+    "patientJourney": "Patient Journey",
+    "learnSurgery": "Want to Learn Surgery?",
+    "bookNow": "Book Now",
+    "talkToSurgeon": "Talk to Surgeon Directly"
+  },
+  "hero": {
+    "title": "World-Class Plastic Surgery in Istanbul, Led by Innovation",
+    "subtitle": "Over 30 years of experience in world-class plastic surgery."
+  },
+  "footer": {
+    "procedures": "Procedures",
+    "general": "General",
+    "signatureTechniques": "Signature Techniques",
+    "location": "Location",
+    "subscribe": "Subscribe",
+    "getDirections": "Get Directions",
+    "bookNow": "Book Now",
+    "copyright": "All rights reserved."
+  },
+  "common": {
+    "viewProcedure": "View Procedure",
+    "learnMore": "Learn More",
+    "scheduleConsultation": "Schedule Consultation",
+    "back": "Back",
+    "allProcedures": "All Procedures"
+  }
+}

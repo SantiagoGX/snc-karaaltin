@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
@@ -22,6 +23,7 @@ import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,15 +32,20 @@ const Header = () => {
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: 'en',
     label: 'English',
-    flag: '🇬🇧'
+    flag: 'EN'
   });
 
   const languages = [
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'zh', label: '中文', flag: '🇨🇳' }
+    { code: 'en', label: 'English', flag: 'EN' },
+    { code: 'tr', label: 'Türkçe', flag: 'TR' },
+    { code: 'es', label: 'Español', flag: 'ES' },
+    { code: 'zh', label: '中文', flag: '中' }
   ];
+
+  const handleLanguageChange = (lang: typeof languages[0]) => {
+    setSelectedLanguage(lang);
+    i18n.changeLanguage(lang.code);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,8 +170,8 @@ const Header = () => {
                 <FaXTwitter style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://www.instagram.com/dr.karaaltinclinic/" 
-                target="_blank" 
+                href="https://www.instagram.com/profdrk/" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
                 aria-label="Instagram"
@@ -231,7 +238,7 @@ const Header = () => {
                   {languages.map((lang) => (
                     <DropdownMenuItem
                       key={lang.code}
-                      onClick={() => setSelectedLanguage(lang)}
+                      onClick={() => handleLanguageChange(lang)}
                       className="cursor-pointer"
                     >
                       <span className="mr-2">{lang.flag}</span>
@@ -285,7 +292,7 @@ const Header = () => {
                 {languages.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}
-                    onClick={() => setSelectedLanguage(lang)}
+                    onClick={() => handleLanguageChange(lang)}
                     className="cursor-pointer"
                   >
                     <span className="mr-2">{lang.flag}</span>

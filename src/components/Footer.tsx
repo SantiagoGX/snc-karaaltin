@@ -176,7 +176,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex gap-4 text-xl">
               <a
-                href="https://www.instagram.com/dr.karaaltinclinic/"
+                href="https://www.instagram.com/profdrk/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 hover:text-gray-900 transition-colors"

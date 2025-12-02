@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "关于我们",
+    "procedures": "手术项目",
+    "beforeAfters": "术前术后",
+    "contact": "联系我们",
+    "patientJourney": "患者之旅",
+    "learnSurgery": "想学习外科手术吗？",
+    "bookNow": "立即预约",
+    "talkToSurgeon": "直接与外科医生交流"
+  },
+  "hero": {
+    "title": "伊斯坦布尔世界级整形外科，引领创新",
+    "subtitle": "超过30年的世界级整形外科经验。"
+  },
+  "footer": {
+    "procedures": "手术项目",
+    "general": "综合信息",
+    "signatureTechniques": "特色技术",
+    "location": "地址",
+    "subscribe": "订阅",
+    "getDirections": "获取路线",
+    "bookNow": "立即预约",
+    "copyright": "版权所有。"
+  },
+  "common": {
+    "viewProcedure": "查看手术",
+    "learnMore": "了解更多",
+    "scheduleConsultation": "预约咨询",
+    "back": "返回",
+    "allProcedures": "所有手术项目"
+  }
+}
