@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "Hakkımızda",
+    "procedures": "İşlemler",
+    "beforeAfters": "Önce & Sonra",
+    "contact": "İletişim",
+    "patientJourney": "Hasta Yolculuğu",
+    "learnSurgery": "Cerrahi Öğrenmek İster misiniz?",
+    "bookNow": "Randevu Al",
+    "talkToSurgeon": "Cerrahla Doğrudan Konuşun"
+  },
+  "hero": {
+    "title": "İstanbul'da Dünya Standartlarında Plastik Cerrahi, Yenilikçilikle",
+    "subtitle": "30 yılı aşkın dünya standartlarında plastik cerrahi deneyimi."
+  },
+  "footer": {
+    "procedures": "İşlemler",
+    "general": "Genel",
+    "signatureTechniques": "İmza Teknikleri",
+    "location": "Konum",
+    "subscribe": "Abone Ol",
+    "getDirections": "Yol Tarifi Al",
+    "bookNow": "Randevu Al",
+    "copyright": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "viewProcedure": "İşlemi Görüntüle",
+    "learnMore": "Daha Fazla Bilgi",
+    "scheduleConsultation": "Konsültasyon Planla",
+    "back": "Geri",
+    "allProcedures": "Tüm İşlemler"
+  }
+}

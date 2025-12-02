@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "about": "Nosotros",
+    "procedures": "Procedimientos",
+    "beforeAfters": "Antes y Después",
+    "contact": "Contacto",
+    "patientJourney": "Tu Viaje",
+    "learnSurgery": "¿Quieres Aprender Cirugía?",
+    "bookNow": "Reservar",
+    "talkToSurgeon": "Habla Directamente con el Cirujano"
+  },
+  "hero": {
+    "title": "Cirugía Plástica de Clase Mundial en Estambul, Liderada por la Innovación",
+    "subtitle": "Más de 30 años de experiencia en cirugía plástica de clase mundial."
+  },
+  "footer": {
+    "procedures": "Procedimientos",
+    "general": "General",
+    "signatureTechniques": "Técnicas Exclusivas",
+    "location": "Ubicación",
+    "subscribe": "Suscribirse",
+    "getDirections": "Cómo Llegar",
+    "bookNow": "Reservar",
+    "copyright": "Todos los derechos reservados."
+  },
+  "common": {
+    "viewProcedure": "Ver Procedimiento",
+    "learnMore": "Más Información",
+    "scheduleConsultation": "Agendar Consulta",
+    "back": "Volver",
+    "allProcedures": "Todos los Procedimientos"
+  }
+}
