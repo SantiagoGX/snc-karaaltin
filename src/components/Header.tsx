@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
@@ -10,13 +10,23 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showContactPopup, setShowContactPopup] = useState(false);
+  const [selectedProcedureName, setSelectedProcedureName] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState({
     code: 'en',
     label: 'English',
@@ -446,9 +456,16 @@ const Header = () => {
                   
                   {/* Procedures without pages - shown after */}
                   {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
-                    <div key={procedure} className="text-sm text-gray-600">
+                    <button
+                      key={procedure}
+                      onClick={() => {
+                        setSelectedProcedureName(procedure);
+                        setShowContactPopup(true);
+                      }}
+                      className="text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer text-left block"
+                    >
                       {procedure}
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -456,6 +473,39 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Contact Popup for procedures without pages */}
+      <Dialog open={showContactPopup} onOpenChange={setShowContactPopup}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-light tracking-wide uppercase">
+              {selectedProcedureName}
+            </DialogTitle>
+            <DialogDescription className="text-gray-600 pt-4">
+              To learn more about this procedure and view before & after results, please schedule a consultation with Dr. Karaaltın directly.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col gap-4 pt-4">
+            <Button
+              onClick={() => {
+                setShowContactPopup(false);
+                setIsProceduresSubmenuOpen(false);
+                setIsMenuOpen(false);
+                navigate('/contact');
+              }}
+              className="w-full bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs py-6"
+            >
+              Contact Dr. Karaaltın
+            </Button>
+            <button
+              onClick={() => setShowContactPopup(false)}
+              className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+            >
+              Maybe Later
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </header>
   );
 };

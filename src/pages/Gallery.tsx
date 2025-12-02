@@ -572,7 +572,7 @@ const Gallery = () => {
               
               {/* Display Selected Procedure or All Procedures */}
               {selectedData ? (
-                <ProcedureCarousel procedure={selectedData} />
+                <ProcedureCarousel key={selectedProcedure} procedure={selectedData} />
               ) : (
                 <div className="text-center py-20">
                   <h2 className="text-3xl md:text-4xl font-light tracking-wide text-gray-900 mb-6">
