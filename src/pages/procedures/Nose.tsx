@@ -48,7 +48,7 @@ const Nose = () => {
                   <div className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group">
                     <a href="/procedures/nose/rhinoplasty" className="block relative h-[500px] rounded-lg overflow-hidden">
                       {/* Background Image */}
-                      <img src="/placeholder.svg" alt="Rhinoplasty" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
+                      <img alt="Rhinoplasty" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" src="/lovable-uploads/1cb9d296-da37-4ec1-a3a0-e1399c4599d0.jpg" />
 
                       {/* Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent" />
@@ -78,7 +78,7 @@ const Nose = () => {
                   <div className="flex-[0_0_100%] md:flex-[0_0_33.333%] px-3 group">
                     <a href="/procedures/nose/smart-template-rhinoplasty" className="block relative h-[500px] rounded-lg overflow-hidden">
                       {/* Background Image */}
-                      <img src="/placeholder.svg" alt="Smart Template Rhinoplasty" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" />
+                      <img alt="Smart Template Rhinoplasty" className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" src="/lovable-uploads/e7cdf915-f79b-46bf-b077-e6fb394accea.jpg" />
 
                       {/* Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent" />
