@@ -1,10 +1,12 @@
 import { ChevronRight, Send } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { FaInstagram, FaXTwitter, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 import healthTurkiyeLogo from "@/assets/health-turkiye-logo.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-[#F6F4EF]">
       <div className="container mx-auto px-8 lg:px-16 py-16">
@@ -25,7 +27,7 @@ const Footer = () => {
           {/* Column 1: PROCEDURES */}
           <div className="float-in" style={{ animationDelay: "0s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
-              Procedures
+              {t('footer.procedures')}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -59,7 +61,7 @@ const Footer = () => {
           {/* Column 2: GENERAL */}
           <div className="float-in" style={{ animationDelay: "0.1s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
-              General
+              {t('footer.general')}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -88,7 +90,7 @@ const Footer = () => {
           {/* Column 3: SIGNATURE TECHNIQUES */}
           <div className="float-in" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
-              Signature Techniques
+              {t('footer.signatureTechniques')}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -117,7 +119,7 @@ const Footer = () => {
           {/* Column 4: LOCATION */}
           <div className="float-in" style={{ animationDelay: "0.3s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
-              Location
+              {t('footer.location')}
             </h3>
             <address className="not-italic text-sm text-gray-600 leading-relaxed mb-4">
               Vişnezade, Balıklı Apt, Bayıldım Cd.
@@ -138,7 +140,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide"
             >
-              Get Directions
+              {t('footer.getDirections')}
               <ChevronRight className="w-3 h-3" />
             </a>
           </div>
@@ -146,7 +148,7 @@ const Footer = () => {
           {/* Column 5: SUBSCRIBE */}
           <div className="float-in" style={{ animationDelay: "0.4s" }}>
             <h3 className="text-xs uppercase tracking-widest font-light mb-4 text-gray-900">
-              Subscribe
+              {t('footer.subscribe')}
             </h3>
             
             {/* Email Input */}
@@ -169,7 +171,7 @@ const Footer = () => {
               to="/contact"
               className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs uppercase tracking-widest font-light rounded w-full justify-center hover:opacity-80 transition-all duration-300 mb-6"
             >
-              Book Now
+              {t('footer.bookNow')}
               <ChevronRight className="w-4 h-4" />
             </Link>
 
@@ -236,7 +238,7 @@ const Footer = () => {
         {/* Bottom Bar - Copyright */}
         <div className="border-t border-gray-300 pt-8 text-center">
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} Prof. Dr. Mehmet Veli Karaaltın. All rights reserved.
+            © {new Date().getFullYear()} Prof. Dr. Mehmet Veli Karaaltın. {t('footer.copyright')}
           </p>
         </div>
       </div>

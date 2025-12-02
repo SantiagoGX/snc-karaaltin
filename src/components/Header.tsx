@@ -23,7 +23,7 @@ import logoWhite from "@/assets/dr-karaaltin-logo-white.svg";
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProceduresSubmenuOpen, setIsProceduresSubmenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -73,12 +73,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: "About", path: "/about" },
-    { name: "Procedures", path: "/procedures", hasSubmenu: true },
-    { name: "Before & Afters", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
-    { name: "Patient Journey", path: "/patient-journey" },
-    { name: "Want to Learn Surgery?", path: "/learn-surgery" },
+    { name: t('nav.about'), path: "/about" },
+    { name: t('nav.procedures'), path: "/procedures", hasSubmenu: true },
+    { name: t('nav.beforeAfters'), path: "/gallery" },
+    { name: t('nav.contact'), path: "/contact" },
+    { name: t('nav.patientJourney'), path: "/patient-journey" },
+    { name: t('nav.learnSurgery'), path: "/learn-surgery" },
   ];
 
   const procedureCategories = [
@@ -255,7 +255,7 @@ const Header = () => {
                 asChild
               >
                 <NavLink to="/contact">
-                  BOOK NOW
+                  {t('nav.bookNow')}
                 </NavLink>
               </Button>
               
@@ -309,7 +309,7 @@ const Header = () => {
               asChild
             >
               <NavLink to="/contact">
-                BOOK NOW
+                {t('nav.bookNow')}
               </NavLink>
             </Button>
             
@@ -391,7 +391,7 @@ const Header = () => {
               asChild
             >
               <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
-                TALK TO SURGEON DIRECTLY
+                {t('nav.talkToSurgeon')}
               </NavLink>
             </Button>
           </div>
