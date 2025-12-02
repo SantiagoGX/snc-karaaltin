@@ -123,7 +123,7 @@ const Breast = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.1s'
                 }}>
-                    <img src="/placeholder.svg" alt="Breast Reduction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="Breast Reduction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/4f21999a-1620-45ba-93a6-d4260d1f9923.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
@@ -138,7 +138,7 @@ const Breast = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.15s'
                 }}>
-                    <img src="/placeholder.svg" alt="Breast Uplift (Mastopexy)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="Breast Uplift (Mastopexy)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/51f9f41d-08ff-4de0-b3dd-d9006d3d4297.jpg" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
