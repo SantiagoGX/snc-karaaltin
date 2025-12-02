@@ -335,13 +335,13 @@ const Header = () => {
         </button>
 
         {/* Menu Items */}
-        <nav className="flex flex-col items-start gap-5 p-8 sm:p-12 mt-16 relative z-10">
+        <nav className="flex flex-col items-start gap-8 sm:gap-10 p-10 sm:p-16 mt-20 relative z-10">
           {navItems.map((item, index) => (
             item.hasSubmenu ? (
               <button
                 key={item.path}
                 onClick={() => setIsProceduresSubmenuOpen(true)}
-                className="text-lg sm:text-xl font-light text-gray-700 hover:text-black hover:translate-x-2 transition-all duration-300 uppercase text-left tracking-wide"
+                className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black hover:translate-x-3 transition-all duration-300 uppercase text-left tracking-wider"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {item.name}
@@ -350,7 +350,7 @@ const Header = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className="text-lg sm:text-xl font-light text-gray-700 hover:text-black hover:translate-x-2 transition-all duration-300 uppercase tracking-wide"
+                className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black hover:translate-x-3 transition-all duration-300 uppercase tracking-wider"
                 activeClassName="font-medium text-black"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -360,11 +360,11 @@ const Header = () => {
           ))}
           
           {/* CTA Button */}
-          <div className="mt-8 w-full">
+          <div className="mt-12 w-full max-w-xs">
             <Button 
               variant="outline" 
               size="lg"
-              className="w-full border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-300 py-4 text-sm tracking-widest"
+              className="w-full border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-300 py-5 text-base tracking-widest"
               asChild
             >
               <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
@@ -374,11 +374,11 @@ const Header = () => {
           </div>
 
           {/* Doctor Logo Watermark */}
-          <div className="absolute bottom-8 left-8 right-8 opacity-10 pointer-events-none">
+          <div className="absolute bottom-12 left-10 right-10 opacity-8 pointer-events-none">
             <img 
               src={logoWhite} 
               alt="" 
-              className="w-full max-w-[200px] brightness-0"
+              className="w-full max-w-[240px] brightness-0"
             />
           </div>
         </nav>
