@@ -84,7 +84,7 @@ const Breast = () => {
                 {/* Card 1 - Breast Augmentation with Fat Grafting */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
                   <div className="group relative h-[500px] overflow-hidden fade-in">
-                    <img src="/placeholder.svg" alt="Breast Augmentation with Fat Grafting" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="Breast Augmentation with Fat Grafting" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/1fde5cba-4ea6-4847-938b-8f4660be6f83.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
                       <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
@@ -105,7 +105,9 @@ const Breast = () => {
 
                 {/* Card 2 - Breast Augmentation with Implant */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.05s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.05s'
+                }}>
                     <img src="/placeholder.svg" alt="Breast Augmentation with Implant" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -118,7 +120,9 @@ const Breast = () => {
 
                 {/* Card 3 - Breast Reduction */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.1s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.1s'
+                }}>
                     <img src="/placeholder.svg" alt="Breast Reduction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -131,7 +135,9 @@ const Breast = () => {
 
                 {/* Card 4 - Breast Uplift (Mastopexy) */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.15s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.15s'
+                }}>
                     <img src="/placeholder.svg" alt="Breast Uplift (Mastopexy)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -144,7 +150,9 @@ const Breast = () => {
 
                 {/* Card 5 - Gynecomastia */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.2s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.2s'
+                }}>
                     <img src="/placeholder.svg" alt="Gynecomastia" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -157,7 +165,9 @@ const Breast = () => {
 
                 {/* Card 6 - Hybrid Augmentation (Implant + Fat) */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.25s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.25s'
+                }}>
                     <img src="/placeholder.svg" alt="Hybrid Augmentation (Implant + Fat)" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -170,7 +180,9 @@ const Breast = () => {
 
                 {/* Card 7 - Implant Removal */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.3s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.3s'
+                }}>
                     <img src="/placeholder.svg" alt="Implant Removal" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -183,7 +195,9 @@ const Breast = () => {
 
                 {/* Card 8 - Inverted Nipple Correction */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.35s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.35s'
+                }}>
                     <img src="/placeholder.svg" alt="Inverted Nipple Correction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -196,7 +210,9 @@ const Breast = () => {
 
                 {/* Card 9 - Nipple & Areola Reduction */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.4s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.4s'
+                }}>
                     <img src="/placeholder.svg" alt="Nipple & Areola Reduction" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -209,7 +225,9 @@ const Breast = () => {
 
                 {/* Card 10 - K-Glide™ Breast Augmentation */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.45s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.45s'
+                }}>
                     <img src="/placeholder.svg" alt="K-Glide™ Breast Augmentation" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
@@ -231,7 +249,9 @@ const Breast = () => {
 
                 {/* Card 11 - Twirl Internal Bra Technique™ */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.5s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.5s'
+                }}>
                     <img src="/placeholder.svg" alt="Twirl Internal Bra Technique™" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
@@ -253,7 +273,9 @@ const Breast = () => {
 
                 {/* Card 12 - Smart BRA / Bloocell Scaffold */}
                 <div className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.55s' }}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{
+                  animationDelay: '0.55s'
+                }}>
                     <img src="/placeholder.svg" alt="Smart BRA / Bloocell Scaffold" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
