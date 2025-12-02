@@ -7,7 +7,9 @@
     "patientJourney": "Tu Viaje",
     "learnSurgery": "¿Quieres Aprender Cirugía?",
     "bookNow": "RESERVAR",
-    "talkToSurgeon": "HABLA DIRECTAMENTE CON EL CIRUJANO"
+    "talkToSurgeon": "HABLA DIRECTAMENTE CON EL CIRUJANO",
+    "language": "Idioma",
+    "followUs": "Síguenos"
   },
   "hero": {
     "titlePart1": "Cirugía Plástica",

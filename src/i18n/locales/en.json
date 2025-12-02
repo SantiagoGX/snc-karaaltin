@@ -7,7 +7,9 @@
     "patientJourney": "Patient Journey",
     "learnSurgery": "Want to Learn Surgery?",
     "bookNow": "BOOK NOW",
-    "talkToSurgeon": "TALK TO SURGEON DIRECTLY"
+    "talkToSurgeon": "TALK TO SURGEON DIRECTLY",
+    "language": "Language",
+    "followUs": "Follow Us"
   },
   "hero": {
     "titlePart1": "World-Class",
