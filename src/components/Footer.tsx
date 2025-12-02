@@ -29,29 +29,29 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/procedures/face" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   Face
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/procedures/body" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   Body
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/procedures/breast" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   Breast
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/procedures/nose" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   Nose
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                <Link to="/procedures/face#future-of-face" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                   The Future of Face
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -78,9 +78,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Blog
-                </a>
+                <Link to="/gallery" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Before & Afters
+                </Link>
               </li>
             </ul>
           </div>
@@ -92,24 +92,24 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Deep Plane Face Lift
-                </a>
+                <Link to="/procedures/face/k-endoscopic-deep-plane" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  K Endoscopic Deep Plane
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Ultrasonic Rhinoplasty
-                </a>
+                <Link to="/procedures/nose/smart-template-rhinoplasty" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Smart Template Rhinoplasty
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Scarless Lifting
-                </a>
+                <Link to="/procedures/face/endochor-face-lift" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  EndoChor® Face Lift
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Endoscopic Body Contouring
-                </a>
+                <Link to="/procedures/body/advanced-safe-bbl" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                  Advanced Safe BBL™
+                </Link>
               </li>
             </ul>
           </div>
@@ -133,7 +133,9 @@ const Footer = () => {
               +90 212 325 42 42
             </a>
             <a
-              href="#"
+              href="https://www.google.com/maps/place/Prof.+Dr.+Mehmet+Veli+Karaalt%C4%B1n/@41.0428434,28.9958192,17z"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide"
             >
               Get Directions

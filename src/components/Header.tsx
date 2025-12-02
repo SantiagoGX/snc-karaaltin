@@ -154,7 +154,7 @@ const Header = () => {
             {/* Iconos ARRIBA */}
             <div className="flex items-center gap-4">
               <a 
-                href="https://twitter.com/drkaraaltinclinic" 
+                href="https://x.com/drkaraaltin" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
@@ -163,7 +163,7 @@ const Header = () => {
                 <FaXTwitter style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://instagram.com/drkaraaltinclinic" 
+                href="https://www.instagram.com/dr.karaaltinclinic/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
@@ -172,7 +172,7 @@ const Header = () => {
                 <FaInstagram style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://facebook.com/drkaraaltinclinic" 
+                href="https://www.facebook.com/drkaraaltin/?locale=tr_TR" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
@@ -181,7 +181,7 @@ const Header = () => {
                 <FaFacebookF style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://linkedin.com/company/drkaraaltinclinic" 
+                href="https://www.linkedin.com/company/dr-karaaltin-clinic/?originalSubdomain=tr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
@@ -190,7 +190,7 @@ const Header = () => {
                 <FaLinkedinIn style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://youtube.com/@drkaraaltinclinic" 
+                href="https://www.youtube.com/@drkaraaltin" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
