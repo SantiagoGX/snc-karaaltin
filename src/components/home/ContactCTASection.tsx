@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ContactCTASection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-[#9DA29D] py-16 lg:py-24 px-8 lg:px-16">
       <div className="container mx-auto">
@@ -25,28 +28,28 @@ const ContactCTASection = () => {
           {/* Contenido CTA Columna Derecha */}
           <div className="text-white space-y-6 reveal-center">
             <h2 className="text-4xl lg:text-5xl font-light tracking-wide uppercase font-serif">
-              Get Started
+              {t('contactCta.title')}
             </h2>
             
             <p className="text-base lg:text-lg leading-relaxed">
-              Ready to take the next step with Dr. Karaaltın and book your consultation?
+              {t('contactCta.description')}
               <br />
               <br />
-              Get started by calling the office at{" "}
+              {t('contactCta.callText')}{" "}
               <a
                 href="tel:+902123254242"
                 className="font-semibold hover:underline transition-all"
               >
                 +90 212 325 42 42
               </a>{" "}
-              or completing our online contact form to schedule your appointment.
+              {t('contactCta.orText')}
             </p>
 
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-black text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:opacity-80 transition-all duration-300 group"
             >
-              Book Now
+              {t('contactCta.bookNow')}
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>

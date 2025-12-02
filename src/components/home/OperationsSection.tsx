@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ExternalLink } from "lucide-react";
 import bodyImg from "@/assets/procedures/body-procedure.jpg";
 import breastImg from "@/assets/procedures/breast-procedure.jpg";
@@ -7,69 +8,70 @@ import faceImg from "@/assets/procedures/face-procedure.jpg";
 import futureFaceImg from "@/assets/procedures/future-face.jpg";
 import signatureTechImg from "@/assets/procedures/signature-techniques.jpg";
 
-const operationsData = [
-  {
-    id: 1,
-    category: "The Body",
-    procedures: ["Tummy Tuck"],
-    image: bodyImg
-  },
-  {
-    id: 2,
-    category: "The Breast",
-    procedures: [
-      "Breast Augmentation with Fat Grafting",
-      "Breast Augmentation with Implant",
-      "Breast Reduction",
-      "Breast Up Lift (Mastopexy)",
-      "Gynecomastia",
-      "Hybrid Augmentation (Implant plus Fat)",
-      "Implant Removal",
-      "Inverted Nipple",
-      "Nipple and Areola Reduction"
-    ],
-    image: breastImg
-  },
-  {
-    id: 3,
-    category: "The Nose",
-    procedures: ["Rhinoplasty"],
-    image: noseImg
-  },
-  {
-    id: 4,
-    category: "The Face",
-    procedures: ["Face"],
-    image: faceImg
-  },
-  {
-    id: 5,
-    category: "The Future of Face",
-    procedures: [],
-    image: futureFaceImg
-  },
-  {
-    id: 6,
-    category: "Signature Techniques",
-    procedures: [
-      "K-Glide™ Rapid Breast Augmentation",
-      "Advanced Safe BBL",
-      "Rib Cage Molding with Piezo Technology",
-      "The Endochor Face Lift",
-      "The K Endoscopic Deep Plane Face Lift",
-      "The K Face Lift",
-      "THE Smart BRA in Breast Surgery",
-      "The Smart Template Rhinoplasty",
-      "The Twirl Internal Bra Technique for Breast Surgery",
-      "The Vibrasat Pro Technology"
-    ],
-    image: signatureTechImg
-  }
-];
-
 const OperationsSection = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState(1);
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+
+  const operationsData = [
+    {
+      id: 1,
+      categoryKey: "operations.theBody",
+      procedures: ["Tummy Tuck"],
+      image: bodyImg
+    },
+    {
+      id: 2,
+      categoryKey: "operations.theBreast",
+      procedures: [
+        "Breast Augmentation with Fat Grafting",
+        "Breast Augmentation with Implant",
+        "Breast Reduction",
+        "Breast Up Lift (Mastopexy)",
+        "Gynecomastia",
+        "Hybrid Augmentation (Implant plus Fat)",
+        "Implant Removal",
+        "Inverted Nipple",
+        "Nipple and Areola Reduction"
+      ],
+      image: breastImg
+    },
+    {
+      id: 3,
+      categoryKey: "operations.theNose",
+      procedures: ["Rhinoplasty"],
+      image: noseImg
+    },
+    {
+      id: 4,
+      categoryKey: "operations.theFace",
+      procedures: ["Face"],
+      image: faceImg
+    },
+    {
+      id: 5,
+      categoryKey: "operations.futureOfFace",
+      procedures: [],
+      image: futureFaceImg
+    },
+    {
+      id: 6,
+      categoryKey: "operations.signatureTechniques",
+      procedures: [
+        "K-Glide™ Rapid Breast Augmentation",
+        "Advanced Safe BBL",
+        "Rib Cage Molding with Piezo Technology",
+        "The Endochor Face Lift",
+        "The K Endoscopic Deep Plane Face Lift",
+        "The K Face Lift",
+        "THE Smart BRA in Breast Surgery",
+        "The Smart Template Rhinoplasty",
+        "The Twirl Internal Bra Technique for Breast Surgery",
+        "The Vibrasat Pro Technology"
+      ],
+      image: signatureTechImg
+    }
+  ];
 
   const toggleCategory = (id: number) => {
     setActiveCategory(id);
@@ -97,7 +99,7 @@ const OperationsSection = () => {
                           : "text-gray-600 hover:text-gray-900"
                       }`}
                     >
-                      {category.category}
+                      {t(category.categoryKey)}
                     </h3>
                   </div>
                 </button>
@@ -117,7 +119,7 @@ const OperationsSection = () => {
                       
                       {/* Botón VIEW ALL - Solo visible cuando expandido */}
                       <button className="flex items-center gap-2 text-[10px] lg:text-xs uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors mt-3 pt-1.5 group">
-                        VIEW ALL
+                        {t('operations.viewAll')}
                         <ExternalLink className="w-2.5 h-2.5 transition-transform group-hover:translate-x-1" />
                       </button>
                     </div>
@@ -129,7 +131,7 @@ const OperationsSection = () => {
           {/* Galería Derecha - Efecto de Carrusel Estático */}
           <div className="relative w-full md:w-[65%] lg:w-[62%] h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
             <div className="relative w-full h-full flex items-start justify-center pt-0">
-              {operationsData.map((category, index) => {
+              {operationsData.map((category) => {
                 const isActive = activeCategory === category.id;
                 const isPrev = activeCategory === category.id + 1;
                 const isNext = activeCategory === category.id - 1;
@@ -168,7 +170,7 @@ const OperationsSection = () => {
                         {/* Imagen de Fondo */}
                         <img
                           src={category.image}
-                          alt={category.category}
+                          alt={t(category.categoryKey)}
                           className="w-full h-full object-cover"
                         />
 
@@ -188,7 +190,7 @@ const OperationsSection = () => {
                                 backgroundClip: "text",
                               }}
                             >
-                              {category.category}
+                              {t(category.categoryKey)}
                             </h3>
                           </div>
                         )}

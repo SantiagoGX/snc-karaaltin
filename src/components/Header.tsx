@@ -75,7 +75,8 @@ const Header = () => {
   const navItems = [
     { name: t('nav.about'), path: "/about" },
     { name: t('nav.procedures'), path: "/procedures", hasSubmenu: true },
-    { name: t('nav.beforeAfters'), path: "/gallery" },
+    // Before & Afters - hidden for Turkish users
+    ...(i18n.language !== 'tr' ? [{ name: t('nav.beforeAfters'), path: "/gallery" }] : []),
     { name: t('nav.contact'), path: "/contact" },
     { name: t('nav.patientJourney'), path: "/patient-journey" },
     { name: t('nav.learnSurgery'), path: "/learn-surgery" },

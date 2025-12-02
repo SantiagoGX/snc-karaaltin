@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import beforeAfterImg from "@/assets/before-after-bg.jpg";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
 const BeforeAfterSection = () => {
+  const { t, i18n } = useTranslation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,6 +39,11 @@ const BeforeAfterSection = () => {
     };
   }, []);
 
+  // Hide section for Turkish users
+  if (i18n.language === 'tr') {
+    return null;
+  }
+
   return (
     <section 
       ref={sectionRef}
@@ -45,7 +52,7 @@ const BeforeAfterSection = () => {
       {/* Imagen de Fondo */}
       <img
         src={beforeAfterImg}
-        alt="Before and After Results - Dr. Karaaltín Plastic Surgery"
+        alt="Before and After Results - Dr. Karaaltın Plastic Surgery"
         className="absolute inset-0 w-full h-full object-cover scale-up-luxury"
       />
       
@@ -58,7 +65,7 @@ const BeforeAfterSection = () => {
         className="md:hidden absolute bottom-6 right-6 px-6 py-3 rounded-full bg-white/90 backdrop-blur-md border border-gray-200/50 shadow-lg flex items-center justify-center hover:bg-white hover:shadow-xl transition-all duration-300 z-50"
       >
         <span className="text-xs uppercase tracking-widest font-light text-gray-800">
-          VIEW
+          {t('beforeAfter.view')}
         </span>
       </Link>
       
@@ -74,7 +81,7 @@ const BeforeAfterSection = () => {
           }}
         >
           <span className="text-sm lg:text-base uppercase tracking-widest font-light text-gray-800 group-hover:text-gray-900">
-            VIEW
+            {t('beforeAfter.view')}
           </span>
         </Link>
       )}
@@ -85,9 +92,9 @@ const BeforeAfterSection = () => {
           className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-[0.2em] uppercase text-white/90 text-center leading-tight"
           style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
         >
-          BEFORE
+          {t('beforeAfter.title1')}
           <br />
-          & AFTERS
+          {t('beforeAfter.title2')}
         </h2>
       </div>
     </section>

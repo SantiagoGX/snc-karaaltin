@@ -6,7 +6,9 @@ import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 import healthTurkiyeLogo from "@/assets/health-turkiye-logo.png";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isTurkish = i18n.language === 'tr';
+
   return (
     <footer className="bg-[#F6F4EF]">
       <div className="container mx-auto px-8 lg:px-16 py-16">
@@ -32,27 +34,27 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/procedures/face" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Face
+                  {t('footer.face')}
                 </Link>
               </li>
               <li>
                 <Link to="/procedures/body" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Body
+                  {t('footer.body')}
                 </Link>
               </li>
               <li>
                 <Link to="/procedures/breast" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Breast
+                  {t('footer.breast')}
                 </Link>
               </li>
               <li>
                 <Link to="/procedures/nose" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Nose
+                  {t('footer.nose')}
                 </Link>
               </li>
               <li>
                 <Link to="/procedures/face#future-of-face" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  The Future of Face
+                  {t('footer.futureOfFace')}
                 </Link>
               </li>
             </ul>
@@ -66,24 +68,27 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  About
+                  {t('footer.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Contact
+                  {t('footer.contact')}
                 </Link>
               </li>
               <li>
                 <Link to="/learn-surgery" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Want to learn surgery?
+                  {t('footer.learnSurgery')}
                 </Link>
               </li>
-              <li>
-                <Link to="/gallery" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Before & Afters
-                </Link>
-              </li>
+              {/* Hide Before & Afters for Turkish users */}
+              {!isTurkish && (
+                <li>
+                  <Link to="/gallery" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    {t('footer.beforeAfters')}
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 

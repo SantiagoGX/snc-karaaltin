@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import lastCertificate from "@/assets/certificates/last-certificate.png";
 import prsBestPaper from "@/assets/certificates/prs-best-paper.png";
 import asps from "@/assets/certificates/asps.png";
@@ -15,13 +16,15 @@ const certificates = [
 ];
 
 const CertificatesSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-6 lg:pt-8 pb-12 lg:pb-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Title */}
         <div className="text-center mb-12 fade-in">
           <p className="text-xs uppercase tracking-widest text-gray-400 font-light">
-            REWARDS CERTIFICATES MEMBERSHIPS
+            {t('certificates.title')}
           </p>
         </div>
 

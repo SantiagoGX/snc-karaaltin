@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import hospitalRoomImg from "@/assets/facilities/hospital-room.jpg";
 import hotelRoomImg from "@/assets/facilities/hotel-room.jpg";
 import doctorPortraitImg from "@/assets/facilities/dr-karaaltin-new-portrait.jpg";
@@ -18,17 +19,19 @@ const facilities = [
 ];
 
 const FacilitiesSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-8 lg:pt-12 pb-8 lg:pb-12 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título centrado con puntos estilizados */}
         <div className="text-center mb-10 lg:mb-12 float-in">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-[0.3em] flex items-center justify-center gap-4">
-            <span>QUALITY</span>
+            <span>{t('facilities.quality')}</span>
             <span className="text-gold">•</span>
-            <span>EXPERIENCE</span>
+            <span>{t('facilities.experience')}</span>
             <span className="text-gold">•</span>
-            <span>CARE</span>
+            <span>{t('facilities.care')}</span>
           </h2>
         </div>
 
