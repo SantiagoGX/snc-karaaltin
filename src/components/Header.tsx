@@ -328,21 +328,20 @@ const Header = () => {
         {/* Close Button */}
         <button 
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-6 right-6 text-gray-800 hover:text-black transition-colors z-10"
+          className="absolute top-6 right-6 text-gray-800 hover:text-black transition-colors"
           aria-label="Close menu"
         >
           <X className="w-6 h-6" />
         </button>
 
         {/* Menu Items */}
-        <nav className="flex flex-col items-start gap-8 sm:gap-10 p-10 sm:p-16 mt-20 relative z-10">
-          {navItems.map((item, index) => (
+        <nav className="flex flex-col items-start gap-6 p-8 sm:p-12 mt-16">
+          {navItems.map((item) => (
             item.hasSubmenu ? (
               <button
                 key={item.path}
                 onClick={() => setIsProceduresSubmenuOpen(true)}
-                className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black hover:translate-x-3 transition-all duration-300 uppercase text-left tracking-wider"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase text-left"
               >
                 {item.name}
               </button>
@@ -350,7 +349,7 @@ const Header = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className="text-2xl sm:text-3xl font-light text-gray-700 hover:text-black hover:translate-x-3 transition-all duration-300 uppercase tracking-wider"
+                className="text-xl sm:text-2xl font-light text-gray-700 hover:text-black transition-colors uppercase"
                 activeClassName="font-medium text-black"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -359,27 +358,18 @@ const Header = () => {
             )
           ))}
           
-          {/* CTA Button */}
-          <div className="mt-12 w-full max-w-xs">
+          {/* Mobile Book Button in Menu */}
+          <div className="mt-6 w-full">
             <Button 
               variant="outline" 
               size="lg"
-              className="w-full border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-300 py-5 text-base tracking-widest"
+              className="w-full border-2 border-black bg-transparent text-black hover:bg-black hover:text-white transition-all"
               asChild
             >
               <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
-                Talk to Surgeon Directly
+                BOOK NOW
               </NavLink>
             </Button>
-          </div>
-
-          {/* Doctor Logo Watermark */}
-          <div className="absolute bottom-12 left-10 right-10 opacity-8 pointer-events-none">
-            <img 
-              src={logoWhite} 
-              alt="" 
-              className="w-full max-w-[240px] brightness-0"
-            />
           </div>
         </nav>
       </div>
