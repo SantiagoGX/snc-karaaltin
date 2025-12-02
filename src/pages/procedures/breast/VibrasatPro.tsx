@@ -5,16 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
-
 const VibrasatPro = () => {
   const [activeCard, setActiveCard] = useState(0);
   const overviewRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!cardsRef.current) return;
-      
       const cards = cardsRef.current.querySelectorAll('.overview-card');
       cards.forEach((card, index) => {
         const rect = card.getBoundingClientRect();
@@ -23,22 +20,15 @@ const VibrasatPro = () => {
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
       {/* 1. HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img
-          src="/placeholder.svg"
-          alt="Vibrasat Pro Technology Hero"
-          className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]"
-        />
+        <img alt="Vibrasat Pro Technology Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/d52b1132-d479-4541-9e5d-25b5aea5ce40.png" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1 rounded-full text-xs uppercase tracking-widest text-white mb-6 animate-fade-in">
@@ -47,7 +37,9 @@ const VibrasatPro = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
             Vibrasat Pro Technology™
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
             Advanced Power-Assisted Liposuction & Fat Grafting Precision
           </p>
         </div>
@@ -76,20 +68,12 @@ const VibrasatPro = () => {
                   Overview
                 </p>
               </div>
-              <img
-                src={drKaraaltinLogo}
-                alt="Dr. Karaaltin Logo"
-                className="w-48 h-auto opacity-80"
-              />
+              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>
 
             {/* RIGHT: SCROLLABLE CARDS */}
             <div ref={cardsRef} className="space-y-8 min-h-screen">
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 0 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   01 // Vibration-Expansion Technology
                 </h3>
@@ -98,11 +82,7 @@ const VibrasatPro = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 1 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   02 // Smoother Skin Retraction
                 </h3>
@@ -111,11 +91,7 @@ const VibrasatPro = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 2 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   03 // Liposat Pro Plus Peristaltic Pump
                 </h3>
@@ -124,11 +100,7 @@ const VibrasatPro = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 3 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   04 // High-Fidelity Fat Survival
                 </h3>
@@ -137,11 +109,7 @@ const VibrasatPro = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 4 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   05 // Dr. Karaaltin's Sponge Experiment™
                 </h3>
@@ -150,11 +118,7 @@ const VibrasatPro = () => {
                 </p>
               </div>
 
-              <div
-                className={`overview-card-dark ${
-                  activeCard === 5 ? 'shadow-lg border-white/20' : ''
-                }`}
-              >
+              <div className={`overview-card-dark ${activeCard === 5 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
                   06 // Clinically Proven Patient Benefits
                 </h3>
@@ -205,21 +169,13 @@ const VibrasatPro = () => {
                 </ul>
               </div>
               <div className="order-1 lg:order-2 animate-fade-in">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Vibrasat Pro Technology"
-                  className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg"
-                />
+                <img alt="Vibrasat Pro Technology" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/8d47f823-fe6a-4b94-b54e-2dd4320e9525.jpg" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="animate-fade-in">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Precision Contouring"
-                  className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg"
-                />
+                <img alt="Precision Contouring" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/e1b2f457-eb50-499f-8031-a77737c97853.jpg" />
               </div>
               <div className="content-spacing animate-fade-in">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase mb-6">
@@ -249,23 +205,33 @@ const VibrasatPro = () => {
           </h2>
           
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { step: "01", title: "Consultation", description: "Comprehensive body analysis" },
-              { step: "02", title: "Fat Removal", description: "Vibrasat Pro liposuction" },
-              { step: "03", title: "Purification", description: "Cell-preserving processing" },
-              { step: "04", title: "Fat Grafting", description: "Liposat Pro Plus reinjection" },
-              { step: "05", title: "Contour Refinement", description: "Final sculpting" }
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="text-center space-y-4 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {[{
+              step: "01",
+              title: "Consultation",
+              description: "Comprehensive body analysis"
+            }, {
+              step: "02",
+              title: "Fat Removal",
+              description: "Vibrasat Pro liposuction"
+            }, {
+              step: "03",
+              title: "Purification",
+              description: "Cell-preserving processing"
+            }, {
+              step: "04",
+              title: "Fat Grafting",
+              description: "Liposat Pro Plus reinjection"
+            }, {
+              step: "05",
+              title: "Contour Refinement",
+              description: "Final sculpting"
+            }].map((item, index) => <div key={index} className="text-center space-y-4 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                 <div className="text-5xl md:text-6xl font-light text-gray-200">{item.step}</div>
                 <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase">{item.title}</h3>
                 <p className="text-base text-gray-700 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -275,11 +241,7 @@ const VibrasatPro = () => {
         <div className="container mx-auto px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <img 
-                src="/placeholder.svg" 
-                alt="Recovery Process"
-                className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg"
-              />
+              <img alt="Recovery Process" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/f0505104-8b65-4c34-b1d5-f393bdf74d7d.jpg" />
             </div>
             <div className="content-spacing animate-fade-in">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase mb-6">
@@ -288,10 +250,7 @@ const VibrasatPro = () => {
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
                 Less bruising, reduced swelling, enhanced collagen response, and smoother postoperative retraction.
               </p>
-              <Link 
-                to="/contact"
-                className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300">
                 Book a Consultation
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -308,22 +267,29 @@ const VibrasatPro = () => {
           </h2>
           
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { emoji: "💎", title: "HD Liposuction", description: "High-definition contouring patients" },
-              { emoji: "🍑", title: "BBL / Breast Grafting", description: "Fat transfer procedures" },
-              { emoji: "✨", title: "Smooth Contours", description: "Seeking superior skin retraction" },
-              { emoji: "⚡", title: "Fast Healing", description: "Minimal pain and bruising" }
-            ].map((candidate, index) => (
-              <div 
-                key={index} 
-                className="candidate-card-dark text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {[{
+              emoji: "💎",
+              title: "HD Liposuction",
+              description: "High-definition contouring patients"
+            }, {
+              emoji: "🍑",
+              title: "BBL / Breast Grafting",
+              description: "Fat transfer procedures"
+            }, {
+              emoji: "✨",
+              title: "Smooth Contours",
+              description: "Seeking superior skin retraction"
+            }, {
+              emoji: "⚡",
+              title: "Fast Healing",
+              description: "Minimal pain and bruising"
+            }].map((candidate, index) => <div key={index} className="candidate-card-dark text-center" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                 <div className="candidate-icon-dark">{candidate.emoji}</div>
                 <h3 className="candidate-card-title-dark">{candidate.title}</h3>
                 <p className="candidate-card-text-dark">{candidate.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -335,10 +301,7 @@ const VibrasatPro = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase mb-8">
               See smooth contouring & grafting results
             </h2>
-            <Link 
-              to="/gallery"
-              className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300"
-            >
+            <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300">
               View Before & After Gallery
               <ChevronRight className="w-4 h-4" />
             </Link>
@@ -351,8 +314,6 @@ const VibrasatPro = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default VibrasatPro;
