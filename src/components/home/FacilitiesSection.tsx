@@ -26,7 +26,7 @@ const FacilitiesSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Título centrado con puntos estilizados */}
         <div className="text-center mb-10 lg:mb-12 float-in">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-light uppercase tracking-[0.3em] flex items-center justify-center gap-4">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-serif font-light uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] lg:tracking-[0.3em] flex items-center justify-center gap-2 sm:gap-3 md:gap-4 flex-wrap">
             <span>{t('facilities.quality')}</span>
             <span className="text-gold">•</span>
             <span>{t('facilities.experience')}</span>
