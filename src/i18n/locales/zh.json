@@ -10,8 +10,93 @@
     "talkToSurgeon": "直接与外科医生交流"
   },
   "hero": {
-    "title": "伊斯坦布尔世界级整形外科，引领创新",
-    "subtitle": "超过30年的世界级整形外科经验。"
+    "titlePart1": "世界级",
+    "titleMiddle": "伊斯坦布尔整形外科，",
+    "titlePart2": "引领创新"
+  },
+  "aboutDoctor": {
+    "welcome": "欢迎来到 Karaaltın 医生诊所",
+    "title": "了解我们",
+    "description": "Karaaltın 医生是双胞胎的父亲，也是一位成功妻子（Cerrapasa 大学医学院副院长）的丈夫。他于 1972 年出生在伊拉克基尔库克，是土耳其后裔。在他只有六个月大时，他的家人移居美国。1976 年至 1988 年间，Karaaltin 医生在印第安纳州西拉法叶和洛杉矶奥兰治县完成了小学和中学教育。"
+  },
+  "signatureProcedures": {
+    "title": "特色手术",
+    "learnMore": "了解更多",
+    "bookNow": "立即预约",
+    "procedures": {
+      "rhinoplasty": {
+        "titleNormal": "智能",
+        "titleBold": "模板鼻整形术",
+        "description": "鼻整形术中的智能模板正在彻底改变外科医生处理这一精细手术的方式。专注于持久性、可预测性和后期结果的可靠性。"
+      },
+      "twirlBra": {
+        "titleNormal": "Twirl",
+        "titleBold": "内置胸罩技术",
+        "description": "隆胸和提乳手术在改善乳房美学、舒适度和自信心方面需求广泛。Twirl 内置胸罩技术直接解决这些问题。"
+      },
+      "vibrasatPro": {
+        "titleNormal": "",
+        "titleBold": "Vibrasat Pro 技术",
+        "description": "Vibrasat Pro™ 和 Liposat Pro Plus 代表了身体塑形的新时代，将先进的振动扩张技术与专门的蠕动泵相结合。"
+      },
+      "kGlide": {
+        "titleNormal": "K-Glide™",
+        "titleBold": "快速隆胸",
+        "description": "探索 K-Glide™ 快速隆胸术——由著名整形外科医生 Karaaltin 教授开发的突破性 30 分钟手术。"
+      }
+    }
+  },
+  "certificates": {
+    "title": "奖项 证书 会员资格"
+  },
+  "differentiators": {
+    "title": "为什么选择 Karaaltın 医生？",
+    "qualifiedDoctors": {
+      "title": "资深医生",
+      "description": "我们的团队由代表几乎所有医学专业的最佳医疗专业人员组成，为您和您的家人提供最高水平的护理。"
+    },
+    "modernEquipment": {
+      "title": "现代设备",
+      "description": "我们使用最新的设备和技术来提升我们的医疗解决方案水平，并为客户保证最佳体验。"
+    },
+    "individualApproach": {
+      "title": "个性化方法",
+      "description": "得益于我们在 Karaaltın 诊所应用的个性化方法，我们的患者获得了更好的医疗服务，旨在满足他们的个人健康需求和预算。"
+    },
+    "patientCare": {
+      "title": "以患者为中心的护理",
+      "description": "我们的医务人员随时准备为您提供个性化的医疗建议，旨在满足您的个人健康需求。"
+    }
+  },
+  "facilities": {
+    "quality": "质量",
+    "experience": "经验",
+    "care": "关怀"
+  },
+  "operations": {
+    "theBody": "身体",
+    "theBreast": "胸部",
+    "theNose": "鼻子",
+    "theFace": "面部",
+    "futureOfFace": "面部的未来",
+    "signatureTechniques": "特色技术",
+    "viewAll": "查看全部"
+  },
+  "beforeAfter": {
+    "title1": "术前",
+    "title2": "术后",
+    "view": "查看"
+  },
+  "reviews": {
+    "title": "真实患者体验",
+    "leaveReview": "留下 Google 评论"
+  },
+  "contactCta": {
+    "title": "开始",
+    "description": "准备好与 Karaaltın 医生迈出下一步并预约咨询吗？",
+    "callText": "通过致电办公室开始：",
+    "orText": "或填写我们的在线联系表格来安排您的预约。",
+    "bookNow": "立即预约"
   },
   "footer": {
     "procedures": "手术项目",
@@ -21,7 +106,134 @@
     "subscribe": "订阅",
     "getDirections": "获取路线",
     "bookNow": "立即预约",
-    "copyright": "版权所有。"
+    "copyright": "版权所有。",
+    "face": "面部",
+    "body": "身体",
+    "breast": "胸部",
+    "nose": "鼻子",
+    "futureOfFace": "面部的未来",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "learnSurgery": "想学习外科手术吗？",
+    "beforeAfters": "术前术后"
+  },
+  "about": {
+    "heroSubtitle": "教授 • 外科医生 • 创新者",
+    "heroTitle": "Karaaltin 教授医生",
+    "heroDescription": "全球知名整形与重建外科医生",
+    "globalJourney": "全球之旅",
+    "educatorLeader": "教育者与领导者",
+    "innovations": "创新",
+    "globalRecognition": "全球认可",
+    "pushingBoundaries": "突破界限",
+    "advocateOfSafety": "安全倡导者",
+    "awards": "奖项",
+    "meetOurTeam": "认识我们的团队",
+    "patientRepresentatives": "患者代表",
+    "patientRepresentativesDesc": "我们的多语言团队在您旅程的每一步为您提供指导。",
+    "dedicatedNurses": "专职护士",
+    "dedicatedNursesDesc": "经验丰富的手术护士在您整个康复期间提供贴心护理。",
+    "medicalCoordinators": "医疗协调员",
+    "medicalCoordinatorsDesc": "专业协调员处理从旅行到住宿的所有后勤事宜。",
+    "ctaTitle": "准备开始您的旅程了吗？",
+    "ctaDescription": "与 Karaaltin 教授预约咨询，讨论您的目标并了解我们如何帮助您实现它们。",
+    "bookConsultation": "预约咨询"
+  },
+  "patientJourney": {
+    "heroSubtitle": "您的医疗之旅 • 伊斯坦布尔",
+    "heroTitle": "您在伊斯坦布尔的旅程",
+    "heroDescription": "为舒适、安全和世界级护理设计的无缝 7 天体验。",
+    "startYourJourney": "开始您的旅程",
+    "introTitle": "结构化、安全且奢华的患者体验",
+    "introDescription": "您的旅程旨在从您降落伊斯坦布尔的那一刻起到您回家的那一刻，提供全面的医疗支持、舒适和安心。",
+    "timelineTitle": "您的 7 天体验",
+    "whyChooseTitle": "患者为什么选择我们",
+    "days": {
+      "day1": {
+        "day": "第 1 天",
+        "title": "抵达与咨询",
+        "description": "您抵达伊斯坦布尔，接受 VIP 交通前往诊所进行初次医疗咨询和术前检查，然后舒适地入住我们的五星级合作酒店。"
+      },
+      "day2": {
+        "day": "第 2 天",
+        "title": "手术日",
+        "description": "最终咨询、准备和您的手术。手术后，您返回酒店在医疗监督下休息。"
+      },
+      "day3": {
+        "day": "第 3 天",
+        "title": "早期恢复与护士访视",
+        "description": "您在酒店休息，护士进行早期术后检查，提供用药指导并支持您的康复。"
+      },
+      "day4": {
+        "day": "第 4 天",
+        "title": "休息与轻度活动",
+        "description": "用于轻度运动、补水和平静恢复的休养日。可选择在酒店短途散步或安静休息。"
+      },
+      "day5": {
+        "day": "第 5 天",
+        "title": "术后评估",
+        "description": "与医疗团队进行全面的术后检查：伤口评估、进展审查和个性化恢复指导。"
+      },
+      "day6": {
+        "day": "第 6 天",
+        "title": "（轻松）探索伊斯坦布尔",
+        "description": "如果团队批准，您可以在继续康复的同时享受短暂、轻松的外出，体验伊斯坦布尔的美丽。"
+      },
+      "day7": {
+        "day": "第 7 天",
+        "title": "最终检查与离境",
+        "description": "离境前进行最终医疗评估。之后，我们将护送您前往机场，并提供终身售后支持。"
+      }
+    },
+    "whyChoose": {
+      "excellence": {
+        "title": "医疗卓越",
+        "subtitle": "具有经过验证的结果和国际认证的世界级外科专业知识。"
+      },
+      "luxury": {
+        "title": "奢华体验",
+        "subtitle": "在您逗留期间提供五星级住宿、VIP 接送和个性化礼宾服务。"
+      },
+      "support": {
+        "title": "专属国际支持",
+        "subtitle": "多语言协调员全天候 24/7 可用，在您的手术前、期间和之后为您提供帮助。"
+      }
+    }
+  },
+  "learnSurgery": {
+    "heroTitle": "Endochor 学院 — 与 Karaaltin 教授学习高级面部手术",
+    "heroDescription": "实践培训、QL 医生指导和高级 Endochor® 植入物教育。",
+    "applyForTraining": "申请培训",
+    "whatIsTitle": "什么是 Endochor 学院？",
+    "whatIsDescription": "Endochor 学院是由 Mehmet Veli Karaaltin 教授领导的高级外科教育平台，他是 Endochor® 植入物的官方 QL 医生。来自世界各地的外科医生学习高精度解剖技术、基于植入物的提升系统和微创面部年轻化。",
+    "qlDoctorTitle": "QL 医生的角色"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们随时为您提供帮助。请联系我们的诊所进行咨询、提问或预约。",
+    "address": "地址",
+    "phone": "电话",
+    "hours": "营业时间",
+    "getDirections": "获取路线",
+    "textOurOffice": "发送消息给我们的办公室",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "电子邮件",
+    "phoneNumber": "电话",
+    "height": "身高（可选）",
+    "weight": "体重（可选）",
+    "areaOfInterest": "感兴趣的领域/手术",
+    "selectProcedure": "选择一个手术...",
+    "concerns": "顾虑",
+    "concernsPlaceholder": "请描述您的顾虑或问题...",
+    "imageUploads": "图片上传",
+    "frontView": "正面视图",
+    "sideView": "侧面视图",
+    "otherSideView": "另一侧视图",
+    "additionalPhoto": "额外照片（可选）",
+    "privacyNotice": "您的信息是保密的，仅用于协助您的咨询。",
+    "submitButton": "开始您的旅程",
+    "acceptedFormats": "接受的格式：jpg、png、pdf、jpeg、heif。最大 20MB。"
   },
   "common": {
     "viewProcedure": "查看手术",
