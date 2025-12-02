@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
-import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
 import {
@@ -157,19 +157,10 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${colors.bg}`}>
       <nav className="container mx-auto px-4 lg:px-8">
         <div className={`relative flex items-center justify-center transition-all duration-300 ${colors.headerHeight}`}>
-          {/* Left: Social Icons ABOVE Decorative Line */}
+          {/* Left: Social Icons ABOVE Decorative Line - DESKTOP ONLY */}
           <div className="hidden lg:flex absolute left-0 flex-col items-start gap-3">
-            {/* Iconos ARRIBA */}
+            {/* Iconos - Solo 3: Instagram, YouTube, WhatsApp */}
             <div className="flex items-center gap-4">
-              <a 
-                href="https://x.com/drkaraaltin" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
-                aria-label="Twitter"
-              >
-                <FaXTwitter style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
-              </a>
               <a 
                 href="https://www.instagram.com/profdrk/" 
                 target="_blank"
@@ -180,24 +171,6 @@ const Header = () => {
                 <FaInstagram style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
               <a 
-                href="https://www.facebook.com/drkaraaltin/?locale=tr_TR" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
-                aria-label="Facebook"
-              >
-                <FaFacebookF style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/company/dr-karaaltin-clinic/?originalSubdomain=tr" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
-              </a>
-              <a 
                 href="https://www.youtube.com/@drkaraaltin" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -206,9 +179,18 @@ const Header = () => {
               >
                 <FaYoutube style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
               </a>
+              <a 
+                href="https://wa.me/905465533285" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`w-9 h-9 flex items-center justify-center rounded-sm transition-all ${colors.iconBg}`}
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp style={{ color: colors.iconColor }} className="w-5 h-5 transition-colors" />
+              </a>
             </div>
-            {/* Línea ABAJO - MUY LARGA */}
-            <div className={`w-[280px] xl:w-[380px] h-[1px] ${colors.line} transition-colors duration-300`} />
+            {/* Línea ABAJO */}
+            <div className={`w-[180px] xl:w-[240px] h-[1px] ${colors.line} transition-colors duration-300`} />
           </div>
 
           {/* Center: Logo */}
@@ -220,7 +202,7 @@ const Header = () => {
             />
           </NavLink>
 
-          {/* Right: Buttons ABOVE Decorative Line */}
+          {/* Right: Buttons ABOVE Decorative Line - DESKTOP ONLY */}
           <div className="hidden lg:flex absolute right-0 flex-col items-end gap-3">
             {/* Botones ARRIBA */}
             <div className="flex items-center gap-4">
@@ -235,7 +217,7 @@ const Header = () => {
                     <ChevronDown className="h-4 w-4" />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuContent align="end" className="w-48 bg-white">
                   {languages.map((lang) => (
                     <DropdownMenuItem
                       key={lang.code}
@@ -273,47 +255,12 @@ const Header = () => {
                 <Menu className="h-6 w-6" />
               </button>
             </div>
-            {/* Línea ABAJO - MUY LARGA */}
+            {/* Línea ABAJO */}
             <div className={`w-[220px] xl:w-[320px] h-[1px] ${colors.line} transition-colors duration-300`} />
           </div>
 
-          {/* Mobile: Language + Book Now + Hamburger */}
-          <div className="lg:hidden absolute right-0 flex items-center gap-3">
-            {/* Language Switcher Mobile */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button
-                  className={`flex items-center gap-1 px-3 py-2 border-2 ${colors.border} rounded-sm bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all`}
-                >
-                  <Globe className="h-4 w-4" />
-                  <span className="text-sm">{selectedLanguage.flag}</span>
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
-                {languages.map((lang) => (
-                  <DropdownMenuItem
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang)}
-                    className="cursor-pointer"
-                  >
-                    <span className="mr-2">{lang.flag}</span>
-                    <span>{lang.label}</span>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Button 
-              variant="outline" 
-              size="lg"
-              className={`hidden md:inline-flex border-2 ${colors.border} bg-transparent ${colors.text} ${colors.btnBg} ${colors.btnText} transition-all px-6`}
-              asChild
-            >
-              <NavLink to="/contact">
-                {t('nav.bookNow')}
-              </NavLink>
-            </Button>
-            
+          {/* Mobile: SOLO Logo + Hamburger */}
+          <div className="lg:hidden absolute right-0 flex items-center">
             <button
               className={`p-2 ${colors.text} transition-colors`}
               onClick={() => {
@@ -341,7 +288,7 @@ const Header = () => {
       {/* Overlay Menu Panel */}
       <div className={`
         fixed top-0 right-0 h-full w-full sm:w-96 bg-white/95 backdrop-blur-lg 
-        transform transition-transform duration-300 z-50
+        transform transition-transform duration-300 z-50 overflow-y-auto
         ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
       `}>
         {/* Close Button */}
@@ -354,7 +301,7 @@ const Header = () => {
         </button>
 
         {/* Menu Items */}
-        <nav className="flex flex-col items-start gap-6 p-8 sm:p-12 mt-16">
+        <nav className="flex flex-col items-start gap-5 p-8 sm:p-12 mt-16">
           {navItems.map((item, index) => (
             item.hasSubmenu ? (
               <button
@@ -384,7 +331,7 @@ const Header = () => {
           ))}
           
           {/* Mobile Book Button in Menu */}
-          <div className="mt-6 w-full">
+          <div className="mt-4 w-full">
             <Button 
               variant="outline" 
               size="lg"
@@ -396,9 +343,64 @@ const Header = () => {
               </NavLink>
             </Button>
           </div>
+
+          {/* Language Selector - INSIDE HAMBURGER MENU */}
+          <div className="mt-6 w-full">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-3">{t('nav.language') || 'Language'}</p>
+            <div className="flex gap-2">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => handleLanguageChange(lang)}
+                  className={`px-4 py-2 text-sm border rounded-sm transition-all ${
+                    selectedLanguage.code === lang.code
+                      ? 'bg-gray-900 text-white border-gray-900'
+                      : 'bg-transparent text-gray-700 border-gray-300 hover:border-gray-900'
+                  }`}
+                >
+                  {lang.flag}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Media Icons - INSIDE HAMBURGER MENU */}
+          <div className="mt-6 w-full">
+            <p className="text-xs uppercase tracking-widest text-gray-400 mb-3">{t('nav.followUs') || 'Follow Us'}</p>
+            <div className="flex gap-4">
+              <a 
+                href="https://www.instagram.com/profdrk/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@drkaraaltin" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/905465533285" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full border border-green-500 text-green-600 hover:bg-green-500 hover:text-white transition-all"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+              </a>
+            </div>
+            <p className="text-xs text-gray-500 mt-2">WhatsApp: +90 546 553 32 85</p>
+          </div>
           
           {/* Doctor Logo at bottom */}
-          <div className="mt-8">
+          <div className="mt-6">
             <img 
               src={logoWhite} 
               alt="Dr. Karaaltın" 
@@ -424,58 +426,61 @@ const Header = () => {
           <span>→</span>
         </button>
 
-        {/* Mega Menu Content */}
-        <div className="p-8 sm:p-12 mt-16">
-          <h3 className="text-xs uppercase tracking-widest text-gray-500 font-light mb-8">
-            All Procedures
-          </h3>
+        {/* Procedures Content */}
+        <div className="p-8 sm:p-12 mt-12">
+          <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 font-light mb-8">
+            {t('nav.procedures')}
+          </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-12 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {procedureCategories.map((category) => (
               <div key={category.id} className="space-y-4">
+                {/* Category Title - Clickable */}
                 <NavLink
                   to={`/procedures/${category.id}`}
-                  className="text-lg uppercase tracking-wide text-gray-900 mb-4 flex items-center gap-2 group hover:text-black transition-colors"
                   onClick={() => {
                     setIsProceduresSubmenuOpen(false);
                     setIsMenuOpen(false);
                   }}
+                  className="text-lg font-semibold text-gray-900 hover:text-gray-600 transition-colors uppercase tracking-wide block"
                 >
-                  <h4 className="font-semibold">{category.name}</h4>
-                  <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  {category.name}
                 </NavLink>
                 
-                <div className="space-y-3">
-                  {/* Procedures with pages - shown first */}
+                {/* Procedures List */}
+                <ul className="space-y-2">
+                  {/* Procedures WITH pages - Bold with arrow */}
                   {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withPage.map((procedure) => (
-                    <NavLink
-                      key={procedure.path}
-                      to={procedure.path}
-                      className="text-sm text-gray-700 hover:text-black transition-colors flex items-center gap-2 group"
-                      onClick={() => {
-                        setIsProceduresSubmenuOpen(false);
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      <span className="font-semibold">{procedure.name}</span>
-                      <span className="text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                    </NavLink>
+                    <li key={procedure.path}>
+                      <NavLink
+                        to={procedure.path}
+                        onClick={() => {
+                          setIsProceduresSubmenuOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="text-sm text-gray-700 hover:text-black transition-colors font-bold group flex items-center gap-1"
+                      >
+                        {procedure.name}
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                      </NavLink>
+                    </li>
                   ))}
                   
-                  {/* Procedures without pages - shown after */}
+                  {/* Procedures WITHOUT pages - Regular weight, opens popup */}
                   {proceduresByCategory[category.id as keyof typeof proceduresByCategory].withoutPage.map((procedure) => (
-                    <button
-                      key={procedure}
-                      onClick={() => {
-                        setSelectedProcedureName(procedure);
-                        setShowContactPopup(true);
-                      }}
-                      className="text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer text-left block"
-                    >
-                      {procedure}
-                    </button>
+                    <li key={procedure}>
+                      <button
+                        onClick={() => {
+                          setSelectedProcedureName(procedure);
+                          setShowContactPopup(true);
+                        }}
+                        className="text-sm text-gray-600 hover:text-black transition-colors text-left"
+                      >
+                        {procedure}
+                      </button>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
@@ -486,31 +491,31 @@ const Header = () => {
       <Dialog open={showContactPopup} onOpenChange={setShowContactPopup}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-xl font-light tracking-wide uppercase">
-              {selectedProcedureName}
-            </DialogTitle>
-            <DialogDescription className="text-gray-600 pt-4">
-              To learn more about this procedure and view before & after results, please schedule a consultation with Dr. Karaaltın directly.
+            <DialogTitle className="text-xl font-serif">{selectedProcedureName}</DialogTitle>
+            <DialogDescription className="text-gray-600 pt-2">
+              For more information about this procedure, please contact Dr. Karaaltın's clinic directly to schedule a consultation.
             </DialogDescription>
           </DialogHeader>
-          <div className="flex flex-col gap-4 pt-4">
-            <Button
-              onClick={() => {
-                setShowContactPopup(false);
-                setIsProceduresSubmenuOpen(false);
-                setIsMenuOpen(false);
-                navigate('/contact');
-              }}
-              className="w-full bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs py-6"
-            >
-              Contact Dr. Karaaltın
+          <div className="flex flex-col gap-3 mt-4">
+            <Button asChild className="w-full">
+              <NavLink 
+                to="/contact" 
+                onClick={() => {
+                  setShowContactPopup(false);
+                  setIsProceduresSubmenuOpen(false);
+                  setIsMenuOpen(false);
+                }}
+              >
+                Contact Dr. Karaaltın
+              </NavLink>
             </Button>
-            <button
+            <Button 
+              variant="outline" 
               onClick={() => setShowContactPopup(false)}
-              className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
+              className="w-full"
             >
-              Maybe Later
-            </button>
+              Close
+            </Button>
           </div>
         </DialogContent>
       </Dialog>

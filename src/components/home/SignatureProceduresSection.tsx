@@ -70,7 +70,7 @@ const SignatureProceduresSection = () => {
           </p>
         </div>
 
-        <div className="relative px-16 lg:px-20">
+        <div className="relative px-4 sm:px-8 md:px-12 lg:px-16">
           {/* Navigation Arrows - Positioned at edges */}
           <button
             onClick={scrollPrev}
