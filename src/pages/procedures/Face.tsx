@@ -203,7 +203,7 @@ const Face = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.3s'
                 }}>
-                    <img src="/placeholder.svg" alt="MACS Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="MACS Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/973c5b76-0f30-47ab-b221-24bbfd601c62.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
@@ -218,7 +218,7 @@ const Face = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.35s'
                 }}>
-                    <img src="/placeholder.svg" alt="EndoChor™-Assisted Mid-Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="EndoChor™-Assisted Mid-Face Lift" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/0a10f2b7-ea9f-453b-827e-fb8658416133.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
