@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import { Button } from "@/components/ui/button";
+import { Award, Crown, Globe } from "lucide-react";
 interface JourneyDay {
   id: number;
   day: string;
@@ -457,7 +458,7 @@ const PatientJourney = () => {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
                 boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
               }}>
-                  <img src="/placeholder.svg" alt="Medical Excellence Icon" className="w-10 h-10 object-contain" />
+                  <Award className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
                 fontFamily: 'Cormorant Garamond, serif'
@@ -476,7 +477,7 @@ const PatientJourney = () => {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
                 boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
               }}>
-                  <img src="/placeholder.svg" alt="Luxury Experience Icon" className="w-10 h-10 object-contain" />
+                  <Crown className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
                 fontFamily: 'Cormorant Garamond, serif'
@@ -495,7 +496,7 @@ const PatientJourney = () => {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
                 boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
               }}>
-                  <img src="/placeholder.svg" alt="International Support Icon" className="w-10 h-10 object-contain" />
+                  <Globe className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
                 fontFamily: 'Cormorant Garamond, serif'
