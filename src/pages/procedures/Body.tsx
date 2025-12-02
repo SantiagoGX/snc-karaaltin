@@ -200,7 +200,7 @@ const Body = () => {
                   <div className="group relative h-[500px] overflow-hidden fade-in" style={{
                   animationDelay: '0.35s'
                 }}>
-                    <img src="/placeholder.svg" alt="Post-Weight Loss Body Contouring" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" />
+                    <img alt="Post-Weight Loss Body Contouring" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/4b0b7287-871f-4326-9d52-6f15a2528db0.jpg" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
