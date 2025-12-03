@@ -129,33 +129,45 @@ const InvertedNippleRepair = () => {
               {/* Center Image */}
               <img alt="Nipple Anatomy" className="w-full h-full object-cover rounded-lg" src="/lovable-uploads/04fa44d1-1355-49df-82a3-730e067b1b2c.png" />
 
+              {/* Callouts - Desktop Only */}
               {/* Top Left Callout */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="hidden md:block absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[0].text}
                 </p>
               </div>
 
               {/* Top Right Callout */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="hidden md:block absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[1].text}
                 </p>
               </div>
 
               {/* Bottom Left Callout */}
-              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="hidden md:block absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[2].text}
                 </p>
               </div>
 
               {/* Bottom Right Callout */}
-              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
+              <div className="hidden md:block absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg max-w-[200px]">
                 <p className="text-sm font-light text-foreground">
                   {anatomyCallouts[3].text}
                 </p>
               </div>
+            </div>
+            
+            {/* Mobile Layout - Grid below image */}
+            <div className="md:hidden grid grid-cols-1 gap-3 mt-6">
+              {anatomyCallouts.map((callout, index) => (
+                <div key={index} className="bg-white/95 backdrop-blur-sm px-4 py-3 rounded-lg shadow-sm">
+                  <p className="text-sm font-light text-foreground">
+                    {callout.text}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -313,7 +313,7 @@ const Breast = () => {
           </h2>
           
           {/* Premium Layout: Central Image with Corner Items */}
-          <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
+          <div className="relative min-h-[300px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
             {/* Central Anatomical Image - Editable */}
             <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{
             animationDelay: '0.2s'
@@ -321,9 +321,9 @@ const Breast = () => {
               <img alt="Breast anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/6f798aee-3b2a-42e6-b2c6-05fbfb0547df.png" />
             </div>
             
-            {/* 4 Corner Items */}
+            {/* 4 Corner Items - Desktop Only */}
             {/* Top Left - Skin & Soft Tissue */}
-            <div className="absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
+            <div className="hidden md:block absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
             animationDelay: '0.3s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Skin & Soft Tissue</h3>
@@ -333,7 +333,7 @@ const Breast = () => {
             </div>
             
             {/* Top Right - Fat Volume */}
-            <div className="absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
+            <div className="hidden md:block absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
             animationDelay: '0.4s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Fat Volume</h3>
@@ -343,7 +343,7 @@ const Breast = () => {
             </div>
             
             {/* Bottom Left - Glandular Tissue */}
-            <div className="absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
+            <div className="hidden md:block absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
             animationDelay: '0.5s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Glandular Tissue</h3>
@@ -353,11 +353,39 @@ const Breast = () => {
             </div>
             
             {/* Bottom Right - Chest Wall & Structure */}
-            <div className="absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
+            <div className="hidden md:block absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
             animationDelay: '0.6s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Chest Wall & Structure</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                Variations in ribcage and posture influence final results.
+              </p>
+            </div>
+          </div>
+          
+          {/* Mobile Layout - Grid below image */}
+          <div className="md:hidden grid grid-cols-1 gap-4 mt-8">
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Skin & Soft Tissue</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Changes in elasticity, firmness, and projection over time.
+              </p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Fat Volume</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Redistribution or loss that alters shape and fullness.
+              </p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Glandular Tissue</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Drooping, asymmetry, or density changes.
+              </p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Chest Wall & Structure</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Variations in ribcage and posture influence final results.
               </p>
             </div>
