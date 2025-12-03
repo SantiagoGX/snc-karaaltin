@@ -152,7 +152,7 @@ const Nose = () => {
               </h2>
               
               {/* Premium Layout: Central Image with Corner Items */}
-              <div className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center">
+              <div className="relative min-h-[300px] md:min-h-[600px] lg:min-h-[700px] flex items-center justify-center">
                 {/* Central Anatomical Image - Editable */}
                 <div className="w-full max-w-sm md:max-w-md aspect-[3/4] fade-in-up" style={{
                 animationDelay: '0.2s'
@@ -160,9 +160,9 @@ const Nose = () => {
                   <img alt="Nasal anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/d2b12318-fc6d-49b4-912e-e93f511ea865.png" />
                 </div>
                 
-                {/* 4 Corner Items */}
+                {/* 4 Corner Items - Desktop Only */}
                 {/* Top Left - Bone & Cartilage Framework */}
-                <div className="absolute top-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{
+                <div className="hidden md:block absolute top-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{
                 animationDelay: '0.3s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
@@ -174,7 +174,7 @@ const Nose = () => {
                 </div>
                 
                 {/* Top Right - Soft Tissue Envelope */}
-                <div className="absolute top-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{
+                <div className="hidden md:block absolute top-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{
                 animationDelay: '0.4s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
@@ -186,7 +186,7 @@ const Nose = () => {
                 </div>
                 
                 {/* Bottom Left - Airway Support */}
-                <div className="absolute bottom-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{
+                <div className="hidden md:block absolute bottom-0 left-0 w-56 md:w-72 space-y-2 fade-in-up" style={{
                 animationDelay: '0.5s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
@@ -198,13 +198,41 @@ const Nose = () => {
                 </div>
                 
                 {/* Bottom Right - Ethnic & Structural Variations */}
-                <div className="absolute bottom-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{
+                <div className="hidden md:block absolute bottom-0 right-0 w-56 md:w-72 space-y-2 text-right fade-in-up" style={{
                 animationDelay: '0.6s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
                     Ethnic & Structural Variations
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                    Essential for personalized planning.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Mobile Layout - Grid below image */}
+              <div className="md:hidden grid grid-cols-1 gap-4 mt-8">
+                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Bone & Cartilage Framework</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Defines projection, bridge shape, and support.
+                  </p>
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Soft Tissue Envelope</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Thickness and elasticity influence refinement.
+                  </p>
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Airway Support</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Septum and valve integrity determine breathing quality.
+                  </p>
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Ethnic & Structural Variations</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     Essential for personalized planning.
                   </p>
                 </div>

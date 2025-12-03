@@ -220,7 +220,7 @@ const Body = () => {
           </h2>
           
           {/* Premium Layout: Central Image with Corner Items */}
-          <div className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
+          <div className="relative min-h-[300px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
             {/* Central Anatomical Image - Editable */}
             <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{
             animationDelay: '0.2s'
@@ -228,9 +228,9 @@ const Body = () => {
               <img alt="Body anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/af203118-5e11-448c-935e-52b1f419c7cf.png" />
             </div>
             
-            {/* 4 Corner Items */}
+            {/* 4 Corner Items - Desktop Only */}
             {/* Top Left - Skin & Tissue */}
-            <div className="absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
+            <div className="hidden md:block absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
             animationDelay: '0.3s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Skin & Tissue</h3>
@@ -241,7 +241,7 @@ const Body = () => {
             </div>
             
             {/* Top Right - Fat Distribution */}
-            <div className="absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
+            <div className="hidden md:block absolute top-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
             animationDelay: '0.4s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Fat Distribution</h3>
@@ -252,7 +252,7 @@ const Body = () => {
             </div>
             
             {/* Bottom Left - Muscle Foundation */}
-            <div className="absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
+            <div className="hidden md:block absolute bottom-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{
             animationDelay: '0.5s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Muscle Foundation</h3>
@@ -263,13 +263,41 @@ const Body = () => {
             </div>
             
             {/* Bottom Right - Body Proportions */}
-            <div className="absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
+            <div className="hidden md:block absolute bottom-0 right-0 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{
             animationDelay: '0.6s'
           }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">Body Proportions</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                 Natural aesthetic proportions guide surgical planning to create harmonious, 
                 balanced results that enhance your silhouette.
+              </p>
+            </div>
+          </div>
+          
+          {/* Mobile Layout - Grid below image */}
+          <div className="md:hidden grid grid-cols-1 gap-4 mt-8">
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Skin & Tissue</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Skin elasticity and quality determine the success of body contouring. Understanding tissue characteristics guides treatment planning.
+              </p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Fat Distribution</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Subcutaneous fat patterns vary by genetics, age, and lifestyle. Strategic removal and repositioning create balanced contours.
+              </p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Muscle Foundation</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Underlying musculature provides structural support. Addressing muscle separation enhances results in body contouring procedures.
+              </p>
+            </div>
+            <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+              <h3 className="font-serif font-semibold text-lg text-[#0d1f3a] mb-2">Body Proportions</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Natural aesthetic proportions guide surgical planning to create harmonious, balanced results that enhance your silhouette.
               </p>
             </div>
           </div>
