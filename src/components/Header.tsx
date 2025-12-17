@@ -259,7 +259,34 @@ const Header = () => {
             <div className={`w-[220px] xl:w-[320px] h-[1px] ${colors.line} transition-colors duration-300`} />
           </div>
 
-          {/* Mobile: SOLO Logo + Hamburger */}
+          {/* Mobile: Language LEFT - Logo CENTER - Hamburger RIGHT */}
+          {/* Left: Language Selector */}
+          <div className="lg:hidden absolute left-0 flex items-center">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className={`flex items-center gap-1.5 px-2 py-1.5 border ${colors.border} rounded-sm bg-transparent ${colors.text} transition-all text-xs`}
+                >
+                  <Globe className="h-3.5 w-3.5" />
+                  <span className="font-medium">{selectedLanguage.flag}</span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-40 bg-white">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang.code}
+                    onClick={() => handleLanguageChange(lang)}
+                    className="cursor-pointer text-sm"
+                  >
+                    <span className="mr-2">{lang.flag}</span>
+                    <span>{lang.label}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          {/* Right: Hamburger Menu */}
           <div className="lg:hidden absolute right-0 flex items-center">
             <button
               className={`p-2 ${colors.text} transition-colors`}
