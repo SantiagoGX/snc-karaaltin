@@ -2,7 +2,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+} from "@/components/ui/dropdown-menu";
 
 // Restructured Before & After Dataset - ONE ARRAY PER PROCEDURE
 const beforeAfterData = {
@@ -374,12 +382,12 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {procedure.images.map((imageUrl, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0 px-2">
-                <div className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+              <div key={index} className="flex-[0_0_100%] min-w-0 px-1 md:px-2">
+                <div className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center">
                   <img
                     src={imageUrl}
                     alt={`${procedure.name} - Image ${index + 1}`}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-full object-contain max-h-[500px] md:max-h-[600px] lg:max-h-[700px]"
                     loading="lazy"
                   />
                 </div>
@@ -464,12 +472,82 @@ const Gallery = () => {
       </section>
 
       {/* Main Gallery Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col lg:flex-row gap-12">
+      <section className="py-8 md:py-16 lg:py-24">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12">
+          
+          {/* MOBILE DROPDOWN - Visible only on mobile */}
+          <div className="lg:hidden mb-8">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="w-full flex items-center justify-between px-5 py-4 bg-gray-900 text-white rounded-lg shadow-md">
+                  <span className="font-medium text-base">
+                    {selectedProcedure || "Select a Procedure"}
+                  </span>
+                  <ChevronDown className="w-5 h-5" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                align="start" 
+                className="w-[calc(100vw-2rem)] max-h-[60vh] overflow-y-auto bg-white z-50 shadow-xl"
+              >
+                {/* Face */}
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Face</DropdownMenuLabel>
+                {beforeAfterData.FACE.map((proc) => (
+                  <DropdownMenuItem 
+                    key={proc.name}
+                    onClick={() => handleProcedureClick(proc.name)}
+                    className={`cursor-pointer ${selectedProcedure === proc.name ? 'bg-gray-100 font-medium' : ''}`}
+                  >
+                    {proc.name}
+                  </DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator />
+                
+                {/* Nose */}
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Nose</DropdownMenuLabel>
+                {beforeAfterData.NOSE.map((proc) => (
+                  <DropdownMenuItem 
+                    key={proc.name}
+                    onClick={() => handleProcedureClick(proc.name)}
+                    className={`cursor-pointer ${selectedProcedure === proc.name ? 'bg-gray-100 font-medium' : ''}`}
+                  >
+                    {proc.name}
+                  </DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator />
+                
+                {/* Breast */}
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Breast</DropdownMenuLabel>
+                {beforeAfterData.BREAST.map((proc) => (
+                  <DropdownMenuItem 
+                    key={proc.name}
+                    onClick={() => handleProcedureClick(proc.name)}
+                    className={`cursor-pointer ${selectedProcedure === proc.name ? 'bg-gray-100 font-medium' : ''}`}
+                  >
+                    {proc.name}
+                  </DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator />
+                
+                {/* Body */}
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Body</DropdownMenuLabel>
+                {beforeAfterData.BODY.map((proc) => (
+                  <DropdownMenuItem 
+                    key={proc.name}
+                    onClick={() => handleProcedureClick(proc.name)}
+                    className={`cursor-pointer ${selectedProcedure === proc.name ? 'bg-gray-100 font-medium' : ''}`}
+                  >
+                    {proc.name}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             
-            {/* LEFT SIDEBAR - Sticky Procedure Menu */}
-            <aside className="lg:w-72 lg:sticky lg:top-24 lg:self-start lg:h-[calc(100vh-120px)] lg:overflow-y-auto">
+            {/* LEFT SIDEBAR - Desktop Only */}
+            <aside className="hidden lg:block lg:w-72 lg:sticky lg:top-24 lg:self-start lg:h-[calc(100vh-120px)] lg:overflow-y-auto">
               <div className="bg-gray-50 rounded-lg p-6 shadow-sm space-y-8">
                 
                 {/* FACE PROCEDURES */}
