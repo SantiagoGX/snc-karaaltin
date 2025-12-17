@@ -12,17 +12,23 @@ import {
   DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
 
-// Lightbox Component with Zoom
+// Lightbox Component with Zoom and Navigation
 interface LightboxProps {
-  imageUrl: string;
+  images: string[];
+  currentIndex: number;
   onClose: () => void;
+  onNavigate: (index: number) => void;
 }
 
-const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
+const Lightbox = ({ images, currentIndex, onClose, onNavigate }: LightboxProps) => {
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+
+  const imageUrl = images[currentIndex];
+  const canGoPrev = currentIndex > 0;
+  const canGoNext = currentIndex < images.length - 1;
 
   const handleZoomIn = () => setScale(prev => Math.min(prev + 0.5, 4));
   const handleZoomOut = () => {
@@ -32,6 +38,20 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
   const handleReset = () => {
     setScale(1);
     setPosition({ x: 0, y: 0 });
+  };
+
+  const handlePrev = () => {
+    if (canGoPrev) {
+      handleReset();
+      onNavigate(currentIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (canGoNext) {
+      handleReset();
+      onNavigate(currentIndex + 1);
+    }
   };
 
   // Handle mouse wheel zoom
@@ -107,10 +127,12 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
     setLastTouchDist(0);
   };
 
-  // Close on escape key
+  // Close on escape key, navigate with arrows
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'ArrowRight') handleNext();
     };
     document.addEventListener('keydown', handleKeyDown);
     document.body.style.overflow = 'hidden';
@@ -118,39 +140,64 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
     };
-  }, [onClose]);
+  }, [onClose, currentIndex]);
 
   return (
     <div 
       className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
       onClick={(e) => e.target === e.currentTarget && scale === 1 && onClose()}
     >
-      {/* Close Button */}
+      {/* Close Button - More Prominent */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 z-[110] w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200"
+        className="absolute top-4 right-4 z-[110] w-14 h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
         aria-label="Close fullscreen"
       >
-        <X className="w-6 h-6" />
+        <X className="w-7 h-7" strokeWidth={2.5} />
       </button>
 
+      {/* Navigation Arrows */}
+      {canGoPrev && (
+        <button
+          onClick={handlePrev}
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-[110] w-14 h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
+          aria-label="Previous image"
+        >
+          <ChevronLeft className="w-7 h-7" strokeWidth={2.5} />
+        </button>
+      )}
+      {canGoNext && (
+        <button
+          onClick={handleNext}
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-[110] w-14 h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
+          aria-label="Next image"
+        >
+          <ChevronRight className="w-7 h-7" strokeWidth={2.5} />
+        </button>
+      )}
+
+      {/* Image Counter */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[110] bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 text-gray-900 text-sm font-medium">
+        {currentIndex + 1} / {images.length}
+      </div>
+
       {/* Zoom Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2">
         <button
           onClick={handleZoomOut}
           disabled={scale <= 1}
-          className="w-10 h-10 flex items-center justify-center text-white hover:bg-white/20 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-10 h-10 flex items-center justify-center text-gray-900 hover:bg-gray-200 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Zoom out"
         >
           <ZoomOut className="w-5 h-5" />
         </button>
-        <span className="text-white text-sm font-light min-w-[60px] text-center">
+        <span className="text-gray-900 text-sm font-medium min-w-[60px] text-center">
           {Math.round(scale * 100)}%
         </span>
         <button
           onClick={handleZoomIn}
           disabled={scale >= 4}
-          className="w-10 h-10 flex items-center justify-center text-white hover:bg-white/20 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-10 h-10 flex items-center justify-center text-gray-900 hover:bg-gray-200 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Zoom in"
         >
           <ZoomIn className="w-5 h-5" />
@@ -158,7 +205,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
         {scale > 1 && (
           <button
             onClick={handleReset}
-            className="ml-2 px-3 py-1 text-white text-xs uppercase tracking-wider hover:bg-white/20 rounded-full transition-all"
+            className="ml-2 px-3 py-1 text-gray-900 text-xs uppercase tracking-wider hover:bg-gray-200 rounded-full transition-all"
           >
             Reset
           </button>
@@ -167,7 +214,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
 
       {/* Image Container */}
       <div
-        className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
+        className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing px-20 md:px-24"
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -180,7 +227,7 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
         <img
           src={imageUrl}
           alt="Fullscreen view"
-          className="max-w-[95vw] max-h-[85vh] object-contain select-none transition-transform duration-100"
+          className="max-w-full max-h-[85vh] object-contain select-none transition-transform duration-100"
           style={{
             transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
           }}
@@ -189,11 +236,11 @@ const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
       </div>
 
       {/* Instructions */}
-      <div className="absolute top-4 left-4 text-white/60 text-xs font-light hidden md:block">
-        Scroll to zoom • Drag to pan • ESC to close
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white/60 text-xs font-light hidden md:block">
+        ← → to navigate • Scroll to zoom • Drag to pan • ESC to close
       </div>
-      <div className="absolute top-4 left-4 text-white/60 text-xs font-light md:hidden">
-        Pinch to zoom • Drag to pan
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 text-white/60 text-xs font-light md:hidden text-center">
+        Swipe to navigate • Pinch to zoom
       </div>
     </div>
   );
@@ -536,7 +583,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
@@ -573,7 +620,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
               <div key={index} className="flex-[0_0_100%] min-w-0 px-1 md:px-2">
                 <div 
                   className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center cursor-zoom-in group"
-                  onClick={() => setLightboxImage(imageUrl)}
+                  onClick={() => setLightboxIndex(index)}
                 >
                   <img
                     src={imageUrl}
@@ -624,8 +671,13 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
       </div>
 
       {/* Lightbox */}
-      {lightboxImage && (
-        <Lightbox imageUrl={lightboxImage} onClose={() => setLightboxImage(null)} />
+      {lightboxIndex !== null && (
+        <Lightbox 
+          images={procedure.images} 
+          currentIndex={lightboxIndex} 
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={(index) => setLightboxIndex(index)}
+        />
       )}
     </div>
   );
