@@ -70,21 +70,21 @@ const SignatureProceduresSection = () => {
           </p>
         </div>
 
-        <div className="relative px-4 sm:px-8 md:px-12 lg:px-16">
+        <div className="relative px-0 md:px-12 lg:px-16">
           {/* Navigation Arrows - Positioned at edges */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
+            className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
             aria-label="Previous procedure"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
+            className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-900 bg-white/90 backdrop-blur-sm flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all shadow-lg"
             aria-label="Next procedure"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
 
           <Carousel 
@@ -98,9 +98,9 @@ const SignatureProceduresSection = () => {
             <CarouselContent>
               {procedures.map((procedure) => (
                 <CarouselItem key={procedure.id}>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[300px] lg:min-h-[360px] xl:min-h-[400px]">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch min-h-[auto] lg:min-h-[360px] xl:min-h-[400px]">
                     {/* Left: Content */}
-                    <div className="space-y-3 lg:space-y-4 lg:order-1 flex flex-col justify-center pl-6 lg:pl-10 xl:pl-12 pr-6 lg:pr-8 py-10 lg:py-0 slide-in-left">
+                    <div className="space-y-3 lg:space-y-4 lg:order-1 flex flex-col justify-center px-12 md:pl-10 xl:pl-12 md:pr-8 py-6 lg:py-0 slide-in-left">
                       <h3 className="text-xl lg:text-2xl xl:text-3xl font-serif tracking-wide">
                         <span className="font-light">{t(procedure.titleNormalKey)} </span>
                         <span className="font-semibold">{t(procedure.titleBoldKey)}</span>
