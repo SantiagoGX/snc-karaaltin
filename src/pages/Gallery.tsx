@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronDown, X, ZoomIn, ZoomOut } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,6 +11,193 @@ import {
   DropdownMenuSeparator,
   DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
+
+// Lightbox Component with Zoom
+interface LightboxProps {
+  imageUrl: string;
+  onClose: () => void;
+}
+
+const Lightbox = ({ imageUrl, onClose }: LightboxProps) => {
+  const [scale, setScale] = useState(1);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+
+  const handleZoomIn = () => setScale(prev => Math.min(prev + 0.5, 4));
+  const handleZoomOut = () => {
+    setScale(prev => Math.max(prev - 0.5, 1));
+    if (scale <= 1.5) setPosition({ x: 0, y: 0 });
+  };
+  const handleReset = () => {
+    setScale(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  // Handle mouse wheel zoom
+  const handleWheel = useCallback((e: React.WheelEvent) => {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      setScale(prev => Math.min(prev + 0.2, 4));
+    } else {
+      setScale(prev => {
+        const newScale = Math.max(prev - 0.2, 1);
+        if (newScale <= 1) setPosition({ x: 0, y: 0 });
+        return newScale;
+      });
+    }
+  }, []);
+
+  // Handle drag for panning when zoomed
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (scale > 1) {
+      setIsDragging(true);
+      setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (isDragging && scale > 1) {
+      setPosition({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      });
+    }
+  };
+
+  const handleMouseUp = () => setIsDragging(false);
+
+  // Handle touch events for mobile pinch zoom
+  const [lastTouchDist, setLastTouchDist] = useState(0);
+  
+  const getTouchDistance = (touches: React.TouchList) => {
+    if (touches.length < 2) return 0;
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      setLastTouchDist(getTouchDistance(e.touches));
+    } else if (e.touches.length === 1 && scale > 1) {
+      setIsDragging(true);
+      setDragStart({ x: e.touches[0].clientX - position.x, y: e.touches[0].clientY - position.y });
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      const dist = getTouchDistance(e.touches);
+      if (lastTouchDist > 0) {
+        const delta = (dist - lastTouchDist) * 0.01;
+        setScale(prev => Math.min(Math.max(prev + delta, 1), 4));
+      }
+      setLastTouchDist(dist);
+    } else if (e.touches.length === 1 && isDragging && scale > 1) {
+      setPosition({
+        x: e.touches[0].clientX - dragStart.x,
+        y: e.touches[0].clientY - dragStart.y
+      });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    setLastTouchDist(0);
+  };
+
+  // Close on escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div 
+      className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+      onClick={(e) => e.target === e.currentTarget && scale === 1 && onClose()}
+    >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-[110] w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-200"
+        aria-label="Close fullscreen"
+      >
+        <X className="w-6 h-6" />
+      </button>
+
+      {/* Zoom Controls */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+        <button
+          onClick={handleZoomOut}
+          disabled={scale <= 1}
+          className="w-10 h-10 flex items-center justify-center text-white hover:bg-white/20 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Zoom out"
+        >
+          <ZoomOut className="w-5 h-5" />
+        </button>
+        <span className="text-white text-sm font-light min-w-[60px] text-center">
+          {Math.round(scale * 100)}%
+        </span>
+        <button
+          onClick={handleZoomIn}
+          disabled={scale >= 4}
+          className="w-10 h-10 flex items-center justify-center text-white hover:bg-white/20 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Zoom in"
+        >
+          <ZoomIn className="w-5 h-5" />
+        </button>
+        {scale > 1 && (
+          <button
+            onClick={handleReset}
+            className="ml-2 px-3 py-1 text-white text-xs uppercase tracking-wider hover:bg-white/20 rounded-full transition-all"
+          >
+            Reset
+          </button>
+        )}
+      </div>
+
+      {/* Image Container */}
+      <div
+        className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
+        onWheel={handleWheel}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <img
+          src={imageUrl}
+          alt="Fullscreen view"
+          className="max-w-[95vw] max-h-[85vh] object-contain select-none transition-transform duration-100"
+          style={{
+            transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
+          }}
+          draggable={false}
+        />
+      </div>
+
+      {/* Instructions */}
+      <div className="absolute top-4 left-4 text-white/60 text-xs font-light hidden md:block">
+        Scroll to zoom • Drag to pan • ESC to close
+      </div>
+      <div className="absolute top-4 left-4 text-white/60 text-xs font-light md:hidden">
+        Pinch to zoom • Drag to pan
+      </div>
+    </div>
+  );
+};
 
 // Restructured Before & After Dataset - ONE ARRAY PER PROCEDURE
 const beforeAfterData = {
@@ -349,6 +536,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();
@@ -383,13 +571,22 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
           <div className="flex">
             {procedure.images.map((imageUrl, index) => (
               <div key={index} className="flex-[0_0_100%] min-w-0 px-1 md:px-2">
-                <div className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center">
+                <div 
+                  className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center cursor-zoom-in group"
+                  onClick={() => setLightboxImage(imageUrl)}
+                >
                   <img
                     src={imageUrl}
                     alt={`${procedure.name} - Image ${index + 1}`}
-                    className="w-full h-full object-contain max-h-[500px] md:max-h-[600px] lg:max-h-[700px]"
+                    className="w-full h-full object-contain max-h-[500px] md:max-h-[600px] lg:max-h-[700px] transition-transform duration-300 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
+                  {/* Fullscreen hint overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-light text-gray-800">
+                      Click to view fullscreen
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -425,6 +622,11 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
           </div>
         )}
       </div>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <Lightbox imageUrl={lightboxImage} onClose={() => setLightboxImage(null)} />
+      )}
     </div>
   );
 };
