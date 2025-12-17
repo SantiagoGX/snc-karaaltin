@@ -142,6 +142,44 @@ const Lightbox = ({ images, currentIndex, onClose, onNavigate }: LightboxProps) 
     };
   }, [onClose, currentIndex]);
 
+  // Swipe navigation for mobile
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStartSwipe = (e: React.TouchEvent) => {
+    if (e.touches.length === 1 && scale === 1) {
+      setTouchEnd(null);
+      setTouchStart(e.targetTouches[0].clientX);
+    }
+    // Also handle pinch zoom
+    handleTouchStart(e);
+  };
+
+  const onTouchMoveSwipe = (e: React.TouchEvent) => {
+    if (e.touches.length === 1 && scale === 1) {
+      setTouchEnd(e.targetTouches[0].clientX);
+    }
+    handleTouchMove(e);
+  };
+
+  const onTouchEndSwipe = () => {
+    if (!touchStart || !touchEnd || scale > 1) {
+      handleTouchEnd();
+      return;
+    }
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe && canGoNext) {
+      handleNext();
+    } else if (isRightSwipe && canGoPrev) {
+      handlePrev();
+    }
+    handleTouchEnd();
+  };
+
   return (
     <div 
       className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
@@ -150,17 +188,17 @@ const Lightbox = ({ images, currentIndex, onClose, onNavigate }: LightboxProps) 
       {/* Close Button - More Prominent */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 z-[110] w-14 h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
+        className="absolute top-4 right-4 z-[110] w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
         aria-label="Close fullscreen"
       >
-        <X className="w-7 h-7" strokeWidth={2.5} />
+        <X className="w-6 h-6 md:w-7 md:h-7" strokeWidth={2.5} />
       </button>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Desktop Only */}
       {canGoPrev && (
         <button
           onClick={handlePrev}
-          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-[110] w-14 h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
+          className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-[110] w-14 h-14 bg-white rounded-full items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
           aria-label="Previous image"
         >
           <ChevronLeft className="w-7 h-7" strokeWidth={2.5} />
@@ -169,7 +207,7 @@ const Lightbox = ({ images, currentIndex, onClose, onNavigate }: LightboxProps) 
       {canGoNext && (
         <button
           onClick={handleNext}
-          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-[110] w-14 h-14 bg-white rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
+          className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-[110] w-14 h-14 bg-white rounded-full items-center justify-center text-gray-900 hover:bg-gray-100 transition-all duration-200 shadow-lg"
           aria-label="Next image"
         >
           <ChevronRight className="w-7 h-7" strokeWidth={2.5} />
@@ -182,30 +220,30 @@ const Lightbox = ({ images, currentIndex, onClose, onNavigate }: LightboxProps) 
       </div>
 
       {/* Zoom Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[110] flex items-center gap-2 md:gap-3 bg-white/90 backdrop-blur-sm rounded-full px-3 md:px-4 py-2">
         <button
           onClick={handleZoomOut}
           disabled={scale <= 1}
-          className="w-10 h-10 flex items-center justify-center text-gray-900 hover:bg-gray-200 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-gray-900 hover:bg-gray-200 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Zoom out"
         >
-          <ZoomOut className="w-5 h-5" />
+          <ZoomOut className="w-4 h-4 md:w-5 md:h-5" />
         </button>
-        <span className="text-gray-900 text-sm font-medium min-w-[60px] text-center">
+        <span className="text-gray-900 text-xs md:text-sm font-medium min-w-[50px] md:min-w-[60px] text-center">
           {Math.round(scale * 100)}%
         </span>
         <button
           onClick={handleZoomIn}
           disabled={scale >= 4}
-          className="w-10 h-10 flex items-center justify-center text-gray-900 hover:bg-gray-200 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-gray-900 hover:bg-gray-200 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Zoom in"
         >
-          <ZoomIn className="w-5 h-5" />
+          <ZoomIn className="w-4 h-4 md:w-5 md:h-5" />
         </button>
         {scale > 1 && (
           <button
             onClick={handleReset}
-            className="ml-2 px-3 py-1 text-gray-900 text-xs uppercase tracking-wider hover:bg-gray-200 rounded-full transition-all"
+            className="ml-1 md:ml-2 px-2 md:px-3 py-1 text-gray-900 text-xs uppercase tracking-wider hover:bg-gray-200 rounded-full transition-all"
           >
             Reset
           </button>
@@ -214,20 +252,20 @@ const Lightbox = ({ images, currentIndex, onClose, onNavigate }: LightboxProps) 
 
       {/* Image Container */}
       <div
-        className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing px-20 md:px-24"
+        className="w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing px-4 md:px-24"
         onWheel={handleWheel}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onTouchStart={onTouchStartSwipe}
+        onTouchMove={onTouchMoveSwipe}
+        onTouchEnd={onTouchEndSwipe}
       >
         <img
           src={imageUrl}
           alt="Fullscreen view"
-          className="max-w-full max-h-[85vh] object-contain select-none transition-transform duration-100"
+          className="max-w-full max-h-[80vh] md:max-h-[85vh] object-contain select-none transition-transform duration-100"
           style={{
             transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)`,
           }}
