@@ -351,5 +351,35 @@
     "scheduleConsultation": "预约咨询",
     "back": "返回",
     "allProcedures": "所有手术项目"
+  },
+  "procedures": {
+    "face": {
+      "title": "面部",
+      "subtitle": "面部美容与重建手术",
+      "allProcedures": "所有面部手术"
+    },
+    "body": {
+      "title": "身体",
+      "subtitle": "身体塑形与美容手术",
+      "allProcedures": "所有身体手术"
+    },
+    "breast": {
+      "title": "胸部",
+      "subtitle": "通过先进的手术精确度实现精致的改善、结构和谐和自然效果",
+      "allProcedures": "所有胸部手术"
+    },
+    "nose": {
+      "title": "鼻子",
+      "subtitle": "结合结构、功能和精致美学的精准鼻部手术",
+      "allProcedures": "所有鼻部手术"
+    }
+  },
+  "gallery": {
+    "title": "术前术后",
+    "subtitle": "探索 Karaaltin 教授的真实患者效果",
+    "filterBy": "筛选",
+    "allCategories": "所有分类",
+    "allProcedures": "所有手术",
+    "noResults": "未找到结果"
   }
 }

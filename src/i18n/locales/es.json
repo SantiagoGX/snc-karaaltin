@@ -336,5 +336,78 @@
     "preferredFormat": "Formato de Curso Preferido",
     "additionalNotes": "Notas o Preguntas Adicionales",
     "submitApplication": "Enviar Solicitud"
+  },
+  "procedures": {
+    "face": {
+      "title": "ROSTRO",
+      "subtitle": "Procedimientos Estéticos y Reconstructivos Faciales",
+      "allProcedures": "TODOS LOS PROCEDIMIENTOS FACIALES",
+      "philosophy": "Entendiendo la Filosofía",
+      "philosophyText1": "En la práctica del Dr. Karaaltın, el rejuvenecimiento facial se aborda como un arte y una ciencia. Cada rostro cuenta una historia única, y nuestro objetivo es restaurar y mejorar la belleza natural mientras respetamos las características anatómicas individuales y los objetivos estéticos.",
+      "philosophyText2": "Nuestro enfoque integral considera no solo la apariencia superficial, sino los cambios estructurales subyacentes que ocurren con el envejecimiento. Esta comprensión profunda nos permite crear resultados naturales, armoniosos y duraderos.",
+      "anatomy": "Anatomía Facial",
+      "boneStructure": "Estructura Ósea",
+      "boneStructureDesc": "El marco esquelético proporciona la base para todas las características faciales y define la forma general del rostro.",
+      "muscleLayer": "Capa Muscular",
+      "muscleLayerDesc": "Los músculos crean los movimientos de expresión y brindan soporte a los tejidos blandos suprayacentes.",
+      "fatCompartments": "Compartimentos Grasos",
+      "fatCompartmentsDesc": "Las almohadillas de grasa estratégicamente distribuidas se desinflan con el envejecimiento, provocando pérdida de volumen y sombras.",
+      "skinEnvelope": "Envoltura Cutánea",
+      "skinEnvelopeDesc": "La piel cubre las estructuras subyacentes y pierde elasticidad con la edad, requiriendo eliminación o reposicionamiento preciso."
+    },
+    "body": {
+      "title": "CUERPO",
+      "subtitle": "Procedimientos de Contorno Corporal y Estéticos",
+      "allProcedures": "TODOS LOS PROCEDIMIENTOS CORPORALES",
+      "philosophy": "Entendiendo la Filosofía",
+      "philosophyText1": "El contorno corporal en la práctica del Dr. Karaaltın se enfoca en revelar tu forma natural a través de un esculpido preciso y proporciones armoniosas. Cada plan de tratamiento está diseñado para abordar tu anatomía única y visión estética.",
+      "philosophyText2": "Nuestro enfoque integral considera la calidad de la piel, la musculatura subyacente y la distribución de grasa para crear resultados equilibrados, naturales y duraderos.",
+      "anatomy": "Anatomía Corporal",
+      "skinTissue": "Piel y Tejido",
+      "skinTissueDesc": "La elasticidad y calidad de la piel determinan el éxito del contorno corporal. Comprender las características del tejido guía la planificación del tratamiento.",
+      "fatDistribution": "Distribución de Grasa",
+      "fatDistributionDesc": "Los patrones de grasa subcutánea varían según la genética, edad y estilo de vida. La eliminación y reposicionamiento estratégico crean contornos equilibrados.",
+      "muscleFoundation": "Base Muscular",
+      "muscleFoundationDesc": "La musculatura subyacente proporciona soporte estructural. Abordar la separación muscular mejora los resultados en los procedimientos de contorno corporal.",
+      "bodyProportions": "Proporciones Corporales",
+      "bodyProportionsDesc": "Las proporciones estéticas naturales guían la planificación quirúrgica para crear resultados armoniosos y equilibrados que mejoran tu silueta."
+    },
+    "breast": {
+      "title": "PECHO",
+      "subtitle": "Mejora refinada, armonía estructural y resultados naturales a través de precisión quirúrgica avanzada.",
+      "allProcedures": "TODOS LOS PROCEDIMIENTOS DE PECHO",
+      "signatureTechnique": "Técnica Exclusiva",
+      "philosophy": "Entendiendo la Filosofía",
+      "philosophyText1": "La cirugía de pecho requiere una combinación de visión artística y experiencia técnica. Cada procedimiento se adapta para mejorar la armonía natural mientras se respetan las características físicas individuales.",
+      "philosophyText2": "Nuestra filosofía se centra en crear resultados que se vean y se sientan naturales, con énfasis en la proporción, simetría y satisfacción a largo plazo del paciente.",
+      "anatomy": "Anatomía del Pecho"
+    },
+    "nose": {
+      "title": "NARIZ",
+      "subtitle": "Cirugía nasal de precisión que combina estructura, función y estética refinada.",
+      "allProcedures": "TODOS LOS PROCEDIMIENTOS DE NARIZ",
+      "philosophy": "Filosofía de la Estética Nasal",
+      "philosophyText": "La nariz es el ancla central de la armonía facial. El Profesor Dr. Karaaltin aborda la estética nasal con una filosofía arraigada en el equilibrio, la estructura y la belleza natural—priorizando tanto la respiración funcional como las proporciones visuales refinadas.",
+      "anatomy": "Entendiendo la Anatomía Nasal",
+      "boneCartilage": "Estructura Ósea y Cartilaginosa",
+      "boneCartilageDesc": "Define la proyección, forma del puente y soporte.",
+      "softTissue": "Envoltura de Tejido Blando",
+      "softTissueDesc": "El grosor y la elasticidad influyen en el refinamiento.",
+      "airwaySupport": "Soporte de Vías Respiratorias",
+      "airwaySupportDesc": "La integridad del tabique y válvula determinan la calidad respiratoria.",
+      "ethnicVariations": "Variaciones Étnicas y Estructurales",
+      "ethnicVariationsDesc": "Esenciales para la planificación personalizada.",
+      "whatCanAddress": "¿Qué Puede Abordar la Rinoplastia?",
+      "whatCanAddressText": "Irregularidades del puente, refinamiento de la punta, tabique desviado, punta caída, ancho de la base nasal, asimetrías estructurales, dificultades respiratorias y casos de revisión."
+    }
+  },
+  "gallery": {
+    "title": "Antes y Después",
+    "subtitle": "Explora resultados reales de pacientes del Profesor Dr. Karaaltın",
+    "filterBy": "Filtrar por",
+    "allCategories": "Todas las Categorías",
+    "allProcedures": "Todos los Procedimientos",
+    "clickToEnlarge": "Clic para ampliar",
+    "noResults": "No se encontraron resultados"
   }
 }
