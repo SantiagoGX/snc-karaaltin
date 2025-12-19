@@ -26,9 +26,6 @@ const PatientJourney = () => {
     { id: 2, titleKey: "patientJourney.whyChoose.luxury.title", subtitleKey: "patientJourney.whyChoose.luxury.subtitle" },
     { id: 3, titleKey: "patientJourney.whyChoose.support.title", subtitleKey: "patientJourney.whyChoose.support.subtitle" }
   ];
-const PatientJourney = () => {
-  const [lineHeight, setLineHeight] = useState(0);
-  const timelineRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleScroll = () => {
       if (!timelineRef.current) return;
