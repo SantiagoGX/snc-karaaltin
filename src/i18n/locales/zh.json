@@ -343,7 +343,13 @@
     "additionalPhoto": "额外照片（可选）",
     "privacyNotice": "您的信息是保密的，仅用于协助您的咨询。",
     "submitButton": "开始您的旅程",
-    "acceptedFormats": "接受的格式：jpg、png、pdf、jpeg、heif。最大 20MB。"
+    "acceptedFormats": "接受的格式：jpg、png、pdf、jpeg、heif。最大 20MB。",
+    "sharePhotos": "我想分享照片供医生审阅",
+    "sharePhotosDesc": "可选：上传最多4张图片，帮助我们更好地了解您的目标",
+    "uploadPhotosTitle": "上传您的照片（最多4张）",
+    "chooseFile": "选择文件",
+    "bookConsultation": "预约咨询",
+    "requiredField": "必填"
   },
   "common": {
     "viewProcedure": "查看手术",

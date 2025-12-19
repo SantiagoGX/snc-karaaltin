@@ -246,10 +246,10 @@ const Contact = () => {
                           className="text-sm font-medium text-gray-900 cursor-pointer flex items-center gap-2"
                         >
                           <ImageIcon className="w-4 h-4 text-gray-600" />
-                          {t('contact.wantToSharePhotos', 'I would like to share photos for the doctor to review')}
+                          {t('contact.sharePhotos')}
                         </label>
                         <p className="text-xs text-gray-500 mt-1">
-                          {t('contact.photoUploadHint', 'Optional: Upload up to 4 images to help us better understand your goals')}
+                          {t('contact.sharePhotosDesc')}
                         </p>
                       </div>
                     </div>
@@ -257,7 +257,7 @@ const Contact = () => {
                     {/* Conditional Image Upload Grid */}
                     {wantsToSharePhotos && (
                       <div className="space-y-4 animate-fade-in">
-                        <h3 className="text-lg font-medium text-gray-900">{t('contact.uploadPhotos', 'Upload Your Photos (Maximum 4)')}</h3>
+                        <h3 className="text-lg font-medium text-gray-900">{t('contact.uploadPhotosTitle')}</h3>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {/* Front View */}
