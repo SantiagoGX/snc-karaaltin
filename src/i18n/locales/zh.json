@@ -208,7 +208,115 @@
     "applyForTraining": "申请培训",
     "whatIsTitle": "什么是 Endochor 学院？",
     "whatIsDescription": "Endochor 学院是由 Mehmet Veli Karaaltin 教授领导的高级外科教育平台，他是 Endochor® 植入物的官方 QL 医生。来自世界各地的外科医生学习高精度解剖技术、基于植入物的提升系统和微创面部年轻化。",
-    "qlDoctorTitle": "QL 医生的角色"
+    "qlDoctorTitle": "QL 医生的角色",
+    "whyEndochorTitle": "为什么在面部手术中使用 Endochor®",
+    "whyEndochor": {
+      "biodegradable": "可生物降解的 PCL 植入物，安全吸收同时诱导胶原蛋白生成",
+      "multiVector": "多向量提升，兼容内窥镜、经眼睑和开放式技术",
+      "anatomyRespectful": "尊重解剖的锚定，保护神经功能和表情",
+      "hiddenIncision": "隐藏切口，微痕工作流程"
+    },
+    "trainingModulesTitle": "可用培训模块",
+    "modules": {
+      "foreheadLift": {
+        "title": "Endochor® 前额提升",
+        "badge": "模块 1",
+        "points": ["眉下垂/前额松弛", "内窥镜方法", "骨膜松解/颅骨固定"]
+      },
+      "midFaceLift": {
+        "title": "Endochor® 中面部提升",
+        "badge": "模块 2",
+        "points": ["颧骨下垂/眼睑-面颊过渡", "SMAS 下/骨膜下平面", "SOOF 支撑和向量设计"]
+      },
+      "ribbonNeck": {
+        "title": "Endochor® Ribbon 下面部和颈部",
+        "badge": "模块 3",
+        "points": ["颈部松弛/下颌赘肉", "颈阔肌支撑", "吊床锚定"]
+      },
+      "transblepharoplasty": {
+        "title": "经眼睑切口眉植入",
+        "badge": "模块 4",
+        "points": ["单一上眼睑隐藏切口", "眉毛稳定", "无痕外侧提升"]
+      },
+      "doubleDouble": {
+        "title": "双重技术（高级）",
+        "badge": "模块 5",
+        "points": ["每侧双植入", "垂直和后向量"]
+      },
+      "integration": {
+        "title": "整合途径",
+        "badge": "模块 6",
+        "points": ["结合眼睑成形术/MACS/高位SMAS/修复手术"]
+      }
+    },
+    "viewDetails": "查看详情",
+    "hideDetails": "隐藏详情",
+    "learningObjectivesTitle": "学习目标",
+    "learningObjectives": {
+      "patientSelection": "正确的患者选择和向量规划",
+      "safeDissection": "安全的内窥镜/经眼睑/微创切口解剖",
+      "reliableFixation": "可靠的植入物固定",
+      "complicationPrevention": "并发症预防和管理",
+      "structuredFollowUp": "结构化随访方案"
+    },
+    "courseFormatsTitle": "课程形式",
+    "courseFormats": {
+      "essentials": { "title": "基础", "duration": "1 天", "description": "讲座 + 模拟实验室" },
+      "coreSkills": { "title": "核心技能", "duration": "2 天", "description": "尸体实验室 + 现场演示" },
+      "masterclass": { "title": "大师班", "duration": "3 天", "description": "尸体实验室 + 手术室指导" },
+      "proctorship": { "title": "现场指导", "duration": "定制", "description": "在参与者诊所进行指导" }
+    },
+    "pricingTitle": "实践培训项目",
+    "individualProcedures": "个人特色手术",
+    "handsOnSurgery": "实践手术",
+    "surgery1": "1 台手术",
+    "surgery2": "2 台手术",
+    "surgery3": "3 台手术",
+    "extendedFellowship": "延长实践进修",
+    "immersiveTraining": "沉浸式培训",
+    "month1": "1 个月",
+    "months3": "3 个月",
+    "months6": "6 个月",
+    "sampleAgendaTitle": "2 天议程示例",
+    "day1": "第 1 天",
+    "day2": "第 2 天",
+    "day1Items": [
+      "Endochor® 生物力学和材料科学",
+      "安全区和神经/血管映射",
+      "前额、中面部、颈部、眉毛的向量设计",
+      "植入物尺寸选择和固定原则",
+      "实验室：入路、腔隙创建、植入物放置"
+    ],
+    "day2Items": [
+      "并发症管理和修复策略",
+      "延长尸体实验室或现场手术观察",
+      "文档、知情同意、计费/编码",
+      "术后护理路径",
+      "与教员进行案例规划"
+    ],
+    "faqTitle": "常见问题",
+    "faq": {
+      "endoscopicExperience": { "question": "我需要内窥镜经验吗？", "answer": "核心/大师班推荐，但基础和经眼睑模块对初学者友好。" },
+      "implantsProvided": { "question": "培训期间提供植入物吗？", "answer": "是的。所有培训套件都包含在内。" },
+      "bringCases": { "question": "我可以带自己的病例吗？", "answer": "是的。鼓励病例规划。现场手术室指导取决于当地法规。" },
+      "postCourseSupport": { "question": "有课后支持吗？", "answer": "是的。可以安排虚拟病例审查和远程指导。" },
+      "cmeCredits": { "question": "有 CME/CPD 学分吗？", "answer": "是的。可根据地点安排学分。" },
+      "fellowshipIncludes": { "question": "进修价格包含什么？", "answer": "实验室访问、培训材料、手术室观察或参与（取决于套餐）以及指导。" }
+    },
+    "applicationTitle": "准备开始您的培训了吗？",
+    "applicationDescription": "加入来自世界各地的外科医生，掌握高级 Endochor® 技术。联系我们讨论您的培训路径。",
+    "trainingLead": "培训负责人（QL 医生）",
+    "locations": "地点",
+    "locationsValue": "伊斯坦布尔和国际培训中心",
+    "email": "电子邮件",
+    "connectInstantly": "即时联系",
+    "whatsappDescription": "有问题吗？通过 WhatsApp 直接联系我们获得即时帮助。",
+    "qlDoctorCards": {
+      "clinicalLeadership": { "title": "临床领导", "points": ["病例选择", "术前规划", "植入物选择", "长期随访"] },
+      "techniqueStandardization": { "title": "技术标准化", "points": ["安全区域", "固定原则", "文档结构"] },
+      "outcomeTracking": { "title": "结果跟踪", "points": ["摄影", "患者报告结果", "基于审计的改进"] },
+      "educationProctorship": { "title": "教育与指导", "points": ["尸体实验室指导", "手术室指导", "国际培训"] }
+    }
   },
   "contact": {
     "title": "联系我们",

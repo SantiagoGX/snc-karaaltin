@@ -7,8 +7,10 @@ import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon } from "lucide-re
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import contactHeroImage from "@/assets/contact-hero.png";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [wantsToSharePhotos, setWantsToSharePhotos] = useState(false);
   const [files, setFiles] = useState<{
     front?: File;
@@ -41,10 +43,10 @@ const Contact = () => {
               {/* Right: Title & Subtitle - Centered Vertically */}
               <div className="fade-in flex flex-col justify-center" style={{ animationDelay: "0.2s" }}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
-                  CONTACT
+                  {t('contact.title')}
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
-                  We're here to help. Reach out to our clinic for consultations, questions, or appointment requests.
+                  {t('contact.subtitle')}
                 </p>
               </div>
             </div>
@@ -60,7 +62,7 @@ const Contact = () => {
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                   <MapPin className="w-6 h-6 text-gray-700" />
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
-                    Address
+                    {t('contact.address')}
                   </h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed text-sm">
@@ -73,7 +75,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="inline-block mt-3 text-xs font-semibold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-colors duration-300"
                 >
-                  Get Directions →
+                  {t('contact.getDirections')} →
                 </a>
               </div>
 
@@ -82,7 +84,7 @@ const Contact = () => {
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                   <Phone className="w-6 h-6 text-gray-700" />
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
-                    Phone
+                    {t('contact.phone')}
                   </h3>
                 </div>
                 <a
@@ -95,7 +97,7 @@ const Contact = () => {
                   href="sms:+902123254242"
                   className="inline-block mt-3 text-xs font-semibold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-colors duration-300"
                 >
-                  Text Our Office →
+                  {t('contact.textOurOffice')} →
                 </a>
               </div>
 
@@ -104,13 +106,13 @@ const Contact = () => {
                 <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                   <Clock className="w-6 h-6 text-gray-700" />
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
-                    Hours
+                    {t('contact.hours')}
                   </h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed text-sm">
-                  Monday - Friday: 9:00 AM - 6:00 PM<br />
-                  Saturday: 10:00 AM - 4:00 PM<br />
-                  Sunday: Closed
+                  {t('contact.hoursMonFri', 'Monday - Friday: 9:00 AM - 6:00 PM')}<br />
+                  {t('contact.hoursSat', 'Saturday: 10:00 AM - 4:00 PM')}<br />
+                  {t('contact.hoursSun', 'Sunday: Closed')}
                 </p>
               </div>
             </div>
@@ -124,10 +126,10 @@ const Contact = () => {
               {/* Left: Contact Form */}
               <div className="fade-in-up">
                 <h2 className="text-3xl lg:text-4xl font-serif font-light tracking-wide mb-2 text-gray-900">
-                  Book Your Consultation
+                  {t('contact.bookConsultation', 'Book Your Consultation')}
                 </h2>
                 <p className="text-sm text-gray-600 mb-8">
-                  All fields marked with <span className="text-red-500">*</span> are required
+                  {t('contact.requiredFields', 'All fields marked with')} <span className="text-red-500">*</span> {t('contact.areRequired', 'are required')}
                 </p>
 
                 <form className="space-y-8">
@@ -135,7 +137,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm text-gray-700 mb-2">
-                        First Name <span className="text-red-500">*</span>
+                        {t('contact.firstName')} <span className="text-red-500">*</span>
                       </label>
                       <Input
                         placeholder="John"
@@ -145,7 +147,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm text-gray-700 mb-2">
-                        Last Name <span className="text-red-500">*</span>
+                        {t('contact.lastName')} <span className="text-red-500">*</span>
                       </label>
                       <Input
                         placeholder="Doe"
@@ -159,7 +161,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm text-gray-700 mb-2">
-                        Email <span className="text-red-500">*</span>
+                        {t('contact.email')} <span className="text-red-500">*</span>
                       </label>
                       <Input
                         type="email"
@@ -170,7 +172,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm text-gray-700 mb-2">
-                        Phone <span className="text-red-500">*</span>
+                        {t('contact.phoneNumber')} <span className="text-red-500">*</span>
                       </label>
                       <Input
                         type="tel"
@@ -185,7 +187,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-sm text-gray-700 mb-2">
-                        Height <span className="text-gray-400 text-xs">(Optional)</span>
+                        {t('contact.height')}
                       </label>
                       <Input
                         placeholder="5'8&quot;"
@@ -194,7 +196,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label className="block text-sm text-gray-700 mb-2">
-                        Weight <span className="text-gray-400 text-xs">(Optional)</span>
+                        {t('contact.weight')}
                       </label>
                       <Input
                         placeholder="150 lbs"
@@ -206,10 +208,10 @@ const Contact = () => {
                   {/* Area/Procedure of Interest */}
                   <div>
                     <label className="block text-sm text-gray-700 mb-2">
-                      Area/Procedure of Interest <span className="text-red-500">*</span>
+                      {t('contact.areaOfInterest')} <span className="text-red-500">*</span>
                     </label>
                     <Input
-                      placeholder="e.g., Rhinoplasty, Breast Augmentation"
+                      placeholder={t('contact.selectProcedure')}
                       required
                       className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                     />
@@ -218,10 +220,10 @@ const Contact = () => {
                   {/* Concerns */}
                   <div>
                     <label className="block text-sm text-gray-700 mb-2">
-                      Your Concerns or Questions <span className="text-red-500">*</span>
+                      {t('contact.concerns')} <span className="text-red-500">*</span>
                     </label>
                     <Textarea
-                      placeholder="Tell us about your goals and any questions you may have..."
+                      placeholder={t('contact.concernsPlaceholder')}
                       rows={5}
                       required
                       className="w-full min-h-[120px] resize-none border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
@@ -244,10 +246,10 @@ const Contact = () => {
                           className="text-sm font-medium text-gray-900 cursor-pointer flex items-center gap-2"
                         >
                           <ImageIcon className="w-4 h-4 text-gray-600" />
-                          I would like to share photos for the doctor to review
+                          {t('contact.wantToSharePhotos', 'I would like to share photos for the doctor to review')}
                         </label>
                         <p className="text-xs text-gray-500 mt-1">
-                          Optional: Upload up to 4 images to help us better understand your goals
+                          {t('contact.photoUploadHint', 'Optional: Upload up to 4 images to help us better understand your goals')}
                         </p>
                       </div>
                     </div>
@@ -255,13 +257,13 @@ const Contact = () => {
                     {/* Conditional Image Upload Grid */}
                     {wantsToSharePhotos && (
                       <div className="space-y-4 animate-fade-in">
-                        <h3 className="text-lg font-medium text-gray-900">Upload Your Photos (Maximum 4)</h3>
+                        <h3 className="text-lg font-medium text-gray-900">{t('contact.uploadPhotos', 'Upload Your Photos (Maximum 4)')}</h3>
                         
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {/* Front View */}
                           <div>
                             <label className="block text-sm font-medium mb-2 text-gray-700">
-                              Front View
+                              {t('contact.frontView')}
                             </label>
                             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
                               <input
@@ -274,10 +276,10 @@ const Contact = () => {
                               <label htmlFor="front-view" className="cursor-pointer">
                                 <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
                                 <p className="text-sm text-gray-600 mb-1">
-                                  {files.front ? files.front.name : 'Choose file'}
+                                  {files.front ? files.front.name : t('contact.chooseFile', 'Choose file')}
                                 </p>
                                 <p className="text-xs text-gray-500">
-                                  jpg, png, pdf, heif · Max 20MB
+                                  {t('contact.acceptedFormats')}
                                 </p>
                               </label>
                             </div>
@@ -286,7 +288,7 @@ const Contact = () => {
                           {/* Side View */}
                           <div>
                             <label className="block text-sm font-medium mb-2 text-gray-700">
-                              Side View
+                              {t('contact.sideView')}
                             </label>
                             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
                               <input
@@ -299,10 +301,10 @@ const Contact = () => {
                               <label htmlFor="side-view" className="cursor-pointer">
                                 <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
                                 <p className="text-sm text-gray-600 mb-1">
-                                  {files.side ? files.side.name : 'Choose file'}
+                                  {files.side ? files.side.name : t('contact.chooseFile', 'Choose file')}
                                 </p>
                                 <p className="text-xs text-gray-500">
-                                  jpg, png, pdf, heif · Max 20MB
+                                  {t('contact.acceptedFormats')}
                                 </p>
                               </label>
                             </div>
@@ -311,7 +313,7 @@ const Contact = () => {
                           {/* Other Side View */}
                           <div>
                             <label className="block text-sm font-medium mb-2 text-gray-700">
-                              Other Side View
+                              {t('contact.otherSideView')}
                             </label>
                             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
                               <input
@@ -324,10 +326,10 @@ const Contact = () => {
                               <label htmlFor="other-side-view" className="cursor-pointer">
                                 <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
                                 <p className="text-sm text-gray-600 mb-1">
-                                  {files.otherSide ? files.otherSide.name : 'Choose file'}
+                                  {files.otherSide ? files.otherSide.name : t('contact.chooseFile', 'Choose file')}
                                 </p>
                                 <p className="text-xs text-gray-500">
-                                  jpg, png, pdf, heif · Max 20MB
+                                  {t('contact.acceptedFormats')}
                                 </p>
                               </label>
                             </div>
@@ -336,7 +338,7 @@ const Contact = () => {
                           {/* Additional Photo */}
                           <div>
                             <label className="block text-sm font-medium mb-2 text-gray-700">
-                              Additional Photo <span className="text-gray-400 font-normal">(optional)</span>
+                              {t('contact.additionalPhoto')}
                             </label>
                             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
                               <input
@@ -349,10 +351,10 @@ const Contact = () => {
                               <label htmlFor="additional-photo" className="cursor-pointer">
                                 <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
                                 <p className="text-sm text-gray-600 mb-1">
-                                  {files.additional ? files.additional.name : 'Choose file'}
+                                  {files.additional ? files.additional.name : t('contact.chooseFile', 'Choose file')}
                                 </p>
                                 <p className="text-xs text-gray-500">
-                                  jpg, png, pdf, heif · Max 20MB
+                                  {t('contact.acceptedFormats')}
                                 </p>
                               </label>
                             </div>
@@ -365,7 +367,7 @@ const Contact = () => {
                   {/* Privacy Notice */}
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <p className="text-xs text-gray-600 leading-relaxed">
-                      Your information and uploaded images are kept confidential and used solely for medical assessment and appointment coordination. We do not share your data with third parties.
+                      {t('contact.privacyNotice')}
                     </p>
                   </div>
 
@@ -375,7 +377,7 @@ const Contact = () => {
                     size="lg"
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white uppercase tracking-widest text-sm py-6 group"
                   >
-                    START YOUR JOURNEY
+                    {t('contact.submitButton')}
                     <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
