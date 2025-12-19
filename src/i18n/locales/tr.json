@@ -248,7 +248,18 @@
     "learnMore": "Daha Fazla Bilgi",
     "scheduleConsultation": "Konsültasyon Planla",
     "back": "Geri",
-    "allProcedures": "Tüm İşlemler"
+    "allProcedures": "Tüm İşlemler",
+    "bookConsultation": "Konsültasyon Ayırtın",
+    "viewGallery": "Önce ve Sonra Galerisini Görüntüle",
+    "returnHome": "Ana Sayfaya Dön"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Üzgünüz! Sayfa bulunamadı",
+    "returnHome": "Ana Sayfaya Dön"
+  },
+  "footerExtra": {
+    "emailPlaceholder": "E-posta Adresi"
   },
   "learnSurgeryPage": {
     "whatIsTitle": "Endochor Akademisi Nedir?",
@@ -403,12 +414,19 @@
     }
   },
   "gallery": {
-    "title": "Önce ve Sonra",
+    "title": "Önce ve Sonra Galerisi",
+    "heroSubtitle": "Dr. Karaaltin'in estetik cerrahideki uzmanlığını gösteren gerçek hasta dönüşümlerini keşfedin",
     "subtitle": "Profesör Dr. Karaaltın'dan gerçek hasta sonuçlarını keşfedin",
     "filterBy": "Filtrele",
     "allCategories": "Tüm Kategoriler",
     "allProcedures": "Tüm İşlemler",
-    "clickToEnlarge": "Büyütmek için tıklayın",
-    "noResults": "Sonuç bulunamadı"
+    "clickToEnlarge": "Tam ekran görüntülemek için tıklayın",
+    "noResults": "Sonuç bulunamadı",
+    "selectProcedure": "Bir İşlem Seçin",
+    "selectProcedureDesc": "Önce ve sonra dönüşümlerini görüntülemek için sol menüden herhangi bir işlem seçin",
+    "faceProcedures": "Yüz İşlemleri",
+    "noseProcedures": "Burun İşlemleri",
+    "breastProcedures": "Göğüs İşlemleri",
+    "bodyProcedures": "Vücut İşlemleri"
   }
 }

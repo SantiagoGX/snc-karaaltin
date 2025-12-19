@@ -248,7 +248,18 @@
     "learnMore": "Más Información",
     "scheduleConsultation": "Agendar Consulta",
     "back": "Volver",
-    "allProcedures": "Todos los Procedimientos"
+    "allProcedures": "Todos los Procedimientos",
+    "bookConsultation": "Reservar Consulta",
+    "viewGallery": "Ver Galería Antes y Después",
+    "returnHome": "Volver al Inicio"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "¡Ups! Página no encontrada",
+    "returnHome": "Volver al Inicio"
+  },
+  "footerExtra": {
+    "emailPlaceholder": "Correo Electrónico"
   },
   "learnSurgeryPage": {
     "whatIsTitle": "¿Qué es la Academia Endochor?",
@@ -403,12 +414,19 @@
     }
   },
   "gallery": {
-    "title": "Antes y Después",
+    "title": "Galería Antes y Después",
+    "heroSubtitle": "Explora transformaciones reales de pacientes que demuestran la experiencia del Dr. Karaaltin en cirugía estética",
     "subtitle": "Explora resultados reales de pacientes del Profesor Dr. Karaaltın",
     "filterBy": "Filtrar por",
     "allCategories": "Todas las Categorías",
     "allProcedures": "Todos los Procedimientos",
-    "clickToEnlarge": "Clic para ampliar",
-    "noResults": "No se encontraron resultados"
+    "clickToEnlarge": "Clic para ver en pantalla completa",
+    "noResults": "No se encontraron resultados",
+    "selectProcedure": "Selecciona un Procedimiento",
+    "selectProcedureDesc": "Elige cualquier procedimiento del menú izquierdo para ver transformaciones antes y después",
+    "faceProcedures": "Procedimientos Faciales",
+    "noseProcedures": "Procedimientos Nasales",
+    "breastProcedures": "Procedimientos de Senos",
+    "bodyProcedures": "Procedimientos Corporales"
   }
 }

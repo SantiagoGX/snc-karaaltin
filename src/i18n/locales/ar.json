@@ -365,13 +365,20 @@
     }
   },
   "gallery": {
-    "title": "قبل وبعد",
+    "title": "معرض قبل وبعد",
+    "heroSubtitle": "استكشف تحولات المرضى الحقيقية التي تعرض خبرة الدكتور كاراالتين في الجراحة التجميلية",
     "subtitle": "استكشف نتائج حقيقية من مرضى البروفيسور الدكتور كاراالتين",
     "filterBy": "تصفية حسب",
     "allCategories": "جميع الفئات",
     "allProcedures": "جميع الإجراءات",
-    "clickToEnlarge": "انقر للتكبير",
-    "noResults": "لم يتم العثور على نتائج"
+    "clickToEnlarge": "انقر للعرض بملء الشاشة",
+    "noResults": "لم يتم العثور على نتائج",
+    "selectProcedure": "اختر إجراءً",
+    "selectProcedureDesc": "اختر أي إجراء من القائمة اليسرى لعرض التحولات قبل وبعد",
+    "faceProcedures": "إجراءات الوجه",
+    "noseProcedures": "إجراءات الأنف",
+    "breastProcedures": "إجراءات الثدي",
+    "bodyProcedures": "إجراءات الجسم"
   },
   "contact": {
     "title": "اتصل بنا",
@@ -411,6 +418,17 @@
     "learnMore": "اعرف المزيد",
     "scheduleConsultation": "حدد موعد استشارة",
     "back": "رجوع",
-    "allProcedures": "جميع الإجراءات"
+    "allProcedures": "جميع الإجراءات",
+    "bookConsultation": "احجز استشارة",
+    "viewGallery": "عرض معرض قبل وبعد",
+    "returnHome": "العودة للرئيسية"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "عذراً! الصفحة غير موجودة",
+    "returnHome": "العودة للرئيسية"
+  },
+  "footerExtra": {
+    "emailPlaceholder": "البريد الإلكتروني"
   }
 }

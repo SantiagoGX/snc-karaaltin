@@ -160,7 +160,7 @@ const Footer = () => {
             <div className="flex gap-2 mb-6 max-w-xs lg:max-w-none">
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder={t('footerExtra.emailPlaceholder') || 'Email Address'}
                 className="flex-1 border border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-gray-900 transition-colors bg-transparent"
               />
               <button

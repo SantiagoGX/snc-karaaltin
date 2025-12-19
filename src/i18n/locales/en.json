@@ -248,7 +248,18 @@
     "learnMore": "Learn More",
     "scheduleConsultation": "Schedule Consultation",
     "back": "Back",
-    "allProcedures": "All Procedures"
+    "allProcedures": "All Procedures",
+    "bookConsultation": "Book a Consultation",
+    "viewGallery": "View Before & After Gallery",
+    "returnHome": "Return to Home"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "footer": {
+    "emailPlaceholder": "Email Address"
   },
   "learnSurgeryPage": {
     "whatIsTitle": "What Is the Endochor Academy?",
@@ -403,13 +414,20 @@
     }
   },
   "gallery": {
-    "title": "Before & After",
+    "title": "Before & After Gallery",
+    "heroSubtitle": "Explore real patient transformations showcasing Dr. Karaaltin's expertise in aesthetic surgery",
     "subtitle": "Explore real patient results from Professor Dr. Karaaltın",
     "filterBy": "Filter by",
     "allCategories": "All Categories",
     "allProcedures": "All Procedures",
-    "clickToEnlarge": "Click to enlarge",
-    "noResults": "No results found"
+    "clickToEnlarge": "Click to view fullscreen",
+    "noResults": "No results found",
+    "selectProcedure": "Select a Procedure",
+    "selectProcedureDesc": "Choose any procedure from the left menu to view before & after transformations",
+    "faceProcedures": "Face Procedures",
+    "noseProcedures": "Nose Procedures",
+    "breastProcedures": "Breast Procedures",
+    "bodyProcedures": "Body Procedures"
   },
   "about": {
     "heroSubtitle": "PROFESSOR • SURGEON • INNOVATOR",
