@@ -657,13 +657,13 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
             {procedure.images.map((imageUrl, index) => (
               <div key={index} className="flex-[0_0_100%] min-w-0 px-1 md:px-2">
                 <div 
-                  className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center cursor-zoom-in group"
+                  className="relative w-full bg-gray-100 rounded-lg shadow-lg overflow-hidden flex items-center justify-center cursor-zoom-in group"
                   onClick={() => setLightboxIndex(index)}
                 >
                   <img
                     src={imageUrl}
                     alt={`${procedure.name} - Image ${index + 1}`}
-                    className="w-full h-full object-contain max-h-[500px] md:max-h-[600px] lg:max-h-[700px] transition-transform duration-300 group-hover:scale-[1.02]"
+                    className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
                   {/* Fullscreen hint overlay */}
