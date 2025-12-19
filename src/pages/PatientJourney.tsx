@@ -4,61 +4,28 @@ import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import { Button } from "@/components/ui/button";
 import { Award, Crown, Globe } from "lucide-react";
-interface JourneyDay {
-  id: number;
-  day: string;
-  title: string;
-  description: string;
-}
-const journeyDays: JourneyDay[] = [{
-  id: 1,
-  day: "Day 1",
-  title: "Arrival & Consultation",
-  description: "You arrive in Istanbul, receive VIP transportation to the clinic for your initial medical consultation and pre-operative tests, then settle comfortably into your 5-star partner hotel."
-}, {
-  id: 2,
-  day: "Day 2",
-  title: "Surgery Day",
-  description: "Final consultation, preparation, and your surgical procedure. After surgery, you return to your hotel to rest under medical supervision."
-}, {
-  id: 3,
-  day: "Day 3",
-  title: "Early Recovery & Nurse Visits",
-  description: "You rest at your hotel while nurses perform early post-operative checks, provide medication guidance, and support your recovery."
-}, {
-  id: 4,
-  day: "Day 4",
-  title: "Rest & Gentle Activity",
-  description: "A restorative day for light movement, hydration, and calm recovery. Optional short walks or quiet time at the hotel."
-}, {
-  id: 5,
-  day: "Day 5",
-  title: "Post-Op Evaluation",
-  description: "A full post-operative check with the medical team: wound assessment, progress review, and personalized recovery instructions."
-}, {
-  id: 6,
-  day: "Day 6",
-  title: "Discover Istanbul (Lightly)",
-  description: "If cleared by the team, you may enjoy short, gentle outings to experience the beauty of Istanbul while continuing your recovery."
-}, {
-  id: 7,
-  day: "Day 7",
-  title: "Final Checkup & Departure",
-  description: "Your final medical evaluation takes place before departure. Afterwards, you are escorted to the airport with lifelong aftercare support."
-}];
-const whyChooseUs = [{
-  id: 1,
-  title: "Medical Excellence",
-  subtitle: "World-class surgical expertise with proven results and international accreditation."
-}, {
-  id: 2,
-  title: "Luxury Experience",
-  subtitle: "5-star accommodations, VIP transfers, and personalized concierge services throughout your stay."
-}, {
-  id: 3,
-  title: "Dedicated International Support",
-  subtitle: "Multilingual coordinators available 24/7 to assist you before, during, and after your procedure."
-}];
+import { useTranslation } from "react-i18next";
+
+const PatientJourney = () => {
+  const { t } = useTranslation();
+  const [lineHeight, setLineHeight] = useState(0);
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  const journeyDays = [
+    { id: 1, dayKey: "patientJourney.days.day1" },
+    { id: 2, dayKey: "patientJourney.days.day2" },
+    { id: 3, dayKey: "patientJourney.days.day3" },
+    { id: 4, dayKey: "patientJourney.days.day4" },
+    { id: 5, dayKey: "patientJourney.days.day5" },
+    { id: 6, dayKey: "patientJourney.days.day6" },
+    { id: 7, dayKey: "patientJourney.days.day7" }
+  ];
+
+  const whyChooseUs = [
+    { id: 1, titleKey: "patientJourney.whyChoose.excellence.title", subtitleKey: "patientJourney.whyChoose.excellence.subtitle" },
+    { id: 2, titleKey: "patientJourney.whyChoose.luxury.title", subtitleKey: "patientJourney.whyChoose.luxury.subtitle" },
+    { id: 3, titleKey: "patientJourney.whyChoose.support.title", subtitleKey: "patientJourney.whyChoose.support.subtitle" }
+  ];
 const PatientJourney = () => {
   const [lineHeight, setLineHeight] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -97,24 +64,24 @@ const PatientJourney = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center">
               {/* Left Column - Text */}
               <div className="text-white space-y-6 blur-to-focus">
-                <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">YOUR MEDICAL JOURNEY • ISTANBUL</p>
-                <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide"
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                  }}
-                >
-                  Your Journey in Istanbul
-                </h1>
-                <p className="text-lg lg:text-xl font-light leading-relaxed opacity-90">
-                  A seamless 7-day experience designed for comfort, safety, and world-class care.
-                </p>
-                <Button 
-                  onClick={scrollToGetStarted} 
-                  className="mt-6 px-8 py-3 bg-white text-[#0d1f3a] hover:bg-white/90 uppercase tracking-widest text-sm font-medium transition-all duration-300"
-                >
-                  Start Your Journey
-                </Button>
+              <p className="text-xs uppercase tracking-[0.3em] text-gold font-light">{t('patientJourney.heroSubtitle')}</p>
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide"
+                style={{
+                  fontFamily: "Cormorant Garamond, serif",
+                }}
+              >
+                {t('patientJourney.heroTitle')}
+              </h1>
+              <p className="text-lg lg:text-xl font-light leading-relaxed opacity-90">
+                {t('patientJourney.heroDescription')}
+              </p>
+              <Button 
+                onClick={scrollToGetStarted} 
+                className="mt-6 px-8 py-3 bg-white text-[#0d1f3a] hover:bg-white/90 uppercase tracking-widest text-sm font-medium transition-all duration-300"
+              >
+                {t('patientJourney.startYourJourney')}
+              </Button>
               </div>
 
               {/* Right Column - Image with Shape */}
@@ -150,26 +117,26 @@ const PatientJourney = () => {
           <div className="max-w-3xl mx-auto text-center float-in" style={{
           animationDelay: '0.2s'
         }}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 tracking-wide text-[#0d1f3a]" style={{
-            fontFamily: 'Cormorant Garamond, serif'
-          }}>
-              A Structured, Safe, and Luxurious Patient Experience
-            </h2>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              Your journey has been designed to provide full medical support, comfort, and peace of mind from the moment you land in Istanbul until the moment you return home.
-            </p>
-          </div>
-        </section>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 tracking-wide text-[#0d1f3a]" style={{
+          fontFamily: 'Cormorant Garamond, serif'
+        }}>
+            {t('patientJourney.introTitle')}
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            {t('patientJourney.introDescription')}
+          </p>
+        </div>
+      </section>
 
         {/* SECTION 3 — MAIN TIMELINE */}
         <section className="py-16 lg:py-24 px-4 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             {/* Section Title */}
-            <h2 className="text-4xl lg:text-5xl font-light text-center mb-16 lg:mb-20 tracking-wide text-[#0d1f3a] float-in" style={{
-            fontFamily: 'Cormorant Garamond, serif'
-          }}>
-              Your 7-Day Experience
-            </h2>
+          <h2 className="text-4xl lg:text-5xl font-light text-center mb-16 lg:mb-20 tracking-wide text-[#0d1f3a] float-in" style={{
+          fontFamily: 'Cormorant Garamond, serif'
+        }}>
+            {t('patientJourney.timelineTitle')}
+          </h2>
 
             {/* Timeline Container */}
             <div className="relative" ref={timelineRef}>
@@ -206,15 +173,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[0].day}
+                        {t(`${journeyDays[0].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[0].title}
+                        {t(`${journeyDays[0].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[0].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[0].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -242,15 +209,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[1].day}
+                        {t(`${journeyDays[1].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[1].title}
+                        {t(`${journeyDays[1].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[1].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[1].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -278,15 +245,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[2].day}
+                        {t(`${journeyDays[2].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[2].title}
+                        {t(`${journeyDays[2].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[2].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[2].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -314,15 +281,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[3].day}
+                        {t(`${journeyDays[3].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[3].title}
+                        {t(`${journeyDays[3].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[3].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[3].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -350,15 +317,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[4].day}
+                        {t(`${journeyDays[4].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[4].title}
+                        {t(`${journeyDays[4].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[4].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[4].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -386,15 +353,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[5].day}
+                        {t(`${journeyDays[5].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[5].title}
+                        {t(`${journeyDays[5].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[5].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[5].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -422,15 +389,15 @@ const PatientJourney = () => {
                       background: 'linear-gradient(135deg, #1e3a5f 0%, #4a6fa5 100%)',
                       color: '#ffffff'
                     }}>
-                        {journeyDays[6].day}
+                        {t(`${journeyDays[6].dayKey}.day`)}
                       </div>
                       <h3 className="text-2xl lg:text-3xl font-semibold mb-4 tracking-wide" style={{
                       fontFamily: 'Cormorant Garamond, serif',
                       color: '#1e3a5f'
                     }}>
-                        {journeyDays[6].title}
+                        {t(`${journeyDays[6].dayKey}.title`)}
                       </h3>
-                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{journeyDays[6].description}</p>
+                      <p className="text-base lg:text-lg text-gray-700 leading-relaxed">{t(`${journeyDays[6].dayKey}.description`)}</p>
                     </div>
                   </div>
                 </div>
@@ -444,70 +411,70 @@ const PatientJourney = () => {
         background: 'linear-gradient(180deg, #f0f4f8 0%, #e8eef4 100%)'
       }}>
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-light text-center mb-16 tracking-wide text-[#0d1f3a] float-in" style={{
-            fontFamily: 'Cormorant Garamond, serif'
-          }}>
-              Why Patients Choose Us
-            </h2>
+          <h2 className="text-4xl lg:text-5xl font-light text-center mb-16 tracking-wide text-[#0d1f3a] float-in" style={{
+          fontFamily: 'Cormorant Garamond, serif'
+        }}>
+            {t('patientJourney.whyChooseTitle')}
+          </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-              {/* Column 1 */}
-              <div className="text-center animate-fade-in-up" style={{
-              animationDelay: '0.1s'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {/* Column 1 */}
+            <div className="text-center animate-fade-in-up" style={{
+            animationDelay: '0.1s'
+          }}>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
+              boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
             }}>
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
-                boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
-              }}>
-                  <Award className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
-                fontFamily: 'Cormorant Garamond, serif'
-              }}>
-                  {whyChooseUs[0].title}
-                </h3>
-                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                  {whyChooseUs[0].subtitle}
-                </p>
+                <Award className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
               </div>
+              <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
+              fontFamily: 'Cormorant Garamond, serif'
+            }}>
+                {t(whyChooseUs[0].titleKey)}
+              </h3>
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                {t(whyChooseUs[0].subtitleKey)}
+              </p>
+            </div>
 
               {/* Column 2 */}
-              <div className="text-center animate-fade-in-up" style={{
-              animationDelay: '0.2s'
+            <div className="text-center animate-fade-in-up" style={{
+            animationDelay: '0.2s'
+          }}>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
+              boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
             }}>
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
-                boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
-              }}>
-                  <Crown className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
-                fontFamily: 'Cormorant Garamond, serif'
-              }}>
-                  {whyChooseUs[1].title}
-                </h3>
-                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                  {whyChooseUs[1].subtitle}
-                </p>
+                <Crown className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
               </div>
+              <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
+              fontFamily: 'Cormorant Garamond, serif'
+            }}>
+                {t(whyChooseUs[1].titleKey)}
+              </h3>
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                {t(whyChooseUs[1].subtitleKey)}
+              </p>
+            </div>
 
               {/* Column 3 */}
-              <div className="text-center animate-fade-in-up" style={{
-              animationDelay: '0.3s'
+            <div className="text-center animate-fade-in-up" style={{
+            animationDelay: '0.3s'
+          }}>
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
+              boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
             }}>
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center" style={{
-                boxShadow: '0 0 30px rgba(30, 58, 95, 0.15)'
-              }}>
-                  <Globe className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
-                fontFamily: 'Cormorant Garamond, serif'
-              }}>
-                  {whyChooseUs[2].title}
-                </h3>
-                <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                  {whyChooseUs[2].subtitle}
-                </p>
+                <Globe className="w-10 h-10 text-[#1e3a5f]" strokeWidth={1.5} />
               </div>
+              <h3 className="text-xl lg:text-2xl font-semibold mb-3 text-[#0d1f3a]" style={{
+              fontFamily: 'Cormorant Garamond, serif'
+            }}>
+                {t(whyChooseUs[2].titleKey)}
+              </h3>
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
+                {t(whyChooseUs[2].subtitleKey)}
+              </p>
             </div>
+          </div>
           </div>
         </section>
 
