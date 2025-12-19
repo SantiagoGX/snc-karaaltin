@@ -356,7 +356,18 @@
     "learnMore": "了解更多",
     "scheduleConsultation": "预约咨询",
     "back": "返回",
-    "allProcedures": "所有手术项目"
+    "allProcedures": "所有手术项目",
+    "bookConsultation": "预约咨询",
+    "viewGallery": "查看前后对比图库",
+    "returnHome": "返回首页"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "抱歉！页面未找到",
+    "returnHome": "返回首页"
+  },
+  "footerExtra": {
+    "emailPlaceholder": "电子邮箱"
   },
   "procedures": {
     "face": {
@@ -426,11 +437,19 @@
     }
   },
   "gallery": {
-    "title": "术前术后",
+    "title": "术前术后对比",
+    "heroSubtitle": "探索真实患者的蜕变，展示 Karaaltin 医生在美容手术方面的专业技术",
     "subtitle": "探索 Karaaltin 教授的真实患者效果",
     "filterBy": "筛选",
     "allCategories": "所有分类",
     "allProcedures": "所有手术",
-    "noResults": "未找到结果"
+    "clickToEnlarge": "点击全屏查看",
+    "noResults": "未找到结果",
+    "selectProcedure": "选择一个项目",
+    "selectProcedureDesc": "从左侧菜单选择任何项目以查看术前术后对比",
+    "faceProcedures": "面部项目",
+    "noseProcedures": "鼻部项目",
+    "breastProcedures": "胸部项目",
+    "bodyProcedures": "身体项目"
   }
 }

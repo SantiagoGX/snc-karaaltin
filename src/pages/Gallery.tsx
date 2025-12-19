@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, ChevronDown, X, ZoomIn, ZoomOut } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -669,7 +670,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
                   {/* Fullscreen hint overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-light text-gray-800">
-                      Click to view fullscreen
+                      {/* Text handled in parent component */}
                     </div>
                   </div>
                 </div>
@@ -722,6 +723,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
 };
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedProcedure, setSelectedProcedure] = useState<string | null>(null);
 
   const handleProcedureClick = (procedureName: string) => {
@@ -752,10 +754,10 @@ const Gallery = () => {
       <section className="relative bg-gradient-to-br from-[#0d1f3a] via-[#1a2c44] to-[#0d1f3a] pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide text-white mb-6">
-            Before & After Gallery
+            {t('gallery.title')}
           </h1>
           <p className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto">
-            Explore real patient transformations showcasing Dr. Karaaltin's expertise in aesthetic surgery
+            {t('gallery.heroSubtitle')}
           </p>
         </div>
         
@@ -773,7 +775,7 @@ const Gallery = () => {
               <DropdownMenuTrigger asChild>
                 <button className="w-full flex items-center justify-between px-5 py-4 bg-gray-900 text-white rounded-lg shadow-md">
                   <span className="font-medium text-base">
-                    {selectedProcedure || "Select a Procedure"}
+                    {selectedProcedure || t('gallery.selectProcedure')}
                   </span>
                   <ChevronDown className="w-5 h-5" />
                 </button>
@@ -783,7 +785,7 @@ const Gallery = () => {
                 className="w-[calc(100vw-2rem)] max-h-[60vh] overflow-y-auto bg-white z-50 shadow-xl"
               >
                 {/* Face */}
-                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Face</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{t('gallery.faceProcedures')}</DropdownMenuLabel>
                 {beforeAfterData.FACE.map((proc) => (
                   <DropdownMenuItem 
                     key={proc.name}
@@ -796,7 +798,7 @@ const Gallery = () => {
                 <DropdownMenuSeparator />
                 
                 {/* Nose */}
-                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Nose</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{t('gallery.noseProcedures')}</DropdownMenuLabel>
                 {beforeAfterData.NOSE.map((proc) => (
                   <DropdownMenuItem 
                     key={proc.name}
@@ -809,7 +811,7 @@ const Gallery = () => {
                 <DropdownMenuSeparator />
                 
                 {/* Breast */}
-                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Breast</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{t('gallery.breastProcedures')}</DropdownMenuLabel>
                 {beforeAfterData.BREAST.map((proc) => (
                   <DropdownMenuItem 
                     key={proc.name}
@@ -822,7 +824,7 @@ const Gallery = () => {
                 <DropdownMenuSeparator />
                 
                 {/* Body */}
-                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Body</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{t('gallery.bodyProcedures')}</DropdownMenuLabel>
                 {beforeAfterData.BODY.map((proc) => (
                   <DropdownMenuItem 
                     key={proc.name}
@@ -845,7 +847,7 @@ const Gallery = () => {
                 {/* FACE PROCEDURES */}
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold tracking-wide text-gray-900 uppercase border-b-2 border-gray-300 pb-2">
-                    Face Procedures
+                    {t('gallery.faceProcedures')}
                   </h3>
                   <ul className="space-y-2">
                     {beforeAfterData.FACE.map((procedure) => (
@@ -868,7 +870,7 @@ const Gallery = () => {
                 {/* NOSE PROCEDURES */}
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold tracking-wide text-gray-900 uppercase border-b-2 border-gray-300 pb-2">
-                    Nose Procedures
+                    {t('gallery.noseProcedures')}
                   </h3>
                   <ul className="space-y-2">
                     {beforeAfterData.NOSE.map((procedure) => (
@@ -891,7 +893,7 @@ const Gallery = () => {
                 {/* BREAST PROCEDURES */}
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold tracking-wide text-gray-900 uppercase border-b-2 border-gray-300 pb-2">
-                    Breast Procedures
+                    {t('gallery.breastProcedures')}
                   </h3>
                   <ul className="space-y-2">
                     {beforeAfterData.BREAST.map((procedure) => (
@@ -914,7 +916,7 @@ const Gallery = () => {
                 {/* BODY PROCEDURES */}
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold tracking-wide text-gray-900 uppercase border-b-2 border-gray-300 pb-2">
-                    Body Procedures
+                    {t('gallery.bodyProcedures')}
                   </h3>
                   <ul className="space-y-2">
                     {beforeAfterData.BODY.map((procedure) => (
@@ -946,10 +948,10 @@ const Gallery = () => {
               ) : (
                 <div className="text-center py-20">
                   <h2 className="text-3xl md:text-4xl font-light tracking-wide text-gray-900 mb-6">
-                    Select a Procedure
+                    {t('gallery.selectProcedure')}
                   </h2>
                   <p className="text-lg text-gray-600 font-light max-w-xl mx-auto">
-                    Choose any procedure from the left menu to view before & after transformations
+                    {t('gallery.selectProcedureDesc')}
                   </p>
                 </div>
               )}
