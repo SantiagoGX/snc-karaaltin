@@ -68,8 +68,8 @@ const Header = () => {
     btnText: isScrolled ? 'hover:text-white' : 'hover:text-black',
     iconBg: isScrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10',
     iconColor: isScrolled ? '#000000' : '#FFFFFF',
-    headerHeight: isScrolled ? 'h-16 lg:h-20' : 'h-20 lg:h-24',
-    logoSize: isScrolled ? 'h-10 lg:h-12' : 'h-14 lg:h-16',
+    headerHeight: isScrolled ? 'h-14 sm:h-16 lg:h-20' : 'h-16 sm:h-20 lg:h-24',
+    logoSize: isScrolled ? 'h-8 sm:h-10 lg:h-12' : 'h-10 sm:h-14 lg:h-16',
   };
 
   const navItems = [
@@ -261,13 +261,13 @@ const Header = () => {
 
           {/* Mobile: Language LEFT - Logo CENTER - Hamburger RIGHT */}
           {/* Left: Language Selector */}
-          <div className="lg:hidden absolute left-0 flex items-center">
+          <div className="lg:hidden absolute left-2 flex items-center">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button
-                  className={`flex items-center gap-1.5 px-2 py-1.5 border ${colors.border} rounded-sm bg-transparent ${colors.text} transition-all text-xs`}
+                  className={`flex items-center gap-1 px-1.5 py-1 border ${colors.border} rounded-sm bg-transparent ${colors.text} transition-all text-[10px] sm:text-xs sm:px-2 sm:py-1.5 sm:gap-1.5`}
                 >
-                  <Globe className="h-3.5 w-3.5" />
+                  <Globe className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   <span className="font-medium">{selectedLanguage.flag}</span>
                 </button>
               </DropdownMenuTrigger>
@@ -287,9 +287,9 @@ const Header = () => {
           </div>
 
           {/* Right: Hamburger Menu */}
-          <div className="lg:hidden absolute right-0 flex items-center">
+          <div className="lg:hidden absolute right-2 flex items-center">
             <button
-              className={`p-2 ${colors.text} transition-colors`}
+              className={`p-1.5 sm:p-2 ${colors.text} transition-colors`}
               onClick={() => {
                 setIsMenuOpen(true);
                 if (location.pathname.startsWith('/procedures/')) {
@@ -298,7 +298,7 @@ const Header = () => {
               }}
               aria-label="Toggle menu"
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
           </div>
         </div>
