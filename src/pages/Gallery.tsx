@@ -684,7 +684,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
             <button
               onClick={scrollPrev}
               disabled={!canScrollPrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg z-10"
+              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full border-2 border-gray-300 items-center justify-center hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg z-10"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -692,7 +692,7 @@ const ProcedureCarousel = ({ procedure }: ProcedureCarouselProps) => {
             <button
               onClick={scrollNext}
               disabled={!canScrollNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg z-10"
+              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full border-2 border-gray-300 items-center justify-center hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg z-10"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
