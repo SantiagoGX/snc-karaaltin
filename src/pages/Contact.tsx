@@ -3,11 +3,13 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Clock, ChevronRight, Camera } from "lucide-react";
+import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon } from "lucide-react";
 import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
 import contactHeroImage from "@/assets/contact-hero.png";
 
 const Contact = () => {
+  const [wantsToSharePhotos, setWantsToSharePhotos] = useState(false);
   const [files, setFiles] = useState<{
     front?: File;
     side?: File;
@@ -226,115 +228,138 @@ const Contact = () => {
                     />
                   </div>
 
-                  {/* Image Uploads */}
+                  {/* Image Uploads Section */}
                   <div className="space-y-4 pt-4">
-                    <h3 className="text-lg font-medium text-gray-900">Image Uploads (Maximum 4 Images)</h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {/* Front View */}
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Image Upload — Front View
+                    {/* Checkbox to enable photo uploads */}
+                    <div className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                      <Checkbox
+                        id="share-photos"
+                        checked={wantsToSharePhotos}
+                        onCheckedChange={(checked) => setWantsToSharePhotos(checked === true)}
+                        className="mt-0.5"
+                      />
+                      <div className="flex-1">
+                        <label
+                          htmlFor="share-photos"
+                          className="text-sm font-medium text-gray-900 cursor-pointer flex items-center gap-2"
+                        >
+                          <ImageIcon className="w-4 h-4 text-gray-600" />
+                          I would like to share photos for the doctor to review
                         </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
-                          <input
-                            type="file"
-                            accept=".jpg,.jpeg,.png,.pdf,.heif"
-                            onChange={(e) => handleFileChange('front', e.target.files?.[0])}
-                            className="hidden"
-                            id="front-view"
-                          />
-                          <label htmlFor="front-view" className="cursor-pointer">
-                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                            <p className="text-sm text-gray-600 mb-1">
-                              {files.front ? files.front.name : 'Choose file'}
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              Accepted: jpg, png, pdf, jpeg, heif
-                            </p>
-                            <p className="text-xs text-gray-500">Max: 20MB</p>
-                          </label>
-                        </div>
-                      </div>
-
-                      {/* Side View */}
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Image Upload — Side View
-                        </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
-                          <input
-                            type="file"
-                            accept=".jpg,.jpeg,.png,.pdf,.heif"
-                            onChange={(e) => handleFileChange('side', e.target.files?.[0])}
-                            className="hidden"
-                            id="side-view"
-                          />
-                          <label htmlFor="side-view" className="cursor-pointer">
-                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                            <p className="text-sm text-gray-600 mb-1">
-                              {files.side ? files.side.name : 'Choose file'}
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              Accepted: jpg, png, pdf, jpeg, heif
-                            </p>
-                            <p className="text-xs text-gray-500">Max: 20MB</p>
-                          </label>
-                        </div>
-                      </div>
-
-                      {/* Other Side View */}
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Image Upload — Other Side View
-                        </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
-                          <input
-                            type="file"
-                            accept=".jpg,.jpeg,.png,.pdf,.heif"
-                            onChange={(e) => handleFileChange('otherSide', e.target.files?.[0])}
-                            className="hidden"
-                            id="other-side-view"
-                          />
-                          <label htmlFor="other-side-view" className="cursor-pointer">
-                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                            <p className="text-sm text-gray-600 mb-1">
-                              {files.otherSide ? files.otherSide.name : 'Choose file'}
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              Accepted: jpg, png, pdf, jpeg, heif
-                            </p>
-                            <p className="text-xs text-gray-500">Max: 20MB</p>
-                          </label>
-                        </div>
-                      </div>
-
-                      {/* Additional Photo */}
-                      <div>
-                        <label className="block text-sm font-medium mb-2 text-gray-700">
-                          Image Upload — Additional Photo (optional)
-                        </label>
-                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
-                          <input
-                            type="file"
-                            accept=".jpg,.jpeg,.png,.pdf,.heif"
-                            onChange={(e) => handleFileChange('additional', e.target.files?.[0])}
-                            className="hidden"
-                            id="additional-photo"
-                          />
-                          <label htmlFor="additional-photo" className="cursor-pointer">
-                            <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                            <p className="text-sm text-gray-600 mb-1">
-                              {files.additional ? files.additional.name : 'Choose file'}
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              Accepted: jpg, png, pdf, jpeg, heif
-                            </p>
-                            <p className="text-xs text-gray-500">Max: 20MB</p>
-                          </label>
-                        </div>
+                        <p className="text-xs text-gray-500 mt-1">
+                          Optional: Upload up to 4 images to help us better understand your goals
+                        </p>
                       </div>
                     </div>
+                    
+                    {/* Conditional Image Upload Grid */}
+                    {wantsToSharePhotos && (
+                      <div className="space-y-4 animate-fade-in">
+                        <h3 className="text-lg font-medium text-gray-900">Upload Your Photos (Maximum 4)</h3>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {/* Front View */}
+                          <div>
+                            <label className="block text-sm font-medium mb-2 text-gray-700">
+                              Front View
+                            </label>
+                            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                              <input
+                                type="file"
+                                accept=".jpg,.jpeg,.png,.pdf,.heif"
+                                onChange={(e) => handleFileChange('front', e.target.files?.[0])}
+                                className="hidden"
+                                id="front-view"
+                              />
+                              <label htmlFor="front-view" className="cursor-pointer">
+                                <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                                <p className="text-sm text-gray-600 mb-1">
+                                  {files.front ? files.front.name : 'Choose file'}
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                  jpg, png, pdf, heif · Max 20MB
+                                </p>
+                              </label>
+                            </div>
+                          </div>
+
+                          {/* Side View */}
+                          <div>
+                            <label className="block text-sm font-medium mb-2 text-gray-700">
+                              Side View
+                            </label>
+                            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                              <input
+                                type="file"
+                                accept=".jpg,.jpeg,.png,.pdf,.heif"
+                                onChange={(e) => handleFileChange('side', e.target.files?.[0])}
+                                className="hidden"
+                                id="side-view"
+                              />
+                              <label htmlFor="side-view" className="cursor-pointer">
+                                <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                                <p className="text-sm text-gray-600 mb-1">
+                                  {files.side ? files.side.name : 'Choose file'}
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                  jpg, png, pdf, heif · Max 20MB
+                                </p>
+                              </label>
+                            </div>
+                          </div>
+
+                          {/* Other Side View */}
+                          <div>
+                            <label className="block text-sm font-medium mb-2 text-gray-700">
+                              Other Side View
+                            </label>
+                            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                              <input
+                                type="file"
+                                accept=".jpg,.jpeg,.png,.pdf,.heif"
+                                onChange={(e) => handleFileChange('otherSide', e.target.files?.[0])}
+                                className="hidden"
+                                id="other-side-view"
+                              />
+                              <label htmlFor="other-side-view" className="cursor-pointer">
+                                <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                                <p className="text-sm text-gray-600 mb-1">
+                                  {files.otherSide ? files.otherSide.name : 'Choose file'}
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                  jpg, png, pdf, heif · Max 20MB
+                                </p>
+                              </label>
+                            </div>
+                          </div>
+
+                          {/* Additional Photo */}
+                          <div>
+                            <label className="block text-sm font-medium mb-2 text-gray-700">
+                              Additional Photo <span className="text-gray-400 font-normal">(optional)</span>
+                            </label>
+                            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-gray-900 transition-colors cursor-pointer">
+                              <input
+                                type="file"
+                                accept=".jpg,.jpeg,.png,.pdf,.heif"
+                                onChange={(e) => handleFileChange('additional', e.target.files?.[0])}
+                                className="hidden"
+                                id="additional-photo"
+                              />
+                              <label htmlFor="additional-photo" className="cursor-pointer">
+                                <Camera className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                                <p className="text-sm text-gray-600 mb-1">
+                                  {files.additional ? files.additional.name : 'Choose file'}
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                  jpg, png, pdf, heif · Max 20MB
+                                </p>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Privacy Notice */}
