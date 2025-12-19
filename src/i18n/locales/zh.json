@@ -362,22 +362,67 @@
     "face": {
       "title": "面部",
       "subtitle": "面部美容与重建手术",
-      "allProcedures": "所有面部手术"
+      "allProcedures": "所有面部手术",
+      "signatureTechnique": "招牌技术",
+      "philosophy": "理解理念",
+      "philosophyText1": "在 Karaaltın 医生的诊所，面部年轻化被视为艺术与科学的结合。每张脸都有独特的故事，我们的目标是恢复和增强自然美，同时尊重个人的解剖特征和美学目标。",
+      "philosophyText2": "我们的综合方法不仅考虑表面外观，还考虑随着衰老发生的深层结构变化。这种深刻的理解使我们能够创造自然、和谐、持久的效果。",
+      "anatomy": "面部解剖",
+      "boneStructure": "骨骼结构",
+      "boneStructureDesc": "骨骼框架为所有面部特征提供基础，并定义面部的整体形状。",
+      "muscleLayer": "肌肉层",
+      "muscleLayerDesc": "肌肉创造表情运动，并为上覆软组织提供支撑。",
+      "fatCompartments": "脂肪室",
+      "fatCompartmentsDesc": "战略分布的脂肪垫随着衰老而萎缩，导致体积损失和阴影。",
+      "skinEnvelope": "皮肤包膜",
+      "skinEnvelopeDesc": "皮肤覆盖在下层结构上，随着年龄增长失去弹性，需要精确切除或重新定位。"
     },
     "body": {
       "title": "身体",
       "subtitle": "身体塑形与美容手术",
-      "allProcedures": "所有身体手术"
+      "allProcedures": "所有身体手术",
+      "signatureTechnique": "招牌技术",
+      "philosophy": "理解理念",
+      "philosophyText1": "Karaaltın 医生的身体塑形专注于通过精确雕塑和和谐比例来展现您的自然形态。每个治疗计划都旨在满足您独特的解剖结构和美学愿景。",
+      "philosophyText2": "我们的综合方法考虑皮肤质量、底层肌肉组织和脂肪分布，以创造平衡、自然、持久的效果。",
+      "anatomy": "身体解剖",
+      "skinTissue": "皮肤与组织",
+      "skinTissueDesc": "皮肤弹性和质量决定身体塑形的成功。了解组织特性指导治疗计划。",
+      "fatDistribution": "脂肪分布",
+      "fatDistributionDesc": "皮下脂肪模式因遗传、年龄和生活方式而异。战略性去除和重新定位创造平衡的轮廓。",
+      "muscleFoundation": "肌肉基础",
+      "muscleFoundationDesc": "底层肌肉组织提供结构支撑。解决肌肉分离可增强身体塑形手术的效果。",
+      "bodyProportions": "身体比例",
+      "bodyProportionsDesc": "自然美学比例指导手术规划，创造和谐、平衡的效果，增强您的轮廓。"
     },
     "breast": {
       "title": "胸部",
       "subtitle": "通过先进的手术精确度实现精致的改善、结构和谐和自然效果",
-      "allProcedures": "所有胸部手术"
+      "allProcedures": "所有胸部手术",
+      "signatureTechnique": "招牌技术",
+      "philosophy": "理解理念",
+      "philosophyText1": "胸部手术需要艺术视野和技术专长的结合。每个手术都是量身定制的，以增强自然和谐，同时尊重个人的身体特征。",
+      "philosophyText2": "我们的理念专注于创造看起来和感觉都自然的效果，强调比例、对称性和患者的长期满意度。",
+      "anatomy": "胸部解剖"
     },
     "nose": {
       "title": "鼻子",
       "subtitle": "结合结构、功能和精致美学的精准鼻部手术",
-      "allProcedures": "所有鼻部手术"
+      "allProcedures": "所有鼻部手术",
+      "signatureTechnique": "招牌技术",
+      "philosophy": "鼻部美学理念",
+      "philosophyText": "鼻子是面部和谐的中心支点。Karaaltin 教授以平衡、结构和自然美为根基的理念来处理鼻部美学——优先考虑功能性呼吸和精致的视觉比例。",
+      "anatomy": "理解鼻部解剖",
+      "boneCartilage": "骨骼与软骨框架",
+      "boneCartilageDesc": "定义投影、鼻梁形状和支撑。",
+      "softTissue": "软组织包膜",
+      "softTissueDesc": "厚度和弹性影响精细度。",
+      "airwaySupport": "气道支撑",
+      "airwaySupportDesc": "鼻中隔和瓣膜的完整性决定呼吸质量。",
+      "ethnicVariations": "种族与结构差异",
+      "ethnicVariationsDesc": "对个性化规划至关重要。",
+      "whatCanAddress": "隆鼻可以解决什么问题？",
+      "whatCanAddressText": "鼻梁不规则、鼻尖精细化、歪斜的鼻中隔、下垂的鼻尖、鼻基宽度、结构不对称、呼吸困难和修复案例。"
     }
   },
   "gallery": {
