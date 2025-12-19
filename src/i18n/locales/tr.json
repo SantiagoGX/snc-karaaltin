@@ -336,5 +336,78 @@
     "preferredFormat": "Tercih Edilen Kurs Formatı",
     "additionalNotes": "Ek Notlar veya Sorular",
     "submitApplication": "Başvuruyu Gönder"
+  },
+  "procedures": {
+    "face": {
+      "title": "YÜZ",
+      "subtitle": "Yüz Estetiği ve Rekonstrüktif İşlemler",
+      "allProcedures": "TÜM YÜZ İŞLEMLERİ",
+      "philosophy": "Felsefeyi Anlamak",
+      "philosophyText1": "Dr. Karaaltın'ın pratiğinde yüz gençleştirme hem bir sanat hem de bir bilim olarak ele alınır. Her yüz benzersiz bir hikaye anlatır ve amacımız bireysel anatomik özellikleri ve estetik hedefleri gözeterek doğal güzelliği restore etmek ve geliştirmektir.",
+      "philosophyText2": "Kapsamlı yaklaşımımız sadece yüzeysel görünümü değil, yaşlanmayla birlikte meydana gelen altta yatan yapısal değişiklikleri de dikkate alır. Bu derin anlayış, doğal, uyumlu ve uzun ömürlü sonuçlar elde etmemizi sağlar.",
+      "anatomy": "Yüz Anatomisi",
+      "boneStructure": "Kemik Yapısı",
+      "boneStructureDesc": "İskelet yapısı tüm yüz özelliklerinin temelini oluşturur ve yüzün genel şeklini tanımlar.",
+      "muscleLayer": "Kas Katmanı",
+      "muscleLayerDesc": "Kaslar ifade hareketlerini oluşturur ve üstteki yumuşak dokulara destek sağlar.",
+      "fatCompartments": "Yağ Bölmeleri",
+      "fatCompartmentsDesc": "Stratejik olarak dağıtılmış yağ yastıkları yaşlanmayla söner, hacim kaybına ve gölgelenmeye yol açar.",
+      "skinEnvelope": "Deri Örtüsü",
+      "skinEnvelopeDesc": "Deri alttaki yapıları örter ve yaşla birlikte esnekliğini kaybeder, hassas çıkarma veya yeniden konumlandırma gerektirir."
+    },
+    "body": {
+      "title": "VÜCUT",
+      "subtitle": "Vücut Şekillendirme ve Estetik İşlemler",
+      "allProcedures": "TÜM VÜCUT İŞLEMLERİ",
+      "philosophy": "Felsefeyi Anlamak",
+      "philosophyText1": "Dr. Karaaltın'ın pratiğinde vücut şekillendirme, hassas heykeltraşlık ve uyumlu oranlar aracılığıyla doğal formunuzu ortaya çıkarmaya odaklanır. Her tedavi planı, benzersiz anatominizi ve estetik vizyonunuzu ele almak için tasarlanmıştır.",
+      "philosophyText2": "Kapsamlı yaklaşımımız cilt kalitesini, altta yatan kas yapısını ve yağ dağılımını dikkate alarak dengeli, doğal ve kalıcı sonuçlar yaratır.",
+      "anatomy": "Vücut Anatomisi",
+      "skinTissue": "Cilt ve Doku",
+      "skinTissueDesc": "Cilt esnekliği ve kalitesi vücut şekillendirmenin başarısını belirler. Doku özelliklerini anlamak tedavi planlamasına rehberlik eder.",
+      "fatDistribution": "Yağ Dağılımı",
+      "fatDistributionDesc": "Deri altı yağ desenleri genetik, yaş ve yaşam tarzına göre değişir. Stratejik çıkarma ve yeniden konumlandırma dengeli kontürler yaratır.",
+      "muscleFoundation": "Kas Temeli",
+      "muscleFoundationDesc": "Altta yatan kas yapısı yapısal destek sağlar. Kas ayrılmasını ele almak vücut şekillendirme işlemlerinde sonuçları geliştirir.",
+      "bodyProportions": "Vücut Oranları",
+      "bodyProportionsDesc": "Doğal estetik oranlar, siluetinizi geliştiren uyumlu, dengeli sonuçlar yaratmak için cerrahi planlamaya rehberlik eder."
+    },
+    "breast": {
+      "title": "MEME",
+      "subtitle": "Gelişmiş cerrahi hassasiyetle rafine geliştirme, yapısal uyum ve doğal sonuçlar.",
+      "allProcedures": "TÜM MEME İŞLEMLERİ",
+      "signatureTechnique": "İmza Tekniği",
+      "philosophy": "Felsefeyi Anlamak",
+      "philosophyText1": "Meme cerrahisi sanatsal vizyon ve teknik uzmanlığın bir karışımını gerektirir. Her işlem, bireysel fiziksel özelliklere saygı gösterirken doğal uyumu geliştirmek için özelleştirilir.",
+      "philosophyText2": "Felsefemiz, orana, simetriye ve uzun vadeli hasta memnuniyetine vurgu yaparak doğal görünen ve hissettiren sonuçlar yaratmaya odaklanır.",
+      "anatomy": "Meme Anatomisi"
+    },
+    "nose": {
+      "title": "BURUN",
+      "subtitle": "Yapı, fonksiyon ve rafine estetiği birleştiren hassas burun cerrahisi.",
+      "allProcedures": "TÜM BURUN İŞLEMLERİ",
+      "philosophy": "Burun Estetiği Felsefesi",
+      "philosophyText": "Burun, yüz uyumunun merkezi çapasıdır. Profesör Dr. Karaaltin, denge, yapı ve doğal güzelliğe dayanan bir felsefeyle burun estetiğine yaklaşır—hem fonksiyonel solunumu hem de rafine görsel oranları önceliklendirir.",
+      "anatomy": "Burun Anatomisini Anlamak",
+      "boneCartilage": "Kemik ve Kıkırdak Çerçevesi",
+      "boneCartilageDesc": "Projeksiyon, köprü şekli ve desteği tanımlar.",
+      "softTissue": "Yumuşak Doku Örtüsü",
+      "softTissueDesc": "Kalınlık ve esneklik rafineliği etkiler.",
+      "airwaySupport": "Hava Yolu Desteği",
+      "airwaySupportDesc": "Septum ve valv bütünlüğü solunum kalitesini belirler.",
+      "ethnicVariations": "Etnik ve Yapısal Varyasyonlar",
+      "ethnicVariationsDesc": "Kişiselleştirilmiş planlama için gereklidir.",
+      "whatCanAddress": "Rinoplasti Neleri Ele Alabilir?",
+      "whatCanAddressText": "Köprü düzensizlikleri, burun ucu rafineliği, eğri septum, düşen burun ucu, burun tabanı genişliği, yapısal asimetriler, solunum güçlükleri ve revizyon vakaları."
+    }
+  },
+  "gallery": {
+    "title": "Önce ve Sonra",
+    "subtitle": "Profesör Dr. Karaaltın'dan gerçek hasta sonuçlarını keşfedin",
+    "filterBy": "Filtrele",
+    "allCategories": "Tüm Kategoriler",
+    "allProcedures": "Tüm İşlemler",
+    "clickToEnlarge": "Büyütmek için tıklayın",
+    "noResults": "Sonuç bulunamadı"
   }
 }
