@@ -39,7 +39,8 @@ const Header = () => {
     { code: 'en', label: 'English', flag: 'EN' },
     { code: 'tr', label: 'Türkçe', flag: 'TR' },
     { code: 'es', label: 'Español', flag: 'ES' },
-    { code: 'zh', label: '中文', flag: '中' }
+    { code: 'zh', label: '中文', flag: '中' },
+    { code: 'ar', label: 'العربية', flag: 'ع' }
   ];
 
   const handleLanguageChange = (lang: typeof languages[0]) => {
@@ -362,10 +363,10 @@ const Header = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="w-full border-2 border-black bg-transparent text-black hover:bg-black hover:text-white transition-all"
+              className="w-full border-2 border-black bg-transparent text-black hover:bg-black hover:text-white transition-all text-xs sm:text-sm leading-tight py-3"
               asChild
             >
-              <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className="whitespace-normal text-center">
                 {t('nav.talkToSurgeon')}
               </NavLink>
             </Button>

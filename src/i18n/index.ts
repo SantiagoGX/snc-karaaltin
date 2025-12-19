@@ -5,6 +5,7 @@ import en from './locales/en.json';
 import tr from './locales/tr.json';
 import es from './locales/es.json';
 import zh from './locales/zh.json';
+import ar from './locales/ar.json';
 
 i18n
   .use(initReactI18next)
@@ -14,6 +15,7 @@ i18n
       tr: { translation: tr },
       es: { translation: es },
       zh: { translation: zh },
+      ar: { translation: ar },
     },
     lng: 'en',
     fallbackLng: 'en',
