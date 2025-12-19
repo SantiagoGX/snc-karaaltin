@@ -395,44 +395,44 @@ const LearnSurgery = () => {
           </div>
         </section>
 
-        {/* 9. SAMPLE 2-DAY AGENDA - LIGHT GREY, TIMELINE STYLE */}
-        <section className="py-16 md:py-24 px-8 bg-gray-50">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-12 text-center fade-in">
+        {/* 9. SAMPLE 2-DAY AGENDA - LIGHT GREY, GRID LAYOUT */}
+        <section className="py-16 md:py-24 px-6 md:px-8 bg-gray-50">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-10 md:mb-12 text-center fade-in">
               Sample 2-Day Agenda
             </h2>
-            <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {/* Day 1 */}
-              <div className="backdrop-blur-md bg-white/90 border-l-4 border-[#0d1f3a] rounded-lg p-8 shadow-lg fade-in-up">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#0d1f3a] text-white rounded-full flex items-center justify-center font-bold text-lg">
+              <div className="backdrop-blur-md bg-white/90 border-l-4 border-[#0d1f3a] rounded-lg p-5 md:p-8 shadow-lg fade-in-up">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#0d1f3a] text-white rounded-full flex items-center justify-center font-bold text-base md:text-lg shrink-0">
                     1
                   </div>
-                  <h3 className="font-serif font-semibold text-2xl text-gray-900">DAY 1</h3>
+                  <h3 className="font-serif font-semibold text-xl md:text-2xl text-gray-900">DAY 1</h3>
                 </div>
-                <ul className="space-y-3 text-gray-700 pl-16">
-                  <li>• Endochor® biomechanics and material science</li>
-                  <li>• Safety zones & nerve/vascular mapping</li>
-                  <li>• Vector design for forehead, mid-face, neck, brow</li>
-                  <li>• Implant sizing & fixation principles</li>
-                  <li>• Lab: access, pocket creation, implant seating</li>
+                <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Endochor® biomechanics and material science</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Safety zones & nerve/vascular mapping</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Vector design for forehead, mid-face, neck, brow</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Implant sizing & fixation principles</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Lab: access, pocket creation, implant seating</li>
                 </ul>
               </div>
 
               {/* Day 2 */}
-              <div className="backdrop-blur-md bg-white/90 border-l-4 border-[#0d1f3a] rounded-lg p-8 shadow-lg fade-in-up" style={{ animationDelay: '0.1s' }}>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-[#0d1f3a] text-white rounded-full flex items-center justify-center font-bold text-lg">
+              <div className="backdrop-blur-md bg-white/90 border-l-4 border-[#0d1f3a] rounded-lg p-5 md:p-8 shadow-lg fade-in-up" style={{ animationDelay: '0.1s' }}>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-[#0d1f3a] text-white rounded-full flex items-center justify-center font-bold text-base md:text-lg shrink-0">
                     2
                   </div>
-                  <h3 className="font-serif font-semibold text-2xl text-gray-900">DAY 2</h3>
+                  <h3 className="font-serif font-semibold text-xl md:text-2xl text-gray-900">DAY 2</h3>
                 </div>
-                <ul className="space-y-3 text-gray-700 pl-16">
-                  <li>• Complication management & revision strategies</li>
-                  <li>• Extended cadaver lab OR live case observation</li>
-                  <li>• Documentation, consent, billing/coding</li>
-                  <li>• Post-operative care pathways</li>
-                  <li>• Case-based planning with faculty</li>
+                <ul className="space-y-2 text-gray-700 text-sm md:text-base">
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Complication management & revision strategies</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Extended cadaver lab OR live case observation</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Documentation, consent, billing/coding</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Post-operative care pathways</li>
+                  <li className="flex gap-2"><span className="text-[#0d1f3a]">•</span>Case-based planning with faculty</li>
                 </ul>
               </div>
             </div>
