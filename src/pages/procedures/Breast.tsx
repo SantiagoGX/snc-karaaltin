@@ -6,7 +6,10 @@ import ContactCTASection from "@/components/home/ContactCTASection";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 const Breast = () => {
+  const { t } = useTranslation();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     loop: false,
@@ -52,9 +55,9 @@ const Breast = () => {
         
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4 fade-in-up max-w-5xl mx-auto pointer-events-none">
-          <h1 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6 uppercase">BREAST</h1>
+          <h1 className="font-serif font-light text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6 uppercase">{t('procedures.breast.title')}</h1>
           <p className="text-lg md:text-xl tracking-wide font-light max-w-3xl mx-auto">
-            Refined enhancement, structural harmony, and natural results through advanced surgical precision.
+            {t('procedures.breast.subtitle')}
           </p>
         </div>
       </section>
@@ -63,7 +66,7 @@ const Breast = () => {
       <section className="bg-gray-100 py-16 md:py-24 px-4 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <h2 className="font-serif font-light text-4xl md:text-5xl lg:text-6xl tracking-wider mb-12 text-center fade-in uppercase">
-            ALL BREAST PROCEDURES
+            {t('procedures.breast.allProcedures')}
           </h2>
           
           {/* Carousel Container */}
@@ -87,7 +90,7 @@ const Breast = () => {
                     <img alt="Breast Augmentation with Fat Grafting" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/1fde5cba-4ea6-4847-938b-8f4660be6f83.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">{t('procedures.breast.signatureTechnique')}</p>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
@@ -109,7 +112,7 @@ const Breast = () => {
                     <img alt="K-Glide™ Breast Augmentation" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/9485ec6b-07fb-485d-b862-4904a7c6e2a7.jpg" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">{t('procedures.breast.signatureTechnique')}</p>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
@@ -131,7 +134,7 @@ const Breast = () => {
                     <img alt="Twirl Internal Bra Technique™" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/bddff33e-2eb6-4176-9eec-7d4311b5459e.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">{t('procedures.breast.signatureTechnique')}</p>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">
@@ -153,7 +156,7 @@ const Breast = () => {
                     <img alt="Smart BRA / Bloocell Scaffold" className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/a905f802-c73d-411c-bc3f-6e685c568acb.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 transition-all duration-500 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-transparent pointer-events-none"></div>
                     <div className="absolute top-6 left-6 backdrop-blur-md bg-white/20 px-4 py-2 border border-white/30 shadow-lg pointer-events-none">
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">Signature Technique</p>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-white font-light">{t('procedures.breast.signatureTechnique')}</p>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
                       <div className="min-h-[80px] flex items-end">

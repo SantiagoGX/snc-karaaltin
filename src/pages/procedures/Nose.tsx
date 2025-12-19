@@ -4,7 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
+import { useTranslation } from "react-i18next";
+
 const Nose = () => {
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = Math.ceil(2 / 3);
   const handlePrev = () => {
@@ -22,10 +25,10 @@ const Nose = () => {
           <img alt="Nose procedures hero" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/35d4aaa7-1484-44e9-9a3e-9af86438f74c.jpg" />
           <div className="relative z-20 container mx-auto px-8 lg:px-16 text-center text-white space-y-4 fade-in pointer-events-none">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-wide uppercase">
-              NOSE
+              {t('procedures.nose.title')}
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl font-light max-w-3xl mx-auto">
-              Precision-driven nasal surgery combining structure, function, and refined aesthetics.
+              {t('procedures.nose.subtitle')}
             </p>
           </div>
         </section>
@@ -34,7 +37,7 @@ const Nose = () => {
         <section className="py-16 lg:py-24 px-8 lg:px-16 bg-white relative">
           <div className="container mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-12 lg:mb-16 fade-in">
-              ALL NOSE PROCEDURES
+              {t('procedures.nose.allProcedures')}
             </h2>
 
             <div className="relative">
@@ -56,7 +59,7 @@ const Nose = () => {
                       {/* Signature Badge */}
                       <div className="absolute top-4 left-4 z-10">
                         <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest font-light bg-white/90 backdrop-blur-md text-gray-900 border border-white/20 rounded">
-                          Signature Technique
+                          {t('procedures.nose.signatureTechnique')}
                         </span>
                       </div>
 
@@ -73,7 +76,7 @@ const Nose = () => {
                           </p>
 
                           <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                            View Procedure
+                            {t('common.viewProcedure')}
                             <span className="text-lg">→</span>
                           </div>
                         </div>
@@ -103,7 +106,7 @@ const Nose = () => {
                           </p>
 
                           <div className="flex items-center gap-2 text-white text-sm uppercase tracking-wider font-light opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                            View Procedure
+                            {t('common.viewProcedure')}
                             <span className="text-lg">→</span>
                           </div>
                         </div>
@@ -138,17 +141,17 @@ const Nose = () => {
             {/* Philosophy */}
             <div className="space-y-6 fade-in">
               <h2 className="text-3xl md:text-4xl font-light tracking-wide uppercase text-center">
-                Philosophy of Nasal Aesthetics
+                {t('procedures.nose.philosophy')}
               </h2>
               <p className="text-gray-600 text-center leading-relaxed max-w-3xl mx-auto">
-                The nose is the central anchor of facial harmony. Professor Dr. Karaaltin approaches nasal aesthetics with a philosophy rooted in balance, structure, and natural beauty—prioritizing both functional breathing and refined visual proportions.
+                {t('procedures.nose.philosophyText')}
               </p>
             </div>
 
             {/* Understanding Nasal Anatomy - Redesigned */}
             <div className="space-y-16 fade-in">
               <h2 className="text-3xl md:text-4xl font-light tracking-wide uppercase text-center">
-                Understanding Nasal Anatomy
+                {t('procedures.nose.anatomy')}
               </h2>
               
               {/* Premium Layout: Central Image with Corner Items */}
@@ -166,10 +169,10 @@ const Nose = () => {
                 animationDelay: '0.3s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
-                    Bone & Cartilage Framework
+                    {t('procedures.nose.boneCartilage')}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                    Defines projection, bridge shape, and support.
+                    {t('procedures.nose.boneCartilageDesc')}
                   </p>
                 </div>
                 
@@ -178,10 +181,10 @@ const Nose = () => {
                 animationDelay: '0.4s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
-                    Soft Tissue Envelope
+                    {t('procedures.nose.softTissue')}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                    Thickness and elasticity influence refinement.
+                    {t('procedures.nose.softTissueDesc')}
                   </p>
                 </div>
                 
@@ -190,10 +193,10 @@ const Nose = () => {
                 animationDelay: '0.5s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
-                    Airway Support
+                    {t('procedures.nose.airwaySupport')}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                    Septum and valve integrity determine breathing quality.
+                    {t('procedures.nose.airwaySupportDesc')}
                   </p>
                 </div>
                 
@@ -202,10 +205,10 @@ const Nose = () => {
                 animationDelay: '0.6s'
               }}>
                   <h3 className="text-lg md:text-xl font-light uppercase tracking-wide text-gray-900">
-                    Ethnic & Structural Variations
+                    {t('procedures.nose.ethnicVariations')}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                    Essential for personalized planning.
+                    {t('procedures.nose.ethnicVariationsDesc')}
                   </p>
                 </div>
               </div>
@@ -213,27 +216,27 @@ const Nose = () => {
               {/* Mobile Layout - Grid below image */}
               <div className="md:hidden grid grid-cols-1 gap-4 mt-8">
                 <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
-                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Bone & Cartilage Framework</h3>
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">{t('procedures.nose.boneCartilage')}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Defines projection, bridge shape, and support.
+                    {t('procedures.nose.boneCartilageDesc')}
                   </p>
                 </div>
                 <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
-                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Soft Tissue Envelope</h3>
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">{t('procedures.nose.softTissue')}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Thickness and elasticity influence refinement.
+                    {t('procedures.nose.softTissueDesc')}
                   </p>
                 </div>
                 <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
-                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Airway Support</h3>
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">{t('procedures.nose.airwaySupport')}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Septum and valve integrity determine breathing quality.
+                    {t('procedures.nose.airwaySupportDesc')}
                   </p>
                 </div>
                 <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
-                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">Ethnic & Structural Variations</h3>
+                  <h3 className="text-base font-light uppercase tracking-wide text-gray-900 mb-2">{t('procedures.nose.ethnicVariations')}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Essential for personalized planning.
+                    {t('procedures.nose.ethnicVariationsDesc')}
                   </p>
                 </div>
               </div>
@@ -242,10 +245,10 @@ const Nose = () => {
             {/* What Can Rhinoplasty Address */}
             <div className="space-y-6 fade-in">
               <h2 className="text-3xl md:text-4xl font-light tracking-wide uppercase text-center">
-                What Can Rhinoplasty Address?
+                {t('procedures.nose.whatCanAddress')}
               </h2>
               <p className="text-gray-600 text-center leading-relaxed max-w-3xl mx-auto">
-                Bridge irregularities, tip refinement, crooked septum, drooping tip, nasal base width, structural asymmetries, breathing difficulties, and revision cases.
+                {t('procedures.nose.whatCanAddressText')}
               </p>
             </div>
           </div>
