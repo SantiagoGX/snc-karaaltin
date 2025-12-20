@@ -34,12 +34,12 @@ const BreastAugmentationImplants = () => {
         <div className="procedure-hero-overlay" />
         <div className="procedure-hero-content">
           <h1 className="procedure-hero-title animate-fade-in">
-            Breast Augmentation With Implants
+            {t('procedurePages.breastAugmentationImplants.title', 'Breast Augmentation With Implants')}
           </h1>
           <p className="procedure-hero-subtitle animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            Sculpted Volume. Precision Planning. Long-Lasting Results.
+            {t('procedurePages.breastAugmentationImplants.subtitle', 'Sculpted Volume. Precision Planning. Long-Lasting Results.')}
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ const BreastAugmentationImplants = () => {
       <section className="section-spacing">
         <div className="content-spacing max-w-3xl mx-auto text-center">
           <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-            Breast augmentation with implants remains the gold standard for achieving significant volume enhancement and upper-pole fullness. Dr. Karaaltin combines advanced planning, anatomical mapping, and tailored implant selection to deliver balanced, natural-looking results that complement every patient's physique and aesthetic goals.
+            {t('procedurePages.breastAugmentationImplants.intro', 'Breast augmentation with implants remains the gold standard for achieving significant volume enhancement and upper-pole fullness. Dr. Karaaltin combines advanced planning, anatomical mapping, and tailored implant selection to deliver balanced, natural-looking results that complement every patient\'s physique and aesthetic goals.')}
           </p>
         </div>
       </section>
@@ -60,10 +60,10 @@ const BreastAugmentationImplants = () => {
             <div className="overview-sticky-left animate-fade-in">
               <div>
                 <h2 className="overview-title-dark">
-                  Breast Augmentation
+                  {t('procedurePages.breastAugmentationImplants.title', 'Breast Augmentation')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('procedurePages.common.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />

@@ -56,12 +56,12 @@ const NippleAreolaReduction = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-start pointer-events-none">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 uppercase tracking-wide animate-fade-in">
-            Nipple & Areola Reduction
+            {t('procedurePages.nippleAreola.title')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style={{
           animationDelay: "0.1s"
         }}>
-            Refined Proportion. Natural Symmetry. Elegant Balance.
+            {t('procedurePages.nippleAreola.subtitle')}
           </p>
         </div>
       </section>
@@ -71,13 +71,7 @@ const NippleAreolaReduction = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto space-y-6 text-center animate-fade-in">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Nipple & Areola Reduction by Professor Dr. Karaaltin offers precise, minimally invasive refinement for patients concerned with elongated nipples, excessive projection, enlarged areolas, or asymmetry.
-            </p>
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              This procedure restores balance, proportion, and harmony while preserving sensation and natural breast function.
-            </p>
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              It can be performed alone or combined with augmentation, mastopexy, reduction, gynecomastia correction, or gender-affirming surgery.
+              {t('procedurePages.nippleAreola.intro')}
             </p>
           </div>
         </div>
@@ -90,10 +84,10 @@ const NippleAreolaReduction = () => {
             {/* Left Column - Sticky */}
             <div className="overview-sticky-left animate-fade-in">
               <h2 className="overview-title-dark">
-                Nipple & Areola Reduction
+                {t('procedurePages.nippleAreola.title')}
               </h2>
               <p className="overview-subtitle-dark">
-                Overview
+                {t('procedurePages.common.overview')}
               </p>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>

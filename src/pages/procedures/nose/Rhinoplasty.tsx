@@ -71,12 +71,12 @@ const Rhinoplasty = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
-            Rhinoplasty
+            {t('procedurePages.rhinoplasty.title')}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            Advanced Nasal Aesthetics & Functional Restoration
+            {t('procedurePages.rhinoplasty.subtitle')}
           </p>
         </div>
       </section>
@@ -85,12 +85,7 @@ const Rhinoplasty = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
-            Rhinoplasty with Professor Dr. Mehmet Veli Karaaltin blends artistic refinement, functional precision, and scientifically guided techniques. Performed in Istanbul, Doha, Dubai, and London, his approach elevates nasal harmony while ensuring optimal breathing and long-term structural stability.
-          </p>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
-            Every surgery is planned using advanced anatomical mapping and tailored to the patient's unique proportions, goals, and airway needs.
+            {t('procedurePages.rhinoplasty.intro')}
           </p>
         </div>
       </section>
@@ -99,14 +94,13 @@ const Rhinoplasty = () => {
       <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
-            {/* LEFT: STICKY */}
             <div className="overview-sticky-left animate-fade-in">
               <div>
                 <h2 className="overview-title-dark">
-                  Rhinoplasty
+                  {t('procedurePages.rhinoplasty.title')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('procedurePages.common.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />

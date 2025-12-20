@@ -19,10 +19,10 @@ const ImplantRemoval = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-[0.2em]">
-            BREAST IMPLANT REMOVAL
+            {t('procedurePages.implantRemoval.title')}
           </h1>
           <p className="text-lg md:text-xl text-white/90 font-light tracking-wide">
-            Natural Restoration. Personalized Solutions.
+            {t('procedurePages.implantRemoval.subtitle')}
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ const ImplantRemoval = () => {
       <section className="section-spacing">
         <div className="content-spacing max-w-3xl mx-auto text-center">
           <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-            Implant removal restores breast comfort, appearance, and balance when implants are no longer desired. Dr. Karaaltin customizes every explant procedure—whether simple removal, capsulectomy, implant exchange, or breast lift—to achieve a beautiful, natural-looking result after explantation.
+            {t('procedurePages.implantRemoval.intro')}
           </p>
         </div>
       </section>
@@ -43,9 +43,9 @@ const ImplantRemoval = () => {
             <div className="overview-sticky-left">
               <div>
                 <h2 className="overview-title-dark">
-                  BREAST IMPLANT REMOVAL
+                  {t('procedurePages.implantRemoval.title')}
                 </h2>
-                <p className="overview-subtitle-dark">Overview</p>
+                <p className="overview-subtitle-dark">{t('procedurePages.common.overview')}</p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>

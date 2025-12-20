@@ -55,15 +55,15 @@ const SmartTemplateRhinoplasty = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1 rounded-full text-xs uppercase tracking-widest text-white mb-6 animate-fade-in">
-            Signature Technique
+            {t('procedurePages.common.signatureTechnique')}
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
-            Smart Template Rhinoplasty
+            {t('procedurePages.smartTemplate.title')}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            Where Innovation Meets Regeneration
+            {t('procedurePages.smartTemplate.subtitle')}
           </p>
         </div>
       </section>
@@ -72,12 +72,12 @@ const SmartTemplateRhinoplasty = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
-            Smart Template Rhinoplasty, pioneered by Professor Dr. Karaaltin, represents a breakthrough in nasal surgery. These bioengineered, fully absorbable scaffolds guide the healing process after rhinoplasty, stabilizing the nasal framework and enhancing symmetry.
+            {t('procedurePages.smartTemplate.intro1')}
           </p>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{
             animationDelay: '0.1s'
           }}>
-            Each template is custom-designed to match the patient's anatomy, supporting long-term regeneration of cartilage, bone, and soft tissue.
+            {t('procedurePages.smartTemplate.intro2')}
           </p>
         </div>
       </section>
@@ -86,14 +86,13 @@ const SmartTemplateRhinoplasty = () => {
       <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
-            {/* LEFT: STICKY */}
             <div className="overview-sticky-left animate-fade-in">
               <div>
                 <h2 className="overview-title-dark">
-                  Smart Template Rhinoplasty
+                  {t('procedurePages.smartTemplate.overviewTitle')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('procedurePages.common.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />

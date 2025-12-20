@@ -34,12 +34,12 @@ const EndoChorFaceLift = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
-            The Endochor® Face Lift
+            {t('procedurePages.endochorFaceLift.title')}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            Minimally Invasive. Maximally Effective.
+            {t('procedurePages.endochorFaceLift.subtitle')}
           </p>
         </div>
       </section>
@@ -48,12 +48,12 @@ const EndoChorFaceLift = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
-            The Endochor® Face Lift is a cutting-edge endoscopic lifting system designed by Professor Dr. Karaaltin. It blends minimally invasive access with custom-engineered biodegradable implants that reposition deep facial structures without visible scars.
+            {t('procedurePages.endochorFaceLift.intro1')}
           </p>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{
             animationDelay: '0.1s'
           }}>
-            Ideal for rejuvenating the brow, midface, and neck, this system reduces downtime while delivering stable, natural-looking elevation.
+            {t('procedurePages.endochorFaceLift.intro2')}
           </p>
         </div>
       </section>
@@ -62,14 +62,13 @@ const EndoChorFaceLift = () => {
       <section ref={overviewRef} className="overview-section-dark">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
-            {/* LEFT: STICKY */}
             <div className="overview-sticky-left animate-fade-in">
               <div>
                 <h2 className="overview-title-dark">
-                  Endochor® Face Lift
+                  {t('procedurePages.endochorFaceLift.overviewTitle')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('procedurePages.common.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
