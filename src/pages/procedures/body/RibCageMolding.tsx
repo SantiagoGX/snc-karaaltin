@@ -65,11 +65,11 @@ const RibCageMolding = () => {
             {/* LEFT: STICKY */}
             <div className="overview-sticky-left">
               <div>
-                <h2 className="overview-title-dark">
-                  Rib Cage Molding
+              <h2 className="overview-title-dark">
+                  {t('procedurePages.ribCageMolding.overviewTitle')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('common.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
@@ -79,10 +79,10 @@ const RibCageMolding = () => {
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  01 // What Is Rib Cage Molding
+                  01 // {t('procedurePages.ribCageMolding.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  A minimally invasive procedure that gently reshapes the floating ribs using piezoelectric technology. It does not involve rib extraction, does not alter deep anatomy, and maintains complete structural safety.
+                  {t('procedurePages.ribCageMolding.card1Text')}
                 </p>
               </div>
 
@@ -90,19 +90,19 @@ const RibCageMolding = () => {
                 animationDelay: '0.1s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  02 // Why Piezo Technology
+                  02 // {t('procedurePages.ribCageMolding.card2Title')}
                 </h3>
                 <p className="overview-card-text-dark mb-4">
-                  Piezoelectric energy allows sculpting the costal edge with precision micro-movements, avoiding heat, trauma, or aggressive vibrations.
+                  {t('procedurePages.ribCageMolding.card2Text')}
                 </p>
                 <p className="overview-card-text-dark font-semibold mb-2">
-                  Benefits:
+                  {t('procedurePages.ribCageMolding.card2Benefits')}
                 </p>
                 <ul className="overview-card-text-dark space-y-2">
-                  <li>• Millimetric control</li>
-                  <li>• Zero damage to soft tissues</li>
-                  <li>• Smooth and natural results</li>
-                  <li>• Accelerated recovery</li>
+                  <li>• {t('procedurePages.ribCageMolding.card2Benefit1')}</li>
+                  <li>• {t('procedurePages.ribCageMolding.card2Benefit2')}</li>
+                  <li>• {t('procedurePages.ribCageMolding.card2Benefit3')}</li>
+                  <li>• {t('procedurePages.ribCageMolding.card2Benefit4')}</li>
                 </ul>
               </div>
 
@@ -110,10 +110,10 @@ const RibCageMolding = () => {
                 animationDelay: '0.2s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  03 // Micro-Incision Approach
+                  03 // {t('procedurePages.ribCageMolding.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  The technique uses a single 0.5 cm microincision — virtually invisible once healed. Through this minimal window, the piezoelectric instrument is introduced to reshape the ribs with maximum precision and minimal aggression.
+                  {t('procedurePages.ribCageMolding.card3Text')}
                 </p>
               </div>
 
@@ -121,10 +121,10 @@ const RibCageMolding = () => {
                 animationDelay: '0.3s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  04 // Ideal Candidates
+                  04 // {t('procedurePages.ribCageMolding.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Patients who desire a narrower waist without major surgery, individuals with a wide rib cage that affects proportions, and patients seeking natural results without visible scars or extensive recovery time.
+                  {t('procedurePages.ribCageMolding.card4Text')}
                 </p>
               </div>
 
@@ -132,10 +132,10 @@ const RibCageMolding = () => {
                 animationDelay: '0.4s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  05 // Why Dr. Karaaltin
+                  05 // {t('procedurePages.ribCageMolding.card5Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Recognized for his mastery of advanced anatomical techniques and minimally invasive procedures, Dr. Karaaltin combines scientific innovation, surgical safety, and premium aesthetics. His approach is backed by research, advanced experimentation, and consistent results.
+                  {t('procedurePages.ribCageMolding.card5Text')}
                 </p>
               </div>
             </div>
@@ -154,13 +154,13 @@ const RibCageMolding = () => {
               animationDelay: '0.2s'
             }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Rib Cage Molding With Dr. Karaaltin
+                {t('procedurePages.ribCageMolding.featuredTitle')}
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Rib Cage Molding with Piezo Technology is a modern and safe alternative to rib resection. Through controlled ultrasonic vibration, Dr. Karaaltin reshapes the costal edge to refine the silhouette, reduce lateral width, and harmonize proportions. The technique maintains thoracic stability and avoids risks associated with more invasive bone surgeries.
+                {t('procedurePages.ribCageMolding.featuredText')}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book Now
+                {t('common.bookNow')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
@@ -172,7 +172,7 @@ const RibCageMolding = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-6xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Procedure Details
+            {t('procedurePages.ribCageMolding.detailsTitle')}
           </h2>
           
           <div className="space-y-16">
@@ -185,28 +185,28 @@ const RibCageMolding = () => {
                 animationDelay: '0.2s'
               }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                  How It Works
+                  {t('procedurePages.ribCageMolding.howItWorksTitle')}
                 </h3>
                 <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-semibold mt-1">01</span>
-                    <span>0.5 cm microincision</span>
+                    <span>{t('procedurePages.ribCageMolding.howItWorks1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-semibold mt-1">02</span>
-                    <span>Safe subperiosteal access</span>
+                    <span>{t('procedurePages.ribCageMolding.howItWorks2')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-semibold mt-1">03</span>
-                    <span>Precise piezoelectric remodeling</span>
+                    <span>{t('procedurePages.ribCageMolding.howItWorks3')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-semibold mt-1">04</span>
-                    <span>Symmetry verification</span>
+                    <span>{t('procedurePages.ribCageMolding.howItWorks4')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-semibold mt-1">05</span>
-                    <span>Virtually invisible closure</span>
+                    <span>{t('procedurePages.ribCageMolding.howItWorks5')}</span>
                   </li>
                 </ul>
               </div>
@@ -218,7 +218,7 @@ const RibCageMolding = () => {
                 animationDelay: '0.2s'
               }}>
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                  Clinical Advantages
+                  {t('procedurePages.ribCageMolding.advantagesTitle')}
                 </h3>
                 <div className="grid grid-cols-1 gap-4">
                   <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
@@ -226,8 +226,8 @@ const RibCageMolding = () => {
                       ✓
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-900 font-semibold">No rib extraction</p>
-                      <p className="text-sm text-gray-600">Complete structural preservation</p>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">{t('procedurePages.ribCageMolding.advantage1Title')}</p>
+                      <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.advantage1Desc')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
@@ -235,8 +235,8 @@ const RibCageMolding = () => {
                       ✓
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-900 font-semibold">No visible scars</p>
-                      <p className="text-sm text-gray-600">Virtually invisible 0.5 cm incision</p>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">{t('procedurePages.ribCageMolding.advantage2Title')}</p>
+                      <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.advantage2Desc')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
@@ -244,8 +244,8 @@ const RibCageMolding = () => {
                       ✓
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-900 font-semibold">Natural results</p>
-                      <p className="text-sm text-gray-600">Progressive and harmonious outcomes</p>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">{t('procedurePages.ribCageMolding.advantage3Title')}</p>
+                      <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.advantage3Desc')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200">
@@ -253,8 +253,8 @@ const RibCageMolding = () => {
                       ✓
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-900 font-semibold">Micrometric control</p>
-                      <p className="text-sm text-gray-600">Safety through vibrational precision</p>
+                      <p className="text-base md:text-lg text-gray-900 font-semibold">{t('procedurePages.ribCageMolding.advantage4Title')}</p>
+                      <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.advantage4Desc')}</p>
                     </div>
                   </div>
                 </div>
@@ -271,30 +271,30 @@ const RibCageMolding = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Your Surgical Journey
+            {t('common.yourSurgicalJourney')}
           </h2>
           
           <div className="space-y-8">
             {[{
               step: "01",
-              title: "Consultation",
-              description: "Anatomical analysis, proportion study, and expectations."
+              title: t('common.consultation'),
+              description: t('procedurePages.ribCageMolding.journey1Desc')
             }, {
               step: "02",
-              title: "Preoperative Planning",
-              description: "Rib cage evaluation, projection, and symmetry assessment."
+              title: t('procedurePages.ribCageMolding.journey2Title'),
+              description: t('procedurePages.ribCageMolding.journey2Desc')
             }, {
               step: "03",
-              title: "Surgery Day",
-              description: "Piezoelectric remodeling through microincision."
+              title: t('procedurePages.ribCageMolding.journey3Title'),
+              description: t('procedurePages.ribCageMolding.journey3Desc')
             }, {
               step: "04",
-              title: "Postoperative Care",
-              description: "Minimal bandaging and quick return to activities."
+              title: t('procedurePages.ribCageMolding.journey4Title'),
+              description: t('procedurePages.ribCageMolding.journey4Desc')
             }, {
               step: "05",
-              title: "Follow-Up",
-              description: "Healing control and proportion adjustment."
+              title: t('common.followUp'),
+              description: t('procedurePages.ribCageMolding.journey5Desc')
             }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
@@ -325,17 +325,17 @@ const RibCageMolding = () => {
               animationDelay: '0.2s'
             }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Recovery & Healing
+                {t('procedurePages.ribCageMolding.recoveryTitle')}
               </h2>
               <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• Minimal inflammation</li>
-                <li>• 0.5 cm incision almost imperceptible</li>
-                <li>• Quick return to daily activities</li>
-                <li>• Avoid direct pressure the first week</li>
-                <li>• Results most visible in 4–8 weeks</li>
+                <li>• {t('procedurePages.ribCageMolding.recoveryItem1')}</li>
+                <li>• {t('procedurePages.ribCageMolding.recoveryItem2')}</li>
+                <li>• {t('procedurePages.ribCageMolding.recoveryItem3')}</li>
+                <li>• {t('procedurePages.ribCageMolding.recoveryItem4')}</li>
+                <li>• {t('procedurePages.ribCageMolding.recoveryItem5')}</li>
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book a Consultation
+                {t('common.bookConsultation')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
