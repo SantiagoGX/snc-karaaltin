@@ -390,6 +390,60 @@
   "footerExtra": {
     "emailPlaceholder": "电子邮箱"
   },
+  "procedurePages": {
+    "common": {
+      "signatureTechnique": "特色技术",
+      "overview": "概述",
+      "procedureDetails": "手术详情",
+      "surgicalJourney": "您的手术之旅",
+      "recoveryHealing": "恢复与愈合",
+      "idealCandidates": "理想候选人",
+      "scarExpectations": "疤痕预期",
+      "beforeAfterCta": "查看术前术后图库",
+      "bookConsultation": "预约咨询",
+      "bookNow": "立即预约",
+      "consultation": "咨询",
+      "anatomicalMapping": "解剖映射",
+      "postOpCare": "术后护理",
+      "followUp": "随访"
+    },
+    "kglide": {
+      "title": "K-Glide™ 快速隆胸",
+      "subtitle": "30分钟精准手术，自然持久效果",
+      "intro": "K-Glide™ 快速隆胸术由 Mehmet Veli Karaaltin 教授开发，是一项为速度、舒适度和无与伦比的安全性而设计的突破性技术。使用定制设计的振动辅助解剖器械，该手术保护神经、血管和乳房结构——以最小的创伤创造完美成形的植入物腔隙，实现显著快速的恢复。",
+      "overviewTitle": "K-Glide™",
+      "card1Title": "K-Glide™ 为何与众不同",
+      "card1Text": "电机辅助滑动器械轻柔分离组织层面，无需电凝或钝力创伤——意味着更少的疼痛、更少的出血和完美的解剖腔隙。",
+      "card2Title": "30分钟手术时间",
+      "card2Text": "高效的解剖途径允许整个隆胸在短短30分钟内完成，在最大化精度的同时最小化麻醉暴露。",
+      "card3Title": "无需引流管",
+      "card3Text": "通过保持组织完整性和减少术中出血，K-Glide™ 完全消除了术后引流管的需求。",
+      "card4Title": "保护感觉和血管",
+      "card4Text": "通过轻柔的振动引导扩张保护感觉神经和血管网络。",
+      "card5Title": "疼痛最小，恢复快速",
+      "card5Text": "大多数患者在24-48小时内恢复轻度活动，几乎没有不适。",
+      "card6Title": "自然持久的效果",
+      "card6Text": "植入物位于干净、解剖精确的腔隙中——支持柔软、平衡和稳定的乳房轮廓。",
+      "featuredText": "K-Glide™ 代表了隆胸手术的进化：一种基于多年外科创新的安全、快速、保护组织的技术。该系统在提升自然美学效果标准的同时增强患者舒适度。"
+    },
+    "smartTemplate": {
+      "title": "智能模板鼻整形术",
+      "subtitle": "创新与再生的交汇",
+      "intro1": "由 Karaaltin 教授开创的智能模板鼻整形术代表了鼻部手术的突破。这些生物工程、完全可吸收的支架引导鼻整形术后的愈合过程，稳定鼻部框架并增强对称性。",
+      "intro2": "每个模板都是根据患者的解剖结构定制设计的，支持软骨、骨骼和软组织的长期再生。"
+    },
+    "endochorFaceLift": {
+      "title": "Endochor® 面部提升",
+      "subtitle": "微创。最大效果。",
+      "intro1": "Endochor® 面部提升是由 Karaaltin 教授设计的尖端内窥镜提升系统。它将微创入路与定制工程的可生物降解植入物相结合，在没有可见疤痕的情况下重新定位深层面部结构。",
+      "intro2": "非常适合眉部、中面部和颈部的年轻化，该系统在提供稳定、自然的提升效果的同时减少恢复时间。"
+    },
+    "advancedSafeBBL": {
+      "title": "先进安全 BBL™",
+      "subtitle": "安全、科学臀部增大的新时代",
+      "intro": "由 Mehmet Veli Karaaltin 教授开发的先进安全 BBL™ 代表了现代巴西臀部提升术中最安全、最具科学验证和技术最先进的版本。基于543多名审计患者、20次尸体解剖和实时监测系统，该方案在实现自然投影、稳定效果和可控恢复的同时，大大降低了脂肪栓塞和严重并发症的风险。"
+    }
+  },
   "procedures": {
     "face": {
       "title": "面部",

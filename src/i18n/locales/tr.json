@@ -369,6 +369,60 @@
     "additionalNotes": "Ek Notlar veya Sorular",
     "submitApplication": "Başvuruyu Gönder"
   },
+  "procedurePages": {
+    "common": {
+      "signatureTechnique": "İmza Tekniği",
+      "overview": "Genel Bakış",
+      "procedureDetails": "İşlem Detayları",
+      "surgicalJourney": "Cerrahi Yolculuğunuz",
+      "recoveryHealing": "İyileşme ve Şifa",
+      "idealCandidates": "İdeal Adaylar",
+      "scarExpectations": "Skar Beklentileri",
+      "beforeAfterCta": "Önce ve Sonra Galerisini Görüntüle",
+      "bookConsultation": "Konsültasyon Ayırtın",
+      "bookNow": "Randevu Al",
+      "consultation": "Konsültasyon",
+      "anatomicalMapping": "Anatomik Haritalama",
+      "postOpCare": "Ameliyat Sonrası Bakım",
+      "followUp": "Takip"
+    },
+    "kglide": {
+      "title": "K-Glide™ Hızlı Meme Büyütme",
+      "subtitle": "Doğal, Uzun Süreli Sonuçlarla 30 Dakikalık Hassasiyet",
+      "intro": "Profesör Dr. Mehmet Veli Karaaltin tarafından geliştirilen K-Glide™ Hızlı Meme Büyütme, hız, konfor ve eşsiz güvenlik için tasarlanmış çığır açan bir tekniktir. Özel tasarlanmış titreşim destekli diseksiyon aletleri kullanarak, prosedür sinirleri, damarları ve meme mimarisini korur—minimum travma ve son derece hızlı iyileşme ile mükemmel şekilli bir implant cebi oluşturur.",
+      "overviewTitle": "K-Glide™",
+      "card1Title": "K-Glide™ Neden Farklıdır",
+      "card1Text": "Motor destekli kayma aletleri doku düzlemlerini nazikçe ayırır, koterizasyon veya kaba kuvvet travması olmadan—daha az ağrı, daha az kanama ve bozulmamış bir anatomik cep anlamına gelir.",
+      "card2Title": "30 Dakikalık İşlem Süresi",
+      "card2Text": "Verimli anatomik yollar, tam büyütmenin sadece 30 dakikada tamamlanmasını sağlar, anestezi maruziyetini en aza indirirken hassasiyeti maksimize eder.",
+      "card3Title": "Dren Gerektirmez",
+      "card3Text": "Doku bütünlüğünü koruyarak ve intraoperatif kanamayı azaltarak, K-Glide™ ameliyat sonrası dren ihtiyacını tamamen ortadan kaldırır.",
+      "card4Title": "Duyarlılığı ve Vaskülariteyi Korur",
+      "card4Text": "Duyusal sinirler ve vasküler ağlar nazik titreşim rehberli genişleme yoluyla korunur.",
+      "card5Title": "Minimal Ağrı, Hızlı İyileşme",
+      "card5Text": "Çoğu hasta 24–48 saat içinde hafif aktivitelere çok az veya hiç rahatsızlık olmadan döner.",
+      "card6Title": "Doğal Görünümlü Uzun Vadeli Sonuçlar",
+      "card6Text": "İmplant, temiz ve anatomik olarak hassas bir cepte oturur—yumuşak, dengeli ve stabil bir meme konturu destekler.",
+      "featuredText": "K-Glide™, meme büyütmenin evrimini temsil eder: yıllarca süren cerrahi inovasyonun üzerine inşa edilmiş güvenli, hızlı ve doku koruyucu bir teknik. Sistem, doğal estetik sonuçlar için standardı yükseltirken hasta konforunu artırır."
+    },
+    "smartTemplate": {
+      "title": "Akıllı Şablon Rinoplasti",
+      "subtitle": "İnovasyonun Rejenerasyonla Buluştuğu Yer",
+      "intro1": "Profesör Dr. Karaaltin tarafından öncülük edilen Akıllı Şablon Rinoplasti, burun cerrahisinde bir atılımı temsil eder. Bu biyomühendislik ürünü, tamamen emilebilir iskeletler, rinoplasti sonrası iyileşme sürecini yönlendirir, burun çerçevesini stabilize eder ve simetriyi artırır.",
+      "intro2": "Her şablon, hastanın anatomisine uyacak şekilde özel tasarlanmış olup kıkırdak, kemik ve yumuşak dokunun uzun vadeli rejenerasyonunu destekler."
+    },
+    "endochorFaceLift": {
+      "title": "Endochor® Yüz Germe",
+      "subtitle": "Minimal İnvaziv. Maksimum Etkili.",
+      "intro1": "Endochor® Yüz Germe, Profesör Dr. Karaaltin tarafından tasarlanan son teknoloji endoskopik kaldırma sistemidir. Derin yüz yapılarını görünür skarlar olmadan yeniden konumlandıran özel tasarlanmış biyobozunur implantlarla minimal invaziv erişimi birleştirir.",
+      "intro2": "Kaş, orta yüz ve boynu gençleştirmek için ideal olan bu sistem, stabil ve doğal görünümlü kaldırma sağlarken iyileşme süresini azaltır."
+    },
+    "advancedSafeBBL": {
+      "title": "Gelişmiş Güvenli BBL™",
+      "subtitle": "Güvenli, Bilimsel Gluteal Büyütmenin Yeni Dönemi",
+      "intro": "Profesör Dr. Mehmet Veli Karaaltin tarafından geliştirilen Gelişmiş Güvenli BBL™, modern Brezilya Popo Kaldırmanın en güvenli, bilimsel olarak doğrulanmış ve teknolojik açıdan en gelişmiş versiyonunu temsil eder. 543'ten fazla denetlenmiş hasta, 20 kadavra diseksiyonu ve gerçek zamanlı izleme sistemlerine dayanan bu protokol, yağ embolisi ve ciddi komplikasyon risklerini doğal projeksiyon, stabil sonuçlar ve kontrollü iyileşme elde ederken büyük ölçüde azaltır."
+    }
+  },
   "procedures": {
     "face": {
       "title": "YÜZ",
