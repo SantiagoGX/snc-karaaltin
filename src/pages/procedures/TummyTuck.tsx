@@ -66,10 +66,10 @@ const TummyTuck = () => {
             <div className="overview-sticky-left">
               <div>
                 <h2 className="overview-title-dark">
-                  Tummy Tuck
+                  {t('procedurePages.tummyTuck.overviewTitle')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('procedurePages.tummyTuck.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
@@ -79,10 +79,10 @@ const TummyTuck = () => {
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  01 // What Is a Tummy Tuck
+                  {t('procedurePages.tummyTuck.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  A tummy tuck removes excess abdominal skin and fat while tightening separated or weakened muscles. Unlike liposuction alone, it corrects both skin laxity and muscle diastasis (rectus separation), restoring a firm, youthful abdominal contour.
+                  {t('procedurePages.tummyTuck.card1Text')}
                 </p>
               </div>
 
@@ -90,12 +90,12 @@ const TummyTuck = () => {
                 animationDelay: '0.1s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  02 // Anatomy Behind the Procedure
+                  {t('procedurePages.tummyTuck.card2Title')}
                 </h3>
                 <ul className="overview-card-text-dark space-y-2">
-                  <li>• Subcutaneous "pinchable" fat is removed or reshaped.</li>
-                  <li>• Visceral fat cannot be surgically removed and may influence candidacy.</li>
-                  <li>• The linea alba, often stretched after pregnancy or weight gain, is repaired to correct abdominal wall separation.</li>
+                  <li>• {t('procedurePages.tummyTuck.card2Item1')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card2Item2')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card2Item3')}</li>
                 </ul>
               </div>
 
@@ -103,22 +103,22 @@ const TummyTuck = () => {
                 animationDelay: '0.2s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  03 // Treatment Options
+                  {t('procedurePages.tummyTuck.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark mb-4">
-                  Each abdominoplasty is tailored to patient anatomy and goals, with options such as:
+                  {t('procedurePages.tummyTuck.card3Text')}
                 </p>
                 <ul className="overview-card-text-dark space-y-2">
-                  <li>• Full Abdominoplasty</li>
-                  <li>• Mini Abdominoplasty</li>
-                  <li>• Skin-Only Abdominoplasty</li>
-                  <li>• Free-Float Umbilical Technique</li>
-                  <li>• Fleur-de-Lis Abdominoplasty</li>
-                  <li>• Apronectomy</li>
-                  <li>• Lipoabdominoplasty</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option1')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option2')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option3')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option4')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option5')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option6')}</li>
+                  <li>• {t('procedurePages.tummyTuck.card3Option7')}</li>
                 </ul>
                 <p className="overview-card-text-dark mt-4">
-                  These variations allow the surgeon to refine both function and aesthetics while minimizing trauma and maximizing results.
+                  {t('procedurePages.tummyTuck.card3Conclusion')}
                 </p>
               </div>
 
@@ -126,10 +126,10 @@ const TummyTuck = () => {
                 animationDelay: '0.3s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  04 // Why Patients Choose It
+                  {t('procedurePages.tummyTuck.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  This procedure restores core stability, reduces skin laxity, improves silhouette definition, and enhances confidence. For many individuals, it is the most effective solution when exercise and diet cannot address structural abdominal changes.
+                  {t('procedurePages.tummyTuck.card4Text')}
                 </p>
               </div>
             </div>
@@ -142,22 +142,22 @@ const TummyTuck = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 animate-fade-in">
-              <img alt="Tummy Tuck With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/f10624e8-341d-4c86-978a-ec79f7132c8d.jpg" />
+              <img alt={t('procedurePages.tummyTuck.featuredTitle')} className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/f10624e8-341d-4c86-978a-ec79f7132c8d.jpg" />
             </div>
             <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
             }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Tummy Tuck With Dr. Karaaltin
+                {t('procedurePages.tummyTuck.featuredTitle')}
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Refined abdominal contouring requires mastery of anatomy and modern surgical innovation. With decades of experience in reconstructive and aesthetic surgery, Professor Dr. Karaaltin combines precision muscle repair, advanced lipocontouring, and scar-optimized incision design to produce results that look natural from every angle.
+                {t('procedurePages.tummyTuck.featuredText1')}
               </p>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                His approach prioritizes patient safety, proportional balance, and long-term integrity of the abdominal wall.
+                {t('procedurePages.tummyTuck.featuredText2')}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book Now
+                {t('common.bookNow')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
@@ -169,7 +169,7 @@ const TummyTuck = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-5xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
-            Procedure Details
+            {t('procedurePages.tummyTuck.detailsTitle')}
           </h2>
           
           <div className="space-y-12">
@@ -177,10 +177,10 @@ const TummyTuck = () => {
               animationDelay: '0.1s'
             }}>
               <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                Muscle Repair & Structural Restoration
+                {t('procedurePages.tummyTuck.muscleRepairTitle')}
               </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Many patients experience abdominal muscle separation after pregnancy or weight fluctuation. During surgery, Dr. Karaaltin reinforces the abdominal wall using permanent or long-acting absorbable sutures, improving stability and posture.
+                {t('procedurePages.tummyTuck.muscleRepairText')}
               </p>
             </div>
 
@@ -188,10 +188,10 @@ const TummyTuck = () => {
               animationDelay: '0.2s'
             }}>
               <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                Skin & Fat Refinement
+                {t('procedurePages.tummyTuck.skinFatTitle')}
               </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Excess skin is removed and the remaining tissue is redraped for a smooth, natural finish. Liposuction may be added to contour the flanks and waistline, enhancing hourglass definition.
+                {t('procedurePages.tummyTuck.skinFatText')}
               </p>
             </div>
 
@@ -199,10 +199,10 @@ const TummyTuck = () => {
               animationDelay: '0.3s'
             }}>
               <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                Umbilical Design
+                {t('procedurePages.tummyTuck.umbilicalTitle')}
               </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Depending on the technique, the belly button may be repositioned using scar-optimized methods to achieve a natural aesthetic with minimal visibility.
+                {t('procedurePages.tummyTuck.umbilicalText')}
               </p>
             </div>
           </div>
@@ -213,30 +213,30 @@ const TummyTuck = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Your Surgical Journey
+            {t('procedurePages.tummyTuck.journeyTitle')}
           </h2>
           
           <div className="space-y-8">
             {[{
               step: "01",
-              title: "Consultation",
-              description: "Comprehensive assessment of abdominal anatomy, lifestyle factors, medical history, and desired silhouette."
+              title: t('procedurePages.tummyTuck.journey1Title'),
+              description: t('procedurePages.tummyTuck.journey1Desc')
             }, {
               step: "02",
-              title: "Digital Assessment",
-              description: "Secure photo submission for remote evaluation when applicable."
+              title: t('procedurePages.tummyTuck.journey2Title'),
+              description: t('procedurePages.tummyTuck.journey2Desc')
             }, {
               step: "03",
-              title: "Preoperative Planning",
-              description: "Precise incision mapping, muscle evaluation, fat distribution analysis, and determination of combined techniques."
+              title: t('procedurePages.tummyTuck.journey3Title'),
+              description: t('procedurePages.tummyTuck.journey3Desc')
             }, {
               step: "04",
-              title: "Surgery Day",
-              description: "Performed under general (or in select cases, epidural) anesthesia. Duration varies from 2–5 hours depending on complexity."
+              title: t('procedurePages.tummyTuck.journey4Title'),
+              description: t('procedurePages.tummyTuck.journey4Desc')
             }, {
               step: "05",
-              title: "Postoperative Care",
-              description: "Includes garment fitting, drain management, wound care, mobility guidance, and structured follow-up visits."
+              title: t('procedurePages.tummyTuck.journey5Title'),
+              description: t('procedurePages.tummyTuck.journey5Desc')
             }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
@@ -261,29 +261,29 @@ const TummyTuck = () => {
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/3ea4db42-7b16-4f50-ad14-23ab3a17f9a3.jpg" />
+              <img alt={t('procedurePages.tummyTuck.recoveryTitle')} className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/3ea4db42-7b16-4f50-ad14-23ab3a17f9a3.jpg" />
             </div>
             <div className="space-y-6 content-spacing animate-fade-in" style={{
               animationDelay: '0.2s'
             }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Recovery & Healing
+                {t('procedurePages.tummyTuck.recoveryTitle')}
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Recovery duration depends on anatomy and technique.
+                {t('procedurePages.tummyTuck.recoveryIntro')}
               </p>
               <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• Hospital stay: 1–2 days for full abdominoplasty</li>
-                <li>• Drains: Removed after 5–7 days</li>
-                <li>• Mobility: Patients walk slightly bent for 5–7 days</li>
-                <li>• Return to work: Typically 10–21 days</li>
-                <li>• Heavy lifting: Avoid for at least 6 weeks</li>
+                <li>• {t('procedurePages.tummyTuck.recoveryItem1')}</li>
+                <li>• {t('procedurePages.tummyTuck.recoveryItem2')}</li>
+                <li>• {t('procedurePages.tummyTuck.recoveryItem3')}</li>
+                <li>• {t('procedurePages.tummyTuck.recoveryItem4')}</li>
+                <li>• {t('procedurePages.tummyTuck.recoveryItem5')}</li>
               </ul>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                A compression garment and lymphatic drainage massage support healing and swelling reduction.
+                {t('procedurePages.tummyTuck.recoveryConclusion')}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book a Consultation
+                {t('common.bookConsultation')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
@@ -295,7 +295,7 @@ const TummyTuck = () => {
       <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
           <h2 className="candidates-title-dark">
-            Ideal Candidates
+            {t('procedurePages.tummyTuck.candidatesTitle')}
           </h2>
           
           <div className="candidates-grid">
@@ -306,10 +306,10 @@ const TummyTuck = () => {
                 ⚖️
               </div>
               <h3 className="candidate-card-title-dark">
-                Stable Weight
+                {t('procedurePages.tummyTuck.candidate1Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                BMI preferably below 30 or stable weight
+                {t('procedurePages.tummyTuck.candidate1Desc')}
               </p>
             </div>
 
@@ -320,10 +320,10 @@ const TummyTuck = () => {
                 🎯
               </div>
               <h3 className="candidate-card-title-dark">
-                Skin Laxity
+                {t('procedurePages.tummyTuck.candidate2Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Skin laxity or muscle separation unresponsive to exercise
+                {t('procedurePages.tummyTuck.candidate2Desc')}
               </p>
             </div>
 
@@ -334,10 +334,10 @@ const TummyTuck = () => {
                 🚭
               </div>
               <h3 className="candidate-card-title-dark">
-                Non-Smoker
+                {t('procedurePages.tummyTuck.candidate3Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Non-smoker or committed to pausing smoking pre- and post-op
+                {t('procedurePages.tummyTuck.candidate3Desc')}
               </p>
             </div>
 
@@ -348,10 +348,10 @@ const TummyTuck = () => {
                 💭
               </div>
               <h3 className="candidate-card-title-dark">
-                Realistic Expectations
+                {t('procedurePages.tummyTuck.candidate4Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Realistic expectations regarding scars and recovery
+                {t('procedurePages.tummyTuck.candidate4Desc')}
               </p>
             </div>
           </div>
@@ -362,17 +362,17 @@ const TummyTuck = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-5xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-12 animate-fade-in">
-            Scar Expectations
+            {t('procedurePages.tummyTuck.scarTitle')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 bg-white rounded-lg border border-gray-200 text-center animate-fade-in card-hover">
               <div className="text-4xl text-gray-400 mb-4">━</div>
               <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase text-gray-900 mb-4">
-                Mini Tuck Scar
+                {t('procedurePages.tummyTuck.miniScarTitle')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed">
-                Short, low incision similar to a C-section, ideal for lower abdominal laxity.
+                {t('procedurePages.tummyTuck.miniScarText')}
               </p>
             </div>
 
@@ -381,10 +381,10 @@ const TummyTuck = () => {
             }}>
               <div className="text-4xl text-gray-400 mb-4">━━━</div>
               <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase text-gray-900 mb-4">
-                Full Tuck Scar
+                {t('procedurePages.tummyTuck.fullScarTitle')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed">
-                Hip-to-hip incision hidden along the bikini line, plus a small hidden umbilical scar.
+                {t('procedurePages.tummyTuck.fullScarText')}
               </p>
             </div>
 
@@ -393,10 +393,10 @@ const TummyTuck = () => {
             }}>
               <div className="text-4xl text-gray-400 mb-4">━━━━━</div>
               <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase text-gray-900 mb-4">
-                Fleur-de-Lis Scar
+                {t('procedurePages.tummyTuck.fleurScarTitle')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed">
-                Horizontal + vertical scar pattern for extreme excess skin removal, common after massive weight loss.
+                {t('procedurePages.tummyTuck.fleurScarText')}
               </p>
             </div>
           </div>
@@ -407,17 +407,17 @@ const TummyTuck = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-6 animate-fade-in">
-            See Real Results
+            {t('procedurePages.tummyTuck.resultsTitle')}
           </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto animate-fade-in" style={{
             animationDelay: '0.1s'
           }}>
-            See how abdominal contouring transforms confidence and silhouette.
+            {t('procedurePages.tummyTuck.resultsText')}
           </p>
           <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            View Before & After Gallery
+            {t('common.viewGallery')}
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
