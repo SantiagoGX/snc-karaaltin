@@ -60,11 +60,11 @@ const AdvancedSafeBBL = () => {
             {/* LEFT: STICKY */}
             <div className="overview-sticky-left">
               <div>
-                <h2 className="overview-title-dark">
-                  Advanced Safe BBL™
+              <h2 className="overview-title-dark">
+                  {t('procedurePages.advancedSafeBBL.overviewTitle')}
                 </h2>
                 <p className="overview-subtitle-dark">
-                  Overview
+                  {t('procedurePages.advancedSafeBBL.overview')}
                 </p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
@@ -74,10 +74,10 @@ const AdvancedSafeBBL = () => {
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div className={`overview-card-dark ${activeCard === 0 ? 'active' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  01 // What Is the Advanced Safe BBL™
+                  {t('procedurePages.advancedSafeBBL.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  The Advanced Safe BBL™ is a comprehensive fat gluteoplasty system designed to maximize safety and precision. It uses real-time ultrasound monitoring, vascular Doppler, controlled fat injection, and stem-cell-enriched technology for consistent and long-lasting results.
+                  {t('procedurePages.advancedSafeBBL.card1Text')}
                 </p>
               </div>
 
@@ -85,10 +85,10 @@ const AdvancedSafeBBL = () => {
                 animationDelay: '0.1s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  02 // Real-Time Ultrasound Safety Monitoring
+                  {t('procedurePages.advancedSafeBBL.card2Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Injection is performed exclusively above the muscle, verified in real-time using wireless Clarius AI™ technology. This eliminates the risk of deep injections near major gluteal vessels and completely avoids "blind" technique.
+                  {t('procedurePages.advancedSafeBBL.card2Text')}
                 </p>
               </div>
 
@@ -96,10 +96,10 @@ const AdvancedSafeBBL = () => {
                 animationDelay: '0.2s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  03 // Vascular Doppler Mapping
+                  {t('procedurePages.advancedSafeBBL.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Before and during surgery, all relevant vascular perforators are mapped to avoid critical vessels. This guides safe trajectories for fat, reducing trauma risk and improving graft survival.
+                  {t('procedurePages.advancedSafeBBL.card3Text')}
                 </p>
               </div>
 
@@ -107,19 +107,19 @@ const AdvancedSafeBBL = () => {
                 animationDelay: '0.3s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  04 // Controlled Fat Injection (Liposat™ + Vibrosat Pro™)
+                  {t('procedurePages.advancedSafeBBL.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark mb-4">
-                  The dual Vibrosat Pro™ + Liposat Pump™ system allows uniform mechanical tissue expansion and controlled injection in ml/min.
+                  {t('procedurePages.advancedSafeBBL.card4Text')}
                 </p>
                 <p className="overview-card-text-dark font-semibold">
-                  Benefits:
+                  {t('procedurePages.advancedSafeBBL.card4Benefits')}
                 </p>
                 <ul className="overview-card-text-dark space-y-2 mt-2">
-                  <li>• Homogeneous distribution</li>
-                  <li>• Lower pressure</li>
-                  <li>• Less tissue trauma</li>
-                  <li>• Better graft integration</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card4Benefit1')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card4Benefit2')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card4Benefit3')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card4Benefit4')}</li>
                 </ul>
               </div>
 
@@ -127,10 +127,10 @@ const AdvancedSafeBBL = () => {
                 animationDelay: '0.4s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  05 // Stem-Cell Enriched Fat Grafting
+                  {t('procedurePages.advancedSafeBBL.card5Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Using Stempia™ technology, the graft combines macro and micro fat with fat-derived stem cells, increasing vascularity, improving graft survival, and generating a smoother, more natural and stable result.
+                  {t('procedurePages.advancedSafeBBL.card5Text')}
                 </p>
               </div>
 
@@ -138,17 +138,17 @@ const AdvancedSafeBBL = () => {
                 animationDelay: '0.5s'
               }}>
                 <h3 className="overview-card-title-dark">
-                  06 // Audit-Proven Safety
+                  {t('procedurePages.advancedSafeBBL.card6Title')}
                 </h3>
                 <p className="overview-card-text-dark mb-4">
-                  In 543 patients, the use of the complete protocol reduced major complications by more than 90%:
+                  {t('procedurePages.advancedSafeBBL.card6Text')}
                 </p>
                 <ul className="overview-card-text-dark space-y-2">
-                  <li>• 0 cases of fat embolism</li>
-                  <li>• 0 lipoid pneumonia</li>
-                  <li>• Seromas drastically reduced</li>
-                  <li>• Less postoperative pain</li>
-                  <li>• Lower incidence of fat necrosis</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card6Item1')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card6Item2')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card6Item3')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card6Item4')}</li>
+                  <li>• {t('procedurePages.advancedSafeBBL.card6Item5')}</li>
                 </ul>
               </div>
             </div>
@@ -170,14 +170,14 @@ const AdvancedSafeBBL = () => {
               animationDelay: '0.2s'
             }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Advanced Safe BBL™ With Dr. Karaaltin
+                {t('procedurePages.advancedSafeBBL.featuredTitle')}
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                The Advanced Safe BBL™ is not just an aesthetic procedure: it is a surgical system based on science, advanced anatomy, and continuous monitoring technology. Designed by Prof. Dr. Karaaltin—a pioneer in reconstructive and microsurgical surgery—this method redefines the modern standard of safe gluteal augmentation, achieving smooth curves, natural proportions, and results that respect vascular integrity.
+                {t('procedurePages.advancedSafeBBL.featuredText')}
               </p>
 
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book Now
+                {t('procedurePages.advancedSafeBBL.bookNow')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
@@ -189,7 +189,7 @@ const AdvancedSafeBBL = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-6xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Procedure Details
+            {t('procedurePages.advancedSafeBBL.detailsTitle')}
           </h2>
           
           <div className="space-y-16">
@@ -202,10 +202,10 @@ const AdvancedSafeBBL = () => {
               </div>
               <div className="order-1 lg:order-2 space-y-4">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-4">
-                  How the Protocol Works
+                  {t('procedurePages.advancedSafeBBL.protocolTitle')}
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                  The protocol combines four pillars:
+                  {t('procedurePages.advancedSafeBBL.protocolIntro')}
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
@@ -213,7 +213,7 @@ const AdvancedSafeBBL = () => {
                       1
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Real-time ultrasound:</span> ensures safe plane.</p>
+                      <p className="text-base md:text-lg text-gray-700">{t('procedurePages.advancedSafeBBL.protocol1')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -221,7 +221,7 @@ const AdvancedSafeBBL = () => {
                       2
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Controlled injection:</span> precise flow, no pressure spikes.</p>
+                      <p className="text-base md:text-lg text-gray-700">{t('procedurePages.advancedSafeBBL.protocol2')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -229,7 +229,7 @@ const AdvancedSafeBBL = () => {
                       3
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Doppler mapping:</span> avoids critical vessels.</p>
+                      <p className="text-base md:text-lg text-gray-700">{t('procedurePages.advancedSafeBBL.protocol3')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -237,7 +237,7 @@ const AdvancedSafeBBL = () => {
                       4
                     </div>
                     <div>
-                      <p className="text-base md:text-lg text-gray-700"><span className="font-semibold">Stem cell-enriched fat:</span> better integration and projection.</p>
+                      <p className="text-base md:text-lg text-gray-700">{t('procedurePages.advancedSafeBBL.protocol4')}</p>
                     </div>
                   </div>
                 </div>
@@ -250,10 +250,10 @@ const AdvancedSafeBBL = () => {
             }}>
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                  The Karaaltin Sponge Experiment™
+                  {t('procedurePages.advancedSafeBBL.spongeTitle')}
                 </h3>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  In a comparative study with five leading technologies, Vibrosat Pro™ + Liposat Pump™ produced the most uniform dispersion, without dead zones or tissue damage. This evidence supports the biomechanical superiority of the system.
+                  {t('procedurePages.advancedSafeBBL.spongeText')}
                 </p>
               </div>
               <div>
@@ -271,10 +271,10 @@ const AdvancedSafeBBL = () => {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900">
-                    Complex Revisions — Macro/Micro Fat Grafting
+                    {t('procedurePages.advancedSafeBBL.revisionsTitle')}
                   </h3>
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    For cases of fibrosis or previous BBL failures, the macro/micro fat cell technique invented by Dr. Karaaltin allows correction of contour deformities in one or two sessions, using precise layers of enriched grafting.
+                    {t('procedurePages.advancedSafeBBL.revisionsText')}
                   </p>
                 </div>
               </div>
@@ -287,30 +287,30 @@ const AdvancedSafeBBL = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Your Surgical Journey
+            {t('procedurePages.advancedSafeBBL.journeyTitle')}
           </h2>
           
           <div className="space-y-8">
             {[{
               step: "01",
-              title: "Consultation",
-              description: "3D analysis, anatomical evaluation, and proportion definition."
+              title: t('procedurePages.advancedSafeBBL.journey1Title'),
+              description: t('procedurePages.advancedSafeBBL.journey1Desc')
             }, {
               step: "02",
-              title: "Preoperative Mapping",
-              description: "Doppler + projection vector planning."
+              title: t('procedurePages.advancedSafeBBL.journey2Title'),
+              description: t('procedurePages.advancedSafeBBL.journey2Desc')
             }, {
               step: "03",
-              title: "Surgery Day",
-              description: "Extraction, purification, enrichment, and ultrasound-guided reinjection."
+              title: t('procedurePages.advancedSafeBBL.journey3Title'),
+              description: t('procedurePages.advancedSafeBBL.journey3Desc')
             }, {
               step: "04",
-              title: "Immediate Post-Op",
-              description: "Specialized compression and early monitoring."
+              title: t('procedurePages.advancedSafeBBL.journey4Title'),
+              description: t('procedurePages.advancedSafeBBL.journey4Desc')
             }, {
               step: "05",
-              title: "Follow-Up",
-              description: "Critical reviews during the first 10 days for maximum safety."
+              title: t('procedurePages.advancedSafeBBL.journey5Title'),
+              description: t('procedurePages.advancedSafeBBL.journey5Desc')
             }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
@@ -341,19 +341,19 @@ const AdvancedSafeBBL = () => {
               animationDelay: '0.2s'
             }}>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Recovery & Healing
+                {t('procedurePages.advancedSafeBBL.recoveryTitle')}
               </h2>
-              <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
-                <li>• Specialized compression designed by Dr. Karaaltin to reduce seroma.</li>
-                <li>• MLD from postoperative day 3 to control inflammation.</li>
-                <li>• Progressive return to activity according to graft response.</li>
-                <li>• Avoid direct pressure on the treated area during the first weeks.</li>
-              </ul>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed font-semibold">
-                Expected result: natural projection, uniform smoothness, and curves proportional to bone structure.
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                {t('procedurePages.advancedSafeBBL.recoveryText')}
               </p>
+              <ul className="text-base md:text-lg text-gray-700 leading-relaxed space-y-2">
+                <li>• {t('procedurePages.advancedSafeBBL.recoveryItem1')}</li>
+                <li>• {t('procedurePages.advancedSafeBBL.recoveryItem2')}</li>
+                <li>• {t('procedurePages.advancedSafeBBL.recoveryItem3')}</li>
+                <li>• {t('procedurePages.advancedSafeBBL.recoveryItem4')}</li>
+              </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book a Consultation
+                {t('procedurePages.advancedSafeBBL.bookConsultation')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
@@ -365,7 +365,7 @@ const AdvancedSafeBBL = () => {
       <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
           <h2 className="candidates-title-dark">
-            Ideal Candidates
+            {t('procedurePages.advancedSafeBBL.candidatesTitle')}
           </h2>
           
           <div className="candidates-grid">
@@ -376,10 +376,10 @@ const AdvancedSafeBBL = () => {
                 🧍
               </div>
               <h3 className="candidate-card-title-dark">
-                Sufficient Fat Reserves
+                {t('procedurePages.advancedSafeBBL.candidate1Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Individuals with adequate fat for transfer
+                {t('procedurePages.advancedSafeBBL.candidate1Desc')}
               </p>
             </div>
 
@@ -390,10 +390,10 @@ const AdvancedSafeBBL = () => {
                 🎯
               </div>
               <h3 className="candidate-card-title-dark">
-                Natural Results
+                {t('procedurePages.advancedSafeBBL.candidate2Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Seeking harmonious, safe, and natural outcomes
+                {t('procedurePages.advancedSafeBBL.candidate2Desc')}
               </p>
             </div>
 
@@ -404,10 +404,10 @@ const AdvancedSafeBBL = () => {
                 🚭
               </div>
               <h3 className="candidate-card-title-dark">
-                Non-Smokers
+                {t('procedurePages.advancedSafeBBL.candidate3Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Non-smokers or willing to pause the habit
+                {t('procedurePages.advancedSafeBBL.candidate3Desc')}
               </p>
             </div>
 
@@ -418,10 +418,10 @@ const AdvancedSafeBBL = () => {
                 📊
               </div>
               <h3 className="candidate-card-title-dark">
-                Evidence-Based Priority
+                {t('procedurePages.advancedSafeBBL.candidate4Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Prioritize advanced monitoring and proven techniques
+                {t('procedurePages.advancedSafeBBL.candidate4Desc')}
               </p>
             </div>
           </div>
@@ -469,17 +469,17 @@ const AdvancedSafeBBL = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
-            Before & After
+            {t('procedurePages.advancedSafeBBL.ctaTitle')}
           </h2>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
             animationDelay: '0.1s'
           }}>
-            Discover real results achieved with safe and scientific techniques.
+            {t('procedurePages.advancedSafeBBL.ctaText')}
           </p>
           <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            View Before & After Gallery
+            {t('procedurePages.advancedSafeBBL.viewGallery')}
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
