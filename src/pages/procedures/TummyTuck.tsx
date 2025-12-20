@@ -34,12 +34,12 @@ const TummyTuck = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
-            Tummy Tuck
+            {t('procedurePages.tummyTuck.title')}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
-            A Toned, Rejuvenated Abdomen — Redefined by Precision
+            {t('procedurePages.tummyTuck.subtitle')}
           </p>
         </div>
       </section>
@@ -48,12 +48,12 @@ const TummyTuck = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
-            A tummy tuck, or abdominoplasty, is one of the most transformative body contouring procedures available. Whether due to pregnancy, weight changes, or natural aging, excess skin and weakened abdominal muscles can blur the body's natural definition.
+            {t('procedurePages.tummyTuck.intro1')}
           </p>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in" style={{
             animationDelay: '0.1s'
           }}>
-            Professor Dr. Mehmet Veli Karaaltin restores a firm, sculpted midsection through advanced surgical planning, anatomical expertise, and techniques designed for long-lasting, natural-looking results.
+            {t('procedurePages.tummyTuck.intro2')}
           </p>
         </div>
       </section>
