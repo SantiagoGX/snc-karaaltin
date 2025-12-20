@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Scissors, Target, Ruler, Bandage } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 const BreastReduction = () => {
+  const { t } = useTranslation();
   return <div className="min-h-screen bg-background">
       <Header />
       
