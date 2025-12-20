@@ -19,10 +19,10 @@ const BreastReduction = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-[0.2em]">
-            BREAST REDUCTION SURGERY
+            {t('procedurePages.breastReduction.title')}
           </h1>
           <p className="text-lg md:text-xl text-white/90 font-light tracking-wide">
-            Relief, Balance & Beautiful Proportion.
+            {t('procedurePages.breastReduction.subtitle')}
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ const BreastReduction = () => {
       <section className="section-spacing">
         <div className="content-spacing max-w-3xl mx-auto text-center">
           <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-            Breast reduction reshapes and lifts overly large breasts to achieve balanced aesthetics, long-lasting comfort, and improved posture. Dr. Karaaltin's technique prioritizes both functional relief and refined cosmetic outcome, offering life-changing improvement for women struggling with the physical and emotional burden of heavy breasts.
+            {t('procedurePages.breastReduction.intro')}
           </p>
         </div>
       </section>
@@ -43,9 +43,9 @@ const BreastReduction = () => {
             <div className="overview-sticky-left">
               <div>
                 <h2 className="overview-title-dark">
-                  BREAST REDUCTION SURGERY
+                  {t('procedurePages.breastReduction.title')}
                 </h2>
-                <p className="overview-subtitle-dark">Overview</p>
+                <p className="overview-subtitle-dark">{t('procedurePages.common.overview')}</p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
             </div>

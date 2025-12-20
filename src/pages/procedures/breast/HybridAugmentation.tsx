@@ -19,10 +19,10 @@ const HybridAugmentation = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in pointer-events-none">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 uppercase tracking-[0.2em]">
-            HYBRID BREAST AUGMENTATION
+            {t('procedurePages.hybridAugmentation.title')}
           </h1>
           <p className="text-lg md:text-xl text-white/90 font-light tracking-wide">
-            Structural Volume Meets Natural Softness.
+            {t('procedurePages.hybridAugmentation.subtitle')}
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ const HybridAugmentation = () => {
       <section className="section-spacing">
         <div className="content-spacing max-w-3xl mx-auto text-center">
           <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-            Hybrid (composite) breast augmentation combines the structural support of an implant with the natural softness of fat grafting. This dual-modality approach refines cleavage, masks implant edges, corrects asymmetry, and enhances upper-pole fullness with unmatched customization.
+            {t('procedurePages.hybridAugmentation.intro')}
           </p>
         </div>
       </section>
@@ -43,9 +43,9 @@ const HybridAugmentation = () => {
             <div className="overview-sticky-left">
               <div>
                 <h2 className="overview-title-dark">
-                  HYBRID BREAST AUGMENTATION
+                  {t('procedurePages.hybridAugmentation.title')}
                 </h2>
-                <p className="overview-subtitle-dark">Overview</p>
+                <p className="overview-subtitle-dark">{t('procedurePages.common.overview')}</p>
               </div>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>

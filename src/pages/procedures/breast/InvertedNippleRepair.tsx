@@ -56,12 +56,12 @@ const InvertedNippleRepair = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         <div className="relative h-full max-w-7xl mx-auto px-8 flex flex-col justify-center items-start pointer-events-none">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 uppercase tracking-wide animate-fade-in">
-            Inverted Nipple Repair
+            {t('procedurePages.invertedNipple.title')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 font-light tracking-wide animate-fade-in" style={{
           animationDelay: "0.1s"
         }}>
-            Natural Projection. Restored Confidence. Anatomical Precision.
+            {t('procedurePages.invertedNipple.subtitle')}
           </p>
         </div>
       </section>
@@ -71,29 +71,22 @@ const InvertedNippleRepair = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto space-y-6 text-center animate-fade-in">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Inverted Nipple Repair by Professor Dr. Karaaltin is a minimally invasive procedure designed to correct nipples that retract inward instead of projecting outward. Affecting 10–20% of women, this condition can influence breast aesthetics, confidence, and sometimes breastfeeding function.
-            </p>
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              Dr. K's anatomical-precision approach restores natural projection while preserving sensation, vascularity, and duct integrity whenever possible.
-            </p>
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              This correction can be performed alone or combined with breast augmentation, mastopexy, or reduction for full breast enhancement.
+              {t('procedurePages.invertedNipple.intro')}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Overview Section - Sticky Left, Scrolling Right */}
       <section className="overview-section-dark">
         <div className="content-spacing">
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
             {/* Left Column - Sticky */}
             <div className="overview-sticky-left animate-fade-in">
               <h2 className="overview-title-dark">
-                Inverted Nipple Repair
+                {t('procedurePages.invertedNipple.title')}
               </h2>
               <p className="overview-subtitle-dark">
-                Overview
+                {t('procedurePages.common.overview')}
               </p>
               <img src={drKaraaltinLogo} alt="Dr. Karaaltin Signature" className="w-48 h-auto opacity-80" />
             </div>
