@@ -72,46 +72,46 @@ const BreastAugmentationImplants = () => {
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  01 // Implant Options
+                  01 // {t('procedurePages.breastAugmentationImplants.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Silicone or saline; round or anatomical; smooth or textured; selected for your anatomy and goals.
+                  {t('procedurePages.breastAugmentationImplants.card1Text')}
                 </p>
               </div>
 
               <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  02 // Placement Techniques
+                  02 // {t('procedurePages.breastAugmentationImplants.card2Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Submuscular, subfascial, subglandular, or dual-plane based on soft-tissue support and desired contour.
+                  {t('procedurePages.breastAugmentationImplants.card2Text')}
                 </p>
               </div>
 
               <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  03 // Incision Sites
+                  03 // {t('procedurePages.breastAugmentationImplants.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  IMF, periareolar, or transaxillary—chosen for concealment and safety.
+                  {t('procedurePages.breastAugmentationImplants.card3Text')}
                 </p>
               </div>
 
               <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  04 // Addresses Volume Loss
+                  04 // {t('procedurePages.breastAugmentationImplants.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Ideal after pregnancy, weight loss, or congenital asymmetry.
+                  {t('procedurePages.breastAugmentationImplants.card4Text')}
                 </p>
               </div>
 
               <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`}>
                 <h3 className="overview-card-title-dark">
-                  05 // Customizable Projection
+                  05 // {t('procedurePages.breastAugmentationImplants.card5Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Implant sizes measured in cc for precise volumetric control.
+                  {t('procedurePages.breastAugmentationImplants.card5Text')}
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ const BreastAugmentationImplants = () => {
         <div className="content-spacing max-w-4xl mx-auto">
           <div className="bg-gray-50 p-8 lg:p-12 rounded-lg">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed text-center">
-              This procedure offers predictable size enhancement, enhanced cleavage, and upper-pole definition with long-lasting implant stability.
+              {t('procedurePages.breastAugmentationImplants.featuredText')}
             </p>
           </div>
         </div>
@@ -134,10 +134,10 @@ const BreastAugmentationImplants = () => {
       <section className="section-spacing bg-[#F5F1E8]">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4">
-            Procedure Details
+            {t('procedurePages.common.procedureDetails')}
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Essential aspects of breast augmentation with implants
+            {t('procedurePages.breastAugmentationImplants.detailsSubtitle')}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
@@ -146,9 +146,9 @@ const BreastAugmentationImplants = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Duration
+                {t('procedurePages.breastAugmentationImplants.durationTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">1.5–2 hours under general anesthesia</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastAugmentationImplants.durationValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -159,9 +159,9 @@ const BreastAugmentationImplants = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Selection
+                {t('procedurePages.breastAugmentationImplants.selectionTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Implant type + size selected individually</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastAugmentationImplants.selectionValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -172,9 +172,9 @@ const BreastAugmentationImplants = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Pocket Creation
+                {t('procedurePages.breastAugmentationImplants.pocketTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Dual-plane, subfascial, or hybrid</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastAugmentationImplants.pocketValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{
@@ -185,9 +185,9 @@ const BreastAugmentationImplants = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-green-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Corrections
+                {t('procedurePages.breastAugmentationImplants.correctionsTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Can correct asymmetry, tuberous breast, or post-cancer reconstruction</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastAugmentationImplants.correctionsValue')}</p>
             </div>
           </div>
         </div>
@@ -197,27 +197,27 @@ const BreastAugmentationImplants = () => {
       <section className="section-spacing">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
-            Surgical Journey
+            {t('procedurePages.common.surgicalJourney')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
                 {[{
-                  title: "Consultation",
-                  desc: "Comprehensive assessment and goal setting"
+                  title: t('procedurePages.breastAugmentationImplants.journey1Title'),
+                  desc: t('procedurePages.breastAugmentationImplants.journey1Desc')
                 }, {
-                  title: "3D Analysis",
-                  desc: "Digital planning and visualization"
+                  title: t('procedurePages.breastAugmentationImplants.journey2Title'),
+                  desc: t('procedurePages.breastAugmentationImplants.journey2Desc')
                 }, {
-                  title: "Implant Selection",
-                  desc: "Custom sizing and type selection"
+                  title: t('procedurePages.breastAugmentationImplants.journey3Title'),
+                  desc: t('procedurePages.breastAugmentationImplants.journey3Desc')
                 }, {
-                  title: "Surgery",
-                  desc: "Precise implant placement"
+                  title: t('procedurePages.breastAugmentationImplants.journey4Title'),
+                  desc: t('procedurePages.breastAugmentationImplants.journey4Desc')
                 }, {
-                  title: "Aftercare",
-                  desc: "Recovery monitoring and support"
+                  title: t('procedurePages.breastAugmentationImplants.journey5Title'),
+                  desc: t('procedurePages.breastAugmentationImplants.journey5Desc')
                 }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
@@ -240,16 +240,16 @@ const BreastAugmentationImplants = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/b70a5dbb-f8eb-4b15-925b-c3ce70d737b4.jpg" />
+              <img alt={t('procedurePages.common.recoveryHealing')} className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/b70a5dbb-f8eb-4b15-925b-c3ce70d737b4.jpg" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
-                  Recovery
+                  {t('procedurePages.common.recoveryHealing')}
                 </h2>
                 <p className="text-foreground/80 leading-relaxed mb-6">
-                  10–14 days to return to work; 6–8 weeks activity restrictions; scar care begins at 2–3 weeks.
+                  {t('procedurePages.breastAugmentationImplants.recoveryText')}
                 </p>
                 <Link to="/contact" className="btn-primary">
-                  Book a Consultation
+                  {t('procedurePages.common.bookConsultation')}
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -262,43 +262,43 @@ const BreastAugmentationImplants = () => {
       <section className="candidates-section-dark">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12 text-white">
-            Ideal Candidates
+            {t('procedurePages.common.idealCandidates')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">📊</div>
               <h3 className="candidate-card-title-dark">
-                Volume Enhancement
+                {t('procedurePages.breastAugmentationImplants.candidate1Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Desire moderate to significant enhancement
+                {t('procedurePages.breastAugmentationImplants.candidate1Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">🎯</div>
               <h3 className="candidate-card-title-dark">
-                Predictable Results
+                {t('procedurePages.breastAugmentationImplants.candidate2Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Want predictable volume and shape
+                {t('procedurePages.breastAugmentationImplants.candidate2Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">⚖️</div>
               <h3 className="candidate-card-title-dark">
-                Asymmetry Correction
+                {t('procedurePages.breastAugmentationImplants.candidate3Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Correcting asymmetry or congenital issues
+                {t('procedurePages.breastAugmentationImplants.candidate3Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">👶</div>
               <h3 className="candidate-card-title-dark">
-                Post-Pregnancy
+                {t('procedurePages.breastAugmentationImplants.candidate4Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Restoring post-pregnancy fullness
+                {t('procedurePages.breastAugmentationImplants.candidate4Desc')}
               </p>
             </div>
           </div>
@@ -309,7 +309,7 @@ const BreastAugmentationImplants = () => {
       <section className="section-spacing bg-gray-50">
         <div className="content-spacing text-center">
           <Link to="/gallery" className="btn-primary">
-            View Before & After Gallery
+            {t('procedurePages.common.beforeAfterCta')}
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
