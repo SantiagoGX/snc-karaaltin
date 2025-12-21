@@ -53,10 +53,10 @@ const BreastReduction = () => {
             <div className="space-y-8 min-h-screen">
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  01 // WHY REDUCTION HELPS
+                  01 // {t('procedurePages.breastReduction.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Relieves back, neck, and shoulder pain; improves posture; eliminates bra-strap grooves.
+                  {t('procedurePages.breastReduction.card1Text')}
                 </p>
               </div>
 
@@ -64,10 +64,10 @@ const BreastReduction = () => {
               animationDelay: '0.1s'
             }}>
                 <h3 className="overview-card-title-dark">
-                  02 // FUNCTIONAL + AESTHETIC BENEFITS
+                  02 // {t('procedurePages.breastReduction.card2Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Reduces volume, reshapes the breast, and lifts the nipple-areolar complex.
+                  {t('procedurePages.breastReduction.card2Text')}
                 </p>
               </div>
 
@@ -75,10 +75,10 @@ const BreastReduction = () => {
               animationDelay: '0.2s'
             }}>
                 <h3 className="overview-card-title-dark">
-                  03 // CUSTOMIZED INCISION PATTERNS
+                  03 // {t('procedurePages.breastReduction.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Anchor, vertical, or peri-areolar—selected based on degree of ptosis.
+                  {t('procedurePages.breastReduction.card3Text')}
                 </p>
               </div>
 
@@ -86,10 +86,10 @@ const BreastReduction = () => {
               animationDelay: '0.3s'
             }}>
                 <h3 className="overview-card-title-dark">
-                  04 // YOUTHFUL, BALANCED CONTOUR
+                  04 // {t('procedurePages.breastReduction.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Breast mound is reshaped for optimal symmetry and proportions.
+                  {t('procedurePages.breastReduction.card4Text')}
                 </p>
               </div>
 
@@ -97,10 +97,10 @@ const BreastReduction = () => {
               animationDelay: '0.4s'
             }}>
                 <h3 className="overview-card-title-dark">
-                  05 // FAST, COMFORTABLE RECOVERY
+                  05 // {t('procedurePages.breastReduction.card5Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Multimodal pain control minimizes narcotic use.
+                  {t('procedurePages.breastReduction.card5Text')}
                 </p>
               </div>
             </div>
@@ -113,7 +113,7 @@ const BreastReduction = () => {
         <div className="content-spacing max-w-4xl mx-auto">
           <div className="bg-gray-50 p-8 lg:p-12 rounded-lg">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed text-center">
-              Patients consistently report this as one of the most satisfying procedures due to improvements in comfort, confidence, and overall lifestyle.
+              {t('procedurePages.breastReduction.featuredText')}
             </p>
           </div>
         </div>
@@ -123,10 +123,10 @@ const BreastReduction = () => {
       <section className="section-spacing bg-[#F5F1E8]">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4">
-            Procedure Details
+            {t('procedurePages.common.procedureDetails')}
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Key aspects of the breast reduction procedure
+            {t('procedurePages.breastReduction.detailsSubtitle')}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
@@ -135,9 +135,9 @@ const BreastReduction = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Duration
+                {t('procedurePages.breastReduction.durationTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">2–5 hours under general anesthesia</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastReduction.durationValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -148,9 +148,9 @@ const BreastReduction = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Removal
+                {t('procedurePages.breastReduction.removalTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Tissue, fat, and skin removal</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastReduction.removalValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -161,9 +161,9 @@ const BreastReduction = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Repositioning
+                {t('procedurePages.breastReduction.repositioningTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Nipple repositioning</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastReduction.repositioningValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -174,9 +174,9 @@ const BreastReduction = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-green-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Contouring
+                {t('procedurePages.breastReduction.contouringTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Comprehensive lift and contouring</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastReduction.contouringValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full lg:col-span-2" style={{
@@ -187,9 +187,9 @@ const BreastReduction = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-amber-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Scarring
+                {t('procedurePages.breastReduction.scarringTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Scars fade significantly with aftercare</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.breastReduction.scarringValue')}</p>
             </div>
           </div>
         </div>
@@ -199,27 +199,27 @@ const BreastReduction = () => {
       <section className="section-spacing">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
-            Surgical Journey
+            {t('procedurePages.common.surgicalJourney')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
                 {[{
-                title: "Consultation",
-                desc: "Comprehensive assessment and goal setting"
+                title: t('procedurePages.breastReduction.journey1Title'),
+                desc: t('procedurePages.breastReduction.journey1Desc')
               }, {
-                title: "Markings",
-                desc: "Preoperative planning and marking"
+                title: t('procedurePages.breastReduction.journey2Title'),
+                desc: t('procedurePages.breastReduction.journey2Desc')
               }, {
-                title: "Surgery",
-                desc: "Tissue removal and reshaping"
+                title: t('procedurePages.breastReduction.journey3Title'),
+                desc: t('procedurePages.breastReduction.journey3Desc')
               }, {
-                title: "Dressing + Support Bra",
-                desc: "Immediate postoperative care"
+                title: t('procedurePages.breastReduction.journey4Title'),
+                desc: t('procedurePages.breastReduction.journey4Desc')
               }, {
-                title: "Recovery",
-                desc: "Monitoring and follow-up"
+                title: t('procedurePages.breastReduction.journey5Title'),
+                desc: t('procedurePages.breastReduction.journey5Desc')
               }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
@@ -242,17 +242,17 @@ const BreastReduction = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/98e674d8-2377-4a1b-85f9-ee47835b1610.jpg" />
+              <img alt={t('procedurePages.common.recoveryHealing')} className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/98e674d8-2377-4a1b-85f9-ee47835b1610.jpg" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
-                  Recovery
+                  {t('procedurePages.common.recoveryHealing')}
                 </h2>
                 <p className="text-foreground/80 leading-relaxed mb-6">
-                  Return to work in 1–2 weeks; bras worn 4–6 weeks; swelling improves significantly in 2 weeks.
+                  {t('procedurePages.breastReduction.recoveryText')}
                 </p>
                 <Link to="/contact">
                   <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-                    Book a Consultation
+                    {t('procedurePages.common.bookConsultation')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -266,7 +266,7 @@ const BreastReduction = () => {
       <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
           <h2 className="candidates-title-dark">
-            Ideal Candidates
+            {t('procedurePages.common.idealCandidates')}
           </h2>
           <div className="candidates-grid">
             <div className="candidate-card-dark" style={{
@@ -276,10 +276,10 @@ const BreastReduction = () => {
                 💪
               </div>
               <h3 className="candidate-card-title-dark">
-                Physical Discomfort
+                {t('procedurePages.breastReduction.candidate1Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Physical discomfort from large breasts
+                {t('procedurePages.breastReduction.candidate1Desc')}
               </p>
             </div>
             <div className="candidate-card-dark" style={{
@@ -289,10 +289,10 @@ const BreastReduction = () => {
                 🩹
               </div>
               <h3 className="candidate-card-title-dark">
-                Chronic Pain
+                {t('procedurePages.breastReduction.candidate2Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Chronic pain or skin irritation
+                {t('procedurePages.breastReduction.candidate2Desc')}
               </p>
             </div>
             <div className="candidate-card-dark" style={{
@@ -302,10 +302,10 @@ const BreastReduction = () => {
                 🏃
               </div>
               <h3 className="candidate-card-title-dark">
-                Activity Limitation
+                {t('procedurePages.breastReduction.candidate3Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Difficulty exercising or dressing
+                {t('procedurePages.breastReduction.candidate3Desc')}
               </p>
             </div>
             <div className="candidate-card-dark" style={{
@@ -315,10 +315,10 @@ const BreastReduction = () => {
                 ⚖️
               </div>
               <h3 className="candidate-card-title-dark">
-                Proportion
+                {t('procedurePages.breastReduction.candidate4Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Desire for proportionate contour
+                {t('procedurePages.breastReduction.candidate4Desc')}
               </p>
             </div>
           </div>
@@ -330,7 +330,7 @@ const BreastReduction = () => {
         <div className="content-spacing text-center">
           <Link to="/gallery">
             <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-              View Before & After Gallery
+              {t('procedurePages.common.beforeAfterCta')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
