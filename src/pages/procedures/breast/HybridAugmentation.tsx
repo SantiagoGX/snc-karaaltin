@@ -53,46 +53,46 @@ const HybridAugmentation = () => {
             <div className="space-y-6">
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  01 // DUAL-LAYER ENHANCEMENT
+                  01 // {t('procedurePages.hybridAugmentation.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Implant provides structure; fat provides softness and contour refinement.
+                  {t('procedurePages.hybridAugmentation.card1Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  02 // IDEAL FOR THIN PATIENTS
+                  02 // {t('procedurePages.hybridAugmentation.card2Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Masks edges, reduces rippling, and improves palpability.
+                  {t('procedurePages.hybridAugmentation.card2Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  03 // PRECISION FAT GRAFTING
+                  03 // {t('procedurePages.hybridAugmentation.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Micro-droplet technique improves survival and symmetry.
+                  {t('procedurePages.hybridAugmentation.card3Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  04 // UPPER POLE ENHANCEMENT
+                  04 // {t('procedurePages.hybridAugmentation.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Achieves natural, full upper-pole contour.
+                  {t('procedurePages.hybridAugmentation.card4Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  05 // REVISION-FRIENDLY
+                  05 // {t('procedurePages.hybridAugmentation.card5Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Ideal for replacing old implants or correcting irregularities.
+                  {t('procedurePages.hybridAugmentation.card5Text')}
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@ const HybridAugmentation = () => {
         <div className="content-spacing max-w-4xl mx-auto">
           <div className="bg-gray-50 p-8 lg:p-12 rounded-lg">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed text-center">
-              Hybrid augmentation offers the most customizable aesthetic control over brightness, symmetry, and softness.
+              {t('procedurePages.hybridAugmentation.featuredText')}
             </p>
           </div>
         </div>
@@ -115,10 +115,10 @@ const HybridAugmentation = () => {
       <section className="section-spacing bg-[#F5F1E8]">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4">
-            Procedure Details
+            {t('procedurePages.common.procedureDetails')}
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Dual-modality approach combining structure and softness
+            {t('procedurePages.hybridAugmentation.detailsSubtitle')}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
@@ -127,9 +127,9 @@ const HybridAugmentation = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Implant Placement
+                {t('procedurePages.hybridAugmentation.implantTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Subfascial implant placement</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.hybridAugmentation.implantValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -140,9 +140,9 @@ const HybridAugmentation = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Fat Harvest
+                {t('procedurePages.hybridAugmentation.harvestTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Liposuction harvest</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.hybridAugmentation.harvestValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -153,9 +153,9 @@ const HybridAugmentation = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Purification
+                {t('procedurePages.hybridAugmentation.purificationTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Fat purification</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.hybridAugmentation.purificationValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{
@@ -166,9 +166,9 @@ const HybridAugmentation = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-amber-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Fat Injection
+                {t('procedurePages.hybridAugmentation.injectionTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Layered fat injection for refinement</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.hybridAugmentation.injectionValue')}</p>
             </div>
           </div>
         </div>
@@ -178,24 +178,24 @@ const HybridAugmentation = () => {
       <section className="section-spacing">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
-            Surgical Journey
+            {t('procedurePages.common.surgicalJourney')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
                 {[{
-                title: "Consultation",
-                desc: "Comprehensive assessment and goal setting"
+                title: t('procedurePages.hybridAugmentation.journey1Title'),
+                desc: t('procedurePages.hybridAugmentation.journey1Desc')
               }, {
-                title: "Implant + Fat Planning",
-                desc: "Combined technique selection"
+                title: t('procedurePages.hybridAugmentation.journey2Title'),
+                desc: t('procedurePages.hybridAugmentation.journey2Desc')
               }, {
-                title: "Surgery",
-                desc: "Implant placement and fat grafting"
+                title: t('procedurePages.hybridAugmentation.journey3Title'),
+                desc: t('procedurePages.hybridAugmentation.journey3Desc')
               }, {
-                title: "Controlled Recovery",
-                desc: "Monitoring and support"
+                title: t('procedurePages.hybridAugmentation.journey4Title'),
+                desc: t('procedurePages.hybridAugmentation.journey4Desc')
               }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
@@ -218,17 +218,17 @@ const HybridAugmentation = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img src="/placeholder.svg" alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" />
+              <img src="/placeholder.svg" alt={t('procedurePages.common.recoveryHealing')} className="w-full aspect-[4/3] rounded-lg object-cover" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
-                  Recovery
+                  {t('procedurePages.common.recoveryHealing')}
                 </h2>
                 <p className="text-foreground/80 leading-relaxed mb-6">
-                  Return to work in 1 week; swelling improves 4–6 weeks; final shape by 3 months.
+                  {t('procedurePages.hybridAugmentation.recoveryText')}
                 </p>
                 <Link to="/contact">
                   <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-                    Book a Consultation
+                    {t('procedurePages.common.bookConsultation')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -242,43 +242,43 @@ const HybridAugmentation = () => {
       <section className="candidates-section-dark">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12 text-white">
-            Ideal Candidates
+            {t('procedurePages.common.idealCandidates')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">🧵</div>
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
-                Thin Coverage
+                {t('procedurePages.hybridAugmentation.candidate1Title')}
               </h3>
               <p className="text-white/80 text-sm">
-                Thin soft-tissue coverage
+                {t('procedurePages.hybridAugmentation.candidate1Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">🌿</div>
               <h3 className="candidate-card-title-dark">
-                Natural Feel
+                {t('procedurePages.hybridAugmentation.candidate2Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Seeking natural feel with structural support
+                {t('procedurePages.hybridAugmentation.candidate2Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">🔄</div>
               <h3 className="candidate-card-title-dark">
-                Revision Cases
+                {t('procedurePages.hybridAugmentation.candidate3Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Revising old implants
+                {t('procedurePages.hybridAugmentation.candidate3Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">✨</div>
               <h3 className="candidate-card-title-dark">
-                Upper Pole
+                {t('procedurePages.hybridAugmentation.candidate4Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Wanting upper-pole enhancement
+                {t('procedurePages.hybridAugmentation.candidate4Desc')}
               </p>
             </div>
           </div>
@@ -290,7 +290,7 @@ const HybridAugmentation = () => {
         <div className="content-spacing text-center">
           <Link to="/gallery">
             <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-              View Before & After Gallery
+              {t('procedurePages.common.beforeAfterCta')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>

@@ -53,46 +53,46 @@ const ImplantRemoval = () => {
             <div className="space-y-6">
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  01 // REASONS FOR REMOVAL
+                  01 // {t('procedurePages.implantRemoval.card1Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Rupture, capsular contracture, asymmetry, discomfort, aesthetic changes, lifestyle shifts.
+                  {t('procedurePages.implantRemoval.card1Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  02 // CAPSULECTOMY OPTIONS
+                  02 // {t('procedurePages.implantRemoval.card2Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Partial or total depending on capsule condition.
+                  {t('procedurePages.implantRemoval.card2Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  03 // POST-REMOVAL SHAPING
+                  03 // {t('procedurePages.implantRemoval.card3Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Can include lift, fat grafting, or smaller implant.
+                  {t('procedurePages.implantRemoval.card3Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  04 // NATURAL REBALANCING
+                  04 // {t('procedurePages.implantRemoval.card4Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Restores shape after implant-induced stretching.
+                  {t('procedurePages.implantRemoval.card4Text')}
                 </p>
               </div>
 
               <div className="overview-card-dark">
                 <h3 className="overview-card-title-dark">
-                  05 // SAFE, PERSONALIZED PLANNING
+                  05 // {t('procedurePages.implantRemoval.card5Title')}
                 </h3>
                 <p className="overview-card-text-dark">
-                  Procedure tailored to anatomy and long-term goals.
+                  {t('procedurePages.implantRemoval.card5Text')}
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@ const ImplantRemoval = () => {
         <div className="content-spacing max-w-4xl mx-auto">
           <div className="bg-gray-50 p-8 lg:p-12 rounded-lg">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed text-center">
-              Implant removal requires an artistic, technically precise approach to restore natural breast shape while maintaining aesthetic harmony.
+              {t('procedurePages.implantRemoval.featuredText')}
             </p>
           </div>
         </div>
@@ -115,10 +115,10 @@ const ImplantRemoval = () => {
       <section className="section-spacing bg-[#F5F1E8]">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-4">
-            Procedure Details
+            {t('procedurePages.common.procedureDetails')}
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Safe and personalized implant removal process
+            {t('procedurePages.implantRemoval.detailsSubtitle')}
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
@@ -127,9 +127,9 @@ const ImplantRemoval = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Removal
+                {t('procedurePages.implantRemoval.removalTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Removal through original incision</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.implantRemoval.removalValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -140,9 +140,9 @@ const ImplantRemoval = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Capsule
+                {t('procedurePages.implantRemoval.capsuleTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Capsule assessment and removal</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.implantRemoval.capsuleValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
@@ -153,9 +153,9 @@ const ImplantRemoval = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Lift Option
+                {t('procedurePages.implantRemoval.liftTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Optional mastopexy</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.implantRemoval.liftValue')}</p>
             </div>
             
             <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in col-span-full" style={{
@@ -166,9 +166,9 @@ const ImplantRemoval = () => {
               </div>
               <div className="absolute -top-1 -right-1 w-20 h-20 bg-amber-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-foreground pr-16">
-                Enhancement Options
+                {t('procedurePages.implantRemoval.enhancementTitle')}
               </h3>
-              <p className="text-foreground/80 text-sm leading-relaxed">Optional implant exchange or fat grafting</p>
+              <p className="text-foreground/80 text-sm leading-relaxed">{t('procedurePages.implantRemoval.enhancementValue')}</p>
             </div>
           </div>
         </div>
@@ -178,27 +178,27 @@ const ImplantRemoval = () => {
       <section className="section-spacing">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12">
-            Surgical Journey
+            {t('procedurePages.common.surgicalJourney')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300" />
               <div className="space-y-8">
                 {[{
-                title: "Consult",
-                desc: "Comprehensive assessment and planning"
+                title: t('procedurePages.implantRemoval.journey1Title'),
+                desc: t('procedurePages.implantRemoval.journey1Desc')
               }, {
-                title: "Imaging/Assessment",
-                desc: "Evaluation of current status"
+                title: t('procedurePages.implantRemoval.journey2Title'),
+                desc: t('procedurePages.implantRemoval.journey2Desc')
               }, {
-                title: "Explant Strategy",
-                desc: "Custom removal approach"
+                title: t('procedurePages.implantRemoval.journey3Title'),
+                desc: t('procedurePages.implantRemoval.journey3Desc')
               }, {
-                title: "Surgery",
-                desc: "Implant removal and reshaping"
+                title: t('procedurePages.implantRemoval.journey4Title'),
+                desc: t('procedurePages.implantRemoval.journey4Desc')
               }, {
-                title: "Support Bra",
-                desc: "Postoperative support"
+                title: t('procedurePages.implantRemoval.journey5Title'),
+                desc: t('procedurePages.implantRemoval.journey5Desc')
               }].map((step, index) => <div key={index} className="relative pl-12">
                     <div className="absolute left-0 w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                       {index + 1}
@@ -221,17 +221,17 @@ const ImplantRemoval = () => {
         <div className="content-spacing">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <img alt="Recovery" className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/61bcc031-5e0e-4b26-aedf-b84aa28cd0ab.jpg" />
+              <img alt={t('procedurePages.common.recoveryHealing')} className="w-full aspect-[4/3] rounded-lg object-cover" src="/lovable-uploads/61bcc031-5e0e-4b26-aedf-b84aa28cd0ab.jpg" />
               <div>
                 <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] mb-6">
-                  Recovery
+                  {t('procedurePages.common.recoveryHealing')}
                 </h2>
                 <p className="text-foreground/80 leading-relaxed mb-6">
-                  7–14 days to work; swelling improves over 4–6 weeks; scar care begins at 2–3 weeks.
+                  {t('procedurePages.implantRemoval.recoveryText')}
                 </p>
                 <Link to="/contact">
                   <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-                    Book a Consultation
+                    {t('procedurePages.common.bookConsultation')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -245,43 +245,43 @@ const ImplantRemoval = () => {
       <section className="candidates-section-dark">
         <div className="content-spacing">
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-[0.15em] text-center mb-12 text-white">
-            Ideal Candidates
+            {t('procedurePages.common.idealCandidates')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="candidate-card-dark text-center">
               <div className="text-4xl mb-4">⚠️</div>
               <h3 className="text-lg font-semibold uppercase tracking-wide mb-3 text-white">
-                Contracture
+                {t('procedurePages.implantRemoval.candidate1Title')}
               </h3>
               <p className="text-white/80 text-sm">
-                Capsular contracture
+                {t('procedurePages.implantRemoval.candidate1Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">💥</div>
               <h3 className="candidate-card-title-dark">
-                Rupture
+                {t('procedurePages.implantRemoval.candidate2Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Rupture or implant discomfort
+                {t('procedurePages.implantRemoval.candidate2Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">🌿</div>
               <h3 className="candidate-card-title-dark">
-                Natural Preference
+                {t('procedurePages.implantRemoval.candidate3Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Desire to remove foreign material
+                {t('procedurePages.implantRemoval.candidate3Desc')}
               </p>
             </div>
             <div className="candidate-card-dark text-center">
               <div className="candidate-icon-dark">✨</div>
               <h3 className="candidate-card-title-dark">
-                Natural Restoration
+                {t('procedurePages.implantRemoval.candidate4Title')}
               </h3>
               <p className="candidate-card-text-dark">
-                Wanting natural restoration
+                {t('procedurePages.implantRemoval.candidate4Desc')}
               </p>
             </div>
           </div>
@@ -293,7 +293,7 @@ const ImplantRemoval = () => {
         <div className="content-spacing text-center">
           <Link to="/gallery">
             <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-              View Before & After Gallery
+              {t('procedurePages.common.beforeAfterCta')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
