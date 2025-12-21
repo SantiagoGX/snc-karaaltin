@@ -160,7 +160,47 @@
     "medicalCoordinatorsDesc": "Uzman koordinatörler seyahatten konaklamaya kadar tüm lojistiği yönetir.",
     "ctaTitle": "Yolculuğunuza Başlamaya Hazır mısınız?",
     "ctaDescription": "Hedeflerinizi tartışmak ve size nasıl yardımcı olabileceğimizi öğrenmek için Profesör Dr. Karaaltin ile bir konsültasyon planlayın.",
-    "bookConsultation": "Konsültasyon Randevusu Al"
+    "bookConsultation": "Konsültasyon Randevusu Al",
+    "timelineTitle": "Önemli Başarıların Zaman Çizelgesi",
+    "legacyTitle": "Mükemmellik Mirası",
+    "legacyDescription": "Her dönüm noktası, Dr. Karaaltin'in plastik ve rekonstrüktif cerrahi alanını ilerletmeye olan sarsılmaz bağlılığını yansıtmaktadır. Öncü çalışmaları modern cerrahi teknikleri şekillendirmeye ve dünya çapında hasta sonuçlarını iyileştirmeye devam etmektedir.",
+    "timeline": {
+      "milestone1": {
+        "date": "Şubat 2012",
+        "title": "Dünyanın Üçüncü Tam Yüz Nakli ve İlk Dörtlü Uzuv Nakli",
+        "description": "Ankara Hacettepe Üniversitesi'nde çekirdek cerrahi ekip üyesi olarak Dr. Karaaltin, iki tarihi prosedüre katıldı: Dünyanın üçüncü tam yüz nakli ve ilk dörtlü uzuv nakli."
+      },
+      "milestone2": {
+        "date": "Mart 2014",
+        "title": "Yüz Felci Cerrahisinde İnovasyon",
+        "description": "Dr. Karaaltin, yüz felci hastalarında gülümseme restorasyonu için dinamik ve doğal bir çözüm sunan Serbest Extensor Digitorum Brevis ve Extensor Hallucis Brevis Kas Fonksiyonel Transfer tekniğine öncülük etti ve popülerleştirdi."
+      },
+      "milestone3": {
+        "date": "Nisan 2015",
+        "title": "'Mucize Adam' Adem Kılıç'ın Hayatını Kurtaran Tedavi",
+        "description": "Dr. Karaaltin, modern tıpta neredeyse imkansız kabul edilen, toplam vücut yüzey alanının %75'inden fazlasında yanık yaralanmaları olan bir adamın hayatını kurtaran karmaşık rekonstrüktif çabalara liderlik etti."
+      },
+      "milestone4": {
+        "date": "Haziran 2017",
+        "title": "Plastik Cerrahide En İyi Bilimsel Makale Ödülü",
+        "description": "Dr. Karaaltin'in rekonstrüktif cerrahiye özgün katkısı, uluslararası alanda tanınmış bir plastik cerrahi dergisinde Ayın En İyi Bilimsel Makalesi ödülünü aldı."
+      },
+      "milestone5": {
+        "date": "Eylül 2017",
+        "title": "Çok Seviyeli Serbest Vaskülarize Lenf Nodu Transferi Popülerleştirildi",
+        "description": "Dikkat çekici bir pediatrik vakada, Dr. Karaaltin 14 yaşındaki Romen bir hastada lenfödem için bilateral altı seviyeli vaskülarize lenf nodu transferini tanıttı ve gerçekleştirdi, alanda bir emsal oluşturdu."
+      },
+      "milestone6": {
+        "date": "Haziran 2022",
+        "title": "Öncü Yapışık İkiz Ayırma Ameliyatı",
+        "description": "Dr. Karaaltin, yapışık ikizlerin karmaşık ayırma ameliyatına başarıyla liderlik etti ve her iki çocuğun bağımsız olarak gelişmesiyle sonuçlanan olağanüstü cerrahi uzmanlık ve şefkatli ameliyat sonrası bakım sergiledi."
+      },
+      "milestone7": {
+        "date": "Mayıs 2023",
+        "title": "Lenfatik Cerrahi Mükemmelliği için CAPLAN Ödülü",
+        "description": "47. Avrupa Lenfoloji Derneği Kongresi'nde 'Çok Seviyeli Vaskülarize Lenf Nodu Transferleri' üzerine çığır açan çalışması için prestijli CAPLAN Birinci Ödülü'ne layık görüldü ve lenfatik mikrocerrahide küresel lider konumunu pekiştirdi."
+      }
+    }
   },
   "patientJourney": {
     "heroSubtitle": "TIBBİ YOLCULUĞUNUZ • İSTANBUL",
