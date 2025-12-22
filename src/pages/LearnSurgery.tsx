@@ -180,7 +180,10 @@ const LearnSurgery = () => {
                     {t(card.titleKey)}
                   </h3>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    {(t(card.pointsKey, { returnObjects: true }) as string[]).map((point: string, i: number) => (
+                    {(Array.isArray(t(card.pointsKey, { returnObjects: true })) 
+                      ? t(card.pointsKey, { returnObjects: true }) as string[]
+                      : []
+                    ).map((point: string, i: number) => (
                       <li key={i}>• {point}</li>
                     ))}
                   </ul>
@@ -238,7 +241,10 @@ const LearnSurgery = () => {
                     </button>
                     {expandedModule === module.id && (
                       <ul className="space-y-2 mt-4 pt-4 border-t border-gray-200 animate-fade-in">
-                        {(t(module.pointsKey, { returnObjects: true }) as string[]).map((point: string, i: number) => (
+                        {(Array.isArray(t(module.pointsKey, { returnObjects: true })) 
+                          ? t(module.pointsKey, { returnObjects: true }) as string[]
+                          : []
+                        ).map((point: string, i: number) => (
                           <li key={i} className="text-gray-700 text-sm">
                             • {point}
                           </li>
@@ -377,7 +383,10 @@ const LearnSurgery = () => {
                   <h3 className="font-serif font-semibold text-xl md:text-2xl text-gray-900">{t('learnSurgery.day1')}</h3>
                 </div>
                 <ul className="space-y-2 text-gray-700 text-sm md:text-base">
-                  {(t('learnSurgery.day1Items', { returnObjects: true }) as string[]).map((item: string, i: number) => (
+                  {(Array.isArray(t('learnSurgery.day1Items', { returnObjects: true })) 
+                    ? t('learnSurgery.day1Items', { returnObjects: true }) as string[]
+                    : []
+                  ).map((item: string, i: number) => (
                     <li key={i} className="flex gap-2"><span className="text-[#0d1f3a]">•</span>{item}</li>
                   ))}
                 </ul>
@@ -392,7 +401,10 @@ const LearnSurgery = () => {
                   <h3 className="font-serif font-semibold text-xl md:text-2xl text-gray-900">{t('learnSurgery.day2')}</h3>
                 </div>
                 <ul className="space-y-2 text-gray-700 text-sm md:text-base">
-                  {(t('learnSurgery.day2Items', { returnObjects: true }) as string[]).map((item: string, i: number) => (
+                  {(Array.isArray(t('learnSurgery.day2Items', { returnObjects: true })) 
+                    ? t('learnSurgery.day2Items', { returnObjects: true }) as string[]
+                    : []
+                  ).map((item: string, i: number) => (
                     <li key={i} className="flex gap-2"><span className="text-[#0d1f3a]">•</span>{item}</li>
                   ))}
                 </ul>
