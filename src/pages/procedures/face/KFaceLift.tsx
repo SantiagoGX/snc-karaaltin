@@ -6,11 +6,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCTASection from "@/components/home/ContactCTASection";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
+
 const KFaceLift = () => {
   const { t } = useTranslation();
   const [activeCard, setActiveCard] = useState(0);
   const overviewRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       if (!cardsRef.current) return;
@@ -25,417 +27,311 @@ const KFaceLift = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  return <div className="min-h-screen flex flex-col">
+
+  const journeySteps = [
+    { step: "01", titleKey: "journey1Title", descKey: "journey1Desc" },
+    { step: "02", titleKey: "journey2Title", descKey: "journey2Desc" },
+    { step: "03", titleKey: "journey3Title", descKey: "journey3Desc" },
+    { step: "04", titleKey: "journey4Title", descKey: "journey4Desc" },
+    { step: "05", titleKey: "journey5Title", descKey: "journey5Desc" },
+    { step: "06", titleKey: "journey6Title", descKey: "journey6Desc" }
+  ];
+
+  const candidates = [
+    { emoji: "⏳", titleKey: "candidate1Title", descKey: "candidate1Desc" },
+    { emoji: "😊", titleKey: "candidate2Title", descKey: "candidate2Desc" },
+    { emoji: "📐", titleKey: "candidate3Title", descKey: "candidate3Desc" },
+    { emoji: "🔬", titleKey: "candidate4Title", descKey: "candidate4Desc" }
+  ];
+
+  const procedureDetails = [
+    { icon: Layers, titleKey: "detail1Title", descKey: "detail1Desc", color: "blue" },
+    { icon: RotateCcw, titleKey: "detail2Title", descKey: "detail2Desc", color: "purple" },
+    { icon: Shield, titleKey: "detail3Title", descKey: "detail3Desc", color: "pink" },
+    { icon: Sparkles, titleKey: "detail4Title", descKey: "detail4Desc", color: "green" },
+    { icon: Scissors, titleKey: "detail5Title", descKey: "detail5Desc", color: "amber" }
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-      {/* 1. HERO SECTION */}
-      <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-        <img alt="K Face Lift Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/7633fdcd-275f-462e-a63a-8b920d3ec944.jpg" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-        <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
-            {t('procedurePages.kFaceLift.title')}
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            {t('procedurePages.kFaceLift.subtitle')}
-          </p>
-        </div>
-      </section>
-
-      {/* 2. INTRO / SEO BLOCK */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
-            {t('procedurePages.kFaceLift.intro')}
-          </p>
-        </div>
-      </section>
-
-      <section ref={overviewRef} className="overview-section-dark">
-        <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
-            <div className="overview-sticky-left animate-fade-in">
-              <div>
-                <h2 className="overview-title-dark">
-                  {t('procedurePages.kFaceLift.title')}
-                </h2>
-                <p className="overview-subtitle-dark">
-                  {t('procedurePages.common.overview')}
-                </p>
-              </div>
-              <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
-            </div>
-
-            {/* RIGHT: SCROLLABLE CARDS */}
-            <div ref={cardsRef} className="space-y-8 min-h-screen">
-              <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
-                <h3 className="overview-card-title-dark">
-                  01 // What Makes the K Face Lift Revolutionary
-                </h3>
-                <p className="overview-card-text-dark">
-                  A dynamic lift designed to preserve facial expression while delivering powerful rejuvenation. Combines High SMAS and Deep Plane concepts for enhanced lifting, optimized safety, and minimal scarring.
-                </p>
-              </div>
-
-              <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`} style={{
-                animationDelay: '0.1s'
-              }}>
-                <h3 className="overview-card-title-dark">
-                  02 // Anatomical Landmark Mapping
-                </h3>
-                <p className="overview-card-text-dark mb-4">
-                  A proprietary system of surgical zones defining:
-                </p>
-                <ul className="overview-card-text-dark space-y-2">
-                  <li>• Frontal nerve protection pathways</li>
-                  <li>• Modiolus vascular arcade preservation</li>
-                  <li>• Deep plane & SMAS elevation vectors</li>
-                </ul>
-                <p className="overview-card-text-dark mt-4">
-                  These mappings reduce downtime, improve safety, and maximize aesthetic outcome.
-                </p>
-              </div>
-
-              <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`} style={{
-                animationDelay: '0.2s'
-              }}>
-                <h3 className="overview-card-title-dark">
-                  03 // Dual-Vector Rotation–Advancement System
-                </h3>
-                <p className="overview-card-text-dark mb-4">
-                  Two independent SMAS flaps deliver true 3D rejuvenation:
-                </p>
-                <ul className="overview-card-text-dark space-y-2">
-                  <li>• <span className="font-semibold">Superior vector:</span> rotates and elevates midface, malar region & brow</li>
-                  <li>• <span className="font-semibold">Inferior vector:</span> advances toward the mastoid to sharpen jawline & neck</li>
-                </ul>
-                <p className="overview-card-text-dark mt-4">
-                  Supported by biodegradable PCL mesh to maintain results for months while stimulating collagen.
-                </p>
-              </div>
-
-              <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`} style={{
-                animationDelay: '0.3s'
-              }}>
-                <h3 className="overview-card-title-dark">
-                  04 // Integrated Neck Rejuvenation
-                </h3>
-                <p className="overview-card-text-dark">
-                  Performed simultaneously, addressing platysma bands, digastric muscle issues, submandibular gland prominence, and cervico-mental angle definition.
-                </p>
-              </div>
-
-              <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`} style={{
-                animationDelay: '0.4s'
-              }}>
-                <h3 className="overview-card-title-dark">
-                  05 // Advanced Mesh Fixation
-                </h3>
-                <p className="overview-card-text-dark">
-                  A CE-certified PCL mesh implant reinforces structural support, integrates naturally over 9–12 months, and dissolves without residue. Manufactured by Bloocell, founded by Dr. Karaaltin.
-                </p>
-              </div>
-            </div>
+        {/* 1. HERO SECTION */}
+        <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+          <img alt="K Face Lift Hero" className="absolute inset-0 w-full h-full object-cover animate-[scale-in_1.5s_ease-out]" src="/lovable-uploads/7633fdcd-275f-462e-a63a-8b920d3ec944.jpg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+          <div className="relative container mx-auto px-8 h-full flex flex-col justify-center items-center text-center pointer-events-none">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-[0.1em] uppercase text-white mb-6 animate-fade-in">
+              {t('procedurePages.kFaceLift.title')}
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl font-light animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              {t('procedurePages.kFaceLift.subtitle')}
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 4. FEATURED SECTION */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 animate-fade-in">
-              <img alt="K Face Lift With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/357a3bbc-f21b-4750-a1b9-f216663aead2.jpg" />
-            </div>
-            <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{
-              animationDelay: '0.2s'
-            }}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                K Face Lift With Dr. Karaaltin
-              </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                The K Face Lift represents a new standard in modern facial surgery—uniting scientific precision, artistic detail, and a patient-specific approach. Professor Dr. Karaaltin's unmatched anatomical expertise allows him to deliver deeply natural, expressive, and durable results without distortion or rigidity.
-              </p>
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book Now
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
+        {/* 2. INTRO / SEO BLOCK */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 animate-fade-in">
+              {t('procedurePages.kFaceLift.intro')}
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 5. PROCEDURE DETAILS */}
-      <section className="section-spacing bg-[#F5F1E8]">
-        <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-4 animate-fade-in">
-            Procedure Details
-          </h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Revolutionary dynamic multi-layer lifting technique
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-blue-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in">
-              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                <Layers className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-20 h-20 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
-                Multi-Layer Elevation
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Respecting nerve and vascular anatomy
-              </p>
-            </div>
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-purple-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                <RotateCcw className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-20 h-20 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
-                Rotation–Advancement
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Flap engineering for natural vectors
-              </p>
-            </div>
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-pink-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-20 h-20 bg-pink-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
-                Mesh Reinforcement
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Biodegradable support for lasting results
-              </p>
-            </div>
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-green-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-20 h-20 bg-green-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
-                Facial Harmonization
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Simultaneous upper, mid, and lower face
-              </p>
-            </div>
-            <div className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-amber-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                <Scissors className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-20 h-20 bg-amber-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500" />
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
-                Scar Optimization
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Strategic incision placement for minimal visibility
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. SURGICAL JOURNEY */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Your Surgical Journey
-          </h2>
-          
-          <div className="space-y-8">
-            {[{
-              step: "01",
-              title: "Consultation",
-              description: "Comprehensive facial analysis and aesthetic goals discussion"
-            }, {
-              step: "02",
-              title: "Anatomical Mapping",
-              description: "Precise identification of lifting vectors and nerve pathways"
-            }, {
-              step: "03",
-              title: "Surgical Planning",
-              description: "Customized approach tailored to individual anatomy"
-            }, {
-              step: "04",
-              title: "K Face Lift Procedure",
-              description: "Dynamic multi-layer lifting with rotation-advancement technique"
-            }, {
-              step: "05",
-              title: "Combined Neck Work",
-              description: "Simultaneous neck rejuvenation if indicated"
-            }, {
-              step: "06",
-              title: "Postoperative Care",
-              description: "Structured recovery protocol and follow-up visits"
-            }].map((item, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{
-              animationDelay: `${index * 0.1}s`
-            }}>
-                <div className="flex-shrink-0 w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-light">
-                  {item.step}
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase text-gray-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    {item.description}
+        {/* 3. OVERVIEW — HAKIMI STICKY EFFECT */}
+        <section ref={overviewRef} className="overview-section-dark">
+          <div className="container mx-auto px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 relative">
+              <div className="overview-sticky-left animate-fade-in">
+                <div>
+                  <h2 className="overview-title-dark">
+                    {t('procedurePages.kFaceLift.title')}
+                  </h2>
+                  <p className="overview-subtitle-dark">
+                    {t('procedurePages.common.overview')}
                   </p>
                 </div>
-              </div>)}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. RECOVERY BLOCK */}
-      <section className="section-spacing bg-gray-50">
-        <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6266c644-2b49-4436-8831-7406022fd2a2.jpg" />
-            </div>
-            <div className="space-y-6 content-spacing animate-fade-in" style={{
-              animationDelay: '0.2s'
-            }}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
-                Recovery & Healing
-              </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Most patients experience rapid functional recovery due to landmark-guided dissection. Swelling subsides progressively, with results refining over several months as the mesh supports collagen regeneration.
-              </p>
-              <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
-                Book a Consultation
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. IDEAL CANDIDATES */}
-      <section className="candidates-section-dark">
-        <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-16 animate-fade-in text-white">
-            Ideal Candidates
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="candidate-card-dark text-center animate-fade-in" style={{
-              animationDelay: '0.1s'
-            }}>
-              <div className="candidate-icon-dark">
-                ⏳
+                <img src={drKaraaltinLogo} alt="Dr. Karaaltin Logo" className="w-48 h-auto opacity-80" />
               </div>
-              <h3 className="candidate-card-title-dark">
-                Facial Aging
-              </h3>
-              <p className="candidate-card-text-dark">
-                Moderate to advanced facial aging concerns
-              </p>
-            </div>
 
-            <div className="candidate-card-dark text-center animate-fade-in" style={{
-              animationDelay: '0.2s'
-            }}>
-              <div className="candidate-icon-dark">
-                😊
-              </div>
-              <h3 className="candidate-card-title-dark">
-                Natural Expression
-              </h3>
-              <p className="candidate-card-text-dark">
-                Desire for natural expression + long-term lift
-              </p>
-            </div>
+              {/* RIGHT: SCROLLABLE CARDS */}
+              <div ref={cardsRef} className="space-y-8 min-h-screen">
+                <div className={`overview-card-dark ${activeCard === 0 ? 'shadow-lg border-white/20' : ''}`}>
+                  <h3 className="overview-card-title-dark">
+                    01 // {t('procedurePages.kFaceLift.card1Title')}
+                  </h3>
+                  <p className="overview-card-text-dark">
+                    {t('procedurePages.kFaceLift.card1Text')}
+                  </p>
+                </div>
 
-            <div className="candidate-card-dark text-center animate-fade-in" style={{
-              animationDelay: '0.3s'
-            }}>
-              <div className="candidate-icon-dark">
-                📐
-              </div>
-              <h3 className="candidate-card-title-dark">
-                Neck & Jawline
-              </h3>
-              <p className="candidate-card-text-dark">
-                Neck laxity or jawline blunting
-              </p>
-            </div>
+                <div className={`overview-card-dark ${activeCard === 1 ? 'shadow-lg border-white/20' : ''}`}>
+                  <h3 className="overview-card-title-dark">
+                    02 // {t('procedurePages.kFaceLift.card2Title')}
+                  </h3>
+                  <p className="overview-card-text-dark mb-4">
+                    {t('procedurePages.kFaceLift.card2Text')}
+                  </p>
+                  <ul className="overview-card-text-dark space-y-2">
+                    <li>• {t('procedurePages.kFaceLift.card2Item1')}</li>
+                    <li>• {t('procedurePages.kFaceLift.card2Item2')}</li>
+                    <li>• {t('procedurePages.kFaceLift.card2Item3')}</li>
+                  </ul>
+                  <p className="overview-card-text-dark mt-4">
+                    {t('procedurePages.kFaceLift.card2Conclusion')}
+                  </p>
+                </div>
 
-            <div className="candidate-card-dark text-center animate-fade-in" style={{
-              animationDelay: '0.4s'
-            }}>
-              <div className="candidate-icon-dark">
-                🔬
+                <div className={`overview-card-dark ${activeCard === 2 ? 'shadow-lg border-white/20' : ''}`}>
+                  <h3 className="overview-card-title-dark">
+                    03 // {t('procedurePages.kFaceLift.card3Title')}
+                  </h3>
+                  <p className="overview-card-text-dark mb-4">
+                    {t('procedurePages.kFaceLift.card3Text')}
+                  </p>
+                  <ul className="overview-card-text-dark space-y-2">
+                    <li>• <span className="font-semibold">{t('procedurePages.kFaceLift.card3Vector1Label')}</span> {t('procedurePages.kFaceLift.card3Vector1')}</li>
+                    <li>• <span className="font-semibold">{t('procedurePages.kFaceLift.card3Vector2Label')}</span> {t('procedurePages.kFaceLift.card3Vector2')}</li>
+                  </ul>
+                  <p className="overview-card-text-dark mt-4">
+                    {t('procedurePages.kFaceLift.card3Conclusion')}
+                  </p>
+                </div>
+
+                <div className={`overview-card-dark ${activeCard === 3 ? 'shadow-lg border-white/20' : ''}`}>
+                  <h3 className="overview-card-title-dark">
+                    04 // {t('procedurePages.kFaceLift.card4Title')}
+                  </h3>
+                  <p className="overview-card-text-dark">
+                    {t('procedurePages.kFaceLift.card4Text')}
+                  </p>
+                </div>
+
+                <div className={`overview-card-dark ${activeCard === 4 ? 'shadow-lg border-white/20' : ''}`}>
+                  <h3 className="overview-card-title-dark">
+                    05 // {t('procedurePages.kFaceLift.card5Title')}
+                  </h3>
+                  <p className="overview-card-text-dark">
+                    {t('procedurePages.kFaceLift.card5Text')}
+                  </p>
+                </div>
               </div>
-              <h3 className="candidate-card-title-dark">
-                Anatomical Approach
-              </h3>
-              <p className="candidate-card-text-dark">
-                Seeking comprehensive, anatomically-driven technique
-              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 9. SCAR EXPECTATIONS */}
-      <section className="section-spacing bg-gray-50">
-        <div className="container mx-auto px-8 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Scar Expectations
-          </h2>
-          
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-10 lg:p-12 rounded-lg shadow-lg border-2 border-gray-900 text-center animate-fade-in" style={{
-              animationDelay: '0.1s'
-            }}>
-              <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
-                Minimal Visibility
+        {/* 4. FEATURED SECTION */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 animate-fade-in">
+                <img alt="K Face Lift With Dr. Karaaltin" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/357a3bbc-f21b-4750-a1b9-f216663aead2.jpg" />
               </div>
-              
-              <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-6">
-                Optimized Incision Placement
-              </h3>
-              
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Incisions are placed along hairline and natural creases for minimal visibility and optimal healing.
-              </p>
+              <div className="order-1 lg:order-2 space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
+                  {t('procedurePages.kFaceLift.featuredTitle')}
+                </h2>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  {t('procedurePages.kFaceLift.featuredText')}
+                </p>
+                <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
+                  {t('procedurePages.common.bookNow')}
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 10. BEFORE & AFTER */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
-            Before & After
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
-            Discover real results from advanced lifting techniques.
-          </p>
-          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            View Before & After Gallery
-            <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
+        {/* 5. PROCEDURE DETAILS */}
+        <section className="section-spacing bg-[#F5F1E8]">
+          <div className="container mx-auto px-8 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-4 animate-fade-in">
+              {t('procedurePages.common.procedureDetails')}
+            </h2>
+            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+              {t('procedurePages.kFaceLift.detailsSubtitle')}
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {procedureDetails.map((detail, index) => {
+                const Icon = detail.icon;
+                return (
+                  <div key={index} className={`group relative bg-white/80 backdrop-blur-sm p-8 rounded-xl border-2 border-gray-200/50 hover:border-${detail.color}-300 transition-all duration-300 hover:-translate-y-2 animate-fade-in`} style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div className={`absolute top-4 right-4 w-12 h-12 rounded-lg bg-gradient-to-br from-${detail.color}-400 to-${detail.color}-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className={`absolute -top-1 -right-1 w-20 h-20 bg-${detail.color}-100 rounded-full opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500`} />
+                    <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide mb-3 pr-16">
+                      {t(`procedurePages.kFaceLift.${detail.titleKey}`)}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {t(`procedurePages.kFaceLift.${detail.descKey}`)}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-      {/* 11. GET STARTED CTA */}
-      <ContactCTASection />
+        {/* 6. SURGICAL JOURNEY */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-8 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+              {t('procedurePages.common.surgicalJourney')}
+            </h2>
+            
+            <div className="space-y-8">
+              {journeySteps.map((item, index) => (
+                <div key={index} className="flex flex-col md:flex-row gap-6 items-start p-6 bg-gray-50 rounded-lg border border-gray-200 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="flex-shrink-0 w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-light">
+                    {item.step}
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase text-gray-900 mb-2">
+                      {t(`procedurePages.kFaceLift.${item.titleKey}`)}
+                    </h3>
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      {t(`procedurePages.kFaceLift.${item.descKey}`)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 7. RECOVERY BLOCK */}
+        <section className="section-spacing bg-gray-50">
+          <div className="container mx-auto px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <img alt="Recovery & Healing" className="w-full h-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6266c644-2b49-4436-8831-7406022fd2a2.jpg" />
+              </div>
+              <div className="space-y-6 content-spacing animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900">
+                  {t('procedurePages.common.recoveryHealing')}
+                </h2>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  {t('procedurePages.kFaceLift.recoveryText')}
+                </p>
+                <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover">
+                  {t('procedurePages.common.bookConsultation')}
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. IDEAL CANDIDATES */}
+        <section className="candidates-section-dark">
+          <div className="container mx-auto px-8 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-16 animate-fade-in text-white">
+              {t('procedurePages.common.idealCandidates')}
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {candidates.map((candidate, index) => (
+                <div key={index} className="candidate-card-dark text-center animate-fade-in" style={{ animationDelay: `${(index + 1) * 0.1}s` }}>
+                  <div className="candidate-icon-dark">{candidate.emoji}</div>
+                  <h3 className="candidate-card-title-dark">{t(`procedurePages.kFaceLift.${candidate.titleKey}`)}</h3>
+                  <p className="candidate-card-text-dark">{t(`procedurePages.kFaceLift.${candidate.descKey}`)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 9. SCAR EXPECTATIONS */}
+        <section className="section-spacing bg-gray-50">
+          <div className="container mx-auto px-8 max-w-4xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
+              {t('procedurePages.common.scarExpectations')}
+            </h2>
+            
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-white p-10 lg:p-12 rounded-lg shadow-lg border-2 border-gray-900 text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
+                  {t('procedurePages.kFaceLift.scarBadge')}
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-6">
+                  {t('procedurePages.kFaceLift.scarTitle')}
+                </h3>
+                
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  {t('procedurePages.kFaceLift.scarText')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. BEFORE & AFTER */}
+        <section className="section-spacing bg-white">
+          <div className="container mx-auto px-8 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
+              {t('procedurePages.kFaceLift.galleryTitle')}
+            </h2>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              {t('procedurePages.kFaceLift.galleryCta')}
+            </p>
+            <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              {t('procedurePages.common.beforeAfterCta')}
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+
+        {/* 11. GET STARTED CTA */}
+        <ContactCTASection />
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default KFaceLift;
