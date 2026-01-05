@@ -1006,5 +1006,50 @@
     "noseProcedures": "鼻部项目",
     "breastProcedures": "胸部项目",
     "bodyProcedures": "身体项目"
+  },
+  "proceduresPage": {
+    "title": "手术和技术",
+    "description": "Karaaltin 教授提供的手术程序和技术的完整列表。"
+  },
+  "timeline": {
+    "sectionTitle": "里程碑式成就时间线",
+    "legacyTitle": "卓越传承",
+    "legacyDescription": "每个里程碑都反映了 Karaaltin 医生对推进整形和重建外科领域的坚定承诺。他的开创性工作继续塑造着现代外科技术，并改善着世界各地患者的治疗结果。",
+    "videoPlayer": "视频播放器",
+    "milestone1": {
+      "date": "2012年2月",
+      "title": "世界第三例全脸移植和首例四肢移植",
+      "description": "作为安卡拉 Hacettepe 大学核心外科团队成员，Karaaltin 医生参与了两项历史性手术：世界第三例全脸移植和有史以来第一例四肢移植。"
+    },
+    "milestone2": {
+      "date": "2014年3月",
+      "title": "面瘫手术创新",
+      "description": "Karaaltin 医生开创并推广了游离趾短伸肌和拇短伸肌功能转移技术，为面瘫患者提供了一种动态、自然的微笑恢复解决方案。"
+    },
+    "milestone3": {
+      "date": "2015年4月",
+      "title": "'奇迹人' Adem Kılıç 的救命治疗",
+      "description": "Karaaltin 医生领导了复杂的重建工作，挽救了一名全身体表面积烧伤超过75%的男子的生命，这在现代医学中被广泛认为是几乎不可能的案例。"
+    },
+    "milestone4": {
+      "date": "2017年6月",
+      "title": "整形外科最佳科学论文奖",
+      "description": "Karaaltin 医生对重建外科的原创贡献获得了国际认可的整形外科杂志月度最佳科学论文殊荣。"
+    },
+    "milestone5": {
+      "date": "2017年9月",
+      "title": "多层次游离血管化淋巴结转移技术推广",
+      "description": "在一个引人注目的儿科病例中，Karaaltin 医生为一名14岁的罗马尼亚患者引入并进行了双侧六层血管化淋巴结转移治疗淋巴水肿，在该领域开创了先例。"
+    },
+    "milestone6": {
+      "date": "2022年6月",
+      "title": "开创性连体双胞胎分离手术",
+      "description": "Karaaltin 医生成功领导了复杂的连体双胞胎分离手术，展现了卓越的手术专业知识和富有同情心的术后护理，使两个孩子都能独立茁壮成长。"
+    },
+    "milestone7": {
+      "date": "2023年5月",
+      "title": "CAPLAN 淋巴外科卓越奖",
+      "description": "在第47届欧洲淋巴学会大会上，因其在'多层次血管化淋巴结转移'方面的开创性工作荣获著名的 CAPLAN 一等奖，巩固了其作为淋巴微外科全球领导者的地位。"
+    }
   }
 }

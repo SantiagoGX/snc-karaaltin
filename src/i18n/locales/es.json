@@ -1110,5 +1110,50 @@
     "hoursWeekdays": "Lunes - Viernes: 9:00 - 18:00",
     "hoursSaturday": "Sábado: 10:00 - 14:00",
     "hoursSunday": "Domingo: Cerrado"
+  },
+  "proceduresPage": {
+    "title": "Procedimientos y Técnicas",
+    "description": "Lista completa de procedimientos quirúrgicos y técnicas ofrecidas por el Profesor Dr. Karaaltin."
+  },
+  "timeline": {
+    "sectionTitle": "Cronología de Logros Destacados",
+    "legacyTitle": "Legado de Excelencia",
+    "legacyDescription": "Cada hito refleja el compromiso inquebrantable del Dr. Karaaltin con el avance del campo de la cirugía plástica y reconstructiva. Su trabajo pionero continúa dando forma a las técnicas quirúrgicas modernas y mejorando los resultados de los pacientes en todo el mundo.",
+    "videoPlayer": "Reproductor de Video",
+    "milestone1": {
+      "date": "Febrero 2012",
+      "title": "Tercer Trasplante Facial Completo del Mundo y Primer Trasplante Cuádruple de Extremidades",
+      "description": "Como miembro del equipo quirúrgico central en la Universidad Hacettepe, Ankara, el Dr. Karaaltin participó en dos procedimientos históricos: El tercer trasplante facial completo del mundo y el primer trasplante cuádruple de extremidades."
+    },
+    "milestone2": {
+      "date": "Marzo 2014",
+      "title": "Innovación en Cirugía de Parálisis Facial",
+      "description": "El Dr. Karaaltin fue pionero y popularizó la técnica de Transferencia Funcional de Músculo Extensor Digitorum Brevis y Extensor Hallucis Brevis Libre, ofreciendo una solución dinámica y natural para la restauración de la sonrisa en pacientes con parálisis facial."
+    },
+    "milestone3": {
+      "date": "Abril 2015",
+      "title": "Tratamiento que Salvó la Vida del 'Hombre Milagro' Adem Kılıç",
+      "description": "El Dr. Karaaltin lideró los esfuerzos reconstructivos complejos que salvaron la vida de un hombre con más del 75% de superficie corporal total quemada, ampliamente considerado como un caso casi imposible en la medicina moderna."
+    },
+    "milestone4": {
+      "date": "Junio 2017",
+      "title": "Premiado con el Mejor Artículo Científico en Cirugía Plástica",
+      "description": "La contribución original del Dr. Karaaltin a la cirugía reconstructiva recibió la distinción de Mejor Artículo Científico del Mes en una revista de cirugía plástica reconocida internacionalmente."
+    },
+    "milestone5": {
+      "date": "Septiembre 2017",
+      "title": "Transferencia de Ganglios Linfáticos Vascularizados Multinivel Popularizada",
+      "description": "En un notable caso pediátrico, el Dr. Karaaltin introdujo y realizó transferencia bilateral de ganglios linfáticos vascularizados de seis niveles para linfedema en un paciente rumano de 14 años, sentando precedente en el campo."
+    },
+    "milestone6": {
+      "date": "Junio 2022",
+      "title": "Cirugía Pionera de Separación de Gemelos Siameses",
+      "description": "El Dr. Karaaltin lideró exitosamente la compleja cirugía de separación de gemelos siameses, demostrando una experiencia quirúrgica excepcional y un cuidado postoperatorio compasivo que resultó en que ambos niños prosperaran de forma independiente."
+    },
+    "milestone7": {
+      "date": "Mayo 2023",
+      "title": "Premio CAPLAN por Excelencia en Cirugía Linfática",
+      "description": "Galardonado con el prestigioso Primer Premio CAPLAN en el 47º Congreso de la Sociedad Europea de Linfología por su trabajo pionero en 'Transferencias de Ganglios Linfáticos Vascularizados Multinivel', consolidando su posición como líder global en microcirugía linfática."
+    }
   }
 }
