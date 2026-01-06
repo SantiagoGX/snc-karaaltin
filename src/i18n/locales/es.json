@@ -82,7 +82,31 @@
     "theFace": "El Rostro",
     "futureOfFace": "El Futuro del Rostro",
     "signatureTechniques": "Técnicas Exclusivas",
-    "viewAll": "VER TODO"
+    "viewAll": "VER TODO",
+    "procedures": {
+      "tummyTuck": "Abdominoplastia",
+      "breastAugmentationFat": "Aumento Mamario con Grasa",
+      "breastAugmentationImplant": "Aumento Mamario con Implantes",
+      "breastReduction": "Reducción Mamaria",
+      "breastLift": "Levantamiento Mamario (Mastopexia)",
+      "gynecomastia": "Ginecomastia",
+      "hybridAugmentation": "Aumento Híbrido (Implante más Grasa)",
+      "implantRemoval": "Extracción de Implantes",
+      "invertedNipple": "Pezón Invertido",
+      "nippleAreola": "Reducción de Pezón y Areola",
+      "rhinoplasty": "Rinoplastia",
+      "face": "Rostro",
+      "kglide": "K-Glide™ Aumento Mamario Rápido",
+      "advancedBBL": "BBL Avanzado Seguro",
+      "ribCageMolding": "Moldeado de Costillas con Tecnología Piezo",
+      "endochorFaceLift": "Lifting Facial Endochor",
+      "kEndoscopic": "Lifting K Endoscópico de Plano Profundo",
+      "kFaceLift": "K Face Lift",
+      "smartBRA": "Smart BRA en Cirugía Mamaria",
+      "smartTemplate": "Rinoplastia con Plantilla Inteligente",
+      "twirlBra": "Técnica Twirl Internal Bra",
+      "vibrasatPro": "Tecnología Vibrasat Pro"
+    }
   },
   "beforeAfter": {
     "title1": "ANTES Y",

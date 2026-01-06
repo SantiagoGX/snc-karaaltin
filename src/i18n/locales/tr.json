@@ -82,7 +82,31 @@
     "theFace": "Yüz",
     "futureOfFace": "Yüzün Geleceği",
     "signatureTechniques": "İmza Teknikleri",
-    "viewAll": "TÜMÜNÜ GÖR"
+    "viewAll": "TÜMÜNÜ GÖR",
+    "procedures": {
+      "tummyTuck": "Karın Germe",
+      "breastAugmentationFat": "Yağ Transferi ile Meme Büyütme",
+      "breastAugmentationImplant": "İmplant ile Meme Büyütme",
+      "breastReduction": "Meme Küçültme",
+      "breastLift": "Meme Dikleştirme (Mastopeksi)",
+      "gynecomastia": "Jinekomasti",
+      "hybridAugmentation": "Hibrit Büyütme (İmplant + Yağ)",
+      "implantRemoval": "İmplant Çıkarma",
+      "invertedNipple": "Çökük Meme Ucu",
+      "nippleAreola": "Meme Başı ve Areola Küçültme",
+      "rhinoplasty": "Rinoplasti",
+      "face": "Yüz",
+      "kglide": "K-Glide™ Hızlı Meme Büyütme",
+      "advancedBBL": "Gelişmiş Güvenli BBL",
+      "ribCageMolding": "Piezo Teknolojisi ile Kaburga Şekillendirme",
+      "endochorFaceLift": "Endochor Yüz Germe",
+      "kEndoscopic": "K Endoskopik Derin Düzlem Yüz Germe",
+      "kFaceLift": "K Yüz Germe",
+      "smartBRA": "Meme Cerrahisinde Smart BRA",
+      "smartTemplate": "Akıllı Şablon Rinoplasti",
+      "twirlBra": "Twirl Internal Bra Tekniği",
+      "vibrasatPro": "Vibrasat Pro Teknolojisi"
+    }
   },
   "beforeAfter": {
     "title1": "ÖNCE &",
