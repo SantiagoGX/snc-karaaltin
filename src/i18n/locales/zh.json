@@ -82,7 +82,31 @@
     "theFace": "面部",
     "futureOfFace": "面部的未来",
     "signatureTechniques": "特色技术",
-    "viewAll": "查看全部"
+    "viewAll": "查看全部",
+    "procedures": {
+      "tummyTuck": "腹部整形",
+      "breastAugmentationFat": "自体脂肪隆胸",
+      "breastAugmentationImplant": "假体隆胸",
+      "breastReduction": "乳房缩小术",
+      "breastLift": "乳房上提术",
+      "gynecomastia": "男性乳房发育症",
+      "hybridAugmentation": "混合隆胸（假体+脂肪）",
+      "implantRemoval": "假体取出",
+      "invertedNipple": "乳头内陷矫正",
+      "nippleAreola": "乳头乳晕缩小",
+      "rhinoplasty": "鼻整形术",
+      "face": "面部",
+      "kglide": "K-Glide™ 快速隆胸",
+      "advancedBBL": "高级安全BBL",
+      "ribCageMolding": "压电技术肋骨塑形",
+      "endochorFaceLift": "Endochor面部提升",
+      "kEndoscopic": "K内窥镜深层面部提升",
+      "kFaceLift": "K面部提升",
+      "smartBRA": "乳房手术智能BRA",
+      "smartTemplate": "智能模板鼻整形",
+      "twirlBra": "Twirl内衣技术",
+      "vibrasatPro": "Vibrasat Pro技术"
+    }
   },
   "beforeAfter": {
     "title1": "术前",

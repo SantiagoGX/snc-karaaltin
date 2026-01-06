@@ -82,7 +82,31 @@
     "theFace": "الوجه",
     "futureOfFace": "مستقبل الوجه",
     "signatureTechniques": "التقنيات المميزة",
-    "viewAll": "عرض الكل"
+    "viewAll": "عرض الكل",
+    "procedures": {
+      "tummyTuck": "شد البطن",
+      "breastAugmentationFat": "تكبير الثدي بحقن الدهون",
+      "breastAugmentationImplant": "تكبير الثدي بالزرع",
+      "breastReduction": "تصغير الثدي",
+      "breastLift": "رفع الثدي",
+      "gynecomastia": "التثدي عند الرجال",
+      "hybridAugmentation": "تكبير هجين (زرع + دهون)",
+      "implantRemoval": "إزالة الزرع",
+      "invertedNipple": "الحلمة المقلوبة",
+      "nippleAreola": "تصغير الحلمة والهالة",
+      "rhinoplasty": "عملية تجميل الأنف",
+      "face": "الوجه",
+      "kglide": "K-Glide™ تكبير الثدي السريع",
+      "advancedBBL": "BBL الآمن المتقدم",
+      "ribCageMolding": "نحت القفص الصدري بتقنية البيزو",
+      "endochorFaceLift": "شد الوجه إندوكور",
+      "kEndoscopic": "شد الوجه K بالمنظار العميق",
+      "kFaceLift": "شد الوجه K",
+      "smartBRA": "Smart BRA في جراحة الثدي",
+      "smartTemplate": "تجميل الأنف بالقالب الذكي",
+      "twirlBra": "تقنية Twirl Internal Bra",
+      "vibrasatPro": "تقنية Vibrasat Pro"
+    }
   },
   "beforeAfter": {
     "title1": "قبل",

@@ -17,7 +17,9 @@ const OperationsSection = () => {
     {
       id: 1,
       categoryKey: "operations.theBody",
-      procedures: ["Tummy Tuck"],
+      procedures: [
+        { key: "operations.procedures.tummyTuck" }
+      ],
       image: bodyImg,
       link: "/procedures/body"
     },
@@ -25,15 +27,15 @@ const OperationsSection = () => {
       id: 2,
       categoryKey: "operations.theBreast",
       procedures: [
-        "Breast Augmentation with Fat Grafting",
-        "Breast Augmentation with Implant",
-        "Breast Reduction",
-        "Breast Up Lift (Mastopexy)",
-        "Gynecomastia",
-        "Hybrid Augmentation (Implant plus Fat)",
-        "Implant Removal",
-        "Inverted Nipple",
-        "Nipple and Areola Reduction"
+        { key: "operations.procedures.breastAugmentationFat" },
+        { key: "operations.procedures.breastAugmentationImplant" },
+        { key: "operations.procedures.breastReduction" },
+        { key: "operations.procedures.breastLift" },
+        { key: "operations.procedures.gynecomastia" },
+        { key: "operations.procedures.hybridAugmentation" },
+        { key: "operations.procedures.implantRemoval" },
+        { key: "operations.procedures.invertedNipple" },
+        { key: "operations.procedures.nippleAreola" }
       ],
       image: breastImg,
       link: "/procedures/breast"
@@ -41,14 +43,18 @@ const OperationsSection = () => {
     {
       id: 3,
       categoryKey: "operations.theNose",
-      procedures: ["Rhinoplasty"],
+      procedures: [
+        { key: "operations.procedures.rhinoplasty" }
+      ],
       image: noseImg,
       link: "/procedures/nose"
     },
     {
       id: 4,
       categoryKey: "operations.theFace",
-      procedures: ["Face"],
+      procedures: [
+        { key: "operations.procedures.face" }
+      ],
       image: faceImg,
       link: "/procedures/face"
     },
@@ -56,16 +62,16 @@ const OperationsSection = () => {
       id: 5,
       categoryKey: "operations.signatureTechniques",
       procedures: [
-        "K-Glide™ Rapid Breast Augmentation",
-        "Advanced Safe BBL",
-        "Rib Cage Molding with Piezo Technology",
-        "The Endochor Face Lift",
-        "The K Endoscopic Deep Plane Face Lift",
-        "The K Face Lift",
-        "THE Smart BRA in Breast Surgery",
-        "The Smart Template Rhinoplasty",
-        "The Twirl Internal Bra Technique for Breast Surgery",
-        "The Vibrasat Pro Technology"
+        { key: "operations.procedures.kglide" },
+        { key: "operations.procedures.advancedBBL" },
+        { key: "operations.procedures.ribCageMolding" },
+        { key: "operations.procedures.endochorFaceLift" },
+        { key: "operations.procedures.kEndoscopic" },
+        { key: "operations.procedures.kFaceLift" },
+        { key: "operations.procedures.smartBRA" },
+        { key: "operations.procedures.smartTemplate" },
+        { key: "operations.procedures.twirlBra" },
+        { key: "operations.procedures.vibrasatPro" }
       ],
       image: signatureTechImg,
       link: "/procedures/face"
@@ -112,7 +118,7 @@ const OperationsSection = () => {
                           key={idx}
                           className="text-[11px] lg:text-xs text-gray-600 hover:text-gray-900 transition-colors cursor-pointer uppercase tracking-wide font-light"
                         >
-                          {proc}
+                          {t(proc.key)}
                         </div>
                       ))}
                       
