@@ -5,6 +5,7 @@ import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 import healthTurkiyeLogo from "@/assets/health-turkiye-logo.png";
 import sheBeautyClinicLogo from "@/assets/she-beauty-clinic-logo.png";
+import healthTourismCertificate from "@/assets/certificates/health-tourism-certificate.jpg";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -215,7 +216,7 @@ const Footer = () => {
         </div>
 
         {/* Partner Logos */}
-        <div className="flex justify-center items-center gap-8 lg:gap-12 pt-8 pb-8 scale-up-luxury" style={{ animationDelay: "0.6s" }}>
+        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 pt-8 pb-8 scale-up-luxury" style={{ animationDelay: "0.6s" }}>
           <img
             src={sheBeautyClinicLogo}
             alt="SHE Beauty Clinic"
@@ -226,6 +227,21 @@ const Footer = () => {
             alt="Health Türkiye"
             className="max-w-[140px] lg:max-w-[180px] h-auto"
           />
+          <a
+            href="/documents/health-tourism-certificate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            <img
+              src={healthTourismCertificate}
+              alt="International Health Tourism Authorization Certificate"
+              className="h-20 lg:h-28 w-auto rounded shadow-md group-hover:shadow-lg transition-shadow"
+            />
+            <span className="text-xs text-gray-600 group-hover:text-gray-900 transition-colors">
+              {t('footer.healthTourismCertificate') || 'Health Tourism Certificate'}
+            </span>
+          </a>
         </div>
 
         {/* Bottom Bar - Copyright */}
