@@ -27,24 +27,24 @@ const SmartTemplateRhinoplasty = () => {
   }, []);
   const overviewCards = [{
     number: "01",
-    titleKey: "procedurePages.smartTemplate.card1Title",
-    descKey: "procedurePages.smartTemplate.card1Text"
+    titleKey: "procedurePages.smartTemplate.overview1Title",
+    descKey: "procedurePages.smartTemplate.overview1Desc"
   }, {
     number: "02",
-    titleKey: "procedurePages.smartTemplate.card2Title",
-    descKey: "procedurePages.smartTemplate.card2Text"
+    titleKey: "procedurePages.smartTemplate.overview2Title",
+    descKey: "procedurePages.smartTemplate.overview2Desc"
   }, {
     number: "03",
-    titleKey: "procedurePages.smartTemplate.card3Title",
-    descKey: "procedurePages.smartTemplate.card3Text"
+    titleKey: "procedurePages.smartTemplate.overview3Title",
+    descKey: "procedurePages.smartTemplate.overview3Desc"
   }, {
     number: "04",
-    titleKey: "procedurePages.smartTemplate.card4Title",
-    descKey: "procedurePages.smartTemplate.card4Text"
+    titleKey: "procedurePages.smartTemplate.overview4Title",
+    descKey: "procedurePages.smartTemplate.overview4Desc"
   }, {
     number: "05",
-    titleKey: "procedurePages.smartTemplate.card5Title",
-    descKey: "procedurePages.smartTemplate.card5Text"
+    titleKey: "procedurePages.smartTemplate.overview5Title",
+    descKey: "procedurePages.smartTemplate.overview5Desc"
   }];
   return <div className="min-h-screen flex flex-col">
       <Header />
@@ -117,7 +117,7 @@ const SmartTemplateRhinoplasty = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in">
-            {t('procedurePages.smartTemplate.featuredText')}
+            {t('procedurePages.smartTemplate.featured')}
           </p>
         </div>
       </section>
@@ -191,11 +191,11 @@ const SmartTemplateRhinoplasty = () => {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[{
               step: "01",
-              titleKey: "procedurePages.common.consultation",
+              titleKey: "common.consultation",
               descKey: "procedurePages.smartTemplate.journey1Desc"
             }, {
               step: "02",
-              titleKey: "procedurePages.common.anatomicalMapping",
+              titleKey: "procedurePages.smartTemplate.journey2Title",
               descKey: "procedurePages.smartTemplate.journey2Desc"
             }, {
               step: "03",
@@ -211,7 +211,7 @@ const SmartTemplateRhinoplasty = () => {
               descKey: "procedurePages.smartTemplate.journey5Desc"
             }, {
               step: "06",
-              titleKey: "procedurePages.common.followUp",
+              titleKey: "common.followUp",
               descKey: "procedurePages.smartTemplate.journey6Desc"
             }].map((item, index) => <div key={index} className="text-center space-y-4 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
@@ -236,7 +236,7 @@ const SmartTemplateRhinoplasty = () => {
                 {t('procedurePages.common.recoveryHealing')}
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                {t('procedurePages.smartTemplate.recoveryText')}
+                {t('procedurePages.smartTemplate.recovery')}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300">
                 {t('procedurePages.common.bookConsultation')}
