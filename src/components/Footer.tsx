@@ -219,7 +219,7 @@ const Footer = () => {
           <img
             src={sheBeautyClinicLogo}
             alt="SHE Beauty Clinic"
-            className="h-12 lg:h-16 w-auto"
+            className="h-14 lg:h-20 w-auto"
           />
           <img
             src={healthTurkiyeLogo}

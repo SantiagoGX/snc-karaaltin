@@ -25,11 +25,11 @@ const HeroSection = () => {
 
       {/* Partnership Logo - Bottom Left */}
       <div className="absolute bottom-8 left-4 lg:left-8 z-10 flex items-center gap-3">
-        <span className="text-white/80 text-xs uppercase tracking-widest font-light">In Partnership With</span>
+        <span className="text-white/80 text-xs tracking-widest font-light">In Partnership With</span>
         <img 
           src={sheBeautyClinicLogo} 
           alt="SHE Beauty Clinic" 
-          className="h-14 lg:h-[68px] w-auto brightness-0 invert"
+          className="h-[60px] lg:h-[72px] w-auto brightness-0 invert"
         />
       </div>
     </section>
