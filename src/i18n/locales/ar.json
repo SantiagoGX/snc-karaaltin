@@ -1062,6 +1062,67 @@
     "message": "عذراً! الصفحة غير موجودة",
     "returnHome": "العودة للرئيسية"
   },
+  "hamburgerMenu": {
+    "back": "رجوع",
+    "procedurePopupDesc": "للحصول على مزيد من المعلومات حول هذا الإجراء، يرجى التواصل مع عيادة الدكتور كاراالتين مباشرة لتحديد موعد استشارة.",
+    "contactButton": "تواصل مع الدكتور كاراالتين",
+    "close": "إغلاق",
+    "categories": {
+      "face": "الوجه",
+      "body": "الجسم",
+      "breast": "الثدي",
+      "nose": "الأنف"
+    },
+    "procedures": {
+      "face": {
+        "miniFacelift": "شد الوجه المصغر",
+        "purseStringVertical": "شد الوجه العمودي بالخيط",
+        "subperiostealDeepPlane": "الطبقة العميقة تحت السمحاق / شد منتصف الوجه المركب",
+        "macsLift": "شد MACS",
+        "endochorAssisted": "شد منتصف الوجه بمساعدة EndoChor™",
+        "highSmas": "SMAS عالي / SMAS عالي ممتد",
+        "allInOne": "تجديد الوجه الشامل",
+        "ponytailLift": "شد ذيل الحصان",
+        "endoscopicBrow": "رفع الجبهة والحاجب بالمنظار",
+        "blepharoplasty": "جراحة الجفون (العلوي والسفلي)",
+        "facialImplants": "زراعات الوجه",
+        "genioplasty": "جراحة الذقن",
+        "orthognathic": "جراحة الفكين",
+        "kFaceLift": "شد الوجه K (مميز)",
+        "endochorFaceLift": "شد الوجه EndoChor® (مميز)",
+        "kEndoscopic": "شد الوجه K بالمنظار العميق (مميز)"
+      },
+      "body": {
+        "bodyLifting": "شد الجسم (علوي وسفلي)",
+        "liposculpture360": "نحت الجسم 360°",
+        "armThighContouring": "تنسيق الذراعين والفخذين",
+        "brazilianButtLift": "رفع المؤخرة البرازيلي (BBL)",
+        "fatTransfer": "نقل الدهون وتعزيز الحجم",
+        "tummyTuck": "شد البطن",
+        "advancedSafeBBL": "BBL الآمن المتقدم™ (مميز)",
+        "ribCageMolding": "نحت القفص الصدري بتقنية البيزو (مميز)"
+      },
+      "breast": {
+        "augmentationFat": "تكبير الثدي بحقن الدهون",
+        "augmentationImplants": "تكبير الثدي بالزرع",
+        "reduction": "تصغير الثدي",
+        "lift": "رفع الثدي",
+        "gynecomastia": "التثدي عند الرجال",
+        "hybridAugmentation": "تكبير هجين (زرع + دهون)",
+        "implantRemoval": "إزالة الزرع",
+        "invertedNipple": "إصلاح الحلمة المقلوبة",
+        "nippleAreola": "تصغير الحلمة والهالة",
+        "kGlide": "تكبير الثدي K-Glide™ (مميز)",
+        "twirlBra": "تقنية Twirl Internal Bra™ (مميز)",
+        "smartBra": "Smart BRA / Bloocell Scaffold (مميز)",
+        "vibrasatPro": "تقنية Vibrasat Pro (مميز)"
+      },
+      "nose": {
+        "rhinoplasty": "عملية تجميل الأنف",
+        "smartTemplate": "تجميل الأنف بالقالب الذكي (مميز)"
+      }
+    }
+  },
   "footerExtra": {
     "emailPlaceholder": "البريد الإلكتروني"
   },

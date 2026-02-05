@@ -303,6 +303,67 @@
     "message": "Üzgünüz! Sayfa bulunamadı",
     "returnHome": "Ana Sayfaya Dön"
   },
+  "hamburgerMenu": {
+    "back": "GERİ",
+    "procedurePopupDesc": "Bu işlem hakkında daha fazla bilgi için lütfen Dr. Karaaltın kliniğiyle doğrudan iletişime geçerek konsültasyon randevusu alın.",
+    "contactButton": "Dr. Karaaltın ile İletişime Geçin",
+    "close": "Kapat",
+    "categories": {
+      "face": "YÜZ",
+      "body": "VÜCUT",
+      "breast": "MEME",
+      "nose": "BURUN"
+    },
+    "procedures": {
+      "face": {
+        "miniFacelift": "Mini Yüz Germe",
+        "purseStringVertical": "Purse-String Dikey Yüz Germe",
+        "subperiostealDeepPlane": "Subperiosteal Derin Düzlem / Kompozit Orta Yüz Germe",
+        "macsLift": "MACS Lift",
+        "endochorAssisted": "EndoChor™ Destekli Orta Yüz Germe",
+        "highSmas": "Yüksek SMAS / Genişletilmiş Yüksek SMAS Germe",
+        "allInOne": "Hepsi Bir Arada Yüz Gençleştirme",
+        "ponytailLift": "Ponytail Lift",
+        "endoscopicBrow": "Endoskopik Alın ve Kaş Kaldırma",
+        "blepharoplasty": "Blefaroplasti (Üst ve Alt)",
+        "facialImplants": "Yüz İmplantları",
+        "genioplasty": "Genioplasti",
+        "orthognathic": "Ortognatik Cerrahi",
+        "kFaceLift": "K Yüz Germe (İmza)",
+        "endochorFaceLift": "EndoChor® Yüz Germe (İmza)",
+        "kEndoscopic": "K Endoskopik Derin Düzlem Yüz Germe (İmza)"
+      },
+      "body": {
+        "bodyLifting": "Vücut Germe (Üst ve Alt)",
+        "liposculpture360": "360° Liposculpture",
+        "armThighContouring": "Kol ve Uyluk Şekillendirme",
+        "brazilianButtLift": "Brezilya Popo Kaldırma (BBL)",
+        "fatTransfer": "Yağ Transferi ve Hacim Artırma",
+        "tummyTuck": "Karın Germe",
+        "advancedSafeBBL": "Gelişmiş Güvenli BBL™ (İmza)",
+        "ribCageMolding": "Piezo Teknolojisi ile Kaburga Şekillendirme (İmza)"
+      },
+      "breast": {
+        "augmentationFat": "Yağ Transferi ile Meme Büyütme",
+        "augmentationImplants": "İmplant ile Meme Büyütme",
+        "reduction": "Meme Küçültme",
+        "lift": "Meme Dikleştirme (Mastopeksi)",
+        "gynecomastia": "Jinekomasti",
+        "hybridAugmentation": "Hibrit Büyütme (İmplant + Yağ)",
+        "implantRemoval": "İmplant Çıkarma",
+        "invertedNipple": "Çökük Meme Ucu Onarımı",
+        "nippleAreola": "Meme Başı ve Areola Küçültme",
+        "kGlide": "K-Glide™ Meme Büyütme (İmza)",
+        "twirlBra": "Twirl Internal Bra Tekniği™ (İmza)",
+        "smartBra": "Smart BRA / Bloocell Scaffold (İmza)",
+        "vibrasatPro": "Vibrasat Pro Teknolojisi (İmza)"
+      },
+      "nose": {
+        "rhinoplasty": "Rinoplasti",
+        "smartTemplate": "Akıllı Şablon Rinoplasti (İmza)"
+      }
+    }
+  },
   "footerExtra": {
     "emailPlaceholder": "E-posta Adresi"
   },

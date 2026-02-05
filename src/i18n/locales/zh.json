@@ -411,6 +411,67 @@
     "message": "抱歉！页面未找到",
     "returnHome": "返回首页"
   },
+  "hamburgerMenu": {
+    "back": "返回",
+    "procedurePopupDesc": "如需了解更多关于此手术的信息，请直接联系Karaaltın医生诊所预约咨询。",
+    "contactButton": "联系Karaaltın医生",
+    "close": "关闭",
+    "categories": {
+      "face": "面部",
+      "body": "身体",
+      "breast": "胸部",
+      "nose": "鼻子"
+    },
+    "procedures": {
+      "face": {
+        "miniFacelift": "迷你面部提升",
+        "purseStringVertical": "荷包缝合垂直面部提升",
+        "subperiostealDeepPlane": "骨膜下深层平面/复合中面部提升",
+        "macsLift": "MACS提升",
+        "endochorAssisted": "EndoChor™辅助中面部提升",
+        "highSmas": "高位SMAS/扩展高位SMAS提升",
+        "allInOne": "一体化面部年轻化",
+        "ponytailLift": "马尾辫提升",
+        "endoscopicBrow": "内窥镜前额和眉毛提升",
+        "blepharoplasty": "眼睑成形术（上下）",
+        "facialImplants": "面部植入物",
+        "genioplasty": "下巴成形术",
+        "orthognathic": "正颌外科",
+        "kFaceLift": "K面部提升（特色）",
+        "endochorFaceLift": "EndoChor®面部提升（特色）",
+        "kEndoscopic": "K内窥镜深层平面面部提升（特色）"
+      },
+      "body": {
+        "bodyLifting": "身体提升（上下）",
+        "liposculpture360": "360°脂肪雕塑",
+        "armThighContouring": "手臂和大腿塑形",
+        "brazilianButtLift": "巴西提臀术（BBL）",
+        "fatTransfer": "脂肪移植和体积增强",
+        "tummyTuck": "腹部整形",
+        "advancedSafeBBL": "高级安全BBL™（特色）",
+        "ribCageMolding": "压电技术肋骨塑形（特色）"
+      },
+      "breast": {
+        "augmentationFat": "自体脂肪隆胸",
+        "augmentationImplants": "假体隆胸",
+        "reduction": "乳房缩小术",
+        "lift": "乳房上提术（乳房固定术）",
+        "gynecomastia": "男性乳房发育症",
+        "hybridAugmentation": "混合隆胸（假体+脂肪）",
+        "implantRemoval": "假体取出",
+        "invertedNipple": "乳头内陷矫正",
+        "nippleAreola": "乳头乳晕缩小",
+        "kGlide": "K-Glide™隆胸（特色）",
+        "twirlBra": "Twirl内置胸罩技术™（特色）",
+        "smartBra": "Smart BRA/Bloocell支架（特色）",
+        "vibrasatPro": "Vibrasat Pro技术（特色）"
+      },
+      "nose": {
+        "rhinoplasty": "鼻整形术",
+        "smartTemplate": "智能模板鼻整形（特色）"
+      }
+    }
+  },
   "footerExtra": {
     "emailPlaceholder": "电子邮箱"
   },
