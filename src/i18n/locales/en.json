@@ -141,7 +141,8 @@
     "about": "About",
     "contact": "Contact",
     "learnSurgery": "Want to learn surgery?",
-    "beforeAfters": "Before & Afters"
+    "beforeAfters": "Before & Afters",
+    "emailPlaceholder": "Email Address"
   },
   "about": {
     "heroSubtitle": "PROFESSOR • SURGEON • INNOVATOR",
@@ -282,9 +283,6 @@
     "title": "404",
     "message": "Oops! Page not found",
     "returnHome": "Return to Home"
-  },
-  "footer": {
-    "emailPlaceholder": "Email Address"
   },
   "learnSurgeryPage": {
     "whatIsTitle": "What Is the Endochor Academy?",
