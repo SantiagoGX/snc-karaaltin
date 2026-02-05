@@ -29,15 +29,15 @@ const Rhinoplasty = () => {
   }, []);
 
   const overviewCards = [
-    { number: "01", titleKey: "card1Title", descKey: "card1Text" },
-    { number: "02", titleKey: "card2Title", descKey: "card2Text" },
-    { number: "03", titleKey: "card3Title", descKey: "card3Text" },
-    { number: "04", titleKey: "card4Title", descKey: "card4Text" },
-    { number: "05", titleKey: "card5Title", descKey: "card5Text" },
-    { number: "06", titleKey: "card6Title", descKey: "card6Text" },
-    { number: "07", titleKey: "card7Title", descKey: "card7Text" },
-    { number: "08", titleKey: "card8Title", descKey: "card8Text" },
-    { number: "09", titleKey: "card9Title", descKey: "card9Text" }
+    { number: "01", titleKey: "overview1Title", descKey: "overview1Desc" },
+    { number: "02", titleKey: "overview2Title", descKey: "overview2Desc" },
+    { number: "03", titleKey: "overview3Title", descKey: "overview3Desc" },
+    { number: "04", titleKey: "overview4Title", descKey: "overview4Desc" },
+    { number: "05", titleKey: "overview5Title", descKey: "overview5Desc" },
+    { number: "06", titleKey: "overview6Title", descKey: "overview6Desc" },
+    { number: "07", titleKey: "overview7Title", descKey: "overview7Desc" },
+    { number: "08", titleKey: "overview8Title", descKey: "overview8Desc" },
+    { number: "09", titleKey: "overview9Title", descKey: "overview9Desc" }
   ];
 
   const journeySteps = [
