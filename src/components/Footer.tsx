@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 import healthTurkiyeLogo from "@/assets/health-turkiye-logo.png";
+import sheBeautyClinicLogo from "@/assets/she-beauty-clinic-logo.png";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -213,8 +214,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Health Türkiye Logo */}
-        <div className="flex justify-center pt-8 pb-8 scale-up-luxury" style={{ animationDelay: "0.6s" }}>
+        {/* Partner Logos */}
+        <div className="flex justify-center items-center gap-8 lg:gap-12 pt-8 pb-8 scale-up-luxury" style={{ animationDelay: "0.6s" }}>
+          <img
+            src={sheBeautyClinicLogo}
+            alt="SHE Beauty Clinic"
+            className="h-10 lg:h-14 w-auto"
+          />
           <img
             src={healthTurkiyeLogo}
             alt="Health Türkiye"
