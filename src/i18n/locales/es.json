@@ -303,6 +303,67 @@
     "message": "¡Ups! Página no encontrada",
     "returnHome": "Volver al Inicio"
   },
+  "hamburgerMenu": {
+    "back": "VOLVER",
+    "procedurePopupDesc": "Para más información sobre este procedimiento, contacta directamente con la clínica del Dr. Karaaltın para programar una consulta.",
+    "contactButton": "Contactar al Dr. Karaaltın",
+    "close": "Cerrar",
+    "categories": {
+      "face": "ROSTRO",
+      "body": "CUERPO",
+      "breast": "PECHO",
+      "nose": "NARIZ"
+    },
+    "procedures": {
+      "face": {
+        "miniFacelift": "Mini Lifting Facial",
+        "purseStringVertical": "Lifting Facial Vertical Purse-String",
+        "subperiostealDeepPlane": "Plano Profundo Subperióstico / Lifting Medio Facial Compuesto",
+        "macsLift": "MACS Lift",
+        "endochorAssisted": "Lifting Medio Facial Asistido por EndoChor™",
+        "highSmas": "SMAS Alto / SMAS Alto Extendido",
+        "allInOne": "Rejuvenecimiento Facial Todo en Uno",
+        "ponytailLift": "Ponytail Lift",
+        "endoscopicBrow": "Lifting Endoscópico de Frente y Cejas",
+        "blepharoplasty": "Blefaroplastia (Superior e Inferior)",
+        "facialImplants": "Implantes Faciales",
+        "genioplasty": "Genioplastia",
+        "orthognathic": "Cirugía Ortognática",
+        "kFaceLift": "K Face Lift (Exclusivo)",
+        "endochorFaceLift": "Lifting Facial EndoChor® (Exclusivo)",
+        "kEndoscopic": "K Lifting Endoscópico de Plano Profundo (Exclusivo)"
+      },
+      "body": {
+        "bodyLifting": "Lifting Corporal (Superior e Inferior)",
+        "liposculpture360": "Lipoescultura 360°",
+        "armThighContouring": "Contorno de Brazos y Muslos",
+        "brazilianButtLift": "Levantamiento de Glúteos Brasileño (BBL)",
+        "fatTransfer": "Transferencia de Grasa y Aumento de Volumen",
+        "tummyTuck": "Abdominoplastia",
+        "advancedSafeBBL": "BBL Seguro Avanzado™ (Exclusivo)",
+        "ribCageMolding": "Moldeado de Costillas con Tecnología Piezo (Exclusivo)"
+      },
+      "breast": {
+        "augmentationFat": "Aumento Mamario con Grasa",
+        "augmentationImplants": "Aumento Mamario con Implantes",
+        "reduction": "Reducción Mamaria",
+        "lift": "Levantamiento Mamario (Mastopexia)",
+        "gynecomastia": "Ginecomastia",
+        "hybridAugmentation": "Aumento Híbrido (Implante + Grasa)",
+        "implantRemoval": "Extracción de Implantes",
+        "invertedNipple": "Reparación de Pezón Invertido",
+        "nippleAreola": "Reducción de Pezón y Areola",
+        "kGlide": "Aumento Mamario K-Glide™ (Exclusivo)",
+        "twirlBra": "Técnica Twirl Internal Bra™ (Exclusivo)",
+        "smartBra": "Smart BRA / Bloocell Scaffold (Exclusivo)",
+        "vibrasatPro": "Tecnología Vibrasat Pro (Exclusivo)"
+      },
+      "nose": {
+        "rhinoplasty": "Rinoplastia",
+        "smartTemplate": "Rinoplastia con Plantilla Inteligente (Exclusivo)"
+      }
+    }
+  },
   "footerExtra": {
     "emailPlaceholder": "Correo Electrónico"
   },

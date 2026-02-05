@@ -284,6 +284,67 @@
     "message": "Oops! Page not found",
     "returnHome": "Return to Home"
   },
+  "hamburgerMenu": {
+    "back": "BACK",
+    "procedurePopupDesc": "For more information about this procedure, please contact Dr. Karaaltın's clinic directly to schedule a consultation.",
+    "contactButton": "Contact Dr. Karaaltın",
+    "close": "Close",
+    "categories": {
+      "face": "FACE",
+      "body": "BODY",
+      "breast": "BREAST",
+      "nose": "NOSE"
+    },
+    "procedures": {
+      "face": {
+        "miniFacelift": "Mini Facelift",
+        "purseStringVertical": "Purse-String Vertical Facelift",
+        "subperiostealDeepPlane": "Subperiosteal Deep Plane / Composite Midface Lift",
+        "macsLift": "MACS Lift",
+        "endochorAssisted": "EndoChor™-Assisted Mid-Face Lift",
+        "highSmas": "High SMAS / Extended High SMAS Lift",
+        "allInOne": "All-In-One Facial Rejuvenation",
+        "ponytailLift": "Ponytail Lift",
+        "endoscopicBrow": "Endoscopic Forehead & Brow Lift",
+        "blepharoplasty": "Blepharoplasty (Upper & Lower)",
+        "facialImplants": "Facial Implants",
+        "genioplasty": "Genioplasty",
+        "orthognathic": "Orthognathic Surgery",
+        "kFaceLift": "The K Face Lift (Signature)",
+        "endochorFaceLift": "EndoChor® Face Lift (Signature)",
+        "kEndoscopic": "K Endoscopic Deep Plane Face Lift (Signature)"
+      },
+      "body": {
+        "bodyLifting": "Body Lifting (Upper & Lower)",
+        "liposculpture360": "360° Liposculpture",
+        "armThighContouring": "Arm & Thigh Contouring",
+        "brazilianButtLift": "Brazilian Butt Lift (BBL)",
+        "fatTransfer": "Fat Transfer & Volume Enhancement",
+        "tummyTuck": "Tummy Tuck",
+        "advancedSafeBBL": "Advanced Safe BBL™ (Signature)",
+        "ribCageMolding": "Rib Cage Molding with Piezo Technology (Signature)"
+      },
+      "breast": {
+        "augmentationFat": "Breast Augmentation with Fat Grafting",
+        "augmentationImplants": "Breast Augmentation with Implants",
+        "reduction": "Breast Reduction",
+        "lift": "Breast Lift (Mastopexy)",
+        "gynecomastia": "Gynecomastia",
+        "hybridAugmentation": "Hybrid Augmentation (Implant + Fat)",
+        "implantRemoval": "Implant Removal",
+        "invertedNipple": "Inverted Nipple Repair",
+        "nippleAreola": "Nipple & Areola Reduction",
+        "kGlide": "K-Glide™ Breast Augmentation (Signature)",
+        "twirlBra": "Twirl Internal Bra Technique™ (Signature)",
+        "smartBra": "Smart BRA / Bloocell Scaffold (Signature)",
+        "vibrasatPro": "Vibrasat Pro Technology (Signature)"
+      },
+      "nose": {
+        "rhinoplasty": "Rhinoplasty",
+        "smartTemplate": "Smart Template Rhinoplasty (Signature)"
+      }
+    }
+  },
   "learnSurgeryPage": {
     "whatIsTitle": "What Is the Endochor Academy?",
     "whatIsDescription": "The Endochor Academy is an advanced surgical education platform led by Prof. Dr. Mehmet Veli Karaaltin, the official QL Doctor for Endochor® Implants. Surgeons from around the world learn high-precision anatomical techniques, implant-based lifting systems, and minimally invasive facial rejuvenation through structured lectures, cadaver labs, and optional hands-on operating room proctorship.",

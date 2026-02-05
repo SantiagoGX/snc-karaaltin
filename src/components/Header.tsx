@@ -84,72 +84,72 @@ const Header = () => {
   ];
 
   const procedureCategories = [
-    { name: "FACE", id: "face" },
-    { name: "BODY", id: "body" },
-    { name: "BREAST", id: "breast" },
-    { name: "NOSE", id: "nose" },
+    { name: t('hamburgerMenu.categories.face'), id: "face" },
+    { name: t('hamburgerMenu.categories.body'), id: "body" },
+    { name: t('hamburgerMenu.categories.breast'), id: "breast" },
+    { name: t('hamburgerMenu.categories.nose'), id: "nose" },
   ];
 
   const proceduresByCategory = {
     face: {
       withoutPage: [
-        "Mini Facelift",
-        "Purse-String Vertical Facelift",
-        "Subperiosteal Deep Plane / Composite Midface Lift",
-        "MACS Lift",
-        "EndoChor™-Assisted Mid-Face Lift",
-        "High SMAS / Extended High SMAS Lift",
-        "All-In-One Facial Rejuvenation",
-        "Ponytail Lift",
-        "Endoscopic Forehead & Brow Lift",
-        "Blepharoplasty (Upper & Lower)",
-        "Facial Implants",
-        "Genioplasty",
-        "Orthognathic Surgery",
+        t('hamburgerMenu.procedures.face.miniFacelift'),
+        t('hamburgerMenu.procedures.face.purseStringVertical'),
+        t('hamburgerMenu.procedures.face.subperiostealDeepPlane'),
+        t('hamburgerMenu.procedures.face.macsLift'),
+        t('hamburgerMenu.procedures.face.endochorAssisted'),
+        t('hamburgerMenu.procedures.face.highSmas'),
+        t('hamburgerMenu.procedures.face.allInOne'),
+        t('hamburgerMenu.procedures.face.ponytailLift'),
+        t('hamburgerMenu.procedures.face.endoscopicBrow'),
+        t('hamburgerMenu.procedures.face.blepharoplasty'),
+        t('hamburgerMenu.procedures.face.facialImplants'),
+        t('hamburgerMenu.procedures.face.genioplasty'),
+        t('hamburgerMenu.procedures.face.orthognathic'),
       ],
       withPage: [
-        { name: "The K Face Lift (Signature)", path: "/procedures/face/k-face-lift" },
-        { name: "EndoChor® Face Lift (Signature)", path: "/procedures/face/endochor-face-lift" },
-        { name: "K Endoscopic Deep Plane Face Lift (Signature)", path: "/procedures/face/k-endoscopic-deep-plane" },
+        { name: t('hamburgerMenu.procedures.face.kFaceLift'), path: "/procedures/face/k-face-lift" },
+        { name: t('hamburgerMenu.procedures.face.endochorFaceLift'), path: "/procedures/face/endochor-face-lift" },
+        { name: t('hamburgerMenu.procedures.face.kEndoscopic'), path: "/procedures/face/k-endoscopic-deep-plane" },
       ]
     },
     body: {
       withoutPage: [
-        "Body Lifting (Upper & Lower)",
-        "360° Liposculpture",
-        "Arm & Thigh Contouring",
-        "Brazilian Butt Lift (BBL)",
-        "Fat Transfer & Volume Enhancement",
+        t('hamburgerMenu.procedures.body.bodyLifting'),
+        t('hamburgerMenu.procedures.body.liposculpture360'),
+        t('hamburgerMenu.procedures.body.armThighContouring'),
+        t('hamburgerMenu.procedures.body.brazilianButtLift'),
+        t('hamburgerMenu.procedures.body.fatTransfer'),
       ],
       withPage: [
-        { name: "Tummy Tuck", path: "/procedures/body/tummy-tuck" },
-        { name: "Advanced Safe BBL™ (Signature)", path: "/procedures/body/advanced-safe-bbl" },
-        { name: "Rib Cage Molding with Piezo Technology (Signature)", path: "/procedures/body/rib-cage-molding" },
+        { name: t('hamburgerMenu.procedures.body.tummyTuck'), path: "/procedures/body/tummy-tuck" },
+        { name: t('hamburgerMenu.procedures.body.advancedSafeBBL'), path: "/procedures/body/advanced-safe-bbl" },
+        { name: t('hamburgerMenu.procedures.body.ribCageMolding'), path: "/procedures/body/rib-cage-molding" },
       ]
     },
     breast: {
       withoutPage: [],
       withPage: [
-        { name: "Breast Augmentation with Fat Grafting", path: "/procedures/breast/augmentation-fat-grafting" },
-        { name: "Breast Augmentation with Implants", path: "/procedures/breast/augmentation-implants" },
-        { name: "Breast Reduction", path: "/procedures/breast/reduction" },
-        { name: "Breast Lift (Mastopexy)", path: "/procedures/breast/lift" },
-        { name: "Gynecomastia", path: "/procedures/breast/gynecomastia" },
-        { name: "Hybrid Augmentation (Implant + Fat)", path: "/procedures/breast/hybrid-augmentation" },
-        { name: "Implant Removal", path: "/procedures/breast/implant-removal" },
-        { name: "Inverted Nipple Repair", path: "/procedures/breast/inverted-nipple-repair" },
-        { name: "Nipple & Areola Reduction", path: "/procedures/breast/nipple-areola-reduction" },
-        { name: "K-Glide™ Breast Augmentation (Signature)", path: "/procedures/breast/k-glide" },
-        { name: "Twirl Internal Bra Technique™ (Signature)", path: "/procedures/breast/twirl-internal-bra" },
-        { name: "Smart BRA / Bloocell Scaffold (Signature)", path: "/procedures/breast/smart-bra" },
-        { name: "Vibrasat Pro Technology (Signature)", path: "/procedures/breast/vibrasat-pro" },
+        { name: t('hamburgerMenu.procedures.breast.augmentationFat'), path: "/procedures/breast/augmentation-fat-grafting" },
+        { name: t('hamburgerMenu.procedures.breast.augmentationImplants'), path: "/procedures/breast/augmentation-implants" },
+        { name: t('hamburgerMenu.procedures.breast.reduction'), path: "/procedures/breast/reduction" },
+        { name: t('hamburgerMenu.procedures.breast.lift'), path: "/procedures/breast/lift" },
+        { name: t('hamburgerMenu.procedures.breast.gynecomastia'), path: "/procedures/breast/gynecomastia" },
+        { name: t('hamburgerMenu.procedures.breast.hybridAugmentation'), path: "/procedures/breast/hybrid-augmentation" },
+        { name: t('hamburgerMenu.procedures.breast.implantRemoval'), path: "/procedures/breast/implant-removal" },
+        { name: t('hamburgerMenu.procedures.breast.invertedNipple'), path: "/procedures/breast/inverted-nipple-repair" },
+        { name: t('hamburgerMenu.procedures.breast.nippleAreola'), path: "/procedures/breast/nipple-areola-reduction" },
+        { name: t('hamburgerMenu.procedures.breast.kGlide'), path: "/procedures/breast/k-glide" },
+        { name: t('hamburgerMenu.procedures.breast.twirlBra'), path: "/procedures/breast/twirl-internal-bra" },
+        { name: t('hamburgerMenu.procedures.breast.smartBra'), path: "/procedures/breast/smart-bra" },
+        { name: t('hamburgerMenu.procedures.breast.vibrasatPro'), path: "/procedures/breast/vibrasat-pro" },
       ]
     },
     nose: {
       withoutPage: [],
       withPage: [
-        { name: "Rhinoplasty", path: "/procedures/nose/rhinoplasty" },
-        { name: "Smart Template Rhinoplasty (Signature)", path: "/procedures/nose/smart-template-rhinoplasty" },
+        { name: t('hamburgerMenu.procedures.nose.rhinoplasty'), path: "/procedures/nose/rhinoplasty" },
+        { name: t('hamburgerMenu.procedures.nose.smartTemplate'), path: "/procedures/nose/smart-template-rhinoplasty" },
       ]
     }
   };
@@ -450,7 +450,7 @@ const Header = () => {
           className="absolute top-6 right-6 text-gray-800 hover:text-black transition-colors flex items-center gap-2 text-sm uppercase tracking-wider"
           aria-label="Back to main menu"
         >
-          <span>BACK</span>
+          <span>{t('hamburgerMenu.back')}</span>
           <span>→</span>
         </button>
 
@@ -521,7 +521,7 @@ const Header = () => {
           <DialogHeader>
             <DialogTitle className="text-xl font-serif">{selectedProcedureName}</DialogTitle>
             <DialogDescription className="text-gray-600 pt-2">
-              For more information about this procedure, please contact Dr. Karaaltın's clinic directly to schedule a consultation.
+              {t('hamburgerMenu.procedurePopupDesc')}
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col gap-3 mt-4">
@@ -534,7 +534,7 @@ const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                Contact Dr. Karaaltın
+                {t('hamburgerMenu.contactButton')}
               </NavLink>
             </Button>
             <Button 
@@ -542,7 +542,7 @@ const Header = () => {
               onClick={() => setShowContactPopup(false)}
               className="w-full"
             >
-              Close
+              {t('hamburgerMenu.close')}
             </Button>
           </div>
         </DialogContent>
