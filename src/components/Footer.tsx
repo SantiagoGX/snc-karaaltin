@@ -5,6 +5,7 @@ import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa6";
 import drKaraaltinLogo from "@/assets/dr-karaaltin-logo-white.svg";
 import healthTurkiyeLogo from "@/assets/health-turkiye-logo.png";
 import sheBeautyClinicLogo from "@/assets/she-beauty-clinic-logo.png";
+import soulMedicalCenterLogo from "@/assets/soul-medical-center-logo.png";
 import healthTourismCertificate from "@/assets/certificates/health-tourism-certificate.jpg";
 
 const Footer = () => {
@@ -223,6 +224,11 @@ const Footer = () => {
             className="h-14 lg:h-20 w-auto"
           />
           <img
+            src={soulMedicalCenterLogo}
+            alt="Soul Medical Center"
+            className="h-14 lg:h-20 w-auto"
+          />
+          <img
             src={healthTurkiyeLogo}
             alt="Health Türkiye"
             className="max-w-[140px] lg:max-w-[180px] h-auto"
@@ -235,11 +241,11 @@ const Footer = () => {
           >
             <img
               src={healthTourismCertificate}
-              alt="International Health Tourism Authorization Certificate"
+              alt="International Health Tourism Authorization"
               className="h-20 lg:h-28 w-auto rounded shadow-md group-hover:shadow-lg transition-shadow"
             />
             <span className="text-xs text-gray-600 group-hover:text-gray-900 transition-colors">
-              {t('footer.healthTourismCertificate') || 'Health Tourism Certificate'}
+              International Health Tourism Authorization
             </span>
           </a>
         </div>
