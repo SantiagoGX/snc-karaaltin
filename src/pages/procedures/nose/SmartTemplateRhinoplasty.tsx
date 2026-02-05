@@ -27,24 +27,24 @@ const SmartTemplateRhinoplasty = () => {
   }, []);
   const overviewCards = [{
     number: "01",
-    title: "What Makes Smart Templates Revolutionary",
-    description: "Biodegradable scaffolds act as an internal mold during healing, ensuring predictable shape retention and stable outcomes."
+    titleKey: "procedurePages.smartTemplate.card1Title",
+    descKey: "procedurePages.smartTemplate.card1Text"
   }, {
     number: "02",
-    title: "Biocompatible & Regenerative",
-    description: "The material dissolves gradually as the body replaces it with natural, integrated tissue—supporting angiogenesis, cellular repair, and scarless remodeling."
+    titleKey: "procedurePages.smartTemplate.card2Title",
+    descKey: "procedurePages.smartTemplate.card2Text"
   }, {
     number: "03",
-    title: "Precision Healing",
-    description: "Templates function like a biological GPS, preventing postoperative drift, collapse, or warping of cartilage."
+    titleKey: "procedurePages.smartTemplate.card3Title",
+    descKey: "procedurePages.smartTemplate.card3Text"
   }, {
     number: "04",
-    title: "Global Recognition",
-    description: "Presented by Dr. Karaaltin at the European Society of Rhinoplasty, this technique gained international recognition for its scientific foundation and clinical reliability."
+    titleKey: "procedurePages.smartTemplate.card4Title",
+    descKey: "procedurePages.smartTemplate.card4Text"
   }, {
     number: "05",
-    title: "Powered by Bloocell® Technology",
-    description: "Custom-shaped bioscaffolds created with millimetric accuracy. Enhance nasal structure without rigid grafts and integrate safely without inflammatory response."
+    titleKey: "procedurePages.smartTemplate.card5Title",
+    descKey: "procedurePages.smartTemplate.card5Text"
   }];
   return <div className="min-h-screen flex flex-col">
       <Header />
@@ -102,10 +102,10 @@ const SmartTemplateRhinoplasty = () => {
             <div ref={cardsRef} className="space-y-8 min-h-screen">
               {overviewCards.map((card, index) => <div key={index} className={`overview-card-dark ${activeCard === index ? 'shadow-lg border-white/20' : ''}`}>
                   <h3 className="overview-card-title-dark">
-                    {card.number} // {card.title}
+                    {card.number} // {t(card.titleKey)}
                   </h3>
                   <p className="overview-card-text-dark">
-                    {card.description}
+                    {t(card.descKey)}
                   </p>
                 </div>)}
             </div>
@@ -117,7 +117,7 @@ const SmartTemplateRhinoplasty = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8 max-w-4xl text-center content-spacing">
           <p className="text-base md:text-lg text-gray-700 leading-relaxed animate-fade-in">
-            By aligning regenerative biology with precision engineering, Smart Template Rhinoplasty represents the next evolution of nasal surgery. It offers unmatched stability, predictable outcomes, and natural definition—with reduced risk of postoperative deformities.
+            {t('procedurePages.smartTemplate.featuredText')}
           </p>
         </div>
       </section>
@@ -126,7 +126,7 @@ const SmartTemplateRhinoplasty = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-12 lg:mb-16 animate-fade-in">
-            Procedure Details
+            {t('procedurePages.common.procedureDetails')}
           </h2>
           
           <div className="max-w-6xl mx-auto space-y-16">
@@ -134,45 +134,45 @@ const SmartTemplateRhinoplasty = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1 content-spacing animate-fade-in">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase mb-6">
-                  Template Integration
+                  {t('procedurePages.smartTemplate.templateIntegration')}
                 </h3>
                 <ul className="space-y-4 text-base md:text-lg text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-bold mt-1">•</span>
-                    <span>Custom template selection</span>
+                    <span>{t('procedurePages.smartTemplate.integration1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-bold mt-1">•</span>
-                    <span>Regenerative scaffold placement</span>
+                    <span>{t('procedurePages.smartTemplate.integration2')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-bold mt-1">•</span>
-                    <span>Structural stabilization without rigid grafts</span>
+                    <span>{t('procedurePages.smartTemplate.integration3')}</span>
                   </li>
                 </ul>
               </div>
               <div className="order-1 lg:order-2 animate-fade-in">
-                <img alt="Smart Template Technology" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/441cd584-7749-4ec3-a4b8-027298e8c86a.jpg" />
+                <img alt={t('procedurePages.smartTemplate.templateIntegration')} className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/441cd584-7749-4ec3-a4b8-027298e8c86a.jpg" />
               </div>
             </div>
 
             {/* Detail 2 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="animate-fade-in">
-                <img alt="Regenerative Healing" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6a6e10ca-fcd1-4747-98b0-c905333be0ce.jpg" />
+                <img alt={t('procedurePages.smartTemplate.enhancedOutcomes')} className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/6a6e10ca-fcd1-4747-98b0-c905333be0ce.jpg" />
               </div>
               <div className="content-spacing animate-fade-in">
                 <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase mb-6">
-                  Enhanced Outcomes
+                  {t('procedurePages.smartTemplate.enhancedOutcomes')}
                 </h3>
                 <ul className="space-y-4 text-base md:text-lg text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-bold mt-1">•</span>
-                    <span>Enhanced healing vectors & contour preservation</span>
+                    <span>{t('procedurePages.smartTemplate.outcomes1')}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-gray-900 font-bold mt-1">•</span>
-                    <span>Synergy with preservation, ultrasonic, or structural techniques</span>
+                    <span>{t('procedurePages.smartTemplate.outcomes2')}</span>
                   </li>
                 </ul>
               </div>
@@ -185,40 +185,40 @@ const SmartTemplateRhinoplasty = () => {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-12 lg:mb-16 animate-fade-in">
-            Your Surgical Journey
+            {t('procedurePages.common.surgicalJourney')}
           </h2>
           
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[{
               step: "01",
-              title: "Consultation",
-              description: "Comprehensive evaluation of nasal structure"
+              titleKey: "procedurePages.common.consultation",
+              descKey: "procedurePages.smartTemplate.journey1Desc"
             }, {
               step: "02",
-              title: "Anatomical Mapping",
-              description: "Detailed analysis for custom template design"
+              titleKey: "procedurePages.common.anatomicalMapping",
+              descKey: "procedurePages.smartTemplate.journey2Desc"
             }, {
               step: "03",
-              title: "Template Design",
-              description: "Bioengineered scaffold customization"
+              titleKey: "procedurePages.smartTemplate.journey3Title",
+              descKey: "procedurePages.smartTemplate.journey3Desc"
             }, {
               step: "04",
-              title: "Rhinoplasty Procedure",
-              description: "Template integration during surgery"
+              titleKey: "procedurePages.smartTemplate.journey4Title",
+              descKey: "procedurePages.smartTemplate.journey4Desc"
             }, {
               step: "05",
-              title: "Regenerative Phase",
-              description: "Natural tissue replacement begins"
+              titleKey: "procedurePages.smartTemplate.journey5Title",
+              descKey: "procedurePages.smartTemplate.journey5Desc"
             }, {
               step: "06",
-              title: "Follow-Up",
-              description: "Progressive refinement monitoring"
+              titleKey: "procedurePages.common.followUp",
+              descKey: "procedurePages.smartTemplate.journey6Desc"
             }].map((item, index) => <div key={index} className="text-center space-y-4 animate-fade-in" style={{
               animationDelay: `${index * 0.1}s`
             }}>
                 <div className="text-5xl md:text-6xl font-light text-gray-200">{item.step}</div>
-                <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase">{item.title}</h3>
-                <p className="text-base text-gray-700 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl md:text-2xl font-light tracking-wide uppercase">{t(item.titleKey)}</h3>
+                <p className="text-base text-gray-700 leading-relaxed">{t(item.descKey)}</p>
               </div>)}
           </div>
         </div>
@@ -229,17 +229,17 @@ const SmartTemplateRhinoplasty = () => {
         <div className="container mx-auto px-8">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <img alt="Recovery Process" className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/e5709e2f-3735-471e-bfcb-7fe8eadcbb56.jpg" />
+              <img alt={t('procedurePages.common.recoveryHealing')} className="w-full aspect-[4/3] object-cover rounded-lg shadow-lg" src="/lovable-uploads/e5709e2f-3735-471e-bfcb-7fe8eadcbb56.jpg" />
             </div>
             <div className="content-spacing animate-fade-in">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase mb-6">
-                Recovery & Healing
+                {t('procedurePages.common.recoveryHealing')}
               </h2>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                Templates dissolve naturally over time as vascularized tissue replaces them, reducing the risk of asymmetry or collapse during healing.
+                {t('procedurePages.smartTemplate.recoveryText')}
               </p>
               <Link to="/contact" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300">
-                Book a Consultation
+                {t('procedurePages.common.bookConsultation')}
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>
@@ -251,32 +251,32 @@ const SmartTemplateRhinoplasty = () => {
       <section className="candidates-section-dark">
         <div className="container mx-auto px-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-12 lg:mb-16 animate-fade-in text-white">
-            Ideal Candidates
+            {t('procedurePages.common.idealCandidates')}
           </h2>
           
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[{
               emoji: "🏗️",
-              title: "Enhanced Support",
-              description: "Require structural stability"
+              titleKey: "procedurePages.smartTemplate.candidate1Title",
+              descKey: "procedurePages.smartTemplate.candidate1Desc"
             }, {
               emoji: "🌸",
-              title: "Delicate Anatomy",
-              description: "Thin skin or fragile cartilage"
+              titleKey: "procedurePages.smartTemplate.candidate2Title",
+              descKey: "procedurePages.smartTemplate.candidate2Desc"
             }, {
               emoji: "⭐",
-              title: "Refined Results",
-              description: "Seeking long-term precision"
+              titleKey: "procedurePages.smartTemplate.candidate3Title",
+              descKey: "procedurePages.smartTemplate.candidate3Desc"
             }, {
               emoji: "🔄",
-              title: "Primary or Revision",
-              description: "Any rhinoplasty complexity"
+              titleKey: "procedurePages.smartTemplate.candidate4Title",
+              descKey: "procedurePages.smartTemplate.candidate4Desc"
             }].map((candidate, index) => <div key={index} className="candidate-card-dark text-center" style={{
               animationDelay: `${index * 0.1}s`
             }}>
                 <div className="candidate-icon-dark">{candidate.emoji}</div>
-                <h3 className="candidate-card-title-dark">{candidate.title}</h3>
-                <p className="candidate-card-text-dark">{candidate.description}</p>
+                <h3 className="candidate-card-title-dark">{t(candidate.titleKey)}</h3>
+                <p className="candidate-card-text-dark">{t(candidate.descKey)}</p>
               </div>)}
           </div>
         </div>
@@ -286,13 +286,13 @@ const SmartTemplateRhinoplasty = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-center mb-8 lg:mb-12 animate-fade-in">
-            Scar Expectations
+            {t('procedurePages.common.scarExpectations')}
           </h2>
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 lg:p-12 text-center animate-fade-in">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Follows the scar expectations of the selected rhinoplasty technique (open or closed).
+                {t('procedurePages.smartTemplate.scarText')}
               </p>
             </div>
           </div>
@@ -304,10 +304,10 @@ const SmartTemplateRhinoplasty = () => {
         <div className="container mx-auto px-8 text-center">
           <div className="max-w-3xl mx-auto content-spacing animate-fade-in">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase mb-8">
-              Explore the stability and definition of Smart Template–supported results
+              {t('procedurePages.smartTemplate.galleryCta')}
             </h2>
             <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300">
-              View Before & After Gallery
+              {t('procedurePages.common.beforeAfterCta')}
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
