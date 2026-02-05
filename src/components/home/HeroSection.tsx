@@ -20,13 +20,17 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light text-white leading-[1.1] drop-shadow-lg tracking-wide my-0 px-0 mx-0 text-left">
             <span className="font-semibold">{t('hero.titlePart1')}</span> {t('hero.titleMiddle')} <span className="font-semibold">{t('hero.titlePart2')}</span>
           </h1>
-          {/* SHE Beauty Clinic Logo - White version */}
-          <img 
-            src={sheBeautyClinicLogo} 
-            alt="SHE Beauty Clinic" 
-            className="h-12 lg:h-16 w-auto brightness-0 invert"
-          />
         </div>
+      </div>
+
+      {/* Partnership Logo - Bottom Left */}
+      <div className="absolute bottom-8 left-4 lg:left-8 z-10 flex items-center gap-3">
+        <span className="text-white/80 text-xs uppercase tracking-widest font-light">In Partnership With</span>
+        <img 
+          src={sheBeautyClinicLogo} 
+          alt="SHE Beauty Clinic" 
+          className="h-14 lg:h-[68px] w-auto brightness-0 invert"
+        />
       </div>
     </section>
   );
