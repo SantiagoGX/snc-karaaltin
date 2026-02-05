@@ -35,7 +35,7 @@ const HeroSection = () => {
         <img 
           src={soulMedicalCenterLogo} 
           alt="Soul Medical Center" 
-          className="h-12 lg:h-14 w-auto brightness-0 invert"
+          className="h-8 lg:h-10 w-auto brightness-0 invert"
         />
       </div>
     </section>

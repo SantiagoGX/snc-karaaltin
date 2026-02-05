@@ -226,7 +226,7 @@ const Footer = () => {
           <img
             src={soulMedicalCenterLogo}
             alt="Soul Medical Center"
-            className="h-14 lg:h-20 w-auto"
+            className="h-10 lg:h-14 w-auto"
           />
           <img
             src={healthTurkiyeLogo}
