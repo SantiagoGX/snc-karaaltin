@@ -235,22 +235,6 @@ const KGlide = () => {
             </div>
           </div>
         </section>
-
-        {/* 9. BEFORE & AFTER CTA */}
-        <section className="section-spacing bg-gray-50">
-          <div className="container mx-auto px-8 text-center">
-            <div className="max-w-3xl mx-auto content-spacing animate-fade-in">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase mb-8">
-                {t("procedurePages.kglide.galleryCta")}
-              </h2>
-              <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 rounded text-sm uppercase tracking-widest font-light hover:bg-gray-800 transition-all duration-300">
-                {t("procedurePages.common.beforeAfterCta")}
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* 10. GET STARTED CTA */}
         <ContactCTASection />
       </main>

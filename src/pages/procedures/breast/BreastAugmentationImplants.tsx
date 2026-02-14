@@ -304,17 +304,6 @@ const BreastAugmentationImplants = () => {
           </div>
         </div>
       </section>
-
-      {/* Before & After CTA */}
-      <section className="section-spacing bg-gray-50">
-        <div className="content-spacing text-center">
-          <Link to="/gallery" className="btn-primary">
-            {t('procedurePages.common.beforeAfterCta')}
-            <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
       <ContactCTASection />
       </main>
       <Footer />

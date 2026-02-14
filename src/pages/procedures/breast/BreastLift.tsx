@@ -311,19 +311,6 @@ const BreastLift = () => {
           </div>
         </div>
       </section>
-
-      {/* Before & After CTA */}
-      <section className="section-spacing bg-gray-50">
-        <div className="content-spacing text-center">
-          <Link to="/gallery">
-            <Button className="bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-widest text-xs px-8 py-6">
-              {t('procedurePages.common.beforeAfterCta')}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-      </section>
-
       <ContactCTASection />
       <Footer />
     </div>;
