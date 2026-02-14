@@ -423,7 +423,12 @@
     "uploadPhotosTitle": "قم بتحميل صورك (الحد الأقصى 4)",
     "chooseFile": "اختر ملفاً",
     "bookConsultation": "احجز استشارتك",
-    "requiredField": "مطلوب"
+    "requiredField": "مطلوب",
+    "requiredFields": "جميع الحقول المميزة بـ",
+    "areRequired": "مطلوبة",
+    "hoursMonFri": "الاثنين - الجمعة: 9:00 صباحاً - 6:00 مساءً",
+    "hoursSat": "السبت: 10:00 صباحاً - 4:00 مساءً",
+    "hoursSun": "الأحد: مغلق"
   },
   "common": {
     "viewProcedure": "عرض الإجراء",
