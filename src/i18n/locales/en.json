@@ -233,7 +233,144 @@
     "applyForTraining": "Apply for Training",
     "whatIsTitle": "What Is the Endochor Academy?",
     "whatIsDescription": "The Endochor Academy is an advanced surgical education platform led by Prof. Dr. Mehmet Veli Karaaltin, the official QL Doctor for Endochor® Implants. Surgeons from around the world learn high-precision anatomical techniques, implant-based lifting systems, and minimally invasive facial rejuvenation through structured lectures, cadaver labs, and optional hands-on operating room proctorship.",
-    "qlDoctorTitle": "The Role of a QL Doctor"
+    "qlDoctorTitle": "The Role of a QL Doctor",
+    "qlDoctorCards": {
+      "clinicalLeadership": {
+        "title": "Clinical Leadership",
+        "points": ["Case selection", "Pre-op planning", "Implant choice", "Long-term follow-up"]
+      },
+      "techniqueStandardization": {
+        "title": "Technique Standardization",
+        "points": ["Safety zones", "Fixation principles", "Documentation structure"]
+      },
+      "outcomeTracking": {
+        "title": "Outcome Tracking",
+        "points": ["Photography", "Patient-reported outcomes", "Audit-based improvement"]
+      },
+      "educationProctorship": {
+        "title": "Education & Proctorship",
+        "points": ["Cadaver lab mentorship", "OR proctorship", "International training"]
+      }
+    },
+    "whyEndochorTitle": "Why Endochor® in Facial Surgery",
+    "whyEndochor": {
+      "biodegradable": "Biodegradable PCL implants that resorb safely while inducing collagen",
+      "multiVector": "Multi-vector lifting compatible with endoscopic, transbleph, and open techniques",
+      "anatomyRespectful": "Anatomy-respectful anchorage preserving nerve function and expression",
+      "hiddenIncision": "Hidden-incision, scar-minimal workflows"
+    },
+    "trainingModulesTitle": "Training Modules Available",
+    "modules": {
+      "foreheadLift": {
+        "title": "Endoscopic Forehead & Brow Lift",
+        "badge": "Module 1",
+        "points": ["Subperiosteal dissection", "Temporal fusion line release", "Endotine fixation alternatives", "Brow symmetry calibration"]
+      },
+      "midFaceLift": {
+        "title": "Endoscopic Mid-Face Lift",
+        "badge": "Module 2",
+        "points": ["Subperiosteal midface elevation", "Malar fat pad repositioning", "Periorbital integration", "Vector optimization"]
+      },
+      "ribbonNeck": {
+        "title": "Ribbon Implant & Neck Rejuvenation",
+        "badge": "Module 3",
+        "points": ["PCL ribbon design & placement", "Platysma band correction", "Cervicomental angle definition", "Combined neck-jaw contouring"]
+      },
+      "transblepharoplasty": {
+        "title": "Trans-Blepharoplasty Brow Lift",
+        "badge": "Module 4",
+        "points": ["Upper lid approach for brow", "Periorbital rejuvenation", "Minimal scar technique", "Combined with blepharoplasty"]
+      },
+      "doubleDouble": {
+        "title": "The Double-Double Technique",
+        "badge": "Module 5",
+        "points": ["Dual-vector SMAS advancement", "Deep plane integration", "Comprehensive facial rejuvenation", "Mesh reinforcement options"]
+      },
+      "integration": {
+        "title": "Full Integration Pathway",
+        "badge": "Module 6",
+        "points": ["Combining all modules", "Case-specific protocol design", "Complication management", "Long-term follow-up strategies"]
+      }
+    },
+    "viewDetails": "View Details",
+    "hideDetails": "Hide Details",
+    "learningObjectivesTitle": "Learning Objectives",
+    "learningObjectives": {
+      "patientSelection": "Proper patient selection & vector planning",
+      "safeDissection": "Safe endoscopic / transbleph / limited-incision dissection",
+      "reliableFixation": "Reliable implant fixation",
+      "complicationPrevention": "Complication prevention & management",
+      "structuredFollowUp": "Structured follow-up protocols"
+    },
+    "courseFormatsTitle": "Course Formats",
+    "courseFormats": {
+      "essentials": { "title": "Essentials", "duration": "1 Day", "description": "Lectures + simulation lab" },
+      "coreSkills": { "title": "Core Skills", "duration": "2 Days", "description": "Cadaver lab + live demo" },
+      "masterclass": { "title": "Masterclass", "duration": "3 Days", "description": "Cadaver lab + OR proctorship" },
+      "proctorship": { "title": "On-site Proctorship", "duration": "Custom", "description": "Mentorship at the participant's clinic" }
+    },
+    "pricingTitle": "Hands-On Training Program",
+    "individualProcedures": "Individual Signature Procedures",
+    "handsOnSurgery": "Hands-On Surgery",
+    "surgery1": "1 surgery",
+    "surgery2": "2 surgeries",
+    "surgery3": "3 surgeries",
+    "extendedFellowship": "Extended Hands-On Fellowship",
+    "immersiveTraining": "Immersive Training",
+    "month1": "1 Month",
+    "months2": "2 Months",
+    "months3": "3 Months",
+    "months6": "6 Months",
+    "sampleAgendaTitle": "Sample 2-Day Agenda",
+    "day1": "Day 1 — Foundations & Live Observation",
+    "day1Items": [
+      "Endochor® anatomy, implant variants, indications",
+      "Vector planning & fixation zones",
+      "Live surgery observation (K Face Lift / Endoscopic Lift)",
+      "Cadaver dissection — brow, midface, neck planes"
+    ],
+    "day2": "Day 2 — Advanced Applications & Case Planning",
+    "day2Items": [
+      "Double-Double & integration pathways",
+      "Case presentations & personalized planning",
+      "Extended cadaver session: full face workflow",
+      "Certificate presentation & next-steps discussion"
+    ],
+    "faqTitle": "FAQs",
+    "faq": {
+      "endoscopicExperience": {
+        "question": "Who is this training for?",
+        "answer": "Board-certified plastic, maxillofacial, and ENT surgeons with facelift experience or a desire to learn advanced facial surgery techniques."
+      },
+      "implantsProvided": {
+        "question": "Are implants provided during training?",
+        "answer": "Yes. Endochor® implants are provided for cadaver lab sessions and are included in the course fee."
+      },
+      "bringCases": {
+        "question": "Can I bring my own cases for discussion?",
+        "answer": "Absolutely. Case presentations and personalized planning are a core part of the Core Skills and Masterclass formats."
+      },
+      "postCourseSupport": {
+        "question": "Is there post-course support?",
+        "answer": "Yes. All participants receive ongoing mentorship access and can consult Prof. Dr. Karaaltin for case planning after the course."
+      },
+      "cmeCredits": {
+        "question": "Can I observe live surgery?",
+        "answer": "Yes. Core Skills, Masterclass, and On-site Proctorship formats include live surgical observation or participation."
+      },
+      "fellowshipIncludes": {
+        "question": "Is certification provided?",
+        "answer": "Yes. All participants receive an Endochor Academy training certificate upon program completion."
+      }
+    },
+    "applicationTitle": "Apply to Join the Academy",
+    "applicationDescription": "Interested in advanced facial surgery training? Contact us directly to discuss your goals and arrange your training program.",
+    "trainingLead": "Training Lead",
+    "locations": "Locations",
+    "locationsValue": "Istanbul, Turkey & International",
+    "email": "Email",
+    "connectInstantly": "Connect Instantly",
+    "whatsappDescription": "Reach out directly via WhatsApp for immediate assistance with your training inquiry."
   },
   "contact": {
     "title": "CONTACT",
@@ -1362,7 +1499,16 @@
       "candidate3Title": "Minimal Scars",
       "candidate3Desc": "Seeking virtually invisible results",
       "candidate4Title": "Quick Recovery",
-      "candidate4Desc": "Prefer minimal downtime procedures"
+      "candidate4Desc": "Prefer minimal downtime procedures",
+      "scarBadge": "Virtually Invisible",
+      "scarSubtitle": "Single Microincision",
+      "scarText": "A 0.5 cm microincision strategically placed in the natural lateral fold of the torso. When healed, it becomes virtually invisible.",
+      "scarSizeLabel": "Size",
+      "scarSizeValue": "0.5 cm",
+      "scarLocationLabel": "Location",
+      "scarLocationValue": "Lateral torso fold",
+      "scarVisibilityLabel": "Visibility",
+      "scarVisibilityValue": "Nearly invisible"
     },
     "breastAugmentationFatGrafting": {
       "title": "Breast Augmentation with Fat Grafting",
@@ -1486,7 +1632,15 @@
       "ctaText": "View real patient transformations achieved with the Advanced Safe BBL™ technique.",
       "viewGallery": "View Gallery",
       "bookNow": "Book Now",
-      "bookConsultation": "Book a Consultation"
+      "bookConsultation": "Book a Consultation",
+      "scarBadge": "Minimal Scarring",
+      "scarText": "The Advanced Safe BBL™ uses 2–3 mm microincisions, strategically placed to remain virtually invisible when healed. There is no visible gluteal scar, as the graft is performed through these minimal access points.",
+      "scarSize": "Size",
+      "scarSizeValue": "2–3 mm microincisions",
+      "scarLocation": "Location",
+      "scarLocationValue": "Hidden in natural creases",
+      "scarVisibility": "Visibility",
+      "scarVisibilityValue": "Virtually invisible when healed"
     },
     "nippleAreola": {
       "title": "Nipple & Areola Reduction",

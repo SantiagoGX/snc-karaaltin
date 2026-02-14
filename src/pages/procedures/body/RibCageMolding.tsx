@@ -347,64 +347,29 @@ const RibCageMolding = () => {
       <section className="candidates-section-dark">
         <div className="container mx-auto px-8 max-w-6xl">
           <h2 className="candidates-title-dark">
-            Ideal Candidates
+            {t('procedurePages.common.idealCandidates')}
           </h2>
           
           <div className="candidates-grid">
-            <div className="candidate-card-dark" style={{
-              animationDelay: '0.1s'
-            }}>
-              <div className="candidate-icon-dark">
-                ⚕
-              </div>
-              <h3 className="candidate-card-title-dark">
-                Wide Rib Cage
-              </h3>
-              <p className="candidate-card-text-dark">
-                Patients with a wide rib cage seeking refined proportions
-              </p>
+            <div className="candidate-card-dark" style={{ animationDelay: '0.1s' }}>
+              <div className="candidate-icon-dark">⚕</div>
+              <h3 className="candidate-card-title-dark">{t('procedurePages.ribCageMolding.candidate1Title')}</h3>
+              <p className="candidate-card-text-dark">{t('procedurePages.ribCageMolding.candidate1Desc')}</p>
             </div>
-
-            <div className="candidate-card-dark" style={{
-              animationDelay: '0.2s'
-            }}>
-              <div className="candidate-icon-dark">
-                ✨
-              </div>
-              <h3 className="candidate-card-title-dark">
-                Stylized Waist
-              </h3>
-              <p className="candidate-card-text-dark">
-                Individuals seeking a more defined and elegant waistline
-              </p>
+            <div className="candidate-card-dark" style={{ animationDelay: '0.2s' }}>
+              <div className="candidate-icon-dark">✨</div>
+              <h3 className="candidate-card-title-dark">{t('procedurePages.ribCageMolding.candidate2Title')}</h3>
+              <p className="candidate-card-text-dark">{t('procedurePages.ribCageMolding.candidate2Desc')}</p>
             </div>
-
-            <div className="candidate-card-dark" style={{
-              animationDelay: '0.3s'
-            }}>
-              <div className="candidate-icon-dark">
-                🔬
-              </div>
-              <h3 className="candidate-card-title-dark">
-                Minimal Approach
-              </h3>
-              <p className="candidate-card-text-dark">
-                Patients preferring techniques without bone resection
-              </p>
+            <div className="candidate-card-dark" style={{ animationDelay: '0.3s' }}>
+              <div className="candidate-icon-dark">🔬</div>
+              <h3 className="candidate-card-title-dark">{t('procedurePages.ribCageMolding.candidate3Title')}</h3>
+              <p className="candidate-card-text-dark">{t('procedurePages.ribCageMolding.candidate3Desc')}</p>
             </div>
-
-            <div className="candidate-card-dark" style={{
-              animationDelay: '0.4s'
-            }}>
-              <div className="candidate-icon-dark">
-                ⚖
-              </div>
-              <h3 className="candidate-card-title-dark">
-                Body Harmony
-              </h3>
-              <p className="candidate-card-text-dark">
-                Ideal for harmony between thorax, waist, and hips
-              </p>
+            <div className="candidate-card-dark" style={{ animationDelay: '0.4s' }}>
+              <div className="candidate-icon-dark">⚖</div>
+              <h3 className="candidate-card-title-dark">{t('procedurePages.ribCageMolding.candidate4Title')}</h3>
+              <p className="candidate-card-text-dark">{t('procedurePages.ribCageMolding.candidate4Desc')}</p>
             </div>
           </div>
         </div>
@@ -414,7 +379,7 @@ const RibCageMolding = () => {
       <section className="section-spacing bg-gray-50">
         <div className="container mx-auto px-8 max-w-4xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 text-center mb-16 animate-fade-in">
-            Scar Expectations
+            {t('procedurePages.common.scarExpectations')}
           </h2>
           
           <div className="max-w-2xl mx-auto">
@@ -422,15 +387,15 @@ const RibCageMolding = () => {
               animationDelay: '0.1s'
             }}>
               <div className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-semibold uppercase tracking-widest mb-6">
-                Virtually Invisible
+                {t('procedurePages.ribCageMolding.scarBadge')}
               </div>
               
               <h3 className="text-2xl md:text-3xl font-light tracking-wide uppercase text-gray-900 mb-6">
-                Single Microincision
+                {t('procedurePages.ribCageMolding.scarSubtitle')}
               </h3>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                A 0.5 cm microincision strategically placed in the natural lateral fold of the torso. When healed, it becomes virtually invisible.
+                {t('procedurePages.ribCageMolding.scarText')}
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
@@ -438,24 +403,24 @@ const RibCageMolding = () => {
                   <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-300">
                     <span className="text-xl">📏</span>
                   </div>
-                  <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Size</p>
-                  <p className="text-sm text-gray-600">0.5 cm</p>
+                  <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">{t('procedurePages.ribCageMolding.scarSizeLabel')}</p>
+                  <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.scarSizeValue')}</p>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-300">
                     <span className="text-xl">📍</span>
                   </div>
-                  <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Location</p>
-                  <p className="text-sm text-gray-600">Lateral torso fold</p>
+                  <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">{t('procedurePages.ribCageMolding.scarLocationLabel')}</p>
+                  <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.scarLocationValue')}</p>
                 </div>
                 
                 <div className="space-y-2">
                   <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-300">
                     <span className="text-xl">👁️</span>
                   </div>
-                  <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Visibility</p>
-                  <p className="text-sm text-gray-600">Nearly invisible</p>
+                  <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">{t('procedurePages.ribCageMolding.scarVisibilityLabel')}</p>
+                  <p className="text-sm text-gray-600">{t('procedurePages.ribCageMolding.scarVisibilityValue')}</p>
                 </div>
               </div>
             </div>
@@ -463,27 +428,7 @@ const RibCageMolding = () => {
         </div>
       </section>
 
-      {/* 10. BEFORE & AFTER */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
-            Before & After
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
-            Natural, refined, and proportional results.
-          </p>
-          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            View Before & After Gallery
-            <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
-      {/* 11. GET STARTED CTA */}
+      {/* 10. GET STARTED CTA */}
       <ContactCTASection />
       </main>
       <Footer />
