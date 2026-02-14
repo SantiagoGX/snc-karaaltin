@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface NoPageProcedureCardProps {
   title: string;
@@ -15,6 +16,7 @@ const NoPageProcedureCard = ({
   imageAlt,
   animationDelay = "0s"
 }: NoPageProcedureCardProps) => {
+  const { t } = useTranslation();
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -68,7 +70,7 @@ const NoPageProcedureCard = ({
             <div className="w-12 h-px bg-white/30 mx-auto"></div>
             
             <p className="text-white/80 text-sm leading-relaxed">
-              To learn more about this procedure and view before & after results, please schedule a consultation with Dr. Karaaltın.
+              {t('common.noPageOverlayText')}
             </p>
             
             <Link 
@@ -76,7 +78,7 @@ const NoPageProcedureCard = ({
               onClick={(e) => e.stopPropagation()}
               className="inline-block mt-4 px-6 py-3 bg-white text-gray-900 text-xs uppercase tracking-widest font-medium rounded hover:bg-gray-100 transition-all duration-300 hover:scale-105"
             >
-              Contact Dr. Karaaltın
+              {t('common.noPageContactButton')}
             </Link>
           </div>
         </div>

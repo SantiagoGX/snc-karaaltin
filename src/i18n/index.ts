@@ -7,6 +7,8 @@ import es from './locales/es.json';
 import zh from './locales/zh.json';
 import ar from './locales/ar.json';
 
+const savedLang = localStorage.getItem('i18n-lang') || 'en';
+
 i18n
   .use(initReactI18next)
   .init({
@@ -17,7 +19,7 @@ i18n
       zh: { translation: zh },
       ar: { translation: ar },
     },
-    lng: 'en',
+    lng: savedLang,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
