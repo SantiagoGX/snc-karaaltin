@@ -403,7 +403,12 @@
     "uploadPhotosTitle": "Upload Your Photos (Maximum 4)",
     "chooseFile": "Choose file",
     "bookConsultation": "Book Your Consultation",
-    "requiredField": "required"
+    "requiredField": "required",
+    "requiredFields": "All fields marked with",
+    "areRequired": "are required",
+    "hoursMonFri": "Monday - Friday: 9:00 AM - 6:00 PM",
+    "hoursSat": "Saturday: 10:00 AM - 4:00 PM",
+    "hoursSun": "Sunday: Closed"
   },
   "common": {
     "viewProcedure": "View Procedure",

@@ -423,7 +423,12 @@
     "uploadPhotosTitle": "Fotoğraflarınızı Yükleyin (Maksimum 4)",
     "chooseFile": "Dosya seç",
     "bookConsultation": "Konsültasyonunuzu Ayırtın",
-    "requiredField": "gerekli"
+    "requiredField": "gerekli",
+    "requiredFields": "İle işaretlenmiş tüm alanlar",
+    "areRequired": "zorunludur",
+    "hoursMonFri": "Pazartesi - Cuma: 9:00 - 18:00",
+    "hoursSat": "Cumartesi: 10:00 - 16:00",
+    "hoursSun": "Pazar: Kapalı"
   },
   "common": {
     "viewProcedure": "İşlemi Görüntüle",

@@ -423,7 +423,12 @@
     "uploadPhotosTitle": "Sube tus fotos (Máximo 4)",
     "chooseFile": "Elegir archivo",
     "bookConsultation": "Reserva tu Consulta",
-    "requiredField": "requerido"
+    "requiredField": "requerido",
+    "requiredFields": "Todos los campos marcados con",
+    "areRequired": "son obligatorios",
+    "hoursMonFri": "Lunes - Viernes: 9:00 - 18:00",
+    "hoursSat": "Sábado: 10:00 - 16:00",
+    "hoursSun": "Domingo: Cerrado"
   },
   "common": {
     "viewProcedure": "Ver Procedimiento",
@@ -1961,11 +1966,6 @@
       "bookNow": "Reservar Ahora",
       "bookConsultation": "Reservar Consulta"
     }
-  },
-  "contact": {
-    "hoursWeekdays": "Lunes - Viernes: 9:00 - 18:00",
-    "hoursSaturday": "Sábado: 10:00 - 14:00",
-    "hoursSunday": "Domingo: Cerrado"
   },
   "proceduresPage": {
     "title": "Procedimientos y Técnicas",

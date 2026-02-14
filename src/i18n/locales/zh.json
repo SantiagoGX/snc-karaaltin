@@ -394,7 +394,12 @@
     "uploadPhotosTitle": "上传您的照片（最多4张）",
     "chooseFile": "选择文件",
     "bookConsultation": "预约咨询",
-    "requiredField": "必填"
+    "requiredField": "必填",
+    "requiredFields": "标有",
+    "areRequired": "的字段为必填项",
+    "hoursMonFri": "周一至周五：上午9:00 - 下午6:00",
+    "hoursSat": "周六：上午10:00 - 下午4:00",
+    "hoursSun": "周日：休息"
   },
   "common": {
     "viewProcedure": "查看手术",
