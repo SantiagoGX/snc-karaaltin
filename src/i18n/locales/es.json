@@ -253,7 +253,144 @@
     "applyForTraining": "Solicitar Entrenamiento",
     "whatIsTitle": "¿Qué es la Academia Endochor?",
     "whatIsDescription": "La Academia Endochor es una plataforma de educación quirúrgica avanzada dirigida por el Prof. Dr. Mehmet Veli Karaaltin, el QL Doctor oficial para Implantes Endochor®. Cirujanos de todo el mundo aprenden técnicas anatómicas de alta precisión, sistemas de levantamiento basados en implantes y rejuvenecimiento facial mínimamente invasivo.",
-    "qlDoctorTitle": "El Rol de un QL Doctor"
+    "qlDoctorTitle": "El Rol de un QL Doctor",
+    "qlDoctorCards": {
+      "clinicalLeadership": {
+        "title": "Liderazgo Clínico",
+        "points": ["Selección de casos", "Planificación preoperatoria", "Elección de implantes", "Seguimiento a largo plazo"]
+      },
+      "techniqueStandardization": {
+        "title": "Estandarización de Técnicas",
+        "points": ["Zonas de seguridad", "Principios de fijación", "Estructura de documentación"]
+      },
+      "outcomeTracking": {
+        "title": "Seguimiento de Resultados",
+        "points": ["Fotografía", "Resultados reportados por pacientes", "Mejora basada en auditoría"]
+      },
+      "educationProctorship": {
+        "title": "Educación y Mentoría",
+        "points": ["Mentoría en laboratorio de cadáveres", "Mentoría en quirófano", "Entrenamiento internacional"]
+      }
+    },
+    "whyEndochorTitle": "¿Por qué Endochor® en Cirugía Facial?",
+    "whyEndochor": {
+      "biodegradable": "Implantes PCL biodegradables que se reabsorben de forma segura mientras inducen colágeno",
+      "multiVector": "Levantamiento multi-vector compatible con técnicas endoscópicas, transbleph y abiertas",
+      "anatomyRespectful": "Anclaje respetuoso con la anatomía que preserva la función nerviosa y la expresión",
+      "hiddenIncision": "Flujos de trabajo con incisión oculta y cicatriz mínima"
+    },
+    "trainingModulesTitle": "Módulos de Entrenamiento Disponibles",
+    "modules": {
+      "foreheadLift": {
+        "title": "Levantamiento Endoscópico de Frente y Cejas",
+        "badge": "Módulo 1",
+        "points": ["Disección subperióstica", "Liberación de la línea de fusión temporal", "Alternativas de fijación Endotine", "Calibración de simetría de cejas"]
+      },
+      "midFaceLift": {
+        "title": "Levantamiento Endoscópico del Tercio Medio",
+        "badge": "Módulo 2",
+        "points": ["Elevación subperióstica del tercio medio", "Reposicionamiento de la almohadilla grasa malar", "Integración periorbital", "Optimización de vectores"]
+      },
+      "ribbonNeck": {
+        "title": "Implante Ribbon y Rejuvenecimiento de Cuello",
+        "badge": "Módulo 3",
+        "points": ["Diseño y colocación de ribbon PCL", "Corrección de bandas platismales", "Definición del ángulo cervicomental", "Contorno combinado cuello-mandíbula"]
+      },
+      "transblepharoplasty": {
+        "title": "Levantamiento de Cejas Trans-Blefaroplastia",
+        "badge": "Módulo 4",
+        "points": ["Abordaje por párpado superior", "Rejuvenecimiento periorbital", "Técnica de cicatriz mínima", "Combinado con blefaroplastia"]
+      },
+      "doubleDouble": {
+        "title": "La Técnica Doble-Doble",
+        "badge": "Módulo 5",
+        "points": ["Avance SMAS de doble vector", "Integración de plano profundo", "Rejuvenecimiento facial integral", "Opciones de refuerzo con malla"]
+      },
+      "integration": {
+        "title": "Vía de Integración Completa",
+        "badge": "Módulo 6",
+        "points": ["Combinación de todos los módulos", "Diseño de protocolo específico por caso", "Manejo de complicaciones", "Estrategias de seguimiento a largo plazo"]
+      }
+    },
+    "viewDetails": "Ver Detalles",
+    "hideDetails": "Ocultar Detalles",
+    "learningObjectivesTitle": "Objetivos de Aprendizaje",
+    "learningObjectives": {
+      "patientSelection": "Selección adecuada de pacientes y planificación de vectores",
+      "safeDissection": "Disección endoscópica / transbleph / de incisión limitada segura",
+      "reliableFixation": "Fijación de implantes confiable",
+      "complicationPrevention": "Prevención y manejo de complicaciones",
+      "structuredFollowUp": "Protocolos de seguimiento estructurados"
+    },
+    "courseFormatsTitle": "Formatos del Curso",
+    "courseFormats": {
+      "essentials": { "title": "Esenciales", "duration": "1 Día", "description": "Conferencias + laboratorio de simulación" },
+      "coreSkills": { "title": "Habilidades Básicas", "duration": "2 Días", "description": "Laboratorio de cadáveres + demostración en vivo" },
+      "masterclass": { "title": "Masterclass", "duration": "3 Días", "description": "Laboratorio de cadáveres + mentoría en quirófano" },
+      "proctorship": { "title": "Mentoría en Sitio", "duration": "Personalizado", "description": "Mentoría en la clínica del participante" }
+    },
+    "pricingTitle": "Programa de Entrenamiento Práctico",
+    "individualProcedures": "Procedimientos Individuales Exclusivos",
+    "handsOnSurgery": "Cirugía Práctica",
+    "surgery1": "1 cirugía",
+    "surgery2": "2 cirugías",
+    "surgery3": "3 cirugías",
+    "extendedFellowship": "Fellowship Práctico Extendido",
+    "immersiveTraining": "Entrenamiento Inmersivo",
+    "month1": "1 Mes",
+    "months2": "2 Meses",
+    "months3": "3 Meses",
+    "months6": "6 Meses",
+    "sampleAgendaTitle": "Agenda de 2 Días de Muestra",
+    "day1": "Día 1 — Fundamentos y Observación en Vivo",
+    "day1Items": [
+      "Anatomía Endochor®, variantes de implantes, indicaciones",
+      "Planificación de vectores y zonas de fijación",
+      "Observación de cirugía en vivo (K Face Lift / Levantamiento Endoscópico)",
+      "Disección en cadáver — planos de ceja, cara media, cuello"
+    ],
+    "day2": "Día 2 — Aplicaciones Avanzadas y Planificación de Casos",
+    "day2Items": [
+      "Doble-Doble y vías de integración",
+      "Presentaciones de casos y planificación personalizada",
+      "Sesión extendida de cadáver: flujo de trabajo facial completo",
+      "Presentación de certificado y discusión de próximos pasos"
+    ],
+    "faqTitle": "Preguntas Frecuentes",
+    "faq": {
+      "endoscopicExperience": {
+        "question": "¿Para quién es este entrenamiento?",
+        "answer": "Cirujanos plásticos, maxilofaciales y ORL certificados con experiencia en lifting facial o deseo de aprender técnicas avanzadas de cirugía facial."
+      },
+      "implantsProvided": {
+        "question": "¿Se proporcionan implantes durante el entrenamiento?",
+        "answer": "Sí. Los implantes Endochor® se proporcionan para las sesiones de laboratorio de cadáveres y están incluidos en la tarifa del curso."
+      },
+      "bringCases": {
+        "question": "¿Puedo traer mis propios casos para discusión?",
+        "answer": "Absolutamente. Las presentaciones de casos y la planificación personalizada son una parte central de los formatos de Habilidades Básicas y Masterclass."
+      },
+      "postCourseSupport": {
+        "question": "¿Hay soporte posterior al curso?",
+        "answer": "Sí. Todos los participantes reciben acceso continuo a mentoría y pueden consultar al Prof. Dr. Karaaltin para planificación de casos después del curso."
+      },
+      "cmeCredits": {
+        "question": "¿Puedo observar cirugía en vivo?",
+        "answer": "Sí. Los formatos de Habilidades Básicas, Masterclass y Mentoría en Sitio incluyen observación o participación en cirugía en vivo."
+      },
+      "fellowshipIncludes": {
+        "question": "¿Se proporciona certificación?",
+        "answer": "Sí. Todos los participantes reciben un certificado de entrenamiento de la Academia Endochor al completar el programa."
+      }
+    },
+    "applicationTitle": "Solicita Unirte a la Academia",
+    "applicationDescription": "¿Interesado en entrenamiento avanzado de cirugía facial? Contáctenos directamente para discutir sus objetivos y organizar su programa de entrenamiento.",
+    "trainingLead": "Líder de Entrenamiento",
+    "locations": "Ubicaciones",
+    "locationsValue": "Estambul, Turquía e Internacional",
+    "email": "Correo Electrónico",
+    "connectInstantly": "Conecta Instantáneamente",
+    "whatsappDescription": "Comunícate directamente por WhatsApp para asistencia inmediata con tu consulta de entrenamiento."
   },
   "contact": {
     "title": "CONTACTO",
@@ -828,7 +965,56 @@
       "intro2": "Ideal para rejuvenecer la frente, el tercio medio facial y el cuello, este sistema reduce el tiempo de inactividad mientras ofrece una elevación estable y de aspecto natural.",
       "overviewTitle": "Lifting Facial Endochor®",
       "card1Title": "Qué Hace Único a Endochor®",
-      "card1Text": "Implantes PCL biodegradables diseñados para vectores óptimos, integración de tejidos blandos y soporte a largo plazo—sin material extraño permanente."
+      "card1Text": "Implantes PCL biodegradables diseñados para vectores óptimos, integración de tejidos blandos y soporte a largo plazo—sin material extraño permanente.",
+      "card2Title": "Soporte Multi-Zona",
+      "card2Text": "El sistema aborda frente, tercio medio facial, mandíbula y cuello simultáneamente a través de múltiples vectores de elevación controlados.",
+      "card3Title": "Integración con Tejido Natural",
+      "card3Text": "Los implantes se integran progresivamente con el tejido circundante, creando una red de soporte biológico que mejora con el tiempo.",
+      "card4Title": "El Sistema Ribbon",
+      "card4Text": "Implantes ribbon de PCL proporcionan anclaje estructural preciso:",
+      "ribbonList1": "Soporte de vectores personalizados",
+      "ribbonList2": "Integración biodegradable",
+      "ribbonList3": "Estimulación de colágeno",
+      "ribbonSupports": "El sistema ribbon soporta elevación duradera mientras se reabsorbe de forma segura.",
+      "card5Title": "Resultados Duraderos",
+      "card5Text": "La combinación de elevación endoscópica con soporte de implantes biodegradables crea resultados que duran años mientras mantienen la expresión facial natural.",
+      "featuredTitle": "Endochor® con el Dr. Karaaltin",
+      "featuredText": "El Lifting Facial Endochor® representa la convergencia de la cirugía mínimamente invasiva con la ingeniería de implantes avanzada. El Prof. Dr. Karaaltin, como QL Doctor oficial de Endochor®, ofrece una experiencia única en esta técnica revolucionaria.",
+      "detailsSubtitle": "Técnica avanzada de rejuvenecimiento facial mínimamente invasivo",
+      "endoscopicAccess": "Acceso Endoscópico",
+      "endoscopicAccessDesc": "Incisiones mínimas ocultas en el cuero cabelludo permiten acceso completo a las estructuras faciales profundas.",
+      "noSkinTension": "Sin Tensión Cutánea",
+      "noSkinTensionDesc": "La elevación se realiza desde las capas profundas, eliminando la tensión en la piel para resultados más naturales.",
+      "internalLifting": "Elevación Interna",
+      "internalLiftingDesc": "Los tejidos se reposicionan internamente usando vectores de elevación precisos soportados por implantes biodegradables.",
+      "multiZone": "Multi-Zona",
+      "multiZoneDesc": "Aborda simultáneamente frente, tercio medio, mandíbula y cuello en un solo procedimiento.",
+      "controlledVectors": "Vectores Controlados",
+      "controlledVectorsDesc": "Planificación precisa de vectores asegura elevación natural y simétrica en todas las zonas faciales.",
+      "journey1Title": "Consulta",
+      "journey1Desc": "Análisis facial completo y discusión de objetivos estéticos.",
+      "journey2Title": "Planificación de Vectores",
+      "journey2Desc": "Diseño preciso de vectores de elevación y selección de implantes.",
+      "journey3Title": "Procedimiento Endoscópico",
+      "journey3Desc": "Elevación mínimamente invasiva con colocación de implantes.",
+      "journey4Title": "Integración Temprana",
+      "journey4Desc": "Los implantes comienzan a integrarse con el tejido natural.",
+      "journey5Title": "Resultados Progresivos",
+      "journey5Desc": "Mejora continua a medida que el colágeno se regenera.",
+      "recoveryText": "La recuperación es notablemente rápida para un procedimiento facial. La mayoría de los pacientes regresan a actividades diarias en días, con un retorno rápido a la actividad normal.",
+      "candidate1Title": "Párpados Caídos",
+      "candidate1Desc": "Pacientes con caída de párpados y cejas que desean elevación sin cicatrices visibles.",
+      "candidate2Title": "Envejecimiento del Tercio Medio",
+      "candidate2Desc": "Pérdida de volumen y descenso de los tejidos del tercio medio facial.",
+      "candidate3Title": "Flacidez del Cuello",
+      "candidate3Desc": "Laxitud del cuello y pérdida de definición de la línea mandibular.",
+      "candidate4Title": "Rejuvenecimiento Natural",
+      "candidate4Desc": "Pacientes que buscan resultados naturales con tiempo de inactividad mínimo.",
+      "scarTitle": "Incisiones Ocultas",
+      "scarSubtitle": "Cicatrización Mínima",
+      "scarText": "Las incisiones se colocan dentro del cuero cabelludo y en pliegues naturales, volviéndose virtualmente invisibles al cicatrizar.",
+      "galleryTitle": "Resultados Reales",
+      "galleryCta": "Explore los resultados transformadores del Lifting Facial Endochor®."
     },
     "advancedSafeBBL": {
       "title": "BBL Seguro Avanzado™",

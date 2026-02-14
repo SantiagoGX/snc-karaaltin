@@ -432,7 +432,7 @@ const AdvancedSafeBBL = () => {
       <section className="scar-section">
         <div className="container mx-auto px-8 max-w-5xl">
           <h2 className="scar-title">
-            Scar Expectations
+            {t('procedurePages.common.scarExpectations')}
           </h2>
           
           <div className="max-w-4xl mx-auto">
@@ -440,24 +440,24 @@ const AdvancedSafeBBL = () => {
               animationDelay: '0.1s'
             }}>
               <div className="scar-badge">
-                Minimal Scarring
+                {t('procedurePages.advancedSafeBBL.scarBadge')}
               </div>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
-                The Advanced Safe BBL™ uses 2–3 mm microincisions, strategically placed to remain virtually invisible when healed. There is no visible gluteal scar, as the graft is performed through these minimal access points.
+                {t('procedurePages.advancedSafeBBL.scarText')}
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="p-6 bg-gray-50 rounded-lg">
-                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">Size</h4>
-                  <p className="text-base text-gray-700">2–3 mm microincisions</p>
+                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">{t('procedurePages.advancedSafeBBL.scarSize')}</h4>
+                  <p className="text-base text-gray-700">{t('procedurePages.advancedSafeBBL.scarSizeValue')}</p>
                 </div>
                 <div className="p-6 bg-gray-50 rounded-lg">
-                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">Location</h4>
-                  <p className="text-base text-gray-700">Hidden in natural creases</p>
+                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">{t('procedurePages.advancedSafeBBL.scarLocation')}</h4>
+                  <p className="text-base text-gray-700">{t('procedurePages.advancedSafeBBL.scarLocationValue')}</p>
                 </div>
                 <div className="p-6 bg-gray-50 rounded-lg">
-                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">Visibility</h4>
-                  <p className="text-base text-gray-700">Virtually invisible when healed</p>
+                  <h4 className="text-sm uppercase tracking-widest font-light text-gray-900 mb-2">{t('procedurePages.advancedSafeBBL.scarVisibility')}</h4>
+                  <p className="text-base text-gray-700">{t('procedurePages.advancedSafeBBL.scarVisibilityValue')}</p>
                 </div>
               </div>
             </div>
@@ -465,27 +465,7 @@ const AdvancedSafeBBL = () => {
         </div>
       </section>
 
-      {/* 10. BEFORE & AFTER */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-8 animate-fade-in">
-            {t('procedurePages.advancedSafeBBL.ctaTitle')}
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
-            {t('procedurePages.advancedSafeBBL.ctaText')}
-          </p>
-          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            {t('procedurePages.advancedSafeBBL.viewGallery')}
-            <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
-      {/* 11. GET STARTED CTA */}
+      {/* 10. GET STARTED CTA */}
       <ContactCTASection />
       </main>
       <Footer />
