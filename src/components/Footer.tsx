@@ -84,14 +84,8 @@ const Footer = () => {
                   {t('footer.learnSurgery')}
                 </Link>
               </li>
-              {/* Hide Before & Afters for Turkish users */}
-              {!isTurkish && (
-                <li>
-                  <Link to="/gallery" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                    {t('footer.beforeAfters')}
-                  </Link>
-                </li>
-              )}
+
+
             </ul>
           </div>
 

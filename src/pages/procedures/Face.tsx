@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import BeforeAfterSection from "@/components/home/BeforeAfterSection";
+
 import ContactCTASection from "@/components/home/ContactCTASection";
 import NoPageProcedureCard from "@/components/procedures/NoPageProcedureCard";
 import { ChevronRight, ChevronLeft } from "lucide-react";
@@ -395,7 +395,7 @@ const Face = () => {
         </div>
       </section>
 
-      <BeforeAfterSection />
+      
       <ContactCTASection />
       <Footer />
     </div>;

@@ -7,7 +7,7 @@ import CertificatesSection from "@/components/home/CertificatesSection";
 import DifferentiatorsSection from "@/components/home/DifferentiatorsSection";
 import FacilitiesSection from "@/components/home/FacilitiesSection";
 import OperationsSection from "@/components/home/OperationsSection";
-import BeforeAfterSection from "@/components/home/BeforeAfterSection";
+
 import GoogleReviewsSection from "@/components/home/GoogleReviewsSection";
 import ContactCTASection from "@/components/home/ContactCTASection";
 
@@ -23,7 +23,7 @@ const Index = () => {
         <DifferentiatorsSection />
         <FacilitiesSection />
         <OperationsSection />
-        <BeforeAfterSection />
+        
         <GoogleReviewsSection />
         <ContactCTASection />
       </main>

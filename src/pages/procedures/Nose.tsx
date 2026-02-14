@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import BeforeAfterSection from "@/components/home/BeforeAfterSection";
+
 import ContactCTASection from "@/components/home/ContactCTASection";
 import { useTranslation } from "react-i18next";
 
@@ -153,7 +153,7 @@ const Nose = () => {
           </div>
         </section>
 
-        <BeforeAfterSection />
+        
         <ContactCTASection />
       </main>
       <Footer />
