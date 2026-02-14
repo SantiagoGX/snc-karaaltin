@@ -171,12 +171,6 @@ const NippleAreolaReduction = () => {
               <p className="text-lg text-foreground/80 leading-relaxed">
                 {t('procedurePages.nippleAreola.recoveryText2')}
               </p>
-              <Link to="/gallery">
-                <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-6 text-sm uppercase tracking-widest rounded-md group">
-                  {t('procedurePages.nippleAreola.exploreBreast')}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <img alt={t('procedurePages.common.recoveryHealing')} className="w-full h-[400px] object-cover rounded-lg shadow-lg" src="/lovable-uploads/5e0f196a-c1e8-413e-b4d6-497c440bddae.jpg" />
@@ -184,27 +178,6 @@ const NippleAreolaReduction = () => {
           </div>
         </div>
       </section>
-
-      {/* Before & After CTA */}
-      <section className="section-spacing bg-gray-50">
-        <div className="content-spacing">
-          <div className="text-center max-w-3xl mx-auto space-y-8 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-light uppercase tracking-wide text-foreground">
-              {t('procedurePages.nippleAreola.seeResults')}
-            </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              {t('procedurePages.nippleAreola.seeResultsDesc')}
-            </p>
-            <Link to="/gallery">
-              <Button className="bg-gray-900 text-white hover:bg-gray-800 px-10 py-6 text-sm uppercase tracking-widest rounded-md group">
-                {t('procedurePages.common.beforeAfterCta')}
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <ContactCTASection />
       <Footer />
     </div>

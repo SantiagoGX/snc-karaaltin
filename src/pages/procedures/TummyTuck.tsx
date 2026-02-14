@@ -402,27 +402,6 @@ const TummyTuck = () => {
           </div>
         </div>
       </section>
-
-      {/* 10. BEFORE & AFTER (SIMPLIFIED) */}
-      <section className="section-spacing bg-white">
-        <div className="container mx-auto px-8 max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase text-gray-900 mb-6 animate-fade-in">
-            {t('procedurePages.tummyTuck.resultsTitle')}
-          </h2>
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto animate-fade-in" style={{
-            animationDelay: '0.1s'
-          }}>
-            {t('procedurePages.tummyTuck.resultsText')}
-          </p>
-          <Link to="/gallery" className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-xs uppercase tracking-widest font-light rounded hover:bg-gray-800 transition-all duration-300 button-hover animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            {t('common.viewGallery')}
-            <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
       {/* 11. CTA FINAL — GET STARTED */}
       <ContactCTASection />
       </main>
