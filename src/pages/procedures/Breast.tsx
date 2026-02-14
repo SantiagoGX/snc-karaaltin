@@ -116,7 +116,7 @@ const Breast = () => {
           <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-20 text-center fade-in-up">{t('procedures.breast.anatomyTitle')}</h2>
           <div className="relative min-h-[300px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
             <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <img alt="Breast anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/6f798aee-3b2a-42e6-b2c6-05fbfb0547df.png" />
+              <img alt="Breast anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/68ad2a42-0062-4347-ba6d-9cd37e2e6d97.jpg" />
             </div>
             <div className="hidden md:block absolute top-0 left-0 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.3s' }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">{t('procedures.breast.skinSoftTissue')}</h3>
