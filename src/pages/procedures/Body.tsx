@@ -12,11 +12,11 @@ import { useTranslation } from "react-i18next";
 const Body = () => {
   const { t } = useTranslation();
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", loop: false, skipSnaps: false, dragFree: false });
-  const scrollPrev = useCallback(() => { if (emblaApi) { emblaApi.scrollTo(Math.max(0, emblaApi.selectedScrollSnap() - 3)); } }, [emblaApi]);
-  const scrollNext = useCallback(() => { if (emblaApi) { const s = emblaApi.scrollSnapList().length; emblaApi.scrollTo(Math.min(s - 1, emblaApi.selectedScrollSnap() + 3)); } }, [emblaApi]);
+  const scrollPrev = useCallback(() => {if (emblaApi) {emblaApi.scrollTo(Math.max(0, emblaApi.selectedScrollSnap() - 3));}}, [emblaApi]);
+  const scrollNext = useCallback(() => {if (emblaApi) {const s = emblaApi.scrollSnapList().length;emblaApi.scrollTo(Math.min(s - 1, emblaApi.selectedScrollSnap() + 3));}}, [emblaApi]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const onSelect = useCallback(() => { if (!emblaApi) return; setSelectedIndex(emblaApi.selectedScrollSnap()); }, [emblaApi]);
-  useEffect(() => { if (!emblaApi) return; onSelect(); emblaApi.on("select", onSelect); return () => { emblaApi.off("select", onSelect); }; }, [emblaApi, onSelect]);
+  const onSelect = useCallback(() => {if (!emblaApi) return;setSelectedIndex(emblaApi.selectedScrollSnap());}, [emblaApi]);
+  useEffect(() => {if (!emblaApi) return;onSelect();emblaApi.on("select", onSelect);return () => {emblaApi.off("select", onSelect);};}, [emblaApi, onSelect]);
 
   return <div className="min-h-screen flex flex-col">
       <Header />
@@ -65,7 +65,7 @@ const Body = () => {
 
                 {/* Card 2 - Tummy Tuck */}
                 <Link to="/procedures/body/tummy-tuck" className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_45%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]">
-                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{animationDelay: '0.05s'}}>
+                  <div className="group relative h-[500px] overflow-hidden fade-in" style={{ animationDelay: '0.05s' }}>
                     <img alt={t('procedures.body.carousel.tummyTuck')} className="w-full h-full object-cover transition-all duration-500 group-hover:brightness-110 group-hover:scale-105" src="/lovable-uploads/aef95e97-4b6c-444e-a6f4-a180992d7466.png" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-all duration-500 group-hover:from-black/90 group-hover:via-black/60 pointer-events-none"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
@@ -84,7 +84,7 @@ const Body = () => {
               </div>
             </div>
             <div className="flex justify-center gap-2 mt-8">
-              {Array.from({length: Math.ceil(9 / 4)}).map((_, index) => <button key={index} onClick={() => emblaApi?.scrollTo(index * 4)} className={`h-1 rounded-full transition-all duration-300 ${Math.floor(selectedIndex / 4) === index ? "w-12 bg-gray-900" : "w-8 bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to slide group ${index + 1}`} />)}
+              {Array.from({ length: Math.ceil(9 / 4) }).map((_, index) => <button key={index} onClick={() => emblaApi?.scrollTo(index * 4)} className={`h-1 rounded-full transition-all duration-300 ${Math.floor(selectedIndex / 4) === index ? "w-12 bg-gray-900" : "w-8 bg-gray-300 hover:bg-gray-400"}`} aria-label={`Go to slide group ${index + 1}`} />)}
             </div>
           </div>
         </div>
@@ -107,23 +107,23 @@ const Body = () => {
       <section className="py-20 md:py-32 px-6 md:px-8 lg:px-16 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-serif font-light text-3xl md:text-4xl lg:text-5xl tracking-wide mb-20 text-center fade-in-up">{t('procedures.body.anatomy')}</h2>
-          <div className="relative min-h-[300px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
-            <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="relative min-h-[200px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center">
+            <div className="w-full max-w-md md:max-w-lg aspect-[3/4] fade-in-up" style={{ animationDelay: '0.2s' }}>
               <img alt="Body anatomy illustration" className="w-full h-full object-cover rounded-sm shadow-lg" src="/lovable-uploads/af203118-5e11-448c-935e-52b1f419c7cf.png" />
             </div>
-            <div className="hidden md:block absolute -top-4 -left-4 w-64 md:w-80 space-y-3 fade-in-up" style={{animationDelay: '0.3s'}}>
+            <div className="hidden md:block absolute -top-4 -left-4 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.3s' }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">{t('procedures.body.skinTissue')}</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">{t('procedures.body.skinTissueDesc')}</p>
             </div>
-            <div className="hidden md:block absolute -top-4 -right-4 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{animationDelay: '0.4s'}}>
+            <div className="hidden md:block absolute -top-4 -right-4 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{ animationDelay: '0.4s' }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">{t('procedures.body.fatDistribution')}</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">{t('procedures.body.fatDistributionDesc')}</p>
             </div>
-            <div className="hidden md:block absolute -bottom-4 -left-4 w-64 md:w-80 space-y-3 fade-in-up" style={{animationDelay: '0.5s'}}>
+            <div className="hidden md:block absolute -bottom-4 -left-4 w-64 md:w-80 space-y-3 fade-in-up" style={{ animationDelay: '0.5s' }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">{t('procedures.body.muscleFoundation')}</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">{t('procedures.body.muscleFoundationDesc')}</p>
             </div>
-            <div className="hidden md:block absolute -bottom-4 -right-4 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{animationDelay: '0.6s'}}>
+            <div className="hidden md:block absolute -bottom-4 -right-4 w-64 md:w-80 space-y-3 text-right fade-in-up" style={{ animationDelay: '0.6s' }}>
               <h3 className="font-serif font-semibold text-xl md:text-2xl text-[#0d1f3a]">{t('procedures.body.bodyProportions')}</h3>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">{t('procedures.body.bodyProportionsDesc')}</p>
             </div>
