@@ -29,10 +29,16 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showContactPopup, setShowContactPopup] = useState(false);
   const [selectedProcedureName, setSelectedProcedureName] = useState("");
-  const [selectedLanguage, setSelectedLanguage] = useState({
-    code: 'en',
-    label: 'English',
-    flag: 'EN'
+  const [selectedLanguage, setSelectedLanguage] = useState(() => {
+    const savedCode = localStorage.getItem('i18n-lang') || 'en';
+    const found = [
+      { code: 'en', label: 'English', flag: 'EN' },
+      { code: 'tr', label: 'Türkçe', flag: 'TR' },
+      { code: 'es', label: 'Español', flag: 'ES' },
+      { code: 'zh', label: '中文', flag: '中' },
+      { code: 'ar', label: 'العربية', flag: 'ع' }
+    ].find(l => l.code === savedCode);
+    return found || { code: 'en', label: 'English', flag: 'EN' };
   });
 
   const languages = [
@@ -46,6 +52,7 @@ const Header = () => {
   const handleLanguageChange = (lang: typeof languages[0]) => {
     setSelectedLanguage(lang);
     i18n.changeLanguage(lang.code);
+    localStorage.setItem('i18n-lang', lang.code);
   };
 
   useEffect(() => {
