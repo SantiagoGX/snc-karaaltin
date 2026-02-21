@@ -14,7 +14,8 @@
   "hero": {
     "titlePart1": "世界级",
     "titleMiddle": "伊斯坦布尔整形外科，",
-    "titlePart2": "引领创新"
+    "titlePart2": "引领创新",
+    "partnershipWith": "合作伙伴"
   },
   "aboutDoctor": {
     "welcome": "欢迎来到 Karaaltın 医生诊所",
@@ -133,6 +134,7 @@
     "getDirections": "获取路线",
     "bookNow": "立即预约",
     "copyright": "版权所有。",
+    "healthTourismAuth": "国际健康旅游授权",
     "face": "面部",
     "body": "身体",
     "breast": "胸部",
