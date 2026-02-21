@@ -3,15 +3,28 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon } from "lucide-react";
+import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import contactHeroImage from "@/assets/contact-hero.png";
 import { useTranslation } from "react-i18next";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Contact = () => {
   const { t } = useTranslation();
   const [wantsToSharePhotos, setWantsToSharePhotos] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    height: '',
+    weight: '',
+    areaOfInterest: '',
+    concerns: '',
+  });
   const [files, setFiles] = useState<{
     front?: File;
     side?: File;
@@ -21,6 +34,34 @@ const Contact = () => {
 
   const handleFileChange = (view: keyof typeof files, file: File | undefined) => {
     setFiles(prev => ({ ...prev, [view]: file }));
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast.success(t('contact.successMessage', 'Your consultation request has been sent successfully! We will contact you shortly.'));
+      setFormData({
+        firstName: '', lastName: '', email: '', phone: '',
+        height: '', weight: '', areaOfInterest: '', concerns: '',
+      });
+    } catch (error: any) {
+      console.error('Error sending form:', error);
+      toast.error(t('contact.errorMessage', 'There was an error sending your request. Please try again.'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -132,7 +173,7 @@ const Contact = () => {
                   {t('contact.requiredFields', 'All fields marked with')} <span className="text-red-500">*</span> {t('contact.areRequired', 'are required')}
                 </p>
 
-                <form className="space-y-8">
+                <form className="space-y-8" onSubmit={handleSubmit}>
                   {/* Name Fields */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
@@ -142,6 +183,8 @@ const Contact = () => {
                       <Input
                         placeholder="John"
                         required
+                        value={formData.firstName}
+                        onChange={(e) => handleInputChange('firstName', e.target.value)}
                         className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
@@ -152,6 +195,8 @@ const Contact = () => {
                       <Input
                         placeholder="Doe"
                         required
+                        value={formData.lastName}
+                        onChange={(e) => handleInputChange('lastName', e.target.value)}
                         className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
@@ -167,6 +212,8 @@ const Contact = () => {
                         type="email"
                         placeholder="john.doe@example.com"
                         required
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
                         className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
@@ -178,6 +225,8 @@ const Contact = () => {
                         type="tel"
                         placeholder="+1 (555) 000-0000"
                         required
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
                         className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
@@ -191,6 +240,8 @@ const Contact = () => {
                       </label>
                       <Input
                         placeholder="5'8&quot;"
+                        value={formData.height}
+                        onChange={(e) => handleInputChange('height', e.target.value)}
                         className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
@@ -200,6 +251,8 @@ const Contact = () => {
                       </label>
                       <Input
                         placeholder="150 lbs"
+                        value={formData.weight}
+                        onChange={(e) => handleInputChange('weight', e.target.value)}
                         className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                       />
                     </div>
@@ -213,6 +266,8 @@ const Contact = () => {
                     <Input
                       placeholder={t('contact.selectProcedure')}
                       required
+                      value={formData.areaOfInterest}
+                      onChange={(e) => handleInputChange('areaOfInterest', e.target.value)}
                       className="w-full border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                     />
                   </div>
@@ -226,6 +281,8 @@ const Contact = () => {
                       placeholder={t('contact.concernsPlaceholder')}
                       rows={5}
                       required
+                      value={formData.concerns}
+                      onChange={(e) => handleInputChange('concerns', e.target.value)}
                       className="w-full min-h-[120px] resize-none border-0 border-b border-gray-300 rounded-none px-0 focus:border-gray-900 focus:ring-0"
                     />
                   </div>
@@ -375,10 +432,20 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={isSubmitting}
                     className="w-full bg-gray-900 hover:bg-gray-800 text-white uppercase tracking-widest text-sm py-6 group"
                   >
-                    {t('contact.submitButton')}
-                    <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        {t('contact.sending', 'Sending...')}
+                      </>
+                    ) : (
+                      <>
+                        {t('contact.submitButton')}
+                        <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
