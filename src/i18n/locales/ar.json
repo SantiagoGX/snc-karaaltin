@@ -14,7 +14,8 @@
   "hero": {
     "titlePart1": "جراحة تجميلية",
     "titleMiddle": "عالمية المستوى في إسطنبول،",
-    "titlePart2": "بقيادة الابتكار"
+    "titlePart2": "بقيادة الابتكار",
+    "partnershipWith": "بالشراكة مع"
   },
   "aboutDoctor": {
     "welcome": "مرحباً بكم في عيادة الدكتور كاراالتين",
@@ -133,6 +134,7 @@
     "getDirections": "احصل على الاتجاهات",
     "bookNow": "احجز الآن",
     "copyright": "جميع الحقوق محفوظة.",
+    "healthTourismAuth": "ترخيص السياحة الصحية الدولية",
     "face": "الوجه",
     "body": "الجسم",
     "breast": "الثدي",

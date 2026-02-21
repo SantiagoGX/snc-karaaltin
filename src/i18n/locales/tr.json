@@ -14,7 +14,8 @@
   "hero": {
     "titlePart1": "Dünya Standartlarında",
     "titleMiddle": "İstanbul'da Plastik Cerrahi,",
-    "titlePart2": "Yenilikçilikle Lider"
+    "titlePart2": "Yenilikçilikle Lider",
+    "partnershipWith": "İş Ortaklığıyla"
   },
   "aboutDoctor": {
     "welcome": "Dr. Karaaltın Kliniğine Hoş Geldiniz",
@@ -133,6 +134,7 @@
     "getDirections": "Yol Tarifi Al",
     "bookNow": "Randevu Al",
     "copyright": "Tüm hakları saklıdır.",
+    "healthTourismAuth": "Uluslararası Sağlık Turizmi Yetki Belgesi",
     "face": "Yüz",
     "body": "Vücut",
     "breast": "Meme",

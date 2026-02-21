@@ -14,7 +14,8 @@
   "hero": {
     "titlePart1": "Cirugía Plástica",
     "titleMiddle": "de Clase Mundial en Estambul,",
-    "titlePart2": "Liderada por la Innovación"
+    "titlePart2": "Liderada por la Innovación",
+    "partnershipWith": "En Colaboración Con"
   },
   "aboutDoctor": {
     "welcome": "Bienvenido a la Clínica del Dr. Karaaltın",
@@ -133,6 +134,7 @@
     "getDirections": "Cómo Llegar",
     "bookNow": "Reservar",
     "copyright": "Todos los derechos reservados.",
+    "healthTourismAuth": "Autorización Internacional de Turismo de Salud",
     "face": "Rostro",
     "body": "Cuerpo",
     "breast": "Pecho",

@@ -239,7 +239,7 @@ const Footer = () => {
               className="h-20 lg:h-28 w-auto rounded shadow-md group-hover:shadow-lg transition-shadow"
             />
             <span className="text-xs text-gray-600 group-hover:text-gray-900 transition-colors">
-              International Health Tourism Authorization
+              {t('footer.healthTourismAuth')}
             </span>
           </a>
         </div>

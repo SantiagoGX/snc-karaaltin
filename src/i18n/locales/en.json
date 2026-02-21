@@ -14,7 +14,8 @@
   "hero": {
     "titlePart1": "World-Class",
     "titleMiddle": "Plastic Surgery in Istanbul,",
-    "titlePart2": "Led by Innovation"
+    "titlePart2": "Led by Innovation",
+    "partnershipWith": "In Partnership With"
   },
   "aboutDoctor": {
     "welcome": "Welcome to Dr. Karaaltın's Clinic",
@@ -133,6 +134,7 @@
     "getDirections": "Get Directions",
     "bookNow": "Book Now",
     "copyright": "All rights reserved.",
+    "healthTourismAuth": "International Health Tourism Authorization",
     "face": "Face",
     "body": "Body",
     "breast": "Breast",
