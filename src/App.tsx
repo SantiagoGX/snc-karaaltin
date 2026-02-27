@@ -41,12 +41,14 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const appBasename = (import.meta.env.VITE_APP_BASENAME as string | undefined) || "/";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={appBasename}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />

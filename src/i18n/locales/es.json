@@ -2,7 +2,6 @@
   "nav": {
     "about": "Nosotros",
     "procedures": "Procedimientos",
-    "beforeAfters": "Antes y Después",
     "contact": "Contacto",
     "patientJourney": "Tu Viaje",
     "learnSurgery": "¿Quieres Aprender Cirugía?",
@@ -20,7 +19,7 @@
   "aboutDoctor": {
     "welcome": "Bienvenido a la Clínica del Dr. Karaaltın",
     "title": "Conócenos",
-    "description": "El Dr. KARAALTIN, padre de gemelos y esposo de una exitosa esposa (Vicedecana de la Facultad de Medicina de la Universidad Cerrapasa), nació en 1972 en Kirkuk, Irak, de ascendencia turca. Su familia se mudó a los Estados Unidos de América cuando tenía solo seis meses de edad. Entre 1976 y 1988, el Dr. Karaaltin completó su educación primaria y secundaria tanto en West Lafayette, Indiana como en Orange County, Los Ángeles."
+    "description": "El Dr. KARAALTIN, padre de gemelos y esposo de una exitosa esposa (Vicedecana de la Facultad de Medicina de la Universidad Cerrahpasa), nació en 1972 en Kirkuk, Irak, de ascendencia turca. Su familia se mudó a los Estados Unidos de América cuando tenía solo seis meses de edad. Entre 1976 y 1988, el Dr. Karaaltin completó su educación primaria y secundaria tanto en West Lafayette, Indiana como en Orange County, Los Ángeles."
   },
   "signatureProcedures": {
     "title": "Procedimientos Exclusivos",
@@ -109,11 +108,6 @@
       "vibrasatPro": "Tecnología Vibrasat Pro"
     }
   },
-  "beforeAfter": {
-    "title1": "ANTES Y",
-    "title2": "DESPUÉS",
-    "view": "VER"
-  },
   "reviews": {
     "title": "EXPERIENCIAS REALES DE PACIENTES",
     "leaveReview": "Dejar una Reseña en Google"
@@ -143,7 +137,7 @@
     "about": "Nosotros",
     "contact": "Contacto",
     "learnSurgery": "¿Quieres aprender cirugía?",
-    "beforeAfters": "Antes y Después"
+    "emailPlaceholder": "Correo electrónico"
   },
   "about": {
     "heroSubtitle": "PROFESOR • CIRUJANO • INNOVADOR",
@@ -259,19 +253,36 @@
     "qlDoctorCards": {
       "clinicalLeadership": {
         "title": "Liderazgo Clínico",
-        "points": ["Selección de casos", "Planificación preoperatoria", "Elección de implantes", "Seguimiento a largo plazo"]
+        "points": [
+          "Selección de casos",
+          "Planificación preoperatoria",
+          "Elección de implantes",
+          "Seguimiento a largo plazo"
+        ]
       },
       "techniqueStandardization": {
         "title": "Estandarización de Técnicas",
-        "points": ["Zonas de seguridad", "Principios de fijación", "Estructura de documentación"]
+        "points": [
+          "Zonas de seguridad",
+          "Principios de fijación",
+          "Estructura de documentación"
+        ]
       },
       "outcomeTracking": {
         "title": "Seguimiento de Resultados",
-        "points": ["Fotografía", "Resultados reportados por pacientes", "Mejora basada en auditoría"]
+        "points": [
+          "Fotografía",
+          "Resultados reportados por pacientes",
+          "Mejora basada en auditoría"
+        ]
       },
       "educationProctorship": {
         "title": "Educación y Mentoría",
-        "points": ["Mentoría en laboratorio de cadáveres", "Mentoría en quirófano", "Entrenamiento internacional"]
+        "points": [
+          "Mentoría en laboratorio de cadáveres",
+          "Mentoría en quirófano",
+          "Entrenamiento internacional"
+        ]
       }
     },
     "whyEndochorTitle": "¿Por qué Endochor® en Cirugía Facial?",
@@ -286,32 +297,62 @@
       "foreheadLift": {
         "title": "Levantamiento Endoscópico de Frente y Cejas",
         "badge": "Módulo 1",
-        "points": ["Disección subperióstica", "Liberación de la línea de fusión temporal", "Alternativas de fijación Endotine", "Calibración de simetría de cejas"]
+        "points": [
+          "Disección subperióstica",
+          "Liberación de la línea de fusión temporal",
+          "Alternativas de fijación Endotine",
+          "Calibración de simetría de cejas"
+        ]
       },
       "midFaceLift": {
         "title": "Levantamiento Endoscópico del Tercio Medio",
         "badge": "Módulo 2",
-        "points": ["Elevación subperióstica del tercio medio", "Reposicionamiento de la almohadilla grasa malar", "Integración periorbital", "Optimización de vectores"]
+        "points": [
+          "Elevación subperióstica del tercio medio",
+          "Reposicionamiento de la almohadilla grasa malar",
+          "Integración periorbital",
+          "Optimización de vectores"
+        ]
       },
       "ribbonNeck": {
         "title": "Implante Ribbon y Rejuvenecimiento de Cuello",
         "badge": "Módulo 3",
-        "points": ["Diseño y colocación de ribbon PCL", "Corrección de bandas platismales", "Definición del ángulo cervicomental", "Contorno combinado cuello-mandíbula"]
+        "points": [
+          "Diseño y colocación de ribbon PCL",
+          "Corrección de bandas platismales",
+          "Definición del ángulo cervicomental",
+          "Contorno combinado cuello-mandíbula"
+        ]
       },
       "transblepharoplasty": {
         "title": "Levantamiento de Cejas Trans-Blefaroplastia",
         "badge": "Módulo 4",
-        "points": ["Abordaje por párpado superior", "Rejuvenecimiento periorbital", "Técnica de cicatriz mínima", "Combinado con blefaroplastia"]
+        "points": [
+          "Abordaje por párpado superior",
+          "Rejuvenecimiento periorbital",
+          "Técnica de cicatriz mínima",
+          "Combinado con blefaroplastia"
+        ]
       },
       "doubleDouble": {
         "title": "La Técnica Doble-Doble",
         "badge": "Módulo 5",
-        "points": ["Avance SMAS de doble vector", "Integración de plano profundo", "Rejuvenecimiento facial integral", "Opciones de refuerzo con malla"]
+        "points": [
+          "Avance SMAS de doble vector",
+          "Integración de plano profundo",
+          "Rejuvenecimiento facial integral",
+          "Opciones de refuerzo con malla"
+        ]
       },
       "integration": {
         "title": "Vía de Integración Completa",
         "badge": "Módulo 6",
-        "points": ["Combinación de todos los módulos", "Diseño de protocolo específico por caso", "Manejo de complicaciones", "Estrategias de seguimiento a largo plazo"]
+        "points": [
+          "Combinación de todos los módulos",
+          "Diseño de protocolo específico por caso",
+          "Manejo de complicaciones",
+          "Estrategias de seguimiento a largo plazo"
+        ]
       }
     },
     "viewDetails": "Ver Detalles",
@@ -326,10 +367,26 @@
     },
     "courseFormatsTitle": "Formatos del Curso",
     "courseFormats": {
-      "essentials": { "title": "Esenciales", "duration": "1 Día", "description": "Conferencias + laboratorio de simulación" },
-      "coreSkills": { "title": "Habilidades Básicas", "duration": "2 Días", "description": "Laboratorio de cadáveres + demostración en vivo" },
-      "masterclass": { "title": "Masterclass", "duration": "3 Días", "description": "Laboratorio de cadáveres + mentoría en quirófano" },
-      "proctorship": { "title": "Mentoría en Sitio", "duration": "Personalizado", "description": "Mentoría en la clínica del participante" }
+      "essentials": {
+        "title": "Esenciales",
+        "duration": "1 Día",
+        "description": "Conferencias + laboratorio de simulación"
+      },
+      "coreSkills": {
+        "title": "Habilidades Básicas",
+        "duration": "2 Días",
+        "description": "Laboratorio de cadáveres + demostración en vivo"
+      },
+      "masterclass": {
+        "title": "Masterclass",
+        "duration": "3 Días",
+        "description": "Laboratorio de cadáveres + mentoría en quirófano"
+      },
+      "proctorship": {
+        "title": "Mentoría en Sitio",
+        "duration": "Personalizado",
+        "description": "Mentoría en la clínica del participante"
+      }
     },
     "pricingTitle": "Programa de Entrenamiento Práctico",
     "individualProcedures": "Procedimientos Individuales Exclusivos",
@@ -439,10 +496,12 @@
     "back": "Volver",
     "allProcedures": "Todos los Procedimientos",
     "bookConsultation": "Reservar Consulta",
-    "viewGallery": "Ver Galería Antes y Después",
     "returnHome": "Volver al Inicio",
     "consultation": "Consulta",
-    "followUp": "Seguimiento"
+    "followUp": "Seguimiento",
+    "bookNow": "Reservar Ahora",
+    "noPageOverlayText": "Para saber más sobre este procedimiento, agenda una consulta con el Dr. Karaaltın.",
+    "noPageContactButton": "Contactar al Dr. Karaaltın"
   },
   "notFound": {
     "title": "404",
@@ -619,7 +678,7 @@
       "skinEnvelope": "Envoltura Cutánea",
       "skinEnvelopeDesc": "La piel cubre las estructuras subyacentes y pierde elasticidad con la edad, requiriendo eliminación o reposicionamiento preciso.",
       "carousel": {
-        "kFaceLift": "The K Face Lift",
+        "kFaceLift": "El K Face Lift",
         "kFaceLiftDesc": "Lifting facial dinámico multivectorial para un rejuvenecimiento natural y duradero.",
         "kEndoscopic": "Lifting Facial Endoscópico del Dr. K",
         "kEndoscopicDesc": "Lifting endoscópico sin cicatrices que eleva cejas, tercio medio, papada y cuello a través de incisiones ocultas.",
@@ -822,22 +881,6 @@
       "smartTemplateDesc": "Método exclusivo diseñado por el Dr. Karaaltin utilizando plantillas anatómicas avanzadas para optimizar proyección, simetría y soporte nasal a largo plazo."
     }
   },
-  "gallery": {
-    "title": "Galería Antes y Después",
-    "heroSubtitle": "Explora transformaciones reales de pacientes que demuestran la experiencia del Dr. Karaaltin en cirugía estética",
-    "subtitle": "Explora resultados reales de pacientes del Profesor Dr. Karaaltın",
-    "filterBy": "Filtrar por",
-    "allCategories": "Todas las Categorías",
-    "allProcedures": "Todos los Procedimientos",
-    "clickToEnlarge": "Clic para ver en pantalla completa",
-    "noResults": "No se encontraron resultados",
-    "selectProcedure": "Selecciona un Procedimiento",
-    "selectProcedureDesc": "Elige cualquier procedimiento del menú izquierdo para ver transformaciones antes y después",
-    "faceProcedures": "Procedimientos Faciales",
-    "noseProcedures": "Procedimientos Nasales",
-    "breastProcedures": "Procedimientos de Senos",
-    "bodyProcedures": "Procedimientos Corporales"
-  },
   "timeline": {
     "sectionTitle": "Cronología de Logros Destacados",
     "legacyTitle": "Legado de Excelencia",
@@ -846,37 +889,37 @@
     "milestone1": {
       "date": "Febrero 2012",
       "title": "Tercer Trasplante Facial Completo del Mundo y Primer Trasplante Cuádruple de Extremidades",
-      "description": "Como miembro principal del equipo quirúrgico en la Universidad Hacettepe, Ankara, el Dr. Karaaltin participó en dos procedimientos históricos: el tercer trasplante facial completo del mundo y el primer trasplante cuádruple de extremidades."
+      "description": "Como miembro del equipo quirúrgico central en la Universidad Hacettepe, Ankara, el Dr. Karaaltin participó en dos procedimientos históricos: El tercer trasplante facial completo del mundo y el primer trasplante cuádruple de extremidades."
     },
     "milestone2": {
       "date": "Marzo 2014",
       "title": "Innovación en Cirugía de Parálisis Facial",
-      "description": "El Dr. Karaaltin fue pionero y popularizó la técnica de Transferencia Muscular Funcional del Extensor Corto de los Dedos y del Extensor Corto del Hallux, ofreciendo una solución dinámica y natural para la restauración de la sonrisa en pacientes con parálisis facial."
+      "description": "El Dr. Karaaltin fue pionero y popularizó la técnica de Transferencia Funcional de Músculo Extensor Digitorum Brevis y Extensor Hallucis Brevis Libre, ofreciendo una solución dinámica y natural para la restauración de la sonrisa en pacientes con parálisis facial."
     },
     "milestone3": {
       "date": "Abril 2015",
-      "title": "Tratamiento Salvador de Vida del 'Hombre Milagro' Adem Kılıç",
-      "description": "El Dr. Karaaltin lideró los complejos esfuerzos reconstructivos que salvaron la vida de un hombre con más del 75% de superficie corporal total quemada, ampliamente considerado como un caso casi imposible en la medicina moderna."
+      "title": "Tratamiento que Salvó la Vida del 'Hombre Milagro' Adem Kılıç",
+      "description": "El Dr. Karaaltin lideró los esfuerzos reconstructivos complejos que salvaron la vida de un hombre con más del 75% de superficie corporal total quemada, ampliamente considerado como un caso casi imposible en la medicina moderna."
     },
     "milestone4": {
       "date": "Junio 2017",
-      "title": "Premio al Mejor Artículo Científico en Cirugía Plástica",
+      "title": "Premiado con el Mejor Artículo Científico en Cirugía Plástica",
       "description": "La contribución original del Dr. Karaaltin a la cirugía reconstructiva recibió la distinción de Mejor Artículo Científico del Mes en una revista de cirugía plástica reconocida internacionalmente."
     },
     "milestone5": {
       "date": "Septiembre 2017",
-      "title": "Popularización de la Transferencia de Ganglios Linfáticos Vascularizados Multinivel",
-      "description": "En un caso pediátrico notable, el Dr. Karaaltin introdujo y realizó una transferencia bilateral de ganglios linfáticos vascularizados de seis niveles para linfedema en una paciente rumana de 14 años, estableciendo un precedente en el campo."
+      "title": "Transferencia de Ganglios Linfáticos Vascularizados Multinivel Popularizada",
+      "description": "En un notable caso pediátrico, el Dr. Karaaltin introdujo y realizó transferencia bilateral de ganglios linfáticos vascularizados de seis niveles para linfedema en un paciente rumano de 14 años, sentando precedente en el campo."
     },
     "milestone6": {
       "date": "Junio 2022",
       "title": "Cirugía Pionera de Separación de Gemelos Siameses",
-      "description": "El Dr. Karaaltin lideró con éxito la compleja cirugía de separación de gemelos siameses, demostrando una experiencia quirúrgica excepcional y un cuidado postoperatorio compasivo que resultó en que ambos niños prosperaran de forma independiente."
+      "description": "El Dr. Karaaltin lideró exitosamente la compleja cirugía de separación de gemelos siameses, demostrando una experiencia quirúrgica excepcional y un cuidado postoperatorio compasivo que resultó en que ambos niños prosperaran de forma independiente."
     },
     "milestone7": {
       "date": "Mayo 2023",
       "title": "Premio CAPLAN por Excelencia en Cirugía Linfática",
-      "description": "Recibió el prestigioso Primer Premio CAPLAN en el 47º Congreso de la Sociedad Europea de Linfología por su trabajo innovador en 'Transferencias de Ganglios Linfáticos Vascularizados Multinivel', consolidando su posición como líder global en microcirugía linfática."
+      "description": "Galardonado con el prestigioso Primer Premio CAPLAN en el 47º Congreso de la Sociedad Europea de Linfología por su trabajo pionero en 'Transferencias de Ganglios Linfáticos Vascularizados Multinivel', consolidando su posición como líder global en microcirugía linfática."
     }
   },
   "procedurePages": {
@@ -888,7 +931,6 @@
       "recoveryHealing": "Recuperación y Sanación",
       "idealCandidates": "Candidatos Ideales",
       "scarExpectations": "Expectativas de Cicatrices",
-      "beforeAfterCta": "Ver Galería Antes y Después",
       "bookConsultation": "Reservar Consulta",
       "bookNow": "Reservar Ahora",
       "consultation": "Consulta",
@@ -939,13 +981,23 @@
       "candidate4Title": "Resultados Naturales",
       "candidate4Desc": "Buscando contornos suaves y equilibrados",
       "candidate5Title": "Recuperación Rápida",
-      "candidate5Desc": "De vuelta a la rutina en 24-48 horas",
-      "galleryCta": "Explora resultados de aumento natural"
+      "candidate5Desc": "De vuelta a la rutina en 24-48 horas"
     },
     "twirlBra": {
       "title": "Técnica Twirl Internal Bra™",
       "subtitle": "Elevación Duradera, Soporte Natural — Sin Implantes",
-      "intro": "La Técnica Twirl Internal Bra™, innovada por el Profesor Dr. Karaaltin, es un enfoque revolucionario para levantar y remodelar el seno."
+      "intro": "La Técnica Twirl Internal Bra™, innovada por el Profesor Dr. Karaaltin, es un enfoque revolucionario para levantar y remodelar el seno.",
+      "overviewTitle": "Twirl Internal Bra",
+      "card1Title": "Qué lo hace diferente",
+      "card1Text": "Utiliza tejido autólogo para crear un “sujetador biológico” desde el interior, proporcionando elevación y soporte sin materiales extraños.",
+      "card2Title": "Resultados duraderos",
+      "card2Text": "La estructura interna de soporte mantiene la forma y la posición del pecho durante años.",
+      "card3Title": "Sensación y movimiento naturales",
+      "card3Text": "Da como resultado pechos que se ven y se sienten completamente naturales.",
+      "card4Title": "Cicatrices mínimas",
+      "card4Text": "La colocación estratégica de las incisiones garantiza que las cicatrices queden bien ocultas.",
+      "card5Title": "Ideal para casos de revisión",
+      "card5Text": "Perfecto para pacientes que buscan alternativas a soluciones basadas en implantes."
     },
     "twirl": {
       "title": "Twirl Internal Bra™",
@@ -986,8 +1038,7 @@
       "candidate3Title": "Candidatas a Revisión",
       "candidate3Desc": "Pacientes que buscan soluciones después de cirugías previas",
       "candidate4Title": "Resultados a Largo Plazo",
-      "candidate4Desc": "Quienes priorizan resultados duraderos y naturales",
-      "galleryCta": "Explora transformaciones de levantamiento mamario natural"
+      "candidate4Desc": "Quienes priorizan resultados duraderos y naturales"
     },
     "smartbra": {
       "title": "Bioandamio Smart BRA",
@@ -1028,8 +1079,7 @@
       "candidate3Title": "Reducciones Grandes",
       "candidate3Desc": "Pacientes sometidas a eliminación significativa de tejido",
       "candidate4Title": "Resultados Duraderos",
-      "candidate4Desc": "Buscando mantenimiento a largo plazo de forma y posición",
-      "galleryCta": "Explora transformaciones de cirugía mamaria"
+      "candidate4Desc": "Buscando mantenimiento a largo plazo de forma y posición"
     },
     "vibrasat": {
       "title": "Tecnología Vibrasat Pro™",
@@ -1073,8 +1123,7 @@
       "candidate3Title": "Transferencia de Grasa",
       "candidate3Desc": "Requiriendo injerto de grasa para cualquier propósito",
       "candidate4Title": "Resultados Óptimos",
-      "candidate4Desc": "Priorizando supervivencia de grasa y resultados naturales",
-      "galleryCta": "Explora transformaciones de contorno corporal"
+      "candidate4Desc": "Priorizando supervivencia de grasa y resultados naturales"
     },
     "smartTemplate": {
       "title": "Rinoplastia con Plantilla Inteligente",
@@ -1119,8 +1168,7 @@
       "candidate3Desc": "Piel delgada o cartílago débil",
       "candidate4Title": "Estabilidad a Largo Plazo",
       "candidate4Desc": "Priorizando resultados duraderos",
-      "scarText": "La técnica de Plantilla Inteligente utiliza enfoques cerrados o semi-abiertos cuando es posible, minimizando las cicatrices visibles. Cualquier incisión externa se coloca en el pliegue de la columela, volviéndose virtualmente invisible a medida que cicatriza.",
-      "galleryCta": "Explora transformaciones de Rinoplastia con Plantilla Inteligente"
+      "scarText": "La técnica de Plantilla Inteligente utiliza enfoques cerrados o semi-abiertos cuando es posible, minimizando las cicatrices visibles. Cualquier incisión externa se coloca en el pliegue de la columela, volviéndose virtualmente invisible a medida que cicatriza."
     },
     "endochorFaceLift": {
       "title": "El Lifting Facial Endochor®",
@@ -1176,82 +1224,87 @@
       "candidate4Desc": "Pacientes que buscan resultados naturales con tiempo de inactividad mínimo.",
       "scarTitle": "Incisiones Ocultas",
       "scarSubtitle": "Cicatrización Mínima",
-      "scarText": "Las incisiones se colocan dentro del cuero cabelludo y en pliegues naturales, volviéndose virtualmente invisibles al cicatrizar.",
-      "galleryTitle": "Resultados Reales",
-      "galleryCta": "Explore los resultados transformadores del Lifting Facial Endochor®."
+      "scarText": "Las incisiones se colocan dentro del cuero cabelludo y en pliegues naturales, volviéndose virtualmente invisibles al cicatrizar."
     },
     "advancedSafeBBL": {
-      "title": "BBL Seguro Avanzado™",
-      "subtitle": "Escultura Corporal Basada en Ciencia",
-      "intro": "El BBL Seguro Avanzado™ es un sistema integral de gluteoplastia con grasa diseñado por el Prof. Dr. Karaaltin. Combina monitoreo por ultrasonido en tiempo real, mapeo Doppler vascular, tecnología de inyección controlada de grasa e injerto enriquecido con células madre para ofrecer resultados seguros, naturales y duraderos.",
-      "overviewTitle": "BBL Seguro Avanzado™",
-      "overview": "Descripción General",
-      "card1Title": "01 // Qué Es el BBL Seguro Avanzado™",
-      "card1Text": "El BBL Seguro Avanzado™ es un sistema integral de gluteoplastia con grasa diseñado para maximizar la seguridad y precisión. Utiliza monitoreo por ultrasonido en tiempo real, Doppler vascular, inyección de grasa controlada y tecnología enriquecida con células madre para resultados consistentes y duraderos.",
-      "card2Title": "02 // Monitoreo de Seguridad por Ultrasonido en Tiempo Real",
-      "card2Text": "La inyección se realiza exclusivamente por encima del músculo, verificada en tiempo real mediante tecnología Clarius AI™ inalámbrica. Esto elimina el riesgo de inyecciones profundas cerca de los vasos glúteos principales.",
-      "card3Title": "03 // Mapeo Doppler Vascular",
-      "card3Text": "Antes y durante la cirugía, todos los perforadores vasculares relevantes se mapean para evitar vasos críticos. Esto guía trayectorias seguras para la grasa, reduciendo el riesgo de trauma.",
-      "card4Title": "04 // Inyección de Grasa Controlada (Liposat™ + Vibrosat Pro™)",
-      "card4Text": "El sistema dual Vibrosat Pro™ + Liposat Pump™ permite la expansión mecánica uniforme del tejido e inyección controlada en ml/min.",
+      "candidate1Title": "Mejora de Glúteos",
+      "candidate1Desc": "Desea contorno glúteo mejorado",
+      "candidate2Title": "Grasa Disponible",
+      "candidate2Desc": "Suficientes reservas de grasa donante",
+      "candidate3Title": "Prioridad de Seguridad",
+      "candidate3Desc": "Valora técnicas de seguridad avanzadas",
+      "candidate4Title": "Expectativas Realistas",
+      "candidate4Desc": "Pacientes con expectativas realistas sobre resultados",
+      "ctaTitle": "Ver Los Resultados",
+      "ctaText": "Vea transformaciones reales de pacientes logradas con la técnica Advanced Safe BBL™.",
+      "bookNow": "Reservar Ahora",
+      "bookConsultation": "Reservar Consulta",
+      "title": "Advanced Safe BBL™",
+      "subtitle": "Esculpido corporal basado en la ciencia",
+      "intro": "Advanced Safe BBL™ es un sistema integral de gluteoplastia con grasa diseñado por el Prof. Dr. Karaaltin. Combina monitorización por ultrasonido en tiempo real, mapeo Doppler vascular, tecnología de inyección controlada de grasa e injerto enriquecido con células madre para lograr resultados seguros, naturales y duraderos.",
+      "overviewTitle": "Advanced Safe BBL™",
+      "overview": "Resumen",
+      "card1Title": "01 // Qué es el Advanced Safe BBL™",
+      "card1Text": "Advanced Safe BBL™ es un sistema integral de gluteoplastia con grasa diseñado para maximizar la seguridad y la precisión. Utiliza monitorización por ultrasonido en tiempo real, Doppler vascular, inyección controlada de grasa y tecnología enriquecida con células madre para resultados consistentes y duraderos.",
+      "card2Title": "02 // Monitorización de seguridad por ultrasonido en tiempo real",
+      "card2Text": "La inyección se realiza exclusivamente por encima del músculo, verificada en tiempo real con tecnología inalámbrica Clarius AI™. Esto elimina el riesgo de inyecciones profundas cerca de los principales vasos glúteos y evita por completo la técnica \"a ciegas\".",
+      "card3Title": "03 // Mapeo Doppler vascular",
+      "card3Text": "Antes y durante la cirugía, se mapean todos los perforantes vasculares relevantes para evitar vasos críticos. Esto guía trayectorias seguras para la grasa, reduce el riesgo de trauma y mejora la supervivencia del injerto.",
+      "card4Title": "04 // Inyección de grasa controlada (Liposat™ + Vibrosat Pro™)",
+      "card4Text": "El sistema dual Vibrosat Pro™ + Liposat Pump™ permite una expansión mecánica uniforme del tejido y una inyección controlada en ml/min.",
       "card4Benefits": "Beneficios:",
       "card4Benefit1": "Distribución homogénea",
       "card4Benefit2": "Menor presión",
       "card4Benefit3": "Menos trauma tisular",
       "card4Benefit4": "Mejor integración del injerto",
-      "card5Title": "05 // Injerto de Grasa Enriquecido con Células Madre",
-      "card5Text": "Usando tecnología Stempia™, el injerto combina macro y micro grasa con células madre derivadas de grasa, aumentando la vascularidad, mejorando la supervivencia del injerto y generando un resultado más suave, natural y estable.",
-      "card6Title": "06 // Seguridad Comprobada por Auditoría",
+      "card5Title": "05 // Injerto de grasa enriquecido con células madre",
+      "card5Text": "Con tecnología Stempia™, el injerto combina grasa macro y micro con células madre derivadas de la grasa, aumentando la vascularidad, mejorando la supervivencia del injerto y generando un resultado más suave, natural y estable.",
+      "card6Title": "06 // Seguridad comprobada por auditoría",
       "card6Text": "En 543 pacientes, el uso del protocolo completo redujo las complicaciones mayores en más del 90%:",
       "card6Item1": "0 casos de embolia grasa",
       "card6Item2": "0 neumonía lipoidea",
       "card6Item3": "Seromas drásticamente reducidos",
       "card6Item4": "Menos dolor postoperatorio",
       "card6Item5": "Menor incidencia de necrosis grasa",
-      "featuredTitle": "BBL Seguro Avanzado™ Con Dr. Karaaltin",
-      "featuredText": "El BBL Seguro Avanzado™ no es solo un procedimiento estético: es un sistema quirúrgico basado en ciencia, anatomía avanzada y tecnología de monitoreo continuo. Diseñado por el Prof. Dr. Karaaltin, este método redefine el estándar moderno de aumento glúteo seguro.",
-      "detailsTitle": "Detalles del Procedimiento",
-      "protocolTitle": "Cómo Funciona el Protocolo",
+      "featuredTitle": "Advanced Safe BBL™ con el Dr. Karaaltin",
+      "featuredText": "Advanced Safe BBL™ no es solo un procedimiento estético: es un sistema quirúrgico basado en ciencia, anatomía avanzada y tecnología de monitorización continua. Diseñado por el Prof. Dr. Karaaltin —pionero en cirugía reconstructiva y microquirúrgica— este método redefine el estándar moderno de aumento glúteo seguro, logrando curvas suaves, proporciones naturales y resultados que respetan la integridad vascular.",
+      "detailsTitle": "Detalles del procedimiento",
+      "protocolTitle": "Cómo funciona el protocolo",
       "protocolIntro": "El protocolo combina cuatro pilares:",
       "protocol1": "Ultrasonido en tiempo real: asegura el plano seguro.",
       "protocol2": "Inyección controlada: flujo preciso, sin picos de presión.",
       "protocol3": "Mapeo Doppler: evita vasos críticos.",
       "protocol4": "Grasa enriquecida con células madre: mejor integración y proyección.",
-      "spongeTitle": "El Experimento de Esponja Karaaltin™",
-      "spongeText": "En un estudio comparativo con cinco tecnologías líderes, Vibrosat Pro™ + Liposat Pump™ produjo la dispersión más uniforme, sin zonas muertas ni daño tisular.",
-      "revisionsTitle": "Revisiones Complejas — Injerto de Grasa Macro/Micro",
-      "revisionsText": "Para casos de fibrosis o fallos previos de BBL, la técnica de células de grasa macro/micro inventada por el Dr. Karaaltin permite la corrección de deformidades de contorno en una o dos sesiones.",
-      "journeyTitle": "Su Viaje Quirúrgico",
+      "spongeTitle": "El Experimento de la Esponja Karaaltin™",
+      "spongeText": "En un estudio comparativo con cinco tecnologías líderes, Vibrosat Pro™ + Liposat Pump™ produjo la dispersión más uniforme, sin zonas muertas ni daño tisular. Esta evidencia respalda la superioridad biomecánica del sistema.",
+      "revisionsTitle": "Revisiones complejas — injerto graso macro/micro",
+      "revisionsText": "En casos de fibrosis o fallas previas de BBL, la técnica macro/micro de células grasas inventada por el Dr. Karaaltin permite corregir deformidades del contorno en una o dos sesiones, usando capas precisas de injerto enriquecido.",
+      "journeyTitle": "Tu recorrido quirúrgico",
       "journey1Title": "Consulta",
       "journey1Desc": "Análisis 3D, evaluación anatómica y definición de proporciones.",
-      "journey2Title": "Mapeo Preoperatorio",
-      "journey2Desc": "Doppler + planificación de vectores de proyección.",
-      "journey3Title": "Día de Cirugía",
+      "journey2Title": "Mapeo preoperatorio",
+      "journey2Desc": "Doppler + planificación del vector de proyección.",
+      "journey3Title": "Día de cirugía",
       "journey3Desc": "Extracción, purificación, enriquecimiento y reinyección guiada por ultrasonido.",
-      "journey4Title": "Postoperatorio Inmediato",
-      "journey4Desc": "Compresión especializada y monitoreo temprano.",
+      "journey4Title": "Postoperatorio inmediato",
+      "journey4Desc": "Compresión especializada y monitorización temprana.",
       "journey5Title": "Seguimiento",
-      "journey5Desc": "Revisiones críticas durante los primeros 10 días para máxima seguridad.",
-      "recoveryTitle": "Recuperación y Sanación",
-      "recoveryText": "El proceso de recuperación está optimizado para maximizar la supervivencia del injerto y la comodidad del paciente.",
-      "recoveryItem1": "Primera semana: prenda de compresión, reposo, masaje linfático",
-      "recoveryItem2": "Semana 2-4: actividad ligera; evitar sentarse directamente",
-      "recoveryItem3": "Semana 4-6: regreso gradual al trabajo y ejercicio",
+      "journey5Desc": "Controles críticos durante los primeros 10 días para máxima seguridad.",
+      "recoveryTitle": "Recuperación y cicatrización",
+      "recoveryText": "El proceso de recuperación está optimizado para maximizar la supervivencia del injerto y la comodidad del paciente. Siguiendo nuestro protocolo Advanced Safe BBL™, los pacientes experimentan un retorno bien estructurado a sus actividades normales.",
+      "recoveryItem1": "Primera semana: faja compresiva, reposo, masaje linfático",
+      "recoveryItem2": "Semanas 2–4: actividad ligera; evitar sentarse directamente",
+      "recoveryItem3": "Semanas 4–6: retorno gradual al trabajo y ejercicio",
       "recoveryItem4": "Mes 3: evaluación final del contorno",
-      "candidatesTitle": "Candidatos Ideales",
-      "candidate1Title": "Reservas de Grasa Adecuadas",
-      "candidate1Desc": "Pacientes con reservas de grasa adecuadas para injerto",
-      "candidate2Title": "Peso Estable",
-      "candidate2Desc": "Personas en o cerca de un peso estable",
-      "candidate3Title": "Buena Salud",
-      "candidate3Desc": "No fumadores en buen estado de salud general",
-      "candidate4Title": "Expectativas Realistas",
-      "candidate4Desc": "Pacientes con expectativas realistas sobre los resultados",
-      "ctaTitle": "Vea Los Resultados",
-      "ctaText": "Vea transformaciones reales de pacientes logradas con la técnica BBL Seguro Avanzado™.",
-      "viewGallery": "Ver Galería",
-      "bookNow": "Reservar Ahora",
-      "bookConsultation": "Reservar una Consulta"
+      "candidatesTitle": "Candidatos ideales",
+      "scarBadge": "Cicatrices mínimas",
+      "scarText": "Advanced Safe BBL™ utiliza microincisiones de 2–3 mm, colocadas estratégicamente para que, al cicatrizar, permanezcan prácticamente invisibles. No hay cicatriz glútea visible, ya que el injerto se realiza a través de estos puntos de acceso mínimos.",
+      "scarSize": "Tamaño",
+      "scarSizeValue": "Microincisiones de 2–3 mm",
+      "scarLocation": "Ubicación",
+      "scarLocationValue": "Ocultas en pliegues naturales",
+      "scarVisibility": "Visibilidad",
+      "scarVisibilityValue": "Prácticamente invisible al cicatrizar"
     },
     "tummyTuck": {
       "title": "Abdominoplastia",
@@ -1588,7 +1641,8 @@
       "candidate3Title": "Procedimientos de Revisión",
       "candidate3Desc": "Corrigiendo resultados previos",
       "candidate4Title": "Beneficios Duales",
-      "candidate4Desc": "Quiere contorno corporal + aumento mamario"
+      "candidate4Desc": "Quiere contorno corporal + aumento mamario",
+      "recoveryText": "La recuperación combina elementos de ambos procedimientos. La mayoría vuelve al trabajo en 1–2 semanas. Los resultados finales aparecen a medida que la grasa se integra durante 3–6 meses."
     },
     "breastAugmentationFatGrafting": {
       "title": "Aumento Mamario con Injerto de Grasa",
@@ -1767,7 +1821,17 @@
       "candidate3Title": "Enfoque Mínimo",
       "candidate3Desc": "Pacientes que prefieren técnicas sin resección ósea",
       "candidate4Title": "Armonía Corporal",
-      "candidate4Desc": "Ideal para armonía entre tórax, cintura y caderas"
+      "candidate4Desc": "Ideal para armonía entre tórax, cintura y caderas",
+      "recoveryText": "La recuperación acelerada permite que la mayoría de los pacientes vuelva a su rutina diaria en pocos días, con resultados progresivos visibles en 4–8 semanas a medida que se resuelve la inflamación.",
+      "scarBadge": "Prácticamente invisible",
+      "scarSubtitle": "Microincisión única",
+      "scarText": "Una microincisión de 0,5 cm colocada estratégicamente en el pliegue lateral natural del torso. Al cicatrizar, se vuelve prácticamente invisible.",
+      "scarSizeLabel": "Tamaño",
+      "scarSizeValue": "0,5 cm",
+      "scarLocationLabel": "Ubicación",
+      "scarLocationValue": "Pliegue lateral del torso",
+      "scarVisibilityLabel": "Visibilidad",
+      "scarVisibilityValue": "Casi invisible"
     },
     "rhinoplasty": {
       "title": "Rinoplastia",
@@ -1823,8 +1887,7 @@
       "scarClosedTitle": "Rinoplastia Cerrada",
       "scarClosedText": "Todas las incisiones dentro de la nariz—sin cicatrices externas visibles.",
       "scarOpenTitle": "Rinoplastia Abierta",
-      "scarOpenText": "Pequeña incisión columelar que cicatriza casi invisiblemente.",
-      "galleryCta": "Ver Resultados Naturales de Rinoplastia"
+      "scarOpenText": "Pequeña incisión columelar que cicatriza casi invisiblemente."
     },
     "kEndoscopic": {
       "title": "K Face Lift Endoscópico Deep Plane",
@@ -1886,9 +1949,7 @@
       "candidate4Desc": "Busca una apariencia renovada, no 'operada'",
       "scarBadge": "Incisiones Ocultas",
       "scarTitle": "Incisiones Disimuladas",
-      "scarText": "Todas las incisiones se colocan estratégicamente dentro de la línea del cabello y los pliegues faciales naturales, volviéndose virtualmente invisibles una vez cicatrizadas.",
-      "galleryTitle": "Vea Resultados Reales",
-      "galleryCta": "Explore resultados transformadores del K Face Lift Endoscópico Deep Plane del Profesor Dr. Karaaltin."
+      "scarText": "Todas las incisiones se colocan estratégicamente dentro de la línea del cabello y los pliegues faciales naturales, volviéndose virtualmente invisibles una vez cicatrizadas."
     },
     "kFaceLift": {
       "title": "K Face Lift",
@@ -1949,69 +2010,11 @@
       "candidate4Desc": "Se beneficia del levantamiento reforzado con malla",
       "scarBadge": "Incisiones Ocultas",
       "scarTitle": "Cicatrices Visibles Mínimas",
-      "scarText": "Las incisiones se colocan estratégicamente dentro de la línea del cabello y los pliegues naturales alrededor de la oreja, volviéndose virtualmente invisibles a medida que cicatrizan.",
-      "galleryTitle": "Ver Resultados Reales",
-      "galleryCta": "Explore los resultados transformadores de rejuvenecimiento facial de los pacientes de K Face Lift del Profesor Dr. Karaaltin."
-    },
-    "advancedSafeBBL": {
-      "candidate1Title": "Mejora de Glúteos",
-      "candidate1Desc": "Desea contorno glúteo mejorado",
-      "candidate2Title": "Grasa Disponible",
-      "candidate2Desc": "Suficientes reservas de grasa donante",
-      "candidate3Title": "Prioridad de Seguridad",
-      "candidate3Desc": "Valora técnicas de seguridad avanzadas",
-      "candidate4Title": "Expectativas Realistas",
-      "candidate4Desc": "Pacientes con expectativas realistas sobre resultados",
-      "ctaTitle": "Ver Los Resultados",
-      "ctaText": "Vea transformaciones reales de pacientes logradas con la técnica Advanced Safe BBL™.",
-      "viewGallery": "Ver Galería",
-      "bookNow": "Reservar Ahora",
-      "bookConsultation": "Reservar Consulta"
+      "scarText": "Las incisiones se colocan estratégicamente dentro de la línea del cabello y los pliegues naturales alrededor de la oreja, volviéndose virtualmente invisibles a medida que cicatrizan."
     }
   },
   "proceduresPage": {
     "title": "Procedimientos y Técnicas",
     "description": "Lista completa de procedimientos quirúrgicos y técnicas ofrecidas por el Profesor Dr. Karaaltin."
-  },
-  "timeline": {
-    "sectionTitle": "Cronología de Logros Destacados",
-    "legacyTitle": "Legado de Excelencia",
-    "legacyDescription": "Cada hito refleja el compromiso inquebrantable del Dr. Karaaltin con el avance del campo de la cirugía plástica y reconstructiva. Su trabajo pionero continúa dando forma a las técnicas quirúrgicas modernas y mejorando los resultados de los pacientes en todo el mundo.",
-    "videoPlayer": "Reproductor de Video",
-    "milestone1": {
-      "date": "Febrero 2012",
-      "title": "Tercer Trasplante Facial Completo del Mundo y Primer Trasplante Cuádruple de Extremidades",
-      "description": "Como miembro del equipo quirúrgico central en la Universidad Hacettepe, Ankara, el Dr. Karaaltin participó en dos procedimientos históricos: El tercer trasplante facial completo del mundo y el primer trasplante cuádruple de extremidades."
-    },
-    "milestone2": {
-      "date": "Marzo 2014",
-      "title": "Innovación en Cirugía de Parálisis Facial",
-      "description": "El Dr. Karaaltin fue pionero y popularizó la técnica de Transferencia Funcional de Músculo Extensor Digitorum Brevis y Extensor Hallucis Brevis Libre, ofreciendo una solución dinámica y natural para la restauración de la sonrisa en pacientes con parálisis facial."
-    },
-    "milestone3": {
-      "date": "Abril 2015",
-      "title": "Tratamiento que Salvó la Vida del 'Hombre Milagro' Adem Kılıç",
-      "description": "El Dr. Karaaltin lideró los esfuerzos reconstructivos complejos que salvaron la vida de un hombre con más del 75% de superficie corporal total quemada, ampliamente considerado como un caso casi imposible en la medicina moderna."
-    },
-    "milestone4": {
-      "date": "Junio 2017",
-      "title": "Premiado con el Mejor Artículo Científico en Cirugía Plástica",
-      "description": "La contribución original del Dr. Karaaltin a la cirugía reconstructiva recibió la distinción de Mejor Artículo Científico del Mes en una revista de cirugía plástica reconocida internacionalmente."
-    },
-    "milestone5": {
-      "date": "Septiembre 2017",
-      "title": "Transferencia de Ganglios Linfáticos Vascularizados Multinivel Popularizada",
-      "description": "En un notable caso pediátrico, el Dr. Karaaltin introdujo y realizó transferencia bilateral de ganglios linfáticos vascularizados de seis niveles para linfedema en un paciente rumano de 14 años, sentando precedente en el campo."
-    },
-    "milestone6": {
-      "date": "Junio 2022",
-      "title": "Cirugía Pionera de Separación de Gemelos Siameses",
-      "description": "El Dr. Karaaltin lideró exitosamente la compleja cirugía de separación de gemelos siameses, demostrando una experiencia quirúrgica excepcional y un cuidado postoperatorio compasivo que resultó en que ambos niños prosperaran de forma independiente."
-    },
-    "milestone7": {
-      "date": "Mayo 2023",
-      "title": "Premio CAPLAN por Excelencia en Cirugía Linfática",
-      "description": "Galardonado con el prestigioso Primer Premio CAPLAN en el 47º Congreso de la Sociedad Europea de Linfología por su trabajo pionero en 'Transferencias de Ganglios Linfáticos Vascularizados Multinivel', consolidando su posición como líder global en microcirugía linfática."
-    }
   }
 }

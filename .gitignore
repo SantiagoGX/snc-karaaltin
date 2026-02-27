@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+wordpress-plugin/dr-karaaltin-app/dist
+wordpress-theme/dr-karaaltin-theme/app
 
 # Editor directories and files
 .vscode/*

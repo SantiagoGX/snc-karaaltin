@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
+const CONTACT_FORM_URL = import.meta.env.VITE_CONTACT_FORM_URL as string | undefined;
+
 const Contact = () => {
   const { t } = useTranslation();
   const [wantsToSharePhotos, setWantsToSharePhotos] = useState(false);
@@ -45,11 +47,22 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData,
-      });
-
-      if (error) throw error;
+      if (CONTACT_FORM_URL) {
+        const res = await fetch(CONTACT_FORM_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(text || res.statusText);
+        }
+      } else {
+        const { error } = await supabase.functions.invoke('send-contact-email', {
+          body: formData,
+        });
+        if (error) throw error;
+      }
 
       toast.success(t('contact.successMessage', 'Your consultation request has been sent successfully! We will contact you shortly.'));
       setFormData({

@@ -1,0 +1,19 @@
+/*
+Theme Name:   Dr. Karaaltin - React App
+Theme URI:    https://github.com/dr-karaaltin
+Description:  Tema que sirve la aplicación React (SPA) del sitio del Prof. Dr. Karaaltın. Toda la interfaz es la app; WordPress solo actúa como contenedor.
+Author:       Dr. Karaaltin
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  dr-karaaltin-theme
+*/
+
+/* El contenido visible lo genera la app React. Este CSS solo evita parpadeos o estilos por defecto de WP. */
+body.wp-app-shell {
+  margin: 0;
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+}

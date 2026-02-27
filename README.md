@@ -64,6 +64,17 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/134aff89-6c4d-4c61-a047-f6896efb860d) and click on Share -> Publish.
 
+## Deploy to WordPress (clean URLs)
+
+This repo includes a WordPress plugin that serves the app at the site root with clean URLs.
+
+```sh
+npm i
+npm run build:wp-plugin
+```
+
+Then zip `wordpress-plugin/dr-karaaltin-app/` and upload it in WP Admin → Plugins → Add New → Upload Plugin.
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

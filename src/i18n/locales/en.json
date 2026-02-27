@@ -2,7 +2,6 @@
   "nav": {
     "about": "About",
     "procedures": "Procedures",
-    "beforeAfters": "Before & Afters",
     "contact": "Contact",
     "patientJourney": "Patient Journey",
     "learnSurgery": "Want to Learn Surgery?",
@@ -20,7 +19,7 @@
   "aboutDoctor": {
     "welcome": "Welcome to Dr. Karaaltın's Clinic",
     "title": "Get to Know Us",
-    "description": "Dr. KARAALTIN, the father of twin children and husband of a successful wife (Vice Dean of Cerrapasa University Faculty of Medicine), was born in 1972 in Kirkuk, Iraq as a Turkish descendant. His family moved to the United States of America when he was only six months old. Between 1976 and 1988, Dr. Karaaltin completed her primary and secondary education in both West Lafayette, Indiana and Orange County, Los Angeles."
+    "description": "Dr. KARAALTIN, the father of twin children and husband of a successful wife (Vice Dean of Cerrahpasa University Faculty of Medicine), was born in 1972 in Kirkuk, Iraq as a Turkish descendant. His family moved to the United States of America when he was only six months old. Between 1976 and 1988, Dr. Karaaltin completed his primary and secondary education in both West Lafayette, Indiana and Orange County, Los Angeles."
   },
   "signatureProcedures": {
     "title": "Signature Procedures",
@@ -109,11 +108,6 @@
       "vibrasatPro": "The Vibrasat Pro Technology"
     }
   },
-  "beforeAfter": {
-    "title1": "BEFORE &",
-    "title2": "AFTERS",
-    "view": "VIEW"
-  },
   "reviews": {
     "title": "REAL PATIENT EXPERIENCES",
     "leaveReview": "Leave a Google Review"
@@ -143,7 +137,9 @@
     "about": "About",
     "contact": "Contact",
     "learnSurgery": "Want to learn surgery?",
-    "beforeAfters": "Before & Afters",
+    "emailPlaceholder": "Email Address"
+  },
+  "footerExtra": {
     "emailPlaceholder": "Email Address"
   },
   "about": {
@@ -420,7 +416,6 @@
     "allProcedures": "All Procedures",
     "bookConsultation": "Book a Consultation",
     "bookNow": "Book Now",
-    "viewGallery": "View Before & After Gallery",
     "returnHome": "Return to Home",
     "consultation": "Consultation",
     "followUp": "Follow-Up"
@@ -587,7 +582,6 @@
       "recoveryHealing": "Recovery & Healing",
       "idealCandidates": "Ideal Candidates",
       "scarExpectations": "Scar Expectations",
-      "beforeAfterCta": "View Before & After Gallery",
       "bookConsultation": "Book a Consultation",
       "bookNow": "Book Now",
       "consultation": "Consultation",
@@ -638,8 +632,7 @@
       "candidate4Title": "Natural Results",
       "candidate4Desc": "Seeking soft, balanced contours",
       "candidate5Title": "Fast Recovery",
-      "candidate5Desc": "Back to routine in 24-48 hours",
-      "galleryCta": "Explore natural augmentation results"
+      "candidate5Desc": "Back to routine in 24-48 hours"
     },
     "smartbra": {
       "title": "Smart BRA Bioscaffold",
@@ -680,8 +673,7 @@
       "candidate3Title": "Large Reductions",
       "candidate3Desc": "Patients undergoing significant tissue removal",
       "candidate4Title": "Lasting Results",
-      "candidate4Desc": "Seeking long-term shape and position maintenance",
-      "galleryCta": "Explore breast surgery transformations"
+      "candidate4Desc": "Seeking long-term shape and position maintenance"
     },
     "vibrasat": {
       "title": "Vibrasat Pro™ Technology",
@@ -725,8 +717,7 @@
       "candidate3Title": "Fat Transfer",
       "candidate3Desc": "Requiring fat grafting for any purpose",
       "candidate4Title": "Optimal Results",
-      "candidate4Desc": "Prioritizing fat survival and natural outcomes",
-      "galleryCta": "Explore body contouring transformations"
+      "candidate4Desc": "Prioritizing fat survival and natural outcomes"
     },
     "gynecomastia": {
       "title": "Gynecomastia",
@@ -804,6 +795,7 @@
       "journey3Desc": "Implant placement + fat grafting",
       "journey4Title": "Recovery",
       "journey4Desc": "Standard augmentation recovery protocol",
+      "recovery": "Recovery combines elements of both procedures. Most return to work in 1-2 weeks. Final results emerge as fat integrates over 3-6 months.",
       "recoveryText": "Recovery combines elements of both procedures. Most return to work in 1-2 weeks. Final results emerge as fat integrates over 3-6 months.",
       "candidate1Title": "Natural Enhancement",
       "candidate1Desc": "Wanting implants with natural feel",
@@ -913,8 +905,7 @@
       "candidate3Title": "Revision Candidates",
       "candidate3Desc": "Patients seeking solutions after previous surgeries",
       "candidate4Title": "Long-Term Results",
-      "candidate4Desc": "Those prioritizing durable, natural outcomes",
-      "galleryCta": "Explore natural breast lift transformations"
+      "candidate4Desc": "Those prioritizing durable, natural outcomes"
     },
     "breastLift": {
       "title": "Breast Lift (Mastopexy)",
@@ -1092,8 +1083,7 @@
       "candidate3Desc": "Seeking long-term precision",
       "candidate4Title": "Primary or Revision",
       "candidate4Desc": "Any rhinoplasty complexity",
-      "scarText": "Follows the scar expectations of the selected rhinoplasty technique (open or closed).",
-      "galleryCta": "Explore the stability and definition of Smart Template–supported results"
+      "scarText": "Follows the scar expectations of the selected rhinoplasty technique (open or closed)."
     },
     "rhinoplasty": {
       "title": "Rhinoplasty",
@@ -1149,8 +1139,7 @@
       "scarClosedTitle": "Closed Rhinoplasty",
       "scarClosedText": "All incisions inside the nose—no visible external scars.",
       "scarOpenTitle": "Open Rhinoplasty",
-      "scarOpenText": "Small columellar incision that heals nearly invisibly.",
-      "galleryCta": "See Natural Rhinoplasty Results"
+      "scarOpenText": "Small columellar incision that heals nearly invisibly."
     },
     "endochorFaceLift": {
       "title": "The Endochor® Face Lift",
@@ -1174,6 +1163,7 @@
       "ribbonList3": "Temporal & midface anchoring",
       "featuredTitle": "Endochor® With Dr. Karaaltin",
       "featuredText": "The Endochor® system is backed by decades of anatomical research and bioengineering excellence. Each implant is CE-certified and clinically validated, making this one of the safest and most advanced scarless lifting solutions available.",
+      "detailsSubtitle": "Advanced minimally invasive facial rejuvenation technique",
       "endoscopicAccess": "Endoscopic Access",
       "endoscopicAccessDesc": "Through hidden scalp incisions",
       "noSkinTension": "No Skin Tension",
@@ -1184,6 +1174,7 @@
       "multiZoneDesc": "Comprehensive brow, midface & neck",
       "controlledVectors": "Controlled Vectors",
       "controlledVectorsDesc": "Tailored to each patient",
+      "journey1Title": "Consultation",
       "journey1Desc": "Comprehensive assessment of facial anatomy and rejuvenation goals",
       "journey2Title": "Endoscopic Mapping",
       "journey2Desc": "Precise identification of lift vectors and implant placement",
@@ -1191,6 +1182,7 @@
       "journey3Desc": "Custom Endochor® implant configuration for optimal results",
       "journey4Title": "Multi-Zone Lift",
       "journey4Desc": "Endoscopic elevation of brow, midface, and/or neck",
+      "journey5Title": "Progressive Results",
       "journey5Desc": "Minimal downtime protocol with structured follow-ups",
       "recoveryText": "Minimal swelling, rapid return to daily activity, and no visible facial scars. Implant integration enhances long-term support.",
       "candidate1Title": "Brow & Forehead Laxity",
@@ -1203,9 +1195,7 @@
       "candidate4Desc": "Seeking hidden-incision solutions",
       "scarTitle": "Scarless Results",
       "scarSubtitle": "Hidden Incision Technology",
-      "scarText": "No visible facial scars. All incisions are hidden within the scalp or natural creases.",
-      "galleryTitle": "See Real Results",
-      "galleryCta": "Explore transformative EndoChor® Face Lift results from Professor Dr. Karaaltin's patients."
+      "scarText": "No visible facial scars. All incisions are hidden within the scalp or natural creases."
     },
     "kEndoscopic": {
       "title": "K Endoscopic Deep Plane Face Lift",
@@ -1267,9 +1257,7 @@
       "candidate4Desc": "Seeking refreshed, not 'done' appearance",
       "scarBadge": "Hidden Incisions",
       "scarTitle": "Concealed Incisions",
-      "scarText": "All incisions are strategically placed within the hairline and natural facial creases, becoming virtually invisible once healed.",
-      "galleryTitle": "See Real Results",
-      "galleryCta": "Explore transformative K Endoscopic Deep Plane Face Lift results from Professor Dr. Karaaltin's patients."
+      "scarText": "All incisions are strategically placed within the hairline and natural facial creases, becoming virtually invisible once healed."
     },
     "kFaceLift": {
       "title": "K Face Lift",
@@ -1637,7 +1625,6 @@
       "candidate4Desc": "Patients with realistic expectations about outcomes",
       "ctaTitle": "See The Results",
       "ctaText": "View real patient transformations achieved with the Advanced Safe BBL™ technique.",
-      "viewGallery": "View Gallery",
       "bookNow": "Book Now",
       "bookConsultation": "Book a Consultation",
       "scarBadge": "Minimal Scarring",
@@ -1680,7 +1667,7 @@
       "recoveryText2": "Results include improved proportion, refined contours, and natural aesthetics.",
       "exploreBreast": "Explore Breast Procedures",
       "seeResults": "See The Results",
-      "seeResultsDesc": "Explore our gallery of refined, proportion-balanced outcomes."
+      "seeResultsDesc": "Explore refined, proportion-balanced outcomes."
     },
     "invertedNipple": {
       "title": "Inverted Nipple Repair",
@@ -1713,7 +1700,7 @@
       "recoveryText2": "Sensitivity is usually preserved, and results appear natural and long-lasting.",
       "viewBreast": "View Breast Procedures",
       "seeResults": "See The Results",
-      "seeResultsDesc": "Explore our gallery of natural, precision-based outcomes."
+      "seeResultsDesc": "Explore natural, precision-based outcomes."
     },
     "kFaceLift": {
       "title": "K Face Lift",
@@ -1774,9 +1761,7 @@
       "candidate4Desc": "Benefiting from mesh-reinforced lifting",
       "scarBadge": "Hidden Incisions",
       "scarTitle": "Minimal Visible Scarring",
-      "scarText": "Incisions are strategically placed within the hairline and natural creases around the ear, becoming virtually invisible as they heal. The K Face Lift technique prioritizes scar optimization as part of its comprehensive approach.",
-      "galleryTitle": "See Real Results",
-      "galleryCta": "Explore transformative facial rejuvenation results from Professor Dr. Karaaltin's K Face Lift patients."
+      "scarText": "Incisions are strategically placed within the hairline and natural creases around the ear, becoming virtually invisible as they heal. The K Face Lift technique prioritizes scar optimization as part of its comprehensive approach."
     },
     "smartTemplate": {
       "title": "Smart Template Rhinoplasty",
@@ -1821,8 +1806,7 @@
       "candidate3Desc": "Thin skin or weak cartilage",
       "candidate4Title": "Long-Term Stability",
       "candidate4Desc": "Prioritizing lasting outcomes",
-      "scarText": "The Smart Template technique uses closed or semi-open approaches when possible, minimizing visible scarring. Any external incisions are placed in the columella crease, becoming virtually invisible as they heal.",
-      "galleryCta": "Explore Smart Template Rhinoplasty transformations"
+      "scarText": "The Smart Template technique uses closed or semi-open approaches when possible, minimizing visible scarring. Any external incisions are placed in the columella crease, becoming virtually invisible as they heal."
     }
   },
   "proceduresPage": {
@@ -2059,28 +2043,11 @@
     "allProcedures": "All Procedures",
     "bookConsultation": "Book a Consultation",
     "bookNow": "Book Now",
-    "viewGallery": "View Before & After Gallery",
     "returnHome": "Return to Home",
     "consultation": "Consultation",
     "followUp": "Follow-Up",
-    "noPageOverlayText": "To learn more about this procedure and view before & after results, please schedule a consultation with Dr. Karaaltın.",
+    "noPageOverlayText": "To learn more about this procedure, please schedule a consultation with Dr. Karaaltın.",
     "noPageContactButton": "Contact Dr. Karaaltın"
-  },
-  "gallery": {
-    "title": "Before & After Gallery",
-    "heroSubtitle": "Explore real patient transformations showcasing Dr. Karaaltin's expertise in aesthetic surgery",
-    "subtitle": "Explore real patient results from Professor Dr. Karaaltın",
-    "filterBy": "Filter by",
-    "allCategories": "All Categories",
-    "allProcedures": "All Procedures",
-    "clickToEnlarge": "Click to view fullscreen",
-    "noResults": "No results found",
-    "selectProcedure": "Select a Procedure",
-    "selectProcedureDesc": "Choose any procedure from the left menu to view before & after transformations",
-    "faceProcedures": "Face Procedures",
-    "noseProcedures": "Nose Procedures",
-    "breastProcedures": "Breast Procedures",
-    "bodyProcedures": "Body Procedures"
   },
   "about": {
     "heroSubtitle": "PROFESSOR • SURGEON • INNOVATOR",
