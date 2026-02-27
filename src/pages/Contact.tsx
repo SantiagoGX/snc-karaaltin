@@ -94,8 +94,18 @@ const Contact = () => {
         <section className="bg-[#5a5653] pt-20 pb-24 lg:pb-32 relative">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center pt-16 lg:pt-20 min-h-[500px] lg:min-h-[600px]">
-              {/* Left: Hero Video - Vertical Format */}
-              <div className="fade-in flex justify-start">
+              {/* Title & Subtitle - Right on desktop, Above video on mobile */}
+              <div className="fade-in flex flex-col justify-center order-1 lg:order-2" style={{ animationDelay: "0.2s" }}>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
+                  {t('contact.title')}
+                </h1>
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+                  {t('contact.subtitle')}
+                </p>
+              </div>
+
+              {/* Hero Video - Left on desktop, Below title on mobile */}
+              <div className="fade-in flex justify-start order-2 lg:order-1">
                 <div className="w-full max-w-[400px] rounded-xl overflow-hidden mb-[-80px] lg:mb-[-100px] relative">
                   <video
                     ref={videoRef}
@@ -115,16 +125,6 @@ const Contact = () => {
                     {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
                   </button>
                 </div>
-              </div>
-
-              {/* Right: Title & Subtitle - Centered Vertically */}
-              <div className="fade-in flex flex-col justify-center" style={{ animationDelay: "0.2s" }}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
-                  {t('contact.title')}
-                </h1>
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
-                  {t('contact.subtitle')}
-                </p>
               </div>
             </div>
           </div>
