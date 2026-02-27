@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
-import contactHeroImage from "@/assets/contact-hero.png";
+// Hero video is now served from /contact-hero-video.mp4
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -85,13 +85,19 @@ const Contact = () => {
         <section className="bg-[#5a5653] pt-20 pb-24 lg:pb-32 relative">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center pt-16 lg:pt-20 min-h-[500px] lg:min-h-[600px]">
-              {/* Left: Hero Image - Vertical Format */}
+              {/* Left: Hero Video - Vertical Format */}
               <div className="fade-in flex justify-start">
-                <img
-                  src={contactHeroImage}
-                  alt="Dr. Karaaltín Clinic"
-                  className="w-full max-w-[400px] h-auto object-contain rounded-xl mb-[-80px] lg:mb-[-100px]"
-                />
+                <div className="w-full max-w-[400px] rounded-xl overflow-hidden mb-[-80px] lg:mb-[-100px]">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto object-cover"
+                  >
+                    <source src="/contact-hero-video.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
 
               {/* Right: Title & Subtitle - Centered Vertically */}
@@ -107,8 +113,8 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Info Banner - Overlapping Hero with Shadow */}
-        <section className="relative z-10 -mt-16 lg:-mt-20">
+        {/* Contact Info Banner - Overlapping Hero (desktop), Bottom of page (mobile) */}
+        <section className="relative z-10 -mt-16 lg:-mt-20 hidden md:block">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="bg-white rounded-lg shadow-lg p-8 lg:p-10 grid grid-cols-1 md:grid-cols-3 gap-8 fade-in" style={{ animationDelay: "0.4s" }}>
               {/* Address */}
@@ -476,6 +482,72 @@ const Contact = () => {
                     <source src="/cta-video.mp4" type="video/mp4" />
                   </video>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info Banner - Mobile Only (at bottom) */}
+        <section className="block md:hidden py-8 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="bg-white rounded-lg shadow-lg p-8 grid grid-cols-1 gap-8 fade-in">
+              {/* Address */}
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <MapPin className="w-6 h-6 text-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    {t('contact.address')}
+                  </h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Teşvikiye, Sakayık Sk. No:47,<br />
+                  34365 Şişli/İstanbul, Turkey
+                </p>
+                <a
+                  href="https://www.google.com/maps/place/Prof.+Dr.+Mehmet+Veli+Karaalt%C4%B1n/@41.0428434,28.9958192,17z/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-xs font-semibold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-colors duration-300"
+                >
+                  {t('contact.getDirections')} →
+                </a>
+              </div>
+
+              {/* Phone */}
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <Phone className="w-6 h-6 text-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    {t('contact.phone')}
+                  </h3>
+                </div>
+                <a
+                  href="tel:+902123254242"
+                  className="block text-gray-600 hover:text-gray-900 transition-colors duration-300 text-sm font-medium"
+                >
+                  +90 212 325 42 42
+                </a>
+                <a
+                  href="sms:+902123254242"
+                  className="inline-block mt-3 text-xs font-semibold uppercase tracking-widest text-gray-900 hover:text-gray-600 transition-colors duration-300"
+                >
+                  {t('contact.textOurOffice')} →
+                </a>
+              </div>
+
+              {/* Hours */}
+              <div className="text-center">
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <Clock className="w-6 h-6 text-gray-700" />
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    {t('contact.hours')}
+                  </h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {t('contact.hoursMonFri', 'Monday - Friday: 9:00 AM - 6:00 PM')}<br />
+                  {t('contact.hoursSat', 'Saturday: 10:00 AM - 4:00 PM')}<br />
+                  {t('contact.hoursSun', 'Sunday: Closed')}
+                </p>
               </div>
             </div>
           </div>
