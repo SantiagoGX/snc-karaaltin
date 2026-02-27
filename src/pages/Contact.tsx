@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon, Loader2 } from "lucide-react";
-import { useState } from "react";
+import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon, Loader2, Volume2, VolumeX } from "lucide-react";
+import { useState, useRef } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 // Hero video is now served from /contact-hero-video.mp4
 import { useTranslation } from "react-i18next";
@@ -16,6 +16,8 @@ const CONTACT_FORM_URL = import.meta.env.VITE_CONTACT_FORM_URL as string | undef
 const Contact = () => {
   const { t } = useTranslation();
   const [wantsToSharePhotos, setWantsToSharePhotos] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -40,6 +42,13 @@ const Contact = () => {
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -87,8 +96,9 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center pt-16 lg:pt-20 min-h-[500px] lg:min-h-[600px]">
               {/* Left: Hero Video - Vertical Format */}
               <div className="fade-in flex justify-start">
-                <div className="w-full max-w-[400px] rounded-xl overflow-hidden mb-[-80px] lg:mb-[-100px]">
+                <div className="w-full max-w-[400px] rounded-xl overflow-hidden mb-[-80px] lg:mb-[-100px] relative">
                   <video
+                    ref={videoRef}
                     autoPlay
                     loop
                     muted
@@ -97,6 +107,13 @@ const Contact = () => {
                   >
                     <source src="/contact-hero-video.mp4" type="video/mp4" />
                   </video>
+                  <button
+                    onClick={toggleMute}
+                    className="absolute bottom-3 right-3 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200"
+                    aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+                  >
+                    {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                  </button>
                 </div>
               </div>
 
