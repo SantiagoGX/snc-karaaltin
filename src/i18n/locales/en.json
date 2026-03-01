@@ -371,7 +371,7 @@
     "whatsappDescription": "Reach out directly via WhatsApp for immediate assistance with your training inquiry."
   },
   "contact": {
-    "title": "CONTACT",
+    "title": "Book A Consultation with a World-Class Surgeon",
     "subtitle": "We're here to help. Reach out to our clinic for consultations, questions, or appointment requests.",
     "address": "Address",
     "phone": "Phone",
@@ -404,6 +404,9 @@
     "requiredField": "required",
     "requiredFields": "All fields marked with",
     "areRequired": "are required",
+    "consultationType": "Type of Consultation",
+    "consultationOnline": "Online",
+    "consultationInPerson": "In-Person London, Maida Vale",
     "hoursMonFri": "Monday - Friday: 9:00 AM - 6:00 PM",
     "hoursSat": "Saturday: 10:00 AM - 4:00 PM",
     "hoursSun": "Sunday: Closed"

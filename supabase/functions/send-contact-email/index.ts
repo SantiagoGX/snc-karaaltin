@@ -17,6 +17,7 @@ interface ContactFormData {
   height?: string;
   weight?: string;
   areaOfInterest: string;
+  consultationType?: string;
   concerns: string;
 }
 
@@ -58,6 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
             </tr>
             ${data.height ? `<tr style="background: #f9f9f9;"><td style="padding: 8px 12px; font-weight: bold; color: #555;">Height</td><td style="padding: 8px 12px;">${data.height}</td></tr>` : ''}
             ${data.weight ? `<tr><td style="padding: 8px 12px; font-weight: bold; color: #555;">Weight</td><td style="padding: 8px 12px;">${data.weight}</td></tr>` : ''}
+            ${data.consultationType ? `<tr style="background: #f9f9f9;"><td style="padding: 8px 12px; font-weight: bold; color: #555;">Type of Consultation</td><td style="padding: 8px 12px;">${data.consultationType === 'online' ? 'Online' : 'In-Person London, Maida Vale'}</td></tr>` : ''}
             <tr style="background: #f9f9f9;">
               <td style="padding: 8px 12px; font-weight: bold; color: #555;">Area of Interest</td>
               <td style="padding: 8px 12px;">${data.areaOfInterest}</td>
