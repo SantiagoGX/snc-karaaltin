@@ -439,7 +439,7 @@
     "whatsappDescription": "直接通过 WhatsApp 联系，以获取有关您培训咨询的即时帮助。"
   },
   "contact": {
-    "title": "联系我们",
+    "title": "预约世界级外科医生的咨询",
     "subtitle": "我们随时为您提供帮助。请联系我们的诊所进行咨询、提问或预约请求。",
     "address": "地址",
     "phone": "电话",
@@ -472,6 +472,9 @@
     "requiredField": "必填",
     "requiredFields": "所有标有",
     "areRequired": "的字段均为必填项",
+    "consultationType": "咨询类型",
+    "consultationOnline": "在线",
+    "consultationInPerson": "伦敦梅达维尔面诊",
     "hoursMonFri": "周一至周五：上午 9:00 - 下午 6:00",
     "hoursSat": "周六：上午 10:00 - 下午 4:00",
     "hoursSun": "周日：休息"

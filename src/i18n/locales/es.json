@@ -452,7 +452,7 @@
     "whatsappDescription": "Comunícate directamente por WhatsApp para asistencia inmediata con tu consulta de entrenamiento."
   },
   "contact": {
-    "title": "CONTACTO",
+    "title": "Reserva una Consulta con un Cirujano de Clase Mundial",
     "subtitle": "Estamos aquí para ayudar. Comunícate con nuestra clínica para consultas, preguntas o solicitudes de citas.",
     "address": "Dirección",
     "phone": "Teléfono",
@@ -485,6 +485,9 @@
     "requiredField": "requerido",
     "requiredFields": "Todos los campos marcados con",
     "areRequired": "son obligatorios",
+    "consultationType": "Tipo de Consulta",
+    "consultationOnline": "En Línea",
+    "consultationInPerson": "Presencial Londres, Maida Vale",
     "hoursMonFri": "Lunes - Viernes: 9:00 - 18:00",
     "hoursSat": "Sábado: 10:00 - 16:00",
     "hoursSun": "Domingo: Cerrado"

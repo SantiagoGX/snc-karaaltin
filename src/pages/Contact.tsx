@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Clock, ChevronRight, Camera, ImageIcon, Loader2, Volume2, VolumeX } from "lucide-react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState, useRef } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 // Hero video is now served from /contact-hero-video.mp4
@@ -27,6 +28,7 @@ const Contact = () => {
     height: '',
     weight: '',
     areaOfInterest: '',
+    consultationType: '',
     concerns: '',
   });
   const [files, setFiles] = useState<{
@@ -76,7 +78,7 @@ const Contact = () => {
       toast.success(t('contact.successMessage', 'Your consultation request has been sent successfully! We will contact you shortly.'));
       setFormData({
         firstName: '', lastName: '', email: '', phone: '',
-        height: '', weight: '', areaOfInterest: '', concerns: '',
+        height: '', weight: '', areaOfInterest: '', consultationType: '', concerns: '',
       });
     } catch (error: any) {
       console.error('Error sending form:', error);
@@ -96,7 +98,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12 items-center pt-16 lg:pt-20 min-h-[500px] lg:min-h-[600px]">
               {/* Title & Subtitle - Right on desktop, Above video on mobile */}
               <div className="fade-in flex flex-col justify-center order-1 lg:order-2" style={{ animationDelay: "0.2s" }}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-wide mb-6 text-white">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-wide mb-6 text-white leading-tight">
                   {t('contact.title')}
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
@@ -308,7 +310,27 @@ const Contact = () => {
                     />
                   </div>
 
-                  {/* Concerns */}
+                  {/* Type of Consultation */}
+                  <div>
+                    <label className="block text-sm text-gray-700 mb-3">
+                      {t('contact.consultationType')} <span className="text-red-500">*</span>
+                    </label>
+                    <RadioGroup
+                      value={formData.consultationType}
+                      onValueChange={(value) => handleInputChange('consultationType', value)}
+                      className="flex flex-col sm:flex-row gap-4"
+                      required
+                    >
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <RadioGroupItem value="online" />
+                        <span className="text-sm text-gray-700">{t('contact.consultationOnline')}</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <RadioGroupItem value="in-person" />
+                        <span className="text-sm text-gray-700">{t('contact.consultationInPerson')}</span>
+                      </label>
+                    </RadioGroup>
+                  </div>
                   <div>
                     <label className="block text-sm text-gray-700 mb-2">
                       {t('contact.concerns')} <span className="text-red-500">*</span>
