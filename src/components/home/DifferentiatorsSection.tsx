@@ -57,11 +57,11 @@ const DifferentiatorsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20 group-hover:from-black/70 group-hover:via-black/30 group-hover:to-transparent transition-all duration-500" />
               
               {/* Contenido de texto en la parte inferior */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white z-10">
-                <h3 className="text-xl lg:text-2xl font-serif font-semibold mb-3 tracking-wide">
+              <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white z-10 text-left">
+                <h3 className="text-xl lg:text-2xl font-serif font-semibold mb-3 tracking-wide text-left">
                   {t(item.titleKey)}
                 </h3>
-                <p className="text-sm lg:text-base text-white/90 leading-relaxed">
+                <p className="text-sm lg:text-base text-white/90 leading-relaxed text-left">
                   {t(item.descriptionKey)}
                 </p>
               </div>
