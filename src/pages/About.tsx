@@ -152,7 +152,7 @@ const About = () => {
               <img
                 alt="Dr. Karaaltin performing surgery"
                 className="w-full max-w-sm rounded-lg shadow-md mt-6"
-                src="/lovable-uploads/8e8ea3c9-3698-4132-993e-2151810b1680.png"
+                src="/lovable-uploads/surgery-prof-dr-k.jpg"
               />
             </div>
           </div>
