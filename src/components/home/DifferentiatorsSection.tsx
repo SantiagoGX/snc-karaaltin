@@ -58,7 +58,7 @@ const DifferentiatorsSection = () => {
               
               {/* Contenido de texto en la parte inferior */}
               <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white z-10">
-                <h3 className="text-xl lg:text-2xl font-serif font-semibold mb-3 tracking-wide px-0">
+                <h3 className="text-xl lg:text-2xl font-serif font-semibold mb-3 tracking-wide px-0 py-0">
                   {t(item.titleKey)}
                 </h3>
                 <p className="text-sm lg:text-base text-white/90 leading-relaxed">
