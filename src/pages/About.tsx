@@ -40,7 +40,7 @@ const About = () => {
             </div>
 
             {/* Right Column - Image with Shape */}
-            <div className="relative flex justify-center items-end lg:justify-end">
+            <div className="relative flex justify-center items-end lg:justify-center">
               {/* Background Shape - Solid, extends to bottom */}
               <div
                 className="absolute w-[280px] lg:w-[350px] rounded-lg bottom-0"
