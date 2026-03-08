@@ -19,7 +19,7 @@ const milestones: TimelineMilestone[] = [
     dateKey: "timeline.milestone1.date",
     titleKey: "timeline.milestone1.title",
     descriptionKey: "timeline.milestone1.description",
-    image: "/timeline/feb-2012.png"
+    image: "/timeline/feb-2012.jpg"
   },
   {
     id: 2,
