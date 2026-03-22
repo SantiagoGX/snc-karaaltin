@@ -37,6 +37,8 @@ import NippleAreolaReduction from "./pages/procedures/breast/NippleAreolaReducti
 import PatientJourney from "./pages/PatientJourney";
 import LearnSurgery from "./pages/LearnSurgery";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
